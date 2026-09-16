@@ -110,6 +110,30 @@
       "url": "https://docs.x.ai/developers/models/grok-4.5",
       "purpose": "models",
       "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "context-xai-46",
+      "url": "https://docs.x.ai/developers/models/grok-4.6",
+      "purpose": "models",
+      "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "context-xai-45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5",
+      "purpose": "models",
+      "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "context-xai-build-settings",
+      "url": "https://docs.x.ai/build/settings/reference.md",
+      "purpose": "models",
+      "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "context-xai-build-sessions",
+      "url": "https://docs.x.ai/build/features/sessions.md",
+      "purpose": "models",
+      "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

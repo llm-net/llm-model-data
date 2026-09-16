@@ -112,7 +112,7 @@
       "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1048576,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -193,6 +193,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.769941+00:00",
+            "source_ids": [
+              "context-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Kimi Code 官方产品表的整数窗口；不从按量 API 继承。 此值仅 Allegretto 及更高套餐可用；Moderato 仅 262144。不是所有套餐无条件拥有 1M。"
         }
       }
     },
@@ -293,7 +307,7 @@
       "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 262144,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -374,6 +388,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "262144",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.769941+00:00",
+            "source_ids": [
+              "context-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Kimi Code 官方产品表的整数窗口；不从按量 API 继承。"
         }
       }
     },
@@ -474,7 +502,7 @@
       "notes": "当前底模K2.8 Preview，请求ID仍为kimi-for-coding；按用户指定仅参考kimi-k2.7-code的按量价。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1048576,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -555,6 +583,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.769941+00:00",
+            "source_ids": [
+              "context-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Kimi Code 官方产品表的整数窗口；不从按量 API 继承。 本产品实际标为 K2.8 Preview；价格参考 K2.7 Code 不代表窗口也按 K2.7 Code。"
         }
       }
     },
@@ -655,7 +697,7 @@
       "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 262144,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -736,6 +778,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "262144",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.769941+00:00",
+            "source_ids": [
+              "context-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Kimi Code 官方产品表的整数窗口；不从按量 API 继承。 需要 Allegretto 或更高套餐。"
         }
       }
     }

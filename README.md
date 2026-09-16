@@ -31,6 +31,8 @@ tests/                             # 数据边界回归测试
 - [首轮核对历史报告](docs/AUDIT-2026-09-16.md)
 - [服务商索引](providers/README.md)
 - [数据模型](docs/DATA-MODEL.md)
+- [上下文长度维护（新增及更新必查）](docs/CONTEXT.md)
+- [当前上下文长度核对结果](docs/CONTEXT-AUDIT-2026-09-16.md)
 - [思考能力维护（每次更新必读）](docs/REASONING.md)
 - [当前思考能力核对结果](docs/REASONING-AUDIT-2026-09-16.md)
 - [协议面维护（每次更新必读）](docs/PROTOCOLS.md)

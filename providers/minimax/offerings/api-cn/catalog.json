@@ -108,7 +108,7 @@
       "notes": "官方当前模型表列出本模型；未实调。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -218,6 +218,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1,000,000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.702222+00:00",
+            "source_ids": [
+              "context-minimax-text"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "MiniMax 国内 API 文本生成指南逐型号给出的整数窗口。"
         }
       }
     },
@@ -314,7 +328,7 @@
       "notes": "官方当前模型表列出本模型；未实调。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 204800,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -382,6 +396,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "204,800",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.702222+00:00",
+            "source_ids": [
+              "context-minimax-text"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "MiniMax 国内 API 文本生成指南逐型号给出的整数窗口。"
         }
       }
     },
@@ -478,7 +506,7 @@
       "notes": "官方当前模型表列出本模型；未实调。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 204800,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -546,6 +574,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "204,800",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.702222+00:00",
+            "source_ids": [
+              "context-minimax-text"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "MiniMax 国内 API 文本生成指南逐型号给出的整数窗口。"
         }
       }
     },
@@ -672,6 +714,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -798,6 +854,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -954,6 +1024,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1084,6 +1168,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1214,6 +1312,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1344,6 +1456,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1474,6 +1600,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1604,6 +1744,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1734,6 +1888,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "source_ids": [
+              "context-minimax-models"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     }

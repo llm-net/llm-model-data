@@ -724,6 +724,40 @@
             },
             "reasoning": {
               "$ref": "#/$defs/reasoning"
+            },
+            "context_assessment": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "known",
+                    "partial",
+                    "unknown",
+                    "not_applicable"
+                  ]
+                },
+                "verification": {
+                  "$ref": "#/$defs/verification"
+                },
+                "notes": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "reported_value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "status",
+                "reported_value",
+                "verification",
+                "notes"
+              ]
             }
           },
           "required": [

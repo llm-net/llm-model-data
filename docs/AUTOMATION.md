@@ -8,6 +8,8 @@
 4. 按 [PROTOCOLS.md](PROTOCOLS.md) 及 [REASONING.md](REASONING.md) 逐模型核对 interfaces、interface_assessment 与 reasoning；包含按量、API 订阅及工具订阅，不能整家复制。校验后生成一个可审阅批次，明确模型 / 价格 / 协议面 / 思考能力变动、证据及全部 partial / unknown 项，按 REVIEW.md 请求一次确认。
 5. 无人值守任务以待审核结束；获准后只做指定动作。消费者激活与正式发布另有授权。
 
+上述每次更新还必须执行 [CONTEXT.md](CONTEXT.md)：新增及已有模型逐项查询本平台、本产品上下文长度，核实单位、套餐与扩展窗口条件，填写独立 context_assessment；审阅报告列出数值 / 条件变化及全部 partial / unknown。仅模型名或价格不变不能跳过。
+
 正式发布按[RELEASE.md](RELEASE.md)创建并推送`data-YYYY.MM.DD.N` tag。分支更新不触发数据发布；消费者只从符合规则的远端tag中按日期、整数序号选最新版本，无正式tag就报告尚未发布。
 
 来源先官方 API / 机读文档，后网页 / 公告；不要求所有服务商同一种抓法。任务入口见 templates/update-task.md。保留原币种和基准选择，订阅按明确映射独立保存按量参考价：同平台优先、开发方其次；不核对真实扣费。

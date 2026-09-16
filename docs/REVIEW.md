@@ -26,6 +26,8 @@ Agent 完成采集、编辑、比较和检查，人集中确认一份具体结�
 
 ## 候选与确认失效
 
+候选报告还必须展示上下文长度及适用条件的前后变化，并单列所有 `context_assessment.status=partial / unknown` 型号；已确认整数、仅标称规格、不适用与未知分别统计。模型整体 verified 不代表上下文已经查明。
+
 哈希覆盖 providers、schemas、evidence、docs、scripts、tests、templates、AGENTS.md、README.md、依赖、CI 和 .gitignore 的路径及字节哈希；排除虚拟环境、.git 和生成目录。新增、删除、证据和规则改动均失效。
 
 报告还绑定 base commit 和 diff SHA-256，防止审阅包陈旧；生成目录不纳入自己。脚本只证明未变，不证明人批准。

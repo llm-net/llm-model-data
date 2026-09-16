@@ -179,6 +179,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -346,6 +360,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -518,6 +546,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -673,6 +715,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -828,6 +884,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -983,6 +1053,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1138,6 +1222,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1269,6 +1367,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1400,6 +1512,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1531,6 +1657,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "128K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 128K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1686,6 +1826,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1841,6 +1995,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "128K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 128K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1972,6 +2140,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "128K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 128K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     }

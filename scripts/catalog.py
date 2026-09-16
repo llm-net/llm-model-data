@@ -194,6 +194,38 @@ def check_reasoning(capability, offering_kind):
                 require(default in values or in_range, "reasoning default is outside supported values or budget")
 
 
+def check_context(root, capability, modalities):
+    require("context_window_tokens" in capability and "context_assessment" in capability,
+            "context window and assessment are required for every model")
+    assessment = capability["context_assessment"]
+    status = assessment["status"]
+    value = capability["context_window_tokens"]
+    require(status in {"known", "partial", "unknown", "not_applicable"}, "invalid context status")
+    require(bool(assessment["notes"].strip()), "context assessment needs scope or missing reason")
+    require(assessment["verification"]["source_ids"], "context check needs attempted sources even when unknown")
+    local_evidence(root, assessment["verification"]["evidence"])
+    reported = assessment.get("reported_value")
+    if status in {"known", "partial"}:
+        require(isinstance(reported, str) and reported.strip(), "context requires reported value")
+    if status == "known":
+        require(type(value) is int and value > 0, "known context needs positive integer tokens")
+    elif status == "partial":
+        require(value is None or (type(value) is int and value > 0),
+                "partial context may only retain positive historical tokens")
+    else:
+        require(value is None, "unknown/not_applicable context must be null")
+    if status in {"unknown", "not_applicable"}:
+        require(reported is None, "unknown/not_applicable context cannot assert a reported value")
+    if status == "unknown":
+        require(assessment["verification"]["status"] == "needs_review",
+                "unknown context cannot claim successful verification")
+    else:
+        require(assessment["verification"]["status"] == "verified",
+                "known/partial/not_applicable context requires its own verified evidence")
+    if status == "not_applicable":
+        require("text" not in modalities, "text model context cannot be not_applicable")
+
+
 def check_offering(root, data, provider):
     require(data["provider_id"] == provider["id"], "provider_id mismatch")
     require(provider["id"] not in read_json(root / "schemas/excluded-providers.json"),
@@ -236,6 +268,7 @@ def check_offering(root, data, provider):
             require(assessment["verification"]["status"] == "needs_review",
                     "unknown protocols must not claim successful verification")
         check_reasoning(capability, data["kind"])
+        check_context(root, capability, m["modalities"])
         if data["kind"] in {"api_subscription", "tool_subscription"}:
             require(m["usage_prices"]["status"] == "not_applicable" and not m["usage_prices"]["rules"],
                     "subscription models use reference prices only")
@@ -312,6 +345,7 @@ def validate(root=ROOT):
                 stats["protocols_" + m["capabilities"]["interface_assessment"]["coverage"]] += 1
                 stats["reasoning_" + m["capabilities"]["reasoning"]["coverage"]] += 1
                 stats["reasoning_support_" + m["capabilities"]["reasoning"]["support"]] += 1
+                stats["context_" + m["capabilities"]["context_assessment"]["status"]] += 1
                 stats["models_" + m["verification"]["status"]] += 1
                 for purpose in ("usage_prices", "reference_prices"):
                     stats[purpose + "_" + m[purpose]["status"]] += 1
@@ -431,11 +465,16 @@ def review(root, base):
     changed = [p for p in sorted(old.keys() | new.keys()) if old.get(p) != new.get(p)]
     protocol_gaps = []
     reasoning_gaps = []
+    context_gaps = []
     for path, raw in new.items():
         if not path.startswith("providers/") or not path.endswith("/catalog.json"):
             continue
         doc = json.loads(raw)
         for m in doc["models"]:
+            context = m["capabilities"]["context_assessment"]
+            if context["status"] in {"partial", "unknown"}:
+                context_gaps.append(f"- {doc['provider_id']}/{doc['id']}/{m['id']}: "
+                                    f"{context['status']} ({context['reported_value'] or '未确认'}) — {context['notes']}")
             assessment = m["capabilities"]["interface_assessment"]
             if assessment["coverage"] != "complete":
                 protocol_gaps.append(f"- {doc['provider_id']}/{doc['id']}/{m['id']}: "
@@ -454,6 +493,7 @@ def review(root, base):
         "## 模型与套餐变化", "", summarize_changes(old, new),
         "## 协议面待核对清单", "", *(protocol_gaps or ["本候选没有 partial / unknown 协议记录。"]), "",
         "## 思考能力待核对清单", "", *(reasoning_gaps or ["本候选没有 partial / unknown 思考能力记录。"]), "",
+        "## 上下文长度待核对清单", "", *(context_gaps or ["本候选没有 partial / unknown 上下文长度记录。"]), "",
         "## 人工确认", "", "请同时阅读 diff.patch 中的说明、来源和校验器变化；核对未知项。",
         "确认时指定完整候选 SHA-256 与动作（保存 / 提交 / 发布），不是泛泛地说继续。",
         "数据确认不授权消费者部署。", "",

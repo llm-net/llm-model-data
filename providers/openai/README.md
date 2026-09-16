@@ -24,3 +24,7 @@ API 与 Codex 订阅完全独立；订阅模型参考价采用同平台API标准
 每次更新同时按 [REASONING.md](../../docs/REASONING.md) 逐模型维护 `capabilities.reasoning`；官方参数、档位、开关、预算、默认值按产品及协议 / 工具入口独立核对，未证实的部分保留 unknown / partial，不能继承原厂 API。本轮记录见 [思考能力证据](../../evidence/openai/2026-09-16-reasoning.md)。
 
 Codex 单次请求档位补充见 [请求能力核对](../../evidence/openai/2026-09-16-codex-request-reasoning.md)。按官方发行程序逐型号核查，不仅检查文档的选择器示例；明确区分 CLI 缺省、裸请求缺省及自动委派模式。
+
+## 上下文长度核对
+
+新增及每次更新模型必须按 [CONTEXT.md](../../docs/CONTEXT.md) 查询本产品官方窗口，包含全部订阅型号。填写 `context_window_tokens` 与独立 `context_assessment`，记录单位及套餐 / 扩展模式条件；未知写原因并进入审阅报告，不从同名原厂或其他产品继承。

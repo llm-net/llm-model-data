@@ -175,6 +175,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Chat 文档按精确 ID 分 schema；K2.7 Code 高速版明确与标准版参数一致且不可关思考。K3 使用 low/high/max，K2.6 可关闭；其他已登记协议面的参数还未补证。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:04:28.770892+00:00",
+            "source_ids": [
+              "context-kimi-k3"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "API 文档标称 1M；max_completion_tokens=1048576 是输出参数上限，不能作为总窗口的整数证明。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
         }
       }
     },
@@ -334,6 +348,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Chat 文档按精确 ID 分 schema；K2.7 Code 高速版明确与标准版参数一致且不可关思考。K3 使用 low/high/max，K2.6 可关闭；其他已登记协议面的参数还未补证。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:04:28.925931+00:00",
+            "source_ids": [
+              "context-kimi-k27"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "API 文档明确列出这三个型号各有 256K；订阅 Kimi Code 的整数不能自动证明本产品整数边界。 官方窗口原文为 256K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 262144 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
         }
       }
     },
@@ -491,6 +519,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Chat 文档按精确 ID 分 schema；K2.7 Code 高速版明确与标准版参数一致且不可关思考。K3 使用 low/high/max，K2.6 可关闭；其他已登记协议面的参数还未补证。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:04:28.925931+00:00",
+            "source_ids": [
+              "context-kimi-k27"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "API 文档明确列出这三个型号各有 256K；订阅 Kimi Code 的整数不能自动证明本产品整数边界。 官方窗口原文为 256K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 262144 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
         }
       }
     },
@@ -651,6 +693,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Chat 文档按精确 ID 分 schema；K2.7 Code 高速版明确与标准版参数一致且不可关思考。K3 使用 low/high/max，K2.6 可关闭；其他已登记协议面的参数还未补证。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256K",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:04:28.925931+00:00",
+            "source_ids": [
+              "context-kimi-k27"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "API 文档明确列出这三个型号各有 256K；订阅 Kimi Code 的整数不能自动证明本产品整数边界。 官方窗口原文为 256K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 262144 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
         }
       }
     }

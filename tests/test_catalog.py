@@ -230,6 +230,90 @@ class SubscriptionAndCollectionPolicy(unittest.TestCase):
                     c.check_offering(ROOT, data, provider)
 
 
+class ContextContracts(unittest.TestCase):
+    def setUp(self):
+        self.provider = c.read_json(ROOT / "providers/openai/provider.json")
+        self.data = c.read_json(ROOT / "providers/openai/offerings/api-global/catalog.json")
+        self.cap = self.data["models"][0]["capabilities"]
+        self.assessment = self.cap["context_assessment"]
+
+    def check(self):
+        c.check_offering(ROOT, self.data, self.provider)
+
+    def test_history_readable_but_new_model_requires_context_check(self):
+        del self.cap["context_assessment"]
+        schema = c.read_json(ROOT / "schemas/catalog.schema.json")
+        self.assertTrue(c.Draft202012Validator(schema).is_valid(self.data))
+        with self.assertRaisesRegex(c.CatalogError, "context window and assessment"):
+            self.check()
+
+    def test_known_window_needs_positive_integer_and_independent_evidence(self):
+        for value in (None, 0, -1, True, 1.5):
+            with self.subTest(value=value):
+                self.cap["context_window_tokens"] = value
+                with self.assertRaisesRegex(c.CatalogError, "positive integer"):
+                    self.check()
+        self.cap["context_window_tokens"] = 400000
+        self.assessment["verification"].update(status="needs_review", checked_at=None)
+        with self.assertRaisesRegex(c.CatalogError, "own verified evidence"):
+            self.check()
+
+    def test_unresolved_units_keep_reported_spec_without_guessing_tokens(self):
+        self.assessment.update(status="partial", reported_value="256K")
+        self.check()  # A prior integer can remain explicitly unverified.
+        self.cap["context_window_tokens"] = None
+        self.check()
+        self.assessment["reported_value"] = None
+        with self.assertRaisesRegex(c.CatalogError, "reported value"):
+            self.check()
+
+    def test_unknown_cannot_be_verified_or_not_applicable_for_text(self):
+        self.assessment.update(status="unknown", reported_value=None)
+        self.cap["context_window_tokens"] = None
+        with self.assertRaisesRegex(c.CatalogError, "cannot claim successful"):
+            self.check()
+        self.assessment["verification"].update(status="needs_review", checked_at=None)
+        self.check()
+        self.assessment["status"] = "not_applicable"
+        self.assessment["verification"].update(status="verified", checked_at="2026-09-16T00:00:00Z")
+        with self.assertRaisesRegex(c.CatalogError, "text model context"):
+            self.check()
+
+    def test_context_only_change_is_reviewable(self):
+        before = deepcopy(self.data)
+        self.cap["context_window_tokens"] = 500000
+        path = "providers/openai/offerings/api-global/catalog.json"
+        report = c.summarize_changes({path: c.canonical(before)}, {path: c.canonical(self.data)})
+        self.assertIn("context_window_tokens", report)
+        self.assertIn("400000", report)
+        self.assertIn("500000", report)
+
+    def test_unknown_still_requires_a_documented_lookup(self):
+        self.assessment.update(status="unknown", reported_value=None)
+        self.cap["context_window_tokens"] = None
+        v = self.assessment["verification"]
+        v.update(status="needs_review", checked_at=None)
+        original = v["source_ids"]
+        v["source_ids"] = []
+        with self.assertRaisesRegex(c.CatalogError, "attempted sources"):
+            self.check()
+        v["source_ids"] = original
+        v["evidence"] = None
+        with self.assertRaisesRegex(c.CatalogError, "needs evidence"):
+            self.check()
+
+    def test_context_source_cannot_borrow_another_provider_or_missing_evidence(self):
+        v = self.assessment["verification"]
+        original = v["source_ids"]
+        v["source_ids"] = ["unregistered-context-source"]
+        with self.assertRaisesRegex(c.CatalogError, "unknown source_id"):
+            self.check()
+        v["source_ids"] = original
+        v["evidence"] = "evidence/missing-context.md"
+        with self.assertRaisesRegex(c.CatalogError, "missing evidence"):
+            self.check()
+
+
 class ProtocolContracts(unittest.TestCase):
     setUp = DataContracts.setUp
     check = DataContracts.check
@@ -510,6 +594,17 @@ class ApprovalFreshness(unittest.TestCase):
                 if reasoning["coverage"] != "complete":
                     self.assertIn(f"{doc['provider_id']}/{doc['id']}/{model['id']}: "
                                   f"{reasoning['coverage']}", report)
+
+    def test_review_keeps_context_gaps_visible_without_data_changes(self):
+        c.review(self.root, "HEAD")
+        report = (self.root / ".review/REVIEW.md").read_text().split("## 上下文长度待核对清单")[1]
+        for path in (self.root / "providers").glob("*/offerings/*/catalog.json"):
+            doc = c.read_json(path)
+            for model in doc["models"]:
+                context = model["capabilities"]["context_assessment"]
+                if context["status"] in {"partial", "unknown"}:
+                    self.assertIn(f"{doc['provider_id']}/{doc['id']}/{model['id']}: "
+                                  f"{context['status']}", report)
 
     def test_new_untracked_data_invalidates_confirmation(self):
         expected = c.review(self.root, "HEAD")

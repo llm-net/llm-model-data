@@ -197,6 +197,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "GPT-5.2 按量模型的官方五档；none 关闭思考。不是 Codex 订阅设置。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "400,000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:43.190587+00:00",
+            "source_ids": [
+              "context-openai-model"
+            ],
+            "evidence": "evidence/openai/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "GPT-5.2 API 官方整数窗口；最大输出是另一个独立字段。"
         }
       }
     }

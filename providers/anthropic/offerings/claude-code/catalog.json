@@ -245,7 +245,7 @@
       "notes": "Claude Code 官方配置页明确列出 Fable 5.1；账号资格与客户端版本仍影响可用性，plan_ids 未核对。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -305,6 +305,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1 million tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.259008+00:00",
+            "source_ids": [
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Claude Code 型号配置明确列出的原生 1M 窗口；CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值。此处不包含第三方云或自定义网关。"
         }
       }
     },
@@ -405,7 +419,7 @@
       "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -465,6 +479,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1 million tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.259008+00:00",
+            "source_ids": [
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Claude Code 型号配置明确列出的原生 1M 窗口；CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值。此处不包含第三方云或自定义网关。"
         }
       }
     },
@@ -571,7 +599,7 @@
       "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -643,6 +671,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1 million tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.259008+00:00",
+            "source_ids": [
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Claude Code：Max / Team / Enterprise 自动启用 1M；Pro 的 1M 需要 usage credits。记录已公开支持的有条件窗口，不能表示所有套餐默认都为 1M。"
         }
       }
     },
@@ -749,7 +791,7 @@
       "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -821,6 +863,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1 million tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.259008+00:00",
+            "source_ids": [
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Claude Code 型号配置明确列出的原生 1M 窗口；CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值。此处不包含第三方云或自定义网关。"
         }
       }
     },
@@ -984,6 +1040,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Haiku 可用扩展思考开关，但默认值和此客户端的固定预算范围未核实。日期版仅沿用官方 Haiku 4.5 产品身份，不借价格近似推导参数。"
+        },
+        "context_assessment": {
+          "status": "unknown",
+          "reported_value": null,
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "本次 Claude Code 型号配置页未明确这两个精确订阅型号的上下文窗口；API 的 200K 不能自动作为订阅限制。"
         }
       }
     },
@@ -1148,6 +1218,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Haiku 可用扩展思考开关，但默认值和此客户端的固定预算范围未核实。日期版仅沿用官方 Haiku 4.5 产品身份，不借价格近似推导参数。"
+        },
+        "context_assessment": {
+          "status": "unknown",
+          "reported_value": null,
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "本次 Claude Code 型号配置页未明确这两个精确订阅型号的上下文窗口；API 的 200K 不能自动作为订阅限制。"
         }
       }
     }

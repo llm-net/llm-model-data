@@ -189,6 +189,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:08:58.659814+00:00",
+            "source_ids": [
+              "context-zhipu-latest"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Coding Plan 文档针对 GLM-5.3 / GLM-5.3-Flash 要求 [1m] 后缀；配置示例 1000000 是 CLAUDE_CODE_AUTO_COMPACT_WINDOW 压缩阈值，不能据此确认服务窗口整数。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -366,6 +380,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:08:58.659814+00:00",
+            "source_ids": [
+              "context-zhipu-latest"
+            ],
+            "evidence": "evidence/zhipu/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Coding Plan 文档针对 GLM-5.3 / GLM-5.3-Flash 要求 [1m] 后缀；配置示例 1000000 是 CLAUDE_CODE_AUTO_COMPACT_WINDOW 压缩阈值，不能据此确认服务窗口整数。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     }

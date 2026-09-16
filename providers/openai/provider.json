@@ -116,6 +116,24 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
       "purpose": "models",
       "notes": "官方 CLI 0.154.0 内嵌逐模型目录；本机二进制检查与无凭据回环请求验证见 codex-request-reasoning 证据。"
+    },
+    {
+      "id": "context-openai-model",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.2.md",
+      "purpose": "models",
+      "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "context-codex-models",
+      "url": "https://learn.chatgpt.com/docs/models.md",
+      "purpose": "models",
+      "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "context-codex-release",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
+      "purpose": "models",
+      "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

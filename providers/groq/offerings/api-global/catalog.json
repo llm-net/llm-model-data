@@ -187,6 +187,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Groq 明确 GPT-OSS 20B / 120B 的三档与两个协议参数。缺省档位、是否有关闭方法仍未知；reasoning_format / include_reasoning 只控制展示，不是深度。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "131,072",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:43.103237+00:00",
+            "source_ids": [
+              "context-groq-models"
+            ],
+            "evidence": "evidence/groq/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Groq 平台 GPT OSS 对应型号行的 CONTEXT WINDOW (TOKENS)，不是原厂规格。"
         }
       }
     },
@@ -362,6 +376,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Groq 明确 GPT-OSS 20B / 120B 的三档与两个协议参数。缺省档位、是否有关闭方法仍未知；reasoning_format / include_reasoning 只控制展示，不是深度。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "131,072",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:43.103237+00:00",
+            "source_ids": [
+              "context-groq-models"
+            ],
+            "evidence": "evidence/groq/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Groq 平台 GPT OSS 对应型号行的 CONTEXT WINDOW (TOKENS)，不是原厂规格。"
         }
       }
     }

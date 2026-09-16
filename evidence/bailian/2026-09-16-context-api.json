@@ -1,0 +1,173 @@
+{
+  "method": "POST /cli/api.json; anonymous, no Authorization or Cookie",
+  "region": "cn-beijing",
+  "api": "zeldaHttp.dashscopeModel./zelda/api/v1/modelCenter/listFoundationModels",
+  "models": [
+    {
+      "request_id": "qwen3.8-max",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 991808,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 991808,
+        "maxReasoningTokens": 262144,
+        "reasoningMaxInputTokens": 983616,
+        "maxOutputTokens": 131072,
+        "reasoningMaxOutputTokens": 131072
+      }
+    },
+    {
+      "request_id": "qwen3.8-max-prime",
+      "found": false
+    },
+    {
+      "request_id": "qwen3.7-plus",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 991808,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 991808,
+        "maxReasoningTokens": 262144,
+        "reasoningMaxInputTokens": 983616,
+        "maxOutputTokens": 131072,
+        "reasoningMaxOutputTokens": 131072
+      }
+    },
+    {
+      "request_id": "qwen3.8-flash",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 991808,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 991808,
+        "maxReasoningTokens": 262144,
+        "reasoningMaxInputTokens": 983616,
+        "maxOutputTokens": 131072,
+        "reasoningMaxOutputTokens": 131072
+      }
+    },
+    {
+      "request_id": "qwen3.7-flash",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 991808,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 991808,
+        "maxReasoningTokens": 262144,
+        "reasoningMaxInputTokens": 983616,
+        "maxOutputTokens": 131072,
+        "reasoningMaxOutputTokens": 131072
+      }
+    },
+    {
+      "request_id": "qwen3-coder-plus",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 997952,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 997952,
+        "maxOutputTokens": 65536
+      }
+    },
+    {
+      "request_id": "qwen3-vl-plus",
+      "found": true,
+      "contextWindow": 262144,
+      "maxInputTokens": 260096,
+      "modelInfo": {
+        "contextWindow": 262144,
+        "maxInputTokens": 260096,
+        "maxReasoningTokens": 81920,
+        "reasoningMaxInputTokens": 258048,
+        "maxOutputTokens": 32768,
+        "reasoningMaxOutputTokens": 32768
+      }
+    },
+    {
+      "request_id": "qwen3-vl-flash",
+      "found": true,
+      "contextWindow": 262144,
+      "maxInputTokens": 260096,
+      "modelInfo": {
+        "contextWindow": 262144,
+        "maxInputTokens": 260096,
+        "maxReasoningTokens": 81920,
+        "reasoningMaxInputTokens": 258048,
+        "maxOutputTokens": 32768,
+        "reasoningMaxOutputTokens": 32768
+      }
+    },
+    {
+      "request_id": "qwen3.8-2.4t-a95b",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 991808,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 991808,
+        "maxReasoningTokens": 131072,
+        "reasoningMaxInputTokens": 983616,
+        "maxOutputTokens": 131072,
+        "reasoningMaxOutputTokens": 131072
+      }
+    },
+    {
+      "request_id": "qwen3.8-27b",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 991808,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 991808,
+        "maxReasoningTokens": 262144,
+        "reasoningMaxInputTokens": 983616,
+        "maxOutputTokens": 131072,
+        "reasoningMaxOutputTokens": 131072
+      }
+    },
+    {
+      "request_id": "MiniMax/MiniMax-M3",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 1048576,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 1048576,
+        "reasoningMaxInputTokens": 1048576
+      }
+    },
+    {
+      "request_id": "xiaomi/mimo-v2.5-pro",
+      "found": true,
+      "contextWindow": 1000000,
+      "maxInputTokens": 1048576,
+      "modelInfo": {
+        "contextWindow": 1000000,
+        "maxInputTokens": 1048576,
+        "maxReasoningTokens": 131072,
+        "reasoningMaxInputTokens": 1048576,
+        "maxOutputTokens": 131072,
+        "reasoningMaxOutputTokens": 131072
+      }
+    },
+    {
+      "request_id": "stepfun/step-3.7-flash",
+      "found": true,
+      "contextWindow": 262144,
+      "maxInputTokens": 262144,
+      "modelInfo": {
+        "contextWindow": 262144,
+        "maxInputTokens": 262144,
+        "maxReasoningTokens": 262144,
+        "reasoningMaxInputTokens": 262144,
+        "maxOutputTokens": 262144,
+        "reasoningMaxOutputTokens": 262144
+      }
+    }
+  ]
+}

@@ -149,6 +149,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:43.502111+00:00",
+            "source_ids": [
+              "context-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "OpenRouter 模型级公开 API 原始整数；不从 Anthropic 模型页或路由端点继承，动态 ID 后续须重查。"
         }
       }
     }

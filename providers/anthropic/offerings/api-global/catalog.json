@@ -193,6 +193,21 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Opus 5 / Sonnet 5 默认自适应思考，不接受旧手动 budget_tokens。Messages 已核对，Chat 兼容层的控制方式仍未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1M tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.303802+00:00",
+            "source_ids": [
+              "context-claude-models",
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方型号表窗口；Claude 文档的窗口记法采用十进制（1 million tokens，200 表示 200,000）。保留 API 产品范围。"
         }
       }
     },
@@ -374,6 +389,21 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Opus 5 / Sonnet 5 默认自适应思考，不接受旧手动 budget_tokens。Messages 已核对，Chat 兼容层的控制方式仍未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1M tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.303802+00:00",
+            "source_ids": [
+              "context-claude-models",
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方型号表窗口；Claude 文档的窗口记法采用十进制（1 million tokens，200 表示 200,000）。保留 API 产品范围。"
         }
       }
     },
@@ -549,6 +579,21 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Haiku 4.5 支持手动思考预算，不支持 interleaved thinking；不能用 effort 代替预算。默认模式和 Chat 兼容层参数未完整核对。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "200K tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.303802+00:00",
+            "source_ids": [
+              "context-claude-models",
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方型号表窗口；Claude 文档的窗口记法采用十进制（1 million tokens，200 表示 200,000）。保留 API 产品范围。"
         }
       }
     }

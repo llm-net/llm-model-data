@@ -102,7 +102,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -204,6 +204,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:47.912845+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-8-max"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.8-max 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -329,6 +343,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "unknown",
+          "reported_value": null,
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "context-bailian-public-qwen3-8-max-prime"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "公开模型中心按精确请求 ID 查询未返回本型号；不是模型下线证明，也不套 qwen3.8-max 的窗口。"
         }
       }
     },
@@ -419,7 +447,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -521,6 +549,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:47.941811+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-7-plus"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.7-plus 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -611,7 +653,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -713,6 +755,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:47.931223+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-8-flash"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.8-flash 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -803,7 +859,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -905,6 +961,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.201699+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-7-flash"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.7-flash 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -995,7 +1065,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -1034,6 +1104,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.209134+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-coder-plus"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3-coder-plus 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -1124,7 +1208,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 262144,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -1163,6 +1247,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "262144",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.230826+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-vl-plus"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3-vl-plus 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -1253,7 +1351,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 262144,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -1292,6 +1390,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "262144",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.230615+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-vl-flash"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3-vl-flash 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -1382,7 +1494,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -1482,6 +1594,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.428480+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-8-2-4t-a95b"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.8-2.4t-a95b 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -1572,7 +1698,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -1674,6 +1800,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.467505+00:00",
+            "source_ids": [
+              "context-bailian-public-qwen3-8-27b"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.8-27b 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -1764,7 +1904,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -1799,6 +1939,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.509633+00:00",
+            "source_ids": [
+              "context-bailian-public-minimax_minimax-m3"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=MiniMax/MiniMax-M3 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -1889,7 +2043,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -1924,6 +2078,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.500765+00:00",
+            "source_ids": [
+              "context-bailian-public-xiaomi_mimo-v2-5-pro"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=xiaomi/mimo-v2.5-pro 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -2014,7 +2182,7 @@
       "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
       "capabilities": {
         "input_modalities": [],
-        "context_window_tokens": null,
+        "context_window_tokens": 262144,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -2049,6 +2217,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "262144",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:14:48.660837+00:00",
+            "source_ids": [
+              "context-bailian-public-stepfun_step-3-7-flash"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=stepfun/step-3.7-flash 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
         }
       }
     },
@@ -2190,6 +2372,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:06:26.386845+00:00",
+            "source_ids": [
+              "context-bailian-price"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -2331,6 +2527,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:06:26.386845+00:00",
+            "source_ids": [
+              "context-bailian-price"
+            ],
+            "evidence": "evidence/bailian/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     }

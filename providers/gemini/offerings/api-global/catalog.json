@@ -113,7 +113,7 @@
           "video",
           "audio"
         ],
-        "context_window_tokens": 1048576,
+        "context_window_tokens": null,
         "max_output_tokens": 65536,
         "tool_calling": true,
         "structured_output": true,
@@ -198,6 +198,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "3.7 Flash 专页明确 low/medium/high，minimal 报错；思考指南默认 medium，兼容文档明确 Gemini 3 不能关闭思考。GenerateContent 原生字段与大写枚举已核对；其他预算参数的型号适用范围未全部核对，保留 partial。"
+        },
+        "context_assessment": {
+          "status": "unknown",
+          "reported_value": null,
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "context-gemini-model"
+            ],
+            "evidence": "evidence/gemini/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方只列 Input token limit=1048576、Output token limit=65536，未明确二者合计的总上下文窗口；旧 context_window_tokens=1048576 混用了输入上限，本轮清空；最大输出保留。"
         }
       }
     }

@@ -138,6 +138,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "128k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 128k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -264,6 +278,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "128k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 128k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -396,6 +424,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "128k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 128k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -528,6 +570,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "32k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 32k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -665,6 +721,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -802,6 +872,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -934,6 +1018,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1066,6 +1164,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "128k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 128k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1199,6 +1311,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "198k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:41.493409+00:00",
+            "source_ids": [
+              "context-qianfan-models"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "千帆精确 model 参数所在行，最大输入与最大输出另列；不从价格短名映射推导。 官方窗口原文为 198k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     }

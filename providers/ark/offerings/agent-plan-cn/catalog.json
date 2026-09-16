@@ -458,6 +458,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:00:21.364Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 自身型号表，与 Coding Plan 分别核对。 官方窗口原文为 1024k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -599,6 +613,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:00:21.364Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 自身型号表，与 Coding Plan 分别核对。 官方窗口原文为 1024k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -736,6 +764,21 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:00:23.368Z",
+            "source_ids": [
+              "context-ark-models",
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -873,6 +916,21 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:00:23.368Z",
+            "source_ids": [
+              "context-ark-models",
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1010,6 +1068,21 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:00:23.368Z",
+            "source_ids": [
+              "context-ark-models",
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1147,6 +1220,21 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:00:23.368Z",
+            "source_ids": [
+              "context-ark-models",
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     },
@@ -1284,6 +1372,21 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:00:23.368Z",
+            "source_ids": [
+              "context-ark-models",
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
     }

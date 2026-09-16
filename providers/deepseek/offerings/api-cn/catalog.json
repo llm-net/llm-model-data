@@ -250,6 +250,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "按当前 Thinking Mode 的三协议对照表记录；默认 high。旧 deepseek-v4-flash 与实验 ID 不继承此结论。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.681533+00:00",
+            "source_ids": [
+              "context-deepseek-models"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "原厂 API 型号表；旧 Flash 请求名由脚注明确接受并转到当前 Flash，不是猜测别名。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
         }
       }
     },
@@ -487,6 +501,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "按当前 Thinking Mode 的三协议对照表记录；默认 high。旧 deepseek-v4-flash 与实验 ID 不继承此结论。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.681533+00:00",
+            "source_ids": [
+              "context-deepseek-models"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "原厂 API 型号表；旧 Flash 请求名由脚注明确接受并转到当前 Flash，不是猜测别名。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
         }
       }
     },
@@ -621,6 +649,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.681533+00:00",
+            "source_ids": [
+              "context-deepseek-models"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "原厂 API 型号表；旧 Flash 请求名由脚注明确接受并转到当前 Flash，不是猜测别名。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
         }
       }
     },
@@ -755,6 +797,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:42.681533+00:00",
+            "source_ids": [
+              "context-deepseek-models"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "原厂 API 型号表；旧 Flash 请求名由脚注明确接受并转到当前 Flash，不是猜测别名。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
         }
       }
     }

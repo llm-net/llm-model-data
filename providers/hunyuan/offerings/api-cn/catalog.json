@@ -168,6 +168,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Hy 型号使用指南给出默认 high 和工具调用限制；完整档位、开关以及另外两面参数待补。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -325,6 +339,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Hy 型号使用指南给出默认 high 和工具调用限制；完整档位、开关以及另外两面参数待补。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 256k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -449,6 +477,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "8k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 8k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -573,6 +615,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "44k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 44k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -706,6 +762,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -839,6 +909,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -972,6 +1056,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1105,6 +1203,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1238,6 +1350,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T15:02:46.242333+00:00",
+            "source_ids": [
+              "context-hunyuan-list"
+            ],
+            "evidence": "evidence/hunyuan/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "腾讯 TokenHub 对应型号行，不能把最大输入或第三方原厂参数作为窗口。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     }

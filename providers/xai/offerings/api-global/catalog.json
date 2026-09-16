@@ -203,6 +203,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "推理专页明确不能关闭；4.5 专页的 xhigh 标记与推理专页支持表冲突，只登记双方一致的三档。原生 gRPC 控制字段仍待证实。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "500,000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:43.462584+00:00",
+            "source_ids": [
+              "context-xai-46"
+            ],
+            "evidence": "evidence/xai/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "xAI API 精确型号页整数；不等于 Grok Build 的工具窗口。"
         }
       }
     },
@@ -392,6 +406,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "推理专页明确不能关闭；4.5 专页的 xhigh 标记与推理专页支持表冲突，只登记双方一致的三档。原生 gRPC 控制字段仍待证实。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "500,000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:43.482436+00:00",
+            "source_ids": [
+              "context-xai-45"
+            ],
+            "evidence": "evidence/xai/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "xAI API 精确型号页整数；不等于 Grok Build 的工具窗口。"
         }
       }
     }

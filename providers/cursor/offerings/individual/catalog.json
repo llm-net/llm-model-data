@@ -352,6 +352,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.177512+00:00",
+            "source_ids": [
+              "context-cursor-composer-2-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 -，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 200k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -517,6 +531,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 型号页逐档说明。Grok 的 Start（印度）套餐固定 medium，完整切换能力受套餐限制；Muse 的 extra high 是文档标签，未猜写成 xhigh。没有套用原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.105489+00:00",
+            "source_ids": [
+              "context-cursor-grok-4-6"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 -，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 256k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -681,6 +709,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 型号页逐档说明。Grok 的 Start（印度）套餐固定 medium，完整切换能力受套餐限制；Muse 的 extra high 是文档标签，未猜写成 xhigh。没有套用原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.147335+00:00",
+            "source_ids": [
+              "context-cursor-grok-4-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 -，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 256k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -831,6 +873,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "300k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.105052+00:00",
+            "source_ids": [
+              "context-cursor-claude-fable-5-1"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 300k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -981,6 +1037,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "300k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.225229+00:00",
+            "source_ids": [
+              "context-cursor-claude-opus-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 300k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1131,6 +1201,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.594489+00:00",
+            "source_ids": [
+              "context-cursor-claude-sonnet-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 200k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1281,6 +1365,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.617267+00:00",
+            "source_ids": [
+              "context-cursor-gemini-3-1-pro"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 200k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1431,6 +1529,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.674503+00:00",
+            "source_ids": [
+              "context-cursor-gemini-3-8-flash"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 200k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1581,6 +1693,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "272k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.811549+00:00",
+            "source_ids": [
+              "context-cursor-gpt-5-6-luna"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 272k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1731,6 +1857,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "272k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.764614+00:00",
+            "source_ids": [
+              "context-cursor-gpt-5-6-sol"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 272k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -1881,6 +2021,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "272k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:44.815010+00:00",
+            "source_ids": [
+              "context-cursor-gpt-5-6-terra"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 272k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     },
@@ -2048,6 +2202,20 @@
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
           "notes": "Cursor 型号页逐档说明。Grok 的 Start（印度）套餐固定 medium，完整切换能力受套餐限制；Muse 的 extra high 是文档标签，未猜写成 xhigh。没有套用原厂 API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "300k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T14:59:45.266497+00:00",
+            "source_ids": [
+              "context-cursor-muse-spark-1-3"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-context.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 300k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
     }
