@@ -651,6 +651,149 @@
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
       "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。"
+    },
+    {
+      "id": "gpt-5-5",
+      "request_id": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T10:27:21.232069Z",
+        "source_ids": [
+          "completion-codex-models"
+        ],
+        "evidence": "evidence/openai/2026-09-16-subscription-completeness.md",
+        "notes": "官方 Other models 仍列为可用；已公告 2026-10-14 从 ChatGPT 登录的 Codex 退役，当前不提前标为 retired；届时复核。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/openai/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "OpenAI API 标准在线、输入不超过 272K 的参考价，不展开长上下文、Batch 或地区档。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://developers.openai.com/api/docs/models/gpt-5.5",
+              "subject": "gpt-5.5",
+              "reason": "优先采用同平台对应型号公开按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "source_ids": [
+                "completion-gpt-5-5-price"
+              ],
+              "evidence": "evidence/openai/2026-09-16-subscription-completeness.md",
+              "notes": "核对同平台公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "source_ids": [
+            "completion-gpt-5-5-price"
+          ],
+          "evidence": "evidence/openai/2026-09-16-subscription-completeness.md",
+          "notes": "核对同平台公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "官方 Other models 仍列为可用；已公告 2026-10-14 从 ChatGPT 登录的 Codex 退役，当前不提前标为 retired；届时复核。"
+    },
+    {
+      "id": "gpt-5-3-codex-spark",
+      "request_id": "gpt-5.3-codex-spark",
+      "display_name": "GPT-5.3-Codex-Spark",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro-5x"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T10:27:21.232069Z",
+        "source_ids": [
+          "completion-codex-models"
+        ],
+        "evidence": "evidence/openai/2026-09-16-subscription-completeness.md",
+        "notes": "官方列出的纯文本研究预览模型，限 ChatGPT Pro；当前库中的 Pro 5x 档可关联，实际资格依账号开放情况。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/openai/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/openai/2026-09-16-subscription-completeness.md",
+          "notes": "OpenAI 完整公开 API 价表未找到 Spark 对应型号现金价，不以 GPT-5.3-Codex 近似。"
+        },
+        "notes": "未查到同平台/开发方 OpenAI 的对应型号公开按量价；未知不是免费。"
+      },
+      "notes": "官方列出的纯文本研究预览模型，限 ChatGPT Pro；当前库中的 Pro 5x 档可关联，实际资格依账号开放情况。"
     }
   ],
   "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"

@@ -4,10 +4,10 @@
 
 ## 当前结果
 
-- 20家服务商、30个产品、202条模型。
-- 57条订阅模型均已补齐参考价，其中K2.8 Preview按用户指定参考K2.7 Code。
+- 20家服务商、30个产品、216条模型。
+- 71条订阅模型中70条已有参考价；K2.8 Preview按用户指定参考K2.7 Code，新增Codex Spark未查到对应公开按量价，保留unknown。
 - 5条方舟/千帆API短名已对齐最新日期版本。
-- 共173条有唯一价格基准，剩余29条均为晨羽平台公开价目未取得。
+- 共186条有唯一价格基准，剩余30条：晨羽平台29条公开价目未取得、Codex Spark 1条参考价未知。
 - 已删除6条模型；排除项写入provider.json，校验器阻止重新导入。SiliconFlow任何retired记录均无法通过校验。
 
 ## 固定口径
@@ -88,7 +88,7 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 | bailian/token-plan-cn | `glm-5.2` | `glm-5.2` | CNY input_uncached_tokens=8/1000000 token, output_tokens=28/1000000 token |
 | bailian/token-plan-cn | `glm-5.1` | `glm-5.1` | CNY input_uncached_tokens=6/1000000 token, output_tokens=24/1000000 token |
 | bailian/token-plan-cn | `glm-5` | `glm-5` | CNY input_uncached_tokens=4/1000000 token, output_tokens=18/1000000 token |
-| cursor/individual | `composer-2-5` | `Composer 2.5 Standard on-demand` | USD input_uncached_tokens=0.5/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=2.5/1000000 token |
+| cursor/individual | `composer-2.5` | `composer-2.5` | USD input_uncached_tokens=0.5/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=2.5/1000000 token |
 | minimax/token-plan-cn | `MiniMax-M3` | `MiniMax-M3` | CNY input_uncached_tokens=2.1/1000000 token, input_cached_tokens=0.42/1000000 token, output_tokens=8.4/1000000 token |
 | minimax/token-plan-cn | `MiniMax-M2.7` | `MiniMax-M2.7` | CNY input_uncached_tokens=2.1/1000000 token, input_cached_tokens=0.42/1000000 token, output_tokens=8.4/1000000 token |
 | moonshot/kimi-code | `k3` | `kimi-k3` | CNY input_uncached_tokens=20/1000000 token, input_cached_tokens=2/1000000 token, output_tokens=100/1000000 token |
@@ -106,4 +106,21 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 | zhipu/coding-plan-cn | `glm-5.3` | `glm-5.3` | CNY input_uncached_tokens=8/1000000 token, input_cached_tokens=2/1000000 token, output_tokens=28/1000000 token |
 | zhipu/coding-plan-cn | `glm-5.3-flash` | `glm-5.3-flash` | CNY input_uncached_tokens=0.8/1000000 token, input_cached_tokens=0.23/1000000 token, output_tokens=2.8/1000000 token |
 
+| anthropic/claude-code | `claude-fable-5-1` | `claude-fable-5-1` | USD input_uncached_tokens=10/1000000 token, input_cached_tokens=0.25/1000000 token, output_tokens=50/1000000 token, cache_write_5m_tokens=12.5/1000000 token |
+| openai/codex | `gpt-5.5` | `gpt-5.5` | USD input_uncached_tokens=5/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=30/1000000 token |
+| openai/codex | `gpt-5.3-codex-spark` | `未知` | unknown：未查到对应型号公开按量价 |
+| cursor/individual | `grok-4.6` | `grok-4.6` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=6/1000000 token |
+| cursor/individual | `grok-4.5` | `grok-4.5` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=6/1000000 token |
+| cursor/individual | `claude-fable-5-1` | `claude-fable-5-1` | USD input_uncached_tokens=10/1000000 token, input_cached_tokens=0.25/1000000 token, output_tokens=50/1000000 token |
+| cursor/individual | `claude-opus-5` | `claude-opus-5` | USD input_uncached_tokens=5/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=25/1000000 token |
+| cursor/individual | `claude-sonnet-5` | `claude-sonnet-5` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=10/1000000 token |
+| cursor/individual | `gemini-3.1-pro` | `gemini-3.1-pro` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=12/1000000 token |
+| cursor/individual | `gemini-3.8-flash` | `gemini-3.8-flash` | USD input_uncached_tokens=0.75/1000000 token, input_cached_tokens=0.075/1000000 token, output_tokens=3.5/1000000 token |
+| cursor/individual | `gpt-5.6-luna` | `gpt-5.6-luna` | USD input_uncached_tokens=0.2/1000000 token, input_cached_tokens=0.02/1000000 token, output_tokens=1.2/1000000 token |
+| cursor/individual | `gpt-5.6-sol` | `gpt-5.6-sol` | USD input_uncached_tokens=4/1000000 token, input_cached_tokens=0.4/1000000 token, output_tokens=20/1000000 token |
+| cursor/individual | `gpt-5.6-terra` | `gpt-5.6-terra` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=12/1000000 token |
+| cursor/individual | `muse-spark-1.3` | `muse-spark-1.3` | USD input_uncached_tokens=1.25/1000000 token, input_cached_tokens=0.15/1000000 token, output_tokens=4.25/1000000 token |
+
 各家本轮证据在`evidence/<provider>/2026-09-16-alignment.md`，记录官方URL、抓取时间、参考对象、原厂回退原因和数值。首轮审计文件为历史快照，当前状态以本页与catalog为准。
+
+2026-09-16 订阅补漏：Claude Code新增Fable 5.1；Codex新增GPT-5.5与GPT-5.3-Codex-Spark；Cursor从1项补至12项，按各官方详情页补上请求ID。已有模型的数字价格与所有套餐/额度未改。新增证据为各家 `2026-09-16-subscription-completeness.md`。

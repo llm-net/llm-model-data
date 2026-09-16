@@ -50,6 +50,18 @@
       "url": "https://platform.claude.com/docs/en/about-claude/pricing",
       "purpose": "pricing",
       "notes": "参考价对齐来源；同平台按量价。"
+    },
+    {
+      "id": "completion-code-models",
+      "url": "https://code.claude.com/docs/en/model-config",
+      "purpose": "models",
+      "notes": "2026-09-16 订阅模型补漏核对；见 subscription-completeness 证据。"
+    },
+    {
+      "id": "completion-api-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "purpose": "pricing",
+      "notes": "2026-09-16 订阅模型补漏核对；见 subscription-completeness 证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

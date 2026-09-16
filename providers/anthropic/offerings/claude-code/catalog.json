@@ -143,6 +143,108 @@
   ],
   "models": [
     {
+      "id": "claude-fable-5-1",
+      "request_id": "claude-fable-5-1",
+      "display_name": "Claude Fable 5.1",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T10:27:21.232069Z",
+        "source_ids": [
+          "completion-code-models"
+        ],
+        "evidence": "evidence/anthropic/2026-09-16-subscription-completeness.md",
+        "notes": "Claude Code 官方配置页明确列出 Fable 5.1；账号资格与客户端版本仍影响可用性，plan_ids 未核对。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/anthropic/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.25",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "50",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "12.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Anthropic API 标准在线价；缓存写入取 5 分钟 TTL，不展开 1 小时与 Batch。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+              "subject": "claude-fable-5-1",
+              "reason": "优先采用同平台对应型号公开按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "source_ids": [
+                "completion-api-pricing"
+              ],
+              "evidence": "evidence/anthropic/2026-09-16-subscription-completeness.md",
+              "notes": "核对同平台公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "source_ids": [
+            "completion-api-pricing"
+          ],
+          "evidence": "evidence/anthropic/2026-09-16-subscription-completeness.md",
+          "notes": "核对同平台公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Claude Code 官方配置页明确列出 Fable 5.1；账号资格与客户端版本仍影响可用性，plan_ids 未核对。"
+    },
+    {
       "id": "claude-fable-5",
       "request_id": "claude-fable-5",
       "display_name": "claude-fable-5",
