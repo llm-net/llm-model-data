@@ -32,6 +32,8 @@
 
 ## 人工确认
 
+- 发布必须遵循[docs/RELEASE.md](docs/RELEASE.md)：只有远端`data-YYYY.MM.DD.N`正式tag算数据发布；最新版本按有效日期和整数序号比较。main推送不算发布，无正式tag不得回退main。正式tag不可覆盖或删除；提交推送授权不自动包含打发布tag。
+
 - 优先受保护 PR 的真人审核；本地可确认完整 candidate SHA-256 和具体动作。“创建结构”的授权足以完成文件和检查，无需每次写文件请示。
 - 不得自行填写“人类已审核”、伪造 review、冒充审批人；approved:true 不是审批凭证。“继续整理”不自动授权发布。
 - 数据、schema、脚本或规则改变会使旧确认失效。获批后先执行 `python scripts/catalog.py check-candidate <完整SHA256>`；PR 还需核对已批准的最新 head commit。

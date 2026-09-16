@@ -34,6 +34,7 @@ tests/                             # 数据边界回归测试
 - [统一估价与多模态计费](docs/PRICING.md)
 - [聚合平台简化收录](docs/COLLECTION.md)
 - [人工确认](docs/REVIEW.md)
+- [数据版本发布与最新版本判定](docs/RELEASE.md)
 - [Agent 自动更新](docs/AUTOMATION.md)
 - [初始化范围](docs/BOOTSTRAP.md)
 - [Agent 工作规则](AGENTS.md)

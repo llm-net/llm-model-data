@@ -55,6 +55,8 @@ verification.status=verified 必须有 checked_at、source_ids 和存在的本�
 
 schema_version 是格式版本，Git commit / tag 是资料版本，SHA-256 是确认对象。消费者拥有自己的激活状态和账本；本仓库不存渠道、利润率、余额和环境开关。
 
+正式资料版本只认远端`data-YYYY.MM.DD.N` tag；最新版本比较规则见[RELEASE.md](RELEASE.md)。普通commit和分支推送不等于正式发布。
+
 ## 当前草案
 
 v1尚未正式发布，本次按用户确定的单一基准简化；首次正式发布后的破坏性变化需提升格式版本。详细口径见[PRICING.md](PRICING.md)，聚合平台收录见[COLLECTION.md](COLLECTION.md)。
