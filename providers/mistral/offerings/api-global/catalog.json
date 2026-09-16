@@ -108,7 +108,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat"
+            ],
+            "evidence": "evidence/mistral/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Mistral 托管 Chat Completions 模型接口。Agents / Conversations 是另一个托管编排产品，本清单不据此添加 Responses 或 Messages。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/mistral/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "mistral-small-latest",
@@ -203,7 +240,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat"
+            ],
+            "evidence": "evidence/mistral/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Mistral 托管 Chat Completions 模型接口。Agents / Conversations 是另一个托管编排产品，本清单不据此添加 Responses 或 Messages。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/mistral/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     }
   ],
   "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"

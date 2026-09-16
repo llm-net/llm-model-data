@@ -11,7 +11,6 @@
 | [MiniMax](minimax/README.md) | api-cn, token-plan-cn |
 | [智谱 BigModel](zhipu/README.md) | api-cn, coding-plan-cn |
 | [Moonshot / Kimi](moonshot/README.md) | api-cn, kimi-code |
-| [硅基流动](siliconflow/README.md) | api-cn |
 | [百度千帆](qianfan/README.md) | api-cn |
 | [腾讯 TokenHub / 混元](hunyuan/README.md) | api-cn |
 | [可灵](kling/README.md) | api-cn |
@@ -22,5 +21,6 @@
 | [OpenRouter](openrouter/README.md) | api-global |
 | [Groq](groq/README.md) | api-global |
 | [Mistral](mistral/README.md) | api-global |
-| [Together AI](together/README.md) | api-global |
 | [Cursor](cursor/README.md) | individual |
+
+硅基流动与 Together AI 已由用户整家移除，自动更新不得恢复，见 [服务商排除清单](../schemas/excluded-providers.json)。各家更新前必须按 [协议面维护](../docs/PROTOCOLS.md) 核对每个模型。

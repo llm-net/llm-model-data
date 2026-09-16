@@ -109,7 +109,44 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Grok Build说明当前由grok-4.6驱动；未确认每个订阅档位的权限。"
+      "notes": "官方Grok Build说明当前由grok-4.6驱动；未确认每个订阅档位的权限。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-build"
+            ],
+            "evidence": "evidence/xai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Grok Build 工具订阅承载按官方客户端核对 Responses；不是按量 API 资格，也不继承按量 Chat 或 gRPC。本地官方二进制含 Responses 请求路径，未用订阅真实调用。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/xai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "grok-4-5",
@@ -205,7 +242,44 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "当前Build说明只确认4.6，未确认4.5是否仍可由订阅选择。"
+      "notes": "当前Build说明只确认4.6，未确认4.5是否仍可由订阅选择。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-build"
+            ],
+            "evidence": "evidence/xai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Grok Build 工具订阅承载按官方客户端核对 Responses；不是按量 API 资格，也不继承按量 Chat 或 gRPC。本地官方二进制含 Responses 请求路径，未用订阅真实调用。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/xai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     }
   ],
   "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"

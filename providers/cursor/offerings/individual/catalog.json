@@ -303,7 +303,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-composer-2-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "grok-4-6",
@@ -403,7 +453,72 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方产品页的档位标签；私有 RPC 字段未公开，parameter=null，不能作为 API 参数发送。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-grok-4-6"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 型号页逐档说明。Grok 的 Start（印度）套餐固定 medium，完整切换能力受套餐限制；Muse 的 extra high 是文档标签，未猜写成 xhigh。没有套用原厂 API。"
+        }
+      }
     },
     {
       "id": "grok-4-5",
@@ -503,7 +618,71 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方产品页的档位标签；私有 RPC 字段未公开，parameter=null，不能作为 API 参数发送。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-grok-4-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 型号页逐档说明。Grok 的 Start（印度）套餐固定 medium，完整切换能力受套餐限制；Muse 的 extra high 是文档标签，未猜写成 xhigh。没有套用原厂 API。"
+        }
+      }
     },
     {
       "id": "claude-fable-5-1",
@@ -603,7 +782,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 12.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-claude-fable-5-1"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "claude-opus-5",
@@ -703,7 +932,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 6.25 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-claude-opus-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "claude-sonnet-5",
@@ -803,7 +1082,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 2.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-claude-sonnet-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "gemini-3-1-pro",
@@ -903,7 +1232,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-gemini-3-1-pro"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "gemini-3-8-flash",
@@ -1003,7 +1382,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-gemini-3-8-flash"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "gpt-5-6-luna",
@@ -1103,7 +1532,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 0.25 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-gpt-5-6-luna"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "gpt-5-6-sol",
@@ -1203,7 +1682,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-gpt-5-6-sol"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "gpt-5-6-terra",
@@ -1303,7 +1832,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 2.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-gpt-5-6-terra"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。"
+        }
+      }
     },
     {
       "id": "muse-spark-1-3",
@@ -1403,7 +1982,74 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-auth",
+              "protocol-install",
+              "protocol-models"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "extra high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方产品页的档位标签；私有 RPC 字段未公开，parameter=null，不能作为 API 参数发送。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-completion-muse-spark-1-3"
+            ],
+            "evidence": "evidence/cursor/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Cursor 型号页逐档说明。Grok 的 Start（印度）套餐固定 medium，完整切换能力受套餐限制；Muse 的 extra high 是文档标签，未猜写成 xhigh。没有套用原厂 API。"
+        }
+      }
     }
   ],
   "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"

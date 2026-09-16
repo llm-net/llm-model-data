@@ -419,7 +419,47 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "deepseek-v4-flash",
@@ -520,7 +560,47 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "doubao-seedance-2-5",
@@ -618,7 +698,46 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "ark_video"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-models",
+              "protocol-video",
+              "protocol-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "doubao-seedance-2-0",
@@ -716,7 +835,46 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "ark_video"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-models",
+              "protocol-video",
+              "protocol-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "doubao-seedance-2-0-fast",
@@ -814,7 +972,46 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "ark_video"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-models",
+              "protocol-video",
+              "protocol-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "doubao-seedance-2-0-mini",
@@ -912,7 +1109,46 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "ark_video"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-models",
+              "protocol-video",
+              "protocol-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "doubao-seedream-5-0-lite",
@@ -1010,7 +1246,46 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "ark_image"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-models",
+              "protocol-image",
+              "protocol-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     }
   ],
   "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"

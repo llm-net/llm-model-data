@@ -123,7 +123,77 @@
         "tool_calling": true,
         "structured_output": null,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-messages",
+              "protocol-chat"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Messages 为原生接口；Chat 是官方用于评估的兼容层，功能不完整，官方不将它视为多数生产场景的长期方案。未登记 Responses。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "adaptive",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "effort 不等于 token 硬预算；Opus 5 在思考关闭时不能用 xhigh / max。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-claude-overview",
+              "reasoning-claude-effort"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Opus 5 / Sonnet 5 默认自适应思考，不接受旧手动 budget_tokens。Messages 已核对，Chat 兼容层的控制方式仍未知。"
+        }
       }
     },
     {
@@ -234,7 +304,77 @@
         "tool_calling": true,
         "structured_output": null,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-messages",
+              "protocol-chat"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Messages 为原生接口；Chat 是官方用于评估的兼容层，功能不完整，官方不将它视为多数生产场景的长期方案。未登记 Responses。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "adaptive",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "effort 不等于 token 硬预算；Opus 5 在思考关闭时不能用 xhigh / max。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-claude-overview",
+              "reasoning-claude-effort"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Opus 5 / Sonnet 5 默认自适应思考，不接受旧手动 budget_tokens。Messages 已核对，Chat 兼容层的控制方式仍未知。"
+        }
       }
     },
     {
@@ -345,7 +485,71 @@
         "tool_calling": true,
         "structured_output": null,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-messages",
+              "protocol-chat"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Messages 为原生接口；Chat 是官方用于评估的兼容层，功能不完整，官方不将它视为多数生产场景的长期方案。未登记 Responses。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking.budget_tokens",
+                  "values": [],
+                  "minimum": 1024,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "只在 thinking.type=enabled 时使用；预算必须小于本次 max_tokens，动态上限不写成固定常量。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-claude-thinking",
+              "reasoning-claude-overview"
+            ],
+            "evidence": "evidence/anthropic/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Haiku 4.5 支持手动思考预算，不支持 interleaved thinking；不能用 effort 代替预算。默认模式和 Chat 兼容层参数未完整核对。"
+        }
       }
     }
   ],

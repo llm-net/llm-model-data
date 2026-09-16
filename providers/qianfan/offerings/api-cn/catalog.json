@@ -99,7 +99,47 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "ernie-5-0",
@@ -185,7 +225,47 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "ernie-4-5-turbo-128k",
@@ -277,7 +357,47 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "ernie-4-5-turbo-vl-32k",
@@ -369,7 +489,47 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "deepseek-v4-pro",
@@ -465,7 +625,48 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "deepseek-v4-flash",
@@ -561,7 +762,48 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "当前模型清单标为即将下线；未到明确下线结论，保留 active。"
+      "notes": "当前模型清单标为即将下线；未到明确下线结论，保留 active。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "glm-5-3",
@@ -653,7 +895,47 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "ernie-4-5-turbo-20260402",
@@ -745,7 +1027,47 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     },
     {
       "id": "glm-5-1",
@@ -837,7 +1159,48 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-messages",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/qianfan/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "千帆声明全量 Chat 模型兼容 Messages；Responses 支持表仅列指定 DeepSeek / GLM / Qwen，当前 ERNIE 与 GLM-5.3 未列，不能整家加 Responses。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/qianfan/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
+      }
     }
   ],
   "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"

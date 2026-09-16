@@ -127,8 +127,77 @@ def check_prices(value, purpose, meters=None):
                     require(q["increment"] is None, "no increment for none/unknown rounding")
 
 
+def check_reasoning(capability, offering_kind):
+    require("reasoning" in capability, "reasoning assessment is required for every model")
+    reasoning = capability["reasoning"]
+    support, coverage = reasoning["support"], reasoning["coverage"]
+    profiles = reasoning["profiles"]
+    require(bool(reasoning["notes"].strip()), "reasoning needs scope or limitations")
+    if support == "unknown":
+        require(coverage == "unknown" and not profiles,
+                "unknown reasoning cannot assert profiles or completed coverage")
+        require(reasoning["verification"]["status"] == "needs_review",
+                "unknown reasoning cannot claim successful verification")
+        return
+    require(support in {"supported", "unsupported"}, "invalid reasoning support")
+    require(reasoning["verification"]["status"] == "verified",
+            "known reasoning requires its own verified evidence")
+    if support == "unsupported":
+        require(coverage == "complete" and not profiles,
+                "unsupported reasoning needs complete evidence and no controls")
+        return
+    require(coverage in {"complete", "partial"} and profiles,
+            "supported reasoning needs a scoped profile")
+    keys = [(p["interface"], p["surface"]) for p in profiles]
+    require(len(keys) == len(set(keys)), "duplicate reasoning profile")
+    if coverage == "complete":
+        require(capability["interface_assessment"]["coverage"] == "complete"
+                and {p["interface"] for p in profiles} == set(capability["interfaces"]),
+                "complete reasoning must cover every confirmed interface without protocol gaps")
+    for profile in profiles:
+        require(profile["interface"] in capability["interfaces"],
+                "reasoning profile must use a confirmed model interface")
+        require(profile["surface"] == "api_request" or offering_kind != "pay_as_you_go",
+                "subscription client settings cannot be copied into pay-as-you-go API data")
+        require(bool(profile["notes"].strip()), "reasoning profile needs scope")
+        if coverage == "complete":
+            require(profile["can_disable"] is not None and profile["default_behavior"] != "unknown",
+                    "unknown reasoning behavior must remain partial")
+        named_controls = [c for c in profile["controls"] if c["parameter"] is not None]
+        unique(named_controls, "parameter", "reasoning controls")
+        for control in profile["controls"]:
+            kind, values = control["kind"], control["values"]
+            require((control["parameter"] is None or control["parameter"].strip()) and control["notes"].strip(),
+                    "reasoning control needs official parameter and limitations")
+            require(control["parameter"] is not None or coverage == "partial",
+                    "unknown reasoning parameter must remain partial")
+            expected_type = {"effort": str, "mode": str, "toggle": bool, "budget_tokens": int}[kind]
+            require(all(type(v) is expected_type and (not isinstance(v, str) or v.strip()) for v in values),
+                    "reasoning control values have wrong type")
+            require(len(values) == len({canonical(v) for v in values}), "duplicate reasoning control value")
+            lower, upper, default = control["minimum"], control["maximum"], control["default"]
+            require(default is not None or coverage == "partial",
+                    "unknown reasoning default must remain partial")
+            if kind == "budget_tokens":
+                require(all(v is None or type(v) is int and v >= 0 for v in (lower, upper)),
+                        "reasoning budget bounds must be nonnegative integers")
+                require(lower is None or upper is None or lower <= upper, "invalid reasoning budget range")
+                require(coverage == "partial" or values or lower is not None or upper is not None,
+                        "unknown reasoning budget bounds must remain partial")
+            else:
+                require(values and lower is None and upper is None, "enum reasoning control needs values, not token bounds")
+            if default is not None:
+                require(type(default) is expected_type, "reasoning default has wrong type")
+                in_range = (kind == "budget_tokens" and default >= 0
+                            and (lower is not None or upper is not None)
+                            and (lower is None or default >= lower) and (upper is None or default <= upper))
+                require(default in values or in_range, "reasoning default is outside supported values or budget")
+
+
 def check_offering(root, data, provider):
     require(data["provider_id"] == provider["id"], "provider_id mismatch")
+    require(provider["id"] not in read_json(root / "schemas/excluded-providers.json"),
+            "provider is explicitly excluded from collection")
     source_ids = {s["id"] for s in provider["sources"]}
     walk_verifications(root, data, source_ids)
     plan_ids = unique(data["plans"], "id", "plans")
@@ -137,13 +206,36 @@ def check_offering(root, data, provider):
     require(len(requests) == len(set(requests)), "duplicate request_id within offering")
     aliases = {}
     meters = read_json(root / "schemas/meters.json")
+    faces = read_json(root / "schemas/protocol-faces.json")
     excluded = set(provider.get("excluded_request_ids", []))
     excluded_local_ids = {re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-") for value in excluded}
     for m in data["models"]:
         require(m["request_id"] not in excluded and m["id"] not in excluded_local_ids,
                 "model is explicitly excluded from collection")
-        if provider["id"] == "siliconflow":
-            require(m["availability"] != "retired", "SiliconFlow retired models must be removed")
+        capability = m.get("capabilities", {})
+        require("interfaces" in capability and "interface_assessment" in capability,
+                f"{m['id']}: protocol interfaces and assessment are required for every model")
+        interfaces = capability["interfaces"]
+        assessment = capability["interface_assessment"]
+        require(len(interfaces) == len(set(interfaces)), "duplicate protocol face")
+        require(set(interfaces) <= faces.keys(), "unknown or legacy protocol face")
+        require(assessment["coverage"] in {"complete", "partial", "unknown"}, "invalid protocol coverage")
+        require(bool(interfaces) == (assessment["coverage"] != "unknown"),
+                "protocol unknown needs an empty list; complete/partial needs supported faces")
+        require(bool(assessment["notes"].strip()), "protocol assessment needs limitations or scope")
+        if interfaces:
+            require(assessment["verification"]["status"] == "verified",
+                    "supported protocol faces require their own verified evidence")
+            for face in interfaces:
+                require(set(faces[face]["modalities"]) & set(m["modalities"]),
+                        "protocol face does not match output modality")
+                if face == "cursor_agent":
+                    require(provider["id"] == "cursor" and data["kind"] == "tool_subscription",
+                            "Cursor Agent belongs only to Cursor tool subscriptions")
+        else:
+            require(assessment["verification"]["status"] == "needs_review",
+                    "unknown protocols must not claim successful verification")
+        check_reasoning(capability, data["kind"])
         if data["kind"] in {"api_subscription", "tool_subscription"}:
             require(m["usage_prices"]["status"] == "not_applicable" and not m["usage_prices"]["rules"],
                     "subscription models use reference prices only")
@@ -184,6 +276,9 @@ def validate(root=ROOT):
         validators[kind] = Draft202012Validator(schema, format_checker=FormatChecker())
     meters = read_json(root / "schemas/meters.json")
     catalog_schema = read_json(root / "schemas/catalog.schema.json")
+    faces = read_json(root / "schemas/protocol-faces.json")
+    face_enum = catalog_schema["$defs"]["model"]["properties"]["capabilities"]["properties"]["interfaces"]["items"]["enum"]
+    require(set(face_enum) == set(faces) | {"gemini", "vendor_native"}, "protocol registry/schema drift")
     require(set(meters) == set(catalog_schema["$defs"]["rate"]["properties"]["meter"]["enum"]),
             "meter registry/schema drift")
     stats = Counter()
@@ -192,6 +287,8 @@ def validate(root=ROOT):
     allowed_json = set(provider_files)
     for p in provider_files:
         provider = read_json(p)
+        require(provider["id"] not in read_json(root / "schemas/excluded-providers.json"),
+                "provider is explicitly excluded from collection")
         validators["provider"].validate(provider)
         require(provider["id"] == p.parent.name, f"provider directory mismatch: {p}")
         unique(provider["sources"], "id", "sources")
@@ -212,6 +309,9 @@ def validate(root=ROOT):
             stats["models"] += len(data["models"])
             stats["plans"] += len(data["plans"])
             for m in data["models"]:
+                stats["protocols_" + m["capabilities"]["interface_assessment"]["coverage"]] += 1
+                stats["reasoning_" + m["capabilities"]["reasoning"]["coverage"]] += 1
+                stats["reasoning_support_" + m["capabilities"]["reasoning"]["support"]] += 1
                 stats["models_" + m["verification"]["status"]] += 1
                 for purpose in ("usage_prices", "reference_prices"):
                     stats[purpose + "_" + m[purpose]["status"]] += 1
@@ -329,6 +429,21 @@ def review(root, base):
     stats = validate(root)
     manifest, diff, old, new = candidate(root, base)
     changed = [p for p in sorted(old.keys() | new.keys()) if old.get(p) != new.get(p)]
+    protocol_gaps = []
+    reasoning_gaps = []
+    for path, raw in new.items():
+        if not path.startswith("providers/") or not path.endswith("/catalog.json"):
+            continue
+        doc = json.loads(raw)
+        for m in doc["models"]:
+            assessment = m["capabilities"]["interface_assessment"]
+            if assessment["coverage"] != "complete":
+                protocol_gaps.append(f"- {doc['provider_id']}/{doc['id']}/{m['id']}: "
+                                     f"{assessment['coverage']} — {assessment['notes']}")
+            reasoning = m["capabilities"]["reasoning"]
+            if reasoning["coverage"] != "complete":
+                reasoning_gaps.append(f"- {doc['provider_id']}/{doc['id']}/{m['id']}: "
+                                      f"{reasoning['coverage']} — {reasoning['notes']}")
     report = "\n".join([
         "# 数据候选审阅包", "", "状态：待人工确认。不是正式发布物。", "",
         f"基线：`{manifest['base_commit']}`", "",
@@ -337,6 +452,8 @@ def review(root, base):
         "```json", json.dumps(stats, ensure_ascii=False, indent=2), "```", "",
         "## 文件变化", "", *[f"- {p}" for p in changed], "",
         "## 模型与套餐变化", "", summarize_changes(old, new),
+        "## 协议面待核对清单", "", *(protocol_gaps or ["本候选没有 partial / unknown 协议记录。"]), "",
+        "## 思考能力待核对清单", "", *(reasoning_gaps or ["本候选没有 partial / unknown 思考能力记录。"]), "",
         "## 人工确认", "", "请同时阅读 diff.patch 中的说明、来源和校验器变化；核对未知项。",
         "确认时指定完整候选 SHA-256 与动作（保存 / 提交 / 发布），不是泛泛地说继续。",
         "数据确认不授权消费者部署。", "",

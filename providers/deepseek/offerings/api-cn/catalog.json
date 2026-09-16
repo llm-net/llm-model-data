@@ -116,7 +116,141 @@
         "tool_calling": null,
         "structured_output": null,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses",
+              "protocol-messages"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Responses model 枚举明确列此 ID；Messages 文档说明 DeepSeek 型号与 Claude 名称映射。不能把不支持型号自动回退的响应当作原型号支持证据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "complete",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "minimal→low；medium / xhigh→high；ultra→max，保留可接受的原始值及其映射。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "none 关闭思考；未将其他协议面的兼容别名自动加入 Responses。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方三协议对照表及映射表；兼容别名不代表独立深度。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-deepseek"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "按当前 Thinking Mode 的三协议对照表记录；默认 high。旧 deepseek-v4-flash 与实验 ID 不继承此结论。"
+        }
       }
     },
     {
@@ -219,7 +353,141 @@
         "tool_calling": null,
         "structured_output": null,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses",
+              "protocol-messages"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Responses model 枚举明确列此 ID；Messages 文档说明 DeepSeek 型号与 Claude 名称映射。不能把不支持型号自动回退的响应当作原型号支持证据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "complete",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "minimal→low；medium / xhigh→high；ultra→max，保留可接受的原始值及其映射。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "none 关闭思考；未将其他协议面的兼容别名自动加入 Responses。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方三协议对照表及映射表；兼容别名不代表独立深度。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-deepseek"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "按当前 Thinking Mode 的三协议对照表记录；默认 high。旧 deepseek-v4-flash 与实验 ID 不继承此结论。"
+        }
       }
     },
     {
@@ -323,7 +591,37 @@
         "tool_calling": null,
         "structured_output": null,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses",
+              "protocol-messages"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按现有目录和官方 Chat 模型资料登记 Chat；新版 Responses 枚举只列 deepseek-flash / deepseek-v4-pro，Messages 对未知名称会回退，尚未证实此旧 ID 的精确路由，不扩填。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
       }
     },
     {
@@ -427,7 +725,37 @@
         "tool_calling": null,
         "structured_output": null,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses",
+              "protocol-messages"
+            ],
+            "evidence": "evidence/deepseek/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按现有目录和官方 Chat 模型资料登记 Chat；新版 Responses 枚举只列 deepseek-flash / deepseek-v4-pro，Messages 对未知名称会回退，尚未证实此旧 ID 的精确路由，不扩填。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+        }
       }
     }
   ],

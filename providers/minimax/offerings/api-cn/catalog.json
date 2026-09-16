@@ -105,7 +105,121 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "minimax_text"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses",
+              "protocol-messages",
+              "protocol-native"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "M3 / M2.7 系列三种兼容文本面；原生 text/chatcompletion_v2 仍有型号文档，但已标 deprecated。Responses 的 M2.x 思考不可关闭，与 M3 不同。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "adaptive",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "disabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "disabled",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "disabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "none",
+                  "notes": "none 关闭，其余四个值仅开启 Adaptive Thinking，不调节推理深度，故 kind=mode。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-minimax",
+              "reasoning-minimax-chat",
+              "reasoning-minimax-messages"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+        }
+      }
     },
     {
       "id": "minimax-m2-7",
@@ -197,7 +311,79 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "minimax_text"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses",
+              "protocol-messages",
+              "protocol-native"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "M3 / M2.7 系列三种兼容文本面；原生 text/chatcompletion_v2 仍有型号文档，但已标 deprecated。Responses 的 M2.x 思考不可关闭，与 M3 不同。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "M2.x 始终思考，关闭参数无效；不要伪造 off 或 effort 档位。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "M2.x 始终思考，关闭参数无效；不要伪造 off 或 effort 档位。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "M2.x 始终思考，关闭参数无效；不要伪造 off 或 effort 档位。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-minimax",
+              "reasoning-minimax-chat",
+              "reasoning-minimax-messages"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+        }
+      }
     },
     {
       "id": "minimax-m2-7-highspeed",
@@ -289,7 +475,79 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "minimax_text"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses",
+              "protocol-messages",
+              "protocol-native"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "M3 / M2.7 系列三种兼容文本面；原生 text/chatcompletion_v2 仍有型号文档，但已标 deprecated。Responses 的 M2.x 思考不可关闭，与 M3 不同。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "M2.x 始终思考，关闭参数无效；不要伪造 off 或 effort 档位。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "M2.x 始终思考，关闭参数无效；不要伪造 off 或 effort 档位。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "M2.x 始终思考，关闭参数无效；不要伪造 off 或 effort 档位。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-minimax",
+              "reasoning-minimax-chat",
+              "reasoning-minimax-messages"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+        }
+      }
     },
     {
       "id": "image-01",
@@ -378,7 +636,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_image"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-image"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "image-01-live",
@@ -467,7 +762,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_image"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-image"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "minimax-h3",
@@ -586,7 +918,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_video"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "speech-2-8-hd",
@@ -679,7 +1048,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_speech"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "speech-2-8-turbo",
@@ -772,7 +1178,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_speech"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "speech-2-6-hd",
@@ -865,7 +1308,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_speech"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "speech-2-6-turbo",
@@ -958,7 +1438,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_speech"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "speech-02-hd",
@@ -1051,7 +1568,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_speech"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     },
     {
       "id": "speech-02-turbo",
@@ -1144,7 +1698,44 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。"
+      "notes": "官方当前模型表列出本模型；未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_speech"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+        }
+      }
     }
   ],
   "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"

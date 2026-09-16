@@ -56,6 +56,60 @@
       "url": "https://docs.x.ai/developers/models/grok-4.5",
       "purpose": "pricing",
       "notes": "参考价对齐来源；同平台按量价。"
+    },
+    {
+      "id": "protocol-api",
+      "url": "https://docs.x.ai/developers/quickstart",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-grok45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-grok46",
+      "url": "https://docs.x.ai/developers/models/grok-4.6",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-grpc",
+      "url": "https://docs.x.ai/developers/grpc-api-reference/chat",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-build",
+      "url": "https://docs.x.ai/build/overview",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-chat",
+      "url": "https://docs.x.ai/developers/model-capabilities/legacy/chat-completions",
+      "purpose": "models",
+      "notes": "Legacy Chat Completions 说明与 Grok 4.6 示例。"
+    },
+    {
+      "id": "reasoning-xai",
+      "url": "https://docs.x.ai/developers/models/grok-4.6",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-xai-reasoning",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/reasoning",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-xai45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

@@ -52,4 +52,4 @@ Codex统一采用OpenAI API现金标价；GLM Coding Plan采用智谱API现金�
 
 ## 聚合平台
 
-OpenRouter使用公开模型目录该行的pricing；SiliconFlow使用自己平台的公开价格。仅保留模型级估价，不维护路由供应端。具体收录方式见[COLLECTION.md](COLLECTION.md)。
+OpenRouter使用公开模型目录该行的pricing。硅基流动与 Together AI 已整家排除，不再更新其价格。仅保留模型级估价，不维护路由供应端。具体收录方式见[COLLECTION.md](COLLECTION.md)。

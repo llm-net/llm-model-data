@@ -68,6 +68,48 @@
       "url": "https://developers.openai.com/api/docs/pricing",
       "purpose": "pricing",
       "notes": "2026-09-16 订阅模型补漏核对；见 subscription-completeness 证据。"
+    },
+    {
+      "id": "protocol-api",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.2",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-codex",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-models",
+      "url": "https://learn.chatgpt.com/docs/models",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "reasoning-codex-config",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-codex-models",
+      "url": "https://learn.chatgpt.com/docs/models",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-openai-guide",
+      "url": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.2",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-openai-model",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.2.md",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

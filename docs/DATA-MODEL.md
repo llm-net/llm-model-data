@@ -8,7 +8,9 @@ provider 是售卖 / 提供模型服务的平台，不要求是训练方。offer
 
 模型唯一键是 provider_id / offering.id / model.id。本地 id 可读、稳定；request_id 是实际请求名，未知为 null。不同产品可以有不同模型、名称和能力。alias_of 只指本产品的模型，别名也完整保存自己的价格，不隐式继承。
 
-modalities 记录输出 / 服务类型，不把图片理解误当作图片生成。可选 capabilities 保存输入模态、上下文 / 输出上限、工具调用、结构化输出、流式和接口类型；null / 空列表表示尚未核对，不表示不支持。这些能力只属于当前产品，同名模型不继承。
+modalities 记录输出 / 服务类型，不把图片理解误当作图片生成。可选 capabilities 保存输入模态、上下文 / 输出上限、工具调用、结构化输出、流式和接口类型；null / 空列表表示尚未核对，不表示不支持。这些能力只属于当前产品，同名模型不继承。当前发布必须逐模型填写 interfaces 与独立 interface_assessment（覆盖状态 / verification / 限制说明），空列表必须显式 unknown；规范 ID、来源和兼容规则见 [PROTOCOLS.md](PROTOCOLS.md)。
+
+思考能力使用 `capabilities.reasoning`，包含支持状态、按协议和工具入口分开的控制参数、官方值 / 预算、默认行为、能否关闭及独立 verification。历史 schema 可缺省，当前发布必须填写；未知不能填成不支持。字段与维护流程见 [REASONING.md](REASONING.md)。
 
 ## 三种价格
 
@@ -59,8 +61,8 @@ schema_version 是格式版本，Git commit / tag 是资料版本，SHA-256 是�
 
 ## 当前草案
 
-v1尚未正式发布，本次按用户确定的单一基准简化；首次正式发布后的破坏性变化需提升格式版本。详细口径见[PRICING.md](PRICING.md)，聚合平台收录见[COLLECTION.md](COLLECTION.md)。
+v1 已正式发布。协议 assessment 为可选元数据扩展，旧 v1 仍可按 schema 读取，但当前发布须通过协议完整性校验；破坏既有字段语义的变化需提升格式版本。详细口径见[PRICING.md](PRICING.md)，聚合平台收录见[COLLECTION.md](COLLECTION.md)。
 
 ## 排除项
 
-provider.json可有excluded_request_ids字符串数组；用户明确排除的请求ID不得重新收录。SiliconFlow额外禁止retired模型留在catalog。排除项变更随数据审阅。
+provider.json可有excluded_request_ids字符串数组；用户明确排除的请求ID不得重新收录。schemas/excluded-providers.json 保存整家服务商排除决定，当前包含硅基流动与 Together AI；无论模型是否仍在服务均拒绝恢复。排除项变更随数据审阅。

@@ -205,7 +205,7 @@ class SubscriptionAndCollectionPolicy(unittest.TestCase):
             c.check_offering(ROOT, data, provider)
 
     def test_explicitly_excluded_model_cannot_be_reimported(self):
-        for vendor, offering in [("openrouter", "api-global"), ("together", "api-global"), ("groq", "api-global"), ("siliconflow", "api-cn")]:
+        for vendor, offering in [("openrouter", "api-global"), ("groq", "api-global")]:
             with self.subTest(vendor=vendor):
                 data = c.read_json(ROOT / f"providers/{vendor}/offerings/{offering}/catalog.json")
                 provider = c.read_json(ROOT / f"providers/{vendor}/provider.json")
@@ -220,12 +220,228 @@ class SubscriptionAndCollectionPolicy(unittest.TestCase):
         with self.assertRaisesRegex(c.CatalogError, "explicitly excluded"):
             c.check_offering(ROOT, data, provider)
 
-    def test_any_future_siliconflow_retirement_must_be_removed(self):
-        data = c.read_json(ROOT / "providers/siliconflow/offerings/api-cn/catalog.json")
-        provider = c.read_json(ROOT / "providers/siliconflow/provider.json")
-        data["models"][0]["availability"] = "retired"
-        with self.assertRaisesRegex(c.CatalogError, "retired models must be removed"):
-            c.check_offering(ROOT, data, provider)
+    def test_removed_providers_cannot_be_reintroduced_even_with_active_models(self):
+        for vendor in ("siliconflow", "together"):
+            with self.subTest(vendor=vendor):
+                data = c.read_json(ROOT / "providers/deepseek/offerings/api-cn/catalog.json")
+                provider = c.read_json(ROOT / "providers/deepseek/provider.json")
+                data["provider_id"] = provider["id"] = vendor
+                with self.assertRaisesRegex(c.CatalogError, "provider is explicitly excluded"):
+                    c.check_offering(ROOT, data, provider)
+
+
+class ProtocolContracts(unittest.TestCase):
+    setUp = DataContracts.setUp
+    check = DataContracts.check
+
+    def test_new_model_cannot_omit_protocol_assessment(self):
+        for field in ("interfaces", "interface_assessment"):
+            with self.subTest(field=field):
+                data = deepcopy(self.data)
+                del data["models"][0]["capabilities"][field]
+                with self.assertRaisesRegex(c.CatalogError, "protocol interfaces and assessment"):
+                    c.check_offering(ROOT, data, self.provider)
+
+    def test_legacy_names_and_vendor_slugs_are_not_current_faces(self):
+        for face in ("openai", "responses", "anthropic", "images", "minimax_audio", "gemini", "vendor_native", "ark"):
+            with self.subTest(face=face):
+                self.data["models"][0]["capabilities"]["interfaces"] = [face]
+                with self.assertRaisesRegex(c.CatalogError, "unknown or legacy protocol face"):
+                    self.check()
+
+    def test_price_verification_cannot_substitute_protocol_evidence(self):
+        v = self.data["models"][0]["capabilities"]["interface_assessment"]["verification"]
+        v.update(status="needs_review", checked_at=None)
+        with self.assertRaisesRegex(c.CatalogError, "own verified evidence"):
+            self.check()
+
+    def test_protocol_provenance_is_checked_independently(self):
+        v = self.data["models"][0]["capabilities"]["interface_assessment"]["verification"]
+        v["source_ids"] = ["unregistered-protocol-source"]
+        with self.assertRaisesRegex(c.CatalogError, "unknown source_id"):
+            self.check()
+        v["source_ids"] = ["protocol-chat"]
+        v["evidence"] = "evidence/missing-protocol-proof.md"
+        with self.assertRaisesRegex(c.CatalogError, "missing evidence"):
+            self.check()
+
+    def test_unknown_does_not_assert_support_or_a_successful_check(self):
+        cap = self.data["models"][0]["capabilities"]
+        cap["interface_assessment"]["coverage"] = "unknown"
+        with self.assertRaisesRegex(c.CatalogError, "unknown needs an empty list"):
+            self.check()
+        cap["interfaces"] = []
+        with self.assertRaisesRegex(c.CatalogError, "must not claim successful verification"):
+            self.check()
+        cap["interface_assessment"]["verification"].update(status="needs_review", checked_at=None)
+        cap["reasoning"].update(support="unknown", coverage="unknown", profiles=[])
+        cap["reasoning"]["verification"].update(status="needs_review", checked_at=None)
+        self.check()
+
+    def test_protocol_must_match_output_not_input_modality(self):
+        cap = self.data["models"][0]["capabilities"]
+        cap["input_modalities"] = ["text", "image"]
+        cap["interfaces"] = ["ark_image"]
+        with self.assertRaisesRegex(c.CatalogError, "does not match output modality"):
+            self.check()
+
+    def test_tool_subscription_is_not_provider_api(self):
+        def interfaces(provider, offering):
+            data = c.read_json(ROOT / f"providers/{provider}/offerings/{offering}/catalog.json")
+            return [m["capabilities"]["interfaces"] for m in data["models"]]
+        self.assertTrue(all(x == ["cursor_agent"] for x in interfaces("cursor", "individual")))
+        self.assertTrue(all(x == ["openai_responses"] for x in interfaces("openai", "codex")))
+        self.assertTrue(all(x == ["anthropic_messages"] for x in interfaces("anthropic", "claude-code")))
+        self.assertTrue(all("openai_responses" not in x for x in interfaces("bailian", "coding-plan-cn")))
+
+    def test_protocol_change_is_visible_even_if_price_does_not_change(self):
+        before = deepcopy(self.data)
+        after = deepcopy(before)
+        after["models"][0]["capabilities"]["interfaces"].remove("openai_responses")
+        path = "providers/deepseek/offerings/api-cn/catalog.json"
+        report = c.summarize_changes({path: c.canonical(before)}, {path: c.canonical(after)})
+        self.assertIn("openai_responses", report)
+        self.assertIn("capabilities", report)
+        self.assertNotIn("usage_prices:", report)
+
+    def test_v1_schema_can_read_history_but_publish_requires_review(self):
+        historical = deepcopy(self.data)
+        del historical["models"][0]["capabilities"]
+        schema = c.Draft202012Validator(c.read_json(ROOT / "schemas/catalog.schema.json"))
+        self.assertTrue(schema.is_valid(historical))
+        with self.assertRaisesRegex(c.CatalogError, "protocol interfaces and assessment"):
+            c.check_offering(ROOT, historical, self.provider)
+
+
+class ReasoningContracts(unittest.TestCase):
+    def setUp(self):
+        self.provider = c.read_json(ROOT / "providers/openai/provider.json")
+        self.data = c.read_json(ROOT / "providers/openai/offerings/api-global/catalog.json")
+        self.cap = self.data["models"][0]["capabilities"]
+        self.reasoning = self.cap["reasoning"]
+
+    def check(self):
+        c.check_offering(ROOT, self.data, self.provider)
+
+    def test_history_is_readable_but_current_data_cannot_omit_reasoning(self):
+        del self.cap["reasoning"]
+        validator = c.Draft202012Validator(c.read_json(ROOT / "schemas/catalog.schema.json"))
+        self.assertTrue(validator.is_valid(self.data))
+        with self.assertRaisesRegex(c.CatalogError, "reasoning assessment is required"):
+            self.check()
+
+    def test_unknown_is_not_unsupported_or_a_supported_control(self):
+        self.reasoning.update(support="unknown", coverage="unknown")
+        with self.assertRaisesRegex(c.CatalogError, "cannot assert profiles"):
+            self.check()
+        self.reasoning["profiles"] = []
+        with self.assertRaisesRegex(c.CatalogError, "cannot claim successful verification"):
+            self.check()
+        self.reasoning["verification"].update(status="needs_review", checked_at=None)
+        self.check()
+        self.reasoning.update(support="unsupported", coverage="complete")
+        with self.assertRaisesRegex(c.CatalogError, "own verified evidence"):
+            self.check()
+
+    def test_reasoning_needs_independent_registered_provenance(self):
+        v = self.reasoning["verification"]
+        v["source_ids"] = ["unregistered-reasoning-source"]
+        with self.assertRaisesRegex(c.CatalogError, "unknown source_id"):
+            self.check()
+        v["source_ids"] = ["reasoning-openai-model"]
+        v["evidence"] = "evidence/missing-reasoning.md"
+        with self.assertRaisesRegex(c.CatalogError, "missing evidence"):
+            self.check()
+
+    def test_reasoning_cannot_invent_a_protocol_or_hide_missing_faces(self):
+        self.reasoning["profiles"].pop()
+        with self.assertRaisesRegex(c.CatalogError, "cover every confirmed interface"):
+            self.check()
+        self.reasoning["coverage"] = "partial"
+        self.reasoning["profiles"][0]["interface"] = "anthropic_messages"
+        with self.assertRaisesRegex(c.CatalogError, "confirmed model interface"):
+            self.check()
+
+    def test_client_settings_cannot_become_an_api_contract(self):
+        self.reasoning["profiles"][0]["surface"] = "client_setting"
+        with self.assertRaisesRegex(c.CatalogError, "cannot be copied"):
+            self.check()
+
+    def test_default_must_be_supported_and_typed(self):
+        control = self.reasoning["profiles"][0]["controls"][0]
+        control["default"] = "invented-tier"
+        with self.assertRaisesRegex(c.CatalogError, "outside supported values"):
+            self.check()
+        control["default"] = True
+        with self.assertRaisesRegex(c.CatalogError, "default has wrong type"):
+            self.check()
+
+    def test_budget_bounds_special_values_and_unknowns(self):
+        self.reasoning["coverage"] = "partial"
+        control = self.reasoning["profiles"][0]["controls"][0]
+        control.update(kind="budget_tokens", parameter="thinking.budget_tokens",
+                       values=[-1], minimum=1024, maximum=4096, default=-1)
+        self.check()
+        control["minimum"] = 5000
+        with self.assertRaisesRegex(c.CatalogError, "invalid reasoning budget range"):
+            self.check()
+        control["minimum"] = 1024
+        control["default"] = 8192
+        with self.assertRaisesRegex(c.CatalogError, "outside supported values"):
+            self.check()
+        control.update(default=True, values=[True])
+        with self.assertRaisesRegex(c.CatalogError, "values have wrong type"):
+            self.check()
+        control.update(default=None, values=[], minimum=None, maximum=None)
+        self.check()
+
+    def test_unpublished_parameter_or_default_stays_partial(self):
+        control = self.reasoning["profiles"][0]["controls"][0]
+        control["parameter"] = None
+        with self.assertRaisesRegex(c.CatalogError, "parameter must remain partial"):
+            self.check()
+        control["parameter"] = "reasoning_effort"
+        control["default"] = None
+        with self.assertRaisesRegex(c.CatalogError, "default must remain partial"):
+            self.check()
+        self.reasoning["coverage"] = "partial"
+        self.check()
+
+    def test_duplicate_profiles_and_controls_are_rejected(self):
+        self.reasoning["profiles"].append(deepcopy(self.reasoning["profiles"][0]))
+        with self.assertRaisesRegex(c.CatalogError, "duplicate reasoning profile"):
+            self.check()
+        self.reasoning["profiles"].pop()
+        controls = self.reasoning["profiles"][0]["controls"]
+        controls.append(deepcopy(controls[0]))
+        with self.assertRaisesRegex(c.CatalogError, "duplicate parameter"):
+            self.check()
+
+    def test_vendor_defaults_and_control_semantics_are_not_flattened(self):
+        doc = c.read_json(ROOT / "providers/minimax/offerings/api-cn/catalog.json")
+        m3 = next(m for m in doc["models"] if m["request_id"] == "MiniMax-M3")
+        profiles = {p["interface"]: p for p in m3["capabilities"]["reasoning"]["profiles"]}
+        self.assertEqual(profiles["openai_chat"]["default_behavior"], "adaptive")
+        self.assertEqual(profiles["openai_responses"]["default_behavior"], "disabled")
+        self.assertEqual(profiles["openai_responses"]["controls"][0]["kind"], "mode")
+        cursor = c.read_json(ROOT / "providers/cursor/offerings/individual/catalog.json")
+        by_id = {m["request_id"]: m["capabilities"]["reasoning"] for m in cursor["models"]}
+        self.assertNotIn("xhigh", by_id["grok-4.5"]["profiles"][0]["controls"][0]["values"])
+        self.assertIn("xhigh", by_id["grok-4.6"]["profiles"][0]["controls"][0]["values"])
+        self.assertIsNone(by_id["grok-4.6"]["profiles"][0]["controls"][0]["parameter"])
+        gemini = c.read_json(ROOT / "providers/gemini/offerings/api-global/catalog.json")
+        profiles = {p["interface"]: p for p in gemini["models"][0]["capabilities"]["reasoning"]["profiles"]}
+        self.assertEqual(profiles["gemini_generate_content"]["controls"][0]["values"], ["LOW", "MEDIUM", "HIGH"])
+        self.assertEqual(profiles["openai_chat"]["controls"][0]["values"], ["low", "medium", "high"])
+
+    def test_reasoning_only_change_is_in_candidate_summary(self):
+        before = deepcopy(self.data)
+        self.reasoning["profiles"][0]["controls"][0]["default"] = "high"
+        path = "providers/openai/offerings/api-global/catalog.json"
+        report = c.summarize_changes({path: c.canonical(before)}, {path: c.canonical(self.data)})
+        self.assertIn("reasoning", report)
+        self.assertIn("high", report)
+        self.assertNotIn("usage_prices:", report)
 
 
 class ApprovalFreshness(unittest.TestCase):
@@ -253,6 +469,29 @@ class ApprovalFreshness(unittest.TestCase):
         self.assertEqual(first, second)
         c.check_candidate(self.root, first)
         self.assertNotIn("approved", c.read_json(self.root / ".review/manifest.json"))
+
+    def test_review_keeps_protocol_gaps_visible_without_data_changes(self):
+        c.review(self.root, "HEAD")
+        report = (self.root / ".review/REVIEW.md").read_text()
+        self.assertIn("## 协议面待核对清单", report)
+        for path in (self.root / "providers").glob("*/offerings/*/catalog.json"):
+            doc = c.read_json(path)
+            for model in doc["models"]:
+                assessment = model["capabilities"]["interface_assessment"]
+                if assessment["coverage"] != "complete":
+                    self.assertIn(f"{doc['provider_id']}/{doc['id']}/{model['id']}: "
+                                  f"{assessment['coverage']}", report)
+
+    def test_review_keeps_reasoning_gaps_visible_without_data_changes(self):
+        c.review(self.root, "HEAD")
+        report = (self.root / ".review/REVIEW.md").read_text().split("## 思考能力待核对清单")[1]
+        for path in (self.root / "providers").glob("*/offerings/*/catalog.json"):
+            doc = c.read_json(path)
+            for model in doc["models"]:
+                reasoning = model["capabilities"]["reasoning"]
+                if reasoning["coverage"] != "complete":
+                    self.assertIn(f"{doc['provider_id']}/{doc['id']}/{model['id']}: "
+                                  f"{reasoning['coverage']}", report)
 
     def test_new_untracked_data_invalidates_confirmation(self):
         expected = c.review(self.root, "HEAD")

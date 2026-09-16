@@ -362,7 +362,57 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。"
+      "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-codex",
+              "protocol-models"
+            ],
+            "evidence": "evidence/openai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Codex 配置只支持 Responses wire API；此处表示 Codex 订阅承载，不能凭此调用公开按量 API 或复用 API Key。不同模型套餐准入仍看 plan_ids。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-codex-models",
+              "reasoning-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+        }
+      }
     },
     {
       "id": "gpt-5-6-sol",
@@ -458,7 +508,73 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。"
+      "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-codex",
+              "protocol-models"
+            ],
+            "evidence": "evidence/openai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Codex 配置只支持 Responses wire API；此处表示 Codex 订阅承载，不能凭此调用公开按量 API 或复用 API Key。不同模型套餐准入仍看 plan_ids。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Low",
+                    "Medium",
+                    "High",
+                    "Extra high",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "Medium",
+                  "notes": "官方 CLI 选择器的显示标签，不能当成 API 枚举；Ultra 还启用任务委派，不作为单纯模型思考档位。"
+                }
+              ],
+              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-codex-models",
+              "reasoning-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+        }
+      }
     },
     {
       "id": "gpt-5-6-terra",
@@ -554,7 +670,57 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。"
+      "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-codex",
+              "protocol-models"
+            ],
+            "evidence": "evidence/openai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Codex 配置只支持 Responses wire API；此处表示 Codex 订阅承载，不能凭此调用公开按量 API 或复用 API Key。不同模型套餐准入仍看 plan_ids。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-codex-models",
+              "reasoning-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+        }
+      }
     },
     {
       "id": "gpt-5-6-luna",
@@ -650,7 +816,57 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。"
+      "notes": "官方Codex模型清单确认；套餐资格有灰度限制，未填plan_ids不代表任意档均可用。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-codex",
+              "protocol-models"
+            ],
+            "evidence": "evidence/openai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Codex 配置只支持 Responses wire API；此处表示 Codex 订阅承载，不能凭此调用公开按量 API 或复用 API Key。不同模型套餐准入仍看 plan_ids。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-codex-models",
+              "reasoning-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+        }
+      }
     },
     {
       "id": "gpt-5-5",
@@ -746,7 +962,57 @@
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。"
       },
-      "notes": "官方 Other models 仍列为可用；已公告 2026-10-14 从 ChatGPT 登录的 Codex 退役，当前不提前标为 retired；届时复核。"
+      "notes": "官方 Other models 仍列为可用；已公告 2026-10-14 从 ChatGPT 登录的 Codex 退役，当前不提前标为 retired；届时复核。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-codex",
+              "protocol-models"
+            ],
+            "evidence": "evidence/openai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Codex 配置只支持 Responses wire API；此处表示 Codex 订阅承载，不能凭此调用公开按量 API 或复用 API Key。不同模型套餐准入仍看 plan_ids。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-codex-models",
+              "reasoning-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+        }
+      }
     },
     {
       "id": "gpt-5-3-codex-spark",
@@ -793,7 +1059,57 @@
         },
         "notes": "未查到同平台/开发方 OpenAI 的对应型号公开按量价；未知不是免费。"
       },
-      "notes": "官方列出的纯文本研究预览模型，限 ChatGPT Pro；当前库中的 Pro 5x 档可关联，实际资格依账号开放情况。"
+      "notes": "官方列出的纯文本研究预览模型，限 ChatGPT Pro；当前库中的 Pro 5x 档可关联，实际资格依账号开放情况。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-codex",
+              "protocol-models"
+            ],
+            "evidence": "evidence/openai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Codex 配置只支持 Responses wire API；此处表示 Codex 订阅承载，不能凭此调用公开按量 API 或复用 API Key。不同模型套餐准入仍看 plan_ids。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-codex-models",
+              "reasoning-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+        }
+      }
     }
   ],
   "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"

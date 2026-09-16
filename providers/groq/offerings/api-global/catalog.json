@@ -109,7 +109,85 @@
         "tool_calling": true,
         "structured_output": true,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/groq/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Groq 平台的 GPT-OSS 120B / 20B；Responses 与 Chat 各有参数限制，不继承 OpenAI 自家托管服务的其他 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-groq",
+              "reasoning-groq-responses"
+            ],
+            "evidence": "evidence/groq/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Groq 明确 GPT-OSS 20B / 120B 的三档与两个协议参数。缺省档位、是否有关闭方法仍未知；reasoning_format / include_reasoning 只控制展示，不是深度。"
+        }
       }
     },
     {
@@ -206,7 +284,85 @@
         "tool_calling": true,
         "structured_output": true,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses"
+            ],
+            "evidence": "evidence/groq/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Groq 平台的 GPT-OSS 120B / 20B；Responses 与 Chat 各有参数限制，不继承 OpenAI 自家托管服务的其他 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-groq",
+              "reasoning-groq-responses"
+            ],
+            "evidence": "evidence/groq/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "Groq 明确 GPT-OSS 20B / 120B 的三档与两个协议参数。缺省档位、是否有关闭方法仍未知；reasoning_format / include_reasoning 只控制展示，不是深度。"
+        }
       }
     }
   ],

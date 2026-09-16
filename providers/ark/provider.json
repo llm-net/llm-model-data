@@ -80,6 +80,66 @@
       "url": "https://platform.kimi.com/docs/pricing/chat.md",
       "purpose": "pricing",
       "notes": "参考价对齐来源；同平台未找到对应按量价，使用模型开发方公开API价格。"
+    },
+    {
+      "id": "protocol-models",
+      "url": "https://www.volcengine.com/docs/82379/1330310",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-chat",
+      "url": "https://www.volcengine.com/docs/82379/1494384",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-responses",
+      "url": "https://www.volcengine.com/docs/82379/1569618",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-messages",
+      "url": "https://www.volcengine.com/docs/82379/2655179",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-image",
+      "url": "https://www.volcengine.com/docs/82379/1541523",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-video",
+      "url": "https://www.volcengine.com/docs/82379/1366799",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-coding",
+      "url": "https://www.volcengine.com/docs/82379/1928261",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-coding-codex",
+      "url": "https://www.volcengine.com/docs/82379/2556056",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-agent",
+      "url": "https://www.volcengine.com/docs/82379/2373738",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-agent-codex",
+      "url": "https://www.volcengine.com/docs/82379/2556054",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

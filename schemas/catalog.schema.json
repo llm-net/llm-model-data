@@ -678,10 +678,52 @@
                   "openai_chat",
                   "openai_responses",
                   "anthropic_messages",
+                  "openai_image",
+                  "minimax_image",
+                  "ark_image",
+                  "bailian_image",
+                  "minimax_video",
+                  "ark_video",
+                  "bailian_video",
+                  "kling_video",
+                  "minimax_speech",
+                  "gemini_generate_content",
+                  "bailian_text",
+                  "minimax_text",
+                  "cursor_agent",
+                  "xai_grpc",
                   "gemini",
                   "vendor_native"
                 ]
               }
+            },
+            "interface_assessment": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "coverage": {
+                  "enum": [
+                    "complete",
+                    "partial",
+                    "unknown"
+                  ]
+                },
+                "verification": {
+                  "$ref": "#/$defs/verification"
+                },
+                "notes": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "coverage",
+                "verification",
+                "notes"
+              ]
+            },
+            "reasoning": {
+              "$ref": "#/$defs/reasoning"
             }
           },
           "required": [
@@ -706,6 +748,162 @@
         "verification",
         "usage_prices",
         "reference_prices",
+        "notes"
+      ]
+    },
+    "reasoning_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "effort",
+            "mode",
+            "toggle",
+            "budget_tokens"
+          ]
+        },
+        "parameter": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "values": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": [
+              "string",
+              "boolean",
+              "integer"
+            ]
+          }
+        },
+        "minimum": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "maximum": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "default": {
+          "type": [
+            "string",
+            "boolean",
+            "integer",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "parameter",
+        "values",
+        "minimum",
+        "maximum",
+        "default",
+        "notes"
+      ]
+    },
+    "reasoning_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "interface": {
+          "type": "string",
+          "minLength": 1
+        },
+        "surface": {
+          "enum": [
+            "api_request",
+            "client_setting",
+            "client_ui"
+          ]
+        },
+        "can_disable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "default_behavior": {
+          "enum": [
+            "enabled",
+            "disabled",
+            "adaptive",
+            "unknown"
+          ]
+        },
+        "controls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reasoning_control"
+          }
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "interface",
+        "surface",
+        "can_disable",
+        "default_behavior",
+        "controls",
+        "notes"
+      ]
+    },
+    "reasoning": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "support": {
+          "enum": [
+            "supported",
+            "unsupported",
+            "unknown"
+          ]
+        },
+        "coverage": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reasoning_profile"
+          }
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "support",
+        "coverage",
+        "profiles",
+        "verification",
         "notes"
       ]
     }

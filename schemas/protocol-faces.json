@@ -1,0 +1,19 @@
+{
+  "openai_chat": {"display_name": "OpenAI Chat", "modalities": ["text"], "description": "Chat Completions 请求与响应；兼容层不表示全部参数等价。"},
+  "openai_responses": {"display_name": "OpenAI Responses", "modalities": ["text"], "description": "Responses 请求与事件；订阅承载与按量 API 的鉴权和功能限制逐产品记录。"},
+  "anthropic_messages": {"display_name": "Anthropic Messages", "modalities": ["text"], "description": "Messages 请求与事件；不从可用于 Claude Code 推断所有模型兼容。"},
+  "openai_image": {"display_name": "OpenAI Image", "modalities": ["image"], "description": "OpenAI 图像生成协议；路径同名的厂商扩展不自动归入此面。"},
+  "minimax_image": {"display_name": "MiniMax Image", "modalities": ["image"], "description": "MiniMax 文生图与图生图接口。"},
+  "ark_image": {"display_name": "Ark Image", "modalities": ["image"], "description": "方舟 Seedream 图片生成接口。"},
+  "bailian_image": {"display_name": "Bailian Image", "modalities": ["image"], "description": "百炼万相图片生成接口。"},
+  "minimax_video": {"display_name": "MiniMax Video", "modalities": ["video"], "description": "MiniMax 视频任务创建、查询与取消。"},
+  "ark_video": {"display_name": "Ark Video", "modalities": ["video"], "description": "方舟视频生成任务。"},
+  "bailian_video": {"display_name": "Bailian Video", "modalities": ["video"], "description": "百炼万相视频生成任务。"},
+  "kling_video": {"display_name": "Kling Video", "modalities": ["video"], "description": "可灵视频生成及 Omni 任务；具体操作依型号确定。"},
+  "minimax_speech": {"display_name": "MiniMax Speech", "modalities": ["audio"], "description": "MiniMax TTS，同步 HTTP / WebSocket 或异步操作在证据中说明。"},
+  "gemini_generate_content": {"display_name": "Gemini GenerateContent", "modalities": ["text"], "description": "Google Gemini 原生 generateContent / streamGenerateContent；是否由消费者实现另定。"},
+  "bailian_text": {"display_name": "Bailian Text", "modalities": ["text"], "description": "DashScope 原生文本 / 多模态生成协议。"},
+  "minimax_text": {"display_name": "MiniMax Text", "modalities": ["text"], "description": "MiniMax 原生 text/chatcompletion_v2。"},
+  "cursor_agent": {"display_name": "Cursor Agent", "modalities": ["text"], "description": "Cursor 工具订阅的私有 Agent ConnectRPC / protobuf；不是 OpenAI 或 Anthropic 公开模型 API。"},
+  "xai_grpc": {"display_name": "xAI gRPC", "modalities": ["text"], "description": "xAI 官方 SDK 使用的原生 gRPC 推理服务。"}
+}

@@ -50,6 +50,48 @@
       "url": "https://platform.kimi.com/docs/pricing/chat.md",
       "purpose": "pricing",
       "notes": "参考价对齐来源；同平台按量价。"
+    },
+    {
+      "id": "protocol-chat",
+      "url": "https://platform.kimi.com/docs/api/chat",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-responses",
+      "url": "https://platform.kimi.com/docs/api/responses",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-messages",
+      "url": "https://platform.kimi.com/docs/api/messages",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-claude",
+      "url": "https://platform.kimi.com/docs/guide/claude-code-kimi",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-coding",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "reasoning-kimi-code",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-moonshot",
+      "url": "https://platform.kimi.com/docs/api/chat.md",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

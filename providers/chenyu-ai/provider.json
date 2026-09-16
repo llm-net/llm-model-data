@@ -26,6 +26,48 @@
       "url": "https://chenyu.pro/api-docs",
       "purpose": "billing",
       "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "protocol-public",
+      "url": "https://chenyu.pro/api-docs/",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-models",
+      "url": "https://chenyu.pro/api-docs/docs/models/",
+      "purpose": "models",
+      "notes": "协议专项核对；具体小节和公开资料冲突见 evidence/chenyu-ai/2026-09-16-protocols.md。"
+    },
+    {
+      "id": "protocol-images",
+      "url": "https://chenyu.pro/api-docs/docs/images/",
+      "purpose": "models",
+      "notes": "协议专项核对；具体小节和公开资料冲突见 evidence/chenyu-ai/2026-09-16-protocols.md。"
+    },
+    {
+      "id": "protocol-quickstart",
+      "url": "https://chenyu.pro/api-docs/docs/quickstart/",
+      "purpose": "models",
+      "notes": "协议专项核对；具体小节和公开资料冲突见 evidence/chenyu-ai/2026-09-16-protocols.md。"
+    },
+    {
+      "id": "protocol-messages",
+      "url": "https://chenyu.pro/api-docs/docs/anthropic-messages/",
+      "purpose": "models",
+      "notes": "协议专项核对；具体小节和公开资料冲突见 evidence/chenyu-ai/2026-09-16-protocols.md。"
+    },
+    {
+      "id": "protocol-responses",
+      "url": "https://chenyu.pro/api-docs/docs/openai-responses/",
+      "purpose": "models",
+      "notes": "协议专项核对；具体小节和公开资料冲突见 evidence/chenyu-ai/2026-09-16-protocols.md。"
+    },
+    {
+      "id": "protocol-catalog",
+      "url": "https://chenyu.pro/catalog/platform-models.json",
+      "purpose": "models",
+      "notes": "协议专项核对；具体小节和公开资料冲突见 evidence/chenyu-ai/2026-09-16-protocols.md。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

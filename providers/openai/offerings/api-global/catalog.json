@@ -116,7 +116,88 @@
         "tool_calling": null,
         "structured_output": null,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-api"
+            ],
+            "evidence": "evidence/openai/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "GPT-5.2 模型详情列出的 Chat Completions 与 Responses 推理接口；图像输入不表示图像生成协议。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "complete",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "disabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "none",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "none",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "disabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "none",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-openai-model",
+              "reasoning-openai-guide"
+            ],
+            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "GPT-5.2 按量模型的官方五档；none 关闭思考。不是 Codex 订阅设置。"
+        }
       }
     }
   ],

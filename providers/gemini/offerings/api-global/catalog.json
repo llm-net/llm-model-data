@@ -118,7 +118,87 @@
         "tool_calling": true,
         "structured_output": true,
         "streaming": null,
-        "interfaces": []
+        "interfaces": [
+          "openai_chat",
+          "gemini_generate_content"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-compatibility",
+              "protocol-model"
+            ],
+            "evidence": "evidence/gemini/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Gemini 3.7 Flash 的原生 GenerateContent 与 OpenAI Chat 兼容层。云端或设备是否实现原生面是消费者能力，不改变供应商事实。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "gemini_generate_content",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "generationConfig.thinkingConfig.thinkingLevel",
+                  "values": [
+                    "LOW",
+                    "MEDIUM",
+                    "HIGH"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "MEDIUM",
+                  "notes": "GenerateContent 的 ThinkingLevel 使用官方大写枚举；Chat 的 reasoning_effort 使用小写，不能共用一份原始值。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T13:00:50.495099Z",
+            "source_ids": [
+              "reasoning-gemini",
+              "reasoning-gemini-thinking",
+              "reasoning-gemini-openai",
+              "reasoning-gemini-generate-content"
+            ],
+            "evidence": "evidence/gemini/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "3.7 Flash 专页明确 low/medium/high，minimal 报错；思考指南默认 medium，兼容文档明确 Gemini 3 不能关闭思考。GenerateContent 原生字段与大写枚举已核对；其他预算参数的型号适用范围未全部核对，保留 partial。"
+        }
       }
     }
   ],

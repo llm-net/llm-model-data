@@ -109,7 +109,92 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。"
+      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-coding"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Kimi Code 模型配置逐项列四个 ID，接入表列 OpenAI Chat 与 Anthropic；未承诺订阅 Responses，不从 Kimi 按量 K3 推导。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+        }
+      }
     },
     {
       "id": "k3-256k",
@@ -205,7 +290,92 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。"
+      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-coding"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Kimi Code 模型配置逐项列四个 ID，接入表列 OpenAI Chat 与 Anthropic；未承诺订阅 Responses，不从 Kimi 按量 K3 推导。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+        }
+      }
     },
     {
       "id": "kimi-for-coding",
@@ -301,7 +471,92 @@
         },
         "notes": "用户明确指定：K2.8 Preview按Kimi K2.7 Code按量价做示意；仅价格参考，不改变底模身份，不表示官方同价。"
       },
-      "notes": "当前底模K2.8 Preview，请求ID仍为kimi-for-coding；按用户指定仅参考kimi-k2.7-code的按量价。"
+      "notes": "当前底模K2.8 Preview，请求ID仍为kimi-for-coding；按用户指定仅参考kimi-k2.7-code的按量价。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-coding"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Kimi Code 模型配置逐项列四个 ID，接入表列 OpenAI Chat 与 Anthropic；未承诺订阅 Responses，不从 Kimi 按量 K3 推导。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+        }
+      }
     },
     {
       "id": "kimi-for-coding-highspeed",
@@ -397,7 +652,92 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。"
+      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "source_ids": [
+              "protocol-coding"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "Kimi Code 模型配置逐项列四个 ID，接入表列 OpenAI Chat 与 Anthropic；未承诺订阅 Responses，不从 Kimi 按量 K3 推导。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "source_ids": [
+              "reasoning-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+        }
+      }
     }
   ],
   "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"

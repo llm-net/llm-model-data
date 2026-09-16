@@ -56,6 +56,84 @@
       "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
       "purpose": "pricing",
       "notes": "参考价对齐来源；同平台按量价。"
+    },
+    {
+      "id": "protocol-chat",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-openai-api",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-messages",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-responses",
+      "url": "https://platform.minimax.cn/docs/api-reference/responses-create",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-native",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-post",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-image",
+      "url": "https://platform.minimax.cn/docs/api-reference/image-generation-t2i",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-video",
+      "url": "https://platform.minimax.cn/docs/api-reference/video-generation-v2-create",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-speech",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-plan",
+      "url": "https://platform.minimax.cn/docs/token-plan/quickstart",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-codex",
+      "url": "https://platform.minimax.cn/docs/token-plan/codex",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-cursor",
+      "url": "https://platform.minimax.cn/docs/token-plan/cursor",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "reasoning-minimax",
+      "url": "https://platform.minimax.cn/docs/api-reference/responses-create",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-minimax-chat",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-openai-api",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-minimax-messages",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

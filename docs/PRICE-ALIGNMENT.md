@@ -4,11 +4,12 @@
 
 ## 当前结果
 
-- 20家服务商、30个产品、216条模型。
+- 18家服务商、28个产品、209条模型。
 - 71条订阅模型中70条已有参考价；K2.8 Preview按用户指定参考K2.7 Code，新增Codex Spark未查到对应公开按量价，保留unknown。
 - 5条方舟/千帆API短名已对齐最新日期版本。
-- 共186条有唯一价格基准，剩余30条：晨羽平台29条公开价目未取得、Codex Spark 1条参考价未知。
-- 已删除6条模型；排除项写入provider.json，校验器阻止重新导入。SiliconFlow任何retired记录均无法通过校验。
+- 共179条有唯一价格基准，剩余30条：晨羽平台29条公开价目未取得、Codex Spark 1条参考价未知。
+- 本轮整家删除硅基流动（6条模型）和 Together AI（1条模型）；schemas/excluded-providers.json 阻止重新导入。此前逐型号排除的历史仍见下表。
+- 剩余模型价格数字、套餐和额度未变；协议面专项结果见 [PROTOCOL-AUDIT-2026-09-16.md](PROTOCOL-AUDIT-2026-09-16.md)。
 
 ## 固定口径
 
@@ -25,13 +26,11 @@ Codex与GLM Coding Plan原先保存的积分单价已移除，统一改用本平
 | 平台 | 请求ID | 处理 |
 | --- | --- | --- |
 | OpenRouter | `~openai/gpt-latest` | 用户指定排除，即使再次发现也不自动加入 |
-| Together | `openai/gpt-oss-20b` | 同上 |
+| Together | 全部 | 整家排除，包含此前单独排除的 openai/gpt-oss-20b |
 | Groq | `llama-3.3-70b-versatile` | 同上 |
-| SiliconFlow | `Qwen/Qwen3.5-397B-A17B` | 已下线，删除并登记排除 |
-| SiliconFlow | `MiniMaxAI/MiniMax-M2.5` | 同上 |
-| SiliconFlow | `Pro/zai-org/GLM-4.7` | 同上 |
+| SiliconFlow | 全部 | 整家排除，历史下线条目不再逐条恢复 |
 
-SiliconFlow今后所有确认下线的模型都剔除，并加入排除清单；不在当前catalog保存历史retired行。
+硅基流动与 Together AI 整家排除，包括仍在服务的模型；旧下线记录只保留在 Git 历史与证据中。
 
 ## 用户指定的订阅参考价
 

@@ -26,6 +26,42 @@
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
       "purpose": "billing",
       "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "protocol-compatibility",
+      "url": "https://ai.google.dev/gemini-api/docs/openai",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-model",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "reasoning-gemini",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-gemini-openai",
+      "url": "https://ai.google.dev/gemini-api/docs/openai",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-gemini-thinking",
+      "url": "https://ai.google.dev/gemini-api/docs/thinking",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
+    },
+    {
+      "id": "reasoning-gemini-generate-content",
+      "url": "https://ai.google.dev/api/generate-content",
+      "purpose": "models",
+      "notes": "GenerationConfig.thinkingConfig、ThinkingConfig.thinkingLevel 及 ThinkingLevel 枚举。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

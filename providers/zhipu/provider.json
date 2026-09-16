@@ -44,6 +44,36 @@
       "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
       "purpose": "pricing",
       "notes": "参考价对齐来源；同平台按量价。"
+    },
+    {
+      "id": "protocol-chat",
+      "url": "https://docs.bigmodel.cn/api-reference/模型-api/对话补全",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-messages",
+      "url": "https://docs.bigmodel.cn/cn/guide/develop/claude/introduction",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-coding",
+      "url": "https://docs.bigmodel.cn/cn/guide/develop/others",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "protocol-codex",
+      "url": "https://docs.bigmodel.cn/cn/coding-plan/tool/codex",
+      "purpose": "models",
+      "notes": "2026-09-16 协议面专项核对；具体型号范围、产品身份和缺项见本地协议证据。"
+    },
+    {
+      "id": "reasoning-zhipu",
+      "url": "https://docs.bigmodel.cn/cn/guide/capabilities/thinking",
+      "purpose": "models",
+      "notes": "思考能力专项；来源小节、型号适用范围与缺项见本地证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
