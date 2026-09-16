@@ -314,6 +314,24 @@ class ProtocolContracts(unittest.TestCase):
 
 
 class ReasoningContracts(unittest.TestCase):
+    def test_codex_partial_records_expose_request_effort_without_ui_translation(self):
+        data = c.read_json(ROOT / "providers/openai/offerings/codex/catalog.json")
+        for model in data["models"]:
+            if model["request_id"] == "gpt-5.3-codex-spark":
+                continue  # not present in the verified official CLI catalog
+            reasoning = model["capabilities"]["reasoning"]
+            profiles = {p["surface"]: p for p in reasoning["profiles"]}
+            request = profiles["api_request"]
+            self.assertEqual(request["interface"], "openai_responses")
+            effort = request["controls"][0]
+            self.assertEqual(effort["parameter"], "reasoning.effort")
+            self.assertIn("high", effort["values"])
+            self.assertNotIn("ultra", effort["values"])
+            self.assertNotIn("Extra high", effort["values"])
+            self.assertIsNone(effort["default"])
+            self.assertIsNotNone(profiles["client_setting"]["controls"][0]["default"])
+            self.assertEqual(reasoning["coverage"], "partial")
+
     def setUp(self):
         self.provider = c.read_json(ROOT / "providers/openai/provider.json")
         self.data = c.read_json(ROOT / "providers/openai/offerings/api-global/catalog.json")

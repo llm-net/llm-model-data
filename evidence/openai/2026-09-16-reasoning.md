@@ -24,3 +24,5 @@
 | `codex/gpt-5-6-luna` | supported | partial | 未确认可配置参数 | 官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。 |
 | `codex/gpt-5-5` | supported | partial | 未确认可配置参数 | 官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。 |
 | `codex/gpt-5-3-codex-spark` | supported | partial | 未确认可配置参数 | 官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。 |
+
+后续补充：上述 Codex 初轮缺项已有部分解除，当前目录以 [单次请求档位核对](2026-09-16-codex-request-reasoning.md) 为准。

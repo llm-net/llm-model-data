@@ -47,3 +47,7 @@
 结构 / 语义校验、默认值与类型、预算边界 / 哨兵值、来源隔离、协议范围、历史可读性与候选报告均有测试。对比本轮编辑前的209条模型记录，移除新 reasoning 字段后全部相等；旧协议核对与价格没有刷新时间或改值。
 
 规范见 [REASONING.md](REASONING.md)。维护入口已同步至 AGENTS.md、数据模型、自动化、协议维护、审核文档、各服务商 README 与更新 / PR 模板。此候选未发布，消费者尚需独立适配该字段。
+
+## 后续补充：Codex 请求档位
+
+在 data-2026.09.16.3 基线上补齐 Astra、Sol、Terra、Luna、5.5 的独立 api_request 档位与 client_setting 默认，Spark 保留原结论。总计仍为 3 complete / 62 partial / 144 unknown；partial 的已确认档位可以使用，裸请求默认与关闭能力仍未知。来源与请求构造证据见 [补充核对](../evidence/openai/2026-09-16-codex-request-reasoning.md)。

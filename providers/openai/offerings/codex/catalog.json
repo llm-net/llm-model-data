@@ -397,20 +397,69 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "来自 Codex 0.154.0 内嵌的本型号档位与 Responses 请求构造核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                }
+              ],
+              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "low",
+                  "notes": "官方 CLI 0.154.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
+                }
+              ],
+              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-16T14:10:54.972577+00:00",
             "source_ids": [
+              "reasoning-codex-release-01540",
               "reasoning-codex-models",
               "reasoning-codex-config"
             ],
-            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "evidence": "evidence/openai/2026-09-16-codex-request-reasoning.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+          "notes": "已核对本型号的 CLI 0.154.0 内嵌档位、客户端默认及单次 Responses 请求参数。裸订阅请求省略参数的默认值、能否关闭仍未确认，因此保持 partial；partial 不阻止使用已经核实的档位。"
         }
       }
     },
@@ -555,24 +604,73 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": "Medium",
-                  "notes": "官方 CLI 选择器的显示标签，不能当成 API 枚举；Ultra 还启用任务委派，不作为单纯模型思考档位。"
+                  "default": null,
+                  "notes": "官方文档中的显示标签；示例 Medium 预选不作为所有 CLI 版本的默认值，实际 CLI 默认见 client_setting。Ultra 包含自动委派，未列入单模型档位。"
                 }
               ],
-              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "来自 Codex 0.154.0 内嵌的本型号档位与 Responses 请求构造核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                }
+              ],
+              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "low",
+                  "notes": "官方 CLI 0.154.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
+                }
+              ],
+              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-16T14:10:54.972577+00:00",
             "source_ids": [
+              "reasoning-codex-release-01540",
               "reasoning-codex-models",
               "reasoning-codex-config"
             ],
-            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "evidence": "evidence/openai/2026-09-16-codex-request-reasoning.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+          "notes": "已核对本型号的 CLI 0.154.0 内嵌档位、客户端默认及单次 Responses 请求参数。裸订阅请求省略参数的默认值、能否关闭仍未确认，因此保持 partial；partial 不阻止使用已经核实的档位。"
         }
       }
     },
@@ -705,20 +803,69 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "来自 Codex 0.154.0 内嵌的本型号档位与 Responses 请求构造核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                }
+              ],
+              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "官方 CLI 0.154.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
+                }
+              ],
+              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-16T14:10:54.972577+00:00",
             "source_ids": [
+              "reasoning-codex-release-01540",
               "reasoning-codex-models",
               "reasoning-codex-config"
             ],
-            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "evidence": "evidence/openai/2026-09-16-codex-request-reasoning.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+          "notes": "已核对本型号的 CLI 0.154.0 内嵌档位、客户端默认及单次 Responses 请求参数。裸订阅请求省略参数的默认值、能否关闭仍未确认，因此保持 partial；partial 不阻止使用已经核实的档位。"
         }
       }
     },
@@ -851,20 +998,69 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "来自 Codex 0.154.0 内嵌的本型号档位与 Responses 请求构造核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                }
+              ],
+              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "官方 CLI 0.154.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
+                }
+              ],
+              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-16T14:10:54.972577+00:00",
             "source_ids": [
+              "reasoning-codex-release-01540",
               "reasoning-codex-models",
               "reasoning-codex-config"
             ],
-            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "evidence": "evidence/openai/2026-09-16-codex-request-reasoning.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+          "notes": "已核对本型号的 CLI 0.154.0 内嵌档位、客户端默认及单次 Responses 请求参数。裸订阅请求省略参数的默认值、能否关闭仍未确认，因此保持 partial；partial 不阻止使用已经核实的档位。"
         }
       }
     },
@@ -997,20 +1193,67 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "Codex 模型与思考选择器；本条只记录订阅产品，未继承同名按量 API 的档位。"
+              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "来自 Codex 0.154.0 内嵌的本型号档位与 Responses 请求构造核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                }
+              ],
+              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "官方 CLI 0.154.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
+                }
+              ],
+              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-16T14:10:54.972577+00:00",
             "source_ids": [
+              "reasoning-codex-release-01540",
               "reasoning-codex-models",
               "reasoning-codex-config"
             ],
-            "evidence": "evidence/openai/2026-09-16-reasoning.md",
+            "evidence": "evidence/openai/2026-09-16-codex-request-reasoning.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "官方 Codex 文档列出此型号并提供思考选择器；仅 Sol 有明确逐档示例。其他型号的档位、是否可关闭及默认值尚未逐项证实。配置键 model_reasoning_effort 的通用枚举不代表每个模型都支持。"
+          "notes": "已核对本型号的 CLI 0.154.0 内嵌档位、客户端默认及单次 Responses 请求参数。裸订阅请求省略参数的默认值、能否关闭仍未确认，因此保持 partial；partial 不阻止使用已经核实的档位。"
         }
       }
     },
