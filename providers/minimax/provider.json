@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "minimax",
+  "display_name": "MiniMax",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://platform.minimaxi.com/docs/guides/models-intro",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "purpose": "pricing",
+      "notes": "国内与国际站独立记录；Token Plan 单独核对。文本、视频、图像和语音计量单位不同。"
+    },
+    {
+      "id": "token-plan-cn",
+      "url": "https://platform.minimaxi.com/docs/token-plan/intro",
+      "purpose": "subscription",
+      "notes": "调查入口；可能需要从该页继续寻找本产品确切资料。"
+    },
+    {
+      "id": "pricing-current",
+      "url": "https://platform.minimax.cn/docs/guides/pricing-paygo",
+      "purpose": "pricing",
+      "notes": "本轮核对视频、图像、TTS 计价，其他段未迁入。"
+    },
+    {
+      "id": "speech-http",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http",
+      "purpose": "billing",
+      "notes": "同步 TTS usage_characters 字段。"
+    },
+    {
+      "id": "audit-pricing",
+      "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-speech-http",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-token-plan-cn",
+      "url": "https://platform.minimaxi.com/docs/token-plan/intro",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-minimax-pricing",
+      "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

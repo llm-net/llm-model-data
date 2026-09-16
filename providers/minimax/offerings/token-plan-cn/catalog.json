@@ -1,0 +1,410 @@
+{
+  "schema_version": 1,
+  "provider_id": "minimax",
+  "id": "token-plan-cn",
+  "display_name": "MiniMax / token-plan-cn",
+  "kind": "api_subscription",
+  "market": "cn",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/minimax/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [
+    {
+      "id": "plus",
+      "display_name": "Plus",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "49",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-token-plan-cn"
+              ],
+              "evidence": "evidence/minimax/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-token-plan-cn"
+          ],
+          "evidence": "evidence/minimax/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。"
+      },
+      "quotas": [],
+      "overage": "add_on",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-token-plan-cn"
+        ],
+        "evidence": "evidence/minimax/2026-09-16-audit.md",
+        "notes": "核对公开官方资料；未用真实 Key 实调。"
+      },
+      "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。"
+    },
+    {
+      "id": "max",
+      "display_name": "Max",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "119",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-token-plan-cn"
+              ],
+              "evidence": "evidence/minimax/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-token-plan-cn"
+          ],
+          "evidence": "evidence/minimax/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。"
+      },
+      "quotas": [],
+      "overage": "add_on",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-token-plan-cn"
+        ],
+        "evidence": "evidence/minimax/2026-09-16-audit.md",
+        "notes": "核对公开官方资料；未用真实 Key 实调。"
+      },
+      "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。"
+    },
+    {
+      "id": "ultra",
+      "display_name": "Ultra",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "469",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-token-plan-cn"
+              ],
+              "evidence": "evidence/minimax/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-token-plan-cn"
+          ],
+          "evidence": "evidence/minimax/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。"
+      },
+      "quotas": [],
+      "overage": "add_on",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-token-plan-cn"
+        ],
+        "evidence": "evidence/minimax/2026-09-16-audit.md",
+        "notes": "核对公开官方资料；未用真实 Key 实调。"
+      },
+      "notes": "个人月付，5小时固定窗口和周额度绝对数未公开；可用积分自动补充，非API余额自动扣款。"
+    }
+  ],
+  "models": [
+    {
+      "id": "minimax-m3",
+      "request_id": "MiniMax-M3",
+      "display_name": "MiniMax-M3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "plus",
+        "max",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-token-plan-cn"
+        ],
+        "evidence": "evidence/minimax/2026-09-16-audit.md",
+        "notes": "套餐明确列出M3/M2.7；H3不在覆盖范围。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：MiniMax-M3。标准在线、输入不超过512K；M3使用官方永久降价后的价格。缓存写入TTL未核清不填。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.42",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+              "subject": "MiniMax-M3",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-minimax-pricing"
+              ],
+              "evidence": "evidence/minimax/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-minimax-pricing"
+          ],
+          "evidence": "evidence/minimax/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "套餐明确列出M3/M2.7；H3不在覆盖范围。"
+    },
+    {
+      "id": "minimax-m2-7",
+      "request_id": "MiniMax-M2.7",
+      "display_name": "MiniMax-M2.7",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "plus",
+        "max",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-token-plan-cn"
+        ],
+        "evidence": "evidence/minimax/2026-09-16-audit.md",
+        "notes": "套餐明确列出M3/M2.7；H3不在覆盖范围。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：MiniMax-M2.7。标准在线、输入不超过512K；M3使用官方永久降价后的价格。缓存写入TTL未核清不填。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.42",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+              "subject": "MiniMax-M2.7",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-minimax-pricing"
+              ],
+              "evidence": "evidence/minimax/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-minimax-pricing"
+          ],
+          "evidence": "evidence/minimax/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "套餐明确列出M3/M2.7；H3不在覆盖范围。"
+    }
+  ],
+  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+}

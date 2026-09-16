@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "provider_id": "openrouter",
+  "id": "api-global",
+  "display_name": "OpenRouter / api-global",
+  "kind": "pay_as_you_go",
+  "market": "global",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/openrouter/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "anthropic-claude-sonnet-latest",
+      "request_id": "~anthropic/claude-sonnet-latest",
+      "display_name": "~anthropic/claude-sonnet-latest",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-pricing"
+        ],
+        "evidence": "evidence/openrouter/2026-09-16-audit.md",
+        "notes": "平台模型级公开目录确认ID；只取该条pricing，实际路由账单可能不同。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "OpenRouter该模型目录pricing的模型级报价；每token精确乘1000000转换为每百万token，不展开路由供应商。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "10.00000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.2000000",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-pricing"
+              ],
+              "evidence": "evidence/openrouter/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-pricing"
+          ],
+          "evidence": "evidence/openrouter/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/openrouter/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "平台模型级公开目录确认ID；只取该条pricing，实际路由账单可能不同。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": []
+      }
+    }
+  ],
+  "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"
+}

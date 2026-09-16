@@ -1,0 +1,1216 @@
+{
+  "schema_version": 1,
+  "provider_id": "zhipu",
+  "id": "api-cn",
+  "display_name": "智谱AI开放平台 / api-cn",
+  "kind": "pay_as_you_go",
+  "market": "cn",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/zhipu/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "glm-5-3",
+      "request_id": "glm-5.3",
+      "display_name": "GLM-5.3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "28",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "request_id": "glm-5.3-flash",
+      "display_name": "GLM-5.3-Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.23",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-5-2",
+      "request_id": "glm-5.2",
+      "display_name": "GLM-5.2",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "28",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-5-1",
+      "request_id": "glm-5.1",
+      "display_name": "GLM-5.1",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "24",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-5",
+      "request_id": "glm-5",
+      "display_name": "GLM-5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "18",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-5-turbo",
+      "request_id": "glm-5-turbo",
+      "display_name": "GLM-5-Turbo",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "22",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-4-7",
+      "request_id": "glm-4.7",
+      "display_name": "GLM-4.7",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "输入低于32K、输出至少0.2K的常规档；不采用极短输出优惠档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "14",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-4-7-flashx",
+      "request_id": "glm-4.7-flashx",
+      "display_name": "GLM-4.7-FlashX",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "request_id": "glm-4.7-flash",
+      "display_name": "GLM-4.7-Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "0",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-4-5-air",
+      "request_id": "glm-4.5-air",
+      "display_name": "GLM-4.5-Air",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "输入低于32K、输出至少0.2K的常规档；不采用极短输出优惠档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.16",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-5v-turbo",
+      "request_id": "glm-5v-turbo",
+      "display_name": "GLM-5V-Turbo",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "22",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-4-6v",
+      "request_id": "glm-4.6v",
+      "display_name": "GLM-4.6V",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    },
+    {
+      "id": "glm-4-6v-flash",
+      "request_id": "glm-4.6v-flash",
+      "display_name": "GLM-4.6V-Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-current"
+        ],
+        "evidence": "evidence/zhipu/2026-09-16-audit.md",
+        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "0",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+    }
+  ],
+  "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"
+}

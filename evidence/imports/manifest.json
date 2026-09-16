@@ -1,0 +1,22 @@
+{
+  "source_repository": "https://github.com/llm-net/platform-chenyu-ai",
+  "source_commit": "0f9e78d3760c0cdbc9cd60a1f7fa9e120b91dc5d",
+  "imported_at": "2026-09-16T03:18:09Z",
+  "inputs": {
+    "platform-models.json": {
+      "snapshot": "evidence/imports/platform-models.json",
+      "sha256": "5ca3e29ad9bffd8c05295063b42147ee81d5b53789b9757a3adfbc3c169869fd",
+      "original_path": "k8s/base/configmaps/platform-models.json",
+      "original_sha256": "8d2574262f44f4a0ec91f5cf8ccca711cb8aba6bf677c94b80e56602a85b9f33",
+      "sanitization": "Excluded internal/generic providers and deployment metadata; retained public model and legacy pricing research fields."
+    },
+    "official-pricing.json": {
+      "snapshot": "evidence/imports/official-pricing.json",
+      "sha256": "d15a08acca793954d01912dfeb8718884fd42a83a4fba29a9a74fd1c3d00bcb4",
+      "original_path": "k8s/base/configmaps/official-pricing.json",
+      "original_sha256": "f0a0faa92f6b92cbd1679e93813757686290dc05e3ef8a9b9c14ca4fde84b6eb",
+      "sanitization": "Excluded internal/generic providers and deployment metadata; retained public model and legacy pricing research fields."
+    }
+  },
+  "notes": "Sanitized working-tree snapshots. original_sha256 identifies original input bytes; sha256 verifies stored sanitized bytes. Old checked_at dates are not fresh verification."
+}

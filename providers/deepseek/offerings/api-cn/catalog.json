@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "provider_id": "deepseek",
+  "id": "api-cn",
+  "display_name": "DeepSeek / api-cn",
+  "kind": "pay_as_you_go",
+  "market": "cn",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/deepseek/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "deepseek-flash",
+      "request_id": "deepseek-flash",
+      "display_name": "DeepSeek-V4.1-Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-pricing"
+        ],
+        "evidence": "evidence/deepseek/2026-09-16-audit.md",
+        "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "统一采用北京时间工作日高峰标价；低谷半价仅备注，不按调用时间切换。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-pricing"
+              ],
+              "evidence": "evidence/deepseek/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-pricing"
+          ],
+          "evidence": "evidence/deepseek/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/deepseek/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 393216,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": []
+      }
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "request_id": "deepseek-v4-pro",
+      "display_name": "DeepSeek-V4-Pro-0813",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-pricing"
+        ],
+        "evidence": "evidence/deepseek/2026-09-16-audit.md",
+        "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "统一采用北京时间工作日高峰标价；低谷半价仅备注，不按调用时间切换。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "9",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "27",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-pricing"
+              ],
+              "evidence": "evidence/deepseek/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-pricing"
+          ],
+          "evidence": "evidence/deepseek/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/deepseek/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。",
+      "capabilities": {
+        "input_modalities": [
+          "text"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 393216,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": []
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "request_id": "deepseek-v4-flash",
+      "display_name": "DeepSeek Flash（旧请求名）",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": "deepseek-flash",
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-pricing"
+        ],
+        "evidence": "evidence/deepseek/2026-09-16-audit.md",
+        "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "统一采用北京时间工作日高峰标价；低谷半价仅备注，不按调用时间切换。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-pricing"
+              ],
+              "evidence": "evidence/deepseek/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-pricing"
+          ],
+          "evidence": "evidence/deepseek/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/deepseek/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 393216,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": []
+      }
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "request_id": "deepseek-v4-flash-vision-exp",
+      "display_name": "DeepSeek Flash Vision（旧请求名）",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": "deepseek-flash",
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-pricing"
+        ],
+        "evidence": "evidence/deepseek/2026-09-16-audit.md",
+        "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "统一采用北京时间工作日高峰标价；低谷半价仅备注，不按调用时间切换。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-pricing"
+              ],
+              "evidence": "evidence/deepseek/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-pricing"
+          ],
+          "evidence": "evidence/deepseek/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/deepseek/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 393216,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": []
+      }
+    }
+  ],
+  "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"
+}

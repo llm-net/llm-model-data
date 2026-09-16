@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "together",
+  "display_name": "Together AI",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://docs.together.ai/docs/inference/openai-compatibility",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://www.together.ai/pricing",
+      "purpose": "pricing",
+      "notes": "Serverless、专用端点、批量和硬件计费分开；不同部署产品不做同名价格继承。"
+    },
+    {
+      "id": "audit-models",
+      "url": "https://docs.together.ai/docs/serverless/models",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-pricing",
+      "url": "https://www.together.ai/pricing",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",
+  "excluded_request_ids": [
+    "openai/gpt-oss-20b"
+  ]
+}

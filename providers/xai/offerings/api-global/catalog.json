@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "provider_id": "xai",
+  "id": "api-global",
+  "display_name": "xAI / api-global",
+  "kind": "pay_as_you_go",
+  "market": "global",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/xai/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "grok-4-6",
+      "request_id": "grok-4.6",
+      "display_name": "grok-4.6",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-grok46",
+          "audit-grok45"
+        ],
+        "evidence": "evidence/xai/2026-09-16-audit.md",
+        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准请求、输入不超过200K的档位；仅作统一估算，不展开长上下文价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-grok46",
+                "audit-grok45"
+              ],
+              "evidence": "evidence/xai/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-grok46",
+            "audit-grok45"
+          ],
+          "evidence": "evidence/xai/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/xai/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 500000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": []
+      }
+    },
+    {
+      "id": "grok-4-5",
+      "request_id": "grok-4.5",
+      "display_name": "grok-4.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-grok46",
+          "audit-grok45"
+        ],
+        "evidence": "evidence/xai/2026-09-16-audit.md",
+        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准请求、输入不超过200K的档位；仅作统一估算，不展开长上下文价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-grok46",
+                "audit-grok45"
+              ],
+              "evidence": "evidence/xai/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-grok46",
+            "audit-grok45"
+          ],
+          "evidence": "evidence/xai/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/xai/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 500000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": []
+      }
+    }
+  ],
+  "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"
+}

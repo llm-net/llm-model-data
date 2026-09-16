@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "provider_id": "xai",
+  "id": "grok-build",
+  "display_name": "xAI / grok-build",
+  "kind": "tool_subscription",
+  "market": "global",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/xai/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "grok-4-6",
+      "request_id": "grok-4.6",
+      "display_name": "grok-4.6",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-build"
+        ],
+        "evidence": "evidence/xai/2026-09-16-audit.md",
+        "notes": "官方Grok Build说明当前由grok-4.6驱动；未确认每个订阅档位的权限。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/xai/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：grok-4.6。标准请求、输入不超过200K的档位；仅作统一估算，不展开长上下文价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.x.ai/developers/models/grok-4.6",
+              "subject": "grok-4.6",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-xai-grok46"
+              ],
+              "evidence": "evidence/xai/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-xai-grok46"
+          ],
+          "evidence": "evidence/xai/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Grok Build说明当前由grok-4.6驱动；未确认每个订阅档位的权限。"
+    },
+    {
+      "id": "grok-4-5",
+      "request_id": "grok-4.5",
+      "display_name": "grok-4.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "unknown",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "needs_review",
+        "checked_at": null,
+        "source_ids": [
+          "audit-build"
+        ],
+        "evidence": "evidence/xai/2026-09-16-audit.md",
+        "notes": "当前Build说明只确认4.6，未确认4.5是否仍可由订阅选择。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/xai/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：grok-4.5。标准请求、输入不超过200K的档位；仅作统一估算，不展开长上下文价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.x.ai/developers/models/grok-4.5",
+              "subject": "grok-4.5",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-xai-grok45"
+              ],
+              "evidence": "evidence/xai/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-xai-grok45"
+          ],
+          "evidence": "evidence/xai/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "当前Build说明只确认4.6，未确认4.5是否仍可由订阅选择。"
+    }
+  ],
+  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+}

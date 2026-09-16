@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "openai",
+  "display_name": "OpenAI",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://platform.openai.com/docs/api-reference/chat",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "codex-legacy",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "purpose": "discovery",
+      "notes": "旧订阅目录的来源，可能只是 API 文档；不能证明订阅模型或价格。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://openai.com/api/pricing/",
+      "purpose": "pricing",
+      "notes": "API 与 Codex 订阅完全独立；缓存、上下文档位、服务档位与订阅额度另查，不自动换汇。"
+    },
+    {
+      "id": "audit-model",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.2.md",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-codex-pricing",
+      "url": "https://learn.chatgpt.com/docs/pricing",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-codex-models",
+      "url": "https://learn.chatgpt.com/docs/models",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-openai-codex-rate",
+      "url": "https://developers.openai.com/api/docs/models/compare",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    },
+    {
+      "id": "alignment-openai-luna-api",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

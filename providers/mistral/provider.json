@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "mistral",
+  "display_name": "Mistral",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://docs.mistral.ai/api/endpoint/chat",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://docs.mistral.ai/docs/deployment/laplateforme/pricing",
+      "purpose": "pricing",
+      "notes": "核对托管 API 的币种、模型版本、服务档位；开源权重可用不意味着托管 API 免费。"
+    },
+    {
+      "id": "audit-api-pricing",
+      "url": "https://docs.mistral.ai/inference/pricing",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-aliases",
+      "url": "https://docs.mistral.ai/vibe/code/cli/configuration",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

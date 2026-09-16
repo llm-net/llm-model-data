@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "bailian",
+  "display_name": "阿里云百炼",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://help.aliyun.com/zh/model-studio/text-generation-model/",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "token-plan-cn",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-team-overview",
+      "purpose": "subscription",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "purpose": "pricing",
+      "notes": "Token Plan 与 Coding Plan 是独立产品；地区、思考模式、缓存、上下文阶梯和促销分别核对。"
+    },
+    {
+      "id": "coding-plan-cn",
+      "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "purpose": "subscription",
+      "notes": "调查入口；可能需要从该页继续寻找本产品确切资料。"
+    },
+    {
+      "id": "audit-pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-coding-plan-cn",
+      "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-token-plan-cn",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-team-overview",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-bailian-pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

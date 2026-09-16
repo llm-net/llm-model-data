@@ -1,0 +1,1017 @@
+{
+  "schema_version": 1,
+  "provider_id": "ark",
+  "id": "agent-plan-cn",
+  "display_name": "火山方舟 / agent-plan-cn",
+  "kind": "api_subscription",
+  "market": "cn",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/ark/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [
+    {
+      "id": "small",
+      "display_name": "Small",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "40",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-rendered-agent"
+              ],
+              "evidence": "evidence/ark/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-rendered-agent"
+          ],
+          "evidence": "evidence/ark/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。"
+      },
+      "quotas": [
+        {
+          "metric": "included_afp",
+          "limit": "20000",
+          "unit": "credit",
+          "window": {
+            "kind": "billing_cycle",
+            "duration": "P1M",
+            "timezone": null,
+            "anchor": null
+          },
+          "notes": "独立额度窗口，不能与其他窗口相加。"
+        }
+      ],
+      "overage": "pay_as_you_go",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "核对公开官方资料；未用真实 Key 实调。"
+      },
+      "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。"
+    },
+    {
+      "id": "medium",
+      "display_name": "Medium",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "200",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-rendered-agent"
+              ],
+              "evidence": "evidence/ark/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-rendered-agent"
+          ],
+          "evidence": "evidence/ark/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。"
+      },
+      "quotas": [
+        {
+          "metric": "included_afp",
+          "limit": "100000",
+          "unit": "credit",
+          "window": {
+            "kind": "billing_cycle",
+            "duration": "P1M",
+            "timezone": null,
+            "anchor": null
+          },
+          "notes": "独立额度窗口，不能与其他窗口相加。"
+        }
+      ],
+      "overage": "pay_as_you_go",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "核对公开官方资料；未用真实 Key 实调。"
+      },
+      "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。"
+    },
+    {
+      "id": "large",
+      "display_name": "Large",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "500",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-rendered-agent"
+              ],
+              "evidence": "evidence/ark/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-rendered-agent"
+          ],
+          "evidence": "evidence/ark/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。"
+      },
+      "quotas": [
+        {
+          "metric": "included_afp",
+          "limit": "250000",
+          "unit": "credit",
+          "window": {
+            "kind": "billing_cycle",
+            "duration": "P1M",
+            "timezone": null,
+            "anchor": null
+          },
+          "notes": "独立额度窗口，不能与其他窗口相加。"
+        }
+      ],
+      "overage": "pay_as_you_go",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "核对公开官方资料；未用真实 Key 实调。"
+      },
+      "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。"
+    },
+    {
+      "id": "max",
+      "display_name": "Max",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "1000",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-rendered-agent"
+              ],
+              "evidence": "evidence/ark/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-rendered-agent"
+          ],
+          "evidence": "evidence/ark/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。"
+      },
+      "quotas": [
+        {
+          "metric": "included_afp",
+          "limit": "500000",
+          "unit": "credit",
+          "window": {
+            "kind": "billing_cycle",
+            "duration": "P1M",
+            "timezone": null,
+            "anchor": null
+          },
+          "notes": "独立额度窗口，不能与其他窗口相加。"
+        }
+      ],
+      "overage": "pay_as_you_go",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "核对公开官方资料；未用真实 Key 实调。"
+      },
+      "notes": "个人月付。5小时/周/日限额因模态不同而不同，详见官方套餐表；超额后付费需用户选择开启。"
+    }
+  ],
+  "models": [
+    {
+      "id": "deepseek-v4-pro",
+      "request_id": "deepseek-v4-pro",
+      "display_name": "deepseek-v4-pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：deepseek-v4-pro-ga-260813。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "9",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "27",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "deepseek-v4-pro-ga-260813",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "request_id": "deepseek-v4-flash",
+      "display_name": "deepseek-v4-flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：deepseek-v4-flash-ga-260731。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "9",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "deepseek-v4-flash-ga-260731",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+    },
+    {
+      "id": "doubao-seedance-2-5",
+      "request_id": "doubao-seedance-2.5",
+      "display_name": "doubao-seedance-2.5",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "video_output_tokens",
+                "amount": "70",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "$.usage.completion_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "使用厂商视频计费token；不能换成文本token。"
+                }
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：doubao-seedance-2-5-260628。按用户规则，短名估价对齐同系列最新日期版本；这不声明官方路由别名。 参考对象：doubao-seedance-2-5-260628。720p无参考视频的常规标价。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seedance-2-5-260628",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+    },
+    {
+      "id": "doubao-seedance-2-0",
+      "request_id": "doubao-seedance-2.0",
+      "display_name": "doubao-seedance-2.0",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "video_output_tokens",
+                "amount": "46",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "$.usage.completion_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "使用厂商视频计费token；不能换成文本token。"
+                }
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：doubao-seedance-2-0-260128。按用户规则，短名估价对齐同系列最新日期版本；这不声明官方路由别名。 参考对象：doubao-seedance-2-0-260128。720p无参考视频的常规标价。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seedance-2-0-260128",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+    },
+    {
+      "id": "doubao-seedance-2-0-fast",
+      "request_id": "doubao-seedance-2.0-fast",
+      "display_name": "doubao-seedance-2.0-fast",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "video_output_tokens",
+                "amount": "37",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "$.usage.completion_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "使用厂商视频计费token；不能换成文本token。"
+                }
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：doubao-seedance-2-0-fast-260128。按用户规则，短名估价对齐同系列最新日期版本；这不声明官方路由别名。 参考对象：doubao-seedance-2-0-fast-260128。720p无参考视频的常规标价。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seedance-2-0-fast-260128",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+    },
+    {
+      "id": "doubao-seedance-2-0-mini",
+      "request_id": "doubao-seedance-2.0-mini",
+      "display_name": "doubao-seedance-2.0-mini",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：doubao-seedance-2-0-mini-260615。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "video_output_tokens",
+                "amount": "23",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "$.usage.completion_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "厂商视频计费token包含参考视频和生成视频，不能用文本token或秒替代。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seedance-2-0-mini-260615",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+    },
+    {
+      "id": "doubao-seedream-5-0-lite",
+      "request_id": "doubao-seedream-5.0-lite",
+      "display_name": "doubao-seedream-5.0-lite",
+      "modalities": [
+        "image"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-agent"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：doubao-seedream-5-0-260128。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "generated_images",
+                "amount": "0.22",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seedream-5-0-260128",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+    }
+  ],
+  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+}

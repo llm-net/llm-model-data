@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "cursor",
+  "display_name": "Cursor",
+  "sources": [
+    {
+      "id": "pricing",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "purpose": "pricing",
+      "notes": "个人、团队、企业套餐分开；模型额度折算、实际按量加购、附加服务费分别核对，展示名不是公开 API 请求名。"
+    },
+    {
+      "id": "individual",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "purpose": "subscription",
+      "notes": "调查入口；可能需要从该页继续寻找本产品确切资料。"
+    },
+    {
+      "id": "audit-pricing",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-cursor-pricing",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

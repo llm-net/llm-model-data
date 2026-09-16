@@ -1,0 +1,980 @@
+{
+  "schema_version": 1,
+  "provider_id": "ark",
+  "id": "coding-plan-cn",
+  "display_name": "火山方舟 / coding-plan-cn",
+  "kind": "api_subscription",
+  "market": "cn",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/ark/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "doubao-seed-evolving",
+      "request_id": "doubao-seed-evolving",
+      "display_name": "doubao-seed-evolving",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：doubao-seed-evolving。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-evolving",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "doubao-seed-2-1-turbo",
+      "request_id": "doubao-seed-2.1-turbo",
+      "display_name": "doubao-seed-2.1-turbo",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：doubao-seed-2-1-turbo-260628。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "15",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2-1-turbo-260628",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "doubao-seed-2-0-lite",
+      "request_id": "doubao-seed-2.0-lite",
+      "display_name": "doubao-seed-2.0-lite",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：doubao-seed-2-0-lite-260428。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.12",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "3.6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2-0-lite-260428",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "minimax-m3",
+      "request_id": "minimax-m3",
+      "display_name": "minimax-m3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方minimax按量价。 参考对象：MiniMax-M3。标准在线、输入不超过512K；M3使用官方永久降价后的价格。缓存写入TTL未核清不填。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.42",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+              "subject": "MiniMax-M3",
+              "reason": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方minimax按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-minimax-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-minimax-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "glm-5-3",
+      "request_id": "glm-5.3",
+      "display_name": "glm-5.3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方zhipu按量价。 参考对象：glm-5.3。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "28",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+              "subject": "glm-5.3",
+              "reason": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方zhipu按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-zhipu-full-prices"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-zhipu-full-prices"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "request_id": "glm-5.3-flash",
+      "display_name": "glm-5.3-flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.23",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：glm-5.3-flash。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "glm-5.3-flash",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "request_id": "deepseek-v4-flash",
+      "display_name": "deepseek-v4-flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：deepseek-v4-flash-ga-260731。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "9",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "deepseek-v4-flash-ga-260731",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "request_id": "deepseek-v4-pro",
+      "display_name": "deepseek-v4-pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：deepseek-v4-pro-ga-260813。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "9",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "27",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "deepseek-v4-pro-ga-260813",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "kimi-k2-7-code",
+      "request_id": "kimi-k2.7-code",
+      "display_name": "kimi-k2.7-code",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方moonshot按量价。 参考对象：kimi-k2.7-code。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "27",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat.md",
+              "subject": "kimi-k2.7-code",
+              "reason": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方moonshot按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-moonshot-pricing-md"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-moonshot-pricing-md"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    },
+    {
+      "id": "kimi-k3",
+      "request_id": "kimi-k3",
+      "display_name": "kimi-k3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-rendered-coding"
+        ],
+        "evidence": "evidence/ark/2026-09-16-audit.md",
+        "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方moonshot按量价。 参考对象：kimi-k3。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "100",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat.md",
+              "subject": "kimi-k3",
+              "reason": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方moonshot按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-moonshot-pricing-md"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-moonshot-pricing-md"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。"
+    }
+  ],
+  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+}

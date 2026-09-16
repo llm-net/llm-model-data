@@ -1,0 +1,560 @@
+{
+  "schema_version": 1,
+  "provider_id": "kling",
+  "id": "api-cn",
+  "display_name": "可灵 AI（快手） / api-cn",
+  "kind": "pay_as_you_go",
+  "market": "cn",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/kling/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "kling-3-0-turbo",
+      "request_id": "kling-3.0-turbo",
+      "display_name": "可灵 3.0 Turbo",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-md",
+          "audit-prices-md"
+        ],
+        "evidence": "evidence/kling/2026-09-16-audit.md",
+        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "720p普通生成、无参考视频；3.0Turbo取有声档，其余取无声档。官方1积分=1元，仅保存人民币基准。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.8",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-prices-md"
+              ],
+              "evidence": "evidence/kling/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-prices-md"
+          ],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+    },
+    {
+      "id": "kling-3-0",
+      "request_id": "kling-3.0",
+      "display_name": "可灵 3.0",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-md",
+          "audit-prices-md"
+        ],
+        "evidence": "evidence/kling/2026-09-16-audit.md",
+        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "720p普通生成、无参考视频；3.0Turbo取有声档，其余取无声档。官方1积分=1元，仅保存人民币基准。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.6",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-prices-md"
+              ],
+              "evidence": "evidence/kling/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-prices-md"
+          ],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+    },
+    {
+      "id": "kling-3-0-omni",
+      "request_id": "kling-3.0-omni",
+      "display_name": "可灵 3.0 Omni",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-md",
+          "audit-prices-md"
+        ],
+        "evidence": "evidence/kling/2026-09-16-audit.md",
+        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "720p普通生成、无参考视频；3.0Turbo取有声档，其余取无声档。官方1积分=1元，仅保存人民币基准。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.6",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-prices-md"
+              ],
+              "evidence": "evidence/kling/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-prices-md"
+          ],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+    },
+    {
+      "id": "kling-o1",
+      "request_id": "kling-o1",
+      "display_name": "可灵 O1",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-md",
+          "audit-prices-md"
+        ],
+        "evidence": "evidence/kling/2026-09-16-audit.md",
+        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "720p普通生成、无参考视频；3.0Turbo取有声档，其余取无声档。官方1积分=1元，仅保存人民币基准。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.6",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-prices-md"
+              ],
+              "evidence": "evidence/kling/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-prices-md"
+          ],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+    },
+    {
+      "id": "kling-2-6",
+      "request_id": "kling-2.6",
+      "display_name": "可灵 2.6",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-md",
+          "audit-prices-md"
+        ],
+        "evidence": "evidence/kling/2026-09-16-audit.md",
+        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "720p普通生成、无参考视频；3.0Turbo取有声档，其余取无声档。官方1积分=1元，仅保存人民币基准。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.3",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-prices-md"
+              ],
+              "evidence": "evidence/kling/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-prices-md"
+          ],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+    },
+    {
+      "id": "kling-2-5-turbo",
+      "request_id": "kling-2.5-turbo",
+      "display_name": "可灵 2.5 Turbo",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-models-md",
+          "audit-prices-md"
+        ],
+        "evidence": "evidence/kling/2026-09-16-audit.md",
+        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "720p普通生成、无参考视频；3.0Turbo取有声档，其余取无声档。官方1积分=1元，仅保存人民币基准。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.3",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-prices-md"
+              ],
+              "evidence": "evidence/kling/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-prices-md"
+          ],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/kling/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+    }
+  ],
+  "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"
+}

@@ -1,0 +1,1041 @@
+{
+  "schema_version": 1,
+  "provider_id": "bailian",
+  "id": "coding-plan-cn",
+  "display_name": "阿里云百炼 / coding-plan-cn",
+  "kind": "api_subscription",
+  "market": "cn",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/bailian/2026-09-16-audit.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [
+    {
+      "id": "pro",
+      "display_name": "Pro",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "Pro标准月付200元；首月39.90元促销不作为长期基准。",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "200",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "source_ids": [
+                "audit-coding-plan-cn"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-audit.md",
+              "notes": "核对公开官方资料；未用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "source_ids": [
+            "audit-coding-plan-cn"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-audit.md",
+          "notes": "核对公开官方资料；未用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "quotas": [
+        {
+          "metric": "model_calls",
+          "limit": "6000",
+          "unit": "request",
+          "window": {
+            "kind": "rolling",
+            "duration": "PT5H",
+            "timezone": "Asia/Shanghai",
+            "anchor": null
+          },
+          "notes": "按模型调用次数消耗，单次用户提问可触发多次调用；各窗口并行限制。"
+        },
+        {
+          "metric": "model_calls",
+          "limit": "45000",
+          "unit": "request",
+          "window": {
+            "kind": "calendar",
+            "duration": "P1W",
+            "timezone": "Asia/Shanghai",
+            "anchor": "Monday 00:00"
+          },
+          "notes": "按模型调用次数消耗，单次用户提问可触发多次调用；各窗口并行限制。"
+        },
+        {
+          "metric": "model_calls",
+          "limit": "90000",
+          "unit": "request",
+          "window": {
+            "kind": "billing_cycle",
+            "duration": "P1M",
+            "timezone": "Asia/Shanghai",
+            "anchor": "subscription anniversary 00:00"
+          },
+          "notes": "按模型调用次数消耗，单次用户提问可触发多次调用；各窗口并行限制。"
+        }
+      ],
+      "overage": "unknown",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "核对公开官方资料；未用真实 Key 实调。"
+      },
+      "notes": "用途限定于官方允许的编程工具；旧 Lite 停售不在本次活跃套餐范围。超额完整策略未核对。"
+    }
+  ],
+  "models": [
+    {
+      "id": "qwen3-7-plus",
+      "request_id": "qwen3.7-plus",
+      "display_name": "qwen3.7-plus",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：qwen3.7-plus。中国内地北京部署、标准在线、最短输入档的非限时促销价；仅作统一估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3.7-plus",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "qwen3-6-plus",
+      "request_id": "qwen3.6-plus",
+      "display_name": "qwen3.6-plus",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "12",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：qwen3.6-plus。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3.6-plus",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "kimi-k2-5",
+      "request_id": "kimi-k2.5",
+      "display_name": "kimi-k2.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "21",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：kimi-k2.5。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "kimi-k2.5",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "glm-5",
+      "request_id": "glm-5",
+      "display_name": "glm-5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "18",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：glm-5。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "glm-5",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "minimax-m2-5",
+      "request_id": "MiniMax-M2.5",
+      "display_name": "MiniMax-M2.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：MiniMax-M2.5。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "MiniMax-M2.5",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "qwen3-5-plus",
+      "request_id": "qwen3.5-plus",
+      "display_name": "qwen3.5-plus",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "4.8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：qwen3.5-plus。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3.5-plus",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "qwen3-max-2026-01-23",
+      "request_id": "qwen3-max-2026-01-23",
+      "display_name": "qwen3-max-2026-01-23",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：qwen3-max-2026-01-23。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3-max-2026-01-23",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "qwen3-coder-next",
+      "request_id": "qwen3-coder-next",
+      "display_name": "qwen3-coder-next",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：qwen3-coder-next。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3-coder-next",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "qwen3-coder-plus",
+      "request_id": "qwen3-coder-plus",
+      "display_name": "qwen3-coder-plus",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：qwen3-coder-plus。中国内地北京部署、标准在线、最短输入档的非限时促销价；仅作统一估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "16",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3-coder-plus",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    },
+    {
+      "id": "glm-4-7",
+      "request_id": "glm-4.7",
+      "display_name": "glm-4.7",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "source_ids": [
+          "audit-coding-plan-cn"
+        ],
+        "evidence": "evidence/bailian/2026-09-16-audit.md",
+        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "14",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。 参考对象：glm-4.7。标准在线、常规短上下文档；不展开促销或规格差异。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "glm-4.7",
+              "reason": "优先同平台百炼北京按量价；目录部分收录不意味着该平台无价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-bailian-pricing"
+              ],
+              "evidence": "evidence/bailian/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-bailian-pricing"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+    }
+  ],
+  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+}

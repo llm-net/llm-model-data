@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "zhipu",
+  "display_name": "智谱 BigModel",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://open.bigmodel.cn/pricing",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "coding-plan-cn",
+      "url": "https://docs.bigmodel.cn/cn/coding-plan/overview",
+      "purpose": "subscription",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://open.bigmodel.cn/pricing",
+      "purpose": "pricing",
+      "notes": "国内 BigModel 与国际 Z.ai 不混价；GLM Coding Plan 独立，价格页可能需浏览器渲染。"
+    },
+    {
+      "id": "audit-full-prices",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-models-current",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/model-overview.md",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-coding-plan-cn",
+      "url": "https://docs.bigmodel.cn/cn/coding-plan/overview",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-zhipu-full-prices",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

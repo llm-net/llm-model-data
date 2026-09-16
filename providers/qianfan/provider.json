@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "qianfan",
+  "display_name": "百度千帆",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/rmh4stp0j",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a",
+      "purpose": "pricing",
+      "notes": "同名第三方模型采用千帆自己的价目；核对模型服务版本、缓存及图视频计价。"
+    },
+    {
+      "id": "audit-current-prices",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-catalog",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/rmh4stp0j",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-qianfan-current-prices",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

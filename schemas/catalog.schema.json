@@ -1,0 +1,713 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "provider_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "pay_as_you_go",
+        "api_subscription",
+        "tool_subscription"
+      ]
+    },
+    "market": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coverage": {
+      "enum": [
+        "partial",
+        "complete"
+      ]
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    },
+    "plans": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/plan"
+      },
+      "minItems": 0
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/model"
+      },
+      "minItems": 0
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "provider_id",
+    "id",
+    "display_name",
+    "kind",
+    "market",
+    "coverage",
+    "verification",
+    "plans",
+    "models",
+    "notes"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Service offering catalog v1",
+  "$defs": {
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "verified",
+            "needs_review"
+          ]
+        },
+        "checked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "minItems": 0
+        },
+        "evidence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "status",
+        "checked_at",
+        "source_ids",
+        "evidence",
+        "notes"
+      ]
+    },
+    "rate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "meter": {
+          "enum": [
+            "input_uncached_tokens",
+            "input_cached_tokens",
+            "cache_write_5m_tokens",
+            "cache_write_1h_tokens",
+            "output_tokens",
+            "image_input_tokens",
+            "image_output_tokens",
+            "video_output_tokens",
+            "audio_input_tokens",
+            "audio_output_tokens",
+            "generated_images",
+            "input_images",
+            "generated_videos",
+            "video_input_seconds",
+            "video_output_seconds",
+            "audio_input_seconds",
+            "audio_output_seconds",
+            "billable_characters",
+            "input_utf8_bytes",
+            "requests",
+            "credits",
+            "subscription_fee"
+          ]
+        },
+        "amount": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "per": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "unit": {
+          "enum": [
+            "token",
+            "image",
+            "video",
+            "second",
+            "character",
+            "byte",
+            "request",
+            "credit",
+            "subscription"
+          ]
+        },
+        "quantity": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "enum": [
+                "provider_usage",
+                "request",
+                "derived",
+                "unknown"
+              ]
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "included_units": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "minimum_units": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "rounding": {
+              "enum": [
+                "none",
+                "ceil",
+                "floor",
+                "unknown"
+              ]
+            },
+            "increment": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "source",
+            "fields",
+            "included_units",
+            "minimum_units",
+            "rounding",
+            "increment",
+            "notes"
+          ]
+        }
+      },
+      "required": [
+        "meter",
+        "amount",
+        "per",
+        "unit"
+      ]
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "basis": {
+          "enum": [
+            "public_list",
+            "provider_credit_rate",
+            "reference",
+            "subscription_fee"
+          ]
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^([A-Z]{3}|CREDIT)$"
+        },
+        "tax": {
+          "enum": [
+            "included",
+            "excluded",
+            "unknown"
+          ]
+        },
+        "rates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rate"
+          },
+          "minItems": 1
+        },
+        "effective_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "effective_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "billing_period": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^P[1-9][0-9]*[DMWY]$"
+        },
+        "charge_unit": {
+          "enum": [
+            null,
+            "account",
+            "seat"
+          ]
+        },
+        "reference_origin": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://"
+                },
+                "subject": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "url",
+                "subject",
+                "reason"
+              ]
+            }
+          ]
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "time_basis": {
+          "enum": [
+            "request_started",
+            "task_created",
+            "task_completed",
+            "provider_metered_at",
+            "unknown"
+          ]
+        },
+        "charge_on": {
+          "enum": [
+            "success",
+            "accepted",
+            "attempt",
+            "first_use",
+            "unknown"
+          ]
+        },
+        "selection": {
+          "type": "string",
+          "minLength": 1,
+          "description": "唯一估算基准的选择口径，不是运行时条件"
+        }
+      },
+      "required": [
+        "id",
+        "basis",
+        "currency",
+        "tax",
+        "rates",
+        "effective_from",
+        "effective_until",
+        "billing_period",
+        "charge_unit",
+        "reference_origin",
+        "verification",
+        "notes",
+        "time_basis",
+        "charge_on",
+        "selection"
+      ]
+    },
+    "prices": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "published",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rule"
+          },
+          "minItems": 0,
+          "maxItems": 1
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "status",
+        "rules",
+        "verification",
+        "notes"
+      ]
+    },
+    "quota": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "metric": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "limit": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+            }
+          ]
+        },
+        "unit": {
+          "enum": [
+            "token",
+            "request",
+            "credit",
+            "currency",
+            "concurrent_request"
+          ]
+        },
+        "window": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "rolling",
+                "calendar",
+                "billing_cycle",
+                "unknown"
+              ]
+            },
+            "duration": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "timezone": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "anchor": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "duration",
+            "timezone",
+            "anchor"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "metric",
+        "limit",
+        "unit",
+        "window",
+        "notes"
+      ]
+    },
+    "plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prices": {
+          "$ref": "#/$defs/prices"
+        },
+        "quotas": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/quota"
+          },
+          "minItems": 0
+        },
+        "overage": {
+          "enum": [
+            "blocked",
+            "pay_as_you_go",
+            "add_on",
+            "unknown"
+          ]
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "display_name",
+        "prices",
+        "quotas",
+        "overage",
+        "verification",
+        "notes"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "request_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "modalities": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "text",
+              "image",
+              "video",
+              "audio",
+              "embedding",
+              "rerank"
+            ]
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "availability": {
+          "enum": [
+            "active",
+            "retired",
+            "unknown"
+          ]
+        },
+        "alias_of": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "plan_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "uniqueItems": true
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "usage_prices": {
+          "$ref": "#/$defs/prices"
+        },
+        "reference_prices": {
+          "$ref": "#/$defs/prices"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "capabilities": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "input_modalities": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "enum": [
+                  "text",
+                  "image",
+                  "audio",
+                  "video",
+                  "file"
+                ]
+              }
+            },
+            "context_window_tokens": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1
+            },
+            "max_output_tokens": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1
+            },
+            "tool_calling": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "structured_output": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "streaming": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "interfaces": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "enum": [
+                  "openai_chat",
+                  "openai_responses",
+                  "anthropic_messages",
+                  "gemini",
+                  "vendor_native"
+                ]
+              }
+            }
+          },
+          "required": [
+            "input_modalities",
+            "context_window_tokens",
+            "max_output_tokens",
+            "tool_calling",
+            "structured_output",
+            "streaming",
+            "interfaces"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "request_id",
+        "display_name",
+        "modalities",
+        "availability",
+        "alias_of",
+        "plan_ids",
+        "verification",
+        "usage_prices",
+        "reference_prices",
+        "notes"
+      ]
+    }
+  }
+}

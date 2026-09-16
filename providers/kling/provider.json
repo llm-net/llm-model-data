@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "kling",
+  "display_name": "可灵",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://klingai.com/document-api/guides/capability-map/video",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://klingai.com/document-api/pricing/base/video",
+      "purpose": "pricing",
+      "notes": "国内国际站、视频模式、分辨率、声音、输入视频分别核对；官方页面可尝试 .md 入口。"
+    },
+    {
+      "id": "audit-models-md",
+      "url": "https://klingai.com/document-api/guides/capability-map/video.md",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-prices-md",
+      "url": "https://klingai.com/document-api/pricing/base/video.md",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

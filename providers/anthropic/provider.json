@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "anthropic",
+  "display_name": "Anthropic",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://docs.anthropic.com/en/api/messages",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "claude-code-legacy",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "purpose": "discovery",
+      "notes": "旧订阅目录的来源，可能只是 API 文档；不能证明订阅模型或价格。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "purpose": "pricing",
+      "notes": "API 与 Claude Code 订阅分开；缓存读和缓存写不同，写入 TTL 也可能改变计费。"
+    },
+    {
+      "id": "audit-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-models",
+      "url": "https://platform.claude.com/docs/en/models/overview",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-plans",
+      "url": "https://claude.com/pricing",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-code-models",
+      "url": "https://code.claude.com/docs/en/model-config",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-anthropic-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

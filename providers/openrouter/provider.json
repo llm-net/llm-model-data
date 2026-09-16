@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "openrouter",
+  "display_name": "OpenRouter",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://openrouter.ai/docs/quickstart",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://openrouter.ai/api/v1/models",
+      "purpose": "pricing",
+      "notes": "聚合平台采用自己的模型和供应商路由报价；不能回退训练方价格，动态供应商差价需显式表达。"
+    },
+    {
+      "id": "provider-routing",
+      "url": "https://openrouter.ai/docs/guides/routing/provider-selection",
+      "purpose": "models",
+      "notes": "供应端选择与回退规则；用于判断模型价格适用范围。"
+    },
+    {
+      "id": "endpoint-pricing",
+      "url": "https://openrouter.ai/docs/api/api-reference/endpoints/list-all-endpoints-for-a-model",
+      "purpose": "pricing",
+      "notes": "按具体模型获取端点和独立价格；不全量导入。"
+    },
+    {
+      "id": "audit-pricing",
+      "url": "https://openrouter.ai/api/v1/models",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",
+  "excluded_request_ids": [
+    "~openai/gpt-latest"
+  ]
+}

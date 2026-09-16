@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "xai",
+  "display_name": "xAI",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://docs.x.ai/developers/quickstart",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "grok-build-legacy",
+      "url": "https://docs.x.ai/docs/models",
+      "purpose": "discovery",
+      "notes": "旧订阅目录的来源，可能只是 API 文档；不能证明订阅模型或价格。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://docs.x.ai/docs/models",
+      "purpose": "pricing",
+      "notes": "API 与 Grok Build 分开；工具订阅、媒体用量和 API 标价不能互相推导。"
+    },
+    {
+      "id": "audit-grok46",
+      "url": "https://docs.x.ai/developers/models/grok-4.6",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-grok45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-build",
+      "url": "https://docs.x.ai/build/overview.md",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-faq",
+      "url": "https://docs.x.ai/grok/faq",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-xai-grok46",
+      "url": "https://docs.x.ai/developers/models/grok-4.6",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    },
+    {
+      "id": "alignment-xai-grok45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

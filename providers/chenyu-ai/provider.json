@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "chenyu-ai",
+  "display_name": "晨羽 AI",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://chenyu.pro/api-docs",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://chenyu.pro/api-docs",
+      "purpose": "pricing",
+      "notes": "作为独立服务商记录公开模型和价格；不能抄采购厂商价格或某个开发环境模型列表。"
+    },
+    {
+      "id": "audit-catalog",
+      "url": "https://chenyu.pro/api-docs",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-pricing",
+      "url": "https://chenyu.pro/api-docs",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

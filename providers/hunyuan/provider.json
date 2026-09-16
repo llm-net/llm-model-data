@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "hunyuan",
+  "display_name": "腾讯 TokenHub / 混元",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://cloud.tencent.com/document/product/1823/130051",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://cloud.tencent.com/document/product/1823/130051",
+      "purpose": "pricing",
+      "notes": "旧混元与 TokenHub 的迁移不等于价格继承；国内与国际服务范围独立核对。"
+    },
+    {
+      "id": "audit-prices",
+      "url": "https://cloud.tencent.com/document/product/1823/130055",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

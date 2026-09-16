@@ -1,0 +1,1758 @@
+{
+  "schema": "tokenrouter.platform-models/v1",
+  "version": 25,
+  "updated_at": "2026-09-14",
+  "notes": [
+    "Sanitized legacy research snapshot; not current verified facts or a consumer catalog. Original file hash is in manifest.json."
+  ],
+  "platforms": [
+    {
+      "type": "chenyu_ai",
+      "vendor": "晨羽AI",
+      "source": "https://chenyu.pro/api-docs",
+      "checked_at": "2026-09-14",
+      "note": "晨羽AI当前对外提供的模型清单：按生产系统实时在服务的模型登记（不是各 Provider 目录的并集），文本走聚合入口，图片/视频/音频按厂商官方协议走 ark / minimax / bailian / kling 协议面；可用状态以平台控制台为准。",
+      "models": [
+        {
+          "name": "deepseek-v4-pro",
+          "kind": "text",
+          "note": "由DeepSeek提供"
+        },
+        {
+          "name": "deepseek-v4-flash",
+          "kind": "text",
+          "note": "由DeepSeek提供"
+        },
+        {
+          "name": "deepseek-v4-flash-vision-exp",
+          "kind": "text",
+          "note": "由DeepSeek提供"
+        },
+        {
+          "name": "doubao-seed-2-1-pro-260628",
+          "kind": "text",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seed-2-1-turbo-260628",
+          "kind": "text",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seed-2-0-lite-260428",
+          "kind": "text",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seed-2-0-mini-260428",
+          "kind": "text",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seed-2-0-pro-260215",
+          "kind": "text",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seedream-5-0-pro-260628",
+          "kind": "image",
+          "protocol_face": "ark",
+          "api_profile": "ark_image",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seedream-5-0-260128",
+          "kind": "image",
+          "protocol_face": "ark",
+          "api_profile": "ark_image",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seedance-2-5-260628",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seedance-2-0-260128",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "doubao-seedance-2-0-mini-260615",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "由火山方舟提供"
+        },
+        {
+          "name": "qwen3.8-max",
+          "kind": "text",
+          "note": "由阿里云百炼提供"
+        },
+        {
+          "name": "qwen3.7-plus",
+          "kind": "text",
+          "note": "由阿里云百炼提供"
+        },
+        {
+          "name": "qwen3.8-flash",
+          "kind": "text",
+          "note": "由阿里云百炼提供"
+        },
+        {
+          "name": "qwen3.7-flash",
+          "kind": "text",
+          "note": "由阿里云百炼提供"
+        },
+        {
+          "name": "qwen3.8-27b",
+          "kind": "text",
+          "note": "由阿里云百炼提供"
+        },
+        {
+          "name": "wan3.0-video",
+          "kind": "video",
+          "protocol_face": "bailian",
+          "api_profile": "bailian_video",
+          "note": "由阿里云百炼提供"
+        },
+        {
+          "name": "wan3.0-video-prime",
+          "kind": "video",
+          "protocol_face": "bailian",
+          "api_profile": "bailian_video",
+          "note": "由阿里云百炼提供"
+        },
+        {
+          "name": "MiniMax-M3",
+          "kind": "text",
+          "note": "由MiniMax提供"
+        },
+        {
+          "name": "MiniMax-H3",
+          "kind": "video",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_video",
+          "note": "由MiniMax提供"
+        },
+        {
+          "name": "speech-2.8-hd",
+          "kind": "audio",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_speech",
+          "note": "由MiniMax提供"
+        },
+        {
+          "name": "speech-2.8-turbo",
+          "kind": "audio",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_speech",
+          "note": "由MiniMax提供"
+        },
+        {
+          "name": "glm-5.3",
+          "kind": "text",
+          "note": "由智谱AI开放平台提供"
+        },
+        {
+          "name": "glm-5.3-flash",
+          "kind": "text",
+          "note": "由智谱AI开放平台提供"
+        },
+        {
+          "name": "kimi-k3",
+          "kind": "text",
+          "note": "由Kimi开放平台提供"
+        },
+        {
+          "name": "Qwen/Qwen3.8-27B-FP8",
+          "kind": "text",
+          "note": "由晨羽AI自建推理服务提供"
+        },
+        {
+          "name": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+          "kind": "text",
+          "note": "由晨羽AI自建推理服务提供"
+        }
+      ]
+    },
+    {
+      "type": "deepseek",
+      "vendor": "DeepSeek",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "checked_at": "2026-08-22",
+      "note": "",
+      "models": [
+        {
+          "name": "deepseek-v4-pro",
+          "kind": "text",
+          "note": "旗舰模型（DeepSeek-V4-Pro-0813），并发上限 500",
+          "cloud": {
+            "display_name": "DeepSeek V4 Pro",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "deepseek-v4-flash",
+          "kind": "text",
+          "note": "高速版（DeepSeek-V4-Flash-0731），并发上限 2500",
+          "cloud": {
+            "display_name": "DeepSeek V4 Flash",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "deepseek-v4-flash-vision-exp",
+          "kind": "text",
+          "note": "实验模型，额外接受图片输入；不支持 FIM 补全",
+          "cloud": {
+            "display_name": "DeepSeek V4 Flash Vision (实验)",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        }
+      ]
+    },
+    {
+      "type": "ark",
+      "vendor": "火山方舟",
+      "source": "https://www.volcengine.com/docs/82379/1330310",
+      "checked_at": "2026-08-23",
+      "note": "方舟按量 Key。文本与生成模型都按官方带日期的 Model ID 收录（docs-provider/ark.md §7）；订阅 Key 看到的点号短名收在 ark_plan 条目。实际可开通的型号以方舟控制台为准。",
+      "models": [
+        {
+          "name": "doubao-seed-evolving",
+          "kind": "text",
+          "note": "快速迭代的 Coding & Agent 模型；深度思考、多模态理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed Evolving",
+            "context_length": 1048576,
+            "max_output": 262144
+          }
+        },
+        {
+          "name": "doubao-seed-2-1-pro-260628",
+          "kind": "text",
+          "note": "Seed 2.1 旗舰版；深度思考、多模态理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed 2.1 Pro (260628)",
+            "context_length": 262144,
+            "max_output": 262144
+          }
+        },
+        {
+          "name": "doubao-seed-2-1-turbo-260628",
+          "kind": "text",
+          "note": "Seed 2.1 高性价比版；深度思考、多模态理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed 2.1 Turbo (260628)",
+            "context_length": 262144,
+            "max_output": 262144
+          }
+        },
+        {
+          "name": "doubao-seed-2-0-lite-260428",
+          "kind": "text",
+          "note": "260428 版；支持深度思考、多模态/音频理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed 2.0 Lite (260428)",
+            "context_length": 262144,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "doubao-seed-2-0-mini-260428",
+          "kind": "text",
+          "note": "260428 版；支持深度思考、多模态/音频理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed 2.0 Mini (260428)",
+            "context_length": 262144,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "doubao-seed-2-0-pro-260215",
+          "kind": "text",
+          "note": "260215 版；深度思考、多模态理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed 2.0 Pro (260215)",
+            "context_length": 262144,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "doubao-seed-2-0-lite-260215",
+          "kind": "text",
+          "note": "260215 版；深度思考、多模态/音频理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed 2.0 Lite (260215)",
+            "context_length": 262144,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "doubao-seed-2-0-mini-260215",
+          "kind": "text",
+          "note": "260215 版；深度思考、多模态/音频理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed 2.0 Mini (260215)",
+            "context_length": 262144,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "doubao-seed-2-0-code-preview-260215",
+          "kind": "text",
+          "note": "Coding 预览版；深度思考、多模态理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed 2.0 Code Preview (260215)",
+            "context_length": 262144,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "doubao-seed-character-260628",
+          "kind": "text",
+          "note": "角色扮演增强；支持深度思考、多模态理解、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed Character (260628)",
+            "context_length": 131072,
+            "max_output": 32768
+          }
+        },
+        {
+          "name": "glm-5-2-260617",
+          "kind": "text",
+          "note": "火山方舟托管的 GLM-5.2；深度思考、文本生成、工具调用",
+          "cloud": {
+            "display_name": "GLM-5.2 (260617)",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "deepseek-v4-pro-ga-260813",
+          "kind": "text",
+          "note": "火山方舟托管的 DeepSeek V4 Pro 正式版",
+          "cloud": {
+            "display_name": "DeepSeek V4 Pro GA (260813)",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "deepseek-v4-flash-ga-260731",
+          "kind": "text",
+          "note": "火山方舟托管的 DeepSeek V4 Flash 正式版",
+          "cloud": {
+            "display_name": "DeepSeek V4 Flash GA (260731)",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "deepseek-v4-pro-260425",
+          "kind": "text",
+          "note": "火山方舟托管的 DeepSeek V4 Pro 往期版",
+          "cloud": {
+            "display_name": "DeepSeek V4 Pro (260425)",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "deepseek-v4-flash-260425",
+          "kind": "text",
+          "note": "火山方舟托管的 DeepSeek V4 Flash 往期版",
+          "cloud": {
+            "display_name": "DeepSeek V4 Flash (260425)",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "doubao-seed-character-251128",
+          "kind": "text",
+          "note": "角色扮演增强的往期版；文本生成、工具调用",
+          "cloud": {
+            "display_name": "Doubao Seed Character (251128)",
+            "context_length": 131072,
+            "max_output": 32768
+          }
+        },
+        {
+          "name": "doubao-seed-translation-250915",
+          "kind": "text",
+          "note": "翻译场景增强的文本模型",
+          "cloud": {
+            "display_name": "Doubao Seed Translation (250915)",
+            "context_length": 4096,
+            "max_output": 3072
+          }
+        },
+        {
+          "name": "doubao-seedream-5-0-pro-260628",
+          "kind": "image",
+          "protocol_face": "ark",
+          "api_profile": "ark_image",
+          "note": "同步文生图与参考图生图；正式入口走火山方舟协议面 POST /api/v3/images/generations",
+          "cloud": {
+            "display_name": "Doubao Seedream 5.0 Pro (260628)"
+          }
+        },
+        {
+          "name": "doubao-seedream-5-0-260128",
+          "kind": "image",
+          "protocol_face": "ark",
+          "api_profile": "ark_image",
+          "note": "同步文生图、参考图生图与组图；正式入口走火山方舟协议面 POST /api/v3/images/generations",
+          "cloud": {
+            "display_name": "Doubao Seedream 5.0 Lite (260128)"
+          }
+        },
+        {
+          "name": "doubao-seedance-2-5-260628",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "异步多模态参考、视频编辑与延长；4-30 秒，480p/720p/1080p；走厂商原生子域名 ark 的官方任务路径（按量 /api/v3）",
+          "cloud": {
+            "display_name": "Doubao Seedance 2.5 (260628)"
+          }
+        },
+        {
+          "name": "doubao-seedance-2-0-260128",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "异步文生视频、图生视频与多模态参考；4-15 秒，480p/720p/1080p/4K；走厂商原生子域名 ark 的官方任务路径（按量 /api/v3）",
+          "cloud": {
+            "display_name": "Doubao Seedance 2.0 (260128)"
+          }
+        },
+        {
+          "name": "doubao-seedance-2-0-mini-260615",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "低成本异步文生视频、图生视频与多模态参考；4-15 秒，480p/720p；走厂商原生子域名 ark 的官方任务路径（按量 /api/v3）",
+          "cloud": {
+            "display_name": "Doubao Seedance 2.0 Mini (260615)"
+          }
+        },
+        {
+          "name": "doubao-seedance-2.5",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "无日期别名；按量 /api/v3 与带日期正式 Model ID 可用同一任务能力",
+          "cloud": {
+            "display_name": "Doubao Seedance 2.5"
+          }
+        },
+        {
+          "name": "doubao-seedance-2.0",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "无日期别名；按量 /api/v3 与带日期正式 Model ID 可用同一任务能力",
+          "cloud": {
+            "display_name": "Doubao Seedance 2.0"
+          }
+        },
+        {
+          "name": "doubao-seedance-2.0-fast",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "note": "无日期别名；按量 /api/v3 与带日期正式 Model ID 可用同一任务能力",
+          "cloud": {
+            "display_name": "Doubao Seedance 2.0 Fast"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ark_plan",
+      "role": "api_subscription",
+      "vendor": "火山方舟",
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-12",
+      "note": "Agent Plan 订阅（专属 Key）：端点根 /api/plan/v3，模型按订阅 Key 实调看到的点号短名收录；Coding Plan 用普通方舟 Key、根在 /api/coding*，不属于这一类。套餐条款禁止中转，云平台不建渠道（cloud.enabled=false）。",
+      "models": [
+        {
+          "name": "deepseek-v4-pro",
+          "kind": "text",
+          "note": "方舟托管的 DeepSeek 模型",
+          "cloud": {
+            "display_name": "deepseek-v4-pro"
+          }
+        },
+        {
+          "name": "deepseek-v4-flash",
+          "kind": "text",
+          "note": "方舟托管的 DeepSeek 模型",
+          "cloud": {
+            "display_name": "deepseek-v4-flash"
+          }
+        },
+        {
+          "name": "doubao-seedance-2.5",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "cloud": {
+            "display_name": "doubao-seedance-2.5"
+          }
+        },
+        {
+          "name": "doubao-seedance-2.0",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "cloud": {
+            "display_name": "doubao-seedance-2.0"
+          }
+        },
+        {
+          "name": "doubao-seedance-2.0-fast",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "cloud": {
+            "display_name": "doubao-seedance-2.0-fast"
+          }
+        },
+        {
+          "name": "doubao-seedance-2.0-mini",
+          "kind": "video",
+          "protocol_face": "ark",
+          "api_profile": "ark_video",
+          "cloud": {
+            "display_name": "doubao-seedance-2.0-mini"
+          }
+        },
+        {
+          "name": "doubao-seedream-5.0-lite",
+          "kind": "image",
+          "protocol_face": "ark",
+          "api_profile": "ark_image",
+          "cloud": {
+            "display_name": "doubao-seedream-5.0-lite"
+          }
+        }
+      ]
+    },
+    {
+      "type": "bailian",
+      "vendor": "阿里云百炼",
+      "source": "https://help.aliyun.com/zh/model-studio/text-generation-model/",
+      "checked_at": "2026-09-04",
+      "note": "按量调用公共北京端点；文本模型按百炼「模型 ID 口径」的主线与开源名收录（docs-provider/bailian.md §4）。万相视频走 DashScope 官方异步任务路径（bailian 协议面），创建请求要自带 X-DashScope-Async: enable。",
+      "models": [
+        {
+          "name": "qwen3.8-max",
+          "kind": "text",
+          "note": "2.4 万亿参数 MoE 旗舰，编程与办公场景增强；图像/文本/视频输入 → 文本，最大思维链 262144",
+          "cloud": {
+            "display_name": "Qwen3.8-Max",
+            "context_length": 1000000,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "qwen3.8-max-prime",
+          "kind": "text",
+          "note": "qwen3.8-max 的优速模式：TPS 为标准 API 的 1.5~2 倍，能力与使用限制与原版相同；面向 AI 编程助手、Agent 多步推理、实时对话",
+          "cloud": {
+            "display_name": "Qwen3.8-Max 优速（Prime）",
+            "context_length": 1000000,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "qwen3.7-plus",
+          "kind": "text",
+          "note": "多模态混合智能体主力档；图像/文本/视频输入 → 文本，思考/非思考同价，最大思维链 262144；快照 qwen3.7-plus-2026-05-26",
+          "cloud": {
+            "display_name": "Qwen3.7-Plus",
+            "context_length": 1000000,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "qwen3.8-flash",
+          "kind": "text",
+          "note": "百万上下文轻量档，编码辅助与图文理解性价比高；图像/文本/视频输入 → 文本，最大思维链 262144",
+          "cloud": {
+            "display_name": "Qwen3.8-Flash",
+            "context_length": 1000000,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "qwen3.7-flash",
+          "kind": "text",
+          "note": "短上下文单价最低的一档；图像/文本/视频输入 → 文本，最大思维链 262144；快照 qwen3.7-flash-2026-07-15",
+          "cloud": {
+            "display_name": "Qwen3.7-Flash",
+            "context_length": 1000000,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "qwen3-coder-plus",
+          "kind": "text",
+          "note": "Agentic Coding 专用，纯文本输入输出；支持 Function Calling 与上下文缓存，不支持 Batch",
+          "cloud": {
+            "display_name": "Qwen3-Coder-Plus",
+            "context_length": 1000000,
+            "max_output": 65536
+          }
+        },
+        {
+          "name": "qwen3-vl-plus",
+          "kind": "text",
+          "note": "视觉理解：文本/图像/视频输入 → 文本，仍走 /chat/completions；最大思维链 81920",
+          "cloud": {
+            "display_name": "Qwen3-VL-Plus",
+            "context_length": 262144,
+            "max_output": 32768
+          }
+        },
+        {
+          "name": "qwen3-vl-flash",
+          "kind": "text",
+          "note": "视觉理解轻量档：文本/图像/视频输入 → 文本；最大思维链 81920；快照 qwen3-vl-flash-2026-01-22",
+          "cloud": {
+            "display_name": "Qwen3-VL-Flash",
+            "context_length": 262144,
+            "max_output": 32768
+          }
+        },
+        {
+          "name": "qwen3.8-2.4t-a95b",
+          "kind": "text",
+          "note": "qwen3.8-max 的开源权重版（2.4T 总参 / 95B 激活），纯文本输入输出；最大思维链 131072，不支持 Batch 与模型微调",
+          "cloud": {
+            "display_name": "Qwen3.8-2.4T-A95B（开源权重）",
+            "context_length": 1000000,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "qwen3.8-27b",
+          "kind": "text",
+          "note": "27B 稠密开源模型，百炼托管；图像/文本/视频输入 → 文本，最大思维链 262144",
+          "cloud": {
+            "display_name": "Qwen3.8-27B（开源权重）",
+            "context_length": 1000000,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "MiniMax/MiniMax-M3",
+          "kind": "text",
+          "note": "MiniMax 官方在百炼上架的 M3，1M 上下文；官方规格表未给最大输出长度（本行留 0）。第三方模型，需先在百炼模型广场开通",
+          "cloud": {
+            "display_name": "MiniMax-M3（百炼托管）",
+            "context_length": 1048576
+          }
+        },
+        {
+          "name": "xiaomi/mimo-v2.5-pro",
+          "kind": "text",
+          "note": "小米 MiMo 旗舰，1M 上下文，支持 Function Calling 与结构化输出。第三方模型，需先在百炼模型广场开通",
+          "cloud": {
+            "display_name": "MiMo v2.5 Pro（百炼托管）",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "stepfun/step-3.7-flash",
+          "kind": "text",
+          "note": "阶跃星辰生产级 Agent 高效档：文本/图像/视频输入 → 文本。第三方模型，需先在百炼模型广场开通",
+          "cloud": {
+            "display_name": "Step 3.7 Flash（百炼托管）",
+            "context_length": 262144,
+            "max_output": 262144
+          }
+        },
+        {
+          "name": "wan3.0-video",
+          "kind": "video",
+          "protocol_face": "bailian",
+          "api_profile": "bailian_video",
+          "note": "全能参考模型：文生 / 图生（首帧、首尾帧）/ 参考生视频同一接口，2-30 秒，480P/720P/1080P，30 fps；走厂商原生子域名 bailian 的 DashScope 官方异步任务路径（集中域 /api/v1，必带 X-DashScope-Async: enable）",
+          "cloud": {
+            "display_name": "万相 3.0 视频（标准）"
+          }
+        },
+        {
+          "name": "wan3.0-video-prime",
+          "kind": "video",
+          "protocol_face": "bailian",
+          "api_profile": "bailian_video",
+          "note": "wan3.0-video 的高速版，能力与参数同标准版；走厂商原生子域名 bailian 的 DashScope 官方异步任务路径（集中域 /api/v1，必带 X-DashScope-Async: enable）",
+          "cloud": {
+            "display_name": "万相 3.0 视频（优速 Prime）"
+          }
+        }
+      ]
+    },
+    {
+      "type": "qwen_plan",
+      "role": "api_subscription",
+      "vendor": "阿里云百炼",
+      "source": "https://help.aliyun.com/zh/model-studio/token-plan-team-overview",
+      "checked_at": "2026-09-05",
+      "note": "通义千问 Token Plan 订阅（专属 Key sk-sp-，根 token-plan.cn-beijing.maas.aliyuncs.com）：模型按官方团队版尊享档的「支持的模型」表收录（各档只差 Credits 与并发，不差型号）。表里的图像（qwen-image-2.0/-pro、qwen-image-3.0-pro、wan2.7-image/-pro）、语音（qwen-audio-3.0-tts-plus / -realtime-plus / -asr-flash）、视频（happyhorse-1.1-t2v/-i2v/-r2v）只走 DashScope 原生面，OpenAI 兼容面上没有这些路径，云侧与固件都只登记文本双面，故未收录。套餐条款禁止应用后端使用，云平台不建渠道（cloud.enabled=false）。",
+      "models": [
+        {
+          "name": "qwen3.8-max",
+          "kind": "text",
+          "note": "千问旗舰：推理 / 视觉理解 / 文本生成",
+          "cloud": {
+            "display_name": "qwen3.8-max"
+          }
+        },
+        {
+          "name": "qwen3.8-flash",
+          "kind": "text",
+          "note": "千问轻量档：推理 / 视觉理解 / 文本生成",
+          "cloud": {
+            "display_name": "qwen3.8-flash"
+          }
+        },
+        {
+          "name": "qwen3.7-plus",
+          "kind": "text",
+          "note": "千问主力档：推理 / 视觉理解 / 文本生成",
+          "cloud": {
+            "display_name": "qwen3.7-plus"
+          }
+        },
+        {
+          "name": "deepseek-v4-pro",
+          "kind": "text",
+          "note": "DeepSeek 旗舰（百炼托管）：推理 / 文本生成",
+          "cloud": {
+            "display_name": "deepseek-v4-pro"
+          }
+        },
+        {
+          "name": "deepseek-v4-flash",
+          "kind": "text",
+          "note": "DeepSeek 轻量档（百炼托管）：推理 / 文本生成",
+          "cloud": {
+            "display_name": "deepseek-v4-flash"
+          }
+        },
+        {
+          "name": "kimi-k2.7-code",
+          "kind": "text",
+          "note": "月之暗面编程档（百炼托管）：推理 / 视觉理解 / 文本生成",
+          "cloud": {
+            "display_name": "kimi-k2.7-code"
+          }
+        },
+        {
+          "name": "kimi-k2.6",
+          "kind": "text",
+          "note": "月之暗面（百炼托管）：推理 / 视觉理解 / 文本生成",
+          "cloud": {
+            "display_name": "kimi-k2.6"
+          }
+        },
+        {
+          "name": "glm-5.2",
+          "kind": "text",
+          "note": "智谱 AI（百炼托管）：推理 / 文本生成",
+          "cloud": {
+            "display_name": "glm-5.2"
+          }
+        },
+        {
+          "name": "glm-5.1",
+          "kind": "text",
+          "note": "智谱 AI 上一代（百炼托管）：推理 / 文本生成",
+          "cloud": {
+            "display_name": "glm-5.1"
+          }
+        },
+        {
+          "name": "glm-5",
+          "kind": "text",
+          "note": "智谱 AI（百炼托管）：推理 / 文本生成",
+          "cloud": {
+            "display_name": "glm-5"
+          }
+        }
+      ]
+    },
+    {
+      "type": "minimax",
+      "vendor": "MiniMax",
+      "source": "https://platform.minimaxi.com/docs/guides/models-intro",
+      "checked_at": "2026-09-03",
+      "note": "MiniMax 上游服务 Chat / Responses / Messages 三个原生文本面与图片、视频、语音协议面。国内站与国际站账号、Key 各自独立。",
+      "models": [
+        {
+          "name": "MiniMax-M3",
+          "kind": "text",
+          "note": "1M 上下文，原生多模态；推荐 max_completion_tokens 131072",
+          "cloud": {
+            "display_name": "MiniMax M3",
+            "context_length": 1000000,
+            "max_output": 524288
+          }
+        },
+        {
+          "name": "MiniMax-M2.7",
+          "kind": "text",
+          "note": "MiniMax 国内站",
+          "cloud": {
+            "display_name": "MiniMax M2.7",
+            "context_length": 204800,
+            "max_output": 204800
+          }
+        },
+        {
+          "name": "MiniMax-M2.7-highspeed",
+          "kind": "text",
+          "note": "MiniMax 国内站",
+          "cloud": {
+            "display_name": "MiniMax M2.7 highspeed",
+            "context_length": 204800,
+            "max_output": 204800
+          }
+        },
+        {
+          "name": "image-01",
+          "kind": "image",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_image",
+          "note": "同步文生图与人物主体参考图生图；POST /v1/image_generation，单次 1–9 张",
+          "cloud": {
+            "display_name": "MiniMax image-01"
+          }
+        },
+        {
+          "name": "image-01-live",
+          "kind": "image",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_image",
+          "note": "同步文生图与风格增强；POST /v1/image_generation，单次 1–9 张",
+          "cloud": {
+            "display_name": "MiniMax image-01-live"
+          }
+        },
+        {
+          "name": "MiniMax-H3",
+          "kind": "video",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_video",
+          "note": "全模态视频生成，单次产出画面 + 原生立体声；768P/2K，4–15 秒整数，24 fps。唯一官方 model id，走原生子域名 minimax.<原生后缀>：POST /v2/video_generation、GET /v2/query/video_generation/{id}、DELETE /v2/video_generation/{id}，另有 POST /v2/h3_context_ir 与 POST /v2/video_regeneration（768P→2K，单价与生成不同），素材上传 POST /v1/files/upload（multipart，mm_file:// 有效期 7 天）。任务记录与产物 URL 均只保留 7 天；限流按并发任务数而非 RPM。",
+          "cloud": {
+            "display_name": "MiniMax H3（海螺 03）"
+          }
+        },
+        {
+          "name": "speech-2.8-hd",
+          "kind": "audio",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_speech",
+          "note": "旗舰音质语音合成，支持语气词标签与字幕；同步语音合成 POST /v1/t2a_v2（支持 SSE 流式）与异步长文本 POST /v1/t2a_async_v2",
+          "cloud": {
+            "display_name": "MiniMax speech-2.8-hd"
+          }
+        },
+        {
+          "name": "speech-2.8-turbo",
+          "kind": "audio",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_speech",
+          "note": "低延迟语音合成，支持语气词标签；同步语音合成 POST /v1/t2a_v2（支持 SSE 流式）与异步长文本 POST /v1/t2a_async_v2",
+          "cloud": {
+            "display_name": "MiniMax speech-2.8-turbo"
+          }
+        },
+        {
+          "name": "speech-2.6-hd",
+          "kind": "audio",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_speech",
+          "note": "高音质语音合成；同步语音合成 POST /v1/t2a_v2（支持 SSE 流式）与异步长文本 POST /v1/t2a_async_v2",
+          "cloud": {
+            "display_name": "MiniMax speech-2.6-hd"
+          }
+        },
+        {
+          "name": "speech-2.6-turbo",
+          "kind": "audio",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_speech",
+          "note": "低延迟语音合成；同步语音合成 POST /v1/t2a_v2（支持 SSE 流式）与异步长文本 POST /v1/t2a_async_v2",
+          "cloud": {
+            "display_name": "MiniMax speech-2.6-turbo"
+          }
+        },
+        {
+          "name": "speech-02-hd",
+          "kind": "audio",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_speech",
+          "note": "上一代高音质语音合成；同步语音合成 POST /v1/t2a_v2（支持 SSE 流式）与异步长文本 POST /v1/t2a_async_v2",
+          "cloud": {
+            "display_name": "MiniMax speech-02-hd"
+          }
+        },
+        {
+          "name": "speech-02-turbo",
+          "kind": "audio",
+          "protocol_face": "minimax",
+          "api_profile": "minimax_speech",
+          "note": "上一代低延迟语音合成；同步语音合成 POST /v1/t2a_v2（支持 SSE 流式）与异步长文本 POST /v1/t2a_async_v2",
+          "cloud": {
+            "display_name": "MiniMax speech-02-turbo"
+          }
+        }
+      ]
+    },
+    {
+      "type": "zhipu",
+      "vendor": "智谱AI开放平台",
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "智谱 BigModel 官方 OpenAI / Anthropic 兼容文本双入口；只能填按量 Key（Coding Plan 套餐 Key 同根但条款禁止中转）；可用型号以开放平台控制台为准。",
+      "models": [
+        {
+          "name": "glm-5.3",
+          "kind": "text",
+          "note": "旗舰模型，始终开启思考（reasoning_effort: low/high/max，不可关闭）",
+          "cloud": {
+            "display_name": "GLM-5.3",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-5.3-flash",
+          "kind": "text",
+          "note": "GLM-5 系列首个原生多模态模型（320B 总参 / 18B 激活）：图片、视频、文件输入 → 文本输出，仍走 /v1/chat/completions；1M 上下文、思考模式只接受 enabled；MIT 开放权重",
+          "cloud": {
+            "display_name": "GLM-5.3-Flash",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-5.2",
+          "kind": "text",
+          "note": "1M 上下文，Coding 能力开源 SOTA",
+          "cloud": {
+            "display_name": "GLM-5.2",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-5.1",
+          "kind": "text",
+          "note": "长程任务可自主工作 8 小时",
+          "cloud": {
+            "display_name": "GLM-5.1",
+            "context_length": 204800,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-5",
+          "kind": "text",
+          "note": "擅长 Agentic 长程规划与执行",
+          "cloud": {
+            "display_name": "GLM-5",
+            "context_length": 204800,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-5-turbo",
+          "kind": "text",
+          "note": "复杂长任务执行连续性好，解码 40-60 tokens/s",
+          "cloud": {
+            "display_name": "GLM-5-Turbo",
+            "context_length": 204800,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-4.7",
+          "kind": "text",
+          "note": "通用对话、推理与智能体能力全面升级",
+          "cloud": {
+            "display_name": "GLM-4.7",
+            "context_length": 204800,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-4.7-flashx",
+          "kind": "text",
+          "note": "轻量高速，适合中文写作、翻译、角色扮演",
+          "cloud": {
+            "display_name": "GLM-4.7-FlashX",
+            "context_length": 204800,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-4.7-flash",
+          "kind": "text",
+          "note": "免费模型，延续 GLM-4.7 基座能力；转售前先确认上游配额",
+          "cloud": {
+            "display_name": "GLM-4.7-Flash",
+            "context_length": 204800,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-4.5-air",
+          "kind": "text",
+          "note": "高性价比轻量模型；折扣价随时可能恢复原价",
+          "cloud": {
+            "display_name": "GLM-4.5-Air",
+            "context_length": 131072,
+            "max_output": 98304
+          }
+        },
+        {
+          "name": "glm-5v-turbo",
+          "kind": "text",
+          "note": "视觉理解：图片/视频/文件输入 → 文本输出，仍走 /v1/chat/completions",
+          "cloud": {
+            "display_name": "GLM-5V-Turbo",
+            "context_length": 204800,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-4.6v",
+          "kind": "text",
+          "note": "视觉理解：图片/视频/文件输入 → 文本输出",
+          "cloud": {
+            "display_name": "GLM-4.6V",
+            "context_length": 131072,
+            "max_output": 32768
+          }
+        },
+        {
+          "name": "glm-4.6v-flash",
+          "kind": "text",
+          "note": "免费视觉理解模型；转售前先确认上游配额",
+          "cloud": {
+            "display_name": "GLM-4.6V-Flash",
+            "context_length": 131072,
+            "max_output": 32768
+          }
+        }
+      ]
+    },
+    {
+      "type": "zhipu_plan",
+      "role": "api_subscription",
+      "vendor": "智谱AI开放平台",
+      "source": "https://docs.bigmodel.cn/cn/coding-plan/overview",
+      "checked_at": "2026-09-08",
+      "note": "GLM Coding Plan 订阅（套餐专属 Key）：OpenAI 兼容根 /api/coding/paas/v4（与按量 /api/paas/v4 不同段），Anthropic 根 /api/anthropic 与按量同根，另有 /api/v1 的 OpenAI Responses 根；模型按官方 overview 收录 GLM-5.3 与 GLM-5.3-Flash（历史型号 GLM-5.2 / GLM-5.1 调用自动切到 GLM-5.3，故不收）。套餐条款禁止中转、只承诺在指定工具里使用，云平台不建渠道（cloud.enabled=false）。",
+      "models": [
+        {
+          "name": "glm-5.3",
+          "kind": "text",
+          "note": "Coding Plan 旗舰：始终开启思考（reasoning_effort: low/high/max，不可关闭）",
+          "cloud": {
+            "display_name": "GLM-5.3",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "glm-5.3-flash",
+          "kind": "text",
+          "note": "Coding Plan 轻量档：原生多模态（图片 / 视频 / 文件输入 → 文本输出），1M 上下文",
+          "cloud": {
+            "display_name": "GLM-5.3-Flash",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        }
+      ]
+    },
+    {
+      "type": "moonshot",
+      "vendor": "Kimi开放平台",
+      "source": "https://platform.kimi.com/docs/models",
+      "checked_at": "2026-08-27",
+      "note": "月之暗面 Kimi 开放平台有 Chat / Responses / Messages 三个原生文本面（Responses 与 Messages 官方只列 kimi-k3）；Kimi Code 订阅 Key 不能用。",
+      "models": [
+        {
+          "name": "kimi-k3",
+          "kind": "text",
+          "note": "旗舰模型，2.8 万亿参数、原生视觉理解；始终推理，reasoning_effort 取 low/high/max（默认 max）；max_completion_tokens 默认 131072、最大可设 1048576，且「输入 + 输出」不得超过上下文窗口；视觉输入不收公网图片 URL，只收 base64 或 ms://<file-id>",
+          "cloud": {
+            "display_name": "Kimi K3",
+            "context_length": 1048576,
+            "max_output": 1048576
+          }
+        },
+        {
+          "name": "kimi-k2.7-code",
+          "kind": "text",
+          "note": "Coding 模型，文本/图片/视频输入；始终开启思考且不可关闭（Preserved Thinking 恒为 all，传 disabled 报错）；官方未单列最大输出，上限即上下文窗口",
+          "cloud": {
+            "display_name": "Kimi K2.7 Code",
+            "context_length": 262144,
+            "max_output": 262144
+          }
+        },
+        {
+          "name": "kimi-k2.7-code-highspeed",
+          "kind": "text",
+          "note": "kimi-k2.7-code 的高速版，输出约 180 Tokens/s（短上下文可达 260）；参数约束与标准版完全一致，只有输出速度不同",
+          "cloud": {
+            "display_name": "Kimi K2.7 Code HighSpeed",
+            "context_length": 262144,
+            "max_output": 262144
+          }
+        },
+        {
+          "name": "kimi-k2.6",
+          "kind": "text",
+          "note": "通用模型，文本/图片/视频输入；thinking 可开可关（默认 enabled）；官方未单列最大输出，上限即上下文窗口",
+          "cloud": {
+            "display_name": "Kimi K2.6",
+            "context_length": 262144,
+            "max_output": 262144
+          }
+        }
+      ]
+    },
+    {
+      "type": "siliconflow",
+      "vendor": "硅基流动",
+      "source": "https://siliconflow.cn/models",
+      "checked_at": "2026-09-03",
+      "note": "硅基流动 OpenAI / Anthropic 兼容文本双入口（两面同一个 /v1 根）；平台托管多家开源模型，型号变化较快，未列出的型号请按控制台 Model ID 自定义添加。",
+      "models": [
+        {
+          "name": "deepseek-ai/DeepSeek-V4-Flash",
+          "kind": "text",
+          "note": "硅基流动托管的开源模型，上游 Model ID 含组织前缀",
+          "cloud": {
+            "display_name": "DeepSeek V4 Flash（硅基流动）",
+            "context_length": 1048576
+          }
+        },
+        {
+          "name": "deepseek-ai/DeepSeek-V4-Pro",
+          "kind": "text",
+          "note": "硅基流动托管的开源模型，上游 Model ID 含组织前缀",
+          "cloud": {
+            "display_name": "DeepSeek V4 Pro（硅基流动）",
+            "context_length": 1048576
+          }
+        },
+        {
+          "name": "deepseek-ai/DeepSeek-V3.2",
+          "kind": "text",
+          "note": "Pro/ 前缀同价",
+          "cloud": {
+            "display_name": "DeepSeek V3.2（硅基流动）",
+            "context_length": 163840
+          }
+        },
+        {
+          "name": "Pro/zai-org/GLM-5.1",
+          "kind": "text",
+          "note": "非 Pro 版已下线并重定向到本模型",
+          "cloud": {
+            "display_name": "GLM-5.1（硅基流动 Pro）",
+            "context_length": 202752
+          }
+        },
+        {
+          "name": "Qwen/Qwen3.5-397B-A17B",
+          "kind": "text",
+          "note": "硅基流动托管的开源模型，上游 Model ID 含组织前缀",
+          "cloud": {
+            "display_name": "Qwen3.5 397B-A17B（硅基流动）",
+            "context_length": 262144
+          }
+        },
+        {
+          "name": "Pro/moonshotai/Kimi-K2.6",
+          "kind": "text",
+          "note": "非 Pro 版价格页未列",
+          "cloud": {
+            "display_name": "Kimi K2.6（硅基流动 Pro）",
+            "context_length": 262144
+          }
+        },
+        {
+          "name": "moonshotai/Kimi-K2.7-Code",
+          "kind": "text",
+          "note": "硅基流动托管的开源模型，上游 Model ID 含组织前缀",
+          "cloud": {
+            "display_name": "Kimi K2.7 Code（硅基流动）",
+            "context_length": 262144
+          }
+        },
+        {
+          "name": "MiniMaxAI/MiniMax-M2.5",
+          "kind": "text",
+          "note": "Pro/ 前缀同价",
+          "cloud": {
+            "display_name": "MiniMax M2.5（硅基流动）",
+            "context_length": 196608
+          }
+        },
+        {
+          "name": "Pro/zai-org/GLM-4.7",
+          "kind": "text",
+          "cloud": {
+            "display_name": "Pro/zai-org/GLM-4.7"
+          }
+        }
+      ]
+    },
+    {
+      "type": "qianfan",
+      "vendor": "百度智能云千帆",
+      "source": "https://cloud.baidu.com/doc/qianfan/s/rmh4stp0j",
+      "checked_at": "2026-09-03",
+      "note": "千帆 ModelBuilder 的 Chat / Responses / Messages 三个原生文本面；Responses 可用型号以上游文档为准。",
+      "models": [
+        {
+          "name": "ernie-5.1",
+          "kind": "text",
+          "note": "最大输入 119k",
+          "cloud": {
+            "display_name": "ERNIE 5.1",
+            "context_length": 131072,
+            "max_output": 65536
+          }
+        },
+        {
+          "name": "ernie-5.0",
+          "kind": "text",
+          "note": "ernie-5.0-thinking-preview 同价",
+          "cloud": {
+            "display_name": "ERNIE 5.0",
+            "context_length": 131072,
+            "max_output": 65536
+          }
+        },
+        {
+          "name": "ernie-4.5-turbo-128k",
+          "kind": "text",
+          "note": "千帆 ModelBuilder v2 接入",
+          "cloud": {
+            "display_name": "ERNIE 4.5 Turbo 128k",
+            "context_length": 131072,
+            "max_output": 12288
+          }
+        },
+        {
+          "name": "ernie-4.5-turbo-vl-32k",
+          "kind": "text",
+          "note": "千帆 ModelBuilder v2 接入",
+          "cloud": {
+            "display_name": "ERNIE 4.5 Turbo VL 32k",
+            "context_length": 32768,
+            "max_output": 12288
+          }
+        },
+        {
+          "name": "deepseek-v4-pro",
+          "kind": "text",
+          "note": "千帆 ModelBuilder v2 接入",
+          "cloud": {
+            "display_name": "DeepSeek V4 Pro（千帆）",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "deepseek-v4-flash",
+          "kind": "text",
+          "note": "千帆 ModelBuilder v2 接入",
+          "cloud": {
+            "display_name": "DeepSeek V4 Flash（千帆）",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "glm-5.3",
+          "kind": "text",
+          "note": "千帆 ModelBuilder v2 接入",
+          "cloud": {
+            "display_name": "GLM-5.3（千帆）",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "ernie-4.5-turbo-20260402",
+          "kind": "text",
+          "cloud": {
+            "display_name": "ernie-4.5-turbo-20260402"
+          }
+        },
+        {
+          "name": "glm-5.1",
+          "kind": "text",
+          "cloud": {
+            "display_name": "glm-5.1"
+          }
+        }
+      ]
+    },
+    {
+      "type": "hunyuan",
+      "vendor": "腾讯云 TokenHub（混元）",
+      "source": "https://cloud.tencent.com/document/product/1823/130051",
+      "checked_at": "2026-09-03",
+      "note": "腾讯混元原平台 2026-09-30 停服，本类型指向承接方腾讯云 TokenHub（广州）的 Chat / Responses / Messages 三个原生文本面；Key 须在 TokenHub 控制台新建，旧混元 Key 不能用。",
+      "models": [
+        {
+          "name": "hy4-preview",
+          "kind": "text",
+          "note": "最大输入 960k",
+          "cloud": {
+            "display_name": "混元 HY4 preview",
+            "context_length": 1048576,
+            "max_output": 65536
+          }
+        },
+        {
+          "name": "hy3",
+          "kind": "text",
+          "note": "最大输入 192k",
+          "cloud": {
+            "display_name": "混元 HY3",
+            "context_length": 262144,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "hy-mt2-pro",
+          "kind": "text",
+          "note": "腾讯云 TokenHub 托管",
+          "cloud": {
+            "display_name": "混元翻译 MT2 Pro",
+            "context_length": 8192,
+            "max_output": 4096
+          }
+        },
+        {
+          "name": "hy-vision-2.0-instruct",
+          "kind": "text",
+          "note": "腾讯云 TokenHub 托管",
+          "cloud": {
+            "display_name": "混元 Vision 2.0 Instruct",
+            "context_length": 45056,
+            "max_output": 16384
+          }
+        },
+        {
+          "name": "deepseek-v4-pro-0813",
+          "kind": "text",
+          "note": "腾讯云 TokenHub 托管",
+          "cloud": {
+            "display_name": "DeepSeek V4 Pro 0813（TokenHub）",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "deepseek-v4-flash-0731",
+          "kind": "text",
+          "note": "腾讯云 TokenHub 托管",
+          "cloud": {
+            "display_name": "DeepSeek V4 Flash 0731（TokenHub）",
+            "context_length": 1048576,
+            "max_output": 393216
+          }
+        },
+        {
+          "name": "glm-5.3",
+          "kind": "text",
+          "note": "腾讯云 TokenHub 托管",
+          "cloud": {
+            "display_name": "GLM-5.3（TokenHub）",
+            "context_length": 1048576,
+            "max_output": 131072
+          }
+        },
+        {
+          "name": "kimi-k3",
+          "kind": "text",
+          "note": "腾讯云 TokenHub 托管",
+          "cloud": {
+            "display_name": "Kimi K3（TokenHub）",
+            "context_length": 1048576,
+            "max_output": 1048576
+          }
+        },
+        {
+          "name": "minimax-m3",
+          "kind": "text",
+          "note": "腾讯云 TokenHub 托管",
+          "cloud": {
+            "display_name": "MiniMax M3（TokenHub）",
+            "context_length": 1048576
+          }
+        }
+      ]
+    },
+    {
+      "type": "kling",
+      "vendor": "可灵 AI（快手）",
+      "source": "https://klingai.com/document-api/guides/capability-map/video",
+      "checked_at": "2026-09-04",
+      "note": "可灵开放平台只有视频等生成类接口、没有文本面；设备接入的是新版视频 API（kling 协议面）：模型写在路径段（/kling/text-to-video/{model} 等四种能力），只接 API Key、不接 AK/SK。国内站与国际站账号、Key、资源包互不相通。旧版 /v1/videos/* 的 kling-v1 ~ kling-v2-6 系不在此面。",
+      "models": [
+        {
+          "name": "kling-3.0-turbo",
+          "kind": "video",
+          "protocol_face": "kling",
+          "api_profile": "kling_video",
+          "note": "3–15 秒逐秒，720P / 1080P，恒有声，多镜头；文生 / 图生视频；走厂商原生子域名 kling 的可灵新版路径（模型写在路径段，请求体不带 model；查询 GET /tasks?task_ids=；没有取消接口）",
+          "cloud": {
+            "display_name": "可灵 3.0 Turbo"
+          }
+        },
+        {
+          "name": "kling-3.0",
+          "kind": "video",
+          "protocol_face": "kling",
+          "api_profile": "kling_video",
+          "note": "3–15 秒，720P / 1080P / 4K，audio=native 可开声，支持首尾帧、主体与动作控制；走厂商原生子域名 kling 的可灵新版路径（模型写在路径段，请求体不带 model；查询 GET /tasks?task_ids=；没有取消接口）",
+          "cloud": {
+            "display_name": "可灵 3.0"
+          }
+        },
+        {
+          "name": "kling-3.0-omni",
+          "kind": "video",
+          "protocol_face": "kling",
+          "api_profile": "kling_video",
+          "note": "走 /omni-video/{model}：视频参考与视频编辑，3–15 秒，720P / 1080P / 4K，audio=native 可开声；走厂商原生子域名 kling 的可灵新版路径（模型写在路径段，请求体不带 model；查询 GET /tasks?task_ids=；没有取消接口）",
+          "cloud": {
+            "display_name": "可灵 3.0 Omni"
+          }
+        },
+        {
+          "name": "kling-o1",
+          "kind": "video",
+          "protocol_face": "kling",
+          "api_profile": "kling_video",
+          "note": "走 /omni-video/{model}：5 / 10 秒，720P / 1080P，只出无声；走厂商原生子域名 kling 的可灵新版路径（模型写在路径段，请求体不带 model；查询 GET /tasks?task_ids=；没有取消接口）",
+          "cloud": {
+            "display_name": "可灵 O1"
+          }
+        },
+        {
+          "name": "kling-2.6",
+          "kind": "video",
+          "protocol_face": "kling",
+          "api_profile": "kling_video",
+          "note": "5 / 10 秒，720P / 1080P（有声仅 1080P），支持动作控制；走厂商原生子域名 kling 的可灵新版路径（模型写在路径段，请求体不带 model；查询 GET /tasks?task_ids=；没有取消接口）",
+          "cloud": {
+            "display_name": "可灵 2.6"
+          }
+        },
+        {
+          "name": "kling-2.5-turbo",
+          "kind": "video",
+          "protocol_face": "kling",
+          "api_profile": "kling_video",
+          "note": "5 / 10 秒，720P / 1080P，只出无声；文生 / 图生视频；走厂商原生子域名 kling 的可灵新版路径（模型写在路径段，请求体不带 model；查询 GET /tasks?task_ids=；没有取消接口）",
+          "cloud": {
+            "display_name": "可灵 2.5 Turbo"
+          }
+        }
+      ]
+    },
+    {
+      "type": "openai",
+      "vendor": "OpenAI",
+      "source": "https://platform.openai.com/docs/api-reference/chat",
+      "checked_at": "2026-09-01",
+      "note": "OpenAI 官方 Chat Completions 与 Responses 两个原生文本面。",
+      "models": [
+        {
+          "name": "gpt-5.2",
+          "kind": "text",
+          "cloud": {
+            "display_name": "gpt-5.2"
+          }
+        }
+      ]
+    },
+    {
+      "type": "anthropic",
+      "vendor": "Anthropic",
+      "source": "https://docs.anthropic.com/en/api/messages",
+      "checked_at": "2026-09-01",
+      "note": "Anthropic 官方 Messages API；设备会把封存的上游 Key 按 x-api-key 发出。",
+      "models": [
+        {
+          "name": "claude-opus-5",
+          "kind": "text",
+          "cloud": {
+            "display_name": "claude-opus-5"
+          }
+        },
+        {
+          "name": "claude-sonnet-5",
+          "kind": "text",
+          "cloud": {
+            "display_name": "claude-sonnet-5"
+          }
+        },
+        {
+          "name": "claude-haiku-4-5",
+          "kind": "text",
+          "cloud": {
+            "display_name": "claude-haiku-4-5"
+          }
+        }
+      ]
+    },
+    {
+      "type": "gemini",
+      "vendor": "Google Gemini",
+      "source": "https://ai.google.dev/gemini-api/docs/openai",
+      "checked_at": "2026-09-01",
+      "note": "Google AI Studio 的 Gemini OpenAI 兼容文本入口。",
+      "models": [
+        {
+          "name": "gemini-3.7-flash",
+          "kind": "text",
+          "cloud": {
+            "display_name": "gemini-3.7-flash"
+          }
+        }
+      ]
+    },
+    {
+      "type": "xai",
+      "vendor": "xAI",
+      "source": "https://docs.x.ai/developers/quickstart",
+      "checked_at": "2026-09-01",
+      "note": "xAI 官方 Chat 与 Responses 两个原生文本面；这里只接文本，图片/视频仍由既有 Agent 协议面承载。",
+      "models": [
+        {
+          "name": "grok-4.6",
+          "kind": "text",
+          "cloud": {
+            "display_name": "grok-4.6"
+          }
+        },
+        {
+          "name": "grok-4.5",
+          "kind": "text",
+          "cloud": {
+            "display_name": "grok-4.5"
+          }
+        }
+      ]
+    },
+    {
+      "type": "openrouter",
+      "vendor": "OpenRouter",
+      "source": "https://openrouter.ai/docs/quickstart",
+      "checked_at": "2026-09-01",
+      "note": "OpenRouter 提供 Chat / Responses / Messages 三个原生文本面，模型 ID 以其在线目录为准。",
+      "models": [
+        {
+          "name": "~openai/gpt-latest",
+          "kind": "text",
+          "cloud": {
+            "display_name": "~openai/gpt-latest"
+          }
+        },
+        {
+          "name": "~anthropic/claude-sonnet-latest",
+          "kind": "text",
+          "cloud": {
+            "display_name": "~anthropic/claude-sonnet-latest"
+          }
+        }
+      ]
+    },
+    {
+      "type": "groq",
+      "vendor": "Groq",
+      "source": "https://console.groq.com/docs/openai",
+      "checked_at": "2026-09-01",
+      "note": "GroqCloud 的 Chat 与 Responses 两个原生文本面；Responses 尚未用真实 Key 实调。",
+      "models": [
+        {
+          "name": "openai/gpt-oss-120b",
+          "kind": "text",
+          "cloud": {
+            "display_name": "openai/gpt-oss-120b"
+          }
+        },
+        {
+          "name": "openai/gpt-oss-20b",
+          "kind": "text",
+          "cloud": {
+            "display_name": "openai/gpt-oss-20b"
+          }
+        },
+        {
+          "name": "llama-3.3-70b-versatile",
+          "kind": "text",
+          "cloud": {
+            "display_name": "llama-3.3-70b-versatile"
+          }
+        }
+      ]
+    },
+    {
+      "type": "mistral",
+      "vendor": "Mistral AI",
+      "source": "https://docs.mistral.ai/api/endpoint/chat",
+      "checked_at": "2026-09-01",
+      "note": "Mistral AI 官方 OpenAI 兼容 Chat Completions 入口。",
+      "models": [
+        {
+          "name": "mistral-large-latest",
+          "kind": "text",
+          "cloud": {
+            "display_name": "mistral-large-latest"
+          }
+        },
+        {
+          "name": "mistral-small-latest",
+          "kind": "text",
+          "cloud": {
+            "display_name": "mistral-small-latest"
+          }
+        }
+      ]
+    },
+    {
+      "type": "together",
+      "vendor": "Together AI",
+      "source": "https://docs.together.ai/docs/inference/openai-compatibility",
+      "checked_at": "2026-09-01",
+      "note": "Together AI OpenAI 兼容文本入口；型号通常采用 provider/model_name。",
+      "models": [
+        {
+          "name": "openai/gpt-oss-120b",
+          "kind": "text",
+          "cloud": {
+            "display_name": "openai/gpt-oss-120b"
+          }
+        },
+        {
+          "name": "openai/gpt-oss-20b",
+          "kind": "text",
+          "cloud": {
+            "display_name": "openai/gpt-oss-20b"
+          }
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "provider": "codex",
+      "vendor": "OpenAI",
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "checked_at": "2026-08-13",
+      "note": "Codex 订阅经设备的 /agents/v1/responses 调用；本段只供查看，不是准入或计价清单。",
+      "models": [
+        {
+          "name": "gpt-6-astra",
+          "kind": "text"
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "kind": "text"
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "kind": "text"
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "provider": "grok",
+      "vendor": "xAI",
+      "source": "https://docs.x.ai/docs/models",
+      "checked_at": "2026-08-13",
+      "note": "Grok Build 订阅：文本经 /agents/v1/responses（model 以 grok 开头即分流到这份订阅）。本段只供查看，不是准入白名单。",
+      "models": [
+        {
+          "name": "grok-4.6",
+          "kind": "text"
+        },
+        {
+          "name": "grok-4.5",
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "provider": "claude",
+      "vendor": "Anthropic",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "checked_at": "2026-08-19",
+      "note": "Claude Code 订阅：这里收录的是 Anthropic 官方在售型号的只读参考，不是准入或计价清单；设备只透传 /v1/messages，成员 /model 里实际看见哪些型号仍由上游 /v1/models 动态发现决定。",
+      "models": [
+        {
+          "name": "claude-fable-5",
+          "kind": "text",
+          "note": "Claude Code 里 /model fable 选它"
+        },
+        {
+          "name": "claude-opus-5",
+          "kind": "text",
+          "note": "opus 别名在 Anthropic API 上解析到它"
+        },
+        {
+          "name": "claude-sonnet-5",
+          "kind": "text",
+          "note": "sonnet 别名在 Anthropic API 上解析到它"
+        },
+        {
+          "name": "claude-haiku-4-5",
+          "kind": "text",
+          "note": "这是官方别名写法"
+        },
+        {
+          "name": "claude-haiku-4-5-20251001",
+          "kind": "text",
+          "note": "同上一条是同一个模型的带日期 Claude API ID。设备按名区分大小写精确匹配、不做别名推断，所以两种官方写法各收一行"
+        }
+      ]
+    }
+  ]
+}

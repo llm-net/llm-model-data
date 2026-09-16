@@ -1,0 +1,3020 @@
+{
+  "schema": "tokenrouter.official-pricing/v1",
+  "version": 21,
+  "updated_at": "2026-09-13",
+  "currency": "CNY",
+  "unit": "micro_yuan",
+  "notes": [
+    "Sanitized legacy research snapshot; not current verified facts or a consumer catalog. Original file hash is in manifest.json."
+  ],
+  "models": [
+    {
+      "name": "deepseek-v4-pro",
+      "kind": "text",
+      "vendor": "DeepSeek",
+      "pricing": {
+        "in": 9000000,
+        "out": 27000000,
+        "cache_read": 300000
+      },
+      "time_pricing": {
+        "timezone": "Asia/Shanghai",
+        "bands": [
+          {
+            "id": "peak",
+            "label": "工作日高峰",
+            "days": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "hours": [
+              "09:00-12:00",
+              "14:00-18:00"
+            ],
+            "pricing": {
+              "in": 9000000,
+              "out": 27000000,
+              "cache_read": 300000
+            }
+          },
+          {
+            "id": "off_peak",
+            "label": "其余时段（含周末）",
+            "pricing": {
+              "in": 4500000,
+              "out": 13500000,
+              "cache_read": 150000
+            }
+          }
+        ]
+      },
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "checked_at": "2026-08-22",
+      "note": "高峰价；北京时间工作日 09:00-12:00、14:00-18:00 为高峰，其余时段（含周末）为空闲半价",
+      "cloud": {
+        "provider": "deepseek",
+        "billing_note": "北京时间工作日 09:00-12:00、14:00-18:00 为高峰，其余（含周末）为空闲。"
+      }
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "kind": "text",
+      "vendor": "DeepSeek",
+      "pricing": {
+        "in": 3000000,
+        "out": 9000000,
+        "cache_read": 100000
+      },
+      "time_pricing": {
+        "timezone": "Asia/Shanghai",
+        "bands": [
+          {
+            "id": "peak",
+            "label": "工作日高峰",
+            "days": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "hours": [
+              "09:00-12:00",
+              "14:00-18:00"
+            ],
+            "pricing": {
+              "in": 3000000,
+              "out": 9000000,
+              "cache_read": 100000
+            }
+          },
+          {
+            "id": "off_peak",
+            "label": "其余时段（含周末）",
+            "pricing": {
+              "in": 1500000,
+              "out": 4500000,
+              "cache_read": 50000
+            }
+          }
+        ]
+      },
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "checked_at": "2026-08-22",
+      "note": "高峰价；北京时间工作日 09:00-12:00、14:00-18:00 为高峰，其余时段（含周末）为空闲半价",
+      "cloud": {
+        "provider": "deepseek",
+        "billing_note": "北京时间工作日 09:00-12:00、14:00-18:00 为高峰，其余（含周末）为空闲；缓存命中 token 从输入 token 中拆分。"
+      }
+    },
+    {
+      "name": "deepseek-v4-flash-vision-exp",
+      "kind": "text",
+      "vendor": "DeepSeek",
+      "pricing": {
+        "in": 3000000,
+        "out": 9000000,
+        "cache_read": 100000
+      },
+      "time_pricing": {
+        "timezone": "Asia/Shanghai",
+        "bands": [
+          {
+            "id": "peak",
+            "label": "工作日高峰",
+            "days": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "hours": [
+              "09:00-12:00",
+              "14:00-18:00"
+            ],
+            "pricing": {
+              "in": 3000000,
+              "out": 9000000,
+              "cache_read": 100000
+            }
+          },
+          {
+            "id": "off_peak",
+            "label": "其余时段（含周末）",
+            "pricing": {
+              "in": 1500000,
+              "out": 4500000,
+              "cache_read": 50000
+            }
+          }
+        ]
+      },
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "checked_at": "2026-08-22",
+      "note": "高峰价；北京时间工作日 09:00-12:00、14:00-18:00 为高峰，其余时段（含周末）为空闲半价；图片按尺寸折算成 token 并入输入",
+      "cloud": {
+        "provider": "deepseek",
+        "billing_note": "与 DeepSeek-V4-Flash 同价；图片被转换为输入 token 后与文本 token 一起计费。"
+      }
+    },
+    {
+      "name": "glm-5.3",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 8000000,
+        "out": 28000000,
+        "cache_read": 2000000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "单档；缓存存储限时免费",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "智谱官方标准价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 8000000,
+              "out": 28000000,
+              "cache_read": 2000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-5.3-flash",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 800000,
+        "out": 2800000,
+        "cache_read": 200000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "单档；官方只写「定价为 GLM-5.3 的 1/10」，本行按同表 GLM-5.3 的 8/2/28 折算。发布期限时 5 折（至 2026-09-09 24:00 UTC+8），单价栏按纪律取标准价",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "按官方“GLM-5.3 定价 1/10”折算的标准价，不采用限时折扣",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 800000,
+              "out": 2800000,
+              "cache_read": 200000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-5.2",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 8000000,
+        "out": 28000000,
+        "cache_read": 2000000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "单档；缓存存储限时免费",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "智谱官方标准价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 8000000,
+              "out": 28000000,
+              "cache_read": 2000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-5.1",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 6000000,
+        "out": 24000000,
+        "cache_read": 1300000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "分档：输入 <32K 为 6/24（缓存命中 1.3）；输入 ≥32K 为 8/28（缓存命中 2）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32767
+            },
+            "pricing": {
+              "in": 6000000,
+              "out": 24000000,
+              "cache_read": 1300000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 8000000,
+              "out": 28000000,
+              "cache_read": 2000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-5",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 4000000,
+        "out": 18000000,
+        "cache_read": 1000000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "分档：输入 <32K 为 4/18（缓存命中 1）；输入 ≥32K 为 6/22（缓存命中 1.5）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32767
+            },
+            "pricing": {
+              "in": 4000000,
+              "out": 18000000,
+              "cache_read": 1000000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 6000000,
+              "out": 22000000,
+              "cache_read": 1500000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-5-turbo",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 5000000,
+        "out": 22000000,
+        "cache_read": 1200000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "分档：输入 <32K 为 5/22（缓存命中 1.2）；输入 ≥32K 为 7/26（缓存命中 1.8）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32767
+            },
+            "pricing": {
+              "in": 5000000,
+              "out": 22000000,
+              "cache_read": 1200000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 7000000,
+              "out": 26000000,
+              "cache_read": 1800000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-4.7",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 2000000,
+        "out": 8000000,
+        "cache_read": 400000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "分档：输入 <32K 且输出 <200 为 2/8（缓存命中 0.4）；输入 <32K 且输出 ≥200 为 3/14（0.6）；输入 32K-200K 为 4/16（0.8）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "按输入与输出 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32767,
+              "max_completion_tokens": 199
+            },
+            "pricing": {
+              "in": 2000000,
+              "out": 8000000,
+              "cache_read": 400000
+            }
+          },
+          {
+            "when": {
+              "max_prompt_tokens": 32767,
+              "min_completion_tokens": 200
+            },
+            "pricing": {
+              "in": 3000000,
+              "out": 14000000,
+              "cache_read": 600000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 4000000,
+              "out": 16000000,
+              "cache_read": 800000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-4.7-flashx",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 500000,
+        "out": 3000000,
+        "cache_read": 100000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "单档；缓存存储限时免费",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "智谱官方标准价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 500000,
+              "out": 3000000,
+              "cache_read": 100000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-4.7-flash",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 0,
+        "out": 0,
+        "cache_read": 0
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "上游免费模型（含缓存）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "智谱官方免费模型；转售前仍须确认上游配额",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 0,
+              "out": 0,
+              "cache_read": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-4.5-air",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 800000,
+        "out": 2000000,
+        "cache_read": 160000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "限时 5 折；分档：输入 <32K 且输出 <200 为 0.8/2（缓存命中 0.16）；输入 <32K 且输出 ≥200 为 0.8/6（0.16）；输入 32K-128K 为 1.2/8（0.24）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "按官方现行限时价及输入/输出 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32767,
+              "max_completion_tokens": 199
+            },
+            "pricing": {
+              "in": 800000,
+              "out": 2000000,
+              "cache_read": 160000
+            }
+          },
+          {
+            "when": {
+              "max_prompt_tokens": 32767,
+              "min_completion_tokens": 200
+            },
+            "pricing": {
+              "in": 800000,
+              "out": 6000000,
+              "cache_read": 160000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 1200000,
+              "out": 8000000,
+              "cache_read": 240000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-5v-turbo",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 5000000,
+        "out": 22000000,
+        "cache_read": 1200000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "分档：输入 <32K 为 5/22（缓存命中 1.2）；输入 ≥32K 为 7/26（缓存命中 1.8）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32767
+            },
+            "pricing": {
+              "in": 5000000,
+              "out": 22000000,
+              "cache_read": 1200000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 7000000,
+              "out": 26000000,
+              "cache_read": 1800000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-4.6v",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 1000000,
+        "out": 3000000,
+        "cache_read": 200000
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "分档：输入 <32K 为 1/3（缓存命中 0.2）；输入 32K-128K 为 2/6（缓存命中 0.4）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32767
+            },
+            "pricing": {
+              "in": 1000000,
+              "out": 3000000,
+              "cache_read": 200000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 2000000,
+              "out": 6000000,
+              "cache_read": 400000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "glm-4.6v-flash",
+      "kind": "text",
+      "vendor": "智谱AI开放平台",
+      "pricing": {
+        "in": 0,
+        "out": 0,
+        "cache_read": 0
+      },
+      "source": "https://open.bigmodel.cn/pricing",
+      "checked_at": "2026-08-27",
+      "note": "上游免费模型（含缓存）",
+      "cloud": {
+        "provider": "zhipu",
+        "billing_note": "智谱官方免费模型；转售前仍须确认上游配额",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 0,
+              "out": 0,
+              "cache_read": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kimi-k3",
+      "kind": "text",
+      "vendor": "Kimi开放平台",
+      "pricing": {
+        "in": 20000000,
+        "out": 100000000,
+        "cache_read": 2000000
+      },
+      "source": "https://platform.kimi.com/docs/pricing/chat",
+      "checked_at": "2026-08-27",
+      "note": "单档，官方明写无长上下文加价；缓存命中价按自动上下文缓存计",
+      "cloud": {
+        "provider": "moonshot",
+        "billing_note": "Kimi 官方标准在线推理价，无长上下文加价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 20000000,
+              "out": 100000000,
+              "cache_read": 2000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kimi-k2.7-code",
+      "kind": "text",
+      "vendor": "Kimi开放平台",
+      "pricing": {
+        "in": 6500000,
+        "out": 27000000,
+        "cache_read": 1300000
+      },
+      "source": "https://platform.kimi.com/docs/pricing/chat",
+      "checked_at": "2026-08-27",
+      "note": "单档，无长上下文加价",
+      "cloud": {
+        "provider": "moonshot",
+        "billing_note": "Kimi 官方标准在线推理价，无长上下文加价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 6500000,
+              "out": 27000000,
+              "cache_read": 1300000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kimi-k2.7-code-highspeed",
+      "kind": "text",
+      "vendor": "Kimi开放平台",
+      "pricing": {
+        "in": 13000000,
+        "out": 54000000,
+        "cache_read": 2600000
+      },
+      "source": "https://platform.kimi.com/docs/pricing/chat",
+      "checked_at": "2026-08-27",
+      "note": "单档；与 kimi-k2.7-code 同一模型，整档单价翻倍",
+      "cloud": {
+        "provider": "moonshot",
+        "billing_note": "Kimi 官方标准在线推理价，无长上下文加价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 13000000,
+              "out": 54000000,
+              "cache_read": 2600000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kimi-k2.6",
+      "kind": "text",
+      "vendor": "Kimi开放平台",
+      "pricing": {
+        "in": 6500000,
+        "out": 27000000,
+        "cache_read": 1100000
+      },
+      "source": "https://platform.kimi.com/docs/pricing/chat",
+      "checked_at": "2026-08-27",
+      "note": "单档，无长上下文加价",
+      "cloud": {
+        "provider": "moonshot",
+        "billing_note": "Kimi 官方标准在线推理价，无长上下文加价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 6500000,
+              "out": 27000000,
+              "cache_read": 1100000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-evolving",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 6000000,
+        "out": 30000000,
+        "cache_read": 1200000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "单档；缓存存储 0.017 元/百万 token/小时",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "火山方舟官方标准在线推理价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 6000000,
+              "out": 30000000,
+              "cache_read": 1200000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-2-1-pro-260628",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 6000000,
+        "out": 30000000,
+        "cache_read": 1200000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "单档；缓存存储 0.017 元/百万 token/小时",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "火山方舟官方标准在线推理价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 6000000,
+              "out": 30000000,
+              "cache_read": 1200000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-2-1-turbo-260628",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 3000000,
+        "out": 15000000,
+        "cache_read": 600000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "单档；缓存存储 0.017 元/百万 token/小时",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "火山方舟官方标准在线推理价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 3000000,
+              "out": 15000000,
+              "cache_read": 600000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-2-0-lite-260428",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 600000,
+        "out": 3600000,
+        "cache_read": 120000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "分档：输入 ≤32K 为 0.6/3.6（缓存命中 0.12）；32K-128K 为 0.9/5.4（0.18）；128K-256K 为 1.8/10.8（0.36）；音频输入另计",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "按输入 token 数分档；音频输入另计的模型暂只覆盖文本 token",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 600000,
+              "out": 3600000,
+              "cache_read": 120000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 900000,
+              "out": 5400000,
+              "cache_read": 180000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073
+            },
+            "pricing": {
+              "in": 1800000,
+              "out": 10800000,
+              "cache_read": 360000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-2-0-mini-260428",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 200000,
+        "out": 2000000,
+        "cache_read": 40000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "分档：输入 ≤32K 为 0.2/2（缓存命中 0.04）；32K-128K 为 0.4/4（0.08）；128K-256K 为 0.8/8（0.16）；音频输入另计",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "按输入 token 数分档；音频输入另计的模型暂只覆盖文本 token",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 200000,
+              "out": 2000000,
+              "cache_read": 40000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 400000,
+              "out": 4000000,
+              "cache_read": 80000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073
+            },
+            "pricing": {
+              "in": 800000,
+              "out": 8000000,
+              "cache_read": 160000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-2-0-pro-260215",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 3200000,
+        "out": 16000000,
+        "cache_read": 640000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "分档：输入 ≤32K 为 3.2/16（缓存命中 0.64）；32K-128K 为 4.8/24（0.96）；128K-256K 为 9.6/48（1.92）",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "按输入 token 数分档；音频输入另计的模型暂只覆盖文本 token",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 3200000,
+              "out": 16000000,
+              "cache_read": 640000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 4800000,
+              "out": 24000000,
+              "cache_read": 960000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073
+            },
+            "pricing": {
+              "in": 9600000,
+              "out": 48000000,
+              "cache_read": 1920000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-2-0-lite-260215",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 600000,
+        "out": 3600000,
+        "cache_read": 120000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "分档：输入 ≤32K 为 0.6/3.6（缓存命中 0.12）；32K-128K 为 0.9/5.4（0.18）；128K-256K 为 1.8/10.8（0.36）；音频输入另计",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "按输入 token 数分档；音频输入另计的模型暂只覆盖文本 token",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 600000,
+              "out": 3600000,
+              "cache_read": 120000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 900000,
+              "out": 5400000,
+              "cache_read": 180000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073
+            },
+            "pricing": {
+              "in": 1800000,
+              "out": 10800000,
+              "cache_read": 360000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-2-0-mini-260215",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 200000,
+        "out": 2000000,
+        "cache_read": 40000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "分档：输入 ≤32K 为 0.2/2（缓存命中 0.04）；32K-128K 为 0.4/4（0.08）；128K-256K 为 0.8/8（0.16）；音频输入另计",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "按输入 token 数分档；音频输入另计的模型暂只覆盖文本 token",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 200000,
+              "out": 2000000,
+              "cache_read": 40000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 400000,
+              "out": 4000000,
+              "cache_read": 80000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073
+            },
+            "pricing": {
+              "in": 800000,
+              "out": 8000000,
+              "cache_read": 160000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-2-0-code-preview-260215",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 3200000,
+        "out": 16000000,
+        "cache_read": 640000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "分档：输入 ≤32K 为 3.2/16（缓存命中 0.64）；32K-128K 为 4.8/24（0.96）；128K-256K 为 9.6/48（1.92）",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "按输入 token 数分档；音频输入另计的模型暂只覆盖文本 token",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 3200000,
+              "out": 16000000,
+              "cache_read": 640000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 4800000,
+              "out": 24000000,
+              "cache_read": 960000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073
+            },
+            "pricing": {
+              "in": 9600000,
+              "out": 48000000,
+              "cache_read": 1920000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-character-260628",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 800000,
+        "out": 2000000,
+        "cache_read": 160000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "分档：输入 ≤32K 为 0.8/2（缓存命中 0.16）；32K-128K 为 1.2/6（0.16）",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 800000,
+              "out": 2000000,
+              "cache_read": 160000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769
+            },
+            "pricing": {
+              "in": 1200000,
+              "out": 6000000,
+              "cache_read": 160000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-character-251128",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 800000,
+        "out": 2000000,
+        "cache_read": 160000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "分档：输入 ≤32K 为 0.8/2（缓存命中 0.16）；32K-128K 为 1.2/6（0.16）",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 800000,
+              "out": 2000000,
+              "cache_read": 160000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769
+            },
+            "pricing": {
+              "in": 1200000,
+              "out": 6000000,
+              "cache_read": 160000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seed-translation-250915",
+      "kind": "text",
+      "vendor": "火山方舟",
+      "pricing": {
+        "in": 1200000,
+        "out": 3600000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "单档；官方价格表未列缓存计价",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "官方未公开缓存价；若上游回报缓存 token 则明确记为 unpriced",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 1200000,
+              "out": 3600000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedream-5-0-pro-260628",
+      "kind": "image",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_image_each": 300000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "普通生成：≤261 万像素 0.30 元/张，>261 万像素 0.60 元/张；输入首图免费，第 2 张起 0.02 元/张；输出图仅成功时计费",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "普通生成按每张输出像素档计费；输入首图免费，第 2 张起 ¥0.02/张。目录也保存官方图层拆分价，当前公开 Images 路由只使用普通生成场景。",
+        "tiers": [
+          {
+            "when": {
+              "max_pixels": 2610000
+            },
+            "pricing": {
+              "ark_image_each": 300000,
+              "ark_image_layer_each": 150000
+            }
+          },
+          {
+            "when": {
+              "min_pixels": 2610001
+            },
+            "pricing": {
+              "ark_image_each": 600000,
+              "ark_image_layer_each": 300000
+            }
+          },
+          {
+            "when": {},
+            "pricing": {
+              "ark_image_extra_input_each": 20000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedream-5-0-260128",
+      "kind": "image",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_image_each": 220000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "官方公开价 0.22 元/张；按张价格不写入 token 单价列",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "仅成功生成的图片计费，输入图片免费；组图按实际成功张数。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "ark_image_each": 220000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedance-2-5-260628",
+      "kind": "video",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_video_token": 70000000,
+        "ark_video_token_ref": 42000000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "在线推理刊例价（无/含视频输入，元/百万视频 token）：480p/720p 70/42，1080p 77/46；1080p 于 2026-08-14 14:00 至 2026-09-17 14:00 限时 72 折",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "仅任务成功后按方舟 completion_tokens 计费；分辨率与是否含视频输入决定单价。1080p 官方限时活动：北京时间 2026-08-14 14:00 至 2026-09-17 14:00。",
+        "tiers": [
+          {
+            "when": {
+              "video_resolutions": [
+                "480p",
+                "720p"
+              ]
+            },
+            "pricing": {
+              "ark_video_token": 70000000,
+              "ark_video_token_ref": 42000000
+            }
+          },
+          {
+            "when": {
+              "video_resolutions": [
+                "1080p"
+              ]
+            },
+            "pricing": {
+              "ark_video_token": 77000000,
+              "ark_video_token_ref": 46000000
+            }
+          },
+          {
+            "when": {
+              "video_resolutions": [
+                "1080p"
+              ],
+              "effective_from": "2026-08-14T14:00:00+08:00",
+              "effective_until": "2026-09-17T14:00:00+08:00",
+              "priority": 100
+            },
+            "pricing": {
+              "ark_video_token": 55440000,
+              "ark_video_token_ref": 33120000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedance-2-0-260128",
+      "kind": "video",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_video_token": 46000000,
+        "ark_video_token_ref": 28000000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "在线推理刊例价（无/含视频输入，元/百万视频 token）：480p/720p 46/28，1080p 51/31，4K 26/16",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "仅任务成功后按方舟 completion_tokens 计费。",
+        "tiers": [
+          {
+            "when": {
+              "video_resolutions": [
+                "480p",
+                "720p"
+              ]
+            },
+            "pricing": {
+              "ark_video_token": 46000000,
+              "ark_video_token_ref": 28000000
+            }
+          },
+          {
+            "when": {
+              "video_resolutions": [
+                "1080p"
+              ]
+            },
+            "pricing": {
+              "ark_video_token": 51000000,
+              "ark_video_token_ref": 31000000
+            }
+          },
+          {
+            "when": {
+              "video_resolutions": [
+                "4k"
+              ]
+            },
+            "pricing": {
+              "ark_video_token": 26000000,
+              "ark_video_token_ref": 16000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedance-2-0-mini-260615",
+      "kind": "video",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_video_token": 23000000,
+        "ark_video_token_ref": 14000000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-23",
+      "note": "在线推理刊例价：无视频输入 23 元/百万视频 token，含视频输入 14 元/百万视频 token；480p/720p 于 2026-08-07 14:00 至 2026-09-07 14:00 限时 4 折",
+      "cloud": {
+        "provider": "ark",
+        "billing_note": "仅任务成功后按方舟 completion_tokens 计费；官方限时活动：北京时间 2026-08-07 14:00 至 2026-09-07 14:00。",
+        "tiers": [
+          {
+            "when": {
+              "video_resolutions": [
+                "480p",
+                "720p"
+              ]
+            },
+            "pricing": {
+              "ark_video_token": 23000000,
+              "ark_video_token_ref": 14000000
+            }
+          },
+          {
+            "when": {
+              "video_resolutions": [
+                "480p",
+                "720p"
+              ],
+              "effective_from": "2026-08-07T14:00:00+08:00",
+              "effective_until": "2026-09-07T14:00:00+08:00",
+              "priority": 100
+            },
+            "pricing": {
+              "ark_video_token": 9200000,
+              "ark_video_token_ref": 5600000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3.8-max",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 12000000,
+        "out": 36000000,
+        "cache_read": 1500000,
+        "cache_write": 15000000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "单档 0<Token≤1M，思考/非思考同价；缓存命中（隐式）1.5，显式缓存写入 15 / 命中 1；Batch 5 折",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "百炼官方标准在线推理价；显式缓存写入按 15 元/百万 token",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 12000000,
+              "out": 36000000,
+              "cache_read": 1500000,
+              "cache_write": 15000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3.8-max-prime",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 24000000,
+        "out": 72000000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "单档 0<Token≤1M，无免费额度；为标准档 qwen3.8-max 的 2 倍。官方价目表这一行未单列缓存命中价，故留 0（不按比例推算）",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "优速档；官方未公开缓存价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 24000000,
+              "out": 72000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3.7-plus",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 2000000,
+        "out": 8000000,
+        "cache_read": 400000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "分档：输入 ≤256K 为 2/8（缓存命中 0.4）；256K-1M 为 6/24（缓存命中 1.2）。限时 8 折，单价栏按纪律取标准价",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "按输入 token 数分档；不采用限时折扣",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 262144
+            },
+            "pricing": {
+              "in": 2000000,
+              "out": 8000000,
+              "cache_read": 400000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 262145
+            },
+            "pricing": {
+              "in": 6000000,
+              "out": 24000000,
+              "cache_read": 1200000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3.8-flash",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 800000,
+        "out": 2700000,
+        "cache_read": 100000,
+        "cache_write": 1250000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "单档 0<Token≤1M，思考/非思考同价；缓存命中（隐式）0.1，显式缓存写入 1.25 / 命中 0.1；Batch 5 折",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "百炼官方标准在线推理价；显式缓存写入按 1.25 元/百万 token",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 800000,
+              "out": 2700000,
+              "cache_read": 100000,
+              "cache_write": 1250000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3.7-flash",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 200000,
+        "out": 800000,
+        "cache_read": 40000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "分档：≤32K 为 0.2/0.8（缓存命中 0.04）；32K-256K 为 0.6/2.4（0.12）；256K-1M 为 1.2/4.8（0.24）",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 200000,
+              "out": 800000,
+              "cache_read": 40000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 262144
+            },
+            "pricing": {
+              "in": 600000,
+              "out": 2400000,
+              "cache_read": 120000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 262145
+            },
+            "pricing": {
+              "in": 1200000,
+              "out": 4800000,
+              "cache_read": 240000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3-coder-plus",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 4000000,
+        "out": 16000000,
+        "cache_read": 800000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "分档：≤32K 为 4/16（缓存命中 0.8）；32K-128K 为 6/24；128K-256K 为 10/40；256K-1M 为 20/200",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "按输入 token 数分档；高档缓存价官方表未单列",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 4000000,
+              "out": 16000000,
+              "cache_read": 800000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 6000000,
+              "out": 24000000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073,
+              "max_prompt_tokens": 262144
+            },
+            "pricing": {
+              "in": 10000000,
+              "out": 40000000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 262145
+            },
+            "pricing": {
+              "in": 20000000,
+              "out": 200000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3-vl-plus",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 1000000,
+        "out": 10000000,
+        "cache_read": 200000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "分档：≤32K 为 1/10（缓存命中 0.2）；32K-128K 为 1.5/15（0.3）；128K-256K 为 3/30（0.6）",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 1000000,
+              "out": 10000000,
+              "cache_read": 200000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 1500000,
+              "out": 15000000,
+              "cache_read": 300000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073
+            },
+            "pricing": {
+              "in": 3000000,
+              "out": 30000000,
+              "cache_read": 600000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3-vl-flash",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 150000,
+        "out": 1500000,
+        "cache_read": 30000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "分档：≤32K 为 0.15/1.5（缓存命中 0.03）；32K-128K 为 0.3/3（0.06）；128K-256K 为 0.6/6（0.12）",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "按输入 token 数分档",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 150000,
+              "out": 1500000,
+              "cache_read": 30000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769,
+              "max_prompt_tokens": 131072
+            },
+            "pricing": {
+              "in": 300000,
+              "out": 3000000,
+              "cache_read": 60000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 131073
+            },
+            "pricing": {
+              "in": 600000,
+              "out": 6000000,
+              "cache_read": 120000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3.8-2.4t-a95b",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 12000000,
+        "out": 36000000,
+        "cache_read": 1500000,
+        "cache_write": 15000000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "单档；缓存命中（隐式）1.5，显式缓存写入 15 / 命中 1",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "百炼托管的通义官方开放权重模型；显式缓存写入价 15",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 12000000,
+              "out": 36000000,
+              "cache_read": 1500000,
+              "cache_write": 15000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "qwen3.8-27b",
+      "kind": "text",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "in": 3000000,
+        "out": 12000000,
+        "cache_read": 600000,
+        "cache_write": 3750000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked_at": "2026-09-04",
+      "note": "单档；缓存命中（隐式）0.6，显式缓存写入 3.75 / 命中 0.3",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "百炼托管的通义官方开放权重模型；显式缓存写入价 3.75",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 3000000,
+              "out": 12000000,
+              "cache_read": 600000,
+              "cache_write": 3750000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "wan3.0-video",
+      "kind": "video",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "bailian_video_sec_480p": 300000,
+        "bailian_video_sec_720p": 600000,
+        "bailian_video_sec_1080p": 1200000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/wan3-0-video",
+      "checked_at": "2026-09-04",
+      "note": "北京地域刊例价按输出秒计、按分辨率档：480P 0.30、720P 0.60、1080P 1.20 元/秒；仅 SUCCEEDED 任务计费，开关声音同价",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "阿里云百炼北京地域官方价（docs-provider/bailian-wan3-video.md §6，核对日期 2026-09-04）。仅 SUCCEEDED 任务按 usage.output_video_duration（秒）× usage.SR 所在分辨率档的秒价结算；开关声音同价、有无视频输入同价；FAILED / CANCELED / UNKNOWN 不收费。官方只写「视频总时长 × 单价」，参考视频的输入时长是否另计无从核实，这里刻意不登记 video_input_seconds。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "bailian_video_sec_480p": 300000,
+              "bailian_video_sec_720p": 600000,
+              "bailian_video_sec_1080p": 1200000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "wan3.0-video-prime",
+      "kind": "video",
+      "vendor": "阿里云百炼",
+      "pricing": {
+        "bailian_video_sec_480p": 450000,
+        "bailian_video_sec_720p": 900000,
+        "bailian_video_sec_1080p": 1800000
+      },
+      "source": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime",
+      "checked_at": "2026-09-04",
+      "note": "北京地域刊例价按输出秒计、按分辨率档：480P 0.45、720P 0.90、1080P 1.80 元/秒；仅 SUCCEEDED 任务计费，开关声音同价",
+      "cloud": {
+        "provider": "bailian",
+        "billing_note": "阿里云百炼北京地域官方价（docs-provider/bailian-wan3-video.md §6，核对日期 2026-09-04）。计费口径与 wan3.0-video 相同（仅 SUCCEEDED 任务按输出秒 × 分辨率档秒价），优速版单价为标准版的 1.5 倍。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "bailian_video_sec_480p": 450000,
+              "bailian_video_sec_720p": 900000,
+              "bailian_video_sec_1080p": 1800000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiniMax-M3",
+      "kind": "text",
+      "vendor": "MiniMax",
+      "pricing": {
+        "in": 2100000,
+        "out": 8400000,
+        "cache_read": 420000
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "输入 ≤512k 档；>512k 档 4.2/0.84/16.8；优先服务档 1.5 倍",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站标准档；优先服务加价未登记为可售模式",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 524288
+            },
+            "pricing": {
+              "in": 2100000,
+              "out": 8400000,
+              "cache_read": 420000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 524289
+            },
+            "pricing": {
+              "in": 4200000,
+              "out": 16800000,
+              "cache_read": 840000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiniMax-M2.7",
+      "kind": "text",
+      "vendor": "MiniMax",
+      "pricing": {
+        "in": 2100000,
+        "out": 8400000,
+        "cache_read": 420000,
+        "cache_write": 2625000
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "另有缓存写入价 2.625（Anthropic 面 cache_creation）",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站；Messages cache creation 按 5 分钟写入价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 2100000,
+              "out": 8400000,
+              "cache_read": 420000,
+              "cache_write": 2625000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiniMax-M2.7-highspeed",
+      "kind": "text",
+      "vendor": "MiniMax",
+      "pricing": {
+        "in": 4200000,
+        "out": 16800000,
+        "cache_read": 420000,
+        "cache_write": 2625000
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "高速档；缓存写入 2.625",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站高速档；Messages cache creation 按 5 分钟写入价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 4200000,
+              "out": 16800000,
+              "cache_read": 420000,
+              "cache_write": 2625000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "image-01",
+      "kind": "image",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_image_each": 25000
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站按量价 0.025 元/张",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站同步图片生成按成功张数计费，官方按量价 ¥0.025/张。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_image_each": 25000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "image-01-live",
+      "kind": "image",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_image_each": 25000
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站按量价 0.025 元/张",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站同步图片生成按成功张数计费，官方按量价 ¥0.025/张。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_image_each": 25000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiniMax-H3",
+      "kind": "video",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_video_sec_768p": 500000,
+        "minimax_video_sec_2k": 800000,
+        "minimax_video_image_extra": 200000,
+        "minimax_video_regeneration_sec": 300000,
+        "minimax_video_regeneration_image_extra": 150000,
+        "minimax_context_ir_in": 5800000,
+        "minimax_context_ir_out": 23000000
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站刊例价：视频输出 2K ¥0.80/秒、768P ¥0.50/秒；再生成输出 ¥0.30/秒；参考视频按输入时长×输出分辨率单价计费；输入图片 5 张内免费、超出 ¥0.20/张（再生成 ¥0.15/张）；Context-IR 输入/输出 ¥5.80/¥23.00 每百万 token；输入音频免费",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站官方价（docs-provider/minimax-h3-video.md §7，核对日期 2026-08-08）。三种 task_type 单价不同且共用同一个 model id，所以逐 taskType 单列条目：生成输出 768P ¥0.50/秒、2K ¥0.80/秒；参考视频按【输入】时长收费且单价随【输出】分辨率走（官方例子里输入比输出还贵）；输入图片 5 张内免费、超出生成 ¥0.20/张、再生成 ¥0.15/张；再生成只支持 2K、输出与输入视频均 ¥0.30/秒；Context-IR 按 token 计 ¥5.80 / ¥23.00 每百万。输入音频免费，故无条目。国际站（api.minimax.io）是另一套美元价与独立账号，不能共用本组条目。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_video_sec_768p": 500000,
+              "minimax_video_sec_2k": 800000,
+              "minimax_video_image_extra": 200000,
+              "minimax_video_regeneration_sec": 300000,
+              "minimax_video_regeneration_image_extra": 150000,
+              "minimax_context_ir_in": 5800000,
+              "minimax_context_ir_out": 23000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "speech-2.8-hd",
+      "kind": "audio",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_audio_character": 350
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站按量价 3.5 元/万字符（同步与异步长文本同价，按 usage_characters 计费）",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站语音合成官方价（docs-provider/minimax-speech.md §6，核对日期 2026-08-30）。官方挂牌单位是「元/万字符」，这里换算成每字符单价（unitSize=1）：3.5 元/万字符 = 350000 纳元/字符。**同步 T2A 与异步长文本 T2A Async 同价**，所以不分档；计费数量恒取厂商回报的 usage_characters，平台不自己数字符。国际站（api.minimax.io）是另一套美元价与独立账号，不能共用本组条目。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_audio_character": 350
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "speech-2.8-turbo",
+      "kind": "audio",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_audio_character": 200
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站按量价 2 元/万字符（同步与异步长文本同价，按 usage_characters 计费）",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站语音合成官方价（docs-provider/minimax-speech.md §6，核对日期 2026-08-30）。官方挂牌单位是「元/万字符」，这里换算成每字符单价（unitSize=1）：2 元/万字符 = 200000 纳元/字符。**同步 T2A 与异步长文本 T2A Async 同价**，所以不分档；计费数量恒取厂商回报的 usage_characters，平台不自己数字符。国际站（api.minimax.io）是另一套美元价与独立账号，不能共用本组条目。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_audio_character": 200
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "speech-2.6-hd",
+      "kind": "audio",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_audio_character": 350
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站按量价 3.5 元/万字符（同步与异步长文本同价，按 usage_characters 计费）",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站语音合成官方价（docs-provider/minimax-speech.md §6，核对日期 2026-08-30）。官方挂牌单位是「元/万字符」，这里换算成每字符单价（unitSize=1）：3.5 元/万字符 = 350000 纳元/字符。**同步 T2A 与异步长文本 T2A Async 同价**，所以不分档；计费数量恒取厂商回报的 usage_characters，平台不自己数字符。国际站（api.minimax.io）是另一套美元价与独立账号，不能共用本组条目。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_audio_character": 350
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "speech-2.6-turbo",
+      "kind": "audio",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_audio_character": 200
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站按量价 2 元/万字符（同步与异步长文本同价，按 usage_characters 计费）",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站语音合成官方价（docs-provider/minimax-speech.md §6，核对日期 2026-08-30）。官方挂牌单位是「元/万字符」，这里换算成每字符单价（unitSize=1）：2 元/万字符 = 200000 纳元/字符。**同步 T2A 与异步长文本 T2A Async 同价**，所以不分档；计费数量恒取厂商回报的 usage_characters，平台不自己数字符。国际站（api.minimax.io）是另一套美元价与独立账号，不能共用本组条目。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_audio_character": 200
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "speech-02-hd",
+      "kind": "audio",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_audio_character": 350
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站按量价 3.5 元/万字符（同步与异步长文本同价，按 usage_characters 计费）",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站语音合成官方价（docs-provider/minimax-speech.md §6，核对日期 2026-08-30）。官方挂牌单位是「元/万字符」，这里换算成每字符单价（unitSize=1）：3.5 元/万字符 = 350000 纳元/字符。**同步 T2A 与异步长文本 T2A Async 同价**，所以不分档；计费数量恒取厂商回报的 usage_characters，平台不自己数字符。国际站（api.minimax.io）是另一套美元价与独立账号，不能共用本组条目。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_audio_character": 350
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "speech-02-turbo",
+      "kind": "audio",
+      "vendor": "MiniMax",
+      "pricing": {
+        "minimax_audio_character": 200
+      },
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked_at": "2026-09-03",
+      "note": "国内站按量价 2 元/万字符（同步与异步长文本同价，按 usage_characters 计费）",
+      "cloud": {
+        "provider": "minimax",
+        "billing_note": "MiniMax 国内站语音合成官方价（docs-provider/minimax-speech.md §6，核对日期 2026-08-30）。官方挂牌单位是「元/万字符」，这里换算成每字符单价（unitSize=1）：2 元/万字符 = 200000 纳元/字符。**同步 T2A 与异步长文本 T2A Async 同价**，所以不分档；计费数量恒取厂商回报的 usage_characters，平台不自己数字符。国际站（api.minimax.io）是另一套美元价与独立账号，不能共用本组条目。",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "minimax_audio_character": 200
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ernie-5.1",
+      "kind": "text",
+      "vendor": "百度智能云千帆",
+      "pricing": {
+        "in": 4000000,
+        "out": 18000000
+      },
+      "source": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Blfmc9dlf",
+      "checked_at": "2026-09-03",
+      "note": "输入 ≤32k 档；32k–128k 档 6/22；官方未列缓存价",
+      "cloud": {
+        "provider": "qianfan",
+        "billing_note": "按输入 token 数分档；官方未公开缓存价",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 4000000,
+              "out": 18000000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769
+            },
+            "pricing": {
+              "in": 6000000,
+              "out": 22000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ernie-5.0",
+      "kind": "text",
+      "vendor": "百度智能云千帆",
+      "pricing": {
+        "in": 6000000,
+        "out": 24000000
+      },
+      "source": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Blfmc9dlf",
+      "checked_at": "2026-09-03",
+      "note": "输入 ≤32k 档；32k–128k 档 10/40；官方未列缓存价",
+      "cloud": {
+        "provider": "qianfan",
+        "billing_note": "按输入 token 数分档；官方未公开缓存价",
+        "tiers": [
+          {
+            "when": {
+              "max_prompt_tokens": 32768
+            },
+            "pricing": {
+              "in": 6000000,
+              "out": 24000000
+            }
+          },
+          {
+            "when": {
+              "min_prompt_tokens": 32769
+            },
+            "pricing": {
+              "in": 10000000,
+              "out": 40000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ernie-4.5-turbo-128k",
+      "kind": "text",
+      "vendor": "百度智能云千帆",
+      "pricing": {
+        "in": 800000,
+        "out": 3200000,
+        "cache_read": 200000
+      },
+      "source": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Blfmc9dlf",
+      "checked_at": "2026-09-03",
+      "note": "千帆价格页按元/千 token 挂牌，此处已换算为元/百万 token",
+      "cloud": {
+        "provider": "qianfan",
+        "billing_note": "百度智能云千帆官方价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 800000,
+              "out": 3200000,
+              "cache_read": 200000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ernie-4.5-turbo-vl-32k",
+      "kind": "text",
+      "vendor": "百度智能云千帆",
+      "pricing": {
+        "in": 3000000,
+        "out": 9000000,
+        "cache_read": 750000
+      },
+      "source": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Blfmc9dlf",
+      "checked_at": "2026-09-03",
+      "note": "千帆价格页按元/千 token 挂牌，此处已换算为元/百万 token",
+      "cloud": {
+        "provider": "qianfan",
+        "billing_note": "百度智能云千帆官方价",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 3000000,
+              "out": 9000000,
+              "cache_read": 750000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "hy4-preview",
+      "kind": "text",
+      "vendor": "腾讯云 TokenHub（混元）",
+      "pricing": {
+        "in": 6000000,
+        "out": 18000000,
+        "cache_read": 300000
+      },
+      "source": "https://cloud.tencent.com/document/product/1823/131383",
+      "checked_at": "2026-09-03",
+      "note": "TokenHub 广州站按 token 标准价，元/百万 token",
+      "cloud": {
+        "provider": "hunyuan",
+        "billing_note": "腾讯云 TokenHub 的混元自有模型官方价；未公开缓存价的档位不推算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 6000000,
+              "out": 18000000,
+              "cache_read": 300000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "hy3",
+      "kind": "text",
+      "vendor": "腾讯云 TokenHub（混元）",
+      "pricing": {
+        "in": 1000000,
+        "out": 4000000,
+        "cache_read": 250000
+      },
+      "source": "https://cloud.tencent.com/document/product/1823/131383",
+      "checked_at": "2026-09-03",
+      "note": "TokenHub 广州站按 token 标准价，元/百万 token",
+      "cloud": {
+        "provider": "hunyuan",
+        "billing_note": "腾讯云 TokenHub 的混元自有模型官方价；未公开缓存价的档位不推算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 1000000,
+              "out": 4000000,
+              "cache_read": 250000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "hy-mt2-pro",
+      "kind": "text",
+      "vendor": "腾讯云 TokenHub（混元）",
+      "pricing": {
+        "in": 500000,
+        "out": 2000000
+      },
+      "source": "https://cloud.tencent.com/document/product/1823/131383",
+      "checked_at": "2026-09-03",
+      "note": "官方未列缓存价",
+      "cloud": {
+        "provider": "hunyuan",
+        "billing_note": "腾讯云 TokenHub 的混元自有模型官方价；未公开缓存价的档位不推算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 500000,
+              "out": 2000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "hy-vision-2.0-instruct",
+      "kind": "text",
+      "vendor": "腾讯云 TokenHub（混元）",
+      "pricing": {
+        "in": 7500000,
+        "out": 17500000
+      },
+      "source": "https://cloud.tencent.com/document/product/1823/131383",
+      "checked_at": "2026-09-03",
+      "note": "官方未列缓存价",
+      "cloud": {
+        "provider": "hunyuan",
+        "billing_note": "腾讯云 TokenHub 的混元自有模型官方价；未公开缓存价的档位不推算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 7500000,
+              "out": 17500000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kling-3.0-turbo",
+      "kind": "video",
+      "vendor": "可灵 AI（快手）",
+      "pricing": {
+        "kling_video_sec_720p": 800000,
+        "kling_video_sec_1080p": 1000000
+      },
+      "source": "https://klingai.com/document-api/pricing/base/video",
+      "checked_at": "2026-09-04",
+      "note": "国内站资源包扣减价按输出秒计（1 积分 = 1 元）：恒有声 720P 0.8、1080P 1.0 元/秒；没有 4K 与 audio 开关",
+      "cloud": {
+        "provider": "kling",
+        "billing_note": "可灵国内站资源包扣减价；1 积分按 1 元计，按成功任务的输出秒结算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "kling_video_sec_720p": 800000,
+              "kling_video_sec_1080p": 1000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kling-3.0",
+      "kind": "video",
+      "vendor": "可灵 AI（快手）",
+      "pricing": {
+        "kling_video_sec_720p": 600000,
+        "kling_video_sec_1080p": 800000,
+        "kling_video_sec_4k": 3000000,
+        "kling_video_sec_720p_audio": 900000,
+        "kling_video_sec_1080p_audio": 1200000,
+        "kling_video_sec_4k_audio": 3000000,
+        "kling_video_sec_720p_ref": 900000,
+        "kling_video_sec_1080p_ref": 1200000
+      },
+      "source": "https://klingai.com/document-api/pricing/base/video",
+      "checked_at": "2026-09-04",
+      "note": "国内站资源包扣减价按输出秒计：无声 720P 0.6 / 1080P 0.8 / 4K 3.0，有声（audio=native）0.9 / 1.2 / 3.0，动作控制 0.9 / 1.2 元/秒（4K 不支持动作控制）",
+      "cloud": {
+        "provider": "kling",
+        "billing_note": "可灵国内站资源包扣减价；1 积分按 1 元计，按成功任务的输出秒结算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "kling_video_sec_720p": 600000,
+              "kling_video_sec_1080p": 800000,
+              "kling_video_sec_4k": 3000000,
+              "kling_video_sec_720p_audio": 900000,
+              "kling_video_sec_1080p_audio": 1200000,
+              "kling_video_sec_4k_audio": 3000000,
+              "kling_video_sec_720p_ref": 900000,
+              "kling_video_sec_1080p_ref": 1200000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kling-3.0-omni",
+      "kind": "video",
+      "vendor": "可灵 AI（快手）",
+      "pricing": {
+        "kling_video_sec_720p": 600000,
+        "kling_video_sec_1080p": 800000,
+        "kling_video_sec_4k": 3000000,
+        "kling_video_sec_720p_audio": 800000,
+        "kling_video_sec_1080p_audio": 1000000,
+        "kling_video_sec_4k_audio": 3000000,
+        "kling_video_sec_720p_ref": 900000,
+        "kling_video_sec_1080p_ref": 1200000,
+        "kling_video_sec_4k_ref": 3000000
+      },
+      "source": "https://klingai.com/document-api/pricing/base/video",
+      "checked_at": "2026-09-04",
+      "note": "国内站资源包扣减价按输出秒计：无参考视频 无声 0.6 / 0.8 / 3.0，无参考视频 有声 0.8 / 1.0 / 3.0，含参考视频 0.9 / 1.2 / 3.0 元/秒（720P / 1080P / 4K）",
+      "cloud": {
+        "provider": "kling",
+        "billing_note": "可灵国内站资源包扣减价；1 积分按 1 元计，按成功任务的输出秒结算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "kling_video_sec_720p": 600000,
+              "kling_video_sec_1080p": 800000,
+              "kling_video_sec_4k": 3000000,
+              "kling_video_sec_720p_audio": 800000,
+              "kling_video_sec_1080p_audio": 1000000,
+              "kling_video_sec_4k_audio": 3000000,
+              "kling_video_sec_720p_ref": 900000,
+              "kling_video_sec_1080p_ref": 1200000,
+              "kling_video_sec_4k_ref": 3000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kling-o1",
+      "kind": "video",
+      "vendor": "可灵 AI（快手）",
+      "pricing": {
+        "kling_video_sec_720p": 600000,
+        "kling_video_sec_1080p": 800000,
+        "kling_video_sec_720p_ref": 900000,
+        "kling_video_sec_1080p_ref": 1200000
+      },
+      "source": "https://klingai.com/document-api/pricing/base/video",
+      "checked_at": "2026-09-04",
+      "note": "国内站资源包扣减价按输出秒计：无参考视频 720P 0.6 / 1080P 0.8，含参考视频 0.9 / 1.2 元/秒；只出无声",
+      "cloud": {
+        "provider": "kling",
+        "billing_note": "可灵国内站资源包扣减价；1 积分按 1 元计，按成功任务的输出秒结算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "kling_video_sec_720p": 600000,
+              "kling_video_sec_1080p": 800000,
+              "kling_video_sec_720p_ref": 900000,
+              "kling_video_sec_1080p_ref": 1200000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kling-2.6",
+      "kind": "video",
+      "vendor": "可灵 AI（快手）",
+      "pricing": {
+        "kling_video_sec_720p": 300000,
+        "kling_video_sec_1080p": 500000,
+        "kling_video_sec_1080p_audio": 1000000,
+        "kling_video_sec_720p_ref": 500000,
+        "kling_video_sec_1080p_ref": 800000
+      },
+      "source": "https://klingai.com/document-api/pricing/base/video",
+      "checked_at": "2026-09-04",
+      "note": "国内站资源包扣减价按输出秒计：无声 720P 0.3 / 1080P 0.5，有声仅 1080P 1.0，动作控制 0.5 / 0.8 元/秒；指定音色 1.2 元/秒的档位平台判不出、按未指定记",
+      "cloud": {
+        "provider": "kling",
+        "billing_note": "可灵国内站资源包扣减价；1 积分按 1 元计，按成功任务的输出秒结算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "kling_video_sec_720p": 300000,
+              "kling_video_sec_1080p": 500000,
+              "kling_video_sec_1080p_audio": 1000000,
+              "kling_video_sec_720p_ref": 500000,
+              "kling_video_sec_1080p_ref": 800000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "kling-2.5-turbo",
+      "kind": "video",
+      "vendor": "可灵 AI（快手）",
+      "pricing": {
+        "kling_video_sec_720p": 300000,
+        "kling_video_sec_1080p": 500000
+      },
+      "source": "https://klingai.com/document-api/pricing/base/video",
+      "checked_at": "2026-09-04",
+      "note": "国内站资源包扣减价按输出秒计：无声 720P 0.3 / 1080P 0.5 元/秒；只出无声",
+      "cloud": {
+        "provider": "kling",
+        "billing_note": "可灵国内站资源包扣减价；1 积分按 1 元计，按成功任务的输出秒结算",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "kling_video_sec_720p": 300000,
+              "kling_video_sec_1080p": 500000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "gpt-6-astra",
+      "kind": "text",
+      "vendor": "OpenAI",
+      "pricing": {
+        "in": 67500000,
+        "out": 337500000,
+        "cache_read": 6750000
+      },
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "checked_at": "2026-09-05",
+      "note": "官方 API 标准档 $10.00/$1.00/$50.00（输入/缓存命中/输出，每百万 token），按 6.75 折算。",
+      "cloud": {
+        "provider": "codex",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 67500000,
+              "out": 337500000,
+              "cache_read": 6750000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "kind": "text",
+      "vendor": "OpenAI",
+      "pricing": {
+        "in": 27000000,
+        "out": 135000000,
+        "cache_read": 2700000
+      },
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "checked_at": "2026-09-05",
+      "note": "官方 API 标准档 $4.00/$0.40/$20.00（输入/缓存命中/输出，每百万 token），按 6.75 折算；2026-09-05 核对时已由 $5.00/$0.50/$30.00 下调。",
+      "cloud": {
+        "provider": "codex",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 27000000,
+              "out": 135000000,
+              "cache_read": 2700000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "kind": "text",
+      "vendor": "OpenAI",
+      "pricing": {
+        "in": 13500000,
+        "out": 81000000,
+        "cache_read": 1350000
+      },
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "checked_at": "2026-08-13",
+      "note": "官方 API 标准档 $2.00/$0.20/$12.00，按 6.75 折算；OpenAI 2026-07-30 刚下调过该档（-20%），再核对时留意。",
+      "cloud": {
+        "provider": "codex",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 13500000,
+              "out": 81000000,
+              "cache_read": 1350000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "gpt-5.6-luna",
+      "kind": "text",
+      "vendor": "OpenAI",
+      "pricing": {
+        "in": 1350000,
+        "out": 8100000,
+        "cache_read": 135000
+      },
+      "source": "https://developers.openai.com/api/docs/pricing",
+      "checked_at": "2026-08-13",
+      "note": "官方 API 标准档 $0.20/$0.02/$1.20，按 6.75 折算；OpenAI 2026-07-30 刚下调过该档（-80%），再核对时留意。",
+      "cloud": {
+        "provider": "codex",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 1350000,
+              "out": 8100000,
+              "cache_read": 135000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "grok-4.6",
+      "kind": "text",
+      "vendor": "xAI",
+      "pricing": {
+        "in": 13500000,
+        "out": 40500000,
+        "cache_read": 3375000
+      },
+      "source": "https://docs.x.ai/docs/models",
+      "checked_at": "2026-08-13",
+      "note": "官方 API 标准档（<200K token）$2.00/$0.50/$6.00，按 6.75 折算。xAI 对超 200K 的请求整单按翻倍档计费，设备价目形态不建模长上下文档，超长调用会按标准档少记。",
+      "cloud": {
+        "provider": "xai",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 13500000,
+              "out": 40500000,
+              "cache_read": 3375000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "grok-4.5",
+      "kind": "text",
+      "vendor": "xAI",
+      "pricing": {
+        "in": 13500000,
+        "out": 40500000,
+        "cache_read": 2025000
+      },
+      "source": "https://docs.x.ai/docs/models",
+      "checked_at": "2026-08-13",
+      "note": "官方 API 标准档（<200K token）$2.00/$0.30/$6.00，按 6.75 折算。长上下文档同 grok-4.6 的说明。",
+      "cloud": {
+        "provider": "xai",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 13500000,
+              "out": 40500000,
+              "cache_read": 2025000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "claude-fable-5",
+      "kind": "text",
+      "vendor": "Anthropic",
+      "pricing": {
+        "in": 67500000,
+        "out": 337500000,
+        "cache_read": 6750000,
+        "cache_write": 84375000
+      },
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checked_at": "2026-08-19",
+      "note": "官方 API 标准档 $10.00/$1.00/$50.00（输入/缓存命中/输出，每百万 token），按 6.75 折算；缓存写入按 5 分钟档 1.25 倍输入价 $12.50。",
+      "cloud": {
+        "provider": "claude",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 67500000,
+              "out": 337500000,
+              "cache_read": 6750000,
+              "cache_write": 84375000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "claude-opus-5",
+      "kind": "text",
+      "vendor": "Anthropic",
+      "pricing": {
+        "in": 33750000,
+        "out": 168750000,
+        "cache_read": 3375000,
+        "cache_write": 42187500
+      },
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checked_at": "2026-08-19",
+      "note": "官方 API 标准档 $5.00/$0.50/$25.00，按 6.75 折算；缓存写入 5 分钟档 $6.25。Claude Code 里 opus 别名解析到它。",
+      "cloud": {
+        "provider": "anthropic",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 33750000,
+              "out": 168750000,
+              "cache_read": 3375000,
+              "cache_write": 42187500
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "claude-sonnet-5",
+      "kind": "text",
+      "vendor": "Anthropic",
+      "pricing": {
+        "in": 13500000,
+        "out": 67500000,
+        "cache_read": 1350000,
+        "cache_write": 16875000
+      },
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checked_at": "2026-08-19",
+      "note": "官方 API 标准档 $2.00/$0.20/$10.00，按 6.75 折算；缓存写入 5 分钟档 $2.50。$2/$10 原为发布期引入价，官方已明确它就是标准价，2026-09-01 不再涨到 $3/$15。",
+      "cloud": {
+        "provider": "anthropic",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 13500000,
+              "out": 67500000,
+              "cache_read": 1350000,
+              "cache_write": 16875000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "kind": "text",
+      "vendor": "Anthropic",
+      "pricing": {
+        "in": 6750000,
+        "out": 33750000,
+        "cache_read": 675000,
+        "cache_write": 8437500
+      },
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checked_at": "2026-08-19",
+      "note": "官方 API 标准档 $1.00/$0.10/$5.00，按 6.75 折算；缓存写入 5 分钟档 $1.25。这是官方别名写法。",
+      "cloud": {
+        "provider": "anthropic",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 6750000,
+              "out": 33750000,
+              "cache_read": 675000,
+              "cache_write": 8437500
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "kind": "text",
+      "vendor": "Anthropic",
+      "pricing": {
+        "in": 6750000,
+        "out": 33750000,
+        "cache_read": 675000,
+        "cache_write": 8437500
+      },
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checked_at": "2026-08-19",
+      "note": "与上一条是同一个模型的带日期 Claude API ID，价同。设备按名区分大小写精确匹配、不做别名推断，所以两种官方写法各录一条。",
+      "cloud": {
+        "provider": "claude",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "in": 6750000,
+              "out": 33750000,
+              "cache_read": 675000,
+              "cache_write": 8437500
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedance-2.5",
+      "kind": "video",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_video_token": 70000000,
+        "ark_video_token_ref": 42000000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-12",
+      "note": "在线推理按量价，无限时优惠。2.5 只有 480p/720p 一档输出分辨率（1080p 与 4k 都不支持），单价表里也只列这一档，所以不像 doubao-seedance-2.0 那样有分辨率歧义，含/不含视频输入两个字段正好装得下。含视频输入反而更便宜，不是笔误。另注：输入含视频时官方有「最低 token 用量」下限，短片的实际 token 会高于按时长×像素的估算——设备按厂商回报的 usage.completion_tokens 记账，这条自动吃进去。",
+      "cloud": {
+        "provider": "ark",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "ark_video_token": 70000000,
+              "ark_video_token_ref": 42000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedance-2.0",
+      "kind": "video",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_video_token": 46000000,
+        "ark_video_token_ref": 28000000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-10",
+      "note": "在线推理按量价，录的是 480p/720p 档。官方按输出分辨率分三档（1080p 是 51.00/31.00，4k 是 26.00/16.00 元/百万token），而设备侧只有含/不含视频输入两个字段、装不下分辨率维度；主要出 1080p 或 4k 的现场请在模型页自行改价。含视频输入反而更便宜，不是笔误。",
+      "cloud": {
+        "provider": "ark",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "ark_video_token": 46000000,
+              "ark_video_token_ref": 28000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedance-2.0-fast",
+      "kind": "video",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_video_token": 37000000,
+        "ark_video_token_ref": 22000000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-10",
+      "note": "在线推理按量价，只有 480p/720p 一档，无分辨率歧义。录的是**原价**：官方限时 75 折（北京时间 2026-08-07 14:00 至 2026-09-07 14:00），折后约 27.75 / 16.50 元/百万token；本文件按「目录价 = 刊例价」口径记原价，促销期想按实付记账请在模型页自行改价，促销结束后记得改回。",
+      "cloud": {
+        "provider": "ark",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "ark_video_token": 37000000,
+              "ark_video_token_ref": 22000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedance-2.0-mini",
+      "kind": "video",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_video_token": 23000000,
+        "ark_video_token_ref": 14000000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-10",
+      "note": "在线推理按量价，只有 480p/720p 一档，无分辨率歧义。录的是**原价**：官方限时 4 折（北京时间 2026-08-07 14:00 至 2026-09-07 14:00），折后约 9.20 / 5.60 元/百万token——折扣力度大，促销期按原价记账会把成本记高约 2.5 倍，介意的现场请在模型页改成折后价，促销结束后改回。",
+      "cloud": {
+        "provider": "ark_plan",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "ark_video_token": 23000000,
+              "ark_video_token_ref": 14000000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "doubao-seedream-5.0-lite",
+      "kind": "image",
+      "vendor": "火山方舟",
+      "pricing": {
+        "ark_image_each": 220000
+      },
+      "source": "https://www.volcengine.com/docs/82379/1544106",
+      "checked_at": "2026-08-10",
+      "note": "官方价签按张：输出图 0.22 元/张，输入图免费，组图按实际生成张数计费，所以只配 ark_image_each、不配 ark_image_token（两项相加，再配就是重复计费）。审核未通过的图不计费。官方价格表写作 doubao-seedream-5-0-lite，而真实 Model ID 是带点的这个。",
+      "cloud": {
+        "provider": "ark_plan",
+        "tiers": [
+          {
+            "when": {},
+            "pricing": {
+              "ark_image_each": 220000
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

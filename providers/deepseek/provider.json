@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "deepseek",
+  "display_name": "DeepSeek",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "purpose": "pricing",
+      "notes": "缓存命中与未命中分别定价；核对峰谷作息、币种以及旧模型名的实际映射。"
+    },
+    {
+      "id": "audit-pricing",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

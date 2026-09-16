@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "groq",
+  "display_name": "Groq",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://console.groq.com/docs/openai",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://groq.com/pricing",
+      "purpose": "pricing",
+      "notes": "保留 Groq 服务的请求名、计量项、服务等级；不能套相同开源模型在别处的价格。"
+    },
+    {
+      "id": "audit-models",
+      "url": "https://console.groq.com/docs/models",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",
+  "excluded_request_ids": [
+    "llama-3.3-70b-versatile"
+  ]
+}

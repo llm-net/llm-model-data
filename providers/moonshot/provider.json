@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "moonshot",
+  "display_name": "Moonshot / Kimi",
+  "sources": [
+    {
+      "id": "catalog",
+      "url": "https://platform.kimi.com/docs/models",
+      "purpose": "models",
+      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+    },
+    {
+      "id": "pricing",
+      "url": "https://platform.kimi.com/docs/pricing/chat",
+      "purpose": "pricing",
+      "notes": "开放平台和 Kimi Code 分开；短请求名、日期版本、订阅可用型号分别验证。"
+    },
+    {
+      "id": "kimi-code",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "purpose": "subscription",
+      "notes": "调查入口；可能需要从该页继续寻找本产品确切资料。"
+    },
+    {
+      "id": "audit-pricing-md",
+      "url": "https://platform.kimi.com/docs/pricing/chat.md",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-models-md",
+      "url": "https://platform.kimi.com/docs/models.md",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-kimi-code",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "audit-membership",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/membership.html",
+      "purpose": "billing",
+      "notes": "2026-09-16 全量核对使用的官方来源；结论见本次 evidence。"
+    },
+    {
+      "id": "alignment-moonshot-pricing-policy",
+      "url": "https://platform.kimi.com/docs/pricing/chat.md",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；同平台按量价。"
+    }
+  ],
+  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+}

@@ -1,0 +1,90 @@
+{
+  "input_uncached_tokens": {
+    "unit": "token",
+    "description": "未命中缓存的输入 token，不得与包含缓存的输入总量重复相加"
+  },
+  "input_cached_tokens": {
+    "unit": "token",
+    "description": "缓存读取 token"
+  },
+  "cache_write_5m_tokens": {
+    "unit": "token",
+    "description": "5 分钟 TTL 缓存写入 token"
+  },
+  "cache_write_1h_tokens": {
+    "unit": "token",
+    "description": "1 小时 TTL 缓存写入 token"
+  },
+  "output_tokens": {
+    "unit": "token",
+    "description": "文本输出 token，思考 token 是否已包含以厂商为准"
+  },
+  "image_input_tokens": {
+    "unit": "token",
+    "description": "图片输入 token"
+  },
+  "image_output_tokens": {
+    "unit": "token",
+    "description": "图片输出 token"
+  },
+  "video_output_tokens": {
+    "unit": "token",
+    "description": "厂商视频计费 token，不能用文本 tokenizer 计算"
+  },
+  "audio_input_tokens": {
+    "unit": "token",
+    "description": "音频输入 token"
+  },
+  "audio_output_tokens": {
+    "unit": "token",
+    "description": "音频输出 token"
+  },
+  "generated_images": {
+    "unit": "image",
+    "description": "实际生成图片张数，不是请求期望数量"
+  },
+  "input_images": {
+    "unit": "image",
+    "description": "输入 / 参考图片张数，可按 quantity.included_units 扣除免费张数"
+  },
+  "generated_videos": {
+    "unit": "video",
+    "description": "生成视频条数，不能默认换算成秒"
+  },
+  "video_input_seconds": {
+    "unit": "second",
+    "description": "输入视频时长"
+  },
+  "video_output_seconds": {
+    "unit": "second",
+    "description": "输出视频时长"
+  },
+  "audio_input_seconds": {
+    "unit": "second",
+    "description": "输入音频时长；按小时报价可用 per=3600"
+  },
+  "audio_output_seconds": {
+    "unit": "second",
+    "description": "输出音频时长"
+  },
+  "billable_characters": {
+    "unit": "character",
+    "description": "厂商定义的计费字符，不是 len(text) 或 UTF-8 字节"
+  },
+  "input_utf8_bytes": {
+    "unit": "byte",
+    "description": "输入文本 UTF-8 编码字节数"
+  },
+  "requests": {
+    "unit": "request",
+    "description": "计费调用次数"
+  },
+  "credits": {
+    "unit": "credit",
+    "description": "本产品私有额度单位"
+  },
+  "subscription_fee": {
+    "unit": "subscription",
+    "description": "一份套餐的实际购买 / 续费费用"
+  }
+}
