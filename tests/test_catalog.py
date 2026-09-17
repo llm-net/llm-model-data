@@ -36,6 +36,7 @@ class DataContracts(unittest.TestCase):
         other = deepcopy(self.data)
         other["id"] = "different-product"
         other["models"][0]["usage_prices"]["rules"][0]["rates"][0]["amount"] = "999"
+        other["models"][0]["usage_prices"]["rules"][0]["time_pricing"]["bands"][0]["rates"][0]["amount"] = "999"
         self.check()
         c.check_offering(ROOT, other, self.provider)
         self.assertNotEqual(other["models"][0]["usage_prices"], self.data["models"][0]["usage_prices"])
@@ -637,6 +638,49 @@ class ApprovalFreshness(unittest.TestCase):
         (self.root / "providers/link").symlink_to(self.root / "evidence", target_is_directory=True)
         with self.assertRaisesRegex(c.CatalogError, "symlinks"):
             c.current_files(self.root)
+
+
+class TimePricingContracts(unittest.TestCase):
+    setUp = DataContracts.setUp
+    check = DataContracts.check
+    def test_time_pricing_requires_v2(self):
+        self.data["schema_version"] = 1
+        with self.assertRaisesRegex(c.CatalogError, "schema_version 2"):
+            self.check()
+
+    def test_invalid_schedule_rejected(self):
+        rule = self.data["models"][0]["usage_prices"]["rules"][0]
+        mutations = [
+            lambda tp: tp.update(timezone="UTC"),
+            lambda tp: tp["bands"][1].update(days=[6, 7]),
+            lambda tp: tp["bands"][0].update(days=[1, 1]),
+            lambda tp: tp["bands"][0].update(hours=["23:00-01:00"]),
+            lambda tp: tp["bands"][0].update(hours=["09:00-12:00", "11:00-13:00"]),
+            lambda tp: tp["bands"][1].update(id="peak"),
+            lambda tp: tp["bands"][1].update(rates=tp["bands"][1]["rates"][:1]),
+            lambda tp: tp["bands"][1]["rates"][0].update(amount="-1"),
+        ]
+        original = deepcopy(rule["time_pricing"])
+        for change in mutations:
+            rule["time_pricing"] = deepcopy(original)
+            change(rule["time_pricing"])
+            with self.assertRaises(c.CatalogError):
+                self.check()
+
+    def test_first_band_must_match_projection(self):
+        self.data["models"][0]["usage_prices"]["rules"][0]["rates"][0]["amount"] = "3"
+        with self.assertRaisesRegex(c.CatalogError, "first time band"):
+            self.check()
+
+    def test_weekday_prices_include_all_components(self):
+        for model in self.data["models"]:
+            r = model["usage_prices"]["rules"][0]
+            a, b = r["time_pricing"]["bands"]
+            self.assertEqual(a["days"], [1,2,3,4,5])
+            self.assertEqual(a["hours"], ["09:00-12:00", "14:00-18:00"])
+            self.assertEqual([x["meter"] for x in a["rates"]], [x["meter"] for x in b["rates"]])
+            for peak, off in zip(a["rates"], b["rates"]):
+                self.assertEqual(Decimal(peak["amount"]), 2*Decimal(off["amount"]))
 
 
 if __name__ == "__main__":

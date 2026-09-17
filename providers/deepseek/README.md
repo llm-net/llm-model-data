@@ -16,7 +16,7 @@
 
 ## 当前核价口径
 
-统一保存常规高峰基准，低谷优惠写备注；历史调价留Git，不保存循环作息或并列多档。 本次结论见[核对证据](../../evidence/deepseek/2026-09-16-audit.md)。
+使用 catalog v2 的规则内 time_pricing，完整保存高峰与空闲价格及北京时间作息；历史调价仍留 Git。 最新分时结论见[核对证据](../../evidence/deepseek/2026-09-17-time-pricing.md)。
 
 ## 协议面核对
 

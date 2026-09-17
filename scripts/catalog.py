@@ -90,6 +90,37 @@ def walk_verifications(root, node, source_ids):
             walk_verifications(root, value, source_ids)
 
 
+def check_time_pricing(rule, value, purpose, meters):
+    tp = rule.get("time_pricing")
+    if tp is None:
+        return
+    require(purpose != "plan", "time pricing does not apply to subscription fees")
+    require(tp["timezone"] == "Asia/Shanghai", "unsupported time pricing timezone")
+    bands = tp["bands"]
+    require(2 <= len(bands) <= 12, "time pricing needs 2..12 bands")
+    unique(bands, "id", "time bands")
+    require(rule["rates"] == bands[0]["rates"], "rates must equal first time band")
+    expected = {r["meter"] for r in rule["rates"]}
+    for i, band in enumerate(bands):
+        require(re.fullmatch(r"[a-z0-9_]{1,32}", band["id"]), "invalid time band id")
+        days, hours = band.get("days", []), band.get("hours", [])
+        require(len(days) == len(set(days)) and all(type(d) is int and 1 <= d <= 7 for d in days), "invalid time band weekdays")
+        require(bool(days or hours) == (i < len(bands) - 1), "last time band must be the only unconditional fallback")
+        require(len(hours) <= 8, "too many time band hours")
+        spans = []
+        for h in hours:
+            require(re.fullmatch(r"([01][0-9]|2[0-3]):[0-5][0-9]-(([01][0-9]|2[0-3]):[0-5][0-9]|24:00)", h), "invalid time band hours")
+            start, end = [int(v[:2]) * 60 + int(v[3:]) for v in h.split("-")]
+            require(start < end, "time band hours must not cross midnight")
+            spans.append((start, end))
+        spans.sort()
+        require(all(a[1] <= b[0] for a,b in zip(spans, spans[1:])), "overlapping time band hours")
+        require({r["meter"] for r in band["rates"]} == expected, "time band meter sets differ")
+        flat = {k:v for k,v in rule.items() if k != "time_pricing"}
+        flat["rates"] = band["rates"]
+        check_prices({**value, "rules":[flat]}, purpose, meters)
+
+
 def check_prices(value, purpose, meters=None):
     meters = meters or read_json(ROOT / "schemas/meters.json")
     rules = value["rules"]
@@ -106,6 +137,7 @@ def check_prices(value, purpose, meters=None):
         require((rule["charge_unit"] is not None) == (purpose == "plan"), "charge_unit is required only for plan price")
         if rule["effective_from"] and rule["effective_until"]:
             require(date(rule["effective_from"]) < date(rule["effective_until"]), "invalid effective interval")
+        check_time_pricing(rule, value, purpose, meters)
         unique(rule["rates"], "meter", "rates")
         for rate in rule["rates"]:
             require(rate["meter"] in meters and meters[rate["meter"]]["unit"] == rate["unit"], "meter/unit mismatch")
@@ -278,6 +310,9 @@ def check_offering(root, data, provider):
         if m["alias_of"] is not None:
             require(m["alias_of"] in model_ids and m["alias_of"] != m["id"], "unknown/self model alias")
             aliases[m["id"]] = m["alias_of"]
+        for prices in (m["usage_prices"], m["reference_prices"]):
+            require(data["schema_version"] >= 2 or all("time_pricing" not in r for r in prices["rules"]),
+                    "time_pricing requires schema_version 2")
         check_prices(m["usage_prices"], "usage", meters)
         check_prices(m["reference_prices"], "reference", meters)
         require(sum(len(m[key]["rules"]) for key in ("usage_prices", "reference_prices")) <= 1,
@@ -441,6 +476,7 @@ def summarize_changes(old, new):
                                     ) + f" 周期={r['billing_period']} 税={r['tax']} 基准=" + r.get("selection", json.dumps(r.get("conditions", []), ensure_ascii=False))
                                     + f" 有效期=[{r['effective_from']}, {r['effective_until']})"
                                     + f" 选价时刻={r['time_basis']} 收费事件={r['charge_on']}"
+                                    + (" 分时段=" + json.dumps(r["time_pricing"], ensure_ascii=False) if "time_pricing" in r else "")
                                     for r in value["rules"]
                                 )
                             lines.append(f"  - {field}: {describe(av)} → {describe(bv)}")

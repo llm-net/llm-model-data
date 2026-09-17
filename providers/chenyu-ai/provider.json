@@ -5,15 +5,15 @@
   "sources": [
     {
       "id": "catalog",
-      "url": "https://chenyu.pro/api-docs",
+      "url": "https://chenyu.pro/api-docs/docs/models/",
       "purpose": "models",
-      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+      "notes": "当前模型与价格页；页面通过匿名 public-models 接口读取实时清单。"
     },
     {
       "id": "pricing",
-      "url": "https://chenyu.pro/api-docs",
+      "url": "https://chenyu.pro/api-docs/docs/models/",
       "purpose": "pricing",
-      "notes": "作为独立服务商记录公开模型和价格；不能抄采购厂商价格或某个开发环境模型列表。"
+      "notes": "晨羽AI自身人民币公开售价；精确金额及条件以 public-pricing 机读响应为准，不继承采购厂商价格。"
     },
     {
       "id": "audit-catalog",
@@ -80,7 +80,49 @@
       "url": "https://chenyu.pro/catalog/platform-models.json",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "public-models",
+      "url": "https://chenyu.pro/api/v1/public/models",
+      "purpose": "models",
+      "notes": "匿名实时模型清单：逐型号请求 ID、展示名、模态、协议面、上下文与最大输出；2026-09-17 核对。"
+    },
+    {
+      "id": "public-pricing",
+      "url": "https://chenyu.pro/api/v1/public/models",
+      "purpose": "pricing",
+      "notes": "与模型页同源的公开价格：currency、priceBookVersion、effectiveAt、rates 及 conditions；金额以整数纳元记录。"
+    },
+    {
+      "id": "billing",
+      "url": "https://chenyu.pro/api-docs/docs/billing/",
+      "purpose": "billing",
+      "notes": "本平台按请求发生时刻选价格版本，纳元费用向上取整、各模态计量与异步结算规则。"
+    },
+    {
+      "id": "protocol-videos",
+      "url": "https://chenyu.pro/api-docs/docs/videos/",
+      "purpose": "models",
+      "notes": "视频任务协议、模态和用量字段；型号可用协议以实时 public-models 为准。"
+    },
+    {
+      "id": "protocol-speech",
+      "url": "https://chenyu.pro/api-docs/docs/speech/",
+      "purpose": "models",
+      "notes": "MiniMax T2A 同步 / 异步协议、计费字符字段与异步受理时结算规则。"
+    },
+    {
+      "id": "public-reasoning",
+      "url": "https://chenyu.pro/api/v1/public/models",
+      "purpose": "models",
+      "notes": "晨羽AI逐型号公开 reasoning：支持状态、覆盖范围、协议面控制及默认行为；本轮仅以该平台的发布声明为依据，响应中的原厂核对元数据不当作本产品的验证记录。"
+    },
+    {
+      "id": "reasoning-models",
+      "url": "https://chenyu.pro/api-docs/docs/models/",
+      "purpose": "models",
+      "notes": "模型页说明按协议面展示开关、档位、预算与默认值，原始值不统一换算；未确认不等于不支持。"
     }
   ],
-  "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
+  "notes": "2026-09-17 已核对匿名实时模型与价格，并再次核对新公开的逐型号思考控制。旧 audit / protocol / context 来源保留供历史证据追溯；当前事实以各条 verification 为准。"
 }

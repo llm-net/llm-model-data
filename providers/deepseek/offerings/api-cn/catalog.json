@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "provider_id": "deepseek",
   "id": "api-cn",
   "display_name": "DeepSeek / api-cn",
@@ -42,7 +42,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "统一采用北京时间工作日高峰标价；低谷半价仅备注，不按调用时间切换。",
+            "selection": "北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -70,28 +70,92 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-16T18:11:35.617731Z",
               "source_ids": [
-                "audit-pricing"
+                "pricing"
               ],
-              "evidence": "evidence/deepseek/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
+              "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。",
             "time_basis": "unknown",
-            "charge_on": "unknown"
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.04",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.02",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-16T18:11:35.617731Z",
           "source_ids": [
-            "audit-pricing"
+            "pricing"
           ],
-          "evidence": "evidence/deepseek/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
+          "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -294,7 +358,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "统一采用北京时间工作日高峰标价；低谷半价仅备注，不按调用时间切换。",
+            "selection": "北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -322,28 +386,92 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-16T18:11:35.617731Z",
               "source_ids": [
-                "audit-pricing"
+                "pricing"
               ],
-              "evidence": "evidence/deepseek/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
+              "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。",
             "time_basis": "unknown",
-            "charge_on": "unknown"
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "9",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.30",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "27",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "4.5",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.15",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "13.5",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-16T18:11:35.617731Z",
           "source_ids": [
-            "audit-pricing"
+            "pricing"
           ],
-          "evidence": "evidence/deepseek/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
+          "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -545,7 +673,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "统一采用北京时间工作日高峰标价；低谷半价仅备注，不按调用时间切换。",
+            "selection": "北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -573,28 +701,92 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-16T18:11:35.617731Z",
               "source_ids": [
-                "audit-pricing"
+                "pricing"
               ],
-              "evidence": "evidence/deepseek/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
+              "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。",
             "time_basis": "unknown",
-            "charge_on": "unknown"
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.04",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.02",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-16T18:11:35.617731Z",
           "source_ids": [
-            "audit-pricing"
+            "pricing"
           ],
-          "evidence": "evidence/deepseek/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
+          "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -693,7 +885,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "统一采用北京时间工作日高峰标价；低谷半价仅备注，不按调用时间切换。",
+            "selection": "北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -721,28 +913,92 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-16T18:11:35.617731Z",
               "source_ids": [
-                "audit-pricing"
+                "pricing"
               ],
-              "evidence": "evidence/deepseek/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
+              "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。",
             "time_basis": "unknown",
-            "charge_on": "unknown"
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.04",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.02",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-16T18:11:35.617731Z",
           "source_ids": [
-            "audit-pricing"
+            "pricing"
           ],
-          "evidence": "evidence/deepseek/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
+          "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。"
       },
       "reference_prices": {
         "status": "not_applicable",

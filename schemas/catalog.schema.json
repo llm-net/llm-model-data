@@ -3,7 +3,10 @@
   "additionalProperties": false,
   "properties": {
     "schema_version": {
-      "const": 1
+      "enum": [
+        1,
+        2
+      ]
     },
     "provider_id": {
       "type": "string",
@@ -373,6 +376,9 @@
           "type": "string",
           "minLength": 1,
           "description": "唯一估算基准的选择口径，不是运行时条件"
+        },
+        "time_pricing": {
+          "$ref": "#/$defs/time_pricing"
         }
       },
       "required": [
@@ -940,6 +946,115 @@
         "verification",
         "notes"
       ]
+    },
+    "time_pricing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "timezone",
+        "bands"
+      ],
+      "properties": {
+        "timezone": {
+          "const": "Asia/Shanghai"
+        },
+        "bands": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "rates"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,32}$"
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "days": {
+                "type": "array",
+                "maxItems": 7,
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 7
+                }
+              },
+              "hours": {
+                "type": "array",
+                "maxItems": 8,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]-(([01][0-9]|2[0-3]):[0-5][0-9]|24:00)$"
+                }
+              },
+              "rates": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/rate"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": 1
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "models": {
+            "items": {
+              "properties": {
+                "usage_prices": {
+                  "properties": {
+                    "rules": {
+                      "items": {
+                        "not": {
+                          "required": [
+                            "time_pricing"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "reference_prices": {
+                  "properties": {
+                    "rules": {
+                      "items": {
+                        "not": {
+                          "required": [
+                            "time_pricing"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }

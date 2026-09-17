@@ -18,7 +18,7 @@
 - 金额用原币种十进制字符串，禁止浮点和默认美元折人民币。免费必须有明确零价和证据。
 - needs_review 旧资料只提供线索。verified 表示本次逐项核对官方资料，不表示真人批准或真实 Key 实调。
 - 官方生效时间未知就写 null，不能用抓取日期替代；抓不到不等于下线。Git 历史保留沿革。
-- 每个平台每个产品的每个模型最多一组价格；输入/缓存/输出是分量。禁止按时间、上下文、画质、路由供应商细分规则。selection写选定标准档；历史价格留Git，未来调价写证据待到期复核。见docs/PRICING.md。
+- 每个平台每个产品的每个模型最多一组价格；输入/缓存/输出是分量。允许规则内 `time_pricing` 表达循环时段（catalog schema_version=2）；仍不按上下文、画质、路由供应商细分规则。selection写选定标准档；历史价格留Git，未来调价写证据待到期复核。见docs/PRICING.md。
 - 多模态逐项记录数量来源、计量单位、输入 / 输出、免费量和取整。字符、UTF-8 字节、音频秒、视频 token 不可互换；单位词汇见 schemas/meters.json。
 - 更新前检查 `schemas/excluded-providers.json` 与 provider.json 的 `excluded_request_ids`：硅基流动（siliconflow）与 Together AI（together）已由用户整家删除，未经用户明确变更不得恢复。服务商及型号排除由校验器强制检查，历史证据与导入快照不能覆盖此决定。
 - 聚合平台先读 docs/COLLECTION.md；catalog就是维护清单，不全量灌入、不维护端点或额外收录上限。OpenRouter取本平台模型级pricing，不用原厂价补缺项。

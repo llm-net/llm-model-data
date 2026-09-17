@@ -1,4 +1,4 @@
-# 数据模型 v1
+# 数据模型 v1 / v2
 
 ## 身份
 
@@ -39,7 +39,7 @@ usage 的 basis 只允许 public_list / provider_credit_rate；reference 只允�
 - tax：included / excluded / unknown，不按币种猜税。
 - verification：规则自己的来源、核对时间和证据。
 
-每个模型 usage_prices 与 reference_prices 合计最多一条 rule，且没有 conditions、schedules、routes。保留 rules 数组是格式容器，maxItems=1，不允许借此恢复多档。每个套餐也只存一组标准月付价；不同档位分别建plan。
+每个模型 usage_prices 与 reference_prices 合计最多一条 rule，且没有 conditions、schedules、routes；v2 唯一新增的条件是规则内 time_pricing。保留 rules 数组是格式容器，maxItems=1，不允许借此增加并列规则。每个套餐也只存一组标准月付价；不同档位分别建plan。
 
 一条rule里的rates是可相加的不同计费分量。缓存读取、未命中输入和缓存写入不得重复统计同一批token。未记录的费率分量是未知，不能当作0。
 
@@ -68,3 +68,7 @@ v1 已正式发布。协议 assessment 为可选元数据扩展，旧 v1 仍可�
 ## 排除项
 
 provider.json可有excluded_request_ids字符串数组；用户明确排除的请求ID不得重新收录。schemas/excluded-providers.json 保存整家服务商排除决定，当前包含硅基流动与 Together AI；无论模型是否仍在服务均拒绝恢复。排除项变更随数据审阅。
+
+## 分时价格兼容
+
+catalog schema_version=2 才允许 rule.time_pricing；schema_version=1 仍可读取固定价历史。旧消费者必须拒绝 v2，不能忽略时段后按固定价计费。time_pricing 的时区、按序匹配、兜底与首档投影规则见 [PRICING.md](PRICING.md)。所有金额仍是原币种十进制字符串，核对证据由所在 rule 提供。
