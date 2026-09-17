@@ -26,3 +26,7 @@ API 与 Claude Code 订阅分开；缓存读和缓存写不同，写入 TTL 也�
 ## 上下文长度核对
 
 新增及每次更新模型必须按 [CONTEXT.md](../../docs/CONTEXT.md) 查询本产品官方窗口，包含全部订阅型号。填写 `context_window_tokens` 与独立 `context_assessment`，记录单位及套餐 / 扩展模式条件；未知写原因并进入审阅报告，不从同名原厂或其他产品继承。
+
+## Fable 目录完整性
+
+Fable 5.1 和 Fable 5 同时维护 API 按量记录与 Claude Code 独立参考价；只在订阅中有价不能代表 API 已收录。5.1 缓存读使用独立官方报价，不按其他型号的输入倍率推算。基准统一选择 5 分钟缓存写入，见[2026-09-17 核对](../../evidence/anthropic/2026-09-17-prices-and-names.md)。

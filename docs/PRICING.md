@@ -46,10 +46,14 @@ Codex统一采用OpenAI API现金标价；GLM Coding Plan采用智谱API现金�
 
 ## API短名对齐日期版
 
-用户指定：方舟doubao-seedance-2.5、2.0、2.0-fast，以及千帆deepseek-v4-pro、deepseek-v4-flash，价格参考同平台同系列最新日期后缀版本。
+用户指定：方舟doubao-seedance-2.5、2.0、2.0-fast、2.0-mini，以及千帆deepseek-v4-pro、deepseek-v4-flash，价格参考同平台同系列最新日期后缀版本。
 
-当前选取：Seedance分别为260628、260128、fast-260128；千帆Pro为0813、Flash为0731。后续从官方目录确认完整日期再比较，不跨系列选版本。短名保留不改请求ID，价格放reference_prices，reference_origin写选定日期版。估价映射不声明实际调用路由等价。
+当前选取：Seedance分别为260628、260128、fast-260128、mini-260615；千帆Pro为0813、Flash为0731。后续从官方目录确认完整日期再比较，不跨系列选版本。已有短名保留请求ID，新条目请求名未证实则为 null；价格放reference_prices，reference_origin写选定日期版。估价映射不声明实际调用路由等价。
 
 ## 聚合平台
 
 OpenRouter使用公开模型目录该行的pricing。硅基流动与 Together AI 已整家排除，不再更新其价格。仅保留模型级估价，不维护路由供应端。具体收录方式见[COLLECTION.md](COLLECTION.md)。
+
+## Seedance 标准价与促销示例
+
+Seedance 四个系列均保存显式 `catalog_model` 来源，按量短名与 Agent Plan 独立存价。标准基准为在线、720p、无参考视频、非限时优惠刊例价；Mini 23 元/百万视频 token 不应被促销的“约 0.2 元/秒”替换。按任务 `usage.completion_tokens` 取量，只在成功生成时收费；含参考视频的单价与最低用量不能套入这一基准。详见[核对记录](../evidence/ark/2026-09-17-prices-and-names.md)。

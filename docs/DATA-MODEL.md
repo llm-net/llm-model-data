@@ -72,3 +72,29 @@ provider.json可有excluded_request_ids字符串数组；用户明确排除的�
 ## 分时价格兼容
 
 catalog schema_version=2 才允许 rule.time_pricing；schema_version=1 仍可读取固定价历史。旧消费者必须拒绝 v2，不能忽略时段后按固定价计费。time_pricing 的时区、按序匹配、兜底与首档投影规则见 [PRICING.md](PRICING.md)。所有金额仍是原币种十进制字符串，核对证据由所在 rule 提供。
+
+## 名称匹配与结构化参考来源
+
+查找先指定 provider / offering，再按 `id` 或非空 `request_id` 精确匹配，区分大小写。两字段不能在不同模型间冲突。不自动替换点号、连字符或斜杠，不删除日期后缀，不从 alias_of 或价格来源改写请求名。按本地 ID 查到价格不代表该 ID 能直接发送给厂商。
+
+参考对象已在仓库按量目录中维护时，追加 `reference_origin.catalog_model`：`provider_id`、`offering_id`、`model_id`、`selection`（`exact` / `latest_dated`）。这是可选元数据扩展，旧 URL 引用仍可读；校验目标完整身份、已核对按量价、币种、计价时间、收费事件、有效期、分时规则、数字和数量口径一致。独立价格仍完整保存，来源不供应缺失字段。
+
+`latest_dated` 只允许同平台、本条本地 ID 对应系列的 `-YYMMDD` 版本，按 2000–2099 年实际日期取本目录最新一版。Fast / Mini 属于不同系列；不根据返回顺序、价格或全局同名猜来源。官方目录完整性仍需人工核对，脚本不能发现尚未收录的线上新版本。
+
+缺目标、漏价格分量、来源改价、日期版变新都要求重新核对。参考链不能把另一条参考价充当按量来源。关系不提供运行时继承，不声明路由等价。新 schema 兼容历史记录；旧版严格 schema 消费者可能拒绝新增元数据，需更新读取器后再接入。不改既有字段语义或历史版本正文。
+
+例：
+
+```json
+{
+  "url": "https://www.volcengine.com/docs/82379/1544106",
+  "subject": "doubao-seedance-2-0-mini-260615",
+  "reason": "同平台同系列最新日期版，仅作估价参考。",
+  "catalog_model": {
+    "provider_id": "ark",
+    "offering_id": "api-cn",
+    "model_id": "doubao-seedance-2-0-mini-260615",
+    "selection": "latest_dated"
+  }
+}
+```

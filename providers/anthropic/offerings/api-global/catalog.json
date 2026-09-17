@@ -596,6 +596,380 @@
           "notes": "官方型号表窗口；Claude 文档的窗口记法采用十进制（1 million tokens，200 表示 200,000）。保留 API 产品范围。"
         }
       }
+    },
+    {
+      "id": "claude-fable-5-1",
+      "request_id": "claude-fable-5-1",
+      "display_name": "Claude Fable 5.1",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-17T10:30:47.945348+00:00",
+        "source_ids": [
+          "repair-claude-fable-5-1"
+        ],
+        "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准 API、缓存写入采用5分钟TTL；不展开Batch、Fast或1小时缓存写入。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.25",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "50",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "12.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-17T10:30:47.945348+00:00",
+              "source_ids": [
+                "pricing",
+                "repair-claude-fable-5-1"
+              ],
+              "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-17T10:30:47.945348+00:00",
+          "source_ids": [
+            "pricing",
+            "repair-claude-fable-5-1"
+          ],
+          "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/anthropic/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方 API 已列出的独立型号；Fable 5 为 active legacy，Fable 5.1 为 latest。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "source_ids": [
+              "repair-claude-fable-5-1",
+              "protocol-chat",
+              "reasoning-claude-effort"
+            ],
+            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "Messages 型号示例与官方 Chat 兼容层已核对；未发现 Responses。Chat 不支持缓存，能力受限。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "API 顶层 output_config.effort；五档均支持，默认 high；不是 token 硬预算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "source_ids": [
+              "repair-claude-fable-5-1",
+              "reasoning-claude-effort"
+            ],
+            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本型号 API 自适应思考始终开启；已核对 Messages 五档 effort，Chat 具体控制与 Fable 5.1 逐消息 beta 控制未完整登记。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1M tokens / 1 million token context window",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "source_ids": [
+              "repair-claude-fable-5-1",
+              "repair-context",
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "型号规格为 1M；官方 Code Extended context 明确 Fable 5.1 / 5 在 Anthropic API 默认 1 million，按十进制记 1000000。最大输出只查到 128K，不猜精确整数。"
+        }
+      }
+    },
+    {
+      "id": "claude-fable-5",
+      "request_id": "claude-fable-5",
+      "display_name": "Claude Fable 5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-17T10:30:47.945348+00:00",
+        "source_ids": [
+          "repair-claude-fable-5"
+        ],
+        "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准 API、缓存写入采用5分钟TTL；不展开Batch、Fast或1小时缓存写入。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "50",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "12.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-17T10:30:47.945348+00:00",
+              "source_ids": [
+                "pricing",
+                "repair-claude-fable-5"
+              ],
+              "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-17T10:30:47.945348+00:00",
+          "source_ids": [
+            "pricing",
+            "repair-claude-fable-5"
+          ],
+          "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/anthropic/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方 API 已列出的独立型号；Fable 5 为 active legacy，Fable 5.1 为 latest。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "source_ids": [
+              "repair-claude-fable-5",
+              "protocol-chat",
+              "reasoning-claude-effort"
+            ],
+            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "Messages 型号示例与官方 Chat 兼容层已核对；未发现 Responses。Chat 不支持缓存，能力受限。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "API 顶层 output_config.effort；五档均支持，默认 high；不是 token 硬预算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "source_ids": [
+              "repair-claude-fable-5",
+              "reasoning-claude-effort"
+            ],
+            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本型号 API 自适应思考始终开启；已核对 Messages 五档 effort，Chat 具体控制与 Fable 5.1 逐消息 beta 控制未完整登记。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1M tokens / 1 million token context window",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "source_ids": [
+              "repair-claude-fable-5",
+              "repair-context",
+              "context-claude-code"
+            ],
+            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "型号规格为 1M；官方 Code Extended context 明确 Fable 5.1 / 5 在 Anthropic API 默认 1 million，按十进制记 1000000。最大输出只查到 128K，不猜精确整数。"
+        }
+      }
     }
   ],
   "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"

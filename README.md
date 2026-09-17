@@ -66,3 +66,13 @@ python3 -m venv .venv
 1. 跨平台 / 产品即使同名同价，也完整重复记录，不做价格继承。
 2. 未知不是免费；订阅统一按同平台按量价、其次开发方价格作参考，参考消耗不是额外应付金额；套餐费不除以额度冒充 token 单价。
 3. 允许部分收录，但未知、缺失、未核对必须明示；消费者不能把 needs_review 当现行收费依据。
+
+## 按完整身份查价
+
+```bash
+.venv/bin/python scripts/catalog.py lookup --provider ark --offering api-cn --model doubao-seedance-2-0-mini
+.venv/bin/python scripts/catalog.py lookup --provider ark --offering api-cn --model doubao-seedance-2-0-mini-260615
+.venv/bin/python scripts/catalog.py lookup --provider ark --offering agent-plan-cn --model doubao-seedance-2.0-mini
+```
+
+返回完整独立条目和核对状态。指定产品内同时支持精确本地 ID 和已登记的 request_id。短名估价与日期版请求身份分开；request_id=null 不能当作可调用。不会全局归一名称、跟随价格来源改写请求或跨平台补价。来源关系校验与历史兼容见[数据模型](docs/DATA-MODEL.md)。

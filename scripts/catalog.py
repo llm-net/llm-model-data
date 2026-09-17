@@ -268,6 +268,12 @@ def check_offering(root, data, provider):
     model_ids = unique(data["models"], "id", "models")
     requests = [m["request_id"] for m in data["models"] if m["request_id"] is not None]
     require(len(requests) == len(set(requests)), "duplicate request_id within offering")
+    # A local ID and an official request ID share the lookup namespace.
+    names = {}
+    for model in data["models"]:
+        for name in {model["id"], model["request_id"]} - {None}:
+            require(name not in names or names[name] == model["id"], "ambiguous model lookup name")
+            names[name] = model["id"]
     aliases = {}
     meters = read_json(root / "schemas/meters.json")
     faces = read_json(root / "schemas/protocol-faces.json")
@@ -336,6 +342,63 @@ def check_offering(root, data, provider):
                     require(re.fullmatch(r"P(?:[1-9][0-9]*[DWMY]|T[1-9][0-9]*[HMS])", w["duration"]), "unsupported quota duration")
 
 
+def lookup_model(catalogs, provider_id, offering_id, name):
+    """Exact, product-scoped lookup; never rewrite or infer a request ID."""
+    matches = [m for doc in catalogs
+               if (doc["provider_id"], doc["id"]) == (provider_id, offering_id)
+               for m in doc["models"] if name in (m["id"], m["request_id"])]
+    require(len(matches) == 1, "model lookup must have exactly one match")
+    return matches[0]
+
+
+def latest_dated_model(models, family):
+    """Only explicit family-YYMMDD IDs in this catalog, using calendar dates."""
+    candidates = []
+    for model in models:
+        match = re.fullmatch(re.escape(family) + r"-(\d{6})", model["id"])
+        if not match:
+            continue
+        try:
+            date = datetime.strptime("20" + match[1], "%Y%m%d").date()
+        except ValueError as exc:
+            raise CatalogError("invalid model revision date") from exc
+        candidates.append((date, model))
+    require(candidates, "no dated model in exact family")
+    return max(candidates, key=lambda item: item[0])[1]
+
+
+def check_reference_targets(catalogs):
+    """Links validate independently stored prices; they never supply missing rates."""
+    offerings = {(d["provider_id"], d["id"]): d for d in catalogs}
+    for doc in catalogs:
+        for model in doc["models"]:
+            for rule in model["reference_prices"]["rules"]:
+                origin = rule["reference_origin"]
+                target = origin.get("catalog_model")
+                if target is None:
+                    continue  # Historical/external references still use URL + subject.
+                key = (target["provider_id"], target["offering_id"])
+                require(key in offerings, "reference target offering missing")
+                source_doc = offerings[key]
+                require(source_doc["kind"] == "pay_as_you_go", "reference target must be pay-as-you-go")
+                source = next((m for m in source_doc["models"] if m["id"] == target["model_id"]), None)
+                require(source is not None, "reference target model missing")
+                require(origin["subject"] in (source["id"], source["request_id"]), "reference subject/target mismatch")
+                prices = source["usage_prices"]
+                require(prices["status"] == "published" and prices["verification"]["status"] == "verified"
+                        and len(prices["rules"]) == 1, "reference target needs verified usage prices")
+                source_rule = prices["rules"][0]
+                require(source_rule["verification"]["status"] == "verified", "reference target rule unverified")
+                if target["selection"] == "latest_dated":
+                    require(target["provider_id"] == doc["provider_id"], "latest dated reference cannot cross providers")
+                    latest = latest_dated_model(source_doc["models"], model["id"])
+                    require(source["id"] == latest["id"], "reference target is not latest dated model in exact family")
+                for field in ("currency", "tax", "time_basis", "charge_on", "effective_from", "effective_until", "time_pricing"):
+                    require(rule.get(field) == source_rule.get(field), f"reference {field} drift: {model['id']}")
+                rates = lambda r: sorted(r["rates"], key=lambda rate: rate["meter"])
+                require(rates(rule) == rates(source_rule), f"reference rates drift: {model['id']}")
+
+
 def validate(root=ROOT):
     validators = {}
     for kind in ("provider", "catalog"):
@@ -353,6 +416,7 @@ def validate(root=ROOT):
     provider_files = sorted((root / "providers").glob("*/provider.json"))
     require(provider_files, "no providers")
     allowed_json = set(provider_files)
+    catalogs = []
     for p in provider_files:
         provider = read_json(p)
         require(provider["id"] not in read_json(root / "schemas/excluded-providers.json"),
@@ -371,6 +435,7 @@ def validate(root=ROOT):
                 validators["catalog"].validate(data)
                 require(data["id"] == f.parent.name, "offering directory mismatch")
                 check_offering(root, data, provider)
+                catalogs.append(data)
             except Exception as exc:
                 raise CatalogError(f"{f.relative_to(root)}: {exc}") from exc
             stats["offerings"] += 1
@@ -384,6 +449,7 @@ def validate(root=ROOT):
                 stats["models_" + m["verification"]["status"]] += 1
                 for purpose in ("usage_prices", "reference_prices"):
                     stats[purpose + "_" + m[purpose]["status"]] += 1
+    check_reference_targets(catalogs)
     require(set((root / "providers").rglob("*.json")) == allowed_json, "unrecognized/orphan JSON under providers")
     imp = read_json(root / "evidence/imports/manifest.json")
     for item in imp["inputs"].values():
@@ -476,6 +542,7 @@ def summarize_changes(old, new):
                                     ) + f" 周期={r['billing_period']} 税={r['tax']} 基准=" + r.get("selection", json.dumps(r.get("conditions", []), ensure_ascii=False))
                                     + f" 有效期=[{r['effective_from']}, {r['effective_until']})"
                                     + f" 选价时刻={r['time_basis']} 收费事件={r['charge_on']}"
+                                    + (" 参考来源=" + json.dumps(r["reference_origin"], ensure_ascii=False) if r["reference_origin"] else "")
                                     + (" 分时段=" + json.dumps(r["time_pricing"], ensure_ascii=False) if "time_pricing" in r else "")
                                     for r in value["rules"]
                                 )
@@ -559,6 +626,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("validate")
+    lookup = commands.add_parser("lookup", help="exact lookup by local ID or official request ID")
+    lookup.add_argument("--provider", required=True)
+    lookup.add_argument("--offering", required=True)
+    lookup.add_argument("--model", required=True)
     r = commands.add_parser("review")
     r.add_argument("--base", required=True, help="commit from before the update")
     c = commands.add_parser("check-candidate")
@@ -567,6 +638,10 @@ def main():
     try:
         if args.command == "validate":
             print(json.dumps(validate(), ensure_ascii=False, indent=2))
+        elif args.command == "lookup":
+            validate()
+            catalogs = [read_json(p) for p in sorted((ROOT / "providers").glob("*/offerings/*/catalog.json"))]
+            print(json.dumps(lookup_model(catalogs, args.provider, args.offering, args.model), ensure_ascii=False, indent=2))
         elif args.command == "review":
             print("Draft candidate:", review(ROOT, args.base))
             print("Review .review/REVIEW.md and .review/diff.patch; no publication performed.")

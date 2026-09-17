@@ -337,6 +337,9 @@
                 "reason": {
                   "type": "string",
                   "minLength": 1
+                },
+                "catalog_model": {
+                  "$ref": "#/$defs/catalog_model_reference"
                 }
               },
               "required": [
@@ -1008,6 +1011,37 @@
           }
         }
       }
+    },
+    "catalog_model_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "显式按量价格来源，用于检查独立保存的数字；不是请求路由别名或运行时继承。",
+      "properties": {
+        "provider_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "offering_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "model_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "selection": {
+          "enum": [
+            "exact",
+            "latest_dated"
+          ]
+        }
+      },
+      "required": [
+        "provider_id",
+        "offering_id",
+        "model_id",
+        "selection"
+      ]
     }
   },
   "allOf": [

@@ -645,12 +645,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-17T10:30:47.945348+00:00",
         "source_ids": [
           "audit-rendered-agent"
         ],
-        "evidence": "evidence/ark/2026-09-16-audit.md",
-        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+        "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -668,6 +668,11 @@
         "status": "published",
         "rules": [
           {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、720p、输入不含参考视频、非限时优惠的刊例价。",
             "rates": [
               {
                 "meter": "video_output_tokens",
@@ -683,48 +688,53 @@
                   "minimum_units": null,
                   "rounding": "unknown",
                   "increment": null,
-                  "notes": "使用厂商视频计费token；不能换成文本token。"
+                  "notes": "使用任务返回的 usage.completion_tokens 视频计费 token，不是秒或文本 token。本基准仅适用无参考视频；含参考视频时用量可能包含输入视频并有最低用量，需另核对应单价，不能继续套此基准。"
                 }
               }
             ],
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "优先同平台按量价。 参考对象：doubao-seedance-2-5-260628。按用户规则，短名估价对齐同系列最新日期版本；这不声明官方路由别名。 参考对象：doubao-seedance-2-5-260628。720p无参考视频的常规标价。",
             "effective_from": null,
             "effective_until": null,
             "billing_period": null,
             "charge_unit": null,
-            "time_basis": "unknown",
-            "charge_on": "unknown",
-            "id": "baseline",
-            "basis": "reference",
             "reference_origin": {
               "url": "https://www.volcengine.com/docs/82379/1544106",
               "subject": "doubao-seedance-2-5-260628",
-              "reason": "优先同平台按量价。"
+              "reason": "同平台公开按量基准，完整独立保存；关系只用于估价检查，不声明路由别名。",
+              "catalog_model": {
+                "provider_id": "ark",
+                "offering_id": "api-cn",
+                "model_id": "doubao-seedance-2-5-260628",
+                "selection": "latest_dated"
+              }
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-09-17T10:30:47.945348+00:00",
               "source_ids": [
-                "alignment-ark-rendered-pricing"
+                "pricing",
+                "catalog",
+                "protocol-video"
               ],
-              "evidence": "evidence/ark/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+            "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
+            "time_basis": "unknown",
+            "charge_on": "success"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-09-17T10:30:47.945348+00:00",
           "source_ids": [
-            "alignment-ark-rendered-pricing"
+            "pricing",
+            "catalog",
+            "protocol-video"
           ],
-          "evidence": "evidence/ark/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+        "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。"
       },
       "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
       "capabilities": {
@@ -741,14 +751,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
             "source_ids": [
-              "protocol-models",
+              "protocol-agent",
               "protocol-video",
-              "protocol-agent"
+              "audit-rendered-agent"
             ],
-            "evidence": "evidence/ark/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
           "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
         },
@@ -759,9 +769,12 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/ark/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-agent",
+              "audit-rendered-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次检查 Agent Plan 支持表及接入文档，未取得视频型号思考参数。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
         },
@@ -770,13 +783,12 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:00:23.368Z",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
             "source_ids": [
-              "context-ark-models",
               "context-ark-agent"
             ],
-            "evidence": "evidence/ark/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
           "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
@@ -797,12 +809,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-17T10:30:47.945348+00:00",
         "source_ids": [
           "audit-rendered-agent"
         ],
-        "evidence": "evidence/ark/2026-09-16-audit.md",
-        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+        "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -820,6 +832,11 @@
         "status": "published",
         "rules": [
           {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、720p、输入不含参考视频、非限时优惠的刊例价。",
             "rates": [
               {
                 "meter": "video_output_tokens",
@@ -835,48 +852,53 @@
                   "minimum_units": null,
                   "rounding": "unknown",
                   "increment": null,
-                  "notes": "使用厂商视频计费token；不能换成文本token。"
+                  "notes": "使用任务返回的 usage.completion_tokens 视频计费 token，不是秒或文本 token。本基准仅适用无参考视频；含参考视频时用量可能包含输入视频并有最低用量，需另核对应单价，不能继续套此基准。"
                 }
               }
             ],
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "优先同平台按量价。 参考对象：doubao-seedance-2-0-260128。按用户规则，短名估价对齐同系列最新日期版本；这不声明官方路由别名。 参考对象：doubao-seedance-2-0-260128。720p无参考视频的常规标价。",
             "effective_from": null,
             "effective_until": null,
             "billing_period": null,
             "charge_unit": null,
-            "time_basis": "unknown",
-            "charge_on": "unknown",
-            "id": "baseline",
-            "basis": "reference",
             "reference_origin": {
               "url": "https://www.volcengine.com/docs/82379/1544106",
               "subject": "doubao-seedance-2-0-260128",
-              "reason": "优先同平台按量价。"
+              "reason": "同平台公开按量基准，完整独立保存；关系只用于估价检查，不声明路由别名。",
+              "catalog_model": {
+                "provider_id": "ark",
+                "offering_id": "api-cn",
+                "model_id": "doubao-seedance-2-0-260128",
+                "selection": "latest_dated"
+              }
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-09-17T10:30:47.945348+00:00",
               "source_ids": [
-                "alignment-ark-rendered-pricing"
+                "pricing",
+                "catalog",
+                "protocol-video"
               ],
-              "evidence": "evidence/ark/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+            "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
+            "time_basis": "unknown",
+            "charge_on": "success"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-09-17T10:30:47.945348+00:00",
           "source_ids": [
-            "alignment-ark-rendered-pricing"
+            "pricing",
+            "catalog",
+            "protocol-video"
           ],
-          "evidence": "evidence/ark/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+        "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。"
       },
       "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
       "capabilities": {
@@ -893,14 +915,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
             "source_ids": [
-              "protocol-models",
+              "protocol-agent",
               "protocol-video",
-              "protocol-agent"
+              "audit-rendered-agent"
             ],
-            "evidence": "evidence/ark/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
           "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
         },
@@ -911,9 +933,12 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/ark/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-agent",
+              "audit-rendered-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次检查 Agent Plan 支持表及接入文档，未取得视频型号思考参数。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
         },
@@ -922,13 +947,12 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:00:23.368Z",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
             "source_ids": [
-              "context-ark-models",
               "context-ark-agent"
             ],
-            "evidence": "evidence/ark/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
           "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
@@ -949,12 +973,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-17T10:30:47.945348+00:00",
         "source_ids": [
           "audit-rendered-agent"
         ],
-        "evidence": "evidence/ark/2026-09-16-audit.md",
-        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+        "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -972,6 +996,11 @@
         "status": "published",
         "rules": [
           {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、720p、输入不含参考视频、非限时优惠的刊例价。",
             "rates": [
               {
                 "meter": "video_output_tokens",
@@ -987,48 +1016,53 @@
                   "minimum_units": null,
                   "rounding": "unknown",
                   "increment": null,
-                  "notes": "使用厂商视频计费token；不能换成文本token。"
+                  "notes": "使用任务返回的 usage.completion_tokens 视频计费 token，不是秒或文本 token。本基准仅适用无参考视频；含参考视频时用量可能包含输入视频并有最低用量，需另核对应单价，不能继续套此基准。"
                 }
               }
             ],
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "优先同平台按量价。 参考对象：doubao-seedance-2-0-fast-260128。按用户规则，短名估价对齐同系列最新日期版本；这不声明官方路由别名。 参考对象：doubao-seedance-2-0-fast-260128。720p无参考视频的常规标价。",
             "effective_from": null,
             "effective_until": null,
             "billing_period": null,
             "charge_unit": null,
-            "time_basis": "unknown",
-            "charge_on": "unknown",
-            "id": "baseline",
-            "basis": "reference",
             "reference_origin": {
               "url": "https://www.volcengine.com/docs/82379/1544106",
               "subject": "doubao-seedance-2-0-fast-260128",
-              "reason": "优先同平台按量价。"
+              "reason": "同平台公开按量基准，完整独立保存；关系只用于估价检查，不声明路由别名。",
+              "catalog_model": {
+                "provider_id": "ark",
+                "offering_id": "api-cn",
+                "model_id": "doubao-seedance-2-0-fast-260128",
+                "selection": "latest_dated"
+              }
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-09-17T10:30:47.945348+00:00",
               "source_ids": [
-                "alignment-ark-rendered-pricing"
+                "pricing",
+                "catalog",
+                "protocol-video"
               ],
-              "evidence": "evidence/ark/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。"
+            "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
+            "time_basis": "unknown",
+            "charge_on": "success"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-09-17T10:30:47.945348+00:00",
           "source_ids": [
-            "alignment-ark-rendered-pricing"
+            "pricing",
+            "catalog",
+            "protocol-video"
           ],
-          "evidence": "evidence/ark/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+        "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。"
       },
       "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
       "capabilities": {
@@ -1045,14 +1079,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
             "source_ids": [
-              "protocol-models",
+              "protocol-agent",
               "protocol-video",
-              "protocol-agent"
+              "audit-rendered-agent"
             ],
-            "evidence": "evidence/ark/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
           "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
         },
@@ -1063,9 +1097,12 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/ark/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-agent",
+              "audit-rendered-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次检查 Agent Plan 支持表及接入文档，未取得视频型号思考参数。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
         },
@@ -1074,13 +1111,12 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:00:23.368Z",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
             "source_ids": [
-              "context-ark-models",
               "context-ark-agent"
             ],
-            "evidence": "evidence/ark/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
           "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
@@ -1101,12 +1137,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-17T10:30:47.945348+00:00",
         "source_ids": [
           "audit-rendered-agent"
         ],
-        "evidence": "evidence/ark/2026-09-16-audit.md",
-        "notes": "独立核对Agent Plan支持表；视频仅Large/Max。"
+        "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1128,7 +1164,7 @@
             "basis": "reference",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "优先同平台按量价。 参考对象：doubao-seedance-2-0-mini-260615。方舟标准在线、短输入文本档；图片选标准生成、视频选720p无参考视频标价。当前促销不展开。",
+            "selection": "标准在线、720p、输入不含参考视频、非限时优惠的刊例价。",
             "rates": [
               {
                 "meter": "video_output_tokens",
@@ -1144,7 +1180,7 @@
                   "minimum_units": null,
                   "rounding": "unknown",
                   "increment": null,
-                  "notes": "厂商视频计费token包含参考视频和生成视频，不能用文本token或秒替代。"
+                  "notes": "使用任务返回的 usage.completion_tokens 视频计费 token，不是秒或文本 token。本基准仅适用无参考视频；含参考视频时用量可能包含输入视频并有最低用量，需另核对应单价，不能继续套此基准。"
                 }
               }
             ],
@@ -1155,32 +1191,42 @@
             "reference_origin": {
               "url": "https://www.volcengine.com/docs/82379/1544106",
               "subject": "doubao-seedance-2-0-mini-260615",
-              "reason": "优先同平台按量价。"
+              "reason": "同平台公开按量基准，完整独立保存；关系只用于估价检查，不声明路由别名。",
+              "catalog_model": {
+                "provider_id": "ark",
+                "offering_id": "api-cn",
+                "model_id": "doubao-seedance-2-0-mini-260615",
+                "selection": "latest_dated"
+              }
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-09-17T10:30:47.945348+00:00",
               "source_ids": [
-                "alignment-ark-rendered-pricing"
+                "pricing",
+                "catalog",
+                "protocol-video"
               ],
-              "evidence": "evidence/ark/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
-            "charge_on": "unknown"
+            "charge_on": "success"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-09-17T10:30:47.945348+00:00",
           "source_ids": [
-            "alignment-ark-rendered-pricing"
+            "pricing",
+            "catalog",
+            "protocol-video"
           ],
-          "evidence": "evidence/ark/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+        "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。"
       },
       "notes": "独立核对Agent Plan支持表；视频仅Large/Max。",
       "capabilities": {
@@ -1197,14 +1243,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
             "source_ids": [
-              "protocol-models",
+              "protocol-agent",
               "protocol-video",
-              "protocol-agent"
+              "audit-rendered-agent"
             ],
-            "evidence": "evidence/ark/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
           "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
         },
@@ -1215,9 +1261,12 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/ark/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-agent",
+              "audit-rendered-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次检查 Agent Plan 支持表及接入文档，未取得视频型号思考参数。"
           },
           "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
         },
@@ -1226,13 +1275,12 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:00:23.368Z",
+            "checked_at": "2026-09-17T10:30:47.945348+00:00",
             "source_ids": [
-              "context-ark-models",
               "context-ark-agent"
             ],
-            "evidence": "evidence/ark/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/ark/2026-09-17-prices-and-names.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
           "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }

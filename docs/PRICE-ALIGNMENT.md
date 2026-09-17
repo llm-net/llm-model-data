@@ -4,10 +4,10 @@
 
 ## 当前结果
 
-- 18家服务商、28个产品、210条模型。
+- 18家服务商、28个产品、214条模型。
 - 71条订阅模型中70条已有参考价；K2.8 Preview按用户指定参考K2.7 Code，新增Codex Spark未查到对应公开按量价，保留unknown。
-- 5条方舟/千帆API短名已对齐最新日期版本。
-- 共209条有唯一价格基准，剩余 Codex Spark 1条参考价未知。晨羽AI已有29条价格缺项已补齐，并新增 `deepseek-flash`；30条均按本平台匿名公开接口的人民币价格独立保存，见 [2026-09-17 核对记录](../evidence/chenyu-ai/2026-09-17-public-models.md)。
+- 6条方舟/千帆API短名已对齐最新日期版本。
+- 共213条有唯一价格基准，剩余 Codex Spark 1条参考价未知。晨羽AI已有29条价格缺项已补齐，并新增 `deepseek-flash`；30条均按本平台匿名公开接口的人民币价格独立保存，见 [2026-09-17 核对记录](../evidence/chenyu-ai/2026-09-17-public-models.md)。
 - 本轮整家删除硅基流动（6条模型）和 Together AI（1条模型）；schemas/excluded-providers.json 阻止重新导入。此前逐型号排除的历史仍见下表。
 - 本次晨羽AI更新不改其他服务商数据、套餐或额度；工作树原有 DeepSeek 分时价格候选独立保留。晨羽AI30项协议已按实时矩阵核对、20项文本上下文已知；随后按新公开说明补入10项思考支持（1 complete / 9 partial），20项仍未知，见 [思考补充核对](../evidence/chenyu-ai/2026-09-17-reasoning.md)。其余服务商专项历史结果见 [PROTOCOL-AUDIT-2026-09-16.md](PROTOCOL-AUDIT-2026-09-16.md)。
 
@@ -123,3 +123,11 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 各家本轮证据在`evidence/<provider>/2026-09-16-alignment.md`，记录官方URL、抓取时间、参考对象、原厂回退原因和数值。首轮审计文件为历史快照，当前状态以本页与catalog为准。
 
 2026-09-16 订阅补漏：Claude Code新增Fable 5.1；Codex新增GPT-5.5与GPT-5.3-Codex-Spark；Cursor从1项补至12项，按各官方详情页补上请求ID。已有模型的数字价格与所有套餐/额度未改。新增证据为各家 `2026-09-16-subscription-completeness.md`。
+
+## Fable / Seedance 补漏与名称兼容
+
+新增 Anthropic API 的 Fable 5.1、Fable 5，补 Claude Code Fable 5 的 5 分钟缓存写入 12.5 USD/百万 token；其余已有金额不变。新增方舟 Fast 日期版与 Mini API 短名参考记录。Seedance 的 70/46/37/23 CNY 每百万视频 token 标准基准不变，明确在线 720p 无参考视频、非促销与成功计费。
+
+新增结构化来源身份与精确查找，阻止同名跨平台/产品匹配、短名漏同步、跨 Fast/Mini 系列套价。Mini API 短名 request_id 未证实，保留 null；已有三个 API 短名改为身份 needs_review / 协议 partial，历史请求名保留，不声称可调用。Fable API 思考控制保留 partial；Seedance 思考均 unknown。其余全部缺项持续列入生成的审阅包。
+
+来源：[Anthropic](../evidence/anthropic/2026-09-17-prices-and-names.md)、[方舟](../evidence/ark/2026-09-17-prices-and-names.md)。套餐与额度本次无变化；候选尚未正式发布，也未更新消费者。

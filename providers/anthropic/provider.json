@@ -116,6 +116,30 @@
       "url": "https://code.claude.com/docs/en/model-config",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "repair-claude-fable-5-1",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+      "purpose": "models",
+      "notes": "价格与名称兼容补漏；逐项结论见 2026-09-17-prices-and-names 证据。"
+    },
+    {
+      "id": "repair-claude-fable-5",
+      "url": "https://platform.claude.com/docs/en/models/fable-5/overview",
+      "purpose": "models",
+      "notes": "价格与名称兼容补漏；逐项结论见 2026-09-17-prices-and-names 证据。"
+    },
+    {
+      "id": "repair-context",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "purpose": "models",
+      "notes": "价格与名称兼容补漏；逐项结论见 2026-09-17-prices-and-names 证据。"
+    },
+    {
+      "id": "repair-code-protocol",
+      "url": "https://code.claude.com/docs/en/llm-gateway-protocol",
+      "purpose": "models",
+      "notes": "API formats 与订阅 OAuth 请求头；2026-09-17 Fable 独立协议复核。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

@@ -13,3 +13,5 @@
 完成校验和必要测试，运行catalog.py review生成完整候选报告，给出本次修改、协议面与思考能力前后值和全部 partial / unknown 清单与候选SHA-256。待审核结果不得自动发布；已有明确授权且内容未变时不重复索取。
 
 收到发布授权后按docs/RELEASE.md执行：确认后的提交推送至main，再创建并推送data-YYYY.MM.DD.N正式tag。只要求提交推送时不打发布tag；最新发布只从符合规则的远端tag中按日期和整数序号选取。
+
+参考对象已收录时，在 reference_origin.catalog_model 显式保存完整 provider / offering / model 和 exact / latest_dated 策略，完整复制已核对数字并验证一致性。查名先限定产品，再精确匹配 id / request_id；不全局替换标点或去掉日期后缀。新增 API 型号需独立核对，不能因订阅已有参考价就认为 API 目录没有遗漏。

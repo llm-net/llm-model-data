@@ -29,3 +29,7 @@
 ## 上下文长度核对
 
 新增及每次更新模型必须按 [CONTEXT.md](../../docs/CONTEXT.md) 查询本产品官方窗口，包含全部订阅型号。填写 `context_window_tokens` 与独立 `context_assessment`，记录单位及套餐 / 扩展模式条件；未知写原因并进入审阅报告，不从同名原厂或其他产品继承。
+
+## Seedance 名称和估价来源
+
+日期版、API 短名和 Agent Plan 分别维护。Mini 短名的本地 ID 为 doubao-seedance-2-0-mini，按量请求名尚未确认；Agent Plan 则独立确认点号名。价格参考不能作为路由别名。四系列通过 reference_origin.catalog_model 检查对应日期版价格一致性，见[2026-09-17 核对](../../evidence/ark/2026-09-17-prices-and-names.md)。
