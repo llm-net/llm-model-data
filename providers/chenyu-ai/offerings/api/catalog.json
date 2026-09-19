@@ -143,20 +143,119 @@
           "notes": "逐型号读取 public-models.protocols，已覆盖公开声明的文本兼容面或适用厂商面；没有从原厂、价格或其他型号推导。未实调。 实时清单明确包含 Responses；Responses 静态专文仍把 DeepSeek 当作无该端点的例子，存在陈旧说明，本轮采用逐型号实时矩阵。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "complete",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "minimal→low；medium / xhigh→high；ultra→max，保留可接受的原始值及其映射。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "none 关闭思考；未将其他协议面的兼容别名自动加入 Responses。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方三协议对照表及映射表；兼容别名不代表独立深度。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
+            "status": "verified",
+            "checked_at": "2026-09-19T06:56:25.208094+00:00",
             "source_ids": [
-              "public-reasoning",
-              "reasoning-models"
+              "public-reasoning"
             ],
-            "evidence": "evidence/chenyu-ai/2026-09-17-reasoning.md",
-            "notes": "已查询晨羽AI公开 reasoning 与模型说明；该型号仍缺明确思考控制依据，查询时间见证据，未记成功核对日期。"
+            "evidence": "evidence/chenyu-ai/2026-09-19-deepseek-flash-reasoning.md",
+            "notes": "独立核对晨羽AI公开接口中此精确 modelId 的三协议面思考控制；未进行付费推理实调。响应附带的原厂核对信息不作为本产品验证记录。"
           },
-          "notes": "公开接口未返回此型号的 reasoning 对象；模型说明和适用接口专文也未提供逐型号控制。 继续保留未知；不从同名原厂、其他请求 ID 或模型模态推断支持 / 不支持。"
+          "notes": "晨羽AI公开 deepseek-flash 的三协议面思考控制；Responses 接受 none/low/high/max，默认 high。Chat 与 Messages 保留公开的兼容枚举及映射，不把兼容值当作独立深度。依据本平台的公开声明，不从同名原厂继承。"
         },
         "context_assessment": {
           "status": "known",

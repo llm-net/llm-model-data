@@ -1,0 +1,1317 @@
+{
+  "url": "https://chenyu.pro/api/v1/public/models",
+  "fetched_at": "2026-09-19T06:56:25.208094+00:00",
+  "models": [
+    {
+      "modelId": "deepseek-flash",
+      "displayName": "DeepSeek-V4.1-Flash",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1048576,
+      "maxOutput": 393216,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "complete",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "thinking.type",
+                "values": [
+                  "enabled",
+                  "disabled"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "enabled",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "effort",
+                "parameter": "reasoning_effort",
+                "values": [
+                  "minimal",
+                  "low",
+                  "medium",
+                  "high",
+                  "xhigh",
+                  "max",
+                  "ultra"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "high",
+                "notes": "minimal→low；medium / xhigh→high；ultra→max，保留可接受的原始值及其映射。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          },
+          {
+            "interface": "openai_responses",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "effort",
+                "parameter": "reasoning.effort",
+                "values": [
+                  "none",
+                  "low",
+                  "high",
+                  "max"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "high",
+                "notes": "none 关闭思考；未将其他协议面的兼容别名自动加入 Responses。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          },
+          {
+            "interface": "anthropic_messages",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "thinking.type",
+                "values": [
+                  "enabled",
+                  "disabled"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "enabled",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "effort",
+                "parameter": "output_config.effort",
+                "values": [
+                  "minimal",
+                  "low",
+                  "medium",
+                  "high",
+                  "xhigh",
+                  "max",
+                  "ultra"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "high",
+                "notes": "官方三协议对照表及映射表；兼容别名不代表独立深度。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-deepseek"
+          ],
+          "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "按当前 Thinking Mode 的三协议对照表记录；默认 high。旧 deepseek-v4-flash 与实验 ID 不继承此结论。"
+      }
+    },
+    {
+      "modelId": "deepseek-v4-flash",
+      "displayName": "DeepSeek V4 Flash",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1048576,
+      "maxOutput": 393216,
+      "reasoning": {
+        "support": "unknown",
+        "coverage": "unknown",
+        "profiles": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+      }
+    },
+    {
+      "modelId": "deepseek-v4-flash-vision-exp",
+      "displayName": "DeepSeek V4 Flash Vision (实验)",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1048576,
+      "maxOutput": 393216,
+      "reasoning": {
+        "support": "unknown",
+        "coverage": "unknown",
+        "profiles": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+      }
+    },
+    {
+      "modelId": "deepseek-v4-pro",
+      "displayName": "DeepSeek V4 Pro",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1048576,
+      "maxOutput": 393216,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "complete",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "thinking.type",
+                "values": [
+                  "enabled",
+                  "disabled"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "enabled",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "effort",
+                "parameter": "reasoning_effort",
+                "values": [
+                  "minimal",
+                  "low",
+                  "medium",
+                  "high",
+                  "xhigh",
+                  "max",
+                  "ultra"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "high",
+                "notes": "minimal→low；medium / xhigh→high；ultra→max，保留可接受的原始值及其映射。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          },
+          {
+            "interface": "openai_responses",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "effort",
+                "parameter": "reasoning.effort",
+                "values": [
+                  "none",
+                  "low",
+                  "high",
+                  "max"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "high",
+                "notes": "none 关闭思考；未将其他协议面的兼容别名自动加入 Responses。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          },
+          {
+            "interface": "anthropic_messages",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "thinking.type",
+                "values": [
+                  "enabled",
+                  "disabled"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "enabled",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "effort",
+                "parameter": "output_config.effort",
+                "values": [
+                  "minimal",
+                  "low",
+                  "medium",
+                  "high",
+                  "xhigh",
+                  "max",
+                  "ultra"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "high",
+                "notes": "官方三协议对照表及映射表；兼容别名不代表独立深度。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-deepseek"
+          ],
+          "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "按当前 Thinking Mode 的三协议对照表记录；默认 high。旧 deepseek-v4-flash 与实验 ID 不继承此结论。"
+      }
+    },
+    {
+      "modelId": "doubao-seed-2-0-lite-260428",
+      "displayName": "Doubao Seed 2.0 Lite (260428)",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 262144,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "unknown",
+        "coverage": "unknown",
+        "profiles": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+      }
+    },
+    {
+      "modelId": "doubao-seed-2-0-mini-260428",
+      "displayName": "Doubao Seed 2.0 Mini (260428)",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 262144,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "unknown",
+        "coverage": "unknown",
+        "profiles": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+      }
+    },
+    {
+      "modelId": "doubao-seed-2-0-pro-260215",
+      "displayName": "Doubao Seed 2.0 Pro (260215)",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 262144,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "unknown",
+        "coverage": "unknown",
+        "profiles": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+      }
+    },
+    {
+      "modelId": "doubao-seed-2-1-pro-260628",
+      "displayName": "Doubao Seed 2.1 Pro (260628)",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 262144,
+      "maxOutput": 262144,
+      "reasoning": {
+        "support": "unknown",
+        "coverage": "unknown",
+        "profiles": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+      }
+    },
+    {
+      "modelId": "doubao-seed-2-1-turbo-260628",
+      "displayName": "Doubao Seed 2.1 Turbo (260628)",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 262144,
+      "maxOutput": 262144,
+      "reasoning": {
+        "support": "unknown",
+        "coverage": "unknown",
+        "profiles": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+      }
+    },
+    {
+      "modelId": "doubao-seedance-2-0-260128",
+      "displayName": "Doubao Seedance 2.0 (260128)",
+      "modality": "video",
+      "protocols": [
+        {
+          "id": "ark_video",
+          "label": "Ark Video",
+          "slug": "ark"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "doubao-seedance-2-0-mini-260615",
+      "displayName": "Doubao Seedance 2.0 Mini (260615)",
+      "modality": "video",
+      "protocols": [
+        {
+          "id": "ark_video",
+          "label": "Ark Video",
+          "slug": "ark"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "doubao-seedance-2-5-260628",
+      "displayName": "Doubao Seedance 2.5 (260628)",
+      "modality": "video",
+      "protocols": [
+        {
+          "id": "ark_video",
+          "label": "Ark Video",
+          "slug": "ark"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "doubao-seedream-5-0-260128",
+      "displayName": "Doubao Seedream 5.0 Lite (260128)",
+      "modality": "image",
+      "protocols": [
+        {
+          "id": "openai_image",
+          "label": "OpenAI Image"
+        },
+        {
+          "id": "ark_image",
+          "label": "Ark Image",
+          "slug": "ark"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "doubao-seedream-5-0-pro-260628",
+      "displayName": "Doubao Seedream 5.0 Pro (260628)",
+      "modality": "image",
+      "protocols": [
+        {
+          "id": "openai_image",
+          "label": "OpenAI Image"
+        },
+        {
+          "id": "ark_image",
+          "label": "Ark Image",
+          "slug": "ark"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "glm-5.3",
+      "displayName": "GLM-5.3",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1048576,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": false,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "thinking.type",
+                "values": [
+                  "enabled"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "enabled",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "effort",
+                "parameter": "reasoning_effort",
+                "values": [
+                  "low",
+                  "high",
+                  "max"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "max",
+                "notes": "5.3 API 只接受 low/high/max；Coding Plan 把 none/minimal/low→low、medium/high→high、xhigh/max→max。5.2 API 的 none/minimal 会放弃思考。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-zhipu"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+      }
+    },
+    {
+      "modelId": "glm-5.3-flash",
+      "displayName": "GLM-5.3-Flash",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1048576,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": false,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "thinking.type",
+                "values": [
+                  "enabled"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "enabled",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "effort",
+                "parameter": "reasoning_effort",
+                "values": [
+                  "low",
+                  "high",
+                  "max"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "max",
+                "notes": "5.3 API 只接受 low/high/max；Coding Plan 把 none/minimal/low→low、medium/high→high、xhigh/max→max。5.2 API 的 none/minimal 会放弃思考。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-zhipu"
+          ],
+          "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+      }
+    },
+    {
+      "modelId": "kimi-k3",
+      "displayName": "Kimi K3",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1048576,
+      "maxOutput": 1048576,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": false,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "effort",
+                "parameter": "reasoning_effort",
+                "values": [
+                  "low",
+                  "high",
+                  "max"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "max",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-moonshot"
+          ],
+          "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "Chat 文档按精确 ID 分 schema；K2.7 Code 高速版明确与标准版参数一致且不可关思考。K3 使用 low/high/max，K2.6 可关闭；其他已登记协议面的参数还未补证。"
+      }
+    },
+    {
+      "modelId": "MiniMax-H3",
+      "displayName": "MiniMax H3（海螺 03）",
+      "modality": "video",
+      "protocols": [
+        {
+          "id": "minimax_video",
+          "label": "MiniMax Video",
+          "slug": "minimax"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "MiniMax-M3",
+      "displayName": "MiniMax M3",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1000000,
+      "maxOutput": 524288,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "adaptive",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "thinking.type",
+                "values": [
+                  "adaptive",
+                  "disabled"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "adaptive",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          },
+          {
+            "interface": "anthropic_messages",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "disabled",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "thinking.type",
+                "values": [
+                  "adaptive",
+                  "disabled"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "disabled",
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          },
+          {
+            "interface": "openai_responses",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "disabled",
+            "controls": [
+              {
+                "kind": "mode",
+                "parameter": "reasoning.effort",
+                "values": [
+                  "none",
+                  "minimal",
+                  "low",
+                  "medium",
+                  "high"
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": "none",
+                "notes": "none 关闭，其余四个值仅开启 Adaptive Thinking，不调节推理深度，故 kind=mode。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-minimax",
+            "reasoning-minimax-chat",
+            "reasoning-minimax-messages"
+          ],
+          "evidence": "evidence/minimax/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+      }
+    },
+    {
+      "modelId": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+      "displayName": "Qwen3.6-35B-A3B-NVFP4（晨羽内网）",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 262144,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "Qwen/Qwen3.8-27B-FP8",
+      "displayName": "Qwen3.8-27B-FP8（晨羽内网）",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 262144,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "qwen3.7-flash",
+      "displayName": "Qwen3.7-Flash",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1000000,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "toggle",
+                "parameter": "enable_thinking",
+                "values": [
+                  true,
+                  false
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": true,
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "budget_tokens",
+                "parameter": "thinking_budget",
+                "values": [],
+                "minimum": null,
+                "maximum": null,
+                "default": null,
+                "notes": "参数适用于此系列，默认取模型最大思维链长度；本型号数值范围未取得，不使用控制台示例的 1～32768 当全型号通用范围。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-bailian"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+      }
+    },
+    {
+      "modelId": "qwen3.7-plus",
+      "displayName": "Qwen3.7-Plus",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1000000,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "toggle",
+                "parameter": "enable_thinking",
+                "values": [
+                  true,
+                  false
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": true,
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "budget_tokens",
+                "parameter": "thinking_budget",
+                "values": [],
+                "minimum": null,
+                "maximum": null,
+                "default": null,
+                "notes": "参数适用于此系列，默认取模型最大思维链长度；本型号数值范围未取得，不使用控制台示例的 1～32768 当全型号通用范围。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-bailian"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+      }
+    },
+    {
+      "modelId": "qwen3.8-27b",
+      "displayName": "Qwen3.8-27B（开源权重）",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1000000,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "toggle",
+                "parameter": "enable_thinking",
+                "values": [
+                  true,
+                  false
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": true,
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "budget_tokens",
+                "parameter": "thinking_budget",
+                "values": [],
+                "minimum": null,
+                "maximum": null,
+                "default": null,
+                "notes": "参数适用于此系列，默认取模型最大思维链长度；本型号数值范围未取得，不使用控制台示例的 1～32768 当全型号通用范围。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-bailian"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+      }
+    },
+    {
+      "modelId": "qwen3.8-flash",
+      "displayName": "Qwen3.8-Flash",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1000000,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "toggle",
+                "parameter": "enable_thinking",
+                "values": [
+                  true,
+                  false
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": true,
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "budget_tokens",
+                "parameter": "thinking_budget",
+                "values": [],
+                "minimum": null,
+                "maximum": null,
+                "default": null,
+                "notes": "参数适用于此系列，默认取模型最大思维链长度；本型号数值范围未取得，不使用控制台示例的 1～32768 当全型号通用范围。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-bailian"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+      }
+    },
+    {
+      "modelId": "qwen3.8-max",
+      "displayName": "Qwen3.8-Max",
+      "modality": "text",
+      "protocols": [
+        {
+          "id": "openai_chat",
+          "label": "OpenAI Chat"
+        },
+        {
+          "id": "openai_responses",
+          "label": "OpenAI Responses"
+        },
+        {
+          "id": "anthropic_messages",
+          "label": "Anthropic Messages"
+        }
+      ],
+      "contextLength": 1000000,
+      "maxOutput": 131072,
+      "reasoning": {
+        "support": "supported",
+        "coverage": "partial",
+        "profiles": [
+          {
+            "interface": "openai_chat",
+            "surface": "api_request",
+            "can_disable": true,
+            "default_behavior": "enabled",
+            "controls": [
+              {
+                "kind": "toggle",
+                "parameter": "enable_thinking",
+                "values": [
+                  true,
+                  false
+                ],
+                "minimum": null,
+                "maximum": null,
+                "default": true,
+                "notes": "仅保存已核对的官方值；不与其他模型换算。"
+              },
+              {
+                "kind": "budget_tokens",
+                "parameter": "thinking_budget",
+                "values": [],
+                "minimum": null,
+                "maximum": null,
+                "default": null,
+                "notes": "参数适用于此系列，默认取模型最大思维链长度；本型号数值范围未取得，不使用控制台示例的 1～32768 当全型号通用范围。"
+              }
+            ],
+            "notes": "仅适用于本产品、本模型及此协议面。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T12:53:46.356875Z",
+          "source_ids": [
+            "reasoning-bailian"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-reasoning.md",
+          "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+        },
+        "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+      }
+    },
+    {
+      "modelId": "speech-2.8-hd",
+      "displayName": "MiniMax speech-2.8-hd",
+      "modality": "audio",
+      "protocols": [
+        {
+          "id": "minimax_speech",
+          "label": "MiniMax Speech",
+          "slug": "minimax"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "speech-2.8-turbo",
+      "displayName": "MiniMax speech-2.8-turbo",
+      "modality": "audio",
+      "protocols": [
+        {
+          "id": "minimax_speech",
+          "label": "MiniMax Speech",
+          "slug": "minimax"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "wan3.0-video",
+      "displayName": "万相 3.0 视频（标准）",
+      "modality": "video",
+      "protocols": [
+        {
+          "id": "bailian_video",
+          "label": "Bailian Video",
+          "slug": "bailian"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    },
+    {
+      "modelId": "wan3.0-video-prime",
+      "displayName": "万相 3.0 视频（优速 Prime）",
+      "modality": "video",
+      "protocols": [
+        {
+          "id": "bailian_video",
+          "label": "Bailian Video",
+          "slug": "bailian"
+        }
+      ],
+      "contextLength": 0,
+      "maxOutput": 0
+    }
+  ]
+}

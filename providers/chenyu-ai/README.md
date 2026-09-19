@@ -33,3 +33,5 @@ DeepSeek V4 Pro 已公开三面控制；GLM 5.3 / Flash 和 Kimi K3 当前只确
 ## 上下文长度核对
 
 新增及每次更新模型必须按 [CONTEXT.md](../../docs/CONTEXT.md) 查询本产品官方窗口，包含全部订阅型号。填写 `context_window_tokens` 与独立 `context_assessment`，记录单位及套餐 / 扩展模式条件；未知写原因并进入审阅报告，不从同名原厂或其他产品继承。
+
+2026-09-19 思考专项修正：`deepseek-flash` 已从晨羽AI公开接口独立核实三协议面控制，Responses 为 `none / low / high / max`、默认 `high`；见[本次证据](../../evidence/chenyu-ai/2026-09-19-deepseek-flash-reasoning.md)。此前记录的该型号 unknown 已被替换；其余型号与价格未修改。
