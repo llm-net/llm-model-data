@@ -1,0 +1,65 @@
+{
+  "source_url": "https://cli-chat-proxy.grok.com/v1/models",
+  "checked_at": "2026-09-22T05:59:06Z",
+  "models": [
+    {
+      "api_backend": "responses",
+      "context_window": 500000,
+      "id": "grok-4.7",
+      "model": "grok-4.7",
+      "name": "Grok 4.7",
+      "reasoning_effort": "high",
+      "supports_reasoning_effort": true,
+      "reasoning_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    {
+      "api_backend": "responses",
+      "context_window": 500000,
+      "id": "grok-4.7-build-fast",
+      "model": "grok-4.7-build-fast",
+      "name": "Grok 4.7 Fast",
+      "reasoning_effort": "high",
+      "supports_reasoning_effort": true,
+      "reasoning_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    {
+      "api_backend": "responses",
+      "context_window": 500000,
+      "id": "grok-4.6",
+      "model": "grok-4.6",
+      "name": "Grok 4.6",
+      "reasoning_effort": "high",
+      "supports_reasoning_effort": true,
+      "reasoning_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    {
+      "api_backend": "responses",
+      "context_window": 500000,
+      "id": "grok-4.5",
+      "model": "grok-4.5",
+      "name": "Grok 4.5",
+      "reasoning_effort": "high",
+      "supports_reasoning_effort": true,
+      "reasoning_efforts": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  ]
+}
