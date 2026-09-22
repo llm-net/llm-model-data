@@ -1,0 +1,99 @@
+{
+  "artifact_version": "0.155.1",
+  "artifact_sha256": "0753dfe1d8b87a52436deb13eb1c549661ef4c84fee2c5aa688385eebeccb761",
+  "checked_at": "2026-09-22T05:42:30.863266+00:00",
+  "models": [
+    {
+      "slug": "gpt-6-astra",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "low",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "visibility": "list"
+    },
+    {
+      "slug": "gpt-5.6-sol",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "low",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "visibility": "list"
+    },
+    {
+      "slug": "gpt-5.6-terra",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "visibility": "list"
+    },
+    {
+      "slug": "gpt-5.6-luna",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "visibility": "list"
+    },
+    {
+      "slug": "gpt-5.5",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 272000,
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "visibility": "list"
+    }
+  ]
+}

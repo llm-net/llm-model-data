@@ -16,9 +16,9 @@
   "plans": [],
   "models": [
     {
-      "id": "grok-4-6",
-      "request_id": "grok-4.6",
-      "display_name": "grok-4.6",
+      "id": "grok-4-7",
+      "request_id": "grok-4.7",
+      "display_name": "Grok 4.7",
       "modalities": [
         "text"
       ],
@@ -27,13 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-22T05:42:30.863266+00:00",
         "source_ids": [
-          "audit-grok46",
-          "audit-grok45"
+          "refresh-47",
+          "refresh-pricing"
         ],
-        "evidence": "evidence/xai/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/xai/2026-09-22-grok-47.md",
+        "notes": "官方精确型号页和完整价表确认；没有真实 Key 推理请求。"
       },
       "usage_prices": {
         "status": "published",
@@ -43,7 +43,7 @@
             "basis": "public_list",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "标准请求、输入不超过200K的档位；仅作统一估算，不展开长上下文价。",
+            "selection": "标准全球 API、prompt 严格少于 200,000 tokens；达到 200,000 tokens 的整次请求适用高价，当前仅保存短上下文估算基准。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -71,28 +71,28 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-22T05:42:30.863266+00:00",
               "source_ids": [
-                "audit-grok46",
-                "audit-grok45"
+                "refresh-47",
+                "refresh-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-09-22-grok-47.md",
+              "notes": "标准全球 API 短上下文估价；原币 USD。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-22T05:42:30.863266+00:00",
           "source_ids": [
-            "audit-grok46",
-            "audit-grok45"
+            "refresh-47",
+            "refresh-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-09-22-grok-47.md",
+          "notes": "标准全球 API 短上下文估价；原币 USD。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -108,7 +108,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "notes": "官方型号页仍提供本型号；新版本发布不证明旧型号退役。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -116,9 +116,9 @@
         ],
         "context_window_tokens": 500000,
         "max_output_tokens": null,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": true,
         "interfaces": [
           "openai_chat",
           "openai_responses",
@@ -128,18 +128,18 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
             "source_ids": [
-              "protocol-api",
-              "protocol-grok45",
-              "protocol-grok46",
-              "protocol-grpc",
-              "protocol-chat"
+              "refresh-47",
+              "refresh-chat",
+              "refresh-47-overview",
+              "refresh-grpc",
+              "refresh-rest"
             ],
-            "evidence": "evidence/xai/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "逐项核对 Chat、Responses、原生 gRPC；官方 REST 入口未提供 Anthropic Messages。"
           },
-          "notes": "xAI 按量 Chat Completions（legacy）、Responses 与官方原生 gRPC Chat。模型名字相同不代表 Grok Build 订阅可复用这些入口。"
+          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。4.7 Responses 总是携带 reasoning.encrypted_content；多轮应原样传回。"
         },
         "reasoning": {
           "support": "supported",
@@ -194,27 +194,232 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
             "source_ids": [
-              "reasoning-xai",
-              "reasoning-xai-reasoning"
+              "refresh-47",
+              "refresh-reasoning"
             ],
-            "evidence": "evidence/xai/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "重新核对精确型号 effort、默认及关闭限制；gRPC 原始字段仍未确认。"
           },
-          "notes": "推理专页明确不能关闭；4.5 专页的 xhigh 标记与推理专页支持表冲突，只登记双方一致的三档。原生 gRPC 控制字段仍待证实。"
+          "notes": "低/中/高/xhigh 四档；默认 high，不能关闭。gRPC 原始控制字段仍待证实，coverage 保持 partial。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "500,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.462584+00:00",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
             "source_ids": [
-              "context-xai-46"
+              "refresh-47"
             ],
-            "evidence": "evidence/xai/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "精确型号页明确 500,000 tokens，不是计费阶梯或输出上限。"
+          },
+          "notes": "xAI API 精确型号页整数；不等于 Grok Build 的工具窗口。"
+        }
+      }
+    },
+    {
+      "id": "grok-4-6",
+      "request_id": "grok-4.6",
+      "display_name": "grok-4.6",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-22T05:42:30.863266+00:00",
+        "source_ids": [
+          "refresh-46",
+          "refresh-pricing"
+        ],
+        "evidence": "evidence/xai/2026-09-22-grok-47.md",
+        "notes": "官方精确型号页和完整价表确认；没有真实 Key 推理请求。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准全球 API、prompt 严格少于 200,000 tokens；达到 200,000 tokens 的整次请求适用高价，当前仅保存短上下文估算基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-22T05:42:30.863266+00:00",
+              "source_ids": [
+                "refresh-46",
+                "refresh-pricing"
+              ],
+              "evidence": "evidence/xai/2026-09-22-grok-47.md",
+              "notes": "标准全球 API 短上下文估价；原币 USD。"
+            },
+            "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-22T05:42:30.863266+00:00",
+          "source_ids": [
+            "refresh-46",
+            "refresh-pricing"
+          ],
+          "evidence": "evidence/xai/2026-09-22-grok-47.md",
+          "notes": "标准全球 API 短上下文估价；原币 USD。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/xai/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方型号页仍提供本型号；新版本发布不证明旧型号退役。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 500000,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "xai_grpc"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
+            "source_ids": [
+              "refresh-46",
+              "refresh-chat",
+              "refresh-47-overview",
+              "refresh-grpc",
+              "refresh-rest"
+            ],
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "逐项核对 Chat、Responses、原生 gRPC；官方 REST 入口未提供 Anthropic Messages。"
+          },
+          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
+            "source_ids": [
+              "refresh-46",
+              "refresh-reasoning"
+            ],
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "重新核对精确型号 effort、默认及关闭限制；gRPC 原始字段仍未确认。"
+          },
+          "notes": "低/中/高/xhigh 四档；默认 high，不能关闭。gRPC 原始控制字段仍待证实，coverage 保持 partial。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "500,000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
+            "source_ids": [
+              "refresh-46"
+            ],
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "精确型号页明确 500,000 tokens，不是计费阶梯或输出上限。"
           },
           "notes": "xAI API 精确型号页整数；不等于 Grok Build 的工具窗口。"
         }
@@ -232,13 +437,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-22T05:42:30.863266+00:00",
         "source_ids": [
-          "audit-grok46",
-          "audit-grok45"
+          "refresh-45",
+          "refresh-pricing"
         ],
-        "evidence": "evidence/xai/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/xai/2026-09-22-grok-47.md",
+        "notes": "官方精确型号页和完整价表确认；没有真实 Key 推理请求。"
       },
       "usage_prices": {
         "status": "published",
@@ -248,7 +453,7 @@
             "basis": "public_list",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "标准请求、输入不超过200K的档位；仅作统一估算，不展开长上下文价。",
+            "selection": "标准全球 API、prompt 严格少于 200,000 tokens；达到 200,000 tokens 的整次请求适用高价，当前仅保存短上下文估算基准。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -276,28 +481,28 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-22T05:42:30.863266+00:00",
               "source_ids": [
-                "audit-grok46",
-                "audit-grok45"
+                "refresh-45",
+                "refresh-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-09-22-grok-47.md",
+              "notes": "标准全球 API 短上下文估价；原币 USD。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-22T05:42:30.863266+00:00",
           "source_ids": [
-            "audit-grok46",
-            "audit-grok45"
+            "refresh-45",
+            "refresh-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-09-22-grok-47.md",
+          "notes": "标准全球 API 短上下文估价；原币 USD。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -313,7 +518,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "notes": "官方型号页仍提供本型号；新版本发布不证明旧型号退役。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -321,8 +526,8 @@
         ],
         "context_window_tokens": 500000,
         "max_output_tokens": null,
-        "tool_calling": null,
-        "structured_output": null,
+        "tool_calling": true,
+        "structured_output": true,
         "streaming": null,
         "interfaces": [
           "openai_chat",
@@ -333,18 +538,18 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
             "source_ids": [
-              "protocol-api",
-              "protocol-grok45",
-              "protocol-grok46",
-              "protocol-grpc",
-              "protocol-chat"
+              "refresh-45",
+              "refresh-chat",
+              "refresh-47-overview",
+              "refresh-grpc",
+              "refresh-rest"
             ],
-            "evidence": "evidence/xai/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "逐项核对 Chat、Responses、原生 gRPC；官方 REST 入口未提供 Anthropic Messages。"
           },
-          "notes": "xAI 按量 Chat Completions（legacy）、Responses 与官方原生 gRPC Chat。模型名字相同不代表 Grok Build 订阅可复用这些入口。"
+          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。"
         },
         "reasoning": {
           "support": "supported",
@@ -397,27 +602,27 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
             "source_ids": [
-              "reasoning-xai45",
-              "reasoning-xai-reasoning"
+              "refresh-45",
+              "refresh-reasoning"
             ],
-            "evidence": "evidence/xai/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "重新核对精确型号 effort、默认及关闭限制；gRPC 原始字段仍未确认。"
           },
-          "notes": "推理专页明确不能关闭；4.5 专页的 xhigh 标记与推理专页支持表冲突，只登记双方一致的三档。原生 gRPC 控制字段仍待证实。"
+          "notes": "低/中/高三档；4.5 型号页列 xhigh，但思考专页明确其等同 high，不登记为独立档位。gRPC 原始控制字段仍待证实，coverage 保持 partial。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "500,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.482436+00:00",
+            "checked_at": "2026-09-22T05:42:30.863266+00:00",
             "source_ids": [
-              "context-xai-45"
+              "refresh-45"
             ],
-            "evidence": "evidence/xai/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/xai/2026-09-22-grok-47.md",
+            "notes": "精确型号页明确 500,000 tokens，不是计费阶梯或输出上限。"
           },
           "notes": "xAI API 精确型号页整数；不等于 Grok Build 的工具窗口。"
         }
