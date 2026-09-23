@@ -154,12 +154,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-17T10:30:47.945348+00:00",
+        "checked_at": "2026-09-23T07:31:00Z",
         "source_ids": [
-          "completion-code-models"
+          "r0923-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -225,13 +225,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-17T10:30:47.945348+00:00",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "pricing",
-                "repair-claude-fable-5-1"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -240,13 +239,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-17T10:30:47.945348+00:00",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "pricing",
-            "repair-claude-fable-5-1"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。"
       },
@@ -265,13 +263,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "protocol-code",
-              "repair-code-protocol"
+              "r0923-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -306,28 +303,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "reasoning-claude-code"
+              "r0923-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查型号 effort 表与思考开关；未使用真实 Key 实调。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
         },
         "context_assessment": {
           "status": "known",
-          "reported_value": "1 million tokens",
+          "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "context-claude-code"
+              "r0923-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
             "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Claude Code 型号配置明确列出的原生 1M 窗口；CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值。此处不包含第三方云或自定义网关。"
+          "notes": "Claude Code Extended context：直连 Anthropic API 时 Fable 5.1 / 5、Sonnet 5、Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
         }
       }
     },
@@ -343,12 +340,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-17T10:30:47.945348+00:00",
+        "checked_at": "2026-09-23T07:31:00Z",
         "source_ids": [
-          "completion-code-models"
+          "r0923-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -414,13 +411,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-17T10:30:47.945348+00:00",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "pricing",
-                "repair-claude-fable-5"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -429,13 +425,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-17T10:30:47.945348+00:00",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "pricing",
-            "repair-claude-fable-5"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -454,13 +449,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "protocol-code",
-              "repair-code-protocol"
+              "r0923-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -495,28 +489,217 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "reasoning-claude-code"
+              "r0923-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查型号 effort 表与思考开关；未使用真实 Key 实调。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
         },
         "context_assessment": {
           "status": "known",
-          "reported_value": "1 million tokens",
+          "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-17T10:30:47.945348+00:00",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "context-claude-code"
+              "r0923-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
             "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Claude Code 型号配置明确列出的原生 1M 窗口；CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值。此处不包含第三方云或自定义网关。"
+          "notes": "Claude Code Extended context：直连 Anthropic API 时 Fable 5.1 / 5、Sonnet 5、Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-5-5",
+      "request_id": "claude-opus-5-5",
+      "display_name": "Claude Opus 5.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:31:00Z",
+        "source_ids": [
+          "r0923-code-models"
+        ],
+        "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/anthropic/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准 API、缓存写入采用5分钟TTL；不展开Batch、Fast或1小时缓存写入。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+              "subject": "claude-opus-5-5",
+              "reason": "同平台公开按量基准，完整独立保存；关系只用于估价检查，不声明路由别名。",
+              "catalog_model": {
+                "provider_id": "anthropic",
+                "offering_id": "api-global",
+                "model_id": "claude-opus-5-5",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:31:00Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-opus-5-5"
+              ],
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:31:00Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-opus-5-5"
+          ],
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Claude Code v2.1.280 起支持；Anthropic API 与 Pro / Max / Team / Enterprise 的 default 与 opus 别名均解析到本型号。客户端版本、组织可用性和套餐资格独立限制；只维护按量参考价。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:31:00Z",
+            "source_ids": [
+              "r0923-code-protocol",
+              "r0923-code-models"
+            ],
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "anthropic_messages",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "--effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "CLI 启动参数；本型号未显式选择时从 medium 起步，用户设置文件顶层 effortLevel 对本型号不生效，需按型号保存。ultracode 是额外编排模式。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。alwaysThinkingEnabled、会话开关与 MAX_THINKING_TOKENS=0 对本型号无效。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:31:00Z",
+            "source_ids": [
+              "r0923-code-models"
+            ],
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Opus 5.5 与 Fable 一样无法关闭思考；组织 effort 上限与其他入口未展开。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1 million token context window",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:31:00Z",
+            "source_ids": [
+              "r0923-code-models"
+            ],
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "Claude Code Extended context：直连 Anthropic API 时 Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
         }
       }
     },
@@ -532,12 +715,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-23T07:31:00Z",
         "source_ids": [
-          "audit-code-models"
+          "r0923-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-09-16-audit.md",
-        "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。"
+        "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -597,12 +780,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "alignment-anthropic-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -611,12 +794,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "alignment-anthropic-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -635,12 +818,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "protocol-code"
+              "r0923-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -687,28 +870,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "reasoning-claude-code"
+              "r0923-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查型号 effort 表与思考开关；未使用真实 Key 实调。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
         },
         "context_assessment": {
           "status": "known",
-          "reported_value": "1 million tokens",
+          "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:42.259008+00:00",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "context-claude-code"
+              "r0923-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Claude Code：Max / Team / Enterprise 自动启用 1M；Pro 的 1M 需要 usage credits。记录已公开支持的有条件窗口，不能表示所有套餐默认都为 1M。"
+          "notes": "Claude Code Extended context：直连 Anthropic API 时 Fable 5.1 / 5、Sonnet 5、Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
         }
       }
     },
@@ -724,12 +907,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-23T07:31:00Z",
         "source_ids": [
-          "audit-code-models"
+          "r0923-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-09-16-audit.md",
-        "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。"
+        "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -789,12 +972,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "alignment-anthropic-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -803,12 +986,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "alignment-anthropic-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -827,12 +1010,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "protocol-code"
+              "r0923-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -879,28 +1062,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "reasoning-claude-code"
+              "r0923-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查型号 effort 表与思考开关；未使用真实 Key 实调。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
         },
         "context_assessment": {
           "status": "known",
-          "reported_value": "1 million tokens",
+          "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:42.259008+00:00",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "context-claude-code"
+              "r0923-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Claude Code 型号配置明确列出的原生 1M 窗口；CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值。此处不包含第三方云或自定义网关。"
+          "notes": "Claude Code Extended context：直连 Anthropic API 时 Fable 5.1 / 5、Sonnet 5、Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
         }
       }
     },
@@ -916,12 +1099,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-09-23T07:31:00Z",
         "source_ids": [
-          "audit-code-models"
+          "r0923-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-09-16-audit.md",
-        "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。"
+        "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -981,12 +1164,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "alignment-anthropic-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -995,12 +1178,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "alignment-anthropic-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -1019,12 +1202,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-09-23T07:31:00Z",
             "source_ids": [
-              "protocol-code"
+              "r0923-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -1159,12 +1342,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "alignment-anthropic-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -1173,12 +1356,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "alignment-anthropic-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },

@@ -14,6 +14,7 @@
 - usage_prices是按量产品公开计价；reference_prices是示意估价；plans是套餐资料。所有订阅模型usage_prices=not_applicable，只维护reference_prices，不核对实际扣费、AFP/CREDIT或额外使用费。
 - 订阅参考顺序固定：同平台对应型号的按量价 → 模型开发方的公开按量价。先查同平台完整官方价表，不能因为本仓库按量清单没收录就跳到原厂。两处均无对应价格时保留unknown；只有用户明确指定时才采用其他型号作近似参考，不能自行猜价。每条写清reference_origin并完整保存数字；不自动换汇。
 - Kimi Code的kimi-for-coding（K2.8 Preview）按用户指定参考kimi-k2.7-code按量价；保留原底模身份和请求名，不冒充官方同价。
+- OpenCode Go 全部型号与 Grok Build 的 grok-4.7-build-fast 按用户指定取模型源头厂商官网价：Go 文档的用量换算价与 Zen 余额价不作参考，中国厂商取国内官网人民币价，Grok 4.7 Fast 取 xAI 官网单列的 Fast 费率。
 - claude-haiku-4-5-20251001按claude-haiku-4-5估价。方舟Seedance 2.5/2.0/2.0-fast/2.0-mini与千帆DeepSeek V4 Pro/Flash短名按同平台同系列最新日期版本估价；多个版本按实际日期排序，不按返回顺序或价格高低。该规则不证明官方路由等价。参考对象已入按量目录时保存完整 `reference_origin.catalog_model` 身份用于一致性检查，数字仍独立维护；不将价格关系写成 `alias_of`，不从本地 ID 猜请求名。
 - 金额用原币种十进制字符串，禁止浮点和默认美元折人民币。免费必须有明确零价和证据。
 - needs_review 旧资料只提供线索。verified 表示本次逐项核对官方资料，不表示真人批准或真实 Key 实调。

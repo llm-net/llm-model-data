@@ -1,0 +1,5182 @@
+{
+  "schema_version": 2,
+  "provider_id": "opencode",
+  "id": "go",
+  "display_name": "OpenCode / go",
+  "kind": "api_subscription",
+  "market": "global",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/opencode/2026-09-23-go.md",
+    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+  },
+  "plans": [
+    {
+      "id": "go",
+      "display_name": "Go",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "10",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:40:00Z",
+              "source_ids": [
+                "go-docs"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对 OpenCode Go 官方文档；未实调。"
+            },
+            "notes": "每个工作空间仅一名成员可订阅。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:40:00Z",
+          "source_ids": [
+            "go-docs"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对 OpenCode Go 官方文档；未实调。"
+        },
+        "notes": "每个工作空间仅一名成员可订阅。"
+      },
+      "quotas": [],
+      "overage": "pay_as_you_go",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "核对 OpenCode Go 官方文档；未实调。"
+      },
+      "notes": "用量上限按型号分别以美元月额度定义（15–60 USD 不等），5 小时 20%、每周 50%、每月 100% 三个约束独立；按型号的额度不能用单一 quota 表达，故 quotas 为空。达到上限后默认阻断；控制台开启 Use balance 后回落到 Zen 余额按量付费。"
+    }
+  ],
+  "models": [
+    {
+      "id": "kimi-k3",
+      "request_id": "kimi-k3",
+      "display_name": "Kimi K3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "100",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat",
+              "subject": "kimi-k3",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k3",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:30:00Z",
+              "source_ids": [
+                "ref-kimi-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:30:00Z",
+          "source_ids": [
+            "ref-kimi-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k2-7-code",
+      "request_id": "kimi-k2.7-code",
+      "display_name": "Kimi K2.7 Code",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "27",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat",
+              "subject": "kimi-k2.7-code",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k2-7-code",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:30:00Z",
+              "source_ids": [
+                "ref-kimi-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:30:00Z",
+          "source_ids": [
+            "ref-kimi-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 262144,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "262144",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k2-6",
+      "request_id": "kimi-k2.6",
+      "display_name": "Kimi K2.6",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "27",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat",
+              "subject": "kimi-k2.6",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k2-6",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:30:00Z",
+              "source_ids": [
+                "ref-kimi-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:30:00Z",
+          "source_ids": [
+            "ref-kimi-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 262144,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "262144",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-3",
+      "request_id": "glm-5.3",
+      "display_name": "GLM-5.3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "28",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+              "subject": "glm-5.3",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "zhipu",
+                "offering_id": "api-cn",
+                "model_id": "glm-5-3",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:30:40Z",
+              "source_ids": [
+                "ref-zhipu-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:30:40Z",
+          "source_ids": [
+            "ref-zhipu-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "request_id": "glm-5.3-flash",
+      "display_name": "GLM-5.3-Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.23",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+              "subject": "glm-5.3-flash",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "zhipu",
+                "offering_id": "api-cn",
+                "model_id": "glm-5-3-flash",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:30:40Z",
+              "source_ids": [
+                "ref-zhipu-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:30:40Z",
+          "source_ids": [
+            "ref-zhipu-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-2",
+      "request_id": "glm-5.2",
+      "display_name": "GLM-5.2",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "28",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+              "subject": "glm-5.2",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "zhipu",
+                "offering_id": "api-cn",
+                "model_id": "glm-5-2",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:30:40Z",
+              "source_ids": [
+                "ref-zhipu-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:30:40Z",
+          "source_ids": [
+            "ref-zhipu-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-1",
+      "request_id": "glm-5.1",
+      "display_name": "GLM-5.1",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "24",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+              "subject": "glm-5.1",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "zhipu",
+                "offering_id": "api-cn",
+                "model_id": "glm-5-1",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:30:40Z",
+              "source_ids": [
+                "ref-zhipu-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:30:40Z",
+          "source_ids": [
+            "ref-zhipu-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 202752,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "202752",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "request_id": "deepseek-v4.1-flash",
+      "display_name": "DeepSeek V4.1 Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+              "subject": "deepseek-flash",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "deepseek",
+                "offering_id": "api-cn",
+                "model_id": "deepseek-flash",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:31:45Z",
+              "source_ids": [
+                "ref-deepseek-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。 峰谷时段随开发方原价保存；DeepSeek 另注明法定节假日全天按空闲价，本字段无法表达节假日。",
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.04",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.02",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:31:45Z",
+          "source_ids": [
+            "ref-deepseek-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。 DeepSeek 官方 API 无同名请求 ID，V4.1 Flash 对应 deepseek-flash。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "request_id": "deepseek-v4-pro",
+      "display_name": "DeepSeek V4 Pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "9",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "27",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+              "subject": "deepseek-v4-pro",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "deepseek",
+                "offering_id": "api-cn",
+                "model_id": "deepseek-v4-pro",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:31:45Z",
+              "source_ids": [
+                "ref-deepseek-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。 峰谷时段随开发方原价保存；DeepSeek 另注明法定节假日全天按空闲价，本字段无法表达节假日。",
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "9",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.30",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "27",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "4.5",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.15",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "13.5",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:31:45Z",
+          "source_ids": [
+            "ref-deepseek-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "request_id": "deepseek-v4-flash",
+      "display_name": "DeepSeek V4 Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+              "subject": "deepseek-v4-flash",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "deepseek",
+                "offering_id": "api-cn",
+                "model_id": "deepseek-v4-flash",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:31:45Z",
+              "source_ids": [
+                "ref-deepseek-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。 峰谷时段随开发方原价保存；DeepSeek 另注明法定节假日全天按空闲价，本字段无法表达节假日。",
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.04",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.02",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:31:45Z",
+          "source_ids": [
+            "ref-deepseek-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "request_id": "deepseek-v4-flash-vision-exp",
+      "display_name": "DeepSeek V4 Flash Vision Exp",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+              "subject": "deepseek-v4-flash-vision-exp",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "deepseek",
+                "offering_id": "api-cn",
+                "model_id": "deepseek-v4-flash-vision-exp",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:31:45Z",
+              "source_ids": [
+                "ref-deepseek-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。 峰谷时段随开发方原价保存；DeepSeek 另注明法定节假日全天按空闲价，本字段无法表达节假日。",
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.04",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.02",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:31:45Z",
+          "source_ids": [
+            "ref-deepseek-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "qwen3-8-max",
+      "request_id": "qwen3.8-max",
+      "display_name": "Qwen3.8 Max",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。中国内地北京部署、标准在线、最短输入档的非限时促销价；仅作统一估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "12",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "36",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3.8-max",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "bailian",
+                "offering_id": "api-cn",
+                "model_id": "qwen3-8-max",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:34:30Z",
+              "source_ids": [
+                "ref-bailian-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:34:30Z",
+          "source_ids": [
+            "ref-bailian-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/messages；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/messages；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "qwen3-8-flash",
+      "request_id": "qwen3.8-flash",
+      "display_name": "Qwen3.8 Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。中国内地北京部署、标准在线、最短输入档的非限时促销价；仅作统一估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.7",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3.8-flash",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "bailian",
+                "offering_id": "api-cn",
+                "model_id": "qwen3-8-flash",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:34:30Z",
+              "source_ids": [
+                "ref-bailian-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:34:30Z",
+          "source_ids": [
+            "ref-bailian-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/messages；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/messages；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "qwen3-7-max",
+      "request_id": "qwen3.7-max",
+      "display_name": "Qwen3.7 Max",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。百炼华北2（北京）标准实时价，单档 0<Token≤1M；缓存价（隐式命中 2.4、显式命中 1.2、显式写入 15）未收录。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "12",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "36",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3.7-max",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方阿里云百炼北京价，本仓库百炼按量目录未收录，只登记 URL。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:34:30Z",
+              "source_ids": [
+                "ref-bailian-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:34:30Z",
+          "source_ids": [
+            "ref-bailian-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/messages；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/messages；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "qwen3-7-plus",
+      "request_id": "qwen3.7-plus",
+      "display_name": "Qwen3.7 Plus",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。中国内地北京部署、标准在线、最短输入档的非限时促销价；仅作统一估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3.7-plus",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "bailian",
+                "offering_id": "api-cn",
+                "model_id": "qwen3-7-plus",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:34:30Z",
+              "source_ids": [
+                "ref-bailian-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:34:30Z",
+          "source_ids": [
+            "ref-bailian-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/messages；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/messages；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "qwen3-6-plus",
+      "request_id": "qwen3.6-plus",
+      "display_name": "Qwen3.6 Plus",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。百炼华北2（北京）标准实时价 ≤256K 档；256K–1M 档（8 / 48）与缓存价（显式命中 0.2、写入 2.5）未收录。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "12",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen3.6-plus",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方阿里云百炼北京价，本仓库百炼按量目录未收录，只登记 URL。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:34:30Z",
+              "source_ids": [
+                "ref-bailian-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:34:30Z",
+          "source_ids": [
+            "ref-bailian-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/messages；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/messages；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "minimax-m3",
+      "request_id": "minimax-m3",
+      "display_name": "MiniMax M3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、输入不超过512K；M3使用官方永久降价后的价格。缓存写入TTL未核清不填。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.42",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.minimax.cn/docs/guides/pricing-paygo",
+              "subject": "MiniMax-M3",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "minimax",
+                "offering_id": "api-cn",
+                "model_id": "minimax-m3",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:33:00Z",
+              "source_ids": [
+                "ref-minimax-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:33:00Z",
+          "source_ids": [
+            "ref-minimax-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/messages；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/messages；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "minimax-m2-7",
+      "request_id": "minimax-m2.7",
+      "display_name": "MiniMax M2.7",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准在线、输入不超过512K；M3使用官方永久降价后的价格。缓存写入TTL未核清不填。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.42",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.minimax.cn/docs/guides/pricing-paygo",
+              "subject": "MiniMax-M2.7",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "minimax",
+                "offering_id": "api-cn",
+                "model_id": "minimax-m2-7",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:33:00Z",
+              "source_ids": [
+                "ref-minimax-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:33:00Z",
+          "source_ids": [
+            "ref-minimax-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/messages；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 204800,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/messages；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "204800",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "minimax-m2-5",
+      "request_id": "minimax-m2.5",
+      "display_name": "MiniMax M2.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。MiniMax 国内按量价历史模型段；缓存写入为显式缓存 5 分钟 TTL 价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.21",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "2.625",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.minimax.cn/docs/guides/pricing-paygo",
+              "subject": "MiniMax-M2.5",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；M2.5 在 MiniMax 价格页历史模型段仍有标价，本仓库 MiniMax 按量目录未收录，只登记 URL。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:33:00Z",
+              "source_ids": [
+                "ref-minimax-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:33:00Z",
+          "source_ids": [
+            "ref-minimax-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/messages；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 204800,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/messages；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "204800",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "mimo-v2-6-pro",
+      "request_id": "mimo-v2.6-pro",
+      "display_name": "MiMo-V2.6-Pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。国内实时按量价，不分输入长度档；缓存写入“限时免费”未收录，不视为长期零价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.025",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+              "subject": "mimo-v2.6-pro",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方小米 MiMo 国内价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:37:50Z",
+              "source_ids": [
+                "ref-mimo-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:37:50Z",
+          "source_ids": [
+            "ref-mimo-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "mimo-v2-6-flash",
+      "request_id": "mimo-v2.6-flash",
+      "display_name": "MiMo-V2.6-Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。国内实时按量价，不分输入长度档；缓存写入“限时免费”未收录，不视为长期零价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.02",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+              "subject": "mimo-v2.6-flash",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方小米 MiMo 国内价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:37:50Z",
+              "source_ids": [
+                "ref-mimo-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:37:50Z",
+          "source_ids": [
+            "ref-mimo-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "mimo-v2-5-pro",
+      "request_id": "mimo-v2.5-pro",
+      "display_name": "MiMo-V2.5-Pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。国内实时按量价，不分输入长度档；缓存写入“限时免费”未收录，不视为长期零价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.025",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+              "subject": "mimo-v2.5-pro",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方小米 MiMo 国内价。开发方公告 2026-10-21 10:00（北京时间）下线本型号。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:37:50Z",
+              "source_ids": [
+                "ref-mimo-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:37:50Z",
+          "source_ids": [
+            "ref-mimo-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "mimo-v2-5",
+      "request_id": "mimo-v2.5",
+      "display_name": "MiMo-V2.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。国内实时按量价，不分输入长度档；缓存写入“限时免费”未收录，不视为长期零价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.02",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+              "subject": "mimo-v2.5",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方小米 MiMo 国内价。开发方公告 2026-10-21 10:00（北京时间）下线本型号。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:37:50Z",
+              "source_ids": [
+                "ref-mimo-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:37:50Z",
+          "source_ids": [
+            "ref-mimo-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "longcat-2-0",
+      "request_id": "longcat-2.0",
+      "display_name": "LongCat-2.0",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。官方原价；当前“平台初上线限时优惠”2 / 0.04 / 8 元未写结束日期，按非临时促销价口径不采用。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://longcat.chat/platform/docs/zh/pricing/longcat-2.0",
+              "subject": "LongCat-2.0",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方美团 LongCat 开放平台官方 ID 为 LongCat-2.0，与 Go 请求名只差大小写。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:38:40Z",
+              "source_ids": [
+                "ref-longcat-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:38:40Z",
+          "source_ids": [
+            "ref-longcat-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "hy4-preview",
+      "request_id": "hy4-preview",
+      "display_name": "Hy4 preview",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。广州地域、短上下文、常规高峰价；DeepSeek 采用本产品非官方直连模型价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "18",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://cloud.tencent.com/document/product/1823/130055",
+              "subject": "hy4-preview",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "hunyuan",
+                "offering_id": "api-cn",
+                "model_id": "hy4-preview",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:35:30Z",
+              "source_ids": [
+                "ref-tokenhub-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:35:30Z",
+          "source_ids": [
+            "ref-tokenhub-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1024000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1024000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "hy3",
+      "request_id": "hy3",
+      "display_name": "Hy3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。广州地域、短上下文、常规高峰价；DeepSeek 采用本产品非官方直连模型价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.25",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://cloud.tencent.com/document/product/1823/130055",
+              "subject": "hy3",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "hunyuan",
+                "offering_id": "api-cn",
+                "model_id": "hy3",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:35:30Z",
+              "source_ids": [
+                "ref-tokenhub-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:35:30Z",
+          "source_ids": [
+            "ref-tokenhub-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 256000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/chat/completions；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "256000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "gpt-5-6-luna",
+      "request_id": "gpt-5.6-luna",
+      "display_name": "GPT 5.6 Luna",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。OpenAI API Standard 短上下文（<272K）档；cache writes、长上下文、Batch、Flex、Fast 不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.02",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "1.2",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://developers.openai.com/api/docs/pricing",
+              "subject": "gpt-5.6-luna",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；本仓库 OpenAI API 目录未单独收录该型号，只登记 URL。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:31:00Z",
+              "source_ids": [
+                "ref-openai-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:31:00Z",
+          "source_ids": [
+            "ref-openai-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/responses；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1050000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/responses；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1050000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "grok-4-7",
+      "request_id": "grok-4.7",
+      "display_name": "Grok 4.7",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准全球 API、prompt 严格少于 200,000 tokens；达到 200,000 tokens 的整次请求适用高价，当前仅保存短上下文估算基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.x.ai/developers/pricing",
+              "subject": "grok-4.7",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "xai",
+                "offering_id": "api-global",
+                "model_id": "grok-4-7",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:33:10Z",
+              "source_ids": [
+                "ref-xai-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:33:10Z",
+          "source_ids": [
+            "ref-xai-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/responses；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 500000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/responses；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "500000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "grok-4-6",
+      "request_id": "grok-4.6",
+      "display_name": "Grok 4.6",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。标准全球 API、prompt 严格少于 200,000 tokens；达到 200,000 tokens 的整次请求适用高价，当前仅保存短上下文估算基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.x.ai/developers/pricing",
+              "subject": "grok-4.6",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；开发方按量目录已收录，数字完整独立保存，关系只用于估价检查。",
+              "catalog_model": {
+                "provider_id": "xai",
+                "offering_id": "api-global",
+                "model_id": "grok-4-6",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:33:10Z",
+              "source_ids": [
+                "ref-xai-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:33:10Z",
+          "source_ids": [
+            "ref-xai-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/responses；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 500000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/responses；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "500000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "muse-spark-1-3-contributor",
+      "request_id": "muse-spark-1.3-contributor",
+      "display_name": "Muse Spark 1.3 Contributor",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。Meta Muse Spark API Contributor 档；无缓存写入价、无长上下文加价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.002",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "0.20",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://dev.meta.ai/docs/pricing-rate-limits",
+              "subject": "muse-spark-1.3-contributor",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；Meta 官方 Contributor 档精确请求 ID 与价格（以训练授权换取折扣）。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:40:20Z",
+              "source_ids": [
+                "ref-meta-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:40:20Z",
+          "source_ids": [
+            "ref-meta-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/responses；实际准入依 Go 订阅、用量上限与地区。 Contributor 档以允许 Meta 使用提示词与输出训练换取折扣，仅限 Meta 地域政策允许的地区，非零数据保留。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/responses；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    },
+    {
+      "id": "muse-spark-1-2-contributor",
+      "request_id": "muse-spark-1.2-contributor",
+      "display_name": "Muse Spark 1.2 Contributor",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:40:00Z",
+        "source_ids": [
+          "go-docs",
+          "go-models"
+        ],
+        "evidence": "evidence/opencode/2026-09-23-go.md",
+        "notes": "OpenCode Go 官方文档与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "模型源头厂商官网公开按量价。Meta Muse Spark API Contributor 档；无缓存写入价、无长上下文加价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.002",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "0.20",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://dev.meta.ai/docs/pricing-rate-limits",
+              "subject": "muse-spark-1.2-contributor",
+              "reason": "用户指定订阅型号按模型源头厂商官网按量价对齐；Meta 官方 Contributor 档精确请求 ID 与价格（以训练授权换取折扣）。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:40:20Z",
+              "source_ids": [
+                "ref-meta-pricing"
+              ],
+              "evidence": "evidence/opencode/2026-09-23-go.md",
+              "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表 Go 订阅实际扣款；币种取开发方官网原币，不换汇。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:40:20Z",
+          "source_ids": [
+            "ref-meta-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "核对模型源头厂商官网公开按量价；按用户指定对齐，不核对订阅真实扣费。"
+        },
+        "notes": "开发方官网按量价参考；与开发方按量目录完整重复保存，不在运行时继承。"
+      },
+      "notes": "OpenCode Go 文档 Endpoints 表列出，端点 https://opencode.ai/zen/go/v1/responses；实际准入依 Go 订阅、用量上限与地区。 Contributor 档以允许 Meta 使用提示词与输出训练换取折扣，仅限 Meta 地域政策允许的地区，非零数据保留。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档 Endpoints 表逐型号核对；未实调。"
+          },
+          "notes": "Go 文档为本型号只列 /v1/responses；同一端点根上的其他两个协议对本型号是否可用未见说明，不据路径推断。请求体用裸型号名，opencode-go/ 前缀只属于 OpenCode 配置。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "Go 文档未公布逐型号思考控制。"
+          },
+          "notes": "Go 文档未公布逐型号思考参数、档位、开关或默认值；不从开发方 API 或 models.dev 布尔标记继承。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:40:00Z",
+            "source_ids": [
+              "go-modelsdev",
+              "go-docs"
+            ],
+            "evidence": "evidence/opencode/2026-09-23-go.md",
+            "notes": "只读 models.dev 的 opencode-go 条目；未实调。"
+          },
+          "notes": "OpenCode 客户端从 models.dev 读取的 opencode-go 上下文上限（limit.context，整数 token）；Go 文档本页不列窗口。不是开发方 API 窗口，不含最大输出。"
+        }
+      }
+    }
+  ],
+  "notes": "OpenCode Go 面向国际用户的包月开源编码模型套餐。模型参考价按用户指定取模型源头厂商官网公开按量价（中国厂商取其国内官网人民币价），不采用 Go 文档的用量上限换算价，也不采用 Zen 按量价；参考价只作按量等价消耗示意。"
+}

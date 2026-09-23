@@ -22,5 +22,6 @@
 | [Groq](groq/README.md) | api-global |
 | [Mistral](mistral/README.md) | api-global |
 | [Cursor](cursor/README.md) | individual |
+| [OpenCode](opencode/README.md) | go |
 
 硅基流动与 Together AI 已由用户整家移除，自动更新不得恢复，见 [服务商排除清单](../schemas/excluded-providers.json)。各家更新前必须按 [协议面维护](../docs/PROTOCOLS.md) 核对每个模型。

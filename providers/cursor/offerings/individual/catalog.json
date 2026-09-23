@@ -226,7 +226,7 @@
           "completion-composer-2-5"
         ],
         "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-        "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+        "notes": "Cursor 官方详情页 Model ID 确认；本条为标准速度；有独立请求 ID 的 Fast 档另立条目，Thinking / 长上下文不拆。未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -282,28 +282,28 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "notes": "Cursor 官方详情页 Model ID 确认；本条为标准速度；有独立请求 ID 的 Fast 档另立条目，Thinking / 长上下文不拆。未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -366,6 +366,352 @@
             "notes": "仅核对上下文；不代表其他能力已核对。"
           },
           "notes": "记录本产品常规 Context window；Max context 原文为 -，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 200k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+        }
+      }
+    },
+    {
+      "id": "composer-2-5-fast",
+      "request_id": "composer-2.5-fast",
+      "display_name": "Composer 2.5 (Fast)",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:36:30Z",
+        "source_ids": [
+          "r0923-cli",
+          "r0923-composer-2-5"
+        ],
+        "evidence": "evidence/cursor/2026-09-23-models.md",
+        "notes": "Composer 2.5 的 Fast 档，产品内默认速度。文档页只列 composer-2.5 与 fast 参数；官方 CLI 代码把旧 composer-2-fast 改写为 composer-2.5-fast，设备侧观察到的客户端型号名与之一致。未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "15",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台 Fast 档按量参考价；常规上下文，不含长上下文与地区加价。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/cursor-composer-2-5",
+              "subject": "Composer 2.5 (Fast)",
+              "reason": "Cursor 是 Composer 的开发方，同平台公开 Fast 档价格即开发方价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:36:30Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-composer-2-5"
+              ],
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "核对官方公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:36:30Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-composer-2-5"
+          ],
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "核对官方公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Composer 2.5 的 Fast 档，产品内默认速度。文档页只列 composer-2.5 与 fast 参数；官方 CLI 代码把旧 composer-2-fast 改写为 composer-2.5-fast，设备侧观察到的客户端型号名与之一致。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-pricing",
+              "r0923-cli"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "Cursor 订阅经官方客户端私有 Agent RPC 承载；未实调。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-composer-2-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "与 Composer 2.5 同一模型的 Fast 档；Cursor 标注 Thinking，Composer 没有 effort 档位，具体参数、开关与默认值未公布。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-composer-2-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "Composer 2.5 型号卡常规 Context window 原文 200k，Max context 为 -；Fast 档未另列窗口。未找到精确整数，不自行换算。"
+        }
+      }
+    },
+    {
+      "id": "grok-4-7",
+      "request_id": "grok-4.7",
+      "display_name": "Grok 4.7",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:36:30Z",
+        "source_ids": [
+          "r0923-grok-4-7"
+        ],
+        "evidence": "evidence/cursor/2026-09-23-models.md",
+        "notes": "Cursor 官方详情页 Model ID 确认（Cursor 与 SpaceXAI 联合训练）；本条为标准速度，Fast 档在 Cursor 文档中没有独立请求 ID。未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台标准按量参考价；常规上下文，不含地区加价。输入超过 256k 的长上下文与 Fast 不展开。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/grok-4-7",
+              "subject": "grok-4.7",
+              "reason": "优先采用同平台对应型号公开按量价；与开发方 xAI API 标准价相同。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:36:30Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-grok-4-7"
+              ],
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "核对官方公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:36:30Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-grok-4-7"
+          ],
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "核对官方公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Cursor 官方详情页 Model ID 确认（Cursor 与 SpaceXAI 联合训练）；本条为标准速度，Fast 档在 Cursor 文档中没有独立请求 ID。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-pricing",
+              "r0923-cli"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "Cursor 订阅经官方客户端私有 Agent RPC 承载；未实调。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方产品页的档位标签；私有 RPC 字段未公开，parameter=null，不能作为 API 参数发送。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-grok-4-7"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "Cursor 型号页：xhigh / high（默认）/ medium / low 四档；Pro 及以上默认 Fast 速度档，Start 套餐固定 medium、标准速度。私有 RPC 字段未公开。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-grok-4-7"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "型号卡常规 Context window 原文 256k，Max context 500k（输入超过 256k 按 2 倍计费）；未找到精确整数及缩写换算依据，不自行换算。"
         }
       }
     },
@@ -446,24 +792,24 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
@@ -625,24 +971,24 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
@@ -803,24 +1149,24 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 12.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 12.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
@@ -891,6 +1237,348 @@
       }
     },
     {
+      "id": "claude-opus-5-5",
+      "request_id": "claude-opus-5-5",
+      "display_name": "Claude Opus 5.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:36:30Z",
+        "source_ids": [
+          "r0923-claude-opus-5-5"
+        ],
+        "evidence": "evidence/cursor/2026-09-23-models.md",
+        "notes": "Cursor 官方详情页 Model ID 确认；取代 Opus 5。未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台标准按量参考价；常规上下文，不含地区加价。缓存写入按 Cursor 表 Cache Write 列；1M 扩展窗口同价。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/claude-opus-5-5",
+              "subject": "Claude Opus 5.5",
+              "reason": "优先采用同平台对应型号公开按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:36:30Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-claude-opus-5-5"
+              ],
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "核对官方公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:36:30Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-claude-opus-5-5"
+          ],
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "核对官方公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Cursor 官方详情页 Model ID 确认；取代 Opus 5。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-pricing",
+              "r0923-cli"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "Cursor 订阅经官方客户端私有 Agent RPC 承载；未实调。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-claude-opus-5-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "Cursor 型号页：支持 thinking 变体，推荐 high thinking；具体参数、档位清单、开关与默认值未公布，不继承 Anthropic API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "300k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-claude-opus-5-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "型号卡常规 Context window 原文 300k，Max context 1M（同价，无长上下文加价）；未找到精确整数，不自行换算。"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-5-5-fast",
+      "request_id": "claude-opus-5-5-fast",
+      "display_name": "Claude Opus 5.5 (Fast Mode)",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:36:30Z",
+        "source_ids": [
+          "r0923-claude-opus-5-5"
+        ],
+        "evidence": "evidence/cursor/2026-09-23-models.md",
+        "notes": "Cursor 文档明确的 Fast mode 请求 ID；旧版按请求计费套餐需 Max Mode。未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "40",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台 Fast 档按量参考价；常规上下文，不含长上下文与地区加价。缓存写入按 Cursor 表 Cache Write 列。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/claude-opus-5-5",
+              "subject": "Claude Opus 5.5 (Fast Mode)",
+              "reason": "优先采用同平台对应型号公开按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:36:30Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-claude-opus-5-5"
+              ],
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "核对官方公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:36:30Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-claude-opus-5-5"
+          ],
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "核对官方公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Cursor 文档明确的 Fast mode 请求 ID；旧版按请求计费套餐需 Max Mode。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-pricing",
+              "r0923-cli"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "Cursor 订阅经官方客户端私有 Agent RPC 承载；未实调。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-claude-opus-5-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "Cursor 型号页：支持 thinking 变体，推荐 high thinking；具体参数、档位清单、开关与默认值未公布，不继承 Anthropic API。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "300k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-claude-opus-5-5"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "型号卡常规 Context window 原文 300k，Max context 1M（同价，无长上下文加价）；未找到精确整数，不自行换算。"
+        }
+      }
+    },
+    {
       "id": "claude-opus-5",
       "request_id": "claude-opus-5",
       "display_name": "Claude Opus 5",
@@ -906,12 +1594,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T10:27:21.232069Z",
+        "checked_at": "2026-09-23T07:36:30Z",
         "source_ids": [
-          "completion-claude-opus-5"
+          "r0923-pricing"
         ],
-        "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-        "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+        "evidence": "evidence/cursor/2026-09-23-models.md",
+        "notes": "Cursor 官方详情页 Model ID 确认；Opus 5.5 取代本型号，价格表标为默认隐藏（仍可选）。Fast mode 为 claude-opus-5-fast，未单列。未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -967,28 +1655,28 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 6.25 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 6.25 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "notes": "Cursor 官方详情页 Model ID 确认；Opus 5.5 取代本型号，价格表标为默认隐藏（仍可选）。Fast mode 为 claude-opus-5-fast，未单列。未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1131,24 +1819,24 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 2.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 2.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
@@ -1295,24 +1983,24 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
@@ -1459,24 +2147,24 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },
@@ -1567,7 +2255,7 @@
           "completion-gpt-5-6-luna"
         ],
         "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-        "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+        "notes": "Cursor 官方详情页 Model ID 确认；本条为标准速度；有独立请求 ID 的 Fast 档另立条目，Thinking / 长上下文不拆。未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1623,28 +2311,28 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 0.25 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 0.25 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "notes": "Cursor 官方详情页 Model ID 确认；本条为标准速度；有独立请求 ID 的 Fast 档另立条目，Thinking / 长上下文不拆。未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1711,6 +2399,171 @@
       }
     },
     {
+      "id": "gpt-5-6-luna-fast",
+      "request_id": "gpt-5.6-luna-fast",
+      "display_name": "GPT-5.6 Luna (Fast Mode)",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:36:30Z",
+        "source_ids": [
+          "r0923-gpt-5-6-luna"
+        ],
+        "evidence": "evidence/cursor/2026-09-23-models.md",
+        "notes": "Cursor 型号页明确的 Fast mode 请求 ID（priority processing，标准价 2 倍）。未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台 Fast 档按量参考价；常规上下文，不含长上下文与地区加价。Cache Write 列未收录（OpenAI 缓存写入口径未建模），不视为零。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/gpt-5-6-luna",
+              "subject": "gpt-5.6-luna-fast",
+              "reason": "优先采用同平台对应型号公开按量价（Fast 档为标准价 2 倍）。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:36:30Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-gpt-5-6-luna"
+              ],
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "核对官方公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:36:30Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-gpt-5-6-luna"
+          ],
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "核对官方公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Cursor 型号页明确的 Fast mode 请求 ID（priority processing，标准价 2 倍）。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-pricing",
+              "r0923-cli"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "Cursor 订阅经官方客户端私有 Agent RPC 承载；未实调。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-gpt-5-6-luna"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 Fast 档沿用同一型号页的思考说明，未另列档位。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "272k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-gpt-5-6-luna"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "型号卡常规 Context window 原文 272k，Max context 1M（输入超过 272k 另按长上下文计费）；未找到精确整数，不自行换算。"
+        }
+      }
+    },
+    {
       "id": "gpt-5-6-sol",
       "request_id": "gpt-5.6-sol",
       "display_name": "GPT-5.6 Sol",
@@ -1731,7 +2584,7 @@
           "completion-gpt-5-6-sol"
         ],
         "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-        "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+        "notes": "Cursor 官方详情页 Model ID 确认；本条为标准速度；有独立请求 ID 的 Fast 档另立条目，Thinking / 长上下文不拆。未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1787,28 +2640,28 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
-        "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。 2026-09-23 价格表注明 4 / 20 为促销价，至少持续到 2026-11-21。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "notes": "Cursor 官方详情页 Model ID 确认；本条为标准速度；有独立请求 ID 的 Fast 档另立条目，Thinking / 长上下文不拆。未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1875,6 +2728,171 @@
       }
     },
     {
+      "id": "gpt-5-6-sol-fast",
+      "request_id": "gpt-5.6-sol-fast",
+      "display_name": "GPT-5.6 Sol (Fast Mode)",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:36:30Z",
+        "source_ids": [
+          "r0923-gpt-5-6-sol"
+        ],
+        "evidence": "evidence/cursor/2026-09-23-models.md",
+        "notes": "Cursor 型号页明确的 Fast mode 请求 ID（priority processing，标准价 2 倍）。未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "40",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台 Fast 档按量参考价；常规上下文，不含长上下文与地区加价。Cache Write 列未收录（OpenAI 缓存写入口径未建模），不视为零。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/gpt-5-6-sol",
+              "subject": "gpt-5.6-sol-fast",
+              "reason": "优先采用同平台对应型号公开按量价（Fast 档为标准价 2 倍）。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:36:30Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-gpt-5-6-sol"
+              ],
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "核对官方公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:36:30Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-gpt-5-6-sol"
+          ],
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "核对官方公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Cursor 型号页明确的 Fast mode 请求 ID（priority processing，标准价 2 倍）。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-pricing",
+              "r0923-cli"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "Cursor 订阅经官方客户端私有 Agent RPC 承载；未实调。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-gpt-5-6-sol"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 Fast 档沿用同一型号页的思考说明，未另列档位。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "272k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-gpt-5-6-sol"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "型号卡常规 Context window 原文 272k，Max context 1M（输入超过 272k 另按长上下文计费）；未找到精确整数，不自行换算。"
+        }
+      }
+    },
+    {
       "id": "gpt-5-6-terra",
       "request_id": "gpt-5.6-terra",
       "display_name": "GPT-5.6 Terra",
@@ -1895,7 +2913,7 @@
           "completion-gpt-5-6-terra"
         ],
         "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-        "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。"
+        "notes": "Cursor 官方详情页 Model ID 确认；本条为标准速度；有独立请求 ID 的 Fast 档另立条目，Thinking / 长上下文不拆。未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1951,28 +2969,28 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 2.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网另列 Cache Write 为 2.5 USD/百万 token，但未明确 TTL；当前词汇只有 5m/1h 写入，故不伪填该分量。"
       },
-      "notes": "Cursor 官方详情页 Model ID 确认；只记录标准模型，Fast/Thinking/长上下文不拆成额外型号。未实调。",
+      "notes": "Cursor 官方详情页 Model ID 确认；本条为标准速度；有独立请求 ID 的 Fast 档另立条目，Thinking / 长上下文不拆。未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -2035,6 +3053,171 @@
             "notes": "仅核对上下文；不代表其他能力已核对。"
           },
           "notes": "记录本产品常规 Context window；Max context 原文为 1M，不能拿最大模式替换常规窗口，也不能抄原厂 API。 官方窗口原文为 272k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+        }
+      }
+    },
+    {
+      "id": "gpt-5-6-terra-fast",
+      "request_id": "gpt-5.6-terra-fast",
+      "display_name": "GPT-5.6 Terra (Fast Mode)",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:36:30Z",
+        "source_ids": [
+          "r0923-gpt-5-6-terra"
+        ],
+        "evidence": "evidence/cursor/2026-09-23-models.md",
+        "notes": "Cursor 型号页明确的 Fast mode 请求 ID（priority processing，标准价 2 倍）。未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "24",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台 Fast 档按量参考价；常规上下文，不含长上下文与地区加价。Cache Write 列未收录（OpenAI 缓存写入口径未建模），不视为零。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/gpt-5-6-terra",
+              "subject": "gpt-5.6-terra-fast",
+              "reason": "优先采用同平台对应型号公开按量价（Fast 档为标准价 2 倍）。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:36:30Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-gpt-5-6-terra"
+              ],
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "核对官方公开价格，仅用于参考估价。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:36:30Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-gpt-5-6-terra"
+          ],
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "核对官方公开价格，仅用于参考估价。"
+        },
+        "notes": "按量等价消耗示意，不代表订阅实际扣款。"
+      },
+      "notes": "Cursor 型号页明确的 Fast mode 请求 ID（priority processing，标准价 2 倍）。未实调。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-pricing",
+              "r0923-cli"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "Cursor 订阅经官方客户端私有 Agent RPC 承载；未实调。"
+          },
+          "notes": "Cursor 个人订阅通过官方客户端私有 Agent ConnectRPC / protobuf 使用；本地官方 CLI 2026.08.11-e8db854 代码确认 AgentService.Run 双向流。不是按模型原厂分配的 Chat / Responses / Messages 面，也不代表公开通用推理 API。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅适用于本产品、本模型及此协议面。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-gpt-5-6-terra"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 Fast 档沿用同一型号页的思考说明，未另列档位。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "272k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:36:30Z",
+            "source_ids": [
+              "r0923-gpt-5-6-terra"
+            ],
+            "evidence": "evidence/cursor/2026-09-23-models.md",
+            "notes": "本次核对 Cursor 官方公开资料；未实调。"
+          },
+          "notes": "型号卡常规 Context window 原文 272k，Max context 1M（输入超过 272k 另按长上下文计费）；未找到精确整数，不自行换算。"
         }
       }
     },
@@ -2115,24 +3298,24 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T10:27:21.232069Z",
+              "checked_at": "2026-09-23T07:36:30Z",
               "source_ids": [
-                "completion-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-              "notes": "核对同平台公开价格，仅用于参考估价。"
+              "evidence": "evidence/cursor/2026-09-23-models.md",
+              "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T10:27:21.232069Z",
+          "checked_at": "2026-09-23T07:36:30Z",
           "source_ids": [
-            "completion-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
-          "notes": "核对同平台公开价格，仅用于参考估价。"
+          "evidence": "evidence/cursor/2026-09-23-models.md",
+          "notes": "2026-09-23 复查 Cursor 官方价格表，本条标准价无变化；仅用于参考估价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。官网 Cache Write 为横杠，未当作免费写入费率。"
       },

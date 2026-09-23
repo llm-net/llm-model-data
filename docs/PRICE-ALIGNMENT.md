@@ -1,15 +1,16 @@
 # 当前价格对齐结果
 
-更新日期：2026-09-17。用户明确指定的估价规则优先于首轮核对方案。
+更新日期：2026-09-23。用户明确指定的估价规则优先于首轮核对方案。
 
 ## 当前结果
 
-- 18家服务商、28个产品、214条模型。
-- 71条订阅模型中70条已有参考价；K2.8 Preview按用户指定参考K2.7 Code，新增Codex Spark未查到对应公开按量价，保留unknown。
+- 19家服务商、29个产品、259条模型。
+- 114条订阅模型中113条已有参考价；K2.8 Preview按用户指定参考K2.7 Code；Codex Spark 在同平台与开发方 OpenAI 均无公开按量价，保留unknown。
 - 6条方舟/千帆API短名已对齐最新日期版本。
-- 共213条有唯一价格基准，剩余 Codex Spark 1条参考价未知。晨羽AI已有29条价格缺项已补齐，并新增 `deepseek-flash`；30条均按本平台匿名公开接口的人民币价格独立保存，见 [2026-09-17 核对记录](../evidence/chenyu-ai/2026-09-17-public-models.md)。
+- 共258条有唯一价格基准，剩余 Codex Spark 1条参考价未知。
+- 2026-09-23：新增 OpenCode Go（31条，全部按源头厂商官网价）、Claude Opus 5.5（API 与 Claude Code）、Codex GPT-6 Sol / Luna、Cursor 7个请求 ID（Grok 4.7、Composer 2.5 Fast、Opus 5.5 及 Fast、GPT-5.6 三个 Fast），Grok Build 的 Grok 4.7 Fast 由 unknown 改为 xAI 官网 Fast 费率。已有型号数字价格与套餐 / 额度未改，见 [Anthropic](../evidence/anthropic/2026-09-23-claude-opus-5-5.md)、[Codex](../evidence/openai/2026-09-23-codex-gpt-6.md)、[Cursor](../evidence/cursor/2026-09-23-models.md)、[Grok Build](../evidence/xai/2026-09-23-grok-47-fast.md)、[OpenCode Go](../evidence/opencode/2026-09-23-go.md)。
 - 本轮整家删除硅基流动（6条模型）和 Together AI（1条模型）；schemas/excluded-providers.json 阻止重新导入。此前逐型号排除的历史仍见下表。
-- 本次晨羽AI更新不改其他服务商数据、套餐或额度；工作树原有 DeepSeek 分时价格候选独立保留。晨羽AI30项协议已按实时矩阵核对、20项文本上下文已知；随后按新公开说明补入10项思考支持（1 complete / 9 partial），20项仍未知，见 [思考补充核对](../evidence/chenyu-ai/2026-09-17-reasoning.md)。其余服务商专项历史结果见 [PROTOCOL-AUDIT-2026-09-16.md](PROTOCOL-AUDIT-2026-09-16.md)。
+- 晨羽AI 30条按本平台匿名公开接口的人民币价格独立保存，见 [2026-09-17 核对记录](../evidence/chenyu-ai/2026-09-17-public-models.md) 与 [思考补充核对](../evidence/chenyu-ai/2026-09-17-reasoning.md)。其余服务商专项历史结果见 [PROTOCOL-AUDIT-2026-09-16.md](PROTOCOL-AUDIT-2026-09-16.md)。
 
 ## 固定口径
 
@@ -35,6 +36,14 @@ Codex与GLM Coding Plan原先保存的积分单价已移除，统一改用本平
 ## 用户指定的订阅参考价
 
 kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot；其公开按量表目前只列K3、K2.7 Code、K2.7 Code Highspeed、K2.6。两级来源都没有K2.8报价。用户已明确指定按Kimi K2.7 Code做示意：每百万token未缓存输入6.5元、缓存输入1.3元、输出27元。记录为reference，不改动K2.8 Preview身份，不声明官方同价。
+
+## 用户指定：订阅缺价按源头厂商官网对齐
+
+用户明确要求订阅里缺价的型号去模型源头厂商官网对齐价格：
+
+- OpenCode Go 全部型号取开发方官网公开按量价：中国厂商取其国内官网人民币价，Grok / GPT / Muse 取开发方美元价，不换汇。Go 文档的 token 价是用量上限扣减换算表，Zen 是另一套按量余额，均不作为参考价。开发方按量目录已收录的型号保存 `catalog_model`；DeepSeek V4.1 Flash 参考 `deepseek-flash`。促销价、长上下文档与缓存写入限免不进基准。
+- Grok Build 的 `grok-4.7-build-fast` 取 xAI 官网单列的 Grok 4.7 Fast 费率（同一模型的更快服务档，只在 Cursor 与 Grok Build 提供，公开 API 无此型号）。
+- Cursor 新增条目仍按同平台 Cursor 公开价；Composer 由 Cursor 开发，同平台价即开发方价。
 
 ## 完整对齐表
 
@@ -119,6 +128,48 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 | cursor/individual | `gpt-5.6-sol` | `gpt-5.6-sol` | USD input_uncached_tokens=4/1000000 token, input_cached_tokens=0.4/1000000 token, output_tokens=20/1000000 token |
 | cursor/individual | `gpt-5.6-terra` | `gpt-5.6-terra` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=12/1000000 token |
 | cursor/individual | `muse-spark-1.3` | `muse-spark-1.3` | USD input_uncached_tokens=1.25/1000000 token, input_cached_tokens=0.15/1000000 token, output_tokens=4.25/1000000 token |
+| anthropic/claude-code | `claude-opus-5-5` | `claude-opus-5-5` | USD input_uncached_tokens=4/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=20/1000000 token, cache_write_5m_tokens=5/1000000 token |
+| openai/codex | `gpt-6-sol` | `gpt-6-sol` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=10/1000000 token |
+| openai/codex | `gpt-6-luna` | `gpt-6-luna` | USD input_uncached_tokens=0.1/1000000 token, input_cached_tokens=0.01/1000000 token, output_tokens=0.5/1000000 token |
+| cursor/individual | `grok-4.7` | `grok-4.7` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=6/1000000 token |
+| cursor/individual | `composer-2.5-fast` | `Composer 2.5 (Fast)` | USD input_uncached_tokens=3/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=15/1000000 token |
+| cursor/individual | `claude-opus-5-5` | `Claude Opus 5.5` | USD input_uncached_tokens=4/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=20/1000000 token, cache_write_5m_tokens=5/1000000 token |
+| cursor/individual | `claude-opus-5-5-fast` | `Claude Opus 5.5 (Fast Mode)` | USD input_uncached_tokens=8/1000000 token, input_cached_tokens=0.4/1000000 token, output_tokens=40/1000000 token, cache_write_5m_tokens=10/1000000 token |
+| cursor/individual | `gpt-5.6-sol-fast` | `gpt-5.6-sol-fast` | USD input_uncached_tokens=8/1000000 token, input_cached_tokens=0.8/1000000 token, output_tokens=40/1000000 token |
+| cursor/individual | `gpt-5.6-terra-fast` | `gpt-5.6-terra-fast` | USD input_uncached_tokens=4/1000000 token, input_cached_tokens=0.4/1000000 token, output_tokens=24/1000000 token |
+| cursor/individual | `gpt-5.6-luna-fast` | `gpt-5.6-luna-fast` | USD input_uncached_tokens=0.4/1000000 token, input_cached_tokens=0.04/1000000 token, output_tokens=2.4/1000000 token |
+| xai/grok-build | `grok-4.7-build-fast` | `Grok 4.7 Fast` | USD input_uncached_tokens=4/1000000 token, input_cached_tokens=1/1000000 token, output_tokens=12/1000000 token |
+| opencode/go | `kimi-k3` | `kimi-k3` | CNY input_uncached_tokens=20/1000000 token, input_cached_tokens=2/1000000 token, output_tokens=100/1000000 token |
+| opencode/go | `kimi-k2.7-code` | `kimi-k2-7-code` | CNY input_uncached_tokens=6.5/1000000 token, input_cached_tokens=1.3/1000000 token, output_tokens=27/1000000 token |
+| opencode/go | `kimi-k2.6` | `kimi-k2-6` | CNY input_uncached_tokens=6.5/1000000 token, input_cached_tokens=1.1/1000000 token, output_tokens=27/1000000 token |
+| opencode/go | `glm-5.3` | `glm-5-3` | CNY input_uncached_tokens=8/1000000 token, input_cached_tokens=2/1000000 token, output_tokens=28/1000000 token |
+| opencode/go | `glm-5.3-flash` | `glm-5-3-flash` | CNY input_uncached_tokens=0.8/1000000 token, input_cached_tokens=0.23/1000000 token, output_tokens=2.8/1000000 token |
+| opencode/go | `glm-5.2` | `glm-5-2` | CNY input_uncached_tokens=8/1000000 token, input_cached_tokens=2/1000000 token, output_tokens=28/1000000 token |
+| opencode/go | `glm-5.1` | `glm-5-1` | CNY input_uncached_tokens=6/1000000 token, input_cached_tokens=1.3/1000000 token, output_tokens=24/1000000 token |
+| opencode/go | `deepseek-v4.1-flash` | `deepseek-flash` | CNY input_uncached_tokens=2/1000000 token, input_cached_tokens=0.04/1000000 token, output_tokens=8/1000000 token（峰时首档，另有谷时） |
+| opencode/go | `deepseek-v4-pro` | `deepseek-v4-pro` | CNY input_uncached_tokens=9/1000000 token, input_cached_tokens=0.30/1000000 token, output_tokens=27/1000000 token（峰时首档，另有谷时） |
+| opencode/go | `deepseek-v4-flash` | `deepseek-v4-flash` | CNY input_uncached_tokens=2/1000000 token, input_cached_tokens=0.04/1000000 token, output_tokens=8/1000000 token（峰时首档，另有谷时） |
+| opencode/go | `deepseek-v4-flash-vision-exp` | `deepseek-v4-flash-vision-exp` | CNY input_uncached_tokens=2/1000000 token, input_cached_tokens=0.04/1000000 token, output_tokens=8/1000000 token（峰时首档，另有谷时） |
+| opencode/go | `qwen3.8-max` | `qwen3-8-max` | CNY input_uncached_tokens=12/1000000 token, output_tokens=36/1000000 token |
+| opencode/go | `qwen3.8-flash` | `qwen3-8-flash` | CNY input_uncached_tokens=0.8/1000000 token, output_tokens=2.7/1000000 token |
+| opencode/go | `qwen3.7-max` | `qwen3.7-max` | CNY input_uncached_tokens=12/1000000 token, output_tokens=36/1000000 token |
+| opencode/go | `qwen3.7-plus` | `qwen3-7-plus` | CNY input_uncached_tokens=2/1000000 token, output_tokens=8/1000000 token |
+| opencode/go | `qwen3.6-plus` | `qwen3.6-plus` | CNY input_uncached_tokens=2/1000000 token, output_tokens=12/1000000 token |
+| opencode/go | `minimax-m3` | `minimax-m3` | CNY input_uncached_tokens=2.1/1000000 token, input_cached_tokens=0.42/1000000 token, output_tokens=8.4/1000000 token |
+| opencode/go | `minimax-m2.7` | `minimax-m2-7` | CNY input_uncached_tokens=2.1/1000000 token, input_cached_tokens=0.42/1000000 token, output_tokens=8.4/1000000 token |
+| opencode/go | `minimax-m2.5` | `MiniMax-M2.5` | CNY input_uncached_tokens=2.1/1000000 token, input_cached_tokens=0.21/1000000 token, output_tokens=8.4/1000000 token, cache_write_5m_tokens=2.625/1000000 token |
+| opencode/go | `mimo-v2.6-pro` | `mimo-v2.6-pro` | CNY input_uncached_tokens=3/1000000 token, input_cached_tokens=0.025/1000000 token, output_tokens=6/1000000 token |
+| opencode/go | `mimo-v2.6-flash` | `mimo-v2.6-flash` | CNY input_uncached_tokens=1/1000000 token, input_cached_tokens=0.02/1000000 token, output_tokens=2/1000000 token |
+| opencode/go | `mimo-v2.5-pro` | `mimo-v2.5-pro` | CNY input_uncached_tokens=3/1000000 token, input_cached_tokens=0.025/1000000 token, output_tokens=6/1000000 token |
+| opencode/go | `mimo-v2.5` | `mimo-v2.5` | CNY input_uncached_tokens=1/1000000 token, input_cached_tokens=0.02/1000000 token, output_tokens=2/1000000 token |
+| opencode/go | `longcat-2.0` | `LongCat-2.0` | CNY input_uncached_tokens=5/1000000 token, input_cached_tokens=0.1/1000000 token, output_tokens=20/1000000 token |
+| opencode/go | `hy4-preview` | `hy4-preview` | CNY input_uncached_tokens=6/1000000 token, input_cached_tokens=0.3/1000000 token, output_tokens=18/1000000 token |
+| opencode/go | `hy3` | `hy3` | CNY input_uncached_tokens=1/1000000 token, input_cached_tokens=0.25/1000000 token, output_tokens=4/1000000 token |
+| opencode/go | `gpt-5.6-luna` | `gpt-5.6-luna` | USD input_uncached_tokens=0.2/1000000 token, input_cached_tokens=0.02/1000000 token, output_tokens=1.2/1000000 token |
+| opencode/go | `grok-4.7` | `grok-4-7` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=6/1000000 token |
+| opencode/go | `grok-4.6` | `grok-4-6` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=6/1000000 token |
+| opencode/go | `muse-spark-1.3-contributor` | `muse-spark-1.3-contributor` | USD input_uncached_tokens=0.10/1000000 token, input_cached_tokens=0.002/1000000 token, output_tokens=0.20/1000000 token |
+| opencode/go | `muse-spark-1.2-contributor` | `muse-spark-1.2-contributor` | USD input_uncached_tokens=0.10/1000000 token, input_cached_tokens=0.002/1000000 token, output_tokens=0.20/1000000 token |
 
 各家本轮证据在`evidence/<provider>/2026-09-16-alignment.md`，记录官方URL、抓取时间、参考对象、原厂回退原因和数值。首轮审计文件为历史快照，当前状态以本页与catalog为准。
 

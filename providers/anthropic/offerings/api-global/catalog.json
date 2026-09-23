@@ -77,12 +77,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "audit-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -91,12 +91,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "audit-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -273,12 +273,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "audit-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -287,12 +287,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "audit-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -408,6 +408,193 @@
       }
     },
     {
+      "id": "claude-opus-5-5",
+      "request_id": "claude-opus-5-5",
+      "display_name": "Claude Opus 5.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-23T07:31:00Z",
+        "source_ids": [
+          "r0923-opus-5-5",
+          "r0923-models"
+        ],
+        "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准 API、缓存写入采用5分钟TTL；不展开Batch、Fast或1小时缓存写入。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:31:00Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-opus-5-5"
+              ],
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "仅一组估算基准；缓存读为输入价 0.05 倍（官方独立报价 0.20 USD），不按通用 0.1 倍推算。Batch、Fast、1 小时缓存写入不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-23T07:31:00Z",
+          "source_ids": [
+            "r0923-pricing",
+            "r0923-opus-5-5"
+          ],
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/anthropic/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方 API 当前（latest）型号，2026-09-22 发布；Opus 5 转为 active legacy，两者是独立型号。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:31:00Z",
+            "source_ids": [
+              "r0923-opus-5-5",
+              "r0923-openai-sdk",
+              "r0923-effort"
+            ],
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "Messages 为原生接口，官方 Chat 兼容层示例直接使用 claude-opus-5-5；未发现 Responses。Chat 只供评估、功能受限；本型号不支持强制工具调用（tool_choice any/tool 返回错误）。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "adaptive",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "API 顶层 output_config.effort；五档均支持，本型号默认 medium（其他型号多为 high）；不是 token 硬预算。支持逐消息 beta 改档。"
+                }
+              ],
+              "notes": "仅适用于本产品、本模型及此协议面。thinking.type=disabled 在任何档位都返回 400。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:31:00Z",
+            "source_ids": [
+              "r0923-opus-5-5",
+              "r0923-effort"
+            ],
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本型号 API 自适应思考始终开启、不可关闭；已核对 Messages 五档 effort 与默认 medium。Chat 兼容层的具体控制与逐消息 beta 控制未完整登记。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1M tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-23T07:31:00Z",
+            "source_ids": [
+              "r0923-opus-5-5",
+              "r0923-models"
+            ],
+            "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "型号规格与比较表均为 1M；Claude 文档窗口记法为十进制，记 1000000。最大输出 128K 未确认精确整数，保留 null。1M 全窗口按标准价计费。"
+        }
+      }
+    },
+    {
       "id": "claude-haiku-4-5",
       "request_id": "claude-haiku-4-5",
       "display_name": "claude-haiku-4-5",
@@ -469,12 +656,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "audit-pricing"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -483,12 +670,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "audit-pricing"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -658,13 +845,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-17T10:30:47.945348+00:00",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "pricing",
-                "repair-claude-fable-5-1"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -673,13 +859,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-17T10:30:47.945348+00:00",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "pricing",
-            "repair-claude-fable-5-1"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -845,13 +1030,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-17T10:30:47.945348+00:00",
+              "checked_at": "2026-09-23T07:31:00Z",
               "source_ids": [
-                "pricing",
-                "repair-claude-fable-5"
+                "r0923-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+              "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -860,13 +1044,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-17T10:30:47.945348+00:00",
+          "checked_at": "2026-09-23T07:31:00Z",
           "source_ids": [
-            "pricing",
-            "repair-claude-fable-5"
+            "r0923-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-09-17-prices-and-names.md",
-          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-09-23-claude-opus-5-5.md",
+          "notes": "2026-09-23 复查官方价格表，本条数字无变化；未使用真实 Key 实调。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },

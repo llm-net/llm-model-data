@@ -233,21 +233,71 @@
         "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
       },
       "reference_prices": {
-        "status": "unknown",
-        "rules": [],
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "开发方 xAI 官方公布的 Grok 4.7 Fast 费率，prompt 不超过 200k tokens 档；超过 200k 的 6 / 1.5 / 18 不展开。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "12",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.x.ai/developers/pricing",
+              "subject": "Grok 4.7 Fast",
+              "reason": "用户指定订阅缺价型号按模型源头厂商官网价格对齐；xAI 明确 Grok 4.7 Fast 是同一 Grok 4.7 模型的更快服务档，只在 Cursor 与 Grok Build 提供、公开 API 不提供，官方价格页单列其费率（标准价 2 倍）。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-23T07:33:10Z",
+              "source_ids": [
+                "r0923-pricing",
+                "r0923-47"
+              ],
+              "evidence": "evidence/xai/2026-09-23-grok-47-fast.md",
+              "notes": "核对开发方 xAI 官方价格页的 Grok 4.7 Fast 费率；按用户指定采用开发方官网价，不核对订阅真实扣费。"
+            },
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。官方文档未出现 grok-4.7-build-fast 字样，对应关系依据展示名 Grok 4.7 Fast 与 xAI 的 Grok Build 专供说明。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
         "verification": {
-          "status": "needs_review",
-          "checked_at": null,
+          "status": "verified",
+          "checked_at": "2026-09-23T07:33:10Z",
           "source_ids": [
-            "refresh-pricing",
-            "refresh-47-overview"
+            "r0923-pricing",
+            "r0923-47"
           ],
-          "evidence": "evidence/xai/2026-09-22-grok-47.md",
-          "notes": "同平台/开发方无 Fast 对应的公开按量 API 价格；专供工具订阅的费率不充当 API 参考价。"
+          "evidence": "evidence/xai/2026-09-23-grok-47-fast.md",
+          "notes": "核对开发方 xAI 官方价格页的 Grok 4.7 Fast 费率；按用户指定采用开发方官网价，不核对订阅真实扣费。"
         },
-        "notes": "未获授权以其他型号近似估价；不机械倍乘标准 4.7 参考价。"
+        "notes": "开发方官网价参考；非公开 API 型号，不能凭此调用 xAI API。"
       },
-      "notes": "2026-09-22 官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API 与客户端旧内嵌目录。实际准入仍取决于账号与套餐。Fast 不在公开 API 提供，参考价仍 unknown。",
+      "notes": "官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API。xAI 说明 Grok 4.7 Fast 为同一 Grok 4.7 模型的更快服务档，Grok Build 免费档不含；实际准入仍取决于账号与套餐。参考价采用 xAI 官网公布的 Fast 费率。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 500000,

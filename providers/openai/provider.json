@@ -164,6 +164,30 @@
       "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
       "purpose": "models",
       "notes": "2026-09-22 专项核对；逐型号范围、抓取时间、客户端产物版本与缺项见 evidence/openai/2026-09-22-codex-availability.md。"
+    },
+    {
+      "id": "r0923-models",
+      "url": "https://learn.chatgpt.com/docs/models.md",
+      "purpose": "models",
+      "notes": "Codex 推荐 / 其他 / 已弃用型号与 GPT-5.5 退役；2026-09-23 核对。"
+    },
+    {
+      "id": "r0923-pricing",
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "purpose": "pricing",
+      "notes": "Standard 短上下文价表；2026-09-23 核对。"
+    },
+    {
+      "id": "r0923-config",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-reference.md",
+      "purpose": "models",
+      "notes": "wire_api 与 model_reasoning_effort；2026-09-23 核对。"
+    },
+    {
+      "id": "r0923-cli",
+      "url": "https://registry.npmjs.org/@openai/codex/0.156.1-linux-x64",
+      "purpose": "models",
+      "notes": "官方 npm 发布的 Codex CLI 0.156.1 linux-x64；只读内嵌逐型号目录，摘录见 2026-09-23-client-models.json。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

@@ -140,6 +140,48 @@
       "url": "https://code.claude.com/docs/en/llm-gateway-protocol",
       "purpose": "models",
       "notes": "API formats 与订阅 OAuth 请求头；2026-09-17 Fable 独立协议复核。"
+    },
+    {
+      "id": "r0923-opus-5-5",
+      "url": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+      "purpose": "models",
+      "notes": "Opus 5.5 型号规格、价格、思考与可用性；2026-09-23 核对，见 claude-opus-5-5 证据。"
+    },
+    {
+      "id": "r0923-models",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "purpose": "models",
+      "notes": "当前型号比较表；2026-09-23 核对。"
+    },
+    {
+      "id": "r0923-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "purpose": "pricing",
+      "notes": "Model pricing 表与缓存倍率脚注；2026-09-23 核对。"
+    },
+    {
+      "id": "r0923-effort",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort",
+      "purpose": "models",
+      "notes": "effort 档位、默认值与 Opus 5.5 思考不可关闭；2026-09-23 核对。"
+    },
+    {
+      "id": "r0923-openai-sdk",
+      "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/openai-sdk",
+      "purpose": "models",
+      "notes": "官方 Chat 兼容层；2026-09-23 核对。"
+    },
+    {
+      "id": "r0923-code-models",
+      "url": "https://code.claude.com/docs/en/model-config",
+      "purpose": "models",
+      "notes": "Claude Code 别名、默认型号、effort、思考与 1M 窗口；2026-09-23 核对。"
+    },
+    {
+      "id": "r0923-code-protocol",
+      "url": "https://code.claude.com/docs/en/llm-gateway-protocol",
+      "purpose": "models",
+      "notes": "Claude Code API formats 与请求头；2026-09-23 核对。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

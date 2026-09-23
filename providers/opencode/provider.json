@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "id": "opencode",
+  "display_name": "OpenCode",
+  "sources": [
+    {
+      "id": "go-docs",
+      "url": "https://opencode.ai/docs/go/",
+      "purpose": "subscription",
+      "notes": "OpenCode Go 套餐说明、型号清单、Endpoints 表与用量上限；逐项结论见 2026-09-23-go 证据。"
+    },
+    {
+      "id": "go-models",
+      "url": "https://opencode.ai/zen/go/v1/models",
+      "purpose": "models",
+      "notes": "Go 端点匿名型号列表（只有 id，不含窗口、价格或协议）。"
+    },
+    {
+      "id": "go-modelsdev",
+      "url": "https://models.dev/api.json",
+      "purpose": "models",
+      "notes": "OpenCode 官方文档指明的模型元数据来源；只取 opencode-go 条目的 limit.context。"
+    },
+    {
+      "id": "ref-xai-pricing",
+      "url": "https://docs.x.ai/developers/pricing",
+      "purpose": "pricing",
+      "notes": "开发方 xAI 公开按量价；Grok 型号参考价来源。"
+    },
+    {
+      "id": "ref-openai-pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "purpose": "pricing",
+      "notes": "开发方 OpenAI API Standard 价表；GPT 型号参考价来源。"
+    },
+    {
+      "id": "ref-zhipu-pricing",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+      "purpose": "pricing",
+      "notes": "开发方智谱 BigModel 国内按量价；GLM 型号参考价来源。"
+    },
+    {
+      "id": "ref-kimi-pricing",
+      "url": "https://platform.kimi.com/docs/pricing/chat",
+      "purpose": "pricing",
+      "notes": "开发方月之暗面 Kimi 开放平台按量价；Kimi 型号参考价来源。"
+    },
+    {
+      "id": "ref-deepseek-pricing",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "purpose": "pricing",
+      "notes": "开发方 DeepSeek 国内按量价与峰谷时段；DeepSeek 型号参考价来源。"
+    },
+    {
+      "id": "ref-deepseek-news",
+      "url": "https://api-docs.deepseek.com/zh-cn/news/news260910",
+      "purpose": "discovery",
+      "notes": "DeepSeek V4.1 Flash 发布说明（deepseek-flash 对应 V4.1 Flash，OpenCode 为合作方）。"
+    },
+    {
+      "id": "ref-minimax-pricing",
+      "url": "https://platform.minimax.cn/docs/guides/pricing-paygo",
+      "purpose": "pricing",
+      "notes": "开发方 MiniMax 国内按量价（含历史模型 M2.5）；MiniMax 型号参考价来源。"
+    },
+    {
+      "id": "ref-tokenhub-pricing",
+      "url": "https://cloud.tencent.com/document/product/1823/130055",
+      "purpose": "pricing",
+      "notes": "开发方腾讯云 TokenHub 模型价格（广州）；混元 Hy 型号参考价来源。"
+    },
+    {
+      "id": "ref-bailian-pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "purpose": "pricing",
+      "notes": "开发方阿里云百炼华北2（北京）按量价；千问型号参考价来源。"
+    },
+    {
+      "id": "ref-bailian-console-pricing",
+      "url": "https://bailian.console.aliyun.com/cn-beijing/pricing",
+      "purpose": "pricing",
+      "notes": "百炼控制台公开价格页（免登录价格接口）；核对缓存价与上下文，未收录缓存分量。"
+    },
+    {
+      "id": "ref-mimo-pricing",
+      "url": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "purpose": "pricing",
+      "notes": "开发方小米 MiMo 开放平台国内按量价；MiMo 型号参考价来源。"
+    },
+    {
+      "id": "ref-longcat-pricing",
+      "url": "https://longcat.chat/platform/docs/zh/pricing/longcat-2.0",
+      "purpose": "pricing",
+      "notes": "开发方美团 LongCat 开放平台按量价；LongCat-2.0 参考价来源。"
+    },
+    {
+      "id": "ref-meta-pricing",
+      "url": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "purpose": "pricing",
+      "notes": "开发方 Meta Muse Spark API 价格（含 Contributor 档）；Muse Spark 型号参考价来源。"
+    }
+  ],
+  "notes": "OpenCode Go 包月套餐资料；参考价按用户指定取各模型源头厂商官网按量价，不采用 Go 用量上限换算表或 Zen 余额价。"
+}

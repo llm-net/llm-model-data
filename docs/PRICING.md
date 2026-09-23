@@ -42,6 +42,8 @@ catalog schema_version=2 在同一 rule 内保存 `time_pricing`，时区为 `As
 
 明确映射：Claude Code日期版claude-haiku-4-5-20251001按claude-haiku-4-5；Kimi Code的k3、k3-256k按kimi-k3，highspeed按kimi-k2.7-code-highspeed。kimi-for-coding底模仍为K2.8 Preview，用户已明确指定按kimi-k2.7-code公开按量价做示意；不是K2.8官方报价。
 
+用户指定：OpenCode Go 全部型号取模型源头厂商官网公开按量价（中国厂商取国内官网人民币价，不换汇），不采用 Go 文档的用量上限换算价或 Zen 余额价；开发方按量目录已收录时保存 `catalog_model`。Grok Build 的 grok-4.7-build-fast 取 xAI 官网单列的 Grok 4.7 Fast 费率，它不是公开 API 型号，只登记 URL。
+
 Codex统一采用OpenAI API现金标价；GLM Coding Plan采用智谱API现金标价，不能继续保留原CREDIT价格。Cursor Composer采用同平台公开的Standard按量费率。
 
 ## API短名对齐日期版
