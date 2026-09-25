@@ -4,10 +4,11 @@
 
 ## 当前结果
 
-- 19家服务商、29个产品、259条模型。
-- 114条订阅模型中113条已有参考价；K2.8 Preview按用户指定参考K2.7 Code；Codex Spark 在同平台与开发方 OpenAI 均无公开按量价，保留unknown。
+- 19家服务商、29个产品、257条模型。
+- 112条订阅模型全部已有参考价；K2.8 Preview按用户指定参考K2.7 Code。
 - 6条方舟/千帆API短名已对齐最新日期版本。
-- 共258条有唯一价格基准，剩余 Codex Spark 1条参考价未知。
+- 257条均有唯一价格基准。
+- 用户指定删除 Codex 的 `gpt-5.3-codex-spark` 与 Claude Code 的 `claude-haiku-4-5-20251001`，见 [OpenAI](../evidence/openai/2026-09-25-user-removal.md)、[Anthropic](../evidence/anthropic/2026-09-25-user-removal.md)。
 - 2026-09-23：新增 OpenCode Go（31条，全部按源头厂商官网价）、Claude Opus 5.5（API 与 Claude Code）、Codex GPT-6 Sol / Luna、Cursor 7个请求 ID（Grok 4.7、Composer 2.5 Fast、Opus 5.5 及 Fast、GPT-5.6 三个 Fast），Grok Build 的 Grok 4.7 Fast 由 unknown 改为 xAI 官网 Fast 费率。已有型号数字价格与套餐 / 额度未改，见 [Anthropic](../evidence/anthropic/2026-09-23-claude-opus-5-5.md)、[Codex](../evidence/openai/2026-09-23-codex-gpt-6.md)、[Cursor](../evidence/cursor/2026-09-23-models.md)、[Grok Build](../evidence/xai/2026-09-23-grok-47-fast.md)、[OpenCode Go](../evidence/opencode/2026-09-23-go.md)。
 - 本轮整家删除硅基流动（6条模型）和 Together AI（1条模型）；schemas/excluded-providers.json 阻止重新导入。此前逐型号排除的历史仍见下表。
 - 晨羽AI 30条按本平台匿名公开接口的人民币价格独立保存，见 [2026-09-17 核对记录](../evidence/chenyu-ai/2026-09-17-public-models.md) 与 [思考补充核对](../evidence/chenyu-ai/2026-09-17-reasoning.md)。其余服务商专项历史结果见 [PROTOCOL-AUDIT-2026-09-16.md](PROTOCOL-AUDIT-2026-09-16.md)。
@@ -18,7 +19,7 @@
 
 参考顺序：同平台对应型号的按量价 → 开发该模型的源头公司的公开按量价。先查同平台完整官方价表，不以本仓库部分API清单判断有无价格。独立复制数字与来源，不在运行时继承。
 
-Claude日期版Haiku按claude-haiku-4-5；方舟Seedance 2.5/2.0/2.0-fast分别对齐260628/260128/fast-260128，千帆DeepSeek Pro/Flash分别对齐0813/0731。后续发现多个同系列日期版本，选择实际日期最新的一版。映射用于估价，不声明官方路由别名或真实调用可用性。
+方舟Seedance 2.5/2.0/2.0-fast分别对齐260628/260128/fast-260128，千帆DeepSeek Pro/Flash分别对齐0813/0731。后续发现多个同系列日期版本，选择实际日期最新的一版。映射用于估价，不声明官方路由别名或真实调用可用性。
 
 Codex与GLM Coding Plan原先保存的积分单价已移除，统一改用本平台API现金价格。既有套餐资料独立保留，不参与本流程的模型估价。
 
@@ -29,6 +30,8 @@ Codex与GLM Coding Plan原先保存的积分单价已移除，统一改用本平
 | OpenRouter | `~openai/gpt-latest` | 用户指定排除，即使再次发现也不自动加入 |
 | Together | 全部 | 整家排除，包含此前单独排除的 openai/gpt-oss-20b |
 | Groq | `llama-3.3-70b-versatile` | 同上 |
+| OpenAI | `gpt-5.3-codex-spark` | 用户指定删除 Codex 条目，provider.json 排除 |
+| Anthropic | `claude-haiku-4-5-20251001` | 用户指定删除 Claude Code 日期版条目，provider.json 排除 |
 | SiliconFlow | 全部 | 整家排除，历史下线条目不再逐条恢复 |
 
 硅基流动与 Together AI 整家排除，包括仍在服务的模型；旧下线记录只保留在 Git 历史与证据中。
@@ -55,7 +58,6 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 | anthropic/claude-code | `claude-opus-5` | `claude-opus-5` | USD input_uncached_tokens=5/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=25/1000000 token, cache_write_5m_tokens=6.25/1000000 token |
 | anthropic/claude-code | `claude-sonnet-5` | `claude-sonnet-5` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=10/1000000 token, cache_write_5m_tokens=2.5/1000000 token |
 | anthropic/claude-code | `claude-haiku-4-5` | `claude-haiku-4-5` | USD input_uncached_tokens=1/1000000 token, input_cached_tokens=0.1/1000000 token, output_tokens=5/1000000 token, cache_write_5m_tokens=1.25/1000000 token |
-| anthropic/claude-code | `claude-haiku-4-5-20251001` | `claude-haiku-4-5` | USD input_uncached_tokens=1/1000000 token, input_cached_tokens=0.1/1000000 token, output_tokens=5/1000000 token, cache_write_5m_tokens=1.25/1000000 token |
 | ark/agent-plan-cn | `deepseek-v4-pro` | `deepseek-v4-pro-ga-260813` | CNY input_uncached_tokens=9/1000000 token, input_cached_tokens=0.30/1000000 token, output_tokens=27/1000000 token |
 | ark/agent-plan-cn | `deepseek-v4-flash` | `deepseek-v4-flash-ga-260731` | CNY input_uncached_tokens=3/1000000 token, input_cached_tokens=0.10/1000000 token, output_tokens=9/1000000 token |
 | ark/agent-plan-cn | `doubao-seedance-2.5` | `doubao-seedance-2-5-260628` | CNY video_output_tokens=70/1000000 token |
@@ -116,7 +118,6 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 
 | anthropic/claude-code | `claude-fable-5-1` | `claude-fable-5-1` | USD input_uncached_tokens=10/1000000 token, input_cached_tokens=0.25/1000000 token, output_tokens=50/1000000 token, cache_write_5m_tokens=12.5/1000000 token |
 | openai/codex | `gpt-5.5` | `gpt-5.5` | USD input_uncached_tokens=5/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=30/1000000 token |
-| openai/codex | `gpt-5.3-codex-spark` | `未知` | unknown：未查到对应型号公开按量价 |
 | cursor/individual | `grok-4.6` | `grok-4.6` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=6/1000000 token |
 | cursor/individual | `grok-4.5` | `grok-4.5` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=6/1000000 token |
 | cursor/individual | `claude-fable-5-1` | `claude-fable-5-1` | USD input_uncached_tokens=10/1000000 token, input_cached_tokens=0.25/1000000 token, output_tokens=50/1000000 token |

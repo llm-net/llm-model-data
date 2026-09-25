@@ -402,8 +402,6 @@ class ReasoningContracts(unittest.TestCase):
     def test_codex_partial_records_expose_request_effort_without_ui_translation(self):
         data = c.read_json(ROOT / "providers/openai/offerings/codex/catalog.json")
         for model in data["models"]:
-            if model["request_id"] == "gpt-5.3-codex-spark":
-                continue  # not present in the verified official CLI catalog
             reasoning = model["capabilities"]["reasoning"]
             profiles = {p["surface"]: p for p in reasoning["profiles"]}
             request = profiles["api_request"]
