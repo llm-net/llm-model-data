@@ -33,3 +33,13 @@
 ## Seedance 名称和估价来源
 
 日期版、API 短名和 Agent Plan 分别维护。Mini 短名的本地 ID 为 doubao-seedance-2-0-mini，按量请求名尚未确认；Agent Plan 则独立确认点号名。价格参考不能作为路由别名。四系列通过 reference_origin.catalog_model 检查对应日期版价格一致性，见[2026-09-17 核对](../../evidence/ark/2026-09-17-prices-and-names.md)。
+
+## Agent Plan 与 Coding Plan
+
+两个订阅是独立产品，端点根和 Key 互不通用：Agent Plan 走 `/api/plan/v3`（Anthropic 面 `/api/plan`），Coding Plan 走 `/api/coding/v3`（Anthropic 面 `/api/coding`）。套餐 Key 用错端点根无法使用套餐额度。同名模型在两个产品里的档位、长度限制与思考说明各自核对，不互相继承。
+
+- 模型清单以各自套餐概览的支持模型表为准：Agent Plan 表逐行给出 Small / Medium / Large / Max 适用性，写进 `plan_ids`；Coding Plan 的 Lite / Pro 售价未取得，plans 为空。
+- Coding Plan 表只写展示名；请求名要有本产品文档或官方 ark-cli 配置里的小写 Model Name 才填，否则 request_id 为 null。
+- Agent Plan 的语音模型走豆包语音 openspeech 专属路径，协议面尚未登记，暂不收录；两产品的 doubao-embedding-vision 也不收录。
+
+核对记录见 [2026-09-28 套餐补全](../../evidence/ark/2026-09-28-plans.md)。

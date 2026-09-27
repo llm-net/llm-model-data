@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "provider_id": "ark",
   "id": "coding-plan-cn",
   "display_name": "火山方舟 / coding-plan-cn",
@@ -259,7 +259,7 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。",
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。 官方套餐概览标注「即将下线」，下线日期未公布。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -409,7 +409,7 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。",
+      "notes": "官方Coding Plan快速开始明确Model Name；未从按量模型列表推导。 官方套餐概览标注「即将下线」，下线日期未公布。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -737,17 +737,44 @@
           "notes": "此产品官方快速接入与 Codex 配置确认三种文本面；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「模型默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「模型默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「模型默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "coding-plan-cn"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "本产品官方套餐资料写明「模型默认开启思考，不支持关闭思考」。开关与深度参数名未公布，保持 partial；控制台可调整编码工具中的默认 thinking 行为，这属于客户端默认而非请求参数。"
         },
         "context_assessment": {
           "status": "partial",
@@ -1037,17 +1064,44 @@
           "notes": "此产品官方快速接入与 Codex 配置确认三种文本面；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "coding-plan-cn"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "本产品官方套餐资料写明「默认开启深度思考(thinking)，支持手动关闭」。开关与深度参数名未公布，保持 partial；控制台可调整编码工具中的默认 thinking 行为，这属于客户端默认而非请求参数。"
         },
         "context_assessment": {
           "status": "partial",
@@ -1187,17 +1241,44 @@
           "notes": "此产品官方快速接入与 Codex 配置确认三种文本面；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "coding-plan-cn"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "本产品官方套餐资料写明「默认开启深度思考(thinking)，支持手动关闭」。开关与深度参数名未公布，保持 partial；控制台可调整编码工具中的默认 thinking 行为，这属于客户端默认而非请求参数。"
         },
         "context_assessment": {
           "status": "partial",
@@ -1487,17 +1568,44 @@
           "notes": "此产品官方快速接入与 Codex 配置确认三种文本面；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/ark/2026-09-16-reasoning.md",
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "coding-plan-cn"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
             "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "本产品官方套餐资料写明「默认开启思考，不支持关闭思考」。开关与深度参数名未公布，保持 partial；控制台可调整编码工具中的默认 thinking 行为，这属于客户端默认而非请求参数。"
         },
         "context_assessment": {
           "status": "partial",
@@ -1514,7 +1622,798 @@
           "notes": "Coding Plan 自身规格；工具使用长窗口可能需 [1m] 设置，客户端压缩阈值不能替代服务窗口。 官方窗口原文为 1024k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
         }
       }
+    },
+    {
+      "id": "doubao-seed-2-1-pro",
+      "request_id": "doubao-seed-2.1-pro",
+      "display_name": "Doubao-Seed-2.1-pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "coding-plan-cn",
+          "ark-cli-plan-config"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 Model Name 取自火山引擎官方 ark-cli 仓库的 Coding Plan provider 配置。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-2.1-pro」。在线推理（常规）输入长度 [0, 1024] 档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30.00",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2.1-pro",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 Model Name 取自火山引擎官方 ark-cli 仓库的 Coding Plan provider 配置。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-coding",
+              "protocol-coding-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/coding/v3 与 Anthropic 面 /api/coding）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Agent Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-plan-overview"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Coding Plan 套餐概览原文「上下文窗口：1024k，最大输出：256k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "doubao-seed-2-1-lite",
+      "request_id": null,
+      "display_name": "Doubao-Seed-2.1-lite",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "coding-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 概览只写展示名「Doubao-Seed-2.1-lite」，本产品文档与官方 ark-cli 的 Coding Plan 配置都未给出小写 Model Name；按规则不从展示名或 Agent Plan 推导请求名，request_id 保持 null。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-2.1-lite」。在线推理（常规）输入长度 [0, 1024] 档；音频输入 12.00 / 音频缓存命中 2.40 元每百万 token 另计，本基准只收非音频文本分量。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.80",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.16",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.70",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2.1-lite",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 概览只写展示名「Doubao-Seed-2.1-lite」，本产品文档与官方 ark-cli 的 Coding Plan 配置都未给出小写 Model Name；按规则不从展示名或 Agent Plan 推导请求名，request_id 保持 null。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-coding",
+              "protocol-coding-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/coding/v3 与 Anthropic 面 /api/coding）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Agent Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-plan-overview"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Coding Plan 套餐概览原文「上下文窗口：1024k，最大输出：256k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "doubao-seed-2-0-mini",
+      "request_id": null,
+      "display_name": "Doubao-Seed-2.0-mini",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "coding-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 概览只写展示名「Doubao-Seed-2.0-mini」，本产品文档与官方 ark-cli 的 Coding Plan 配置都未给出小写 Model Name；按规则不从展示名或 Agent Plan 推导请求名，request_id 保持 null。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-2.0-mini」。在线推理（常规）分段计价取首档输入长度 [0, 32]；音频输入另计，本基准只收非音频文本分量。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.0",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2.0-mini",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 概览只写展示名「Doubao-Seed-2.0-mini」，本产品文档与官方 ark-cli 的 Coding Plan 配置都未给出小写 Model Name；按规则不从展示名或 Agent Plan 推导请求名，request_id 保持 null。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-coding",
+              "protocol-coding-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/coding/v3 与 Anthropic 面 /api/coding）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Agent Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-plan-overview"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Coding Plan 套餐概览原文「上下文窗口：256k，最大输出：128k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "request_id": "deepseek-v4.1-flash",
+      "display_name": "DeepSeek-V4.1-Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "coding-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 Model Name 见概览的 1M 上下文与活动说明（小写 deepseek-v4.1-flash）。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「deepseek-v4-1-flash」。在线推理（常规）；北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余为空闲，首档取高峰。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.00",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "deepseek-v4-1-flash",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。 峰谷时段按方舟价格表保存；跨时段请求按哪一时刻选价官方未说明。",
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2.00",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.04",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8.00",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1.00",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.02",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4.00",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 Model Name 见概览的 1M 上下文与活动说明（小写 deepseek-v4.1-flash）。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-coding",
+              "protocol-coding-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/coding/v3 与 Anthropic 面 /api/coding）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Agent Plan。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启深度思考(thinking)，支持手动关闭」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "coding-plan-cn"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "本产品官方套餐资料写明「默认开启深度思考(thinking)，支持手动关闭」。开关与深度参数名未公布，保持 partial；控制台可调整编码工具中的默认 thinking 行为，这属于客户端默认而非请求参数。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-plan-overview"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Coding Plan 套餐概览原文「上下文窗口：1024k，最大输出：384k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k2-8-preview",
+      "request_id": "kimi-k2.8-preview",
+      "display_name": "Kimi-K2.8-Preview",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "coding-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 Model Name 见概览的 1M 上下文说明（小写 kimi-k2.8-preview）。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "已检查方舟完整按量价表未列 kimi-k2.8-preview；模型开发方 Moonshot 公开按量表也未列 K2.8 Preview 报价。两级来源均无价格，保留 unknown；用户未指定近似参考型号。"
+        },
+        "notes": "已检查方舟完整按量价表未列 kimi-k2.8-preview；模型开发方 Moonshot 公开按量表也未列 K2.8 Preview 报价。两级来源均无价格，保留 unknown；用户未指定近似参考型号。"
+      },
+      "notes": "官方 Coding Plan 套餐概览列出本模型；未从按量模型列表或 Agent Plan 推导。 Model Name 见概览的 1M 上下文说明（小写 kimi-k2.8-preview）。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-coding",
+              "protocol-coding-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/coding/v3 与 Anthropic 面 /api/coding）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Agent Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-plan-overview"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Coding Plan 套餐概览原文「上下文窗口：1024k，最大输出：1024k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
     }
   ],
-  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。 本产品专属端点根 /api/coding/v3（Anthropic 面 /api/coding），与 Agent Plan、按量产品不通用；套餐额度仅在 AI 编程工具中生效。Lite / Pro 两档的售价在官方活动页动态加载、文档未写数字，plans 暂缺。"
 }

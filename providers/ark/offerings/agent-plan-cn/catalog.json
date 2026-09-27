@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "provider_id": "ark",
   "id": "agent-plan-cn",
   "display_name": "火山方舟 / agent-plan-cn",
@@ -627,6 +627,2087 @@
             "notes": "仅核对上下文；不代表其他能力已核对。"
           },
           "notes": "Agent Plan 自身型号表，与 Coding Plan 分别核对。 官方窗口原文为 1024k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+        }
+      }
+    },
+    {
+      "id": "doubao-seed-2-1-pro",
+      "request_id": "doubao-seed-2.1-pro",
+      "display_name": "doubao-seed-2.1-pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-2.1-pro」。在线推理（常规）输入长度 [0, 1024] 档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30.00",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2.1-pro",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：256k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "doubao-seed-2-1-lite",
+      "request_id": "doubao-seed-2.1-lite",
+      "display_name": "doubao-seed-2.1-lite",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-2.1-lite」。在线推理（常规）输入长度 [0, 1024] 档；音频输入 12.00 / 音频缓存命中 2.40 元每百万 token 另计，本基准只收非音频文本分量。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.80",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.16",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.70",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2.1-lite",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：256k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "doubao-seed-2-1-turbo",
+      "request_id": "doubao-seed-2.1-turbo",
+      "display_name": "doubao-seed-2.1-turbo",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表标注「即将下线」，下线日期未公布。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-2.1-turbo」。在线推理（常规）输入长度 [0, 256] 档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.60",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "15.00",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2.1-turbo",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表标注「即将下线」，下线日期未公布。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：256k，最大输出：256k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "doubao-seed-2-0-mini",
+      "request_id": "doubao-seed-2.0-mini",
+      "display_name": "doubao-seed-2.0-mini",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表注明 doubao-seed-2-0-mini 已更新至最新版本（未写日期版）。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-2.0-mini」。在线推理（常规）分段计价取首档输入长度 [0, 32]；音频输入另计，本基准只收非音频文本分量。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.0",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2.0-mini",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表注明 doubao-seed-2-0-mini 已更新至最新版本（未写日期版）。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：256k，最大输出：128k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "doubao-seed-2-0-lite",
+      "request_id": "doubao-seed-2.0-lite",
+      "display_name": "doubao-seed-2.0-lite",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表标注「即将下线」，下线日期未公布。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-2.0-lite」。在线推理（常规）分段计价取首档输入长度 [0, 32]；音频输入另计，本基准只收非音频文本分量。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.12",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "3.6",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-2.0-lite",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表标注「即将下线」，下线日期未公布。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：256k，最大输出：128k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "doubao-seed-evolving",
+      "request_id": "doubao-seed-evolving",
+      "display_name": "doubao-seed-evolving",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seed-evolving」。在线推理（常规）输入长度 [0, 1024] 档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30.00",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seed-evolving",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：256k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "request_id": "deepseek-v4.1-flash",
+      "display_name": "deepseek-v4.1-flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表注明原生具备多模态视觉理解能力。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「deepseek-v4-1-flash」。在线推理（常规）；北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余为空闲，首档取高峰。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.04",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.00",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "deepseek-v4-1-flash",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。 峰谷时段按方舟价格表保存；跨时段请求按哪一时刻选价官方未说明。",
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "hours": [
+                    "09:00-12:00",
+                    "14:00-18:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2.00",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.04",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8.00",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "空闲时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1.00",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.02",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4.00",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表注明原生具备多模态视觉理解能力。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：384k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-3",
+      "request_id": "glm-5.3",
+      "display_name": "glm-5.3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表写作「glm-5.3 (glm-latest)」，glm-latest 未单独收录。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方zhipu按量价。 参考对象：glm-5.3。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "28",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+              "subject": "glm-5.3",
+              "reason": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方zhipu按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-zhipu-full-prices"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-zhipu-full-prices"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表写作「glm-5.3 (glm-latest)」，glm-latest 未单独收录。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "agent-plan-cn"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "本产品官方套餐资料写明「默认开启思考，不支持关闭思考」。开关与深度参数名未公布，保持 partial；控制台可调整编码工具中的默认 thinking 行为，这属于客户端默认而非请求参数。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：128k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "request_id": "glm-5.3-flash",
+      "display_name": "glm-5.3-flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表注明原生多模态，支持图片输入。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「glm-5.3-flash」。在线推理（常规）标价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.80",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.23",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.80",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "glm-5.3-flash",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表注明原生多模态，支持图片输入。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：128k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k3",
+      "request_id": "kimi-k3",
+      "display_name": "kimi-k3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 Small 档不可用。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方moonshot按量价。 参考对象：kimi-k3。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "100",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat.md",
+              "subject": "kimi-k3",
+              "reason": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方moonshot按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-moonshot-pricing-md"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-moonshot-pricing-md"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 Small 档不可用。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "套餐资料按模型写明「默认开启思考，不支持关闭思考」，未公布本协议面的请求参数名、档位或预算；controls 留空，不从同名按量 API 或原厂文档补参数。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "agent-plan-cn"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "本产品官方套餐资料写明「默认开启思考，不支持关闭思考」。开关与深度参数名未公布，保持 partial；控制台可调整编码工具中的默认 thinking 行为，这属于客户端默认而非请求参数。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：128k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k2-7-code",
+      "request_id": "kimi-k2.7-code",
+      "display_name": "kimi-k2.7-code",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方moonshot按量价。 参考对象：kimi-k2.7-code。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "27",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat.md",
+              "subject": "kimi-k2.7-code",
+              "reason": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方moonshot按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-moonshot-pricing-md"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-moonshot-pricing-md"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：256k，最大输出：32k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k2-8-preview",
+      "request_id": "kimi-k2.8-preview",
+      "display_name": "kimi-k2.8-preview",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "已检查方舟完整按量价表未列 kimi-k2.8-preview；模型开发方 Moonshot 公开按量表也未列 K2.8 Preview 报价。两级来源均无价格，保留 unknown；用户未指定近似参考型号。"
+        },
+        "notes": "已检查方舟完整按量价表未列 kimi-k2.8-preview；模型开发方 Moonshot 公开按量表也未列 K2.8 Preview 报价。两级来源均无价格，保留 unknown；用户未指定近似参考型号。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：1024k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
+        }
+      }
+    },
+    {
+      "id": "minimax-m3",
+      "request_id": "minimax-m3",
+      "display_name": "minimax-m3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方minimax按量价。 参考对象：MiniMax-M3。标准在线、输入不超过512K；M3使用官方永久降价后的价格。缓存写入TTL未核清不填。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.42",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+              "subject": "MiniMax-M3",
+              "reason": "已检查方舟完整按量价表，未找到该型号公开价；采用模型开发方minimax按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "source_ids": [
+                "alignment-minimax-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-16-alignment.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "source_ids": [
+            "alignment-minimax-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-16-alignment.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-agent",
+              "protocol-agent-codex"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "此产品官方快速接入与 Codex 配置确认三种文本面（Base URL /api/plan/v3 与 Anthropic 面 /api/plan）；只适用于本套餐支持的 Model Name，不能把套餐 Base URL 或 Key 用到按量产品或 Coding Plan。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "未取得本产品、本精确模型 ID 的思考控制依据；套餐资料未写本型号的默认思考行为或开关。通用接口或同名原厂模型不作为支持证据，参数、档位、默认值及开关保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "Agent Plan 支持模型表原文「上下文窗口：1024k，最大输出：128k」；本次未找到精确整数及缩写换算依据，不自行把 K 乘以 1000 或 1024，max_output_tokens 同样保持 null。"
         }
       }
     },
@@ -1437,7 +3518,174 @@
           "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
         }
       }
+    },
+    {
+      "id": "doubao-seedream-5-0-pro",
+      "request_id": "doubao-seedream-5-0-pro",
+      "display_name": "doubao-seedream-5-0-pro",
+      "modalities": [
+        "image"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-27T16:19:26Z",
+        "source_ids": [
+          "agent-plan-cn"
+        ],
+        "evidence": "evidence/ark/2026-09-28-plans.md",
+        "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表模型名写作 doubao-seedream-5-0-pro（连字符），与同表 doubao-seedream-5.0-lite 的点号写法不同，按原文保存。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "优先同平台按量价。 参考对象：方舟模型价格表「doubao-seedream-5-0-pro」。图片生成单图生成场景 ≤ 261 万像素（1.5K 及以下）每张 0.30；输入图首张免费、第 2 张起 0.02。更高分辨率与图层拆分场景不展开。",
+            "rates": [
+              {
+                "meter": "generated_images",
+                "amount": "0.30",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              },
+              {
+                "meter": "input_images",
+                "amount": "0.02",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": "1",
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "第一张参考图免费，超出部分按张收费。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://www.volcengine.com/docs/82379/1544106",
+              "subject": "doubao-seedream-5-0-pro",
+              "reason": "优先同平台按量价。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-27T16:19:26Z",
+              "source_ids": [
+                "alignment-ark-rendered-pricing"
+              ],
+              "evidence": "evidence/ark/2026-09-28-plans.md",
+              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+            },
+            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-27T16:19:26Z",
+          "source_ids": [
+            "alignment-ark-rendered-pricing"
+          ],
+          "evidence": "evidence/ark/2026-09-28-plans.md",
+          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+        },
+        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+      },
+      "notes": "官方 Agent Plan 支持模型表列出本 Model Name 及适用档位；未从按量模型列表或 Coding Plan 推导。 官方表模型名写作 doubao-seedream-5-0-pro（连字符），与同表 doubao-seedream-5.0-lite 的点号写法不同，按原文保存。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "ark_image"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "protocol-models",
+              "protocol-image",
+              "protocol-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+          },
+          "notes": "方舟 Agent Plan 独立订阅入口 的 Seedream / Seedance 厂商协议。按型号选图片生成或视频异步任务，不因 images/generations 同名便标成 OpenAI Image。短名与日期版独立保留。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+          },
+          "notes": "当前是图片生成型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-27T16:19:26Z",
+            "source_ids": [
+              "context-ark-models",
+              "context-ark-agent"
+            ],
+            "evidence": "evidence/ark/2026-09-28-plans.md",
+            "notes": "仅核对上下文；不代表其他能力已核对。"
+          },
+          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+        }
+      }
     }
   ],
-  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。 本产品专属端点根 /api/plan/v3（Anthropic 面 /api/plan）与专属 API Key，与 Coding Plan、按量产品不通用。语音模型（doubao-seed-tts-2.0、doubao-seed-asr-2.0）与向量模型（doubao-embedding-vision）尚未收录。"
 }

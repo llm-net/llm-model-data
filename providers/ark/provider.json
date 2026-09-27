@@ -11,9 +11,9 @@
     },
     {
       "id": "agent-plan-cn",
-      "url": "https://www.volcengine.com/docs/82379/1544106",
+      "url": "https://www.volcengine.com/docs/82379/2366394",
       "purpose": "subscription",
-      "notes": "旧目录登记入口；本次迁入不代表已重新验证。"
+      "notes": "Agent Plan 个人版套餐概览：支持模型及 Harness 表（模型名、长度限制、适用档位）与额度规则。专属端点根 /api/plan/v3（Anthropic 面 /api/plan）。"
     },
     {
       "id": "pricing",
@@ -23,9 +23,9 @@
     },
     {
       "id": "coding-plan-cn",
-      "url": "https://www.volcengine.com/docs/82379/1544106",
+      "url": "https://www.volcengine.com/docs/82379/1925114",
       "purpose": "subscription",
-      "notes": "调查入口；可能需要从该页继续寻找本产品确切资料。"
+      "notes": "Coding Plan 个人版套餐概览：支持模型、长度限制与使用限制。专属端点根 /api/coding/v3（Anthropic 面 /api/coding）。"
     },
     {
       "id": "audit-rendered-models",
@@ -158,6 +158,24 @@
       "url": "https://www.volcengine.com/docs/82379/2366394",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "ark-cli-plan-config",
+      "url": "https://github.com/volcengine/ark-cli/blob/13db27b9a43b50946fc186366026d697213185de/dsh-plugins/ark-plan-api/cordis.patch.yml",
+      "purpose": "models",
+      "notes": "火山引擎官方 ark-cli 仓库（commit 13db27b）的 Agent / Coding Plan provider 配置；只用于印证 Model Name，不是完整模型清单。"
+    },
+    {
+      "id": "agent-plan-afp",
+      "url": "https://www.volcengine.com/docs/82379/2516283",
+      "purpose": "billing",
+      "notes": "Agent Plan 套餐内 AFP 抵扣规则；订阅模型不核对实际扣费，仅作套餐资料来源。"
+    },
+    {
+      "id": "agent-plan-voice",
+      "url": "https://www.volcengine.com/docs/82379/2516286",
+      "purpose": "models",
+      "notes": "Agent Plan 接入语音模型（豆包语音合成 2.0 / 流式语音识别 2.0，openspeech 专属路径）；协议面尚未登记，模型未收录。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

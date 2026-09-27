@@ -1,13 +1,14 @@
 # 当前价格对齐结果
 
-更新日期：2026-09-23。用户明确指定的估价规则优先于首轮核对方案。
+更新日期：2026-09-28。用户明确指定的估价规则优先于首轮核对方案。
 
 ## 当前结果
 
-- 19家服务商、29个产品、257条模型。
-- 112条订阅模型全部已有参考价；K2.8 Preview按用户指定参考K2.7 Code。
+- 19家服务商、29个产品、276条模型。
+- 131条订阅模型中129条已有参考价；方舟 Agent Plan 与 Coding Plan 的 kimi-k2.8-preview 在方舟价格表与 Moonshot 公开价表均无报价，保留 unknown。Kimi Code 的 K2.8 Preview 按用户指定参考K2.7 Code。
 - 6条方舟/千帆API短名已对齐最新日期版本。
-- 257条均有唯一价格基准。
+- 274条有唯一价格基准，2条（上述 kimi-k2.8-preview）价格 unknown。
+- 2026-09-28：方舟 Agent Plan 按官方支持模型表补 13 条文本与 Seedream 5.0 Pro，已有 7 条补适用档位；Coding Plan 补 5 条文本。新增方舟文本参考价取方舟模型价格表，deepseek-v4.1-flash 按峰谷时段保存；方舟价格表没有的 GLM-5.3 / Kimi / MiniMax 沿用开发方价。语音与向量模型未收录，见 [方舟套餐补全](../evidence/ark/2026-09-28-plans.md)。
 - 用户指定删除 Codex 的 `gpt-5.3-codex-spark` 与 Claude Code 的 `claude-haiku-4-5-20251001`，见 [OpenAI](../evidence/openai/2026-09-25-user-removal.md)、[Anthropic](../evidence/anthropic/2026-09-25-user-removal.md)。
 - 2026-09-23：新增 OpenCode Go（31条，全部按源头厂商官网价）、Claude Opus 5.5（API 与 Claude Code）、Codex GPT-6 Sol / Luna、Cursor 7个请求 ID（Grok 4.7、Composer 2.5 Fast、Opus 5.5 及 Fast、GPT-5.6 三个 Fast），Grok Build 的 Grok 4.7 Fast 由 unknown 改为 xAI 官网 Fast 费率。已有型号数字价格与套餐 / 额度未改，见 [Anthropic](../evidence/anthropic/2026-09-23-claude-opus-5-5.md)、[Codex](../evidence/openai/2026-09-23-codex-gpt-6.md)、[Cursor](../evidence/cursor/2026-09-23-models.md)、[Grok Build](../evidence/xai/2026-09-23-grok-47-fast.md)、[OpenCode Go](../evidence/opencode/2026-09-23-go.md)。
 - 本轮整家删除硅基流动（6条模型）和 Together AI（1条模型）；schemas/excluded-providers.json 阻止重新导入。此前逐型号排除的历史仍见下表。
@@ -60,11 +61,25 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 | anthropic/claude-code | `claude-haiku-4-5` | `claude-haiku-4-5` | USD input_uncached_tokens=1/1000000 token, input_cached_tokens=0.1/1000000 token, output_tokens=5/1000000 token, cache_write_5m_tokens=1.25/1000000 token |
 | ark/agent-plan-cn | `deepseek-v4-pro` | `deepseek-v4-pro-ga-260813` | CNY input_uncached_tokens=9/1000000 token, input_cached_tokens=0.30/1000000 token, output_tokens=27/1000000 token |
 | ark/agent-plan-cn | `deepseek-v4-flash` | `deepseek-v4-flash-ga-260731` | CNY input_uncached_tokens=3/1000000 token, input_cached_tokens=0.10/1000000 token, output_tokens=9/1000000 token |
+| ark/agent-plan-cn | `doubao-seed-2.1-pro` | `doubao-seed-2.1-pro` | CNY input_uncached_tokens=6.00/1000000 token, input_cached_tokens=1.20/1000000 token, output_tokens=30.00/1000000 token |
+| ark/agent-plan-cn | `doubao-seed-2.1-lite` | `doubao-seed-2.1-lite` | CNY input_uncached_tokens=0.80/1000000 token, input_cached_tokens=0.16/1000000 token, output_tokens=2.70/1000000 token |
+| ark/agent-plan-cn | `doubao-seed-2.1-turbo` | `doubao-seed-2.1-turbo` | CNY input_uncached_tokens=3.00/1000000 token, input_cached_tokens=0.60/1000000 token, output_tokens=15.00/1000000 token |
+| ark/agent-plan-cn | `doubao-seed-2.0-mini` | `doubao-seed-2.0-mini` | CNY input_uncached_tokens=0.2/1000000 token, input_cached_tokens=0.04/1000000 token, output_tokens=2.0/1000000 token |
+| ark/agent-plan-cn | `doubao-seed-2.0-lite` | `doubao-seed-2.0-lite` | CNY input_uncached_tokens=0.6/1000000 token, input_cached_tokens=0.12/1000000 token, output_tokens=3.6/1000000 token |
+| ark/agent-plan-cn | `doubao-seed-evolving` | `doubao-seed-evolving` | CNY input_uncached_tokens=6.00/1000000 token, input_cached_tokens=1.20/1000000 token, output_tokens=30.00/1000000 token |
+| ark/agent-plan-cn | `deepseek-v4.1-flash` | `deepseek-v4-1-flash` | CNY input_uncached_tokens=2.00/1000000 token, input_cached_tokens=0.04/1000000 token, output_tokens=8.00/1000000 token（峰时首档，另有谷时） |
+| ark/agent-plan-cn | `glm-5.3` | `glm-5.3` | CNY input_uncached_tokens=8/1000000 token, input_cached_tokens=2/1000000 token, output_tokens=28/1000000 token |
+| ark/agent-plan-cn | `glm-5.3-flash` | `glm-5.3-flash` | CNY input_uncached_tokens=0.80/1000000 token, input_cached_tokens=0.23/1000000 token, output_tokens=2.80/1000000 token |
+| ark/agent-plan-cn | `kimi-k3` | `kimi-k3` | CNY input_uncached_tokens=20/1000000 token, input_cached_tokens=2/1000000 token, output_tokens=100/1000000 token |
+| ark/agent-plan-cn | `kimi-k2.7-code` | `kimi-k2.7-code` | CNY input_uncached_tokens=6.5/1000000 token, input_cached_tokens=1.3/1000000 token, output_tokens=27/1000000 token |
+| ark/agent-plan-cn | `kimi-k2.8-preview` | `—` | unknown（同平台与开发方均无公开报价） |
+| ark/agent-plan-cn | `minimax-m3` | `MiniMax-M3` | CNY input_uncached_tokens=2.1/1000000 token, input_cached_tokens=0.42/1000000 token, output_tokens=8.4/1000000 token |
 | ark/agent-plan-cn | `doubao-seedance-2.5` | `doubao-seedance-2-5-260628` | CNY video_output_tokens=70/1000000 token |
 | ark/agent-plan-cn | `doubao-seedance-2.0` | `doubao-seedance-2-0-260128` | CNY video_output_tokens=46/1000000 token |
 | ark/agent-plan-cn | `doubao-seedance-2.0-fast` | `doubao-seedance-2-0-fast-260128` | CNY video_output_tokens=37/1000000 token |
 | ark/agent-plan-cn | `doubao-seedance-2.0-mini` | `doubao-seedance-2-0-mini-260615` | CNY video_output_tokens=23/1000000 token |
 | ark/agent-plan-cn | `doubao-seedream-5.0-lite` | `doubao-seedream-5-0-260128` | CNY generated_images=0.22/1 image |
+| ark/agent-plan-cn | `doubao-seedream-5-0-pro` | `doubao-seedream-5-0-pro` | CNY generated_images=0.30/1 image, input_images=0.02/1 image |
 | ark/api-cn | `doubao-seedance-2.5` | `doubao-seedance-2-5-260628` | CNY video_output_tokens=70/1000000 token |
 | ark/api-cn | `doubao-seedance-2.0` | `doubao-seedance-2-0-260128` | CNY video_output_tokens=46/1000000 token |
 | ark/api-cn | `doubao-seedance-2.0-fast` | `doubao-seedance-2-0-fast-260128` | CNY video_output_tokens=37/1000000 token |
@@ -78,6 +93,11 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 | ark/coding-plan-cn | `deepseek-v4-pro` | `deepseek-v4-pro-ga-260813` | CNY input_uncached_tokens=9/1000000 token, input_cached_tokens=0.30/1000000 token, output_tokens=27/1000000 token |
 | ark/coding-plan-cn | `kimi-k2.7-code` | `kimi-k2.7-code` | CNY input_uncached_tokens=6.5/1000000 token, input_cached_tokens=1.3/1000000 token, output_tokens=27/1000000 token |
 | ark/coding-plan-cn | `kimi-k3` | `kimi-k3` | CNY input_uncached_tokens=20/1000000 token, input_cached_tokens=2/1000000 token, output_tokens=100/1000000 token |
+| ark/coding-plan-cn | `doubao-seed-2.1-pro` | `doubao-seed-2.1-pro` | CNY input_uncached_tokens=6.00/1000000 token, input_cached_tokens=1.20/1000000 token, output_tokens=30.00/1000000 token |
+| ark/coding-plan-cn | `doubao-seed-2-1-lite` | `doubao-seed-2.1-lite` | CNY input_uncached_tokens=0.80/1000000 token, input_cached_tokens=0.16/1000000 token, output_tokens=2.70/1000000 token |
+| ark/coding-plan-cn | `doubao-seed-2-0-mini` | `doubao-seed-2.0-mini` | CNY input_uncached_tokens=0.2/1000000 token, input_cached_tokens=0.04/1000000 token, output_tokens=2.0/1000000 token |
+| ark/coding-plan-cn | `deepseek-v4.1-flash` | `deepseek-v4-1-flash` | CNY input_uncached_tokens=2.00/1000000 token, input_cached_tokens=0.04/1000000 token, output_tokens=8.00/1000000 token（峰时首档，另有谷时） |
+| ark/coding-plan-cn | `kimi-k2.8-preview` | `—` | unknown（同平台与开发方均无公开报价） |
 | bailian/coding-plan-cn | `qwen3.7-plus` | `qwen3.7-plus` | CNY input_uncached_tokens=2/1000000 token, output_tokens=8/1000000 token |
 | bailian/coding-plan-cn | `qwen3.6-plus` | `qwen3.6-plus` | CNY input_uncached_tokens=2/1000000 token, output_tokens=12/1000000 token |
 | bailian/coding-plan-cn | `kimi-k2.5` | `kimi-k2.5` | CNY input_uncached_tokens=4/1000000 token, output_tokens=21/1000000 token |
