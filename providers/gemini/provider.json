@@ -68,6 +68,48 @@
       "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "antigravity-code-assist",
+      "url": "https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent",
+      "purpose": "models",
+      "notes": "Antigravity 工具订阅经 Code Assist 私有信封承载模型的生成端点；用订阅凭据逐参数实测，账号与凭据不入库，结论见 evidence。"
+    },
+    {
+      "id": "gemini-image-guide",
+      "url": "https://ai.google.dev/gemini-api/docs/generate-content/image-generation",
+      "purpose": "models",
+      "notes": "Gemini API generateContent 图像生成指南；只作对照，不证明 Antigravity 通道行为。"
+    },
+    {
+      "id": "gemini-image-model",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-image",
+      "purpose": "models",
+      "notes": "Gemini API 型号页；窗口、能力属于按量 API 产品，不继承到工具订阅。"
+    },
+    {
+      "id": "antigravity-models",
+      "url": "https://antigravity.google/docs/models",
+      "purpose": "models",
+      "notes": "Antigravity 官方模型页；Additional Models 写生图工具使用 Nano Banana 2、用户不可选，未给型号 ID。"
+    },
+    {
+      "id": "antigravity-plans",
+      "url": "https://antigravity.google/docs/plans",
+      "purpose": "subscription",
+      "notes": "Antigravity 套餐与额度说明（5 小时 / 每周刷新、超额）；未写图像生成是否单独计额。"
+    },
+    {
+      "id": "antigravity-terms",
+      "url": "https://antigravity.google/terms",
+      "purpose": "subscription",
+      "notes": "Antigravity 条款：以第三方软件访问服务属违约，可致停用账号。"
+    },
+    {
+      "id": "code-assist-cli",
+      "url": "https://github.com/google-gemini/gemini-cli/blob/v0.61.0/packages/core/src/code_assist/server.ts",
+      "purpose": "models",
+      "notes": "Google 开源 gemini-cli v0.61.0 的 Code Assist 客户端：cloudcode-pa.googleapis.com、v1internal:generateContent 与请求信封（converter.ts）。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

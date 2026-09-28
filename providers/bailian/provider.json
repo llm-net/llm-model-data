@@ -212,6 +212,18 @@
       "url": "https://bailian-cs.console.aliyun.com/cli/api.json?action=BroadScopeAspnGateway&product=sfm_bailian&api=zeldaHttp.dashscopeModel.%2Fzelda%2Fapi%2Fv1%2FmodelCenter%2FlistFoundationModels",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "media-wan3-api",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference",
+      "purpose": "models",
+      "notes": "媒体输入输出专项：万相 3.0 视频生成 API 参考（请求头、input.prompt / input.media[] 各 type 限制、parameters、查询响应、素材组合）；小节与 UTC 获取时间见 2026-09-28 media-io 证据。"
+    },
+    {
+      "id": "media-wan3-guide",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-guide",
+      "purpose": "models",
+      "notes": "媒体输入输出专项：万相 3.0 使用指南（模型能力任务类型表、输入素材表、输出视频规格）；用于核对 API 参考，冲突记入证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

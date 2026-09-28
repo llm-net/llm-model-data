@@ -11,6 +11,8 @@
 - `coverage: unknown`：尚未取得可支持该型号的协议证据，`interfaces=[]`、`verification.status=needs_review`、`checked_at=null`。未知不能被解释为不支持，更不能默认补 Chat。
 - `verification`：协议面独立的来源 ID、本地证据和核对时间，不沿用价格核对结果。非空协议面列表必须有已核对来源及本地证据。
 
+协议面只说明「走哪种接口」；非文本模型在该面上具体收哪些输入、参数与产物，记在 `capabilities.media_io`（[MEDIA-IO.md](MEDIA-IO.md)），其操作的 `interface` 必须是本列表里的面。
+
 能力字段中的 `input_modalities` / token 上限等没有核对时仍为空 / null。补协议面不意味着重新验证这些能力，也不刷新原模型和价格的 verification。
 
 协议面注册表为 [schemas/protocol-faces.json](../schemas/protocol-faces.json)。已有云端共同协议面沿用相同 ID 和展示名：
@@ -18,11 +20,13 @@
 | 类型 | ID |
 | --- | --- |
 | 文本兼容面 | `openai_chat`、`openai_responses`、`anthropic_messages` |
-| 图像 | `openai_image`、`minimax_image`、`ark_image`、`bailian_image` |
-| 视频 | `minimax_video`、`ark_video`、`bailian_video`、`kling_video` |
-| 语音 | `minimax_speech` |
+| 图像 | `openai_image`、`minimax_image`、`ark_image`、`bailian_image`、`xai_image` |
+| 视频 | `minimax_video`、`ark_video`、`bailian_video`、`kling_video`、`xai_video` |
+| 语音 | `minimax_speech`、`ark_tts` |
 | 其他已核对的供应商协议 | `gemini_generate_content`、`bailian_text`、`minimax_text`、`xai_grpc` |
-| 私有工具订阅承载 | `cursor_agent` |
+| 私有工具订阅承载 | `cursor_agent`、`gemini_code_assist` |
+
+`openai_responses` 同时登记 text 与 image：图像产物只经内置 `image_generation` 工具返回，图像型号写在工具对象的 `model`，顶层 `model` 是承载的文本模型。`gemini_code_assist` 是 Code Assist 私有 `v1internal` 信封，只属于 Google 的工具订阅产品，不能写成 `gemini_generate_content`。
 
 同一协议面的同步 / SSE / WebSocket 传输和异步任务查询不重复建面。厂商 body 与操作不同，即使路径都叫 `images/generations`，也不能直接判定为 `openai_image`。厂商 slug（如 `ark`）不是协议面。新发现无法表达的协议时，先增注册表、schema、证据和测试，不能使用 `native` / `vendor_native` 占位，也不把 Gemini 原生面称作 OpenAI Chat。
 
@@ -43,10 +47,14 @@
 
 - Anthropic API 提供 Messages 和用于评估的 Chat 兼容层；Claude Code 订阅不能继承该 Chat 层。
 - Codex 使用 Responses 承载；Cursor 使用私有 Agent RPC，不能因模型由 OpenAI / Anthropic 提供而标记为它们的 API。
+- Codex 内置出图：官方客户端自 rust-v0.144.0 起本地执行 `image_gen.imagegen`，POST `/backend-api/codex/images/{generations,edits}`（`openai_image`）；订阅 Responses 端点仍接受 `image_generation` 工具，但官方客户端已不用。
+- Grok Build 订阅的 Imagine 图像 / 视频走 xAI 官方 `/v1/images/*`、`/v1/videos/*`，登记为 `xai_image` / `xai_video`；路径虽叫 `images/generations`，字段与 OpenAI Image 不同。
+- Antigravity 经 Code Assist `v1internal` 信封承载模型；该通道不认 Gemini API 新增的 `generationConfig.responseFormat`，图像参数只能写在 `imageConfig`。
 - 百炼 Coding Plan 明确不支持 Responses；Token Plan 和按量产品独立核对。百炼 Responses 的部分型号只有基础兼容能力，内置 Agent 工具受限。
 - Kimi 按量 Responses 明确列 K3，其他型号不能照抄；Kimi Code 的四个模型 ID 另有独立接入表。
 - 千帆 Responses 支持表没有覆盖全部 ERNIE / GLM；TokenHub Hy-MT2-Pro 的 Responses 和 Messages 被明确标为不支持。
 - MiniMax 原生 `text/chatcompletion_v2` 已标 deprecated，不能把“仍有文档”写成推荐的新接口。
+- 方舟 Agent Plan 的语音合成走豆包语音 openspeech 专属路径：`ark_tts` 只含 V3 HTTP Chunked 单向流式；同型号的 WebSocket 双向 / 单向流式是另一套二进制帧协议，未登记协议面，不并入 `ark_tts`。
 
 完整逐模型结论和来源在 `evidence/<provider>/2026-09-16-protocols.md`；总体缺口见 [PROTOCOL-AUDIT-2026-09-16.md](PROTOCOL-AUDIT-2026-09-16.md)。
 

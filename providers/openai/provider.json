@@ -188,6 +188,54 @@
       "url": "https://registry.npmjs.org/@openai/codex/0.156.1-linux-x64",
       "purpose": "models",
       "notes": "官方 npm 发布的 Codex CLI 0.156.1 linux-x64；只读内嵌逐型号目录，摘录见 2026-09-23-client-models.json。"
+    },
+    {
+      "id": "codex-imagegen",
+      "url": "https://learn.chatgpt.com/docs/image-generation.md",
+      "purpose": "models",
+      "notes": "Codex 内置图像生成说明：$imagegen、使用 gpt-image-2、计入 Codex 用量。"
+    },
+    {
+      "id": "codex-image-inputs",
+      "url": "https://learn.chatgpt.com/docs/image-inputs.md",
+      "purpose": "models",
+      "notes": "Codex 图片输入说明（PNG、JPEG 等常见格式）。"
+    },
+    {
+      "id": "codex-imagegen-release",
+      "url": "https://github.com/openai/codex/blob/rust-v0.158.0/codex-rs/ext/image-generation/src/tool.rs",
+      "purpose": "models",
+      "notes": "官方 Codex rust-v0.158.0 的 image_gen.imagegen 工具源码：请求字段、参考图上限、产物取回。"
+    },
+    {
+      "id": "codex-images-backend",
+      "url": "https://chatgpt.com/backend-api/codex/images/generations",
+      "purpose": "models",
+      "notes": "Codex 订阅的图像端点（ChatGPT 登录的 CHATGPT_CODEX_BASE_URL 之后拼 images/generations、images/edits）。"
+    },
+    {
+      "id": "codex-responses-backend",
+      "url": "https://chatgpt.com/backend-api/codex/responses",
+      "purpose": "models",
+      "notes": "Codex 订阅的 Responses 端点；image_generation 工具行为来自消费者 2026-09-17 板测，结论见 evidence。"
+    },
+    {
+      "id": "image-model-gpt-image-2",
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-2.md",
+      "purpose": "models",
+      "notes": "OpenAI API gpt-image-2 型号页，只作对照。"
+    },
+    {
+      "id": "image-tool-reference",
+      "url": "https://developers.openai.com/api/reference/resources/responses/methods/create.md",
+      "purpose": "models",
+      "notes": "Responses image_generation 工具对象字段定义，只作对照。"
+    },
+    {
+      "id": "image-pricing",
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "purpose": "pricing",
+      "notes": "OpenAI API 图像 token 价（Standard）：gpt-image-2 的图像 / 文本输入、缓存与输出。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

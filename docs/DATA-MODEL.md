@@ -12,6 +12,8 @@ modalities 记录输出 / 服务类型，不把图片理解误当作图片生成
 
 思考能力使用 `capabilities.reasoning`，包含支持状态、按协议和工具入口分开的控制参数、官方值 / 预算、默认行为、能否关闭及独立 verification。历史 schema 可缺省，当前发布必须填写；未知不能填成不支持。字段与维护流程见 [REASONING.md](REASONING.md)。
 
+非文本模型（modalities 不只有 text）必须带 `capabilities.media_io`：按操作记录厂商原样的输入（角色、字段路径、格式、传入方式、数量与上限）、输出（媒体、格式、取回方式、地址有效期、规格范围）与参数（字段路径、类型、取值、范围、缺省），附独立 verification；未核对写 unknown。纯文本模型不带本字段。字段、词汇与路径写法见 [MEDIA-IO.md](MEDIA-IO.md)。
+
 上下文长度在新增及更新时必须查询，保存 `capabilities.context_window_tokens` 与独立 `context_assessment`（known / partial / unknown / not_applicable、verification、notes）。窗口口径、单位与条件及未知原因见 [CONTEXT.md](CONTEXT.md)。它不等于最大输入 / 输出或自动压缩阈值，价格参考映射也不能用于继承窗口。
 
 ## 三种价格

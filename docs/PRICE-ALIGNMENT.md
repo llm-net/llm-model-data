@@ -4,11 +4,12 @@
 
 ## 当前结果
 
-- 19家服务商、29个产品、276条模型。
-- 131条订阅模型中129条已有参考价；方舟 Agent Plan 与 Coding Plan 的 kimi-k2.8-preview 在方舟价格表与 Moonshot 公开价表均无报价，保留 unknown。Kimi Code 的 K2.8 Preview 按用户指定参考K2.7 Code。
+- 19家服务商、30个产品、282条模型。
+- 137条订阅模型中135条已有参考价；方舟 Agent Plan 与 Coding Plan 的 kimi-k2.8-preview 在方舟价格表与 Moonshot 公开价表均无报价，保留 unknown。Kimi Code 的 K2.8 Preview 按用户指定参考K2.7 Code。
 - 6条方舟/千帆API短名已对齐最新日期版本。
-- 274条有唯一价格基准，2条（上述 kimi-k2.8-preview）价格 unknown。
-- 2026-09-28：方舟 Agent Plan 按官方支持模型表补 13 条文本与 Seedream 5.0 Pro，已有 7 条补适用档位；Coding Plan 补 5 条文本。新增方舟文本参考价取方舟模型价格表，deepseek-v4.1-flash 按峰谷时段保存；方舟价格表没有的 GLM-5.3 / Kimi / MiniMax 沿用开发方价。语音与向量模型未收录，见 [方舟套餐补全](../evidence/ark/2026-09-28-plans.md)。
+- 280条有唯一价格基准，2条（上述 kimi-k2.8-preview）价格 unknown。
+- 2026-09-28：方舟 Agent Plan 按官方支持模型表补 13 条文本与 Seedream 5.0 Pro，已有 7 条补适用档位；Coding Plan 补 5 条文本。新增方舟文本参考价取方舟模型价格表，deepseek-v4.1-flash 按峰谷时段保存；方舟价格表没有的 GLM-5.3 / Kimi / MiniMax 沿用开发方价。语音合成 doubao-seed-tts-2.0 以 `ark_tts` 收录，方舟价格表无语音合成，参考价取豆包语音（开发方）按调用后付费 3 元/万计费字符；流式语音识别与向量模型未收录，见 [方舟套餐补全](../evidence/ark/2026-09-28-plans.md)、[语音合成收录](../evidence/ark/2026-09-28-tts.md)。
+- 2026-09-28：新增 Gemini Antigravity 产品（`gemini-3.1-flash-image`）、Codex `gpt-image-2`、Grok Build 三个 Imagine 型号（`grok-imagine-image-2.0`、`grok-imagine-video`、`grok-imagine-video-1.5`），参考价均取同平台按量 API 对应型号公开价；非文本模型补 `capabilities.media_io`，见 [Gemini](../evidence/gemini/2026-09-28-antigravity-media-io.md)、[OpenAI](../evidence/openai/2026-09-28-codex-image-media-io.md)、[xAI](../evidence/xai/2026-09-28-imagine-media-io.md)。
 - 用户指定删除 Codex 的 `gpt-5.3-codex-spark` 与 Claude Code 的 `claude-haiku-4-5-20251001`，见 [OpenAI](../evidence/openai/2026-09-25-user-removal.md)、[Anthropic](../evidence/anthropic/2026-09-25-user-removal.md)。
 - 2026-09-23：新增 OpenCode Go（31条，全部按源头厂商官网价）、Claude Opus 5.5（API 与 Claude Code）、Codex GPT-6 Sol / Luna、Cursor 7个请求 ID（Grok 4.7、Composer 2.5 Fast、Opus 5.5 及 Fast、GPT-5.6 三个 Fast），Grok Build 的 Grok 4.7 Fast 由 unknown 改为 xAI 官网 Fast 费率。已有型号数字价格与套餐 / 额度未改，见 [Anthropic](../evidence/anthropic/2026-09-23-claude-opus-5-5.md)、[Codex](../evidence/openai/2026-09-23-codex-gpt-6.md)、[Cursor](../evidence/cursor/2026-09-23-models.md)、[Grok Build](../evidence/xai/2026-09-23-grok-47-fast.md)、[OpenCode Go](../evidence/opencode/2026-09-23-go.md)。
 - 本轮整家删除硅基流动（6条模型）和 Together AI（1条模型）；schemas/excluded-providers.json 阻止重新导入。此前逐型号排除的历史仍见下表。
@@ -74,6 +75,7 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 | ark/agent-plan-cn | `kimi-k2.7-code` | `kimi-k2.7-code` | CNY input_uncached_tokens=6.5/1000000 token, input_cached_tokens=1.3/1000000 token, output_tokens=27/1000000 token |
 | ark/agent-plan-cn | `kimi-k2.8-preview` | `—` | unknown（同平台与开发方均无公开报价） |
 | ark/agent-plan-cn | `minimax-m3` | `MiniMax-M3` | CNY input_uncached_tokens=2.1/1000000 token, input_cached_tokens=0.42/1000000 token, output_tokens=8.4/1000000 token |
+| ark/agent-plan-cn | `seed-tts-2.0` | 豆包语音合成模型2.0（豆包语音按调用后付费） | CNY billable_characters=3/10000 character |
 | ark/agent-plan-cn | `doubao-seedance-2.5` | `doubao-seedance-2-5-260628` | CNY video_output_tokens=70/1000000 token |
 | ark/agent-plan-cn | `doubao-seedance-2.0` | `doubao-seedance-2-0-260128` | CNY video_output_tokens=46/1000000 token |
 | ark/agent-plan-cn | `doubao-seedance-2.0-fast` | `doubao-seedance-2-0-fast-260128` | CNY video_output_tokens=37/1000000 token |
@@ -152,6 +154,11 @@ kimi-for-coding当前对应K2.8 Preview。同平台就是模型开发方Moonshot
 | anthropic/claude-code | `claude-opus-5-5` | `claude-opus-5-5` | USD input_uncached_tokens=4/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=20/1000000 token, cache_write_5m_tokens=5/1000000 token |
 | openai/codex | `gpt-6-sol` | `gpt-6-sol` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=10/1000000 token |
 | openai/codex | `gpt-6-luna` | `gpt-6-luna` | USD input_uncached_tokens=0.1/1000000 token, input_cached_tokens=0.01/1000000 token, output_tokens=0.5/1000000 token |
+| openai/codex | `gpt-image-2` | `gpt-image-2` | USD input_uncached_tokens=5/1000000 token, input_cached_tokens=1.25/1000000 token, image_input_tokens=8/1000000 token, image_output_tokens=30/1000000 token |
+| xai/grok-build | `grok-imagine-image-2.0` | `grok-imagine-image-2.0` | USD generated_images=0.04/1 image |
+| xai/grok-build | `grok-imagine-video` | `grok-imagine-video` | USD video_output_seconds=0.050/1 second |
+| xai/grok-build | `grok-imagine-video-1.5` | `grok-imagine-video-1.5` | USD video_output_seconds=0.080/1 second |
+| gemini/antigravity | `gemini-3.1-flash-image` | `gemini-3.1-flash-image` | USD input_uncached_tokens=0.5/1000000 token, output_tokens=3/1000000 token, image_output_tokens=60/1000000 token |
 | cursor/individual | `grok-4.7` | `grok-4.7` | USD input_uncached_tokens=2/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=6/1000000 token |
 | cursor/individual | `composer-2.5-fast` | `Composer 2.5 (Fast)` | USD input_uncached_tokens=3/1000000 token, input_cached_tokens=0.5/1000000 token, output_tokens=15/1000000 token |
 | cursor/individual | `claude-opus-5-5` | `Claude Opus 5.5` | USD input_uncached_tokens=4/1000000 token, input_cached_tokens=0.2/1000000 token, output_tokens=20/1000000 token, cache_write_5m_tokens=5/1000000 token |

@@ -44,6 +44,126 @@
       "url": "https://klingai.com/document-api/guides/capability-map/video.md",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "media-io-llms-index",
+      "url": "https://klingai.com/document-api/llms.txt",
+      "purpose": "discovery",
+      "notes": "官方文档 Markdown 索引，用于确认当前 API 页面清单。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-capability-map",
+      "url": "https://klingai.com/document-api/guides/capability-map/video.md",
+      "purpose": "models",
+      "notes": "视频能力地图：型号 × 能力支持表。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-3-0-turbo-t2v",
+      "url": "https://klingai.com/document-api/api/video/3-0-turbo/text-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 3.0 Turbo 文生视频（新版 API）。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-3-0-turbo-i2v",
+      "url": "https://klingai.com/document-api/api/video/3-0-turbo/image-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 3.0 Turbo 图生视频（新版 API）。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-3-0-t2v",
+      "url": "https://klingai.com/document-api/api/video/3-0-omni/text-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 3.0 文生视频（「3.0 & 3.0 Omni」组，路径 kling-3.0）。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-3-0-i2v",
+      "url": "https://klingai.com/document-api/api/video/3-0-omni/image-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 3.0 图生视频（「3.0 & 3.0 Omni」组，路径 kling-3.0）。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-3-0-omni-video",
+      "url": "https://klingai.com/document-api/api/video/3-0-omni/video-omni.md",
+      "purpose": "models",
+      "notes": "Kling 3.0 Omni 视频生成。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-3-0-motion-control",
+      "url": "https://klingai.com/document-api/api/video/3-0-omni/motion-control.md",
+      "purpose": "models",
+      "notes": "Kling 3.0 动作控制。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-elements",
+      "url": "https://klingai.com/document-api/api/video/3-0-omni/elements.md",
+      "purpose": "models",
+      "notes": "主体管理（主体 ID 来源与主体类型）。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-o1-omni-video",
+      "url": "https://klingai.com/document-api/api/video/o1/video-omni.md",
+      "purpose": "models",
+      "notes": "Kling O1 视频生成。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-2-6-t2v",
+      "url": "https://klingai.com/document-api/api/video/2-6/text-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 2.6 文生视频。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-2-6-i2v",
+      "url": "https://klingai.com/document-api/api/video/2-6/image-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 2.6 图生视频。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-2-6-motion-control",
+      "url": "https://klingai.com/document-api/api/video/2-6/motion-control.md",
+      "purpose": "models",
+      "notes": "Kling 2.6 动作控制。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-2-6-voices",
+      "url": "https://klingai.com/document-api/api/video/2-6/voice-customization.md",
+      "purpose": "models",
+      "notes": "Kling 2.6 音色管理（音色 ID 来源）。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-2-5-turbo-t2v",
+      "url": "https://klingai.com/document-api/api/video/2-5-turbo/text-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 2.5 Turbo 文生视频。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-2-5-turbo-i2v",
+      "url": "https://klingai.com/document-api/api/video/2-5-turbo/image-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 2.5 Turbo 图生视频。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-callbacks",
+      "url": "https://klingai.com/document-api/api/get-started/callbacks.md",
+      "purpose": "models",
+      "notes": "回调协议（新版 / 旧版回调结构、产物 URL 30 天清理说明）。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-auth",
+      "url": "https://klingai.com/document-api/api/get-started/authentication.md",
+      "purpose": "models",
+      "notes": "接口鉴权与中国地区调用域名。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-updates",
+      "url": "https://klingai.com/document-api/updates/api.md",
+      "purpose": "models",
+      "notes": "API 更新公告（新版 API 适用型号、旧版继续服务）。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-io-pricing",
+      "url": "https://klingai.com/document-api/pricing/base/video.md",
+      "purpose": "pricing",
+      "notes": "视频价格表中的功能档位（有声 / 无声 / 动作控制），仅作能力佐证，不用于本次改价。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

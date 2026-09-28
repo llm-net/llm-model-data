@@ -36,6 +36,7 @@ tests/                             # 数据边界回归测试
 - [思考能力维护（每次更新必读）](docs/REASONING.md)
 - [当前思考能力核对结果](docs/REASONING-AUDIT-2026-09-16.md)
 - [协议面维护（每次更新必读）](docs/PROTOCOLS.md)
+- [媒体输入输出契约（非文本模型）](docs/MEDIA-IO.md)
 - [当前协议面核对结果](docs/PROTOCOL-AUDIT-2026-09-16.md)
 - [统一估价与多模态计费](docs/PRICING.md)
 - [聚合平台简化收录](docs/COLLECTION.md)

@@ -164,6 +164,114 @@
       "url": "https://platform.minimax.cn/docs/guides/models-intro",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "media-image-t2i",
+      "url": "https://platform.minimax.cn/docs/api-reference/image-generation-t2i.md",
+      "purpose": "models",
+      "notes": "文生图参考页（内嵌 text-to-image.json OpenAPI）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-image-i2i",
+      "url": "https://platform.minimax.cn/docs/api-reference/image-generation-i2i.md",
+      "purpose": "models",
+      "notes": "图生图参考页（内嵌 image-to-image.json OpenAPI，含 subject_reference）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-image-guide",
+      "url": "https://platform.minimax.cn/docs/guides/image-generation.md",
+      "purpose": "models",
+      "notes": "图片生成指南（参考图数量、示例）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-image-openapi",
+      "url": "https://platform.minimax.cn/docs/api-reference/image/generation/api/openapi.json",
+      "purpose": "models",
+      "notes": "图片生成合并版 OpenAPI（style 字段名与参考页冲突）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-models-intro",
+      "url": "https://platform.minimax.cn/docs/guides/models-intro.md",
+      "purpose": "models",
+      "notes": "模型概览：各型号支持的生成方式。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-video-create",
+      "url": "https://platform.minimax.cn/docs/api-reference/video-generation-v2-create.md",
+      "purpose": "models",
+      "notes": "创建视频生成任务 V2（MiniMax-H3 / H3-Max，content 数组与输入限制）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-video-query",
+      "url": "https://platform.minimax.cn/docs/api-reference/video-generation-v2-query.md",
+      "purpose": "models",
+      "notes": "查询 V2 任务（产物 content.url / content.prompt、task_type）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-video-regeneration",
+      "url": "https://platform.minimax.cn/docs/api-reference/video-generation-v2-regeneration.md",
+      "purpose": "models",
+      "notes": "创建视频再生成任务（768P → 2K）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-video-context-ir",
+      "url": "https://platform.minimax.cn/docs/api-reference/video-generation-v2-h3-context-ir.md",
+      "purpose": "models",
+      "notes": "创建 H3-Context-IR 任务（只返回增强提示词）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-video-guide",
+      "url": "https://platform.minimax.cn/docs/guides/video-generation.md",
+      "purpose": "models",
+      "notes": "视频生成指南（H3 输出规格与输入条件表）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-api-overview",
+      "url": "https://platform.minimax.cn/docs/api-reference/api-overview.md",
+      "purpose": "models",
+      "notes": "接口概览（视频入口、语音能力与长度口径）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-speech-http",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http.md",
+      "purpose": "models",
+      "notes": "同步语音合成 HTTP（T2A v2，非流式 / 流式）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-speech-ws",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-websocket.md",
+      "purpose": "models",
+      "notes": "同步语音合成 WebSocket（内嵌 asyncapi.json）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-speech-ws-bidi",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-websocket-bidi.md",
+      "purpose": "models",
+      "notes": "同步语音合成 WebSocket 双向流式（内嵌 asyncapi-bidi.json）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-speech-async",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-async-create.md",
+      "purpose": "models",
+      "notes": "创建异步语音合成任务（t2a_async_v2）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-speech-guide",
+      "url": "https://platform.minimax.cn/docs/guides/speech-t2a-websocket.md",
+      "purpose": "models",
+      "notes": "同步语音合成指南（支持模型与 40 种语言）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-speech-async-guide",
+      "url": "https://platform.minimax.cn/docs/guides/speech-t2a-async.md",
+      "purpose": "models",
+      "notes": "异步语音合成指南（流程、下载 URL 有效期）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-voice-list",
+      "url": "https://platform.minimax.cn/docs/faq/system-voice-id.md",
+      "purpose": "models",
+      "notes": "系统音色列表（音色 ID、名称、语言）。媒体输入输出（media_io）专项；platform.minimaxi.com 同路径 302 跳转至此。取得时间、小节与结论见 evidence/minimax/2026-09-28-media-io.md。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

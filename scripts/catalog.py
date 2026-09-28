@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter
 from datetime import datetime, timezone
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 import difflib
 import hashlib
 import json
@@ -258,6 +258,120 @@ def check_context(root, capability, modalities):
         require("text" not in modalities, "text model context cannot be not_applicable")
 
 
+def decimal_value(value, label):
+    try:
+        return Decimal(value)
+    except (InvalidOperation, TypeError) as exc:
+        raise CatalogError(f"{label} must be a decimal string") from exc
+
+
+def check_range(low, high, label):
+    if low is not None and high is not None:
+        require(low <= high, f"{label}: min exceeds max")
+
+
+def check_media_limits(limits, label):
+    measures = [x["measure"] for x in limits]
+    require(len(measures) == len(set(measures)), f"{label}: duplicate limit measure")
+    for limit in limits:
+        require(limit["min"] is not None or limit["max"] is not None, f"{label}: limit needs min or max")
+        low = None if limit["min"] is None else decimal_value(limit["min"], label)
+        high = None if limit["max"] is None else decimal_value(limit["max"], label)
+        check_range(low, high, f"{label}/{limit['measure']}")
+
+
+def check_media_value_sets(value_sets, used):
+    for name, value_set in value_sets.items():
+        values = value_set["values"]
+        require(all(isinstance(v, str) for v in values) or all(type(v) is int for v in values),
+                f"media value set {name}: values must be all strings or all integers")
+        require(set(value_set["labels"] or {}) <= {str(v) for v in values},
+                f"media value set {name}: label for a value outside the set")
+        require(value_set["verification"]["status"] == "verified", f"media value set {name}: needs verified evidence")
+        require(name in used, f"media value set {name}: not referenced by any parameter")
+
+
+def check_media_param(param, label, value_sets):
+    kind = param["type"]
+    values, low, high, default = param["values"], param["min"], param["max"], param["default"]
+    ref = param.get("values_ref")
+    if ref is not None:
+        require(values is None, f"{label}: use either values or values_ref")
+        require(kind in {"enum", "integer", "string_list"}, f"{label}: values_ref needs an enum, integer or string_list")
+        require(ref in value_sets, f"{label}: unknown media value set {ref}")
+        values = value_sets[ref]["values"]
+    if kind == "enum":
+        require(values is not None and all(isinstance(v, str) for v in values), f"{label}: enum needs string values")
+        require(low is None and high is None, f"{label}: enum has no range")
+        require(default is None or default in values, f"{label}: default outside enum values")
+    elif kind == "integer":
+        require(values is None or all(type(v) is int for v in values), f"{label}: integer values must be integers")
+        require(all(v is None or type(v) is int for v in (low, high)), f"{label}: integer range must be integers")
+        require(values is None or (low is None and high is None), f"{label}: use either values or range")
+        check_range(low, high, label)
+        require(default is None or type(default) is int, f"{label}: integer default must be an integer")
+        if default is not None:
+            require(values is None or default in values, f"{label}: default outside values")
+            require((low is None or default >= low) and (high is None or default <= high), f"{label}: default outside range")
+    elif kind == "number":
+        require(values is None, f"{label}: number has no value list")
+        bounds = [None if v is None else decimal_value(v, label) for v in (low, high)]
+        check_range(bounds[0], bounds[1], label)
+        if default is not None:
+            d = decimal_value(default, label)
+            require((bounds[0] is None or d >= bounds[0]) and (bounds[1] is None or d <= bounds[1]),
+                    f"{label}: default outside range")
+    elif kind == "boolean":
+        require(values is None and low is None and high is None, f"{label}: boolean has no values or range")
+        require(default is None or type(default) is bool, f"{label}: boolean default must be boolean")
+    elif kind == "string":
+        require(values is None, f"{label}: free string has no value list (use enum)")
+        require(all(v is None or type(v) is int for v in (low, high)), f"{label}: string length range must be integers")
+        check_range(low, high, label)
+        require(default is None or isinstance(default, str), f"{label}: string default must be a string")
+    else:  # string_list
+        require(values is None or all(isinstance(v, str) for v in values), f"{label}: list values must be strings")
+        require(all(v is None or type(v) is int for v in (low, high)), f"{label}: list item range must be integers")
+        check_range(low, high, label)
+        require(default is None, f"{label}: string_list has no scalar default")
+    if kind not in {"integer", "number"}:
+        require(param["unit"] is None, f"{label}: only numeric parameters carry a unit")
+
+
+def check_media_io(capability, modalities, value_sets, used):
+    media = capability.get("media_io")
+    if modalities == ["text"]:
+        require(media is None, "text models do not carry media_io")
+        return
+    require(media is not None, "non-text models need media_io (use status unknown when not yet checked)")
+    status = media["status"]
+    require(bool(media["notes"].strip()), "media_io needs scope or missing reason")
+    if status == "unknown":
+        require(not media["operations"], "unknown media_io must not list operations")
+        require(media["verification"]["status"] == "needs_review", "unknown media_io cannot claim verification")
+        return
+    require(media["operations"], "known/partial media_io needs operations")
+    require(media["verification"]["status"] == "verified", "known/partial media_io needs its own verified evidence")
+    unique(media["operations"], "id", "media operations")
+    for op in media["operations"]:
+        label = f"media_io/{op['id']}"
+        require(op["interface"] in capability["interfaces"], f"{label}: interface not listed in capabilities.interfaces")
+        unique(op["inputs"], "role", f"{label} inputs")
+        unique(op["params"], "field", f"{label} params")
+        require(len({i["field"] for i in op["inputs"]} & {p["field"] for p in op["params"]}) == 0,
+                f"{label}: a field is either an input or a parameter")
+        for item in op["inputs"]:
+            check_range(item["min_items"], item["max_items"], f"{label}/{item['role']}")
+            check_media_limits(item["limits"], f"{label}/{item['role']}")
+        require(any(o["media"] in modalities for o in op["outputs"]), f"{label}: no output matches model modalities")
+        for out in op["outputs"]:
+            check_media_limits(out["limits"], f"{label}/output/{out['media']}")
+        for param in op["params"]:
+            check_media_param(param, f"{label}/{param['field']}", value_sets)
+            if param.get("values_ref") is not None:
+                used.add(param["values_ref"])
+
+
 def check_offering(root, data, provider):
     require(data["provider_id"] == provider["id"], "provider_id mismatch")
     require(provider["id"] not in read_json(root / "schemas/excluded-providers.json"),
@@ -275,6 +389,8 @@ def check_offering(root, data, provider):
             require(name not in names or names[name] == model["id"], "ambiguous model lookup name")
             names[name] = model["id"]
     aliases = {}
+    value_sets = data.get("media_value_sets", {})
+    used_value_sets = set()
     meters = read_json(root / "schemas/meters.json")
     faces = read_json(root / "schemas/protocol-faces.json")
     excluded = set(provider.get("excluded_request_ids", []))
@@ -302,11 +418,18 @@ def check_offering(root, data, provider):
                 if face == "cursor_agent":
                     require(provider["id"] == "cursor" and data["kind"] == "tool_subscription",
                             "Cursor Agent belongs only to Cursor tool subscriptions")
+                if face == "gemini_code_assist":
+                    require(provider["id"] == "gemini" and data["kind"] == "tool_subscription",
+                            "Gemini Code Assist belongs only to Google tool subscriptions")
         else:
             require(assessment["verification"]["status"] == "needs_review",
                     "unknown protocols must not claim successful verification")
         check_reasoning(capability, data["kind"])
         check_context(root, capability, m["modalities"])
+        try:
+            check_media_io(capability, m["modalities"], value_sets, used_value_sets)
+        except CatalogError as exc:
+            raise CatalogError(f"{m['id']}: {exc}") from exc
         if data["kind"] in {"api_subscription", "tool_subscription"}:
             require(m["usage_prices"]["status"] == "not_applicable" and not m["usage_prices"]["rules"],
                     "subscription models use reference prices only")
@@ -323,6 +446,7 @@ def check_offering(root, data, provider):
         check_prices(m["reference_prices"], "reference", meters)
         require(sum(len(m[key]["rules"]) for key in ("usage_prices", "reference_prices")) <= 1,
                 "one price baseline per model across usage/reference")
+    check_media_value_sets(value_sets, used_value_sets)
     for start in aliases:
         seen = set()
         while start in aliases:
@@ -446,6 +570,8 @@ def validate(root=ROOT):
                 stats["reasoning_" + m["capabilities"]["reasoning"]["coverage"]] += 1
                 stats["reasoning_support_" + m["capabilities"]["reasoning"]["support"]] += 1
                 stats["context_" + m["capabilities"]["context_assessment"]["status"]] += 1
+                if "media_io" in m["capabilities"]:
+                    stats["media_io_" + m["capabilities"]["media_io"]["status"]] += 1
                 stats["models_" + m["verification"]["status"]] += 1
                 for purpose in ("usage_prices", "reference_prices"):
                     stats[purpose + "_" + m[purpose]["status"]] += 1
@@ -569,11 +695,15 @@ def review(root, base):
     protocol_gaps = []
     reasoning_gaps = []
     context_gaps = []
+    media_gaps = []
     for path, raw in new.items():
         if not path.startswith("providers/") or not path.endswith("/catalog.json"):
             continue
         doc = json.loads(raw)
         for m in doc["models"]:
+            media = m["capabilities"].get("media_io")
+            if media is not None and media["status"] != "known":
+                media_gaps.append(f"- {doc['provider_id']}/{doc['id']}/{m['id']}: {media['status']} — {media['notes']}")
             context = m["capabilities"]["context_assessment"]
             if context["status"] in {"partial", "unknown"}:
                 context_gaps.append(f"- {doc['provider_id']}/{doc['id']}/{m['id']}: "
@@ -597,6 +727,7 @@ def review(root, base):
         "## 协议面待核对清单", "", *(protocol_gaps or ["本候选没有 partial / unknown 协议记录。"]), "",
         "## 思考能力待核对清单", "", *(reasoning_gaps or ["本候选没有 partial / unknown 思考能力记录。"]), "",
         "## 上下文长度待核对清单", "", *(context_gaps or ["本候选没有 partial / unknown 上下文长度记录。"]), "",
+        "## 媒体输入输出待核对清单", "", *(media_gaps or ["本候选没有 partial / unknown 媒体输入输出记录。"]), "",
         "## 人工确认", "", "请同时阅读 diff.patch 中的说明、来源和校验器变化；核对未知项。",
         "确认时指定完整候选 SHA-256 与动作（保存 / 提交 / 发布），不是泛泛地说继续。",
         "数据确认不授权消费者部署。", "",

@@ -175,7 +175,91 @@
       "id": "agent-plan-voice",
       "url": "https://www.volcengine.com/docs/82379/2516286",
       "purpose": "models",
-      "notes": "Agent Plan 接入语音模型（豆包语音合成 2.0 / 流式语音识别 2.0，openspeech 专属路径）；协议面尚未登记，模型未收录。"
+      "notes": "Agent Plan 接入语音模型（豆包语音合成 2.0 / 流式语音识别 2.0，openspeech 专属路径与 X-Api-Key）。语音合成 doubao-seed-tts-2.0 以 ark_tts（HTTP Chunked 单向流式）收录；流式语音识别 2.0 为 WebSocket，协议面未登记，未收录。"
+    },
+    {
+      "id": "protocol-tts-http",
+      "url": "https://www.volcengine.com/docs/6561/1598757",
+      "purpose": "models",
+      "notes": "豆包语音 V3 HTTP Chunked / SSE 单向流式 TTS 接口文档（按量路径 /api/v3/tts/unidirectional）；Agent Plan 的 /api/v3/plan/tts/unidirectional 使用同一协议。用于 ark_tts 协议面与 usage.text_words 计费字符数。"
+    },
+    {
+      "id": "alignment-doubao-speech-pricing",
+      "url": "https://www.volcengine.com/docs/6561/1359370",
+      "purpose": "pricing",
+      "notes": "参考价对齐来源；方舟模型价格表无语音合成型号，豆包语音合成模型2.0 取豆包语音计费说明的按调用后付费单价（模型开发方公开按量价）。"
+    },
+    {
+      "id": "agent-plan-overage",
+      "url": "https://www.volcengine.com/docs/82379/2516284",
+      "purpose": "billing",
+      "notes": "Agent Plan 超额后付费规则；订阅模型不核对实际超额费，仅作套餐资料来源。"
+    },
+    {
+      "id": "media-agent-visual",
+      "url": "https://www.volcengine.com/docs/82379/2375486",
+      "purpose": "models",
+      "notes": "Agent Plan 接入视觉模型：专属端点 /api/plan/v3 的视频任务与图片生成接口、生视频 / 生图模型能力表。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-video-create",
+      "url": "https://www.volcengine.com/docs/82379/1520757",
+      "purpose": "models",
+      "notes": "创建视频生成任务 API：content 角色、素材限制与逐型号参数取值。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-video-get",
+      "url": "https://www.volcengine.com/docs/82379/1521309",
+      "purpose": "models",
+      "notes": "查询视频生成任务 API：video_url / last_frame_url 与 24 小时有效期。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-video-tutorial",
+      "url": "https://www.volcengine.com/docs/82379/2298881",
+      "purpose": "models",
+      "notes": "视频生成教程：全部 Seedance 型号能力表、输出规格与使用限制。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-seedance-2-5",
+      "url": "https://www.volcengine.com/docs/82379/2607688",
+      "purpose": "models",
+      "notes": "Doubao Seedance 2.5 教程：任务类型限制、样片模式、输出规格与使用限制。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-seedance-2-0",
+      "url": "https://www.volcengine.com/docs/82379/2291680",
+      "purpose": "models",
+      "notes": "Doubao Seedance 2.0 系列教程：2.0 / fast / mini 能力表。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-image-api",
+      "url": "https://www.volcengine.com/docs/82379/1541523",
+      "purpose": "models",
+      "notes": "图片生成 API：Seedream 请求参数、逐型号取值与响应。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-seedream-5-0-pro",
+      "url": "https://www.volcengine.com/docs/82379/2582774",
+      "purpose": "models",
+      "notes": "Doubao Seedream 5.0 pro / flash 教程：交互编辑、图层拆分与输入限制。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-seedream-tutorial",
+      "url": "https://www.volcengine.com/docs/82379/1824121",
+      "purpose": "models",
+      "notes": "图片生成教程（Seedream 4.0–5.0）：型号能力表、输出规格与输入限制。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-models",
+      "url": "https://www.volcengine.com/docs/82379/1330310",
+      "purpose": "models",
+      "notes": "模型列表：视频 / 图片生成型号的日期版 Model ID 与规格。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "media-tts-voices",
+      "url": "https://www.volcengine.com/docs/6561/1257544",
+      "purpose": "models",
+      "notes": "豆包语音音色列表：「豆包语音合成模型2.0」音色与外语音色的 voice_type 及展示名。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

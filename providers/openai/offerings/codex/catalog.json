@@ -1774,6 +1774,486 @@
           "notes": "官方 CLI 0.156.1 内嵌精确 slug 的常规 context_window；max_context_window=272000，不是 API 模型页的窗口，也不是自动压缩阈值。客户端版本、服务端目录或用户覆盖可改变实际值。"
         }
       }
+    },
+    {
+      "id": "gpt-image-2",
+      "request_id": "gpt-image-2",
+      "display_name": "GPT Image 2",
+      "modalities": [
+        "image"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-28T06:36:14Z",
+        "source_ids": [
+          "codex-imagegen",
+          "codex-imagegen-release",
+          "audit-codex-pricing"
+        ],
+        "evidence": "evidence/openai/2026-09-28-codex-image-media-io.md",
+        "notes": "Codex 文档写内置图像生成使用 gpt-image-2，官方客户端 rust-v0.158.0 写死此型号；Free 档不可用，其余档位未逐档写明。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/openai/2026-09-28-codex-image-media-io.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "OpenAI API gpt-image-2 Standard 图像 token 价；Batch 半价不属于此基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.25",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "image_input_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "image_output_tokens",
+                "amount": "30",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://developers.openai.com/api/docs/pricing",
+              "subject": "gpt-image-2",
+              "reason": "同平台 OpenAI API 对应型号的按量价，仅作订阅消耗示意；本仓库 OpenAI 按量目录尚未收录该型号。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-28T06:37:58Z",
+              "source_ids": [
+                "image-pricing"
+              ],
+              "evidence": "evidence/openai/2026-09-28-codex-image-media-io.md",
+              "notes": "Image tokens Standard 表：gpt-image-2 Image 8 / 2 / 30，Text 5 / 1.25 / -（输入 / 缓存输入 / 输出，USD 每百万 token）。"
+            },
+            "notes": "input_uncached_tokens 与 input_cached_tokens 指文本输入；图像缓存输入 2 USD / 百万 token 没有对应计量名，未列入，且官方注明缓存价只适用于 Responses 出图。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-28T06:37:58Z",
+          "source_ids": [
+            "image-pricing"
+          ],
+          "evidence": "evidence/openai/2026-09-28-codex-image-media-io.md",
+          "notes": "同平台按量价，仅作订阅消耗参考。"
+        },
+        "notes": "按量等价消耗示意，不是订阅真实扣费；Codex 文档称出图计入一般用量、消耗约快 3–5 倍。"
+      },
+      "notes": "Codex 订阅内置图像生成的型号。官方客户端经 Codex 图像端点出图；OpenAI 称 Images 2.5 已向 Codex 用户推出，但文档与客户端源码仍写死 gpt-image-2，未见选择 Flare / Sunburst 的方法，2.5 型号名不单列。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_image",
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:36:14Z",
+            "source_ids": [
+              "codex-imagegen-release",
+              "codex-images-backend",
+              "codex-responses-backend"
+            ],
+            "evidence": "evidence/openai/2026-09-28-codex-image-media-io.md",
+            "notes": "只核对协议面：官方客户端源码的 Images 端点请求，加消费者板测的 Responses 工具路径；不刷新其他能力的核对时间。"
+          },
+          "notes": "openai_image 是官方客户端（rust-v0.144.0 起）的出图路径，只核对了客户端发出的固定字段；openai_responses 的 image_generation 工具是订阅端点仍接受的路径，依据是 2026-09-17 板测，官方客户端已不用。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "codex-imagegen",
+              "codex-imagegen-release"
+            ],
+            "evidence": "evidence/openai/2026-09-28-codex-image-media-io.md",
+            "notes": "思考能力独立核对。"
+          },
+          "notes": "图像型号没有思考控制资料；Responses 承载文本模型的 reasoning.effort 板测不改变图像工具标识，不是图像型号的思考深度。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:36:14Z",
+            "source_ids": [
+              "codex-imagegen",
+              "codex-imagegen-release"
+            ],
+            "evidence": "evidence/openai/2026-09-28-codex-image-media-io.md",
+            "notes": "仅核对上下文适用性。"
+          },
+          "notes": "Codex 图像端点是图像生成接口，没有文本对话窗口；提示词长度与参考图数量不能填入 context_window_tokens。"
+        },
+        "media_io": {
+          "status": "partial",
+          "operations": [
+            {
+              "id": "image_generation",
+              "interface": "openai_image",
+              "endpoint": "POST /backend-api/codex/images/generations",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [
+                    "png"
+                  ],
+                  "delivery": [
+                    "base64"
+                  ],
+                  "max_items": null,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "响应 data[].b64_json；官方客户端不发 n、只取 data[0]、按 .png 保存。板测所见为 PNG 1254×1254。单次产出张数上限未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "quality",
+                  "type": "enum",
+                  "values": [
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "官方客户端固定发 auto；其他取值在本端点未核对。"
+                },
+                {
+                  "field": "size",
+                  "type": "enum",
+                  "values": [
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "官方客户端固定发 auto；板测所见产物恒为 1254×1254，比例只能写在提示词里（见 Responses 操作说明）。"
+                },
+                {
+                  "field": "background",
+                  "type": "enum",
+                  "values": [
+                    "transparent",
+                    "opaque",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "rust-v0.158.0 按 transparent_background 发 transparent / opaque，旧版 634ebc1 固定 auto；本端点对 transparent 的实际效果未核对（Responses 工具路径对 transparent 返回 400）。"
+                }
+              ],
+              "notes": "官方 Codex 客户端（rust-v0.158.0）本地执行 image_gen.imagegen 工具时的出图请求：JSON 体 {prompt, background, model: \"gpt-image-2\", quality: \"auto\", size: \"auto\"}，ChatGPT 登录鉴权。model 写 gpt-image-2.5-sunburst / -flare 或无效名称板测都返回 200，不能证明型号切换。"
+            },
+            {
+              "id": "image_edit",
+              "interface": "openai_image",
+              "endpoint": "POST /backend-api/codex/images/edits",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "images[]",
+                  "required": true,
+                  "min_items": 1,
+                  "max_items": 5,
+                  "formats": [
+                    "png",
+                    "jpeg",
+                    "webp"
+                  ],
+                  "transports": [
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "每项 {\"image_url\": \"data:<mime>;base64,…\"} 或 {\"file_id\": …}，JSON 体（非 multipart）。5 张是官方客户端上限（MAX_EDIT_IMAGES），端点上限未查到；客户端把 PNG / JPEG / WebP 原样发送，其他可解码格式先转 PNG。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [
+                    "png"
+                  ],
+                  "delivery": [
+                    "base64"
+                  ],
+                  "max_items": null,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "响应 data[].b64_json；官方客户端不发 n、只取 data[0]、按 .png 保存。板测所见为 PNG 1254×1254。单次产出张数上限未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "quality",
+                  "type": "enum",
+                  "values": [
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "官方客户端固定发 auto；其他取值在本端点未核对。"
+                },
+                {
+                  "field": "size",
+                  "type": "enum",
+                  "values": [
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "官方客户端固定发 auto；板测所见产物恒为 1254×1254，比例只能写在提示词里（见 Responses 操作说明）。"
+                },
+                {
+                  "field": "background",
+                  "type": "enum",
+                  "values": [
+                    "transparent",
+                    "opaque",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "rust-v0.158.0 按 transparent_background 发 transparent / opaque，旧版 634ebc1 固定 auto；本端点对 transparent 的实际效果未核对（Responses 工具路径对 transparent 返回 400）。"
+                }
+              ],
+              "notes": "官方客户端带参考图（referenced_image_paths 或最近生成的图）时走此端点；file_id 从 rust-v0.158.0 起支持。"
+            },
+            {
+              "id": "image_generation_tool",
+              "interface": "openai_responses",
+              "endpoint": "POST /backend-api/codex/responses",
+              "mode": "stream",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "input[].content[type=input_text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "与承载文本模型的指令一起放在 user 消息里。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "input[].content[type=input_image].image_url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": null,
+                  "formats": [],
+                  "transports": [
+                    "data_uri"
+                  ],
+                  "limits": [],
+                  "notes": "跟在文本之后的 input_image，板测可用（是否影响画面未验证）；格式与数量上限未核对。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [
+                    "png",
+                    "jpeg",
+                    "webp"
+                  ],
+                  "delivery": [
+                    "base64"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "SSE 流里 output[type=image_generation_call].result 为 base64 图像，条目另带 size、quality、background、output_format、action 与工具标识 gpt-image-2-codex。不写比例时恒为 1254×1254；提示词尾部写比例时像素随之变化，总量约 157 万：16:9=1672×941、9:16=941×1672、4:3=1448×1086、3:2=1536×1024、2:1=1774×887、21:9=1916×821。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "tools[type=image_generation].output_format",
+                  "type": "enum",
+                  "values": [
+                    "png",
+                    "jpeg",
+                    "webp"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "板测采用。缺省时为 PNG。"
+                },
+                {
+                  "field": "tools[type=image_generation].output_compression",
+                  "type": "integer",
+                  "values": null,
+                  "min": 0,
+                  "max": 100,
+                  "unit": "percent",
+                  "default": null,
+                  "required": false,
+                  "notes": "jpeg + 20 时体积约为缺省压缩的 2/3，大概率采用；范围取自 API 文档，本端点未逐值核对。"
+                },
+                {
+                  "field": "tools[type=image_generation].size",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "任何取值（含非法值）都被静默忽略，像素总量由后端决定。"
+                },
+                {
+                  "field": "tools[type=image_generation].quality",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "不报错；条目回报的 quality 由后端自选，与请求无稳定对应。"
+                },
+                {
+                  "field": "tools[type=image_generation].background",
+                  "type": "enum",
+                  "values": [
+                    "auto",
+                    "opaque",
+                    "transparent"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "transparent 返回 400「Transparent background is not supported for this model.」；在提示词里要求透明背景时 PNG 真正透明、WebP 仍不透明。"
+                }
+              ],
+              "notes": "消费者板测（2026-09-17）确认的订阅端点行为，官方客户端自 rust-v0.144.0 起已不用此路径出图。tool_choice 钉死 image_generation，顶层 model 是承载的文本模型；工具对象的 model 写 2.5 型号名时工具标识仍为 gpt-image-2-codex，不能证明型号切换。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:36:14Z",
+            "source_ids": [
+              "codex-imagegen",
+              "codex-image-inputs",
+              "codex-imagegen-release",
+              "codex-images-backend",
+              "codex-responses-backend",
+              "image-tool-reference"
+            ],
+            "evidence": "evidence/openai/2026-09-28-codex-image-media-io.md",
+            "notes": "Images 端点按官方客户端源码与 Codex 文档核对；Responses 工具路径取自 2026-09-17 消费者板测，本次未重跑。不刷新模型身份、价格或其他能力的核对结论。"
+          },
+          "notes": "缺口：Images 端点只核对了官方客户端发出的固定字段，其他取值、单次张数、参考图端点上限、提示词长度未核对；Responses 路径参考图格式与上限未核对；2.5 型号名是否生效无法证实。"
+        }
+      }
     }
   ],
   "notes": "产品级目录不是账号授权清单；active 仅表示公开产品提供，unknown 不表示免费或已退役。消费者仍须按实际账号目录筛选。模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"

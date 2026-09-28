@@ -9,7 +9,7 @@ API 与 Codex 订阅完全独立；订阅模型参考价采用同平台API标准
 ## 独立产品
 
 - [api-global](offerings/api-global/catalog.json)
-- [codex](offerings/codex/catalog.json)
+- [codex](offerings/codex/catalog.json)：含图像型号 `gpt-image-2`，官方客户端经 `/backend-api/codex/images/*` 出图（`openai_image`），Responses `image_generation` 工具路径只有消费者板测依据，见 [图像输入输出证据](../../evidence/openai/2026-09-28-codex-image-media-io.md)。
 
 ## 更新纪律
 

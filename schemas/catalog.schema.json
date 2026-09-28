@@ -54,6 +54,15 @@
       },
       "minItems": 0
     },
+    "media_value_sets": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z0-9][a-z0-9_-]*$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/media_value_set"
+      }
+    },
     "notes": {
       "type": "string",
       "minLength": 1
@@ -691,12 +700,16 @@
                   "minimax_image",
                   "ark_image",
                   "bailian_image",
+                  "xai_image",
                   "minimax_video",
                   "ark_video",
                   "bailian_video",
                   "kling_video",
+                  "xai_video",
                   "minimax_speech",
+                  "ark_tts",
                   "gemini_generate_content",
+                  "gemini_code_assist",
                   "bailian_text",
                   "minimax_text",
                   "cursor_agent",
@@ -730,6 +743,9 @@
                 "verification",
                 "notes"
               ]
+            },
+            "media_io": {
+              "$ref": "#/$defs/media_io"
             },
             "reasoning": {
               "$ref": "#/$defs/reasoning"
@@ -1041,6 +1057,470 @@
         "offering_id",
         "model_id",
         "selection"
+      ]
+    },
+    "media_limit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "measure": {
+          "enum": [
+            "file_size",
+            "width",
+            "height",
+            "pixels",
+            "aspect_ratio",
+            "duration",
+            "length",
+            "count",
+            "fps",
+            "sample_rate",
+            "bitrate"
+          ]
+        },
+        "min": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "max": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+        },
+        "unit": {
+          "enum": [
+            "byte",
+            "pixel",
+            "ratio",
+            "second",
+            "millisecond",
+            "character",
+            "item",
+            "fps",
+            "hertz",
+            "bit_per_second"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "measure",
+        "min",
+        "max",
+        "unit",
+        "notes"
+      ]
+    },
+    "media_input": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "enum": [
+            "prompt",
+            "negative_prompt",
+            "text",
+            "lyrics",
+            "first_frame",
+            "last_frame",
+            "reference_image",
+            "reference_video",
+            "reference_audio",
+            "source_image",
+            "source_video",
+            "source_audio",
+            "mask",
+            "source_task"
+          ]
+        },
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "min_items": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "max_items": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "formats": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_.+-]*$"
+          }
+        },
+        "transports": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "inline",
+              "url",
+              "base64",
+              "data_uri",
+              "file_id",
+              "asset_id"
+            ]
+          }
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media_limit"
+          }
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "role",
+        "field",
+        "required",
+        "min_items",
+        "max_items",
+        "formats",
+        "transports",
+        "limits",
+        "notes"
+      ]
+    },
+    "media_output": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "media": {
+          "enum": [
+            "image",
+            "video",
+            "audio",
+            "text"
+          ]
+        },
+        "formats": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_.+-]*$"
+          }
+        },
+        "delivery": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "url",
+              "base64",
+              "hex",
+              "stream",
+              "file_id"
+            ]
+          }
+        },
+        "max_items": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "url_ttl_seconds": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media_limit"
+          }
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "media",
+        "formats",
+        "delivery",
+        "max_items",
+        "url_ttl_seconds",
+        "limits",
+        "notes"
+      ]
+    },
+    "media_param": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "enum",
+            "integer",
+            "number",
+            "boolean",
+            "string",
+            "string_list"
+          ]
+        },
+        "values": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": [
+              "string",
+              "integer"
+            ]
+          }
+        },
+        "min": {
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ]
+        },
+        "max": {
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            null,
+            "byte",
+            "pixel",
+            "ratio",
+            "second",
+            "millisecond",
+            "character",
+            "item",
+            "fps",
+            "hertz",
+            "bit_per_second",
+            "percent"
+          ]
+        },
+        "default": {
+          "type": [
+            "string",
+            "integer",
+            "boolean",
+            "null"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "values_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        }
+      },
+      "required": [
+        "field",
+        "type",
+        "values",
+        "min",
+        "max",
+        "unit",
+        "default",
+        "required",
+        "notes"
+      ]
+    },
+    "media_operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "interface": {
+          "type": "string",
+          "minLength": 1
+        },
+        "endpoint": {
+          "type": "string",
+          "pattern": "^(GET|POST|PUT|DELETE|WSS) /\\S*$"
+        },
+        "mode": {
+          "enum": [
+            "sync",
+            "async_task",
+            "stream"
+          ]
+        },
+        "inputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/media_input"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/media_output"
+          }
+        },
+        "params": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media_param"
+          }
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "interface",
+        "endpoint",
+        "mode",
+        "inputs",
+        "outputs",
+        "params",
+        "notes"
+      ]
+    },
+    "media_io": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "partial",
+            "unknown"
+          ]
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media_operation"
+          }
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "status",
+        "operations",
+        "verification",
+        "notes"
+      ]
+    },
+    "media_value_set": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": [
+              "string",
+              "integer"
+            ]
+          }
+        },
+        "labels": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "values",
+        "labels",
+        "verification",
+        "notes"
       ]
     }
   },
