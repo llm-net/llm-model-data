@@ -51,7 +51,7 @@
 - Grok Build 订阅的 Imagine 图像 / 视频走 xAI 官方 `/v1/images/*`、`/v1/videos/*`，登记为 `xai_image` / `xai_video`；路径虽叫 `images/generations`，字段与 OpenAI Image 不同。
 - Antigravity 经 Code Assist `v1internal` 信封承载模型；该通道不认 Gemini API 新增的 `generationConfig.responseFormat`，图像参数只能写在 `imageConfig`。
 - 百炼 Coding Plan 明确不支持 Responses；Token Plan 和按量产品独立核对。百炼 Responses 的部分型号只有基础兼容能力，内置 Agent 工具受限。
-- Kimi 按量 Responses 明确列 K3，其他型号不能照抄；Kimi Code 的四个模型 ID 另有独立接入表。
+- Kimi 按量 Responses 明确列 K3，其他型号不能照抄；Kimi Code 的四个模型 ID 另有独立接入表，Codex 接入指南逐个列出四个型号并确认 Responses，仅支持文本和图片输入，不支持视频。
 - 千帆 Responses 支持表没有覆盖全部 ERNIE / GLM；TokenHub Hy-MT2-Pro 的 Responses 和 Messages 被明确标为不支持。
 - MiniMax 原生 `text/chatcompletion_v2` 已标 deprecated，不能把“仍有文档”写成推荐的新接口。
 - 方舟 Agent Plan 的语音合成走豆包语音 openspeech 专属路径：`ark_tts` 只含 V3 HTTP Chunked 单向流式；同型号的 WebSocket 双向 / 单向流式是另一套二进制帧协议，未登记协议面，不并入 `ark_tts`。

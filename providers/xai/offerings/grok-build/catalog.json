@@ -93,13 +93,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-22T05:42:30.863266+00:00",
+              "checked_at": "2026-10-16T07:52:16Z",
               "source_ids": [
-                "refresh-47",
-                "refresh-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-22-grok-47.md",
-              "notes": "同平台 4.7 标准 API 价格，仅作订阅消耗参考。"
+              "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+              "notes": "逐项核对输入、缓存读、输出三个分量，数值与估算基准不变；只刷新参考价，不能用于证明订阅当前权限或精确请求 ID。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
             "time_basis": "unknown",
@@ -108,13 +107,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-22T05:42:30.863266+00:00",
+          "checked_at": "2026-10-16T07:52:16Z",
           "source_ids": [
-            "refresh-47",
-            "refresh-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-22-grok-47.md",
-          "notes": "同平台 4.7 标准 API 价格，仅作订阅消耗参考。"
+          "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+          "notes": "逐项核对输入、缓存读、输出三个分量，数值与估算基准不变；只刷新参考价，不能用于证明订阅当前权限或精确请求 ID。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。"
       },
@@ -272,13 +270,13 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-23T07:33:10Z",
+              "checked_at": "2026-10-16T07:52:16Z",
               "source_ids": [
-                "r0923-pricing",
-                "r0923-47"
+                "r1016-pricing",
+                "r1016-guide47"
               ],
-              "evidence": "evidence/xai/2026-09-23-grok-47-fast.md",
-              "notes": "核对开发方 xAI 官方价格页的 Grok 4.7 Fast 费率；按用户指定采用开发方官网价，不核对订阅真实扣费。"
+              "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+              "notes": "逐项核对输入、缓存读、输出三个分量，数值与估算基准不变；只刷新参考价，不能用于证明订阅当前权限或精确请求 ID。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官方文档未出现 grok-4.7-build-fast 字样，对应关系依据展示名 Grok 4.7 Fast 与 xAI 的 Grok Build 专供说明。",
             "time_basis": "unknown",
@@ -287,13 +285,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-23T07:33:10Z",
+          "checked_at": "2026-10-16T07:52:16Z",
           "source_ids": [
-            "r0923-pricing",
-            "r0923-47"
+            "r1016-pricing",
+            "r1016-guide47"
           ],
-          "evidence": "evidence/xai/2026-09-23-grok-47-fast.md",
-          "notes": "核对开发方 xAI 官方价格页的 Grok 4.7 Fast 费率；按用户指定采用开发方官网价，不核对订阅真实扣费。"
+          "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+          "notes": "逐项核对输入、缓存读、输出三个分量，数值与估算基准不变；只刷新参考价，不能用于证明订阅当前权限或精确请求 ID。"
         },
         "notes": "开发方官网价参考；非公开 API 型号，不能凭此调用 xAI API。"
       },
@@ -457,13 +455,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-22T05:42:30.863266+00:00",
+              "checked_at": "2026-10-16T07:52:16Z",
               "source_ids": [
-                "refresh-46",
-                "refresh-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-22-grok-47.md",
-              "notes": "同平台精确型号按量参考价；不代表订阅真实扣费。"
+              "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+              "notes": "逐项核对输入、缓存读、输出三个分量，数值与估算基准不变；只刷新参考价，不能用于证明订阅当前权限或精确请求 ID。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
             "time_basis": "unknown",
@@ -472,13 +469,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-22T05:42:30.863266+00:00",
+          "checked_at": "2026-10-16T07:52:16Z",
           "source_ids": [
-            "refresh-46",
-            "refresh-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-22-grok-47.md",
-          "notes": "同平台精确型号按量参考价；不代表订阅真实扣费。"
+          "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+          "notes": "逐项核对输入、缓存读、输出三个分量，数值与估算基准不变；只刷新参考价，不能用于证明订阅当前权限或精确请求 ID。"
         },
         "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。"
       },
@@ -497,15 +493,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-22T05:59:06Z",
+            "checked_at": "2026-10-16T07:52:16Z",
             "source_ids": [
-              "grok-build-models",
-              "refresh-settings"
+              "r1016-cli",
+              "r1016-settings"
             ],
-            "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
-            "notes": "本型号在线目录 api_backend=responses；不从 API 或其他型号继承。"
+            "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+            "notes": "核对本型号内嵌 api_backend=responses；没有取得当前订阅在线目录，其他协议未确认。"
           },
-          "notes": "确认 Grok Build 当前在线目录的 Responses 承载；未确认其他客户端版本或更多兼容面，不添加 Chat、Messages 或 gRPC。"
+          "notes": "官方 CLI 1.0.60 本型号静态默认使用 Responses；订阅在线目录、其他客户端版本与更多协议面本次未确认，保持 partial，不添加 Chat、Messages 或 gRPC。"
         },
         "reasoning": {
           "support": "supported",
@@ -529,7 +525,7 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "high",
-                  "notes": "本型号在线目录 reasoning_efforts 的原始 value，与官方客户端配置键交叉核对；不从 UI label 反推。"
+                  "notes": "官方 CLI 1.0.60 内嵌本型号 reasoning_efforts 原始 value 与 reasoning_effort 默认值；设置键由本产品文档核对，不从 UI 标签反推。"
                 }
               ],
               "notes": "客户端默认由目录 reasoning_effort 给出；裸订阅后端默认、请求字段及能否关闭未独立确认。"
@@ -537,30 +533,30 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-22T05:59:06Z",
+            "checked_at": "2026-10-16T07:52:16Z",
             "source_ids": [
-              "grok-build-models",
-              "refresh-settings"
+              "r1016-cli",
+              "r1016-settings"
             ],
-            "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
-            "notes": "本型号 supports_reasoning_effort、reasoning_efforts 和客户端默认独立确认。"
+            "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+            "notes": "本型号静态 supports_reasoning_effort、reasoning_efforts 与客户端默认可确认；未取得当前订阅在线目录。"
           },
-          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。"
+          "notes": "已核实官方 CLI 1.0.60 本型号客户端档位与 high 默认；裸订阅请求字段、后端默认、能否关闭和当前在线目录仍未知，保持 partial。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "500000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-22T05:59:06Z",
+            "checked_at": "2026-10-16T07:52:16Z",
             "source_ids": [
-              "grok-build-models",
-              "refresh-settings"
+              "r1016-cli",
+              "r1016-settings"
             ],
-            "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
-            "notes": "本订阅精确型号在线目录明确 context_window 整数。"
+            "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+            "notes": "官方 CLI 1.0.60 内嵌精确型号的 context_window，与既有在线目录值一致；当前匿名在线请求未获目录。"
           },
-          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。"
+          "notes": "官方 CLI 1.0.60 内嵌本型号窗口为 500000 tokens，与既有在线证据一致；这不是压缩阈值或同名 API 继承值。在线目录和配置仍可覆盖。"
         }
       }
     },
@@ -642,13 +638,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-22T05:42:30.863266+00:00",
+              "checked_at": "2026-10-16T07:52:16Z",
               "source_ids": [
-                "refresh-45",
-                "refresh-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-22-grok-47.md",
-              "notes": "同平台精确型号按量参考价；不代表订阅真实扣费。"
+              "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+              "notes": "逐项核对输入、缓存读、输出三个分量，数值与估算基准不变；只刷新参考价，不能用于证明订阅当前权限或精确请求 ID。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
             "time_basis": "unknown",
@@ -657,13 +652,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-22T05:42:30.863266+00:00",
+          "checked_at": "2026-10-16T07:52:16Z",
           "source_ids": [
-            "refresh-45",
-            "refresh-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-22-grok-47.md",
-          "notes": "同平台精确型号按量参考价；不代表订阅真实扣费。"
+          "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+          "notes": "逐项核对输入、缓存读、输出三个分量，数值与估算基准不变；只刷新参考价，不能用于证明订阅当前权限或精确请求 ID。"
         },
         "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。"
       },
@@ -682,15 +676,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-22T05:59:06Z",
+            "checked_at": "2026-10-16T07:52:16Z",
             "source_ids": [
-              "grok-build-models",
-              "refresh-settings"
+              "r1016-cli",
+              "r1016-settings"
             ],
-            "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
-            "notes": "本型号在线目录 api_backend=responses；不从 API 或其他型号继承。"
+            "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+            "notes": "核对本型号内嵌 api_backend=responses；没有取得当前订阅在线目录，其他协议未确认。"
           },
-          "notes": "确认 Grok Build 当前在线目录的 Responses 承载；未确认其他客户端版本或更多兼容面，不添加 Chat、Messages 或 gRPC。"
+          "notes": "官方 CLI 1.0.60 本型号静态默认使用 Responses；订阅在线目录、其他客户端版本与更多协议面本次未确认，保持 partial，不添加 Chat、Messages 或 gRPC。"
         },
         "reasoning": {
           "support": "supported",
@@ -713,7 +707,7 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "high",
-                  "notes": "本型号在线目录 reasoning_efforts 的原始 value，与官方客户端配置键交叉核对；不从 UI label 反推。"
+                  "notes": "官方 CLI 1.0.60 内嵌本型号 reasoning_efforts 原始 value 与 reasoning_effort 默认值；设置键由本产品文档核对，不从 UI 标签反推。"
                 }
               ],
               "notes": "客户端默认由目录 reasoning_effort 给出；裸订阅后端默认、请求字段及能否关闭未独立确认。"
@@ -721,30 +715,30 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-22T05:59:06Z",
+            "checked_at": "2026-10-16T07:52:16Z",
             "source_ids": [
-              "grok-build-models",
-              "refresh-settings"
+              "r1016-cli",
+              "r1016-settings"
             ],
-            "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
-            "notes": "本型号 supports_reasoning_effort、reasoning_efforts 和客户端默认独立确认。"
+            "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+            "notes": "本型号静态 supports_reasoning_effort、reasoning_efforts 与客户端默认可确认；未取得当前订阅在线目录。"
           },
-          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。"
+          "notes": "已核实官方 CLI 1.0.60 本型号客户端档位与 high 默认；裸订阅请求字段、后端默认、能否关闭和当前在线目录仍未知，保持 partial。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "500000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-22T05:59:06Z",
+            "checked_at": "2026-10-16T07:52:16Z",
             "source_ids": [
-              "grok-build-models",
-              "refresh-settings"
+              "r1016-cli",
+              "r1016-settings"
             ],
-            "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
-            "notes": "本订阅精确型号在线目录明确 context_window 整数。"
+            "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+            "notes": "官方 CLI 1.0.60 内嵌精确型号的 context_window，与既有在线目录值一致；当前匿名在线请求未获目录。"
           },
-          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。"
+          "notes": "官方 CLI 1.0.60 内嵌本型号窗口为 500000 tokens，与既有在线证据一致；这不是压缩阈值或同名 API 继承值。在线目录和配置仍可覆盖。"
         }
       }
     },

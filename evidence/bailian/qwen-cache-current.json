@@ -1,0 +1,657 @@
+{
+  "scope": "仅 Go 五个 Qwen 的原厂缓存价，以及其中已被精确引用的百炼 API 三条依赖记录；Go 与 API 能力独立核对。",
+  "checked_at": "2026-10-16T08:07:34.225826Z",
+  "sources": [
+    {
+      "source_id": "current-qwen-pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "retrieved_at": "2026-10-16T07:45:42.122749+00:00",
+      "bytes": 1458859,
+      "sha256": "f918050f5826d583a5236c8ae3e34ab7bca5546aba3f22ac4147d3c7bfafe29d"
+    },
+    {
+      "source_id": "current-qwen-cache",
+      "url": "https://help.aliyun.com/zh/model-studio/context-cache",
+      "retrieved_at": "2026-10-16T08:01:39.990267+00:00",
+      "sha256": "97328770656ad77958c7463f372dbe6e6e1ff45c88b6122eb84d8661bb795f6e",
+      "bytes": 201692
+    },
+    {
+      "source_id": "current-qwen-chat",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-api-via-openai-chat-completions/",
+      "retrieved_at": "2026-10-16T08:06:29.279503+00:00",
+      "sha256": "1730c66198508625c05a89c3b7d97716d1ce96ed85f9507a64d702ed018a0467",
+      "bytes": 358372
+    },
+    {
+      "source_id": "current-qwen-responses",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-api-via-openai-responses",
+      "retrieved_at": "2026-10-16T08:01:40.219330+00:00",
+      "sha256": "9c8651109e72f80eda74c70ce017f09702d8d24c61df7c83afd29a99f0b1cdaa",
+      "bytes": 284043
+    },
+    {
+      "source_id": "current-qwen-messages",
+      "url": "https://help.aliyun.com/zh/model-studio/anthropic-api-messages",
+      "retrieved_at": "2026-10-16T08:01:39.880921+00:00",
+      "sha256": "976bf969c6997e5f0be968e644c413ab92ea883267f66a37a956d386b7c5cc73",
+      "bytes": 195469
+    },
+    {
+      "source_id": "current-qwen-native",
+      "url": "https://help.aliyun.com/zh/model-studio/text-generation",
+      "retrieved_at": "2026-10-16T08:01:40.005147+00:00",
+      "sha256": "da10e1f78d01d7eed9d048c90a05b806604c34f5a7fd98a18cbd4113c15b418f",
+      "bytes": 211401
+    },
+    {
+      "source_id": "current-qwen-reasoning",
+      "url": "https://help.aliyun.com/zh/model-studio/deep-thinking",
+      "retrieved_at": "2026-10-16T08:01:39.989379+00:00",
+      "sha256": "f93cb1da971ffc2b5d50307f85c145111332e766b83e2ca10c071093c3a13eb5",
+      "bytes": 303636
+    },
+    {
+      "source_id": "current-qwen-context",
+      "url": "https://help.aliyun.com/zh/model-studio/text-generation-model/",
+      "retrieved_at": "2026-10-16T08:06:28.939319+00:00",
+      "sha256": "473c86aabb245ec1f6349e419b2accca9a3d2e47fd61d5ec844db2dcb56ef906",
+      "bytes": 83510
+    }
+  ],
+  "cache_location": "显式缓存／支持的模型／华北2（北京）；如何计费；有效期；费用用量示例。",
+  "model_results": [
+    {
+      "id": "qwen3-8-max",
+      "request_id": "qwen3.8-max",
+      "api_catalog_updated": true,
+      "region": "cn-beijing",
+      "currency": "CNY",
+      "per_tokens": 1000000,
+      "baseline": "标准最短输入档、非促销价、显式缓存",
+      "explicit_cache_supported": true,
+      "cache_ttl_seconds": 300,
+      "rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "12",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "36",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "amount": "15",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "cache_read_status": "unknown",
+      "cache_read_reason": "官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。",
+      "cache_write_calculation": "12 × 1.25",
+      "quantity_accounting": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。",
+      "source_ids": [
+        "current-qwen-pricing",
+        "current-qwen-cache"
+      ]
+    },
+    {
+      "id": "qwen3-8-flash",
+      "request_id": "qwen3.8-flash",
+      "api_catalog_updated": true,
+      "region": "cn-beijing",
+      "currency": "CNY",
+      "per_tokens": 1000000,
+      "baseline": "标准最短输入档、非促销价、显式缓存",
+      "explicit_cache_supported": true,
+      "cache_ttl_seconds": 300,
+      "rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "0.8",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "2.7",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "amount": "1",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "cache_read_status": "unknown",
+      "cache_read_reason": "官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。",
+      "cache_write_calculation": "0.8 × 1.25",
+      "quantity_accounting": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。",
+      "source_ids": [
+        "current-qwen-pricing",
+        "current-qwen-cache"
+      ]
+    },
+    {
+      "id": "qwen3-7-max",
+      "request_id": "qwen3.7-max",
+      "api_catalog_updated": false,
+      "region": "cn-beijing",
+      "currency": "CNY",
+      "per_tokens": 1000000,
+      "baseline": "标准最短输入档、非促销价、显式缓存",
+      "explicit_cache_supported": true,
+      "cache_ttl_seconds": 300,
+      "rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "12",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "1.2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "36",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "amount": "15",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "cache_read_status": "known",
+      "cache_read_reason": "官方显式缓存的通用 10% 规则，型号不属于例外；用 Decimal 从已核对标准输入价计算。",
+      "cache_write_calculation": "12 × 1.25",
+      "quantity_accounting": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。",
+      "source_ids": [
+        "current-qwen-pricing",
+        "current-qwen-cache"
+      ]
+    },
+    {
+      "id": "qwen3-7-plus",
+      "request_id": "qwen3.7-plus",
+      "api_catalog_updated": true,
+      "region": "cn-beijing",
+      "currency": "CNY",
+      "per_tokens": 1000000,
+      "baseline": "标准最短输入档、非促销价、显式缓存",
+      "explicit_cache_supported": true,
+      "cache_ttl_seconds": 300,
+      "rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "8",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "amount": "2.5",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "cache_read_status": "known",
+      "cache_read_reason": "官方显式缓存的通用 10% 规则，型号不属于例外；用 Decimal 从已核对标准输入价计算。",
+      "cache_write_calculation": "2 × 1.25",
+      "quantity_accounting": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。",
+      "source_ids": [
+        "current-qwen-pricing",
+        "current-qwen-cache"
+      ]
+    },
+    {
+      "id": "qwen3-6-plus",
+      "request_id": "qwen3.6-plus",
+      "api_catalog_updated": false,
+      "region": "cn-beijing",
+      "currency": "CNY",
+      "per_tokens": 1000000,
+      "baseline": "标准最短输入档、非促销价、显式缓存",
+      "explicit_cache_supported": true,
+      "cache_ttl_seconds": 300,
+      "rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "12",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "amount": "2.5",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "cache_read_status": "known",
+      "cache_read_reason": "官方显式缓存的通用 10% 规则，型号不属于例外；用 Decimal 从已核对标准输入价计算。",
+      "cache_write_calculation": "2 × 1.25",
+      "quantity_accounting": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。",
+      "source_ids": [
+        "current-qwen-pricing",
+        "current-qwen-cache"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://bailian.console.aliyun.com/cn-beijing/pricing",
+      "checked_at": "2026-10-16T08:07:34.225826Z",
+      "result": "匿名 HTTP 返回前端入口，无两型号的价格数据；web 打开未取得页面。继续读取该页加载的公开 JS，仅确认 app-model-pricing 路由，未获得型号价。"
+    },
+    {
+      "url": "https://bailian-cs.console.aliyun.com/cli/api.json?action=BroadScopeAspnGateway&product=sfm_bailian&api=zeldaHttp.dashscopeModel.%2Fzelda%2Fapi%2Fv1%2FmodelCenter%2FlistFoundationModels",
+      "checked_at": "2026-10-16T08:07:34.225826Z",
+      "request": "匿名 POST region=cn-beijing，input.name=qwen3.8-max",
+      "result": "HTTP 返回 HTML，非型号或价格 JSON；未使用凭据，不将结果解释为型号下线。"
+    }
+  ],
+  "remaining_price_unknown": {
+    "qwen3-8-max": "显式及隐式命中价是官方例外，控制台单价未取得；5 分钟写入价已确认15。",
+    "qwen3-8-flash": "显式及隐式命中价是官方例外，控制台单价未取得；5 分钟写入价已确认1。"
+  },
+  "api_capability_review": [
+    {
+      "id": "qwen3-8-max",
+      "request_id": "qwen3.8-max",
+      "context": {
+        "status": "partial",
+        "reported_value": "100万 Token",
+        "historical_integer_retained": 1000000,
+        "historical_verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T15:14:47.912845+00:00",
+          "source_ids": [
+            "context-bailian-public-qwen3-8-max"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-context.md",
+          "notes": "仅核对上下文；不代表其他能力已核对。"
+        },
+        "reason": "公开文本生成页给标称窗口；本轮匿名模型接口仅返回 HTML，精确整数边界未复核。"
+      },
+      "interfaces": [
+        "openai_chat",
+        "openai_responses",
+        "anthropic_messages",
+        "bailian_text"
+      ],
+      "protocol_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "reasoning_profile_summary": {
+        "openai_chat": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "enable_thinking",
+              "values": [
+                true,
+                false
+              ],
+              "default": true
+            },
+            {
+              "parameter": "thinking_budget",
+              "values": [],
+              "default": null,
+              "documented_default": 131072,
+              "storage_note": "上下界均未确认时当前schema不能结构化保存默认数字；已知默认值保存在说明，未扩schema。"
+            },
+            {
+              "parameter": "reasoning_effort",
+              "values": [
+                "low",
+                "medium",
+                "xhigh"
+              ],
+              "default": "xhigh"
+            }
+          ]
+        },
+        "bailian_text": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "parameters.enable_thinking",
+              "values": [
+                true,
+                false
+              ],
+              "default": true
+            },
+            {
+              "parameter": "parameters.thinking_budget",
+              "values": [],
+              "default": null
+            }
+          ]
+        },
+        "openai_responses": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "reasoning.effort",
+              "values": [
+                "none",
+                "low",
+                "medium",
+                "xhigh"
+              ],
+              "default": "xhigh"
+            }
+          ]
+        },
+        "anthropic_messages": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "thinking.type",
+              "values": [
+                "enabled",
+                "disabled"
+              ],
+              "default": "enabled"
+            },
+            {
+              "parameter": "thinking.budget_tokens",
+              "values": [],
+              "default": null
+            },
+            {
+              "parameter": "output_config.effort",
+              "values": [
+                "low",
+                "medium",
+                "xhigh"
+              ],
+              "default": "xhigh"
+            }
+          ]
+        }
+      },
+      "remaining_reasoning": "四种协议面均有独立 profile。Qwen3.8 的有效 effort 与别名映射按协议分别记录；原生 HTTP 参数位于 parameters 内。未确认原生预算数字、完整预算边界和 Messages 预算默认值，整体 partial。"
+    },
+    {
+      "id": "qwen3-7-plus",
+      "request_id": "qwen3.7-plus",
+      "context": {
+        "status": "partial",
+        "reported_value": "100万 Token",
+        "historical_integer_retained": 1000000,
+        "historical_verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T15:14:47.941811+00:00",
+          "source_ids": [
+            "context-bailian-public-qwen3-7-plus"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-context.md",
+          "notes": "仅核对上下文；不代表其他能力已核对。"
+        },
+        "reason": "公开文本生成页给标称窗口；本轮匿名模型接口仅返回 HTML，精确整数边界未复核。"
+      },
+      "interfaces": [
+        "openai_chat",
+        "openai_responses",
+        "anthropic_messages",
+        "bailian_text"
+      ],
+      "protocol_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "reasoning_profile_summary": {
+        "openai_chat": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "enable_thinking",
+              "values": [
+                true,
+                false
+              ],
+              "default": true
+            },
+            {
+              "parameter": "thinking_budget",
+              "values": [],
+              "default": null
+            }
+          ]
+        },
+        "bailian_text": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "parameters.enable_thinking",
+              "values": [
+                true,
+                false
+              ],
+              "default": true
+            },
+            {
+              "parameter": "parameters.thinking_budget",
+              "values": [],
+              "default": null
+            }
+          ]
+        },
+        "openai_responses": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "enable_thinking",
+              "values": [
+                true,
+                false
+              ],
+              "default": true
+            }
+          ]
+        },
+        "anthropic_messages": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "thinking.type",
+              "values": [
+                "enabled",
+                "disabled"
+              ],
+              "default": "enabled"
+            },
+            {
+              "parameter": "thinking.budget_tokens",
+              "values": [],
+              "default": null
+            }
+          ]
+        }
+      },
+      "remaining_reasoning": "四种协议面开关与默认开启已核对；本型号 effort 档位、预算数值边界和默认值仍未完整确认，整体 partial。原生 HTTP 参数位于 parameters 内。"
+    },
+    {
+      "id": "qwen3-8-flash",
+      "request_id": "qwen3.8-flash",
+      "context": {
+        "status": "partial",
+        "reported_value": "100万 Token",
+        "historical_integer_retained": 1000000,
+        "historical_verification": {
+          "status": "verified",
+          "checked_at": "2026-09-16T15:14:47.931223+00:00",
+          "source_ids": [
+            "context-bailian-public-qwen3-8-flash"
+          ],
+          "evidence": "evidence/bailian/2026-09-16-context.md",
+          "notes": "仅核对上下文；不代表其他能力已核对。"
+        },
+        "reason": "公开文本生成页给标称窗口；本轮匿名模型接口仅返回 HTML，精确整数边界未复核。"
+      },
+      "interfaces": [
+        "openai_chat",
+        "openai_responses",
+        "anthropic_messages",
+        "bailian_text"
+      ],
+      "protocol_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "reasoning_profile_summary": {
+        "openai_chat": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "enable_thinking",
+              "values": [
+                true,
+                false
+              ],
+              "default": true
+            },
+            {
+              "parameter": "thinking_budget",
+              "values": [],
+              "default": null,
+              "documented_default": 131072,
+              "storage_note": "上下界均未确认时当前schema不能结构化保存默认数字；已知默认值保存在说明，未扩schema。"
+            },
+            {
+              "parameter": "reasoning_effort",
+              "values": [
+                "low",
+                "medium",
+                "xhigh"
+              ],
+              "default": "xhigh"
+            }
+          ]
+        },
+        "bailian_text": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "parameters.enable_thinking",
+              "values": [
+                true,
+                false
+              ],
+              "default": true
+            },
+            {
+              "parameter": "parameters.thinking_budget",
+              "values": [],
+              "default": null
+            }
+          ]
+        },
+        "openai_responses": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "reasoning.effort",
+              "values": [
+                "none",
+                "low",
+                "medium",
+                "xhigh"
+              ],
+              "default": "xhigh"
+            }
+          ]
+        },
+        "anthropic_messages": {
+          "can_disable": true,
+          "default_behavior": "enabled",
+          "controls": [
+            {
+              "parameter": "thinking.type",
+              "values": [
+                "enabled",
+                "disabled"
+              ],
+              "default": "enabled"
+            },
+            {
+              "parameter": "thinking.budget_tokens",
+              "values": [],
+              "default": null
+            },
+            {
+              "parameter": "output_config.effort",
+              "values": [
+                "low",
+                "medium",
+                "xhigh"
+              ],
+              "default": "xhigh"
+            }
+          ]
+        }
+      },
+      "remaining_reasoning": "四种协议面均有独立 profile。Qwen3.8 的有效 effort 与别名映射按协议分别记录；原生 HTTP 参数位于 parameters 内。未确认原生预算数字、完整预算边界和 Messages 预算默认值，整体 partial。"
+    }
+  ],
+  "remaining_capability_partial_unknown": {
+    "context_partial": [
+      "qwen3-8-max",
+      "qwen3-8-flash",
+      "qwen3-7-plus"
+    ],
+    "reasoning_partial": [
+      "qwen3-8-max",
+      "qwen3-8-flash",
+      "qwen3-7-plus"
+    ],
+    "other_capabilities": "本次未核对输入模态、最大输出、工具调用、结构化输出、流式的完整契约；既有 null / 空数组保留，不解释为不支持。"
+  }
+}

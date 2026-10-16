@@ -27,12 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-16T08:07:34.225826Z",
         "source_ids": [
-          "audit-pricing"
+          "current-qwen-pricing",
+          "current-qwen-context"
         ],
-        "evidence": "evidence/bailian/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/bailian/qwen-cache-current.json",
+        "notes": "当前官方价格与模型资料仍列本型号；此次独立核对价格、窗口、思考与协议，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -42,7 +43,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "中国内地北京部署、标准在线、最短输入档的非限时促销价；仅作统一估算。",
+            "selection": "中国内地北京部署、标准在线最短输入档非促销价；缓存分量选择显式缓存（5 分钟 TTL），不混入互斥的隐式缓存价格。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -55,6 +56,12 @@
                 "amount": "36",
                 "per": 1000000,
                 "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "15",
+                "per": 1000000,
+                "unit": "token"
               }
             ],
             "effective_from": null,
@@ -64,28 +71,30 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-16T08:07:34.225826Z",
               "source_ids": [
-                "audit-pricing"
+                "current-qwen-pricing",
+                "current-qwen-cache"
               ],
-              "evidence": "evidence/bailian/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/bailian/qwen-cache-current.json",
+              "notes": "仅刷新已核实的逐项标准费率；显式缓存写入 TTL 和倍率已确认，命中价例外仍明确缺项。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。 官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-16T08:07:34.225826Z",
           "source_ids": [
-            "audit-pricing"
+            "current-qwen-pricing",
+            "current-qwen-cache"
           ],
-          "evidence": "evidence/bailian/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/bailian/qwen-cache-current.json",
+          "notes": "仅刷新已核实的逐项标准费率；显式缓存写入 TTL 和倍率已确认，命中价例外仍明确缺项。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。 官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -117,17 +126,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "protocol-chat",
-              "protocol-responses",
-              "protocol-messages",
-              "protocol-native"
+              "current-qwen-chat",
+              "current-qwen-responses",
+              "current-qwen-messages",
+              "current-qwen-native"
             ],
-            "evidence": "evidence/bailian/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "当前官方支持范围与逐型号清单分别证明四个文本协议面；未实调。"
           },
-          "notes": "Responses 文档说明列表外百炼直供文本模型也有基础兼容能力，但 Agent 内置工具受限；Messages 仅按明确支持列表登记。DashScope 原生仅登记已核实的千问产品，不据第三方训练方推导。"
+          "notes": "Chat 官方支持商业千问；Responses 与 Messages 清单明确列出本型号，原生 DashScope 资料覆盖本千问型号；不继承到 Go。"
         },
         "reasoning": {
           "support": "supported",
@@ -158,7 +167,20 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "参数适用于此系列，默认取模型最大思维链长度；本型号数值范围未取得，不使用控制台示例的 1～32768 当全型号通用范围。"
+                  "notes": "与 reasoning_effort 不可同时设置；两者均省略时预算为 131072。只设 effort 时 low/medium/xhigh 分别对应 4096/16384/262144；只设预算时 0–4096 / 4097–16384 / 16385–262144 对应三档。映射区间不冒充完整验参边界。 当前 schema 不支持在边界均未知时结构化保存已知默认值，故 default 保持 null，已确认的 131072 保存在此说明中。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "xhigh",
+                  "notes": "none 映射为 enable_thinking=false；minimal→low，high/max→xhigh。不能与 thinking_budget 同时设置。"
                 }
               ],
               "notes": "仅适用于本产品、本模型及此协议面。"
@@ -171,7 +193,7 @@
               "controls": [
                 {
                   "kind": "toggle",
-                  "parameter": "enable_thinking",
+                  "parameter": "parameters.enable_thinking",
                   "values": [
                     true,
                     false
@@ -183,7 +205,7 @@
                 },
                 {
                   "kind": "budget_tokens",
-                  "parameter": "thinking_budget",
+                  "parameter": "parameters.thinking_budget",
                   "values": [],
                   "minimum": null,
                   "maximum": null,
@@ -192,32 +214,101 @@
                 }
               ],
               "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "low",
+                    "medium",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "xhigh",
+                  "notes": "none 关闭思考；minimal→low，high/max→xhigh；优先级高于旧 enable_thinking。"
+                }
+              ],
+              "notes": "仅适用于百炼 API Responses；与 Go 订阅独立。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "该型号混合思考，默认开启；disabled 可关闭。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking.budget_tokens",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "官方通用预算参数即将废弃；逐型号边界与默认值尚未公布，保持 null。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "xhigh",
+                  "notes": "high/max 映射为 xhigh；关闭思考使用 thinking.type。"
+                }
+              ],
+              "notes": "仅适用于百炼 API Messages；预算边界与默认值仍待核。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "reasoning-bailian"
+              "current-qwen-chat",
+              "current-qwen-responses",
+              "current-qwen-messages",
+              "current-qwen-reasoning"
             ],
-            "evidence": "evidence/bailian/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "分别核对四种协议面的开关、默认值、参数位置及逐型号档位；未确认预算边界保持 partial。"
           },
-          "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+          "notes": "四种协议面均有独立 profile。Qwen3.8 的有效 effort 与别名映射按协议分别记录；原生 HTTP 参数位于 parameters 内。未确认原生预算数字、完整预算边界和 Messages 预算默认值，整体 partial。"
         },
         "context_assessment": {
-          "status": "known",
-          "reported_value": "1000000",
+          "status": "partial",
+          "reported_value": "100万 Token",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:14:47.912845+00:00",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "context-bailian-public-qwen3-8-max"
+              "current-qwen-context"
             ],
-            "evidence": "evidence/bailian/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "当前官方文本生成页按型号标称 100 万 token；匿名元数据入口本轮未取得整数 JSON。"
           },
-          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.8-max 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
+          "notes": "当前文档只给标称 100 万 Token，保留既有 1000000 整数作为历史值；未重新确认精确边界，不把历史整数视为本轮机读核实。"
         }
       }
     },
@@ -372,12 +463,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-16T08:07:34.225826Z",
         "source_ids": [
-          "audit-pricing"
+          "current-qwen-pricing",
+          "current-qwen-context"
         ],
-        "evidence": "evidence/bailian/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/bailian/qwen-cache-current.json",
+        "notes": "当前官方价格与模型资料仍列本型号；此次独立核对价格、窗口、思考与协议，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -387,7 +479,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "中国内地北京部署、标准在线、最短输入档的非限时促销价；仅作统一估算。",
+            "selection": "中国内地北京部署、标准在线最短输入档非促销价；缓存分量选择显式缓存（5 分钟 TTL），不混入互斥的隐式缓存价格。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -396,8 +488,20 @@
                 "unit": "token"
               },
               {
+                "meter": "input_cached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
                 "meter": "output_tokens",
                 "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "2.5",
                 "per": 1000000,
                 "unit": "token"
               }
@@ -409,28 +513,30 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-16T08:07:34.225826Z",
               "source_ids": [
-                "audit-pricing"
+                "current-qwen-pricing",
+                "current-qwen-cache"
               ],
-              "evidence": "evidence/bailian/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/bailian/qwen-cache-current.json",
+              "notes": "仅刷新已核实的逐项标准费率；显式缓存写入 TTL 和倍率已确认，命中价例外仍明确缺项。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。 显式缓存命中取标准输入价的 10%；隐式缓存的 20% 属于另一互斥模式，不放入本组基准。 Qwen3.7 Plus 以原价计算，不把限时八折再乘入缓存基准。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-16T08:07:34.225826Z",
           "source_ids": [
-            "audit-pricing"
+            "current-qwen-pricing",
+            "current-qwen-cache"
           ],
-          "evidence": "evidence/bailian/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/bailian/qwen-cache-current.json",
+          "notes": "仅刷新已核实的逐项标准费率；显式缓存写入 TTL 和倍率已确认，命中价例外仍明确缺项。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。 显式缓存命中取标准输入价的 10%；隐式缓存的 20% 属于另一互斥模式，不放入本组基准。 Qwen3.7 Plus 以原价计算，不把限时八折再乘入缓存基准。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -462,17 +568,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "protocol-chat",
-              "protocol-responses",
-              "protocol-messages",
-              "protocol-native"
+              "current-qwen-chat",
+              "current-qwen-responses",
+              "current-qwen-messages",
+              "current-qwen-native"
             ],
-            "evidence": "evidence/bailian/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "当前官方支持范围与逐型号清单分别证明四个文本协议面；未实调。"
           },
-          "notes": "Responses 文档说明列表外百炼直供文本模型也有基础兼容能力，但 Agent 内置工具受限；Messages 仅按明确支持列表登记。DashScope 原生仅登记已核实的千问产品，不据第三方训练方推导。"
+          "notes": "Chat 官方支持商业千问；Responses 与 Messages 清单明确列出本型号，原生 DashScope 资料覆盖本千问型号；不继承到 Go。"
         },
         "reasoning": {
           "support": "supported",
@@ -516,7 +622,7 @@
               "controls": [
                 {
                   "kind": "toggle",
-                  "parameter": "enable_thinking",
+                  "parameter": "parameters.enable_thinking",
                   "values": [
                     true,
                     false
@@ -528,7 +634,7 @@
                 },
                 {
                   "kind": "budget_tokens",
-                  "parameter": "thinking_budget",
+                  "parameter": "parameters.thinking_budget",
                   "values": [],
                   "minimum": null,
                   "maximum": null,
@@ -537,32 +643,86 @@
                 }
               ],
               "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "toggle",
+                  "parameter": "enable_thinking",
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": true,
+                  "notes": "此型号已确认开关及默认开启；未在逐型号 reasoning.effort 表中列出，不继承 Qwen3.8 档位。"
+                }
+              ],
+              "notes": "仅适用于百炼 API Responses；与 Go 订阅独立。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "该型号混合思考，默认开启；disabled 可关闭。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking.budget_tokens",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "官方通用预算参数即将废弃；逐型号边界与默认值尚未公布，保持 null。"
+                }
+              ],
+              "notes": "仅适用于百炼 API Messages；预算边界仍待核，Qwen3.7 Plus 无型号专属 effort 证据。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "reasoning-bailian"
+              "current-qwen-chat",
+              "current-qwen-responses",
+              "current-qwen-messages",
+              "current-qwen-reasoning"
             ],
-            "evidence": "evidence/bailian/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "分别核对四种协议面的开关、默认值、参数位置及逐型号档位；未确认预算边界保持 partial。"
           },
-          "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+          "notes": "四种协议面开关与默认开启已核对；本型号 effort 档位、预算数值边界和默认值仍未完整确认，整体 partial。原生 HTTP 参数位于 parameters 内。"
         },
         "context_assessment": {
-          "status": "known",
-          "reported_value": "1000000",
+          "status": "partial",
+          "reported_value": "100万 Token",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:14:47.941811+00:00",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "context-bailian-public-qwen3-7-plus"
+              "current-qwen-context"
             ],
-            "evidence": "evidence/bailian/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "当前官方文本生成页按型号标称 100 万 token；匿名元数据入口本轮未取得整数 JSON。"
           },
-          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.7-plus 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
+          "notes": "当前文档只给标称 100 万 Token，保留既有 1000000 整数作为历史值；未重新确认精确边界，不把历史整数视为本轮机读核实。"
         }
       }
     },
@@ -578,12 +738,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-16T08:07:34.225826Z",
         "source_ids": [
-          "audit-pricing"
+          "current-qwen-pricing",
+          "current-qwen-context"
         ],
-        "evidence": "evidence/bailian/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/bailian/qwen-cache-current.json",
+        "notes": "当前官方价格与模型资料仍列本型号；此次独立核对价格、窗口、思考与协议，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -593,7 +754,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "中国内地北京部署、标准在线、最短输入档的非限时促销价；仅作统一估算。",
+            "selection": "中国内地北京部署、标准在线最短输入档非促销价；缓存分量选择显式缓存（5 分钟 TTL），不混入互斥的隐式缓存价格。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -606,6 +767,12 @@
                 "amount": "2.7",
                 "per": 1000000,
                 "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
               }
             ],
             "effective_from": null,
@@ -615,28 +782,30 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-16T08:07:34.225826Z",
               "source_ids": [
-                "audit-pricing"
+                "current-qwen-pricing",
+                "current-qwen-cache"
               ],
-              "evidence": "evidence/bailian/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/bailian/qwen-cache-current.json",
+              "notes": "仅刷新已核实的逐项标准费率；显式缓存写入 TTL 和倍率已确认，命中价例外仍明确缺项。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。 官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-16T08:07:34.225826Z",
           "source_ids": [
-            "audit-pricing"
+            "current-qwen-pricing",
+            "current-qwen-cache"
           ],
-          "evidence": "evidence/bailian/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/bailian/qwen-cache-current.json",
+          "notes": "仅刷新已核实的逐项标准费率；显式缓存写入 TTL 和倍率已确认，命中价例外仍明确缺项。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "显式缓存未命中且未创建、命中、创建为互斥输入 token 分量；普通输入需扣除命中与创建数量。新建缓存仅按新增部分的 125% 输入单价计费，不能重复叠加普通输入价。 官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -668,17 +837,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "protocol-chat",
-              "protocol-responses",
-              "protocol-messages",
-              "protocol-native"
+              "current-qwen-chat",
+              "current-qwen-responses",
+              "current-qwen-messages",
+              "current-qwen-native"
             ],
-            "evidence": "evidence/bailian/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "当前官方支持范围与逐型号清单分别证明四个文本协议面；未实调。"
           },
-          "notes": "Responses 文档说明列表外百炼直供文本模型也有基础兼容能力，但 Agent 内置工具受限；Messages 仅按明确支持列表登记。DashScope 原生仅登记已核实的千问产品，不据第三方训练方推导。"
+          "notes": "Chat 官方支持商业千问；Responses 与 Messages 清单明确列出本型号，原生 DashScope 资料覆盖本千问型号；不继承到 Go。"
         },
         "reasoning": {
           "support": "supported",
@@ -709,7 +878,20 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "参数适用于此系列，默认取模型最大思维链长度；本型号数值范围未取得，不使用控制台示例的 1～32768 当全型号通用范围。"
+                  "notes": "与 reasoning_effort 不可同时设置；两者均省略时预算为 131072。只设 effort 时 low/medium/xhigh 分别对应 4096/16384/262144；只设预算时 0–4096 / 4097–16384 / 16385–262144 对应三档。映射区间不冒充完整验参边界。 当前 schema 不支持在边界均未知时结构化保存已知默认值，故 default 保持 null，已确认的 131072 保存在此说明中。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "xhigh",
+                  "notes": "none 映射为 enable_thinking=false；minimal→low，high/max→xhigh。不能与 thinking_budget 同时设置。"
                 }
               ],
               "notes": "仅适用于本产品、本模型及此协议面。"
@@ -722,7 +904,7 @@
               "controls": [
                 {
                   "kind": "toggle",
-                  "parameter": "enable_thinking",
+                  "parameter": "parameters.enable_thinking",
                   "values": [
                     true,
                     false
@@ -734,7 +916,7 @@
                 },
                 {
                   "kind": "budget_tokens",
-                  "parameter": "thinking_budget",
+                  "parameter": "parameters.thinking_budget",
                   "values": [],
                   "minimum": null,
                   "maximum": null,
@@ -743,32 +925,101 @@
                 }
               ],
               "notes": "仅适用于本产品、本模型及此协议面。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "low",
+                    "medium",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "xhigh",
+                  "notes": "none 关闭思考；minimal→low，high/max→xhigh；优先级高于旧 enable_thinking。"
+                }
+              ],
+              "notes": "仅适用于百炼 API Responses；与 Go 订阅独立。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "该型号混合思考，默认开启；disabled 可关闭。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking.budget_tokens",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "官方通用预算参数即将废弃；逐型号边界与默认值尚未公布，保持 null。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "xhigh",
+                  "notes": "high/max 映射为 xhigh；关闭思考使用 thinking.type。"
+                }
+              ],
+              "notes": "仅适用于百炼 API Messages；预算边界与默认值仍待核。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "reasoning-bailian"
+              "current-qwen-chat",
+              "current-qwen-responses",
+              "current-qwen-messages",
+              "current-qwen-reasoning"
             ],
-            "evidence": "evidence/bailian/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "分别核对四种协议面的开关、默认值、参数位置及逐型号档位；未确认预算边界保持 partial。"
           },
-          "notes": "百炼深度思考页逐型号区分混合 / 仅思考与默认值。Responses / Messages 的具体控制方式以及 budget 数值仍待核对；不复制到 Coding Plan 或 Token Plan。"
+          "notes": "四种协议面均有独立 profile。Qwen3.8 的有效 effort 与别名映射按协议分别记录；原生 HTTP 参数位于 parameters 内。未确认原生预算数字、完整预算边界和 Messages 预算默认值，整体 partial。"
         },
         "context_assessment": {
-          "status": "known",
-          "reported_value": "1000000",
+          "status": "partial",
+          "reported_value": "100万 Token",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:14:47.931223+00:00",
+            "checked_at": "2026-10-16T08:07:34.225826Z",
             "source_ids": [
-              "context-bailian-public-qwen3-8-flash"
+              "current-qwen-context"
             ],
-            "evidence": "evidence/bailian/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/bailian/qwen-cache-current.json",
+            "notes": "当前官方文本生成页按型号标称 100 万 token；匿名元数据入口本轮未取得整数 JSON。"
           },
-          "notes": "百炼北京站公开模型中心匿名 API，精确匹配 model=qwen3.8-flash 的 contextWindow 整数字段；没有使用分组 min/max、maxInputTokens 或推理输入上限。"
+          "notes": "当前文档只给标称 100 万 Token，保留既有 1000000 整数作为历史值；未重新确认精确边界，不把历史整数视为本轮机读核实。"
         }
       }
     },

@@ -1,0 +1,396 @@
+{
+  "scope": "Grok Build 全部七个既有条目；文本型号独立复核，媒体只复核当前订阅范围与缺项。不更新 xAI API 产品。",
+  "checked_at": "2026-10-16T07:52:16Z",
+  "base_commit": "324676ca4737657b6bea9f891471c4d22465bfc4",
+  "sources": [
+    {
+      "id": "r1016-installer",
+      "url": "https://x.ai/cli/install.sh",
+      "checked_at": "2026-10-16T07:47:47.172552Z",
+      "sha256": "7fd6fdc75d9418b2e58356726fcbf1ae849416f773925da07d0ccc7a60d3e791",
+      "status": 200,
+      "bytes": 19501,
+      "location": "BASE_URL_PRIMARY、BASE_URL_FALLBACK 与 artifact_base 拼接（未执行安装脚本）"
+    },
+    {
+      "id": "r1016-stable",
+      "url": "https://x.ai/cli/stable",
+      "checked_at": "2026-10-16T07:47:46.941455Z",
+      "sha256": "9457a8642b4a29d2d5251a85f63d459bd26e314f2c330b1be8d5eecfbc9a4200",
+      "status": 200,
+      "bytes": 6,
+      "location": "官方 stable 版本指针"
+    },
+    {
+      "id": "r1016-settings",
+      "url": "https://docs.x.ai/build/settings/reference.md",
+      "checked_at": "2026-10-16T07:47:47.171968Z",
+      "sha256": "7103d3f948beebd747a59c85dcd91812906884122b0711fac3198ab870dc3e8d",
+      "status": 200,
+      "bytes": 20591,
+      "location": "Model defaults；Per-model entries；default_reasoning_effort、context_window、api_backend"
+    },
+    {
+      "id": "r1016-overview",
+      "url": "https://docs.x.ai/build/overview.md",
+      "checked_at": "2026-10-16T07:47:47.246841Z",
+      "sha256": "3edf9fc3a63dad3f663d48ade2f6fb597d7829087d65d0b219ba157826b69802",
+      "status": 200,
+      "bytes": 3733,
+      "location": "Grok Build；Use Grok 4.7 on the API（后者不证明订阅能力）"
+    },
+    {
+      "id": "r1016-pricing",
+      "url": "https://docs.x.ai/developers/pricing.md",
+      "checked_at": "2026-10-16T07:47:49.683431Z",
+      "sha256": "ecfd2ca8a2df521167404a51601a99f202f301968d05d5396b430c2286981bfa",
+      "status": 200,
+      "bytes": 10970,
+      "location": "Language Models；Imagine API Pricing；Grok 4.7 Fast pricing"
+    },
+    {
+      "id": "r1016-guide47",
+      "url": "https://docs.x.ai/developers/grok-4-7.md",
+      "checked_at": "2026-10-16T07:47:47.016825Z",
+      "sha256": "486ca7d029e6ef0d2fed17ac35252cecffded7d2e538f53783352d3027d4abef",
+      "status": 200,
+      "bytes": 5318,
+      "location": "Fast variant；Where it runs"
+    },
+    {
+      "id": "r1016-commands",
+      "url": "https://docs.x.ai/build/modes-and-commands.md",
+      "checked_at": "2026-10-16T07:47:47.843823Z",
+      "sha256": "afd24e361dba6d54157f034726d25593c3da6f2d3d14842da8a6b68e012df044",
+      "status": 200,
+      "bytes": 8214,
+      "location": "Command palette；/imagine、/imagine-video 与 feature available 条件"
+    },
+    {
+      "id": "r1016-model46",
+      "url": "https://docs.x.ai/developers/models/grok-4.6.md",
+      "checked_at": "2026-10-16T07:47:48.057851Z",
+      "sha256": "8979a9f555100af0709c6f9bc6cec139a56af828cdd74049d9fc43b86b9ca35a",
+      "status": 200,
+      "bytes": 936,
+      "location": "Pricing（只作对应 API 参考价）"
+    },
+    {
+      "id": "r1016-model45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5.md",
+      "checked_at": "2026-10-16T07:47:47.680403Z",
+      "sha256": "a1ea0d3456735d34bf21637dca20f414ef1bb768e733e7c4d74c32870d2e67ab",
+      "status": 200,
+      "bytes": 1099,
+      "location": "Pricing（只作对应 API 参考价）"
+    },
+    {
+      "id": "r1016-cli",
+      "url": "https://x.ai/cli/grok-1.0.60-linux-x86_64",
+      "checked_at": "2026-10-16T07:50:54.926345Z",
+      "sha256": "10e6af64b24724fc1074c373e906b9ad121110044dddcbd97ad43c3a25f96d5f",
+      "status": 200,
+      "location": "内嵌默认模型目录，仅保留模型字段"
+    }
+  ],
+  "anonymous_online_attempt": {
+    "url": "https://cli-chat-proxy.grok.com/v1/models",
+    "attempted_at": "2026-10-16T07:48:46.689736Z",
+    "status": 401,
+    "notes": "匿名公开请求；未发送鉴权头，未读取或保存响应体。"
+  },
+  "client_evidence": "evidence/xai/2026-10-16-client-models.json",
+  "client_findings": "官网 stable 为 1.0.60；内嵌默认目录仍仅有 grok-4.6、grok-4.5。精确模型、500000 窗口、Responses、high 默认与两份档位集合均和已有摘录一致。4.7/Fast 缺席静态默认不证明产品不可用，也不能覆盖已知在线目录。",
+  "models": [
+    {
+      "request_id": "grok-4.7",
+      "availability": "active",
+      "previous_availability_checked_at": "2026-09-22T05:59:06Z",
+      "context_window_tokens": 500000,
+      "interfaces": [
+        "openai_responses"
+      ],
+      "reasoning_coverage": "partial",
+      "interface_coverage": "partial",
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.5",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "6",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "conclusion": "官方仍说明 Grok 4.7 是 Build 默认，Fast 为 Build/Cursor 专供；CLI 静态目录未列本型号，匿名在线查询 401。精确请求名、窗口、协议和思考保留原在线证据及核对日期。"
+    },
+    {
+      "request_id": "grok-4.7-build-fast",
+      "availability": "active",
+      "previous_availability_checked_at": "2026-09-22T05:59:06Z",
+      "context_window_tokens": 500000,
+      "interfaces": [
+        "openai_responses"
+      ],
+      "reasoning_coverage": "partial",
+      "interface_coverage": "partial",
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "4",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "1",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "12",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "conclusion": "官方仍说明 Grok 4.7 是 Build 默认，Fast 为 Build/Cursor 专供；CLI 静态目录未列本型号，匿名在线查询 401。精确请求名、窗口、协议和思考保留原在线证据及核对日期。"
+    },
+    {
+      "request_id": "grok-4.6",
+      "availability": "active",
+      "previous_availability_checked_at": "2026-09-22T05:59:06Z",
+      "context_window_tokens": 500000,
+      "interfaces": [
+        "openai_responses"
+      ],
+      "reasoning_coverage": "partial",
+      "interface_coverage": "partial",
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.5",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "6",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "conclusion": "静态窗口、Responses 承载、思考档位和客户端默认均不变；当前订阅可用性保留原在线证据，不刷新其成功日期。"
+    },
+    {
+      "request_id": "grok-4.5",
+      "availability": "active",
+      "previous_availability_checked_at": "2026-09-22T05:59:06Z",
+      "context_window_tokens": 500000,
+      "interfaces": [
+        "openai_responses"
+      ],
+      "reasoning_coverage": "partial",
+      "interface_coverage": "partial",
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.30",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "6",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "conclusion": "静态窗口、Responses 承载、思考档位和客户端默认均不变；当前订阅可用性保留原在线证据，不刷新其成功日期。"
+    },
+    {
+      "request_id": "grok-imagine-image-2.0",
+      "availability": "unknown",
+      "previous_availability_checked_at": null,
+      "context_window_tokens": null,
+      "interfaces": [
+        "xai_image"
+      ],
+      "reasoning_coverage": "unknown",
+      "interface_coverage": "partial",
+      "media_io_status": "partial",
+      "context_status": "not_applicable",
+      "reference_rates": [
+        {
+          "meter": "generated_images",
+          "amount": "0.04",
+          "per": 1,
+          "unit": "image",
+          "quantity": {
+            "source": "provider_usage",
+            "fields": [
+              "data"
+            ],
+            "included_units": null,
+            "minimum_units": null,
+            "rounding": "none",
+            "increment": null,
+            "notes": "按返回的图片张数；编辑另对输入图计费，单价未查到，不在此基准内。"
+          }
+        }
+      ],
+      "conclusion": "当前 Build 命令文档仍只有 /imagine、/imagine-video 及功能可用条件，没有逐型号或订阅鉴权契约；保持 availability=unknown 及原能力和核对日期。公开 API 价表数值未变，媒体完整参考价与计量口径未在本轮重验，不刷新价格成功日期。"
+    },
+    {
+      "request_id": "grok-imagine-video-1.5",
+      "availability": "unknown",
+      "previous_availability_checked_at": null,
+      "context_window_tokens": null,
+      "interfaces": [
+        "xai_video"
+      ],
+      "reasoning_coverage": "unknown",
+      "interface_coverage": "partial",
+      "media_io_status": "partial",
+      "context_status": "not_applicable",
+      "reference_rates": [
+        {
+          "meter": "video_output_seconds",
+          "amount": "0.080",
+          "per": 1,
+          "unit": "second",
+          "quantity": {
+            "source": "provider_usage",
+            "fields": [
+              "video.duration"
+            ],
+            "included_units": null,
+            "minimum_units": null,
+            "rounding": "unknown",
+            "increment": null,
+            "notes": "查询结果没有按秒计量字段，秒数取 video.duration；imagine 总览称时长与分辨率都影响费用，价格表只列单一单价。"
+          }
+        }
+      ],
+      "conclusion": "当前 Build 命令文档仍只有 /imagine、/imagine-video 及功能可用条件，没有逐型号或订阅鉴权契约；保持 availability=unknown 及原能力和核对日期。公开 API 价表数值未变，媒体完整参考价与计量口径未在本轮重验，不刷新价格成功日期。"
+    },
+    {
+      "request_id": "grok-imagine-video",
+      "availability": "unknown",
+      "previous_availability_checked_at": null,
+      "context_window_tokens": null,
+      "interfaces": [
+        "xai_video"
+      ],
+      "reasoning_coverage": "unknown",
+      "interface_coverage": "partial",
+      "media_io_status": "partial",
+      "context_status": "not_applicable",
+      "reference_rates": [
+        {
+          "meter": "video_output_seconds",
+          "amount": "0.050",
+          "per": 1,
+          "unit": "second",
+          "quantity": {
+            "source": "provider_usage",
+            "fields": [
+              "video.duration"
+            ],
+            "included_units": null,
+            "minimum_units": null,
+            "rounding": "unknown",
+            "increment": null,
+            "notes": "查询结果没有按秒计量字段，秒数取 video.duration；imagine 总览称时长与分辨率都影响费用，价格表只列单一单价。"
+          }
+        }
+      ],
+      "conclusion": "当前 Build 命令文档仍只有 /imagine、/imagine-video 及功能可用条件，没有逐型号或订阅鉴权契约；保持 availability=unknown 及原能力和核对日期。公开 API 价表数值未变，媒体完整参考价与计量口径未在本轮重验，不刷新价格成功日期。"
+    }
+  ],
+  "subscription_availability": "Grok 4.7 官方指南仍称其为 Build 默认，Fast 仅限 Build/Cursor 且不含 Build 免费档。当前匿名 /v1/models 返回 401，没有取得新的订阅在线型号清单；原在线成功核对时间保持。",
+  "reference_prices": "四个文本参考价数值不变：4.7/4.6 为 2 / 0.50 / 6；4.5 为 2 / 0.30 / 6；Fast 按用户指定使用 xAI 单列的 4 / 1 / 12（USD / 百万 token）。普通型号保留原 catalog_model 完整身份。三个媒体表列价格仍为图像 0.04/张、视频1.5 0.080/秒、Classic 0.050/秒，仅作观察记录，未刷新其完整参考价与计量口径证据。",
+  "pricing_conditions": "普通型号价表明确 <200k 与 ≥200k。Fast 表分 Below / Above 200k，后文说明超过 200k 才进入长上下文；保留当前 selection，不将普通型号边界强加给 Fast。",
+  "media_limits": "/imagine、/imagine-video 按功能可用性展示，未列逐型号选择或订阅令牌可调用的 API 契约。已有三个媒体型号 availability=unknown，接口及 media_io=partial，reasoning=unknown。API 价表新增或列有 grok-imagine-video-1.5-lite 不构成 Build 可用证据，不新增到订阅目录。",
+  "partial_unknown": [
+    {
+      "models": [
+        "grok-4.7",
+        "grok-4.7-build-fast",
+        "grok-4.6",
+        "grok-4.5"
+      ],
+      "field": "capabilities.interface_assessment",
+      "status": "partial",
+      "reason": "当前在线目录未取得，其他版本和更多协议面未确认。"
+    },
+    {
+      "models": [
+        "grok-4.7",
+        "grok-4.7-build-fast",
+        "grok-4.6",
+        "grok-4.5"
+      ],
+      "field": "capabilities.reasoning",
+      "status": "partial",
+      "reason": "裸订阅请求字段、后端默认与关闭能力未知；客户端默认独立记录。"
+    },
+    {
+      "models": [
+        "grok-imagine-image-2.0",
+        "grok-imagine-video-1.5",
+        "grok-imagine-video"
+      ],
+      "field": "availability",
+      "status": "unknown",
+      "reason": "Build 命令文档未列精确媒体型号。"
+    },
+    {
+      "models": [
+        "grok-imagine-image-2.0",
+        "grok-imagine-video-1.5",
+        "grok-imagine-video"
+      ],
+      "field": "capabilities.interface_assessment / capabilities.media_io",
+      "status": "partial",
+      "reason": "现有接口资料属于公开 API；具体订阅鉴权、型号与限制未确认。"
+    },
+    {
+      "models": [
+        "grok-imagine-image-2.0",
+        "grok-imagine-video-1.5",
+        "grok-imagine-video"
+      ],
+      "field": "capabilities.reasoning",
+      "status": "unknown",
+      "reason": "没有当前订阅产品逐型号的思考控制资料。"
+    }
+  ],
+  "retained_evidence": [
+    "evidence/xai/2026-09-22-grok-build-live-catalog.md",
+    "evidence/xai/2026-09-28-imagine-media-io.md"
+  ],
+  "limitations": "没有登录、读取凭据/用户配置/会话、运行 Grok 客户端或执行安装脚本，没有发送推理或付费调用。401 不刷新成功日期，不据静态缺席或匿名鉴权失败删除型号。"
+}

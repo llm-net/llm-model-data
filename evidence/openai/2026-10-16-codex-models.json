@@ -1,0 +1,416 @@
+{
+  "scope": "OpenAI Codex 工具订阅的全部现有型号；不更新按量 API 目录或套餐。",
+  "base_commit": "324676ca4737657b6bea9f891471c4d22465bfc4",
+  "checked_at": "2026-10-16T07:47:02Z",
+  "sources": [
+    {
+      "id": "r1016-models",
+      "url": "https://learn.chatgpt.com/docs/models.md",
+      "checked_at": "2026-10-16T07:40:38.551001Z",
+      "sha256": "77779d7adf13e05df5bf7fa82088ebbaa647d16682a91cea5cd3cad043474f8e",
+      "location": "GPT-5.5 retirement；Recommended models；GPT-6.1 Sol；Other models；Deprecated Codex models"
+    },
+    {
+      "id": "r1016-pricing",
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "checked_at": "2026-10-16T07:40:38.739100Z",
+      "sha256": "e0767b5009dcc929a2f9eeb9ce6096a57ff12e5d8c011de9d69ff145aef2fc28",
+      "location": "Standard pricing data；Image tokens Standard；短上下文条件与促销脚注"
+    },
+    {
+      "id": "r1016-config",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-reference.md",
+      "checked_at": "2026-10-16T07:40:39.478690Z",
+      "sha256": "fe48af085a53345cf171cf492f3147eb2bb297b8ab28f83e67b8e9e62f715a21",
+      "location": "model_providers.<id>.wire_api；model_reasoning_effort"
+    },
+    {
+      "id": "r1016-imagegen",
+      "url": "https://learn.chatgpt.com/docs/image-generation.md",
+      "checked_at": "2026-10-16T07:40:39.841750Z",
+      "sha256": "0eedfcaca1d6cb8ed0a39b6e1b0b2dedc06e2f9b9d2bcff5c5dfffa5f6360daa",
+      "location": "Generate or edit an image"
+    },
+    {
+      "id": "r1016-speed",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/speed.md",
+      "checked_at": "2026-10-16T07:40:40.200852Z",
+      "sha256": "e965b9526b3df51923c175012e3860106e8e3a3599b49efd7d934245bd5cd85b",
+      "location": "Fast mode；Ultrafast mode"
+    },
+    {
+      "id": "r1016-codex-pricing",
+      "url": "https://learn.chatgpt.com/docs/pricing.md",
+      "checked_at": "2026-10-16T07:40:40.726897Z",
+      "sha256": "e3e0a5ac79441fac79cf1e50d31c0bdbd8d27e0f30452a8307f87ab64495bdf3",
+      "location": "套餐卡片与模型范围（仅核对可用性，不刷新套餐）"
+    },
+    {
+      "id": "r1016-cli",
+      "url": "https://registry.npmjs.org/@openai/codex/0.163.0-linux-x64",
+      "checked_at": "2026-10-16T07:43:23.070133Z",
+      "location": "官方 npm linux-x64 包中的 package/vendor/x86_64-unknown-linux-musl/bin/codex",
+      "artifact_sha256": "399ff69c431c066e40de318fba45c2b07f45a76b19939d247ee4828fc70c4215"
+    }
+  ],
+  "client_evidence": "evidence/openai/2026-10-16-client-models.json",
+  "models": [
+    {
+      "request_id": "gpt-6-astra",
+      "availability": "active",
+      "context_window_tokens": 272000,
+      "max_context_window_tokens": 872000,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "10",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "1",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "50",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_responses"
+      ],
+      "interface_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "media_io_status": null,
+      "conclusion": "请求名、窗口、思考档位、默认与参考价均无变化。"
+    },
+    {
+      "request_id": "gpt-6.1-sol",
+      "availability": "active",
+      "context_window_tokens": 272000,
+      "max_context_window_tokens": 872000,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.1",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "10",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_responses"
+      ],
+      "interface_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "media_io_status": null,
+      "conclusion": "请求名、窗口、思考档位、默认与参考价均无变化。"
+    },
+    {
+      "request_id": "gpt-6-sol",
+      "availability": "active",
+      "context_window_tokens": 272000,
+      "max_context_window_tokens": 872000,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "10",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_responses"
+      ],
+      "interface_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "media_io_status": null,
+      "conclusion": "请求名、窗口、思考档位、默认与参考价均无变化。"
+    },
+    {
+      "request_id": "gpt-6-luna",
+      "availability": "active",
+      "context_window_tokens": 272000,
+      "max_context_window_tokens": 872000,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "0.1",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.01",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "0.5",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_responses"
+      ],
+      "interface_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "media_io_status": null,
+      "conclusion": "请求名、窗口、思考档位、默认与参考价均无变化。"
+    },
+    {
+      "request_id": "gpt-5.6-sol",
+      "availability": "active",
+      "context_window_tokens": 272000,
+      "max_context_window_tokens": 872000,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "4",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.4",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "20",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_responses"
+      ],
+      "interface_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "media_io_status": null,
+      "conclusion": "请求名、窗口、思考档位、默认与参考价均无变化。"
+    },
+    {
+      "request_id": "gpt-5.6-terra",
+      "availability": "active",
+      "context_window_tokens": 272000,
+      "max_context_window_tokens": 872000,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "12",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_responses"
+      ],
+      "interface_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "media_io_status": null,
+      "conclusion": "请求名、窗口、思考档位、默认与参考价均无变化。"
+    },
+    {
+      "request_id": "gpt-5.6-luna",
+      "availability": "active",
+      "context_window_tokens": 272000,
+      "max_context_window_tokens": 872000,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "0.2",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.02",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "1.2",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_responses"
+      ],
+      "interface_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "media_io_status": null,
+      "conclusion": "请求名、窗口、思考档位、默认与参考价均无变化。"
+    },
+    {
+      "request_id": "gpt-5.5",
+      "availability": "retired",
+      "context_window_tokens": 272000,
+      "max_context_window_tokens": 272000,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "5",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "0.5",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "output_tokens",
+          "amount": "30",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_responses"
+      ],
+      "interface_coverage": "complete",
+      "reasoning_coverage": "partial",
+      "media_io_status": null,
+      "conclusion": "订阅退役；客户端仍保留静态条目不构成可用性证据。"
+    },
+    {
+      "request_id": "gpt-image-2",
+      "availability": "active",
+      "context_window_tokens": null,
+      "max_context_window_tokens": null,
+      "reference_rates": [
+        {
+          "meter": "input_uncached_tokens",
+          "amount": "5",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "input_cached_tokens",
+          "amount": "1.25",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "image_input_tokens",
+          "amount": "8",
+          "per": 1000000,
+          "unit": "token"
+        },
+        {
+          "meter": "image_output_tokens",
+          "amount": "30",
+          "per": 1000000,
+          "unit": "token"
+        }
+      ],
+      "interfaces": [
+        "openai_image",
+        "openai_responses"
+      ],
+      "interface_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "media_io_status": "partial",
+      "conclusion": "官方仍指定图像请求名，接口细节缺口维持明确标注。"
+    }
+  ],
+  "availability": {
+    "gpt_5_5_retired_at": "2026-10-14T19:00:00Z",
+    "replacement_paid": "gpt-6.1-sol",
+    "replacement_free_go_desktop": "gpt-6-luna",
+    "notes": "以官方生效公告确定 retired；CLI 的 visibility=list 与 upgrade_to=gpt-6-sol 仅为静态客户端条目，不能覆盖订阅公告。其余文本型号仍在 Models 页公开列出；GPT-6.1 Sol 的 Enterprise / Edu 准入默认关闭、Free / Go 不在推出范围。"
+  },
+  "protocols": "文本仍仅登记 openai_responses；配置文档只接受 responses，Models 页明确不支持 wire_api=chat，未见本订阅 Messages 面。图像保留既有 openai_image / openai_responses 证据，不把通用文档当作已重新核实端点行为。",
+  "reasoning": "官方 CLI 0.163.0 与仓内 0.162.1 的 8 个可见文本型号摘录字段完全一致；单次请求只登记 low / medium / high / xhigh / max（GPT-5.5 仅至 xhigh）。Ultra 是含自动委派的客户端模式。",
+  "image_io": "图像生成页确认文生图、参考图编辑与 gpt-image-2 身份，没有公布本产品端点字段与整数边界。接口、media_io 与无文本对话窗口结论保留现有独立证据及其核对时间，本次不把再次打开产品介绍当作这些细节全部重新核验。",
+  "partial_unknown": [
+    {
+      "models": [
+        "gpt-6-astra",
+        "gpt-6.1-sol",
+        "gpt-6-sol",
+        "gpt-6-luna",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna",
+        "gpt-5.5"
+      ],
+      "field": "capabilities.reasoning",
+      "status": "partial",
+      "reason": "裸订阅请求缺省与能否关闭未确认；客户端默认独立已知。"
+    },
+    {
+      "models": [
+        "gpt-image-2"
+      ],
+      "field": "capabilities.interface_assessment",
+      "status": "partial",
+      "reason": "公开介绍未补足端点支持范围；Responses 工具路径只保留现有消费者验证证据。"
+    },
+    {
+      "models": [
+        "gpt-image-2"
+      ],
+      "field": "capabilities.reasoning",
+      "status": "unknown",
+      "reason": "未提供本图像型号的思考控制资料。"
+    },
+    {
+      "models": [
+        "gpt-image-2"
+      ],
+      "field": "capabilities.media_io",
+      "status": "partial",
+      "reason": "Images 端点其他字段值、单次张数、参考图端点上限、提示词长度及 Responses 参考图格式/上限未核实；2.5 子型号选择未证实。"
+    }
+  ],
+  "price_notes": "所有现有数值经 Decimal 比较一致。Standard 短上下文通用脚注为 ≤272K 输入，GPT-5.5 行另写 <272K；保留各自条件。cache writes 与图像缓存未记录分量仍不视为零。GPT-5.6 Sol 标价促销至少至 2026-11-21。",
+  "excluded": "保留 gpt-5.3-codex-spark 排除；不收录 visibility=hide 条目；API 图像价表中的 2.5 子型号不能证明 Codex 可独立选择。",
+  "limitations": "没有读取凭据、私人账号、配置、会话或发出推理调用；没有刷新套餐价格/额度。公开型号集合不替代账号运行时目录。"
+}

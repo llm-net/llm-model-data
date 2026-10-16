@@ -247,12 +247,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-16T07:57:03.198617Z",
         "source_ids": [
-          "audit-pricing"
+          "current-m2-7-context",
+          "current-m2-7-pricing"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/m2-7-cache-current.json",
+        "notes": "官方国内模型与价格表明确列出 MiniMax-M2.7；未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -262,7 +263,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "标准在线、输入不超过512K；M3使用官方永久降价后的价格。缓存写入TTL未核清不填。",
+            "selection": "MiniMax-M2.7 国内标准在线按量价；显式主动缓存 TTL 为 5 分钟。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -281,6 +282,12 @@
                 "amount": "8.4",
                 "per": 1000000,
                 "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "2.625",
+                "per": 1000000,
+                "unit": "token"
               }
             ],
             "effective_from": null,
@@ -290,28 +297,30 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-16T07:57:03.198617Z",
               "source_ids": [
-                "audit-pricing"
+                "current-m2-7-pricing",
+                "current-m2-7-explicit-cache"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/m2-7-cache-current.json",
+              "notes": "逐项核对 M2.7 四项费率、显式缓存 5 分钟 TTL 和互斥用量字段。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "主动缓存的未缓存输入、缓存读取、缓存写入为互斥 token 分量；input_tokens 不包含 cache_read_input_tokens 或 cache_creation_input_tokens，不能重复收费。自动缓存写入无独立附加收费；仅显式主动缓存写入适用本写入分量。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-16T07:57:03.198617Z",
           "source_ids": [
-            "audit-pricing"
+            "current-m2-7-pricing",
+            "current-m2-7-explicit-cache"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/m2-7-cache-current.json",
+          "notes": "逐项核对 M2.7 四项费率、显式缓存 5 分钟 TTL 和互斥用量字段。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "主动缓存的未缓存输入、缓存读取、缓存写入为互斥 token 分量；input_tokens 不包含 cache_read_input_tokens 或 cache_creation_input_tokens，不能重复收费。自动缓存写入无独立附加收费；仅显式主动缓存写入适用本写入分量。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -325,7 +334,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方国内模型与价格表列出 MiniMax-M2.7；显式缓存写入与其他输入分量分别计价，未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 204800,
@@ -343,17 +352,18 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-16T07:57:03.198617Z",
             "source_ids": [
-              "protocol-chat",
-              "protocol-responses",
-              "protocol-messages",
-              "protocol-native"
+              "current-m2-7-chat",
+              "current-m2-7-responses",
+              "current-m2-7-messages",
+              "current-m2-7-native",
+              "current-m2-7-native-html"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/m2-7-cache-current.json",
+            "notes": "分别核对三种标准文本协议面与原生文本协议面。"
           },
-          "notes": "M3 / M2.7 系列三种兼容文本面；原生 text/chatcompletion_v2 仍有型号文档，但已标 deprecated。Responses 的 M2.x 思考不可关闭，与 M3 不同。"
+          "notes": "Chat / Messages 文档列出 MiniMax-M2.7，Responses 文档说明 M2.x 行为。原生 text/chatcompletion_v2 仍有 MiniMax-M2.7 型号文档，但 HTML 页在标题下明确标 deprecated；Markdown 导出缺少该顶层标记，不能用其缺席否定端点弃用状态。"
         },
         "reasoning": {
           "support": "supported",
@@ -386,28 +396,30 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-16T07:57:03.198617Z",
             "source_ids": [
-              "reasoning-minimax",
-              "reasoning-minimax-chat",
-              "reasoning-minimax-messages"
+              "current-m2-7-chat",
+              "current-m2-7-messages",
+              "current-m2-7-responses"
             ],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/minimax/m2-7-cache-current.json",
+            "notes": "M2.x 在三种标准文本协议面均始终思考；关闭参数被接收但不生效，无型号适用的有效 effort 档位。"
           },
-          "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+          "notes": "M2.7 在 Chat / Messages / Responses 的思考无法关闭；已标 deprecated 的原生文本面，其思考控制、默认值与预算尚未核清，整体 partial。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "204,800",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:02:46.702222+00:00",
+            "checked_at": "2026-10-16T07:57:03.198617Z",
             "source_ids": [
-              "context-minimax-text"
+              "current-m2-7-context",
+              "current-m2-7-chat",
+              "current-m2-7-messages"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/m2-7-cache-current.json",
+            "notes": "本产品三处官方资料均列出 204,800 token 上下文窗口。"
           },
           "notes": "MiniMax 国内 API 文本生成指南逐型号给出的整数窗口。"
         }

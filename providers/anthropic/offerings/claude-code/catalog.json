@@ -154,12 +154,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-10T08:12:00Z",
+        "checked_at": "2026-10-16T07:40:57Z",
         "source_ids": [
-          "r1010-code-models"
+          "current-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/claude-code-current.json",
+        "notes": "逐型号复核 Claude Code 官方配置页的选择入口与当前型号表；未使用账号实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -225,12 +225,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-10T08:12:00Z",
+              "checked_at": "2026-10-16T07:40:57Z",
               "source_ids": [
-                "r1010-pricing"
+                "current-code-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/claude-code-current.json",
+              "notes": "逐型号复查同平台完整官方按量价表，保留标准价与 5 分钟缓存写入基准。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -239,12 +239,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-10T08:12:00Z",
+          "checked_at": "2026-10-16T07:40:57Z",
           "source_ids": [
-            "r1010-pricing"
+            "current-code-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/claude-code-current.json",
+          "notes": "逐型号复查同平台完整官方按量价表，参考价数字保持一致。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。"
       },
@@ -263,12 +263,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-protocol"
+              "current-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "复核 Claude Code 的 Anthropic Messages 承载；没有将第三方云或按量 API 的其他协议面并入订阅。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -303,28 +303,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查型号 effort 表与思考开关；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code effort 表、缺省行为与 Extended thinking；其他入口和组织设置未完全展开，保留 partial。"
           },
-          "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
+          "notes": "已核对 Claude Code 本型号 effort 档位、缺省和思考开关。Fable 5.1 / 5 不可关闭思考；Opus 5 / Sonnet 5 可关闭。持久化与会话入口限制不同，其他入口和组织策略未完全展开。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code 的 1 million token context window 与客户端限制条件。"
           },
-          "notes": "Claude Code Extended context：直连 Anthropic API 时 Fable 5.1 / 5、Sonnet 5、Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
+          "notes": "Claude Code 直连 Anthropic 的本型号默认窗口为 1,000,000 tokens，无需 [1m] 后缀；本条不登记第三方云或自定义网关。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 将客户端有效窗口限制为 200,000 tokens：开启自动压缩时在该边界压缩，关闭自动压缩时在该边界报上下文上限错误。约 967K 的缺省压缩阈值不等于模型窗口。"
         }
       }
     },
@@ -340,12 +340,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-10T08:12:00Z",
+        "checked_at": "2026-10-16T07:40:57Z",
         "source_ids": [
-          "r1010-code-models"
+          "current-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/claude-code-current.json",
+        "notes": "逐型号复核 Claude Code 官方配置页的选择入口与当前型号表；未使用账号实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -411,12 +411,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-10T08:12:00Z",
+              "checked_at": "2026-10-16T07:40:57Z",
               "source_ids": [
-                "r1010-pricing"
+                "current-code-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/claude-code-current.json",
+              "notes": "逐型号复查同平台完整官方按量价表，保留标准价与 5 分钟缓存写入基准。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -425,12 +425,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-10T08:12:00Z",
+          "checked_at": "2026-10-16T07:40:57Z",
           "source_ids": [
-            "r1010-pricing"
+            "current-code-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/claude-code-current.json",
+          "notes": "逐型号复查同平台完整官方按量价表，参考价数字保持一致。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -449,12 +449,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-protocol"
+              "current-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "复核 Claude Code 的 Anthropic Messages 承载；没有将第三方云或按量 API 的其他协议面并入订阅。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -489,28 +489,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查型号 effort 表与思考开关；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code effort 表、缺省行为与 Extended thinking；其他入口和组织设置未完全展开，保留 partial。"
           },
-          "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
+          "notes": "已核对 Claude Code 本型号 effort 档位、缺省和思考开关。Fable 5.1 / 5 不可关闭思考；Opus 5 / Sonnet 5 可关闭。持久化与会话入口限制不同，其他入口和组织策略未完全展开。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code 的 1 million token context window 与客户端限制条件。"
           },
-          "notes": "Claude Code Extended context：直连 Anthropic API 时 Fable 5.1 / 5、Sonnet 5、Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
+          "notes": "Claude Code 直连 Anthropic 的本型号默认窗口为 1,000,000 tokens，无需 [1m] 后缀；本条不登记第三方云或自定义网关。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 将客户端有效窗口限制为 200,000 tokens：开启自动压缩时在该边界压缩，关闭自动压缩时在该边界报上下文上限错误。约 967K 的缺省压缩阈值不等于模型窗口。"
         }
       }
     },
@@ -526,12 +526,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-10T08:12:00Z",
+        "checked_at": "2026-10-16T07:40:57Z",
         "source_ids": [
-          "r1010-code-models"
+          "current-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/claude-code-current.json",
+        "notes": "逐型号复核 Claude Code 官方配置页的选择入口与当前型号表；未使用账号实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -597,12 +597,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-10T08:12:00Z",
+              "checked_at": "2026-10-16T07:40:57Z",
               "source_ids": [
-                "r1010-pricing"
+                "current-code-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/claude-code-current.json",
+              "notes": "逐型号复查同平台完整官方按量价表，保留标准价与 5 分钟缓存写入基准。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -611,12 +611,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-10T08:12:00Z",
+          "checked_at": "2026-10-16T07:40:57Z",
           "source_ids": [
-            "r1010-pricing"
+            "current-code-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/claude-code-current.json",
+          "notes": "逐型号复查同平台完整官方按量价表，参考价数字保持一致。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。"
       },
@@ -635,13 +635,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-protocol",
-              "r1010-code-models"
+              "current-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "复核 Claude Code 的 Anthropic Messages 承载；没有将第三方云或按量 API 的其他协议面并入订阅。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -676,12 +675,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code effort 表、缺省行为与 Extended thinking；其他入口和组织设置未完全展开，保留 partial。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Opus 5.5 与 Fable 一样无法关闭思考；组织 effort 上限与其他入口未展开。"
         },
@@ -690,14 +689,14 @@
           "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code 的 1 million token context window 与客户端限制条件。"
           },
-          "notes": "Claude Code Extended context：直连 Anthropic API 时 Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
+          "notes": "Claude Code 直连 Anthropic 的本型号默认窗口为 1,000,000 tokens，无需 [1m] 后缀；本条不登记第三方云或自定义网关。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 将客户端有效窗口限制为 200,000 tokens：开启自动压缩时在该边界压缩，关闭自动压缩时在该边界报上下文上限错误。约 967K 的缺省压缩阈值不等于模型窗口。"
         }
       }
     },
@@ -713,12 +712,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-10T08:12:00Z",
+        "checked_at": "2026-10-16T07:40:57Z",
         "source_ids": [
-          "r1010-code-models"
+          "current-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/claude-code-current.json",
+        "notes": "逐型号复核 Claude Code 官方配置页的选择入口与当前型号表；未使用账号实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -778,12 +777,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-10T08:12:00Z",
+              "checked_at": "2026-10-16T07:40:57Z",
               "source_ids": [
-                "r1010-pricing"
+                "current-code-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/claude-code-current.json",
+              "notes": "逐型号复查同平台完整官方按量价表，保留标准价与 5 分钟缓存写入基准。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -792,16 +791,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-10T08:12:00Z",
+          "checked_at": "2026-10-16T07:40:57Z",
           "source_ids": [
-            "r1010-pricing"
+            "current-code-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/claude-code-current.json",
+          "notes": "逐型号复查同平台完整官方按量价表，参考价数字保持一致。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。",
+      "notes": "Claude Code 官方配置确认按完整 ID 选择，本型号仍是 Fable 5.1、Fable 5 与 Opus 5.5 生物类拒答的回退目标。套餐资格和组织模型限制独立核对。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -816,12 +815,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-protocol"
+              "current-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "复核 Claude Code 的 Anthropic Messages 承载；没有将第三方云或按量 API 的其他协议面并入订阅。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -868,28 +867,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查型号 effort 表与思考开关；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code effort 表、缺省行为与 Extended thinking；其他入口和组织设置未完全展开，保留 partial。"
           },
-          "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
+          "notes": "已核对 Claude Code 本型号 effort 档位、缺省和思考开关。Fable 5.1 / 5 不可关闭思考；Opus 5 / Sonnet 5 可关闭。持久化与会话入口限制不同，其他入口和组织策略未完全展开。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code 的 1 million token context window 与客户端限制条件。"
           },
-          "notes": "Claude Code Extended context：直连 Anthropic API 时 Fable 5.1 / 5、Sonnet 5、Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
+          "notes": "Claude Code 直连 Anthropic 的本型号默认窗口为 1,000,000 tokens，无需 [1m] 后缀；本条不登记第三方云或自定义网关。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 将客户端有效窗口限制为 200,000 tokens：开启自动压缩时在该边界压缩，关闭自动压缩时在该边界报上下文上限错误。约 967K 的缺省压缩阈值不等于模型窗口。"
         }
       }
     },
@@ -905,12 +904,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-10T08:12:00Z",
+        "checked_at": "2026-10-16T07:40:57Z",
         "source_ids": [
-          "r1010-code-models"
+          "current-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/claude-code-current.json",
+        "notes": "逐型号复核 Claude Code 官方配置页的选择入口与当前型号表；未使用账号实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -970,13 +969,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-10T08:12:00Z",
+              "checked_at": "2026-10-16T07:40:57Z",
               "source_ids": [
-                "r1010-pricing",
-                "r1010-sonnet-5-5"
+                "current-code-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/claude-code-current.json",
+              "notes": "逐型号复查同平台完整官方按量价表，保留标准价与 5 分钟缓存写入基准。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -985,13 +983,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-10T08:12:00Z",
+          "checked_at": "2026-10-16T07:40:57Z",
           "source_ids": [
-            "r1010-pricing",
-            "r1010-sonnet-5-5"
+            "current-code-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/claude-code-current.json",
+          "notes": "逐型号复查同平台完整官方按量价表，参考价数字保持一致。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。"
       },
@@ -1010,13 +1007,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-protocol",
-              "r1010-code-models"
+              "current-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "复核 Claude Code 的 Anthropic Messages 承载；没有将第三方云或按量 API 的其他协议面并入订阅。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -1051,12 +1047,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code effort 表、缺省行为与 Extended thinking；其他入口和组织设置未完全展开，保留 partial。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Claude Sonnet 5.5 无法在 Claude Code 关闭思考；组织 effort 上限与其他入口未展开。"
         },
@@ -1065,14 +1061,14 @@
           "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code 的 1 million token context window 与客户端限制条件。"
           },
-          "notes": "Claude Code Extended context：直连 Anthropic API 时 Sonnet 5 及以后、Haiku 5.5 默认以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
+          "notes": "Claude Code 直连 Anthropic 的本型号默认窗口为 1,000,000 tokens，无需 [1m] 后缀；本条不登记第三方云或自定义网关。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 将客户端有效窗口限制为 200,000 tokens：开启自动压缩时在该边界压缩，关闭自动压缩时在该边界报上下文上限错误。约 967K 的缺省压缩阈值不等于模型窗口。"
         }
       }
     },
@@ -1088,12 +1084,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-10T08:12:00Z",
+        "checked_at": "2026-10-16T07:40:57Z",
         "source_ids": [
-          "r1010-code-models"
+          "current-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/claude-code-current.json",
+        "notes": "逐型号复核 Claude Code 官方配置页的选择入口与当前型号表；未使用账号实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1153,12 +1149,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-10T08:12:00Z",
+              "checked_at": "2026-10-16T07:40:57Z",
               "source_ids": [
-                "r1010-pricing"
+                "current-code-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/claude-code-current.json",
+              "notes": "逐型号复查同平台完整官方按量价表，保留标准价与 5 分钟缓存写入基准。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -1167,16 +1163,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-10T08:12:00Z",
+          "checked_at": "2026-10-16T07:40:57Z",
           "source_ids": [
-            "r1010-pricing"
+            "current-code-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/claude-code-current.json",
+          "notes": "逐型号复查同平台完整官方按量价表，参考价数字保持一致。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。 Anthropic API 上 sonnet 别名自 v2.1.284 起解析到 Sonnet 5.5；本型号按完整 ID 选择，并是 Sonnet 5.5 网络安全类拒答的回退目标。",
+      "notes": "Claude Code 官方配置确认按完整 ID 选择；sonnet 别名在 Anthropic 直连订阅中解析到 Sonnet 5.5，本型号仍是 Sonnet 5.5 网络安全类拒答的回退目标。套餐资格和组织模型限制独立核对。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -1191,12 +1187,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-protocol"
+              "current-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "复核 Claude Code 的 Anthropic Messages 承载；没有将第三方云或按量 API 的其他协议面并入订阅。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -1235,7 +1231,7 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "思考关闭时 Opus 5 的高于 high 档会被客户端调整；组织策略、环境变量可覆盖用户设置。"
+                  "notes": "Claude Code 的思考全局设置；会话开关与环境变量可能覆盖，参数缺省未单列。"
                 }
               ],
               "notes": "仅适用于本产品、本模型及此协议面。"
@@ -1243,28 +1239,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查型号 effort 表与思考开关；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code effort 表、缺省行为与 Extended thinking；其他入口和组织设置未完全展开，保留 partial。"
           },
-          "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Fable 无法关闭思考；Opus / Sonnet 可以。持久化与会话设置限制不同，未展开全部入口和组织策略。"
+          "notes": "已核对 Claude Code 本型号 effort 档位、缺省和思考开关。Fable 5.1 / 5 不可关闭思考；Opus 5 / Sonnet 5 可关闭。持久化与会话入口限制不同，其他入口和组织策略未完全展开。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code 的 1 million token context window 与客户端限制条件。"
           },
-          "notes": "Claude Code Extended context：直连 Anthropic API 时 Fable 5.1 / 5、Sonnet 5、Opus 4.7 及以后在所有套餐（含 Pro）以 1M 运行，无需 [1m] 变体。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
+          "notes": "Claude Code 直连 Anthropic 的本型号默认窗口为 1,000,000 tokens，无需 [1m] 后缀；本条不登记第三方云或自定义网关。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 将客户端有效窗口限制为 200,000 tokens：开启自动压缩时在该边界压缩，关闭自动压缩时在该边界报上下文上限错误。约 967K 的缺省压缩阈值不等于模型窗口。"
         }
       }
     },
@@ -1280,12 +1276,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-10T08:12:00Z",
+        "checked_at": "2026-10-16T07:40:57Z",
         "source_ids": [
-          "r1010-code-models"
+          "current-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-        "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/claude-code-current.json",
+        "notes": "逐型号复核 Claude Code 官方配置页的选择入口与当前型号表；未使用账号实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1345,13 +1341,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-10T08:12:00Z",
+              "checked_at": "2026-10-16T07:40:57Z",
               "source_ids": [
-                "r1010-pricing",
-                "r1010-haiku-5-5"
+                "current-code-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-              "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/claude-code-current.json",
+              "notes": "逐型号复查同平台完整官方按量价表，保留标准价与 5 分钟缓存写入基准。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -1360,13 +1355,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-10T08:12:00Z",
+          "checked_at": "2026-10-16T07:40:57Z",
           "source_ids": [
-            "r1010-pricing",
-            "r1010-haiku-5-5"
+            "current-code-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-          "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/claude-code-current.json",
+          "notes": "逐型号复查同平台完整官方按量价表，参考价数字保持一致。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。"
       },
@@ -1385,13 +1379,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-protocol",
-              "r1010-code-models"
+              "current-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "复核 Claude Code 的 Anthropic Messages 承载；没有将第三方云或按量 API 的其他协议面并入订阅。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -1426,12 +1419,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code effort 表、缺省行为与 Extended thinking；其他入口和组织设置未完全展开，保留 partial。"
           },
           "notes": "按 Claude Code 的型号支持表、effort 解析顺序与 Extended thinking 核对。Claude Haiku 5.5 无法在 Claude Code 关闭思考；组织 effort 上限与其他入口未展开。"
         },
@@ -1440,14 +1433,14 @@
           "reported_value": "1 million token context window",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-models"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "本次核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code 的 1 million token context window 与客户端限制条件。"
           },
-          "notes": "Claude Code Extended context：直连 Anthropic API 时 Sonnet 5 及以后、Haiku 5.5 默认以 1M 运行，无需 [1m] 变体。Haiku 5.5 在所有套餐以 1M 运行，提示超过 100K tokens 时按更高单价计。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 会在 200K 边界压缩，不代表模型窗口变成压缩阈值；不含第三方云或自定义网关。"
+          "notes": "Claude Code 直连 Anthropic 的本型号默认窗口为 1,000,000 tokens，无需 [1m] 后缀；本条不登记第三方云或自定义网关。CLAUDE_CODE_DISABLE_1M_CONTEXT=1 将客户端有效窗口限制为 200,000 tokens：开启自动压缩时在该边界压缩，关闭自动压缩时在该边界报上下文上限错误。约 967K 的缺省压缩阈值不等于模型窗口。 Haiku 5.5 在所有套餐支持该窗口；提示超过 100,000 tokens 时同平台按量参考单价提高。"
         }
       }
     },
@@ -1463,12 +1456,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-10T08:12:00Z",
+        "checked_at": "2026-10-16T07:40:57Z",
         "source_ids": [
-          "r1010-code-models"
+          "current-code-models"
         ],
-        "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-        "notes": "2026-09-23 官方 Claude Code 模型配置仍列出本型号；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/claude-code-current.json",
+        "notes": "逐型号复核 Claude Code 官方配置页的选择入口与当前型号表；未使用账号实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1528,12 +1521,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-10T08:12:00Z",
+              "checked_at": "2026-10-16T07:40:57Z",
               "source_ids": [
-                "r1010-pricing"
+                "current-code-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-              "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/claude-code-current.json",
+              "notes": "逐型号复查同平台完整官方按量价表，保留标准价与 5 分钟缓存写入基准。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -1542,16 +1535,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-10T08:12:00Z",
+          "checked_at": "2026-10-16T07:40:57Z",
           "source_ids": [
-            "r1010-pricing"
+            "current-code-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-          "notes": "2026-09-23 复查同平台官方价格表，本条数字无变化；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/claude-code-current.json",
+          "notes": "逐型号复查同平台完整官方按量价表，参考价数字保持一致。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方Claude Code模型配置确认；Fable可能需要额外usage credits，套餐资格不作推断。 Anthropic API 上 haiku 别名自 v2.1.293 起解析到 Haiku 5.5；本型号按完整 ID 选择，Claude Platform on AWS、Bedrock、Agent Platform 与 Foundry 的 haiku 别名仍指向它。",
+      "notes": "Claude Code 官方配置仍以 claude-haiku-4-5 示例登记完整 ID 选择；haiku 别名在 Anthropic 直连订阅中解析到 Haiku 5.5。套餐资格和组织模型限制独立核对。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1566,12 +1559,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-10T08:12:00Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "r1010-code-protocol"
+              "current-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-10-claude-code-sonnet-haiku-5-5.md",
-            "notes": "2026-09-23 复查 Claude Code API formats；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "复核 Claude Code 的 Anthropic Messages 承载；没有将第三方云或按量 API 的其他协议面并入订阅。"
           },
           "notes": "Claude Code 的 Anthropic Messages 订阅承载；OAuth / beta 头及订阅限制与按量 Key 不同。按量 API 的 Chat 兼容层不能自动用于此订阅。"
         },
@@ -1598,19 +1591,19 @@
                   "notes": "仅保存已核对的官方值；不与其他模型换算。"
                 }
               ],
-              "notes": "当前 Claude Code 扩展思考开关；Haiku 不在 effort 支持表里，不能填低中高档位。"
+              "notes": "Claude Code 扩展思考可通过 alwaysThinkingEnabled 开关；Haiku 4.5 不在 effort 支持表，不能套用 Haiku 5.5 的档位。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-16T07:40:57Z",
             "source_ids": [
-              "reasoning-claude-code"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "逐型号复核 Claude Code effort 表、缺省行为与 Extended thinking；其他入口和组织设置未完全展开，保留 partial。"
           },
-          "notes": "Haiku 可用扩展思考开关，但默认值和此客户端的固定预算范围未核实。日期版仅沿用官方 Haiku 4.5 产品身份，不借价格近似推导参数。"
+          "notes": "Claude Code 官方配置确认思考开关；Haiku 4.5 的默认行为及此客户端的固定预算范围仍未明确。"
         },
         "context_assessment": {
           "status": "unknown",
@@ -1619,12 +1612,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "context-claude-code"
+              "current-code-models"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/anthropic/claude-code-current.json",
+            "notes": "已检查 Claude Code 的上下文与型号配置小节；没有本产品下 Haiku 4.5 精确窗口的独立证据。"
           },
-          "notes": "本次 Claude Code 型号配置页未明确这两个精确订阅型号的上下文窗口；API 的 200K 不能自动作为订阅限制。"
+          "notes": "Claude Code 型号配置页未明确 Haiku 4.5 订阅窗口；不从同名 API 的 200K 或压缩阈值推导。"
         }
       }
     }

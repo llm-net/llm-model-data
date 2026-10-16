@@ -350,6 +350,66 @@
       "url": "https://docs.x.ai/build/settings/zdr-video-storage",
       "purpose": "subscription",
       "notes": "Grok Build 视频工具的 ZDR 存储：为每次生成预签上传地址并传给 API。"
+    },
+    {
+      "id": "r1016-installer",
+      "url": "https://x.ai/cli/install.sh",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-stable",
+      "url": "https://x.ai/cli/stable",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-settings",
+      "url": "https://docs.x.ai/build/settings/reference.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-overview",
+      "url": "https://docs.x.ai/build/overview.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-pricing",
+      "url": "https://docs.x.ai/developers/pricing.md",
+      "purpose": "pricing",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-guide47",
+      "url": "https://docs.x.ai/developers/grok-4-7.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-commands",
+      "url": "https://docs.x.ai/build/modes-and-commands.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-model46",
+      "url": "https://docs.x.ai/developers/models/grok-4.6.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-model45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-cli",
+      "url": "https://x.ai/cli/grok-1.0.60-linux-x86_64",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

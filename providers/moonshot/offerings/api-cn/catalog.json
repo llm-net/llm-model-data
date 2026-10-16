@@ -27,13 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-16T07:43:08.173408Z",
         "source_ids": [
-          "audit-models-md",
-          "audit-pricing-md"
+          "refresh-kimi-pricing",
+          "refresh-k3-guide"
         ],
-        "evidence": "evidence/moonshot/2026-09-16-audit.md",
-        "notes": "核对公开官方资料；未用真实 Key 实调。"
+        "evidence": "evidence/moonshot/2026-10-16-coding-models.json",
+        "notes": "官方当前价格表与精确型号指南确认本型号；未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -62,6 +62,18 @@
                 "amount": "100",
                 "per": 1000000,
                 "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_1h_tokens",
+                "amount": "40",
+                "per": 1000000,
+                "unit": "token"
               }
             ],
             "effective_from": null,
@@ -71,26 +83,28 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-16T07:43:08.173408Z",
               "source_ids": [
-                "audit-pricing-md"
+                "refresh-kimi-pricing",
+                "refresh-kimi-cache"
               ],
-              "evidence": "evidence/moonshot/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/moonshot/2026-10-16-coding-models.json",
+              "notes": "核对 K3 完整按量费率及互斥缓存 token 口径。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "K3 缓存读取、缓存写入和未缓存输入为互斥 token 分量；总输入须扣除读取与写入后计算未缓存输入，不能重复收费。5m 为缺省 TTL；1h 写入使用独立分量。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-16T07:43:08.173408Z",
           "source_ids": [
-            "audit-pricing-md"
+            "refresh-kimi-pricing",
+            "refresh-kimi-cache"
           ],
-          "evidence": "evidence/moonshot/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/moonshot/2026-10-16-coding-models.json",
+          "notes": "核对 K3 完整按量费率及互斥缓存 token 口径。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -127,16 +141,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-16T07:43:08.173408Z",
             "source_ids": [
-              "protocol-chat",
-              "protocol-responses",
-              "protocol-messages"
+              "refresh-k3-guide",
+              "refresh-kimi-cache"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/moonshot/2026-10-16-coding-models.json",
+            "notes": "精确 K3 示例分别展示 Chat、Responses 与 Messages。"
           },
-          "notes": "K3 在 Responses / Messages model 说明中明确支持；Responses 无服务端历史，与 Chat 多轮请求不同。"
+          "notes": "K3 指南直接调用 Chat，缓存指南对 K3 同时给出 Responses 与 Messages 的参数和用量字段；未实调。"
         },
         "reasoning": {
           "support": "supported",
@@ -167,28 +180,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-16T07:43:08.173408Z",
             "source_ids": [
-              "reasoning-moonshot"
+              "refresh-k3-guide"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/moonshot/2026-10-16-coding-models.json",
+            "notes": "K3 指南明确始终开启思考，Chat 顶层 reasoning_effort=low/high/max，默认 max；其他面参数未完整核实。"
           },
-          "notes": "Chat 文档按精确 ID 分 schema；K2.7 Code 高速版明确与标准版参数一致且不可关思考。K3 使用 low/high/max，K2.6 可关闭；其他已登记协议面的参数还未补证。"
+          "notes": "Chat 的 low/high/max、默认 max 和不能关闭已确认；Responses 与 Messages 具体控制尚未完整核对，保持 partial。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "1M",
+          "status": "known",
+          "reported_value": "1,048,576 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:04:28.770892+00:00",
+            "checked_at": "2026-10-16T07:43:08.173408Z",
             "source_ids": [
-              "context-kimi-k3"
+              "refresh-kimi-pricing"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/moonshot/2026-10-16-coding-models.json",
+            "notes": "官方价格表明确整数总上下文窗口。"
           },
-          "notes": "API 文档标称 1M；max_completion_tokens=1048576 是输出参数上限，不能作为总窗口的整数证明。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
+          "notes": "K3 价格表的上下文窗口列直接给出 1,048,576 tokens；不是 max_completion_tokens 或输出限制。"
         }
       }
     },

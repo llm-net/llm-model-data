@@ -110,6 +110,48 @@
       "url": "https://platform.kimi.com/docs/guide/kimi-k2-7-code-quickstart.md",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "refresh-code-models",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "purpose": "models",
+      "notes": "编程工具模型核对；逐项结论及获取时间见 evidence/moonshot/2026-10-16-coding-models.json。"
+    },
+    {
+      "id": "refresh-code-codex",
+      "url": "https://www.kimi.com/code/docs/en/third-party-tools/codex.html",
+      "purpose": "models",
+      "notes": "编程工具模型核对；逐项结论及获取时间见 evidence/moonshot/2026-10-16-coding-models.json。"
+    },
+    {
+      "id": "refresh-code-claude",
+      "url": "https://www.kimi.com/code/docs/en/third-party-tools/claude-code.html",
+      "purpose": "models",
+      "notes": "编程工具模型核对；逐项结论及获取时间见 evidence/moonshot/2026-10-16-coding-models.json。"
+    },
+    {
+      "id": "refresh-code-membership",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/membership.html",
+      "purpose": "subscription",
+      "notes": "编程工具模型核对；逐项结论及获取时间见 evidence/moonshot/2026-10-16-coding-models.json。"
+    },
+    {
+      "id": "refresh-kimi-pricing",
+      "url": "https://platform.kimi.com/docs/pricing/chat.md",
+      "purpose": "pricing",
+      "notes": "编程工具模型核对；逐项结论及获取时间见 evidence/moonshot/2026-10-16-coding-models.json。"
+    },
+    {
+      "id": "refresh-kimi-cache",
+      "url": "https://platform.kimi.com/docs/guide/context-caching",
+      "purpose": "billing",
+      "notes": "编程工具模型核对；逐项结论及获取时间见 evidence/moonshot/2026-10-16-coding-models.json。"
+    },
+    {
+      "id": "refresh-k3-guide",
+      "url": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart",
+      "purpose": "models",
+      "notes": "编程工具模型核对；逐项结论及获取时间见 evidence/moonshot/2026-10-16-coding-models.json。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

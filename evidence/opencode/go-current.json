@@ -1,0 +1,1965 @@
+{
+  "scope": "OpenCode Go：核对所有既有型号并补齐当前官方 Endpoints 的新型号；仅模型资料及开发方参考价。",
+  "base_commit": "324676ca4737657b6bea9f891471c4d22465bfc4",
+  "checked_at": "2026-10-16T07:57:03.198617Z",
+  "sources": [
+    {
+      "source_id": "go-docs-current",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "retrieved_at": "2026-10-16T07:45:42.669277+00:00",
+      "bytes": 55169,
+      "sha256": "01ce978f3efc2e7a6558d37b7708da0c0f1ad709fe3e802d45d3ddc956b87a10"
+    },
+    {
+      "source_id": "go-models-current",
+      "url": "https://opencode.ai/inference/go/v1/models",
+      "retrieved_at": "2026-10-16T07:53:21.650276+00:00",
+      "sha256": "8779afa654dcad972561cdbd7d30848744aaf652271639f62b5793e88ae46204",
+      "bytes": 3085
+    },
+    {
+      "source_id": "go-modelsdev-current",
+      "url": "https://models.dev/api.json",
+      "retrieved_at": "2026-10-16T07:53:25.002087+00:00",
+      "sha256": "4f9c4dae7f80f6b9e81f3b8c6364528196052168bf6f2e565041d800dfa203d0",
+      "bytes": 5678125
+    },
+    {
+      "source_id": "go-console-models",
+      "url": "https://opencode.ai/v2/docs/console/models/",
+      "retrieved_at": "2026-10-16T07:53:20.921256+00:00",
+      "sha256": "a8364e1d6f24cb83346859af4f5d83522bfa6dc46c82563f1c169f6c74d4314c",
+      "bytes": 56659
+    },
+    {
+      "source_id": "ref-kimi-pricing-md",
+      "url": "https://platform.kimi.com/docs/pricing/chat.md",
+      "retrieved_at": "2026-10-16T07:53:20.876586+00:00",
+      "sha256": "ad2616ec6f3d647e5b353b638de8c461e3c5c1bd4b2f97c9b052abb2af6f5f47",
+      "bytes": 4295
+    },
+    {
+      "source_id": "ref-kimi-cache",
+      "url": "https://platform.kimi.com/docs/guide/context-caching",
+      "retrieved_at": "2026-10-16T07:53:21.335535+00:00",
+      "sha256": "d9db1ec7ef7f6b1f58dbbacf921b55bb56626707bf383ab710f9ef6ecfdb1ba0",
+      "bytes": 412117
+    },
+    {
+      "source_id": "ref-minimax-cache",
+      "url": "https://platform.minimax.cn/docs/api-reference/anthropic-api-compatible-cache.md",
+      "retrieved_at": "2026-10-16T07:53:52.080774+00:00",
+      "sha256": "48caf13ea36b2f7f2e0d897fa9cf327de475c57a1096560ed647cbb003e9bebe",
+      "bytes": 20536
+    },
+    {
+      "source_id": "ref-gpt5-luna",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md",
+      "retrieved_at": "2026-10-16T07:53:20.794407+00:00",
+      "sha256": "bf9fdb1c3b6466c37fb856e5f8e5973ff088164b6c7792d3fb15e0d9927bd781",
+      "bytes": 3658
+    },
+    {
+      "source_id": "ref-step-pricing",
+      "url": "https://platform.stepfun.com/docs/zh/guides/pricing/details.md",
+      "retrieved_at": "2026-10-16T07:48:49.491940+00:00",
+      "sha256": "a3b8808cda4ee63ac58953e01d7f654672f131e44bf07b665c365b464d61cee4",
+      "bytes": 2876
+    },
+    {
+      "source_id": "ref-step-announcement",
+      "url": "https://platform.stepfun.com/docs/zh/announcements/step-5-preview-price-adjustment.md",
+      "retrieved_at": "2026-10-16T07:48:49.488540+00:00",
+      "sha256": "1eb727c50e2bc8feeded8907503361b70fba752bfc59bd92b2f9a06480818eb5",
+      "bytes": 1153
+    },
+    {
+      "source_id": "ref-longcat-2-5-pricing",
+      "url": "https://longcat.chat/platform/docs/zh/pricing/longcat-2.5",
+      "retrieved_at": "2026-10-16T07:48:49.702439+00:00",
+      "sha256": "95e147323088203f0fb6289ef80e895c0dfc6c92f1b9d67c4408bf91e1849e36",
+      "bytes": 34211
+    },
+    {
+      "source_id": "ref-zhipu-pricing",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+      "retrieved_at": "2026-10-16T07:45:41.307352+00:00",
+      "bytes": 957343,
+      "sha256": "31ed824fccdbfd45ddf6c0bf343a60afefa71c9e02820ab32d9a6799ed00a337"
+    },
+    {
+      "source_id": "ref-deepseek-pricing",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "retrieved_at": "2026-10-16T07:45:41.285035+00:00",
+      "bytes": 24116,
+      "sha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3"
+    },
+    {
+      "source_id": "ref-bailian-pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "retrieved_at": "2026-10-16T07:45:42.122749+00:00",
+      "bytes": 1458859,
+      "sha256": "f918050f5826d583a5236c8ae3e34ab7bca5546aba3f22ac4147d3c7bfafe29d"
+    },
+    {
+      "source_id": "ref-minimax-pricing",
+      "url": "https://platform.minimax.cn/docs/pricing/overview",
+      "retrieved_at": "2026-10-16T07:45:42.099801+00:00",
+      "bytes": 721538,
+      "sha256": "38dd958cda82329f3ac2d084c46f263bc68a5b22265763daab225e9da8771530"
+    },
+    {
+      "source_id": "ref-mimo-pricing",
+      "url": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "retrieved_at": "2026-10-16T07:45:41.462646+00:00",
+      "bytes": 11572,
+      "sha256": "f62427a339e91edbb252cc6b54cac92050d4254483b1e7eb97a234d6d32f947b"
+    },
+    {
+      "source_id": "ref-longcat-pricing",
+      "url": "https://longcat.chat/platform/docs/zh/pricing/longcat-2.0",
+      "retrieved_at": "2026-10-16T07:45:41.714854+00:00",
+      "bytes": 34144,
+      "sha256": "ed116a5d5b514f853cf159314c58599413b30595b9b4ee336e2823951b5408a0"
+    },
+    {
+      "source_id": "ref-tokenhub-pricing",
+      "url": "https://cloud.tencent.com/document/product/1823/130055",
+      "retrieved_at": "2026-10-16T07:45:41.409993+00:00",
+      "bytes": 177255,
+      "sha256": "7c1f93776777c9354d4cfb1475900d94925f03d37df5f33019378d3a7b9e7a7f"
+    },
+    {
+      "source_id": "ref-openai-pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-10-16T07:45:43.212196+00:00",
+      "bytes": 597490,
+      "sha256": "6a1322777bb38a55f95ad62af443d0753b53b6245388890ff4b83a7060db1cf1"
+    },
+    {
+      "source_id": "ref-xai-pricing",
+      "url": "https://docs.x.ai/developers/pricing",
+      "retrieved_at": "2026-10-16T07:45:43.228688+00:00",
+      "bytes": 483395,
+      "sha256": "e9c0ccc6016c4b7bf9d8cc40e9b9c43a77a9a193d3f446730c1df60df059d6ee"
+    },
+    {
+      "source_id": "ref-meta-pricing",
+      "url": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "retrieved_at": "2026-10-16T07:45:45.435419+00:00",
+      "bytes": 247739,
+      "sha256": "c05b0cb54ec20949b660ee6332add2af6d49e39426a7f7dd4159cc8564176a49"
+    },
+    {
+      "source_id": "ref-anthropic-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-10-16T07:45:44.888727+00:00",
+      "bytes": 1193340,
+      "sha256": "1a77d714f65ffd356c2eda8f0b19fb27d87f1395c5954dfc9219ee8b9f1d1f89"
+    },
+    {
+      "source_id": "ref-gemini-pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-10-16T07:45:44.850298+00:00",
+      "bytes": 257454,
+      "sha256": "1a1611d5893df4863e6cce51d89c9b146236a62572e6e4c1a886bb96350dfb65"
+    },
+    {
+      "source_id": "ref-bailian-cache",
+      "url": "https://help.aliyun.com/zh/model-studio/context-cache",
+      "retrieved_at": "2026-10-16T08:01:39.990267+00:00",
+      "sha256": "97328770656ad77958c7463f372dbe6e6e1ff45c88b6122eb84d8661bb795f6e",
+      "bytes": 201692
+    }
+  ],
+  "identity_policy": "Go 独立核对；匿名列表缺席不足以断言退役，原厂 API 的退役和重定向不传递给 Go。只在匿名列表出现而不在 Go Endpoints 的 omen-alpha，以及只在元数据出现的 step-5-preview-free，本轮不自动新增。",
+  "context_policy": "仅使用 models.dev 的 opencode-go 明确 limit.context 字段；已保存最小逐型号字段，未将全量响应入库。",
+  "reasoning_policy": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。",
+  "protocol_policy": "Go Endpoints 表仅确认此协议面；其余 OpenAI Chat / OpenAI Responses / Anthropic Messages 及适用原生面的逐型号可用性未公布，整体 partial。对外使用 Endpoints 表的原始 Model ID；opencode-go/ 仅为客户端配置前缀，Gemini 原生面把型号放在 URL 路径中。",
+  "price_policy": "用户指定开发方官网价；中国厂商取国内人民币，不取 Go 用量换算、余额/Zen 价，不取临时促销或未来生效价。",
+  "model_results": [
+    {
+      "id": "kimi-k3",
+      "request_id": "kimi-k3",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "20",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "100",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "20",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_1h_tokens",
+            "amount": "40",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-kimi-pricing-md",
+          "ref-kimi-cache"
+        ]
+      }
+    },
+    {
+      "id": "kimi-k2-7-code",
+      "request_id": "kimi-k2.7-code",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 262144,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "6.5",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "1.3",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "27",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-kimi-pricing-md"
+        ]
+      }
+    },
+    {
+      "id": "kimi-k2-6",
+      "request_id": "kimi-k2.6",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "partial",
+        "tokens": 262144,
+        "current_opencode_go_metadata": false,
+        "note": "保留原窗口及原核对日期，当前元数据无此型号，未能复核。"
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "6.5",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "1.1",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "27",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-kimi-pricing-md"
+        ]
+      }
+    },
+    {
+      "id": "glm-5-3",
+      "request_id": "glm-5.3",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "8",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "28",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-zhipu-pricing"
+        ]
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "request_id": "glm-5.3-flash",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "0.8",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.23",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "2.8",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-zhipu-pricing"
+        ]
+      }
+    },
+    {
+      "id": "glm-5-2",
+      "request_id": "glm-5.2",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "8",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "28",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-zhipu-pricing"
+        ]
+      }
+    },
+    {
+      "id": "glm-5-1",
+      "request_id": "glm-5.1",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": null,
+      "current_go_models_list": true,
+      "context": {
+        "status": "partial",
+        "tokens": 202752,
+        "current_opencode_go_metadata": false,
+        "note": "保留原窗口及原核对日期，当前元数据无此型号，未能复核。"
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "6",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "1.3",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "24",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-zhipu-pricing"
+        ]
+      },
+      "protocol_note": "保留历史协议和原核对日期；当前 Endpoints 无该型号，未能复核当前端点。"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "request_id": "deepseek-v4.1-flash",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.04",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "8",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-deepseek-pricing"
+        ]
+      }
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "request_id": "deepseek-v4-pro",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "9",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.30",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "27",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-deepseek-pricing"
+        ]
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "request_id": "deepseek-v4-flash",
+      "new": false,
+      "availability": "unknown",
+      "current_go_endpoint": null,
+      "current_go_models_list": false,
+      "context": {
+        "status": "partial",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": false,
+        "note": "保留原窗口及原核对日期，当前元数据无此型号，未能复核。"
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.04",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "8",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-deepseek-pricing"
+        ]
+      },
+      "protocol_note": "保留历史协议和原核对日期；当前 Endpoints 无该型号，未能复核当前端点。"
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "request_id": "deepseek-v4-flash-vision-exp",
+      "new": false,
+      "availability": "unknown",
+      "current_go_endpoint": null,
+      "current_go_models_list": false,
+      "context": {
+        "status": "partial",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": false,
+        "note": "保留原窗口及原核对日期，当前元数据无此型号，未能复核。"
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.04",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "8",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-deepseek-pricing"
+        ]
+      },
+      "protocol_note": "保留历史协议和原核对日期；当前 Endpoints 无该型号，未能复核当前端点。"
+    },
+    {
+      "id": "qwen3-8-max",
+      "request_id": "qwen3.8-max",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "12",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "36",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "15",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-bailian-pricing",
+          "ref-bailian-cache",
+          "ref-bailian-console-pricing"
+        ],
+        "cache_read_status": "unknown",
+        "cache_scope": "显式缓存；原厂API参考，不代表Go真实支持或扣费。",
+        "cache_read_reason": "官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。"
+      }
+    },
+    {
+      "id": "qwen3-8-flash",
+      "request_id": "qwen3.8-flash",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "0.8",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "2.7",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "1",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-bailian-pricing",
+          "ref-bailian-cache",
+          "ref-bailian-console-pricing"
+        ],
+        "cache_read_status": "unknown",
+        "cache_scope": "显式缓存；原厂API参考，不代表Go真实支持或扣费。",
+        "cache_read_reason": "官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。"
+      }
+    },
+    {
+      "id": "qwen3-7-max",
+      "request_id": "qwen3.7-max",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": null,
+      "current_go_models_list": true,
+      "context": {
+        "status": "partial",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": false,
+        "note": "保留原窗口及原核对日期，当前元数据无此型号，未能复核。"
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "12",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "1.2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "36",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "15",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-bailian-pricing",
+          "ref-bailian-cache"
+        ],
+        "cache_read_status": "known",
+        "cache_scope": "显式缓存；原厂API参考，不代表Go真实支持或扣费。"
+      },
+      "protocol_note": "保留历史协议和原核对日期；当前 Endpoints 无该型号，未能复核当前端点。"
+    },
+    {
+      "id": "qwen3-7-plus",
+      "request_id": "qwen3.7-plus",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "8",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "2.5",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-bailian-pricing",
+          "ref-bailian-cache"
+        ],
+        "cache_read_status": "known",
+        "cache_scope": "显式缓存；原厂API参考，不代表Go真实支持或扣费。"
+      }
+    },
+    {
+      "id": "qwen3-6-plus",
+      "request_id": "qwen3.6-plus",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": null,
+      "current_go_models_list": true,
+      "context": {
+        "status": "partial",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": false,
+        "note": "保留原窗口及原核对日期，当前元数据无此型号，未能复核。"
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "12",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "2.5",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-bailian-pricing",
+          "ref-bailian-cache"
+        ],
+        "cache_read_status": "known",
+        "cache_scope": "显式缓存；原厂API参考，不代表Go真实支持或扣费。"
+      },
+      "protocol_note": "保留历史协议和原核对日期；当前 Endpoints 无该型号，未能复核当前端点。"
+    },
+    {
+      "id": "minimax-m3",
+      "request_id": "minimax-m3",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2.1",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.42",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "8.4",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-minimax-pricing"
+        ]
+      }
+    },
+    {
+      "id": "minimax-m2-7",
+      "request_id": "minimax-m2.7",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 204800,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2.1",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.42",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "8.4",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "2.625",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-minimax-pricing",
+          "ref-minimax-cache"
+        ]
+      }
+    },
+    {
+      "id": "minimax-m2-5",
+      "request_id": "minimax-m2.5",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": null,
+      "current_go_models_list": true,
+      "context": {
+        "status": "partial",
+        "tokens": 204800,
+        "current_opencode_go_metadata": false,
+        "note": "保留原窗口及原核对日期，当前元数据无此型号，未能复核。"
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2.1",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.21",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "8.4",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "2.625",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-minimax-pricing",
+          "ref-minimax-cache"
+        ]
+      },
+      "protocol_note": "保留历史协议和原核对日期；当前 Endpoints 无该型号，未能复核当前端点。"
+    },
+    {
+      "id": "mimo-v2-6-pro",
+      "request_id": "mimo-v2.6-pro",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "3",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.025",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "6",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-mimo-pricing"
+        ]
+      }
+    },
+    {
+      "id": "mimo-v2-6-flash",
+      "request_id": "mimo-v2.6-flash",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "1",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.02",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-mimo-pricing"
+        ]
+      }
+    },
+    {
+      "id": "mimo-v2-5-pro",
+      "request_id": "mimo-v2.5-pro",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "3",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.025",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "6",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-mimo-pricing"
+        ]
+      }
+    },
+    {
+      "id": "mimo-v2-5",
+      "request_id": "mimo-v2.5",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "1",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.02",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-mimo-pricing"
+        ]
+      }
+    },
+    {
+      "id": "longcat-2-0",
+      "request_id": "longcat-2.0",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": false,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "5",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.1",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "20",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-longcat-pricing"
+        ]
+      }
+    },
+    {
+      "id": "hy4-preview",
+      "request_id": "hy4-preview",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1024000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "6",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.3",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "18",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-tokenhub-pricing"
+        ]
+      }
+    },
+    {
+      "id": "hy3",
+      "request_id": "hy3",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 256000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "1",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.25",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "4",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-tokenhub-pricing"
+        ]
+      }
+    },
+    {
+      "id": "gpt-5-6-luna",
+      "request_id": "gpt-5.6-luna",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1050000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "USD",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "0.2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.02",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "1.2",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-gpt5-luna",
+          "ref-openai-pricing"
+        ]
+      }
+    },
+    {
+      "id": "grok-4-7",
+      "request_id": "grok-4.7",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 500000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "USD",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.5",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "6",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-xai-pricing"
+        ]
+      }
+    },
+    {
+      "id": "grok-4-6",
+      "request_id": "grok-4.6",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
+      "current_go_models_list": true,
+      "context": {
+        "status": "partial",
+        "tokens": 500000,
+        "current_opencode_go_metadata": false,
+        "note": "保留原窗口及原核对日期，当前元数据无此型号，未能复核。"
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "USD",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "2",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.5",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "6",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-xai-pricing"
+        ]
+      }
+    },
+    {
+      "id": "muse-spark-1-3-contributor",
+      "request_id": "muse-spark-1.3-contributor",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "USD",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "0.10",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.002",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "0.20",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-meta-pricing"
+        ]
+      }
+    },
+    {
+      "id": "muse-spark-1-2-contributor",
+      "request_id": "muse-spark-1.2-contributor",
+      "new": false,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "USD",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "0.10",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.002",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "0.20",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-meta-pricing"
+        ]
+      }
+    },
+    {
+      "id": "gpt-6-luna",
+      "request_id": "gpt-6-luna",
+      "new": true,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1050000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "USD",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "0.10",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.01",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "0.50",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-openai-pricing"
+        ]
+      }
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "request_id": "claude-haiku-5-5",
+      "new": true,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "USD",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "0.10",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.01",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "0.50",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_5m_tokens",
+            "amount": "0.125",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "cache_write_1h_tokens",
+            "amount": "0.20",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-anthropic-pricing"
+        ]
+      }
+    },
+    {
+      "id": "gemini-4-argon-contributor",
+      "request_id": "gemini-4-argon-contributor",
+      "new": true,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon-contributor",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "unknown",
+        "current_nonpromotional_baseline_reconfirmed": false,
+        "reason": "官方 Contributor 是邀请制预览；仅见当前限时价及尚未生效的未来标准价，未找到现行非促销基准，不提前采用未来价格。"
+      }
+    },
+    {
+      "id": "longcat-2-5-preview-free",
+      "request_id": "longcat-2.5-preview-free",
+      "new": true,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "unknown",
+        "current_nonpromotional_baseline_reconfirmed": false,
+        "reason": "开发方 LongCat 2.5 价格页仅列限时优惠，未找到现行非促销基准；Go 的 Free 标记不作为原厂零价。"
+      }
+    },
+    {
+      "id": "step-5-preview",
+      "request_id": "step-5-preview",
+      "new": true,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1000000,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "published",
+        "current_nonpromotional_baseline_reconfirmed": true,
+        "currency": "CNY",
+        "rates": [
+          {
+            "meter": "input_uncached_tokens",
+            "amount": "7",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "input_cached_tokens",
+            "amount": "0.70",
+            "per": 1000000,
+            "unit": "token"
+          },
+          {
+            "meter": "output_tokens",
+            "amount": "20",
+            "per": 1000000,
+            "unit": "token"
+          }
+        ],
+        "source_ids": [
+          "ref-step-pricing",
+          "ref-step-announcement"
+        ]
+      }
+    },
+    {
+      "id": "cat-jam-free",
+      "request_id": "cat-jam-free",
+      "new": true,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "unknown",
+        "current_nonpromotional_baseline_reconfirmed": false,
+        "reason": "官方匿名模型未披露可确认的开发方身份及原厂价；不猜底模，不采用 Go 免费或余额价。"
+      }
+    },
+    {
+      "id": "space-bunny",
+      "request_id": "space-bunny",
+      "new": true,
+      "availability": "active",
+      "current_go_endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "current_go_models_list": true,
+      "context": {
+        "status": "known",
+        "tokens": 1048576,
+        "current_opencode_go_metadata": true
+      },
+      "protocol_coverage": "partial",
+      "reasoning_coverage": "unknown",
+      "reference_price": {
+        "status": "unknown",
+        "current_nonpromotional_baseline_reconfirmed": false,
+        "reason": "未确认此匿名模型的开发方身份及原厂公开价格；不按名字猜底模，不采用 Go 用量换算价。"
+      }
+    }
+  ],
+  "specific_findings": {
+    "kimi_k3": "复制 moonshot/api-cn/kimi-k3 的完整参考分量；新增 5m 写入 20 与 1h 写入 40 CNY/M，三个原分量不变。输入、读取、写入互斥。",
+    "minimax_m2_7": "先补齐 minimax/api-cn/minimax-m2-7 后完整复制；新增 5m 写入 2.625 CNY/M，原三个分量不变。官方主动缓存页同时证明 TTL 和互斥用量。",
+    "longcat_2_0": "当前原厂页面仅列限时优惠 2 / 0.04 / 8 CNY/M；保留已有非促销 5 / 0.1 / 20 及旧 verification，等待现行非促销基准确认。",
+    "gemini_4_argon_contributor": {
+      "current_promotion_through": "2026-11-30",
+      "current_promotion_usd_per_million": {
+        "input": "1",
+        "cached_input": "0.05",
+        "output": "5"
+      },
+      "future_standard_from": "2026-12-01",
+      "future_standard_usd_per_million": {
+        "input": "2",
+        "cached_input": "0.10",
+        "output": "10"
+      },
+      "decision": "仅写证据；无现行非促销基准，reference_prices unknown。邀请制 Contributor 不是普通 Standard 档。"
+    },
+    "longcat_2_5": "原厂仅列限时优惠 2 / 0.04 / 8 CNY/M；不将临时优惠、Go 免费或相近 2.0 型号价作为基准。",
+    "step_5_preview": "采用当前公开标准 CNY 7 / 0.70 / 20；公告中符合既往使用条件的 0.35 缓存价不作为一般基准。",
+    "gpt_luna": "GPT 6 Luna 公开缓存写入 0.125 USD/M，GPT 5.6 Luna 为输入的 1.25 倍；未确认 TTL，不能映射 5m / 1h，不扩 schema。",
+    "claude_haiku_5_5": "采用 prompt ≤100,000 的全球路由标准价 USD 0.10 输入 / 0.01 读取 / 0.50 输出 / 0.125 5m 写入 / 0.20 1h 写入；长上下文阶梯不作基准。",
+    "cat_jam_space_bunny": "官方公开代号不足以确认开发方及对应原厂价格，不猜底模。",
+    "plans": "官网另列 Go Plus，按任务范围保持本地套餐与额度不变；此次未作真实订阅扣费调查。",
+    "qwen_explicit_cache": "五型号原厂均明确支持北京显式缓存，TTL 5 分钟，写入为标准输入 125%；3.7 Max/Plus、3.6 Plus 命中为 10%，3.8 Max/Flash 是官方例外且尚无可引用的控制台单价。只选择一组显式缓存参考，不混入互斥隐式缓存，也不据原厂能力证明Go支持缓存。详见 evidence/bailian/qwen-cache-current.json。"
+  },
+  "remaining_partial_unknown": {
+    "availability_unknown": [
+      "deepseek-v4-flash",
+      "deepseek-v4-flash-vision-exp"
+    ],
+    "context_partial": [
+      "kimi-k2-6",
+      "glm-5-1",
+      "deepseek-v4-flash",
+      "deepseek-v4-flash-vision-exp",
+      "qwen3-7-max",
+      "qwen3-6-plus",
+      "minimax-m2-5",
+      "grok-4-6"
+    ],
+    "protocol_partial": [
+      "kimi-k3",
+      "kimi-k2-7-code",
+      "kimi-k2-6",
+      "glm-5-3",
+      "glm-5-3-flash",
+      "glm-5-2",
+      "glm-5-1",
+      "deepseek-v4-1-flash",
+      "deepseek-v4-pro",
+      "deepseek-v4-flash",
+      "deepseek-v4-flash-vision-exp",
+      "qwen3-8-max",
+      "qwen3-8-flash",
+      "qwen3-7-max",
+      "qwen3-7-plus",
+      "qwen3-6-plus",
+      "minimax-m3",
+      "minimax-m2-7",
+      "minimax-m2-5",
+      "mimo-v2-6-pro",
+      "mimo-v2-6-flash",
+      "mimo-v2-5-pro",
+      "mimo-v2-5",
+      "longcat-2-0",
+      "hy4-preview",
+      "hy3",
+      "gpt-5-6-luna",
+      "grok-4-7",
+      "grok-4-6",
+      "muse-spark-1-3-contributor",
+      "muse-spark-1-2-contributor",
+      "gpt-6-luna",
+      "claude-haiku-5-5",
+      "gemini-4-argon-contributor",
+      "longcat-2-5-preview-free",
+      "step-5-preview",
+      "cat-jam-free",
+      "space-bunny"
+    ],
+    "protocol_not_reconfirmed": [
+      "glm-5-1",
+      "deepseek-v4-flash",
+      "deepseek-v4-flash-vision-exp",
+      "qwen3-7-max",
+      "qwen3-6-plus",
+      "minimax-m2-5"
+    ],
+    "reasoning_unknown": [
+      "kimi-k3",
+      "kimi-k2-7-code",
+      "kimi-k2-6",
+      "glm-5-3",
+      "glm-5-3-flash",
+      "glm-5-2",
+      "glm-5-1",
+      "deepseek-v4-1-flash",
+      "deepseek-v4-pro",
+      "deepseek-v4-flash",
+      "deepseek-v4-flash-vision-exp",
+      "qwen3-8-max",
+      "qwen3-8-flash",
+      "qwen3-7-max",
+      "qwen3-7-plus",
+      "qwen3-6-plus",
+      "minimax-m3",
+      "minimax-m2-7",
+      "minimax-m2-5",
+      "mimo-v2-6-pro",
+      "mimo-v2-6-flash",
+      "mimo-v2-5-pro",
+      "mimo-v2-5",
+      "longcat-2-0",
+      "hy4-preview",
+      "hy3",
+      "gpt-5-6-luna",
+      "grok-4-7",
+      "grok-4-6",
+      "muse-spark-1-3-contributor",
+      "muse-spark-1-2-contributor",
+      "gpt-6-luna",
+      "claude-haiku-5-5",
+      "gemini-4-argon-contributor",
+      "longcat-2-5-preview-free",
+      "step-5-preview",
+      "cat-jam-free",
+      "space-bunny"
+    ],
+    "reference_price_unknown": [
+      "gemini-4-argon-contributor",
+      "longcat-2-5-preview-free",
+      "cat-jam-free",
+      "space-bunny"
+    ],
+    "reference_price_existing_baseline_not_reconfirmed": [
+      "longcat-2-0"
+    ],
+    "cache_write_ttl_unknown": [
+      "gpt-6-luna",
+      "gpt-5-6-luna"
+    ],
+    "other_capabilities": "所有型号的输入模态、最大输出、工具调用、结构化输出和流式尚无独立完整核对；空数组或 null 不表示不支持。",
+    "qwen_cache_read_price_unknown": {
+      "qwen3-8-max": "官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。",
+      "qwen3-8-flash": "官方上下文缓存页明确此型号的显式命中价不是标准输入的 10%，隐式命中价也不能套用通用 20%；独立价指向百炼控制台。本轮控制台只取得前端壳，web 无法取得价格表，旧匿名模型元数据入口返回 HTML 而非价格 JSON；未取得可引用的本型号命中单价，故不填 input_cached_tokens。"
+    }
+  }
+}
