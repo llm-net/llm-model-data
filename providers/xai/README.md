@@ -9,7 +9,7 @@ API与Grok Build身份分开；Grok Build按同平台xAI API标价独立保存�
 ## 独立产品
 
 - [api-global](offerings/api-global/catalog.json)
-- [grok-build](offerings/grok-build/catalog.json)
+- [grok-build](offerings/grok-build/catalog.json)：含 Grok Imagine 图像 / 视频型号（`xai_image` / `xai_video`），契约按 xAI 公开 API 文档，订阅令牌调用 Imagine 端点未见公开说明，见 [Imagine 输入输出证据](../../evidence/xai/2026-09-28-imagine-media-io.md)。
 
 ## 更新纪律
 

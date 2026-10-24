@@ -1,0 +1,114 @@
+{
+  "scope": "仅 MiniMax api-cn/minimax-m2-7，作为 OpenCode Go 显式参考对象同步缓存分量。",
+  "base_commit": "324676ca4737657b6bea9f891471c4d22465bfc4",
+  "checked_at": "2026-10-16T07:57:03.198617Z",
+  "sources": [
+    {
+      "source_id": "current-m2-7-pricing",
+      "url": "https://platform.minimax.cn/docs/pricing/overview",
+      "retrieved_at": "2026-10-16T07:45:42.099801+00:00",
+      "bytes": 721538,
+      "sha256": "38dd958cda82329f3ac2d084c46f263bc68a5b22265763daab225e9da8771530"
+    },
+    {
+      "source_id": "current-m2-7-cache",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-prompt-caching",
+      "retrieved_at": "2026-10-16T07:53:21.082863+00:00",
+      "sha256": "ee138c6171848e4d3e4c6535969068239a05cdc4528cc0778418025d4e52e9e5",
+      "bytes": 701775
+    },
+    {
+      "source_id": "current-m2-7-explicit-cache",
+      "url": "https://platform.minimax.cn/docs/api-reference/anthropic-api-compatible-cache.md",
+      "retrieved_at": "2026-10-16T07:53:52.080774+00:00",
+      "sha256": "48caf13ea36b2f7f2e0d897fa9cf327de475c57a1096560ed647cbb003e9bebe",
+      "bytes": 20536
+    },
+    {
+      "source_id": "current-m2-7-chat",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-openai-api.md",
+      "retrieved_at": "2026-10-16T07:48:49.560755+00:00",
+      "sha256": "2b1b748877fe8f1c5712f9073dfaf3f4b83dfde89bf97cd7219300216fb3f552",
+      "bytes": 11195
+    },
+    {
+      "source_id": "current-m2-7-messages",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api.md",
+      "retrieved_at": "2026-10-16T07:48:49.580871+00:00",
+      "sha256": "723f562c60592f444e17cf087bd3ccfe6dc4e8b0e8c3438c2c08144aed6853ed",
+      "bytes": 11808
+    },
+    {
+      "source_id": "current-m2-7-responses",
+      "url": "https://platform.minimax.cn/docs/api-reference/responses-create.md",
+      "retrieved_at": "2026-10-16T07:48:49.550447+00:00",
+      "sha256": "e5b48637bec818558196da11a042c41b8f01868c9abf0fc8ccb1d4dee178763f",
+      "bytes": 22577
+    },
+    {
+      "source_id": "current-m2-7-native",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-post.md",
+      "retrieved_at": "2026-10-16T07:48:49.535495+00:00",
+      "sha256": "135b09b214f3b16ef280e3ae59c5e6183666a9cdf2018bb54aeb72e6518af364",
+      "bytes": 26636
+    },
+    {
+      "source_id": "current-m2-7-context",
+      "url": "https://platform.minimax.cn/docs/guides/text-generation.md",
+      "retrieved_at": "2026-10-16T07:48:49.577638+00:00",
+      "sha256": "0aacf9305d9b2b762bb594bc62bb7c9c2e65364935faceacbb18124c5501b2ae",
+      "bytes": 10633
+    },
+    {
+      "source_id": "current-m2-7-native-html",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-post",
+      "retrieved_at": "2026-10-16T07:58:59.007024Z",
+      "location": "HTML 标题“文本合成”下独立的 deprecated 标签；model 枚举的 MiniMax-M2.7。"
+    }
+  ],
+  "model": {
+    "request_id": "MiniMax-M2.7",
+    "context_window_tokens": 204800,
+    "interfaces": [
+      "openai_chat",
+      "openai_responses",
+      "anthropic_messages",
+      "minimax_text"
+    ],
+    "reasoning": {
+      "support": "supported",
+      "coverage": "partial",
+      "known_interfaces": [
+        "openai_chat",
+        "openai_responses",
+        "anthropic_messages"
+      ],
+      "default_behavior": "enabled",
+      "can_disable": false,
+      "missing": [
+        "minimax_text 的控制、默认值与预算"
+      ]
+    },
+    "usage_price": {
+      "currency": "CNY",
+      "per_tokens": 1000000,
+      "input": "2.1",
+      "cached_input": "0.42",
+      "output": "8.4",
+      "cache_write_5m": "2.625",
+      "cache_ttl_seconds": 300,
+      "location": "国内按量价格表 MiniMax-M2.7 行；主动缓存的工作原理、支持的模型和定价、缓存性能。",
+      "accounting": "主动缓存 input_tokens、cache_read_input_tokens、cache_creation_input_tokens 三者互斥；写入价是该分量价格，不能叠加普通输入价。"
+    }
+  },
+  "other_unknown": [
+    "max_output_tokens",
+    "tool_calling",
+    "structured_output",
+    "streaming",
+    "未完成输入模态专项，不用空数组解释成不支持输入。"
+  ],
+  "source_conflicts": [
+    "原生文本 HTML 在标题下独立标 deprecated；Markdown 导出仅保留 max_tokens 参数的 deprecated，缺少顶层标记。保留原生面但明确端点已标 deprecated，不用 Markdown 标记缺失否定 HTML。"
+  ]
+}

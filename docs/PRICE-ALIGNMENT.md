@@ -18,6 +18,10 @@
 - Cursor 取同平台精确型号价。当前 `individual` 保留旧版 Pro / Pro+ / Ultra；新售 The X Subscription 不与旧套餐混并。
 - 方舟 Seedance 四个系列按既定规则参考同平台最新日期版；千帆仅 Pro 短名继续参考 0813。Flash 短名已正式退役，0731 日期版作为官方替代独立收录。完整身份见各条 `reference_origin.catalog_model`。
 
+## 已发布媒体资料
+
+保留此前发布的方舟 Agent Plan 豆包语音合成、Gemini Antigravity 图像产品、Codex 图像模型与 Grok Build Imagine 模型及其独立参考价。它们的 `media_io` 与本次新价格词汇并存；各产品的来源、独立核对时间和缺项继续以目录及证据为准，不因合并刷新核验日期。参见[媒体输入输出契约](MEDIA-IO.md)。
+
 ## 固定排除与未知项
 
 硅基流动、Together AI 继续整家排除，各服务商 `excluded_request_ids` 保留用户既有决定。排除项不因本轮官方目录再次出现而恢复；沿革见 Git 历史和[排除规则](COLLECTION.md)。

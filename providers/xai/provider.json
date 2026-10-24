@@ -290,6 +290,180 @@
       "url": "https://docs.x.ai/build/settings/reference.md",
       "purpose": "models",
       "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/xai/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "imagine-models",
+      "url": "https://docs.x.ai/developers/models",
+      "purpose": "models",
+      "notes": "xAI 官方型号表（含 Grok Imagine 图像 / 视频型号）。"
+    },
+    {
+      "id": "imagine-pricing",
+      "url": "https://docs.x.ai/developers/pricing",
+      "purpose": "pricing",
+      "notes": "xAI API Imagine Pricing 表：按张 / 按秒的按量价。"
+    },
+    {
+      "id": "imagine-model-image2",
+      "url": "https://docs.x.ai/developers/models/grok-imagine-image-2.0",
+      "purpose": "models",
+      "notes": "grok-imagine-image-2.0 型号页。"
+    },
+    {
+      "id": "imagine-model-video15",
+      "url": "https://docs.x.ai/developers/models/grok-imagine-video-1.5",
+      "purpose": "models",
+      "notes": "grok-imagine-video-1.5 型号页。"
+    },
+    {
+      "id": "imagine-model-video",
+      "url": "https://docs.x.ai/developers/models/grok-imagine-video",
+      "purpose": "models",
+      "notes": "grok-imagine-video（Classic）型号页。"
+    },
+    {
+      "id": "imagine-image-generation",
+      "url": "https://docs.x.ai/developers/model-capabilities/images/generation",
+      "purpose": "models",
+      "notes": "图像生成指南：比例、分辨率、quality、n。"
+    },
+    {
+      "id": "imagine-image-editing",
+      "url": "https://docs.x.ai/developers/model-capabilities/images/editing",
+      "purpose": "models",
+      "notes": "单图编辑指南。"
+    },
+    {
+      "id": "imagine-image-multi",
+      "url": "https://docs.x.ai/developers/model-capabilities/images/multi-image-editing",
+      "purpose": "models",
+      "notes": "多图编辑指南（最多 5 张）。"
+    },
+    {
+      "id": "imagine-video-generation",
+      "url": "https://docs.x.ai/developers/model-capabilities/video/generation",
+      "purpose": "models",
+      "notes": "视频生成指南：时长、比例、分辨率、音轨、预设音色。"
+    },
+    {
+      "id": "imagine-video-i2v",
+      "url": "https://docs.x.ai/developers/model-capabilities/video/image-to-video",
+      "purpose": "models",
+      "notes": "图生视频指南。"
+    },
+    {
+      "id": "imagine-video-r2v",
+      "url": "https://docs.x.ai/developers/model-capabilities/video/reference-to-video",
+      "purpose": "models",
+      "notes": "参考图生视频、首尾帧、关键帧与参考音色指南。"
+    },
+    {
+      "id": "imagine-video-editing",
+      "url": "https://docs.x.ai/developers/model-capabilities/video/editing",
+      "purpose": "models",
+      "notes": "视频编辑指南（输入不超过 8.7 秒）。"
+    },
+    {
+      "id": "imagine-video-extension",
+      "url": "https://docs.x.ai/developers/model-capabilities/video/extension",
+      "purpose": "models",
+      "notes": "视频延长指南（输入 2–15 秒，新增 2–10 秒）。"
+    },
+    {
+      "id": "imagine-openapi",
+      "url": "https://docs.x.ai/openapi.json",
+      "purpose": "models",
+      "notes": "xAI 官方 OpenAPI：Imagine 请求 / 响应 schema 与枚举。"
+    },
+    {
+      "id": "imagine-rest-images",
+      "url": "https://docs.x.ai/developers/rest-api-reference/inference/images",
+      "purpose": "models",
+      "notes": "Images REST 参考。"
+    },
+    {
+      "id": "imagine-rest-videos",
+      "url": "https://docs.x.ai/developers/rest-api-reference/inference/videos",
+      "purpose": "models",
+      "notes": "Videos REST 参考。"
+    },
+    {
+      "id": "imagine-tts-voices",
+      "url": "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech",
+      "purpose": "models",
+      "notes": "预设音色清单（视频参考音色与 TTS 共用）。"
+    },
+    {
+      "id": "build-commands",
+      "url": "https://docs.x.ai/build/modes-and-commands",
+      "purpose": "subscription",
+      "notes": "Grok Build 命令表：/imagine、/imagine-video 仅在功能可用时出现。"
+    },
+    {
+      "id": "build-zdr-video",
+      "url": "https://docs.x.ai/build/settings/zdr-video-storage",
+      "purpose": "subscription",
+      "notes": "Grok Build 视频工具的 ZDR 存储：为每次生成预签上传地址并传给 API。"
+    },
+    {
+      "id": "r1016-installer",
+      "url": "https://x.ai/cli/install.sh",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-stable",
+      "url": "https://x.ai/cli/stable",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-settings",
+      "url": "https://docs.x.ai/build/settings/reference.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-overview",
+      "url": "https://docs.x.ai/build/overview.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-pricing",
+      "url": "https://docs.x.ai/developers/pricing.md",
+      "purpose": "pricing",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-guide47",
+      "url": "https://docs.x.ai/developers/grok-4-7.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-commands",
+      "url": "https://docs.x.ai/build/modes-and-commands.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-model46",
+      "url": "https://docs.x.ai/developers/models/grok-4.6.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-model45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5.md",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1016-cli",
+      "url": "https://x.ai/cli/grok-1.0.60-linux-x86_64",
+      "purpose": "models",
+      "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

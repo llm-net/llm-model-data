@@ -122,6 +122,90 @@
       "url": "https://chenyu.pro/api-docs/docs/models/",
       "purpose": "models",
       "notes": "模型页说明按协议面展示开关、档位、预算与默认值，原始值不统一换算；未确认不等于不支持。"
+    },
+    {
+      "id": "media-videos",
+      "url": "https://chenyu.pro/api-docs/docs/videos/",
+      "purpose": "models",
+      "notes": "媒体输入输出专项：晨羽AI视频生成页（厂商协议面入口、「参数与响应以…为准」的方舟 / 万相文档链接、MiniMax H3 透传声明、查询 / 取消路径与限制）；Markdown 原文 https://chenyu.pro/api-docs/llms.mdx/docs/videos/content.md。"
+    },
+    {
+      "id": "media-images",
+      "url": "https://chenyu.pro/api-docs/docs/images/",
+      "purpose": "models",
+      "notes": "媒体输入输出专项：晨羽AI图片生成页（OpenAI Image 面入口、上游字段以方舟图片生成 API 为准、参考图与组图、流式、请求体观察上限）；Markdown 原文 https://chenyu.pro/api-docs/llms.mdx/docs/images/content.md。"
+    },
+    {
+      "id": "media-speech",
+      "url": "https://chenyu.pro/api-docs/docs/speech/",
+      "purpose": "models",
+      "notes": "媒体输入输出专项：晨羽AI语音合成页（MiniMax T2A 同步 / 流式 / 异步路径、同步参数以 MiniMax 文档为准、预置音色、取回时效）；Markdown 原文 https://chenyu.pro/api-docs/llms.mdx/docs/speech/content.md。"
+    },
+    {
+      "id": "media-quickstart",
+      "url": "https://chenyu.pro/api-docs/docs/quickstart/",
+      "purpose": "models",
+      "notes": "媒体输入输出专项：晨羽AI快速上手「选入口」表与厂商协议面示例（各子域名、照抄官方路径、X-DashScope-Async 须自带）。"
+    },
+    {
+      "id": "media-ref-bailian-wan3",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference",
+      "purpose": "models",
+      "notes": "晨羽AI视频页写明「参数与响应以万相 3.0 视频生成 API 参考为准」的链接目标；仅作其援引的厂商参数表，不代表晨羽AI另行核对。"
+    },
+    {
+      "id": "media-ref-ark-video-create",
+      "url": "https://www.volcengine.com/docs/82379/1520757",
+      "purpose": "models",
+      "notes": "晨羽AI视频页指定的方舟「创建视频生成任务」文档（机读正文经文档中心 getDocDetail 接口取得）；仅作其援引的厂商参数表。"
+    },
+    {
+      "id": "media-ref-ark-video-query",
+      "url": "https://www.volcengine.com/docs/82379/1521309",
+      "purpose": "models",
+      "notes": "晨羽AI视频页指定的方舟「查询视频生成任务」文档；用于产物地址、有效期与下载次数。"
+    },
+    {
+      "id": "media-ref-ark-image-api",
+      "url": "https://api.volcengine.com/api-docs/view?action=ImageGenerations&serviceCode=ark&version=2024-01-01",
+      "purpose": "models",
+      "notes": "晨羽AI图片页「上游字段以火山方舟的图片生成 API为准」的链接目标；该 API Explorer 页为前端渲染，正文按同名文档中心页 media-ref-ark-image-doc 核对。"
+    },
+    {
+      "id": "media-ref-ark-image-doc",
+      "url": "https://www.volcengine.com/docs/82379/1541523",
+      "purpose": "models",
+      "notes": "方舟文档中心「图片生成 API」，与晨羽AI所链 API Explorer 同名；Seedream 5.0 pro / lite 的字段、取值与模型支持范围。"
+    },
+    {
+      "id": "media-ref-ark-model-list",
+      "url": "https://www.volcengine.com/docs/82379/1330310",
+      "purpose": "models",
+      "notes": "晨羽AI图片页链接的方舟「官方模型列表」；用于确认 doubao-seedream-5-0-260128 即 Seedream 5.0 lite、-pro-260628 即 5.0 pro。"
+    },
+    {
+      "id": "media-ref-minimax-t2a-http",
+      "url": "https://platform.minimaxi.com/docs/api-reference/speech-t2a-http",
+      "purpose": "models",
+      "notes": "晨羽AI语音页「参数与响应以 MiniMax 的同步语音合成 HTTP为准」的链接目标（跳转至 platform.minimax.cn；Markdown 版 OpenAPI 在同路径加 .md）。"
+    },
+    {
+      "id": "media-ref-minimax-system-voices",
+      "url": "https://platform.minimaxi.com/docs/faq/system-voice-id",
+      "purpose": "models",
+      "notes": "MiniMax 系统音色列表，由晨羽AI所链同步语音合成 HTTP 文档的 voice_id 说明链接；晨羽AI写可用官方预置音色但未列举。"
+    },
+    {
+      "id": "media-ref-minimax-h3-create",
+      "url": "https://platform.minimaxi.com/docs/api-reference/video-generation-v2-create",
+      "purpose": "models",
+      "notes": "MiniMax 国内站「创建视频生成任务」（V2，MiniMax-H3 / H3-Max）；晨羽AI视频页写「按 MiniMax 官方 H3 文档原样透传」但未给链接，按官方文档索引定位。"
+    },
+    {
+      "id": "media-ref-minimax-h3-query",
+      "url": "https://platform.minimaxi.com/docs/api-reference/video-generation-v2-query",
+      "purpose": "models",
+      "notes": "MiniMax 国内站「查询任务」（V2）；产物 content.url 与 7 天查询窗口。同上，晨羽AI未给链接。"
     }
   ],
   "notes": "2026-09-17 已核对匿名实时模型与价格，并再次核对新公开的逐型号思考控制。旧 audit / protocol / context 来源保留供历史证据追溯；当前事实以各条 verification 为准。"

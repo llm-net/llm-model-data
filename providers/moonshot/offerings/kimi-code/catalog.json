@@ -146,12 +146,14 @@
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "protocol-coding"
+              "protocol-coding",
+              "refresh-code-models",
+              "refresh-code-codex"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 Responses 视频限制沿用 evidence/moonshot/2026-10-16-coding-models.json 的独立证据，未刷新该限制的核对日期。"
           },
-          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。 本产品 2026-10-16 Codex 指南明确 Responses 只支持文本、图片，不支持视频；产品级 video 输入是协议能力并集，不适用于 Responses。"
         },
         "reasoning": {
           "support": "supported",
@@ -222,16 +224,41 @@
                 }
               ],
               "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "Kimi 官方 Codex 指南逐个列 K3 两种请求名，模型选择后可选择这些档位；不以 UI 名称推导请求 JSON 字段。"
+                }
+              ],
+              "notes": "客户端入口独立确认；Responses 请求体的具体思考字段与关闭方式未在本产品指南明示。"
             }
           ],
           "verification": {
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "reasoning-kimi-code"
+              "reasoning-kimi-code",
+              "refresh-code-models",
+              "refresh-code-codex",
+              "refresh-code-claude"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 客户端 /model 入口沿用 evidence/moonshot/2026-10-16-coding-models.json，未将客户端字段当作请求 JSON 参数，未刷新该入口的核对日期。"
           },
           "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
         },
@@ -381,12 +408,14 @@
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "protocol-coding"
+              "protocol-coding",
+              "refresh-code-models",
+              "refresh-code-codex"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 Responses 视频限制沿用 evidence/moonshot/2026-10-16-coding-models.json 的独立证据，未刷新该限制的核对日期。"
           },
-          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。 本产品 2026-10-16 Codex 指南明确 Responses 只支持文本、图片，不支持视频；产品级 video 输入是协议能力并集，不适用于 Responses。"
         },
         "reasoning": {
           "support": "supported",
@@ -457,16 +486,41 @@
                 }
               ],
               "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "Kimi 官方 Codex 指南逐个列 K3 两种请求名，模型选择后可选择这些档位；不以 UI 名称推导请求 JSON 字段。"
+                }
+              ],
+              "notes": "客户端入口独立确认；Responses 请求体的具体思考字段与关闭方式未在本产品指南明示。"
             }
           ],
           "verification": {
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "reasoning-kimi-code"
+              "reasoning-kimi-code",
+              "refresh-code-models",
+              "refresh-code-codex",
+              "refresh-code-claude"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 客户端 /model 入口沿用 evidence/moonshot/2026-10-16-coding-models.json，未将客户端字段当作请求 JSON 参数，未刷新该入口的核对日期。"
           },
           "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
         },
@@ -477,12 +531,14 @@
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "context-kimi-code"
+              "context-kimi-code",
+              "refresh-code-models",
+              "refresh-code-membership"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 套餐适用限制沿用 evidence/moonshot/2026-10-16-coding-models.json，不以整数窗口核对替代套餐限制。"
           },
-          "notes": "本产品模型表明确整数窗口。"
+          "notes": "本产品模型表明确整数窗口。 官方固定窗口 262144 tokens；Plus 及以上或 legacy Moderato 及以上可用。"
         }
       }
     },
@@ -609,12 +665,14 @@
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "protocol-coding"
+              "protocol-coding",
+              "refresh-code-models",
+              "refresh-code-codex"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 Responses 视频限制沿用 evidence/moonshot/2026-10-16-coding-models.json 的独立证据，未刷新该限制的核对日期。"
           },
-          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。 本产品 2026-10-16 Codex 指南明确 Responses 只支持文本、图片，不支持视频；产品级 video 输入是协议能力并集，不适用于 Responses。"
         },
         "reasoning": {
           "support": "supported",
@@ -705,12 +763,14 @@
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "context-kimi-code"
+              "context-kimi-code",
+              "refresh-code-models",
+              "refresh-code-membership"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 套餐适用限制沿用 evidence/moonshot/2026-10-16-coding-models.json，不以整数窗口核对替代套餐限制。"
           },
-          "notes": "本产品模型表明确整数窗口。"
+          "notes": "本产品模型表明确整数窗口。 K2.8 Preview 的官方窗口为 1048576 tokens；Plus 及以上或 legacy Andante 及以上可用；价格参考 K2.7 Code 不改变底模与窗口。"
         }
       }
     },
@@ -837,12 +897,14 @@
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "protocol-coding"
+              "protocol-coding",
+              "refresh-code-models",
+              "refresh-code-codex"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 Responses 视频限制沿用 evidence/moonshot/2026-10-16-coding-models.json 的独立证据，未刷新该限制的核对日期。"
           },
-          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。 本产品 2026-10-16 Codex 指南明确 Responses 只支持文本、图片，不支持视频；产品级 video 输入是协议能力并集，不适用于 Responses。"
         },
         "reasoning": {
           "support": "supported",
@@ -891,12 +953,14 @@
             "status": "verified",
             "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
-              "context-kimi-code"
+              "context-kimi-code",
+              "refresh-code-models",
+              "refresh-code-membership"
             ],
             "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "notes": "逐项核对官方文档，未用真实 Key 调用。 套餐适用限制沿用 evidence/moonshot/2026-10-16-coding-models.json，不以整数窗口核对替代套餐限制。"
           },
-          "notes": "本产品模型表明确整数窗口。"
+          "notes": "本产品模型表明确整数窗口。 K2.7 Code HighSpeed 的官方窗口为 262144 tokens；Pro 及以上或 legacy Allegretto 及以上可用。"
         }
       }
     },
@@ -1373,5 +1437,5 @@
       }
     }
   ],
-  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+  "notes": "模型只保存按量参考价；套餐具体价格未采集。Plus 及以上可用 Kimi Code，Go 没有编程额度；当前套餐适用滚动 5 小时与月度额度，legacy 套餐另有每周额度；逐型号准入与窗口见 context_assessment。"
 }

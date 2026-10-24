@@ -4,11 +4,14 @@
 
 Developer API 与 Vertex AI 不是同一价目；免费层、付费层、缓存、长上下文和模态单独核对。
 
+Antigravity 与 Gemini API 是不同产品：同名型号的窗口、参数与缺省不互相继承；Code Assist 通道不认 Gemini API 新增的 `generationConfig.responseFormat`。
+
 先读取 provider.json 的官方来源入口；入口本身不代表当前事实已经核实。具体核对状态以 catalog.json 各条 verification 为准。
 
 ## 独立产品
 
 - [api-global](offerings/api-global/catalog.json)
+- [antigravity](offerings/antigravity/catalog.json)：Antigravity 工具订阅，经 Code Assist 私有 `v1internal` 信封（`gemini_code_assist`）承载；当前只收录图像型号，输入输出按订阅通道实测记录，见 [实测证据](../../evidence/gemini/2026-09-28-antigravity-media-io.md)。
 
 ## 更新纪律
 

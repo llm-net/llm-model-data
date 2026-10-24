@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "provider_id": "gemini",
+  "id": "antigravity",
+  "display_name": "Google Gemini / antigravity",
+  "kind": "tool_subscription",
+  "market": "unconfirmed",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [],
+    "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+    "notes": "逐项核对见模型与价格；不以产品级标记代替子项核对。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "gemini-3-1-flash-image",
+      "request_id": "gemini-3.1-flash-image",
+      "display_name": "Gemini 3.1 Flash Image",
+      "modalities": [
+        "image"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-28T05:41:16Z",
+        "source_ids": [
+          "antigravity-code-assist",
+          "antigravity-models"
+        ],
+        "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+        "notes": "Antigravity 模型页写生图工具使用 Nano Banana 2（未给 ID）；订阅通道以 model=gemini-3.1-flash-image 实测出图，响应 modelVersion 同名；同通道 -preview、flash-lite-image、3-pro-image 返回 404。不保证所有账号或套餐均可用。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+          "notes": "工具订阅不采集实际扣费，仅维护 reference_prices。"
+        },
+        "notes": "工具订阅不采集实际扣费，仅维护 reference_prices。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Gemini API Standard 付费档；Batch 半价与搜索计费不属于此基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "image_output_tokens",
+                "amount": "60",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://ai.google.dev/gemini-api/docs/pricing",
+              "subject": "gemini-3.1-flash-image",
+              "reason": "同平台 Gemini API 对应型号的按量价，仅作订阅消耗示意；本仓库 Gemini 按量目录尚未收录该型号。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-28T06:25:51Z",
+              "source_ids": [
+                "pricing"
+              ],
+              "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+              "notes": "Gemini 3.1 Flash Image Standard 表：输入 0.50（text/image），输出 3（text and thinking）/ 60（images）USD 每百万 token。"
+            },
+            "notes": "输入价同时适用文本与图片输入 token；文本与思考输出按 output_tokens，图像输出按 image_output_tokens。官方折算每张 512 / 1K / 2K / 4K 为 0.045 / 0.067 / 0.101 / 0.151 USD（747 / 1120 / 1680 / 2520 token），本通道实测 usage 计数与之不同，见证据。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-28T06:25:51Z",
+          "source_ids": [
+            "pricing"
+          ],
+          "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+          "notes": "同平台按量价，仅作订阅消耗参考。"
+        },
+        "notes": "按量等价消耗示意，不是订阅真实扣费。"
+      },
+      "notes": "Antigravity 工具订阅经 Code Assist 私有信封调用的图像型号。输入输出按订阅通道实测记录，Gemini API 文档只作对照；实际准入与额度取决于账号与套餐，实测额度按 5 小时窗口重置。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "gemini_code_assist"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T05:41:16Z",
+            "source_ids": [
+              "antigravity-code-assist",
+              "code-assist-cli"
+            ],
+            "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+            "notes": "只核对协议面：本型号在 v1internal:generateContent 上实测成功；不刷新其他能力的核对时间。"
+          },
+          "notes": "确认非流式 v1internal:generateContent（端点与信封见 Google 开源 gemini-cli）；streamGenerateContent 未对本型号实测。不是 Gemini API 公开面，不登记 gemini_generate_content。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "gemini_code_assist",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "request.generationConfig.thinkingConfig.thinkingLevel",
+                  "values": [
+                    "MINIMAL",
+                    "HIGH"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "MINIMAL、HIGH 实测受理；LOW 返回 400 \"Thinking level LOW is not supported for this model\"。Gemini API 文档写缺省 minimal 且不能关闭思考，本通道未独立确认缺省与关闭。"
+                }
+              ],
+              "notes": "HIGH + includeThoughts=true 时响应含思考文本与草稿图、usage 单列 thoughtsTokenCount；includeThoughts 是展示控制，不是思考深度。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T05:41:16Z",
+            "source_ids": [
+              "antigravity-code-assist"
+            ],
+            "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+            "notes": "思考档位独立实测。"
+          },
+          "notes": "只确认请求体档位取值；缺省档位、能否关闭、thinkingBudget 未确认，保持 partial，不从 Gemini API 继承。"
+        },
+        "context_assessment": {
+          "status": "unknown",
+          "reported_value": null,
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "antigravity-code-assist",
+              "antigravity-models",
+              "gemini-image-model"
+            ],
+            "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+            "notes": "查过订阅通道、Antigravity 模型页与 Gemini API 型号页，未找到本产品公布的窗口。"
+          },
+          "notes": "Antigravity 未公布本型号窗口；Gemini API 型号页的 131,072 输入 / 32,768 输出属于按量产品，不继承。"
+        },
+        "media_io": {
+          "status": "partial",
+          "operations": [
+            {
+              "id": "image_generation",
+              "interface": "gemini_code_assist",
+              "endpoint": "POST /v1internal:generateContent",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "request.contents[].parts[].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": null,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "user 消息里的 text part，实测都放在参考图之前；未测只给参考图、不带文本的请求。未找到长度上限。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "request.contents[].parts[].inlineData.data",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": null,
+                  "formats": [
+                    "png",
+                    "jpeg",
+                    "webp",
+                    "gif"
+                  ],
+                  "transports": [
+                    "base64"
+                  ],
+                  "limits": [],
+                  "notes": "inlineData{mimeType, data}，data 为裸 base64，跟在文本 part 之后。实测 14 张、15 张都受理（Gemini API 文档写上限 14 张：10 张物体 + 4 张人物），硬上限未找到；GIF 受理但不在 Gemini API 文档清单内；HEIC / HEIF 未测。单张 14.5 MB PNG（请求 19.4 MB）受理。另一种写法 fileData{mimeType, fileUri} 传 https 地址由上游抓取，只用一个 google.com 图片地址测过、受理。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [
+                    "jpeg"
+                  ],
+                  "delivery": [
+                    "base64"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "响应外层 {\"response\": {…}, \"traceId\": …}；图像在 response.candidates[0].content.parts[].inlineData（mimeType image/jpeg），同一 part 带体积与图像相当的 thoughtSignature。includeThoughts=true 时前面还有 thought:true 的思考文本与草稿图，最终图是最后一张带 thoughtSignature 的图。实测像素：512 档 1:1=512×512、1:4=256×1024、1:8=176×1456、21:9=784×336、3:4=448×592、2:3=416×624、9:16=384×688、16:9=688×384；1K 档 5:4=1152×928、4:3=1200×896；2K 档 3:2=2528×1696；4K 档 1:1=4096×4096。不带 imageConfig 且无参考图时出 1408×768。整份响应 512 档 0.4–1 MB、2K 约 7.8 MB、4K 约 17.3 MB。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "request.generationConfig.imageConfig.aspectRatio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "1:4",
+                    "1:8",
+                    "2:3",
+                    "3:2",
+                    "3:4",
+                    "4:1",
+                    "4:3",
+                    "4:5",
+                    "5:4",
+                    "8:1",
+                    "9:16",
+                    "16:9",
+                    "21:9"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "取值全集来自上游 400 报错原文；9:21、2:1 被拒。不填时：有参考图跟随参考图比例（16:9 参考图出 683×384），无参考图由模型决定（实测 1408×768），不是 1:1。"
+                },
+                {
+                  "field": "request.generationConfig.imageConfig.imageSize",
+                  "type": "enum",
+                  "values": [
+                    "512",
+                    "512P",
+                    "512PX",
+                    "1K",
+                    "2K",
+                    "4K"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "取值全集来自上游 400 报错原文（0.5K 被拒）；512P、512PX 未单独出图。小写 1k 实测也受理。Gemini API 文档写缺省 1K，本通道未确认缺省，不带时实测出 1408×768。"
+                },
+                {
+                  "field": "request.generationConfig.responseModalities",
+                  "type": "string_list",
+                  "values": [
+                    "TEXT",
+                    "IMAGE"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "[\"IMAGE\"]、[\"TEXT\",\"IMAGE\"] 与省略都只返回一张图、没有文本 part；[\"TEXT\"] 只返回文本、不出图。"
+                },
+                {
+                  "field": "request.generationConfig.thinkingConfig.includeThoughts",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "true 时返回思考文本与 thought:true 的草稿图，usage 另列 thoughtsTokenCount。思考深度 thinkingLevel 见 capabilities.reasoning。"
+                }
+              ],
+              "notes": "外层信封 project、model、userAgent、requestType、requestId 由客户端填写，request 是 Gemini GenerateContentRequest。Gemini API 新增的 generationConfig.responseFormat.image 在本通道 400（未知字段）。candidateCount=2 返回 400。tools=[{googleSearch:{}}] 受理并返回 groundingMetadata；searchTypes{webSearch, imageSearch} 受理但未见 imageSearchQueries。seed、temperature、topP、Vertex 的 imageConfig.personGeneration 受理但效果未验证；imageConfig.imageOutputOptions.mimeType=image/png 受理但仍输出 JPEG。历史轮次里不带 thoughtSignature 的模型图像 part 未被拒绝。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T05:41:16Z",
+            "source_ids": [
+              "antigravity-code-assist",
+              "gemini-image-guide"
+            ],
+            "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
+            "notes": "订阅通道逐参数实测（41 个用例、出图 30 张），Gemini API 文档只作对照；不刷新模型身份、价格或其他能力的核对结论。"
+          },
+          "notes": "覆盖 v1internal:generateContent 的文生图与参考图生图。缺口：参考图硬上限、HEIC / HEIF、视频与 PDF 输入、Image Search 是否生效、seed 等采样参数的效果、4K 极端比例像素均未确认；imageSize、aspectRatio 的缺省未确认。"
+        }
+      }
+    }
+  ],
+  "notes": "Google Antigravity 开发工具订阅，经 Code Assist 私有 v1internal 信封承载模型。当前只收录图像型号；文本型号、套餐与额度未收录。Antigravity 条款明文规定以第三方软件访问服务属违约、可致停用账号，收录接口事实不代表获授权。模型价格仅为同平台按量等价消耗示意。"
+}

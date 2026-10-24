@@ -374,6 +374,66 @@
       "url": "https://www.aliyun.com/notice/118332",
       "purpose": "models",
       "notes": "本轮公告外壳可读但正文为空，未作为具体模型已下线证明。"
+    },
+    {
+      "id": "media-wan3-api",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference",
+      "purpose": "models",
+      "notes": "媒体输入输出专项：万相 3.0 视频生成 API 参考（请求头、input.prompt / input.media[] 各 type 限制、parameters、查询响应、素材组合）；小节与 UTC 获取时间见 2026-09-28 media-io 证据。"
+    },
+    {
+      "id": "media-wan3-guide",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-guide",
+      "purpose": "models",
+      "notes": "媒体输入输出专项：万相 3.0 使用指南（模型能力任务类型表、输入素材表、输出视频规格）；用于核对 API 参考，冲突记入证据。"
+    },
+    {
+      "id": "current-qwen-cache",
+      "url": "https://help.aliyun.com/zh/model-studio/context-cache",
+      "purpose": "pricing",
+      "notes": "五个 Qwen 型号的北京显式缓存适用范围、5 分钟 TTL、写入倍率及命中价例外。"
+    },
+    {
+      "id": "current-qwen-pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "purpose": "pricing",
+      "notes": "Qwen3.8 Max / Flash、Qwen3.7 Plus 国内最短输入档非促销标准价。"
+    },
+    {
+      "id": "current-qwen-chat",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-api-via-openai-chat-completions/",
+      "purpose": "models",
+      "notes": "仅 Qwen3.8 Max / Flash 与 Qwen3.7 Plus 的 API 协议、思考或上下文复核；不继承到 Go。"
+    },
+    {
+      "id": "current-qwen-responses",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-api-via-openai-responses",
+      "purpose": "models",
+      "notes": "仅 Qwen3.8 Max / Flash 与 Qwen3.7 Plus 的 API 协议、思考或上下文复核；不继承到 Go。"
+    },
+    {
+      "id": "current-qwen-messages",
+      "url": "https://help.aliyun.com/zh/model-studio/anthropic-api-messages",
+      "purpose": "models",
+      "notes": "仅 Qwen3.8 Max / Flash 与 Qwen3.7 Plus 的 API 协议、思考或上下文复核；不继承到 Go。"
+    },
+    {
+      "id": "current-qwen-native",
+      "url": "https://help.aliyun.com/zh/model-studio/text-generation",
+      "purpose": "models",
+      "notes": "仅 Qwen3.8 Max / Flash 与 Qwen3.7 Plus 的 API 协议、思考或上下文复核；不继承到 Go。"
+    },
+    {
+      "id": "current-qwen-reasoning",
+      "url": "https://help.aliyun.com/zh/model-studio/deep-thinking",
+      "purpose": "models",
+      "notes": "仅 Qwen3.8 Max / Flash 与 Qwen3.7 Plus 的 API 协议、思考或上下文复核；不继承到 Go。"
+    },
+    {
+      "id": "current-qwen-context",
+      "url": "https://help.aliyun.com/zh/model-studio/text-generation-model/",
+      "purpose": "models",
+      "notes": "仅 Qwen3.8 Max / Flash 与 Qwen3.7 Plus 的 API 协议、思考或上下文复核；不继承到 Go。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

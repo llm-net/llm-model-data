@@ -16,7 +16,7 @@
 | [可灵](kling/README.md) | api-cn |
 | [OpenAI](openai/README.md) | api-global, codex |
 | [Anthropic](anthropic/README.md) | api-global, claude-code |
-| [Google Gemini](gemini/README.md) | api-global |
+| [Google Gemini](gemini/README.md) | api-global, antigravity |
 | [xAI](xai/README.md) | api-global, grok-build |
 | [OpenRouter](openrouter/README.md) | api-global |
 | [Groq](groq/README.md) | api-global |

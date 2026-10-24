@@ -1,0 +1,241 @@
+{
+  "scope": "Anthropic / claude-code 的全部现有 8 个模型；不变更 API 目录、套餐或消费者。",
+  "retrieved_at": "2026-10-16T07:40:57Z",
+  "sources": [
+    {
+      "id": "current-code-models",
+      "url": "https://code.claude.com/docs/en/model-config",
+      "purpose": "models",
+      "notes": "Claude Code 当前型号、别名、effort、思考开关与上下文条件；逐模型结论见 claude-code-current 证据。",
+      "sections": [
+        "Available models / Model aliases",
+        "Work with Fable",
+        "default model setting",
+        "Fallback model chains / Automatic model fallback",
+        "Adjust effort level / Extended thinking",
+        "Extended context / Turn off 1M context / Haiku 5.5 context window and pricing"
+      ]
+    },
+    {
+      "id": "current-code-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "purpose": "pricing",
+      "notes": "Claude Code 订阅参考价所用的同平台完整公开按量价表；不证明订阅可用性。",
+      "sections": [
+        "Model pricing / Additional models",
+        "Long context pricing"
+      ]
+    },
+    {
+      "id": "current-code-protocol",
+      "url": "https://code.claude.com/docs/en/llm-gateway-protocol",
+      "purpose": "models",
+      "notes": "Claude Code 官方 Anthropic Messages 传输契约；不从按量 API 推导其他协议面。",
+      "sections": [
+        "API formats",
+        "Optional endpoints and startup traffic"
+      ]
+    }
+  ],
+  "retrieval_notes": "官方 HTML 页面已由浏览工具获取当前正文；.md URL 的直接 HTTP 请求返回 403，未以该失败请求刷新核对时间。",
+  "current_models": "fable=Fable 5.1；opus 与订阅账号 default=Opus 5.5；sonnet=Sonnet 5.5；haiku=Haiku 5.5。当前清单没有需要新增的最新系列。",
+  "model_results": [
+    {
+      "request_id": "claude-fable-5-1",
+      "availability": "active",
+      "selection_evidence": "fable 别名及完整 ID",
+      "context_window_tokens": 1000000,
+      "context_status": "known",
+      "reasoning_coverage": "partial",
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "effort_default": "high",
+      "thinking_can_disable": false,
+      "reference_rates_usd_per_million_tokens": {
+        "input_uncached_tokens": "10",
+        "input_cached_tokens": "0.25",
+        "output_tokens": "50",
+        "cache_write_5m_tokens": "12.5"
+      },
+      "conclusion": "型号、请求名、参考价与协议面保持；复核当前能力说明。"
+    },
+    {
+      "request_id": "claude-fable-5",
+      "availability": "active",
+      "selection_evidence": "完整 ID",
+      "context_window_tokens": 1000000,
+      "context_status": "known",
+      "reasoning_coverage": "partial",
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "effort_default": "high",
+      "thinking_can_disable": false,
+      "reference_rates_usd_per_million_tokens": {
+        "input_uncached_tokens": "10",
+        "input_cached_tokens": "1",
+        "output_tokens": "50",
+        "cache_write_5m_tokens": "12.5"
+      },
+      "conclusion": "型号、请求名、参考价与协议面保持；复核当前能力说明。"
+    },
+    {
+      "request_id": "claude-opus-5-5",
+      "availability": "active",
+      "selection_evidence": "opus 别名及订阅账号 default",
+      "context_window_tokens": 1000000,
+      "context_status": "known",
+      "reasoning_coverage": "partial",
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "effort_default": "medium",
+      "thinking_can_disable": false,
+      "reference_rates_usd_per_million_tokens": {
+        "input_uncached_tokens": "4",
+        "input_cached_tokens": "0.2",
+        "output_tokens": "20",
+        "cache_write_5m_tokens": "5"
+      },
+      "conclusion": "型号、请求名、参考价与协议面保持；复核当前能力说明。"
+    },
+    {
+      "request_id": "claude-opus-5",
+      "availability": "active",
+      "selection_evidence": "自动回退目标及 effort 支持表",
+      "context_window_tokens": 1000000,
+      "context_status": "known",
+      "reasoning_coverage": "partial",
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "effort_default": "high",
+      "thinking_can_disable": true,
+      "reference_rates_usd_per_million_tokens": {
+        "input_uncached_tokens": "5",
+        "input_cached_tokens": "0.5",
+        "output_tokens": "25",
+        "cache_write_5m_tokens": "6.25"
+      },
+      "conclusion": "型号、请求名、参考价与协议面保持；复核当前能力说明。"
+    },
+    {
+      "request_id": "claude-sonnet-5-5",
+      "availability": "active",
+      "selection_evidence": "sonnet 别名及最低客户端版本",
+      "context_window_tokens": 1000000,
+      "context_status": "known",
+      "reasoning_coverage": "partial",
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "effort_default": "medium",
+      "thinking_can_disable": false,
+      "reference_rates_usd_per_million_tokens": {
+        "input_uncached_tokens": "2",
+        "input_cached_tokens": "0.1",
+        "output_tokens": "10",
+        "cache_write_5m_tokens": "2.5"
+      },
+      "conclusion": "型号、请求名、参考价与协议面保持；复核当前能力说明。"
+    },
+    {
+      "request_id": "claude-sonnet-5",
+      "availability": "active",
+      "selection_evidence": "完整 ID 回退配置示例及自动回退目标",
+      "context_window_tokens": 1000000,
+      "context_status": "known",
+      "reasoning_coverage": "partial",
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "effort_default": "high",
+      "thinking_can_disable": true,
+      "reference_rates_usd_per_million_tokens": {
+        "input_uncached_tokens": "2",
+        "input_cached_tokens": "0.2",
+        "output_tokens": "10",
+        "cache_write_5m_tokens": "2.5"
+      },
+      "conclusion": "型号、请求名、参考价与协议面保持；复核当前能力说明。"
+    },
+    {
+      "request_id": "claude-haiku-5-5",
+      "availability": "active",
+      "selection_evidence": "haiku 别名及完整 ID",
+      "context_window_tokens": 1000000,
+      "context_status": "known",
+      "reasoning_coverage": "partial",
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "effort_default": "medium",
+      "thinking_can_disable": false,
+      "reference_rates_usd_per_million_tokens": {
+        "input_uncached_tokens": "0.1",
+        "input_cached_tokens": "0.01",
+        "output_tokens": "0.5",
+        "cache_write_5m_tokens": "0.125"
+      },
+      "conclusion": "型号、请求名、参考价与协议面保持；复核当前能力说明。"
+    },
+    {
+      "request_id": "claude-haiku-4-5",
+      "availability": "active",
+      "selection_evidence": "完整 ID 回退配置示例",
+      "context_window_tokens": null,
+      "context_status": "unknown",
+      "reasoning_coverage": "partial",
+      "effort": null,
+      "effort_default": null,
+      "thinking_can_disable": true,
+      "reference_rates_usd_per_million_tokens": {
+        "input_uncached_tokens": "1",
+        "input_cached_tokens": "0.1",
+        "output_tokens": "5",
+        "cache_write_5m_tokens": "1.25"
+      },
+      "conclusion": "型号、请求名、参考价与协议面保持；复核当前能力说明。"
+    }
+  ],
+  "protocol_conclusion": "全部 8 条保留 anthropic_messages；Claude Code 官方契约列出 /v1/messages 与可选 /v1/messages/count_tokens。没有证据把 OpenAI Chat 或 Responses 加入本订阅；第三方云购买与承载单独处理。",
+  "context_conditions": "已知窗口的 7 个模型维持 1,000,000 tokens；CLAUDE_CODE_DISABLE_1M_CONTEXT=1 是客户端 200,000 tokens 有效上限，开启压缩时压缩，禁用压缩时停止。不能只解释为压缩阈值。Haiku 4.5 的订阅窗口继续 unknown。",
+  "pricing_selection": "每型号独立保存同平台公开标准价、5 分钟缓存写入。Haiku 5.5 取提示不超过 100,000 tokens 档；超过该阈值的输入/缓存读/输出/5分钟写入分别为 0.5/0.05/2.5/0.625 USD/百万 tokens，不另建规则。",
+  "remaining_partial_unknown": [
+    "全部 8 个模型 reasoning.coverage=partial：只登记已确认的客户端控制，其他入口与组织策略未完全展开。",
+    "claude-haiku-4-5 context_assessment.status=unknown；思考默认行为与固定预算范围未知。",
+    "全部 8 个模型 max_output_tokens、input_modalities、tool_calling、structured_output、streaming 未纳入本次已确认字段。",
+    "套餐价格与额度未在本轮复核，保留各自原 verification。"
+  ],
+  "exclusions": "provider.json 手动排除的 claude-haiku-4-5-20251001 未恢复；未因按量价表存在 Mythos 或其他旧型号而扩展订阅范围。",
+  "gemini_scope": "Gemini 目录只有 api-global 与只收录图像的 antigravity，没有 Gemini CLI offering；本次不新建产品。"
+}

@@ -206,6 +206,90 @@
       "url": "https://help.aliyun.com/zh/model-studio/qwen3-6-plus",
       "purpose": "pricing",
       "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "go-docs-current",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "purpose": "subscription",
+      "notes": "Go 当前型号与逐型号 Endpoints；套餐未在本轮更新。"
+    },
+    {
+      "id": "go-models-current",
+      "url": "https://opencode.ai/inference/go/v1/models",
+      "purpose": "models",
+      "notes": "匿名 Go 型号列表；只确认当前请求 ID，不证明协议或窗口。"
+    },
+    {
+      "id": "go-modelsdev-current",
+      "url": "https://models.dev/api.json",
+      "purpose": "models",
+      "notes": "只取 opencode-go 明确的 limit.context 整数；不继承原厂能力或 reasoning_options。"
+    },
+    {
+      "id": "go-console-models",
+      "url": "https://opencode.ai/v2/docs/console/models/",
+      "purpose": "models",
+      "notes": "Cat Jam / Space Bunny 的公开身份线索；不从匿名代号猜开发方。"
+    },
+    {
+      "id": "ref-kimi-pricing-md",
+      "url": "https://platform.kimi.com/docs/pricing/chat.md",
+      "purpose": "pricing",
+      "notes": "Kimi 国内完整按量分量，含 K3 缓存写入。"
+    },
+    {
+      "id": "ref-kimi-cache",
+      "url": "https://platform.kimi.com/docs/guide/context-caching",
+      "purpose": "pricing",
+      "notes": "Kimi K3 缓存 TTL 与互斥 token 分量。"
+    },
+    {
+      "id": "ref-minimax-cache",
+      "url": "https://platform.minimax.cn/docs/api-reference/anthropic-api-compatible-cache.md",
+      "purpose": "pricing",
+      "notes": "MiniMax M2.7 / M2.5 显式缓存 5 分钟 TTL 与四项按量分量。"
+    },
+    {
+      "id": "ref-gpt5-luna",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna.md",
+      "purpose": "pricing",
+      "notes": "GPT 5.6 Luna 官方型号页，Standard 参考价。"
+    },
+    {
+      "id": "ref-anthropic-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "purpose": "pricing",
+      "notes": "Claude Haiku 5.5 全球路由标准短上下文按量价。"
+    },
+    {
+      "id": "ref-gemini-pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "purpose": "pricing",
+      "notes": "Gemini 4 Argon Contributor 当前促销与未来标准价，当前不形成非促销参考基准。"
+    },
+    {
+      "id": "ref-longcat-2-5-pricing",
+      "url": "https://longcat.chat/platform/docs/zh/pricing/longcat-2.5",
+      "purpose": "pricing",
+      "notes": "LongCat 2.5 仅有临时优惠，未找到现行非促销基准。"
+    },
+    {
+      "id": "ref-step-pricing",
+      "url": "https://platform.stepfun.com/docs/zh/guides/pricing/details.md",
+      "purpose": "pricing",
+      "notes": "阶跃星辰国内 Step 5 Preview 当前标准按量价。"
+    },
+    {
+      "id": "ref-step-announcement",
+      "url": "https://platform.stepfun.com/docs/zh/announcements/step-5-preview-price-adjustment.md",
+      "purpose": "pricing",
+      "notes": "Step 5 Preview 当前标准缓存价与老用户保留价的适用条件。"
+    },
+    {
+      "id": "ref-bailian-cache",
+      "url": "https://help.aliyun.com/zh/model-studio/context-cache",
+      "purpose": "pricing",
+      "notes": "Qwen 原厂显式缓存；5 分钟写入分量、命中倍率及 Max / Flash 特例。"
     }
   ],
   "notes": "OpenCode Go 包月套餐资料；参考价按用户指定取各模型源头厂商官网按量价，不采用 Go 用量上限换算表或 Zen 余额价。"

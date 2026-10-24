@@ -384,13 +384,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-23T07:36:30Z",
+        "checked_at": "2026-10-16T07:44:57.215478Z",
         "source_ids": [
-          "r0923-cli",
-          "r0923-composer-2-5"
+          "tool-model-cursor-composer-2-5",
+          "tool-model-cli"
         ],
-        "evidence": "evidence/cursor/2026-09-23-models.md",
-        "notes": "Composer 2.5 的 Fast 档，产品内默认速度。文档页只列 composer-2.5 与 fast 参数；官方 CLI 代码把旧 composer-2-fast 改写为 composer-2.5-fast，设备侧观察到的客户端型号名与之一致。未实调。"
+        "evidence": "evidence/cursor/tool-model-alignment.md",
+        "notes": "当前官方 CLI 的 model-utils.ts 将 composer-2-fast 映射为 composer-2.5-fast，型号页确认 Fast 变体存在。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1230,7 +1230,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -1399,7 +1399,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -1568,7 +1568,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -1737,7 +1737,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -1906,7 +1906,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -2069,7 +2069,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -2246,7 +2246,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -2415,7 +2415,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -2584,7 +2584,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -2753,7 +2753,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -2922,7 +2922,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -3091,7 +3091,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -3260,7 +3260,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -3446,7 +3446,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -3629,7 +3629,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -3785,6 +3785,18 @@
                   "maximum": null,
                   "default": null,
                   "notes": "界面标签保留官方拼写；请求参数未知，不作为可直接发送的 API 枚举。"
+                },
+                {
+                  "kind": "toggle",
+                  "parameter": null,
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "只在 low / medium / high effort 明确支持关闭 thinking；不推断 max 可关闭，默认未知。"
                 }
               ],
               "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。关闭 thinking 仅在 low/medium/high 可用；max 未确认可关闭。"
@@ -3813,7 +3825,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -3991,7 +4003,7 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
         }
       }
     },
@@ -4099,9 +4111,12 @@
         },
         "notes": "按量等价消耗示意，不是订阅实际扣款。虽然价格表 Cache Write 为横杠，型号页 Pricing 正文明示不收缓存写入费，因此记录 cache_write_tokens=0；不是把缺项推成免费。"
       },
-      "notes": "Cursor 旧版个人套餐内的模型；身份与参考价依本平台详情页，使用受套餐和模型访问设置限制。",
+      "notes": "Cursor 旧版个人套餐内的模型；身份与参考价依本平台详情页，使用受套餐和模型访问设置限制。 输入模态保留 2026-10-16 本产品型号页核对，见 evidence/cursor/tool-model-alignment.md，不以本轮未重复记录视为撤回图像输入支持。",
       "capabilities": {
-        "input_modalities": [],
+        "input_modalities": [
+          "text",
+          "image"
+        ],
         "context_window_tokens": null,
         "max_output_tokens": null,
         "tool_calling": null,
@@ -4177,7 +4192,175 @@
             "evidence": "evidence/cursor/2026-10-24-models.md",
             "notes": "核对本产品官方精确型号页；未实调。"
           },
-          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
+          "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-5-fast",
+      "request_id": "claude-opus-5-fast",
+      "display_name": "Claude Opus 5 Fast",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-16T07:40:33.462835Z",
+        "source_ids": [
+          "tool-model-claude-opus-5"
+        ],
+        "evidence": "evidence/cursor/tool-model-alignment.md",
+        "notes": "型号页明确给出 Fast 请求 ID；基础型号与速度变体独立记录。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "50",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台标准速度或已独立登记 Fast 的常规上下文按量参考价，不含地区加价。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/claude-opus-5",
+              "subject": "Claude Opus 5 (Fast Mode)",
+              "reason": "优先采用同平台对应型号公开按量价，完整独立保存数字。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-16T07:40:33.462835Z",
+              "source_ids": [
+                "tool-model-claude-opus-5",
+                "tool-model-pricing"
+              ],
+              "evidence": "evidence/cursor/tool-model-alignment.md",
+              "notes": "核对 Cursor 该型号公开价格表；数字仅为按量参考估价。"
+            },
+            "notes": "按量等价消耗示意；不代表订阅实际扣费。 官方 Cache Write 为 12.5 USD / 百万 token，但型号页未说明缓存时长；现有 meter 仅有 5m / 1h，未猜 TTL，未建模分量不等于免费。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-16T07:40:33.462835Z",
+          "source_ids": [
+            "tool-model-claude-opus-5",
+            "tool-model-pricing"
+          ],
+          "evidence": "evidence/cursor/tool-model-alignment.md",
+          "notes": "核对 Cursor 该型号公开价格表；数字仅为按量参考估价。"
+        },
+        "notes": "按量等价消耗示意；不代表订阅实际扣费。 官方 Cache Write 为 12.5 USD / 百万 token，但型号页未说明缓存时长；现有 meter 仅有 5m / 1h，未猜 TTL，未建模分量不等于免费。"
+      },
+      "notes": "型号页明确给出 Fast 请求 ID；基础型号与速度变体独立记录。 当前 X Subscription 的第三方模型需要 Premium 或更高档；plan_ids 只描述本目录已登记且仍有效的 legacy Cursor 套餐。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-16T07:44:57.215478Z",
+            "source_ids": [
+              "tool-model-claude-opus-5",
+              "tool-model-auth",
+              "tool-model-parameters",
+              "tool-model-cli"
+            ],
+            "evidence": "evidence/cursor/tool-model-alignment.md",
+            "notes": "当前官方 CLI 声明 AgentService.Run 为双向流；官方型号卡和 CLI 参数分别确认本型号 Agent 支持和选模入口。"
+          },
+          "notes": "本产品通过 Cursor 官方客户端私有 Agent ConnectRPC / protobuf 使用；当前官方 CLI 的 agent.v1.AgentService.Run 声明为 BiDiStreaming，另有 RunSSE / RunPoll。各型号卡均标记 Agent，CLI 使用 --model 选择模型；不从原厂 API 继承 Chat、Responses 或 Messages。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "仅记录 Cursor 本型号界面；私有 RPC 参数、完整预算与未明确的默认行为仍未知。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-16T07:40:33.462835Z",
+            "source_ids": [
+              "tool-model-claude-opus-5",
+              "tool-model-pricing"
+            ],
+            "evidence": "evidence/cursor/tool-model-alignment.md",
+            "notes": "型号卡逐项核对 Thinking、effort 与套餐条件；未知控制保持 partial。"
+          },
+          "notes": "型号页明确支持 thinking 变体并推荐 high；推荐值不作为默认值，完整档位、开关与 RPC 参数未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "300k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-16T07:40:33.462835Z",
+            "source_ids": [
+              "tool-model-claude-opus-5"
+            ],
+            "evidence": "evidence/cursor/tool-model-alignment.md",
+            "notes": "核对本产品常规与最大窗口原文；仅标称规格，未证实整数 token 边界。"
+          },
+          "notes": "Cursor 型号卡常规窗口 300k；Max context 1M。仅有 k / M 缩写，未确认精确整数，不自行换算。 型号页将扩展窗口称为 Max Mode；总价页说明 Max Mode 仅适用于 legacy request-based 套餐。当前套餐扩展窗口的具体开启入口未完整说明。"
         }
       }
     }

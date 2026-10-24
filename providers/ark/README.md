@@ -40,6 +40,6 @@
 
 - 模型清单以各自套餐概览的支持模型表为准：Agent Plan 表逐行给出 Small / Medium / Large / Max 适用性，写进 `plan_ids`；Coding Plan 的 Lite / Pro 售价未取得，plans 为空。
 - Coding Plan 表只写展示名；请求名要有本产品文档或官方 ark-cli 配置里的小写 Model Name 才填，否则 request_id 为 null。
-- Agent Plan 的语音模型走豆包语音 openspeech 专属路径，协议面尚未登记，暂不收录；两产品的 doubao-embedding-vision 也不收录。
+- Agent Plan 的语音合成 doubao-seed-tts-2.0 走豆包语音 openspeech 专属路径（`X-Api-Key` 专属 Key，`X-Api-Resource-Id: seed-tts-2.0` 即 request_id），以 `ark_tts`（V3 HTTP Chunked 单向流式）收录；同型号的 WebSocket 接口是另一套二进制协议，不在此面。方舟价格表没有语音合成，参考价取豆包语音按调用后付费价。流式语音识别 doubao-seed-asr-2.0 协议面未登记，暂不收录；两产品的 doubao-embedding-vision 也不收录。
 
-核对记录见 [2026-09-28 套餐补全](../../evidence/ark/2026-09-28-plans.md)。
+核对记录见 [2026-09-28 套餐补全](../../evidence/ark/2026-09-28-plans.md) 与 [语音合成收录](../../evidence/ark/2026-09-28-tts.md)。

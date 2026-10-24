@@ -15,6 +15,163 @@ c = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(c)
 
 
+def media_operation():
+    return {
+        "id": "speech_synthesis", "interface": "ark_tts", "endpoint": "POST /api/v3/plan/tts/unidirectional",
+        "mode": "stream",
+        "inputs": [{"role": "text", "field": "req_params.text", "required": True, "min_items": None, "max_items": 1,
+                    "formats": [], "transports": ["inline"], "limits": [], "notes": None}],
+        "outputs": [{"media": "audio", "formats": ["mp3"], "delivery": ["stream"], "max_items": 1,
+                     "url_ttl_seconds": None, "limits": [], "notes": None}],
+        "params": [{"field": "req_params.audio_params.sample_rate", "type": "integer", "values": [16000, 24000],
+                    "min": None, "max": None, "unit": "hertz", "default": 24000, "required": False, "notes": None}],
+        "notes": None,
+    }
+
+
+class MediaIOContracts(unittest.TestCase):
+    def setUp(self):
+        self.provider = c.read_json(ROOT / "providers/ark/provider.json")
+        self.data = c.read_json(ROOT / "providers/ark/offerings/agent-plan-cn/catalog.json")
+        self.tts = next(m for m in self.data["models"] if m["request_id"] == "seed-tts-2.0")
+        self.text = next(m for m in self.data["models"] if m["modalities"] == ["text"])
+
+    def check(self):
+        # The fixtures replace real contracts; drop shared value sets left without a reference.
+        used = {p.get("values_ref") for m in self.data["models"]
+                for op in m["capabilities"].get("media_io", {}).get("operations", []) for p in op["params"]}
+        sets = self.data.get("media_value_sets", {})
+        for name in [n for n in sets if n not in used and not n.startswith("test-")]:
+            del sets[name]
+        c.check_offering(ROOT, self.data, self.provider)
+
+    def set_known(self, op=None):
+        self.tts["capabilities"]["media_io"] = {
+            "status": "known", "operations": [op or media_operation()],
+            "verification": {"status": "verified", "checked_at": "2026-09-28T02:43:49Z",
+                             "source_ids": ["agent-plan-voice"], "evidence": "evidence/ark/2026-09-28-tts.md",
+                             "notes": "测试样例。"},
+            "notes": "测试样例。",
+        }
+        return self.tts["capabilities"]["media_io"]["operations"][0]
+
+    def test_known_contract_validates(self):
+        self.set_known()
+        self.check()
+
+    def test_non_text_model_needs_media_io(self):
+        del self.tts["capabilities"]["media_io"]
+        with self.assertRaisesRegex(c.CatalogError, "non-text models need media_io"):
+            self.check()
+
+    def test_text_model_cannot_carry_media_io(self):
+        self.text["capabilities"]["media_io"] = deepcopy(self.tts["capabilities"]["media_io"])
+        with self.assertRaisesRegex(c.CatalogError, "text models do not carry media_io"):
+            self.check()
+
+    def test_unknown_lists_no_operations(self):
+        self.set_known()
+        media = self.tts["capabilities"]["media_io"]
+        media["status"] = "unknown"
+        media["verification"].update(status="needs_review", checked_at=None)
+        with self.assertRaisesRegex(c.CatalogError, "unknown media_io must not list operations"):
+            self.check()
+
+    def test_known_needs_verified_evidence(self):
+        self.set_known()
+        v = self.tts["capabilities"]["media_io"]["verification"]
+        v.update(status="needs_review", checked_at=None)
+        with self.assertRaisesRegex(c.CatalogError, "needs its own verified evidence"):
+            self.check()
+
+    def test_operation_interface_must_be_listed(self):
+        self.set_known()["interface"] = "ark_video"
+        with self.assertRaisesRegex(c.CatalogError, "interface not listed"):
+            self.check()
+
+    def test_output_must_match_modality(self):
+        self.set_known()["outputs"][0]["media"] = "video"
+        with self.assertRaisesRegex(c.CatalogError, "no output matches model modalities"):
+            self.check()
+
+    def test_field_is_input_or_param(self):
+        op = self.set_known()
+        op["params"][0]["field"] = "req_params.text"
+        with self.assertRaisesRegex(c.CatalogError, "either an input or a parameter"):
+            self.check()
+
+    def test_default_must_be_allowed(self):
+        self.set_known()["params"][0]["default"] = 44100
+        with self.assertRaisesRegex(c.CatalogError, "default outside values"):
+            self.check()
+
+    def test_values_and_range_are_exclusive(self):
+        self.set_known()["params"][0]["min"] = 8000
+        with self.assertRaisesRegex(c.CatalogError, "either values or range"):
+            self.check()
+
+    def test_enum_needs_string_values(self):
+        param = self.set_known()["params"][0]
+        param.update(type="enum", unit=None, default=None)
+        with self.assertRaisesRegex(c.CatalogError, "enum needs string values"):
+            self.check()
+
+    def test_number_range_uses_decimal_strings(self):
+        param = self.set_known()["params"][0]
+        param.update(type="number", values=None, min="0.5", max="0.2", default=None, unit="ratio")
+        with self.assertRaisesRegex(c.CatalogError, "min exceeds max"):
+            self.check()
+
+    def test_limit_needs_a_bound(self):
+        self.set_known()["inputs"][0]["limits"] = [
+            {"measure": "length", "min": None, "max": None, "unit": "character", "notes": None}]
+        with self.assertRaisesRegex(c.CatalogError, "limit needs min or max"):
+            self.check()
+
+    def value_set(self):
+        self.data.setdefault("media_value_sets", {})["test-rates"] = {
+            "values": [16000, 24000], "labels": {"24000": "缺省"},
+            "verification": {"status": "verified", "checked_at": "2026-09-28T02:43:49Z",
+                             "source_ids": ["agent-plan-voice"], "evidence": "evidence/ark/2026-09-28-tts.md",
+                             "notes": "测试样例。"},
+            "notes": "测试样例。"}
+        param = self.set_known()["params"][0]
+        param.update(values=None, values_ref="test-rates")
+        return param
+
+    def test_shared_value_set_validates(self):
+        self.value_set()
+        self.check()
+
+    def test_value_set_reference_must_exist(self):
+        self.value_set()["values_ref"] = "missing"
+        with self.assertRaisesRegex(c.CatalogError, "unknown media value set"):
+            self.check()
+
+    def test_value_set_default_must_be_member(self):
+        self.value_set()["default"] = 44100
+        with self.assertRaisesRegex(c.CatalogError, "default outside values"):
+            self.check()
+
+    def test_value_set_cannot_be_orphaned(self):
+        self.value_set()
+        self.data["media_value_sets"]["test-unused"] = deepcopy(self.data["media_value_sets"]["test-rates"])
+        with self.assertRaisesRegex(c.CatalogError, "not referenced"):
+            self.check()
+
+    def test_value_set_labels_stay_inside_set(self):
+        self.value_set()
+        self.data["media_value_sets"]["test-rates"]["labels"]["8000"] = "越界"
+        with self.assertRaisesRegex(c.CatalogError, "label for a value outside the set"):
+            self.check()
+
+    def test_schema_rejects_unregistered_role(self):
+        schema = c.read_json(ROOT / "schemas/catalog.schema.json")
+        validator = c.Draft202012Validator(schema)
+        self.set_known()["inputs"][0]["role"] = "voice"
+        self.assertFalse(validator.is_valid(self.data))
+
+
 class DataContracts(unittest.TestCase):
     def setUp(self):
         self.provider = c.read_json(ROOT / "providers/deepseek/provider.json")
@@ -353,6 +510,27 @@ class ProtocolContracts(unittest.TestCase):
                 with self.assertRaisesRegex(c.CatalogError, "unknown or legacy protocol face"):
                     self.check()
 
+    def test_ark_tts_is_an_audio_vendor_face_not_a_text_face(self):
+        faces = c.read_json(ROOT / "schemas/protocol-faces.json")
+        self.assertEqual(faces["ark_tts"]["modalities"], ["audio"])
+        self.data["models"][0]["capabilities"]["interfaces"] = ["ark_tts"]
+        with self.assertRaisesRegex(c.CatalogError, "does not match output modality"):
+            self.check()
+
+    def test_agent_plan_tts_keeps_resource_id_and_billable_characters(self):
+        data = c.read_json(ROOT / "providers/ark/offerings/agent-plan-cn/catalog.json")
+        provider = c.read_json(ROOT / "providers/ark/provider.json")
+        tts = c.lookup_model([data], "ark", "agent-plan-cn", "seed-tts-2.0")
+        self.assertEqual(tts["capabilities"]["interfaces"], ["ark_tts"])
+        self.assertEqual(tts["usage_prices"]["status"], "not_applicable")
+        rate = tts["reference_prices"]["rules"][0]["rates"][0]
+        self.assertEqual((rate["meter"], rate["amount"], rate["per"], rate["unit"]),
+                         ("billable_characters", "3", 10000, "character"))
+        self.assertEqual(rate["quantity"]["fields"], ["$.usage.text_words"])
+        rate["unit"] = "byte"
+        with self.assertRaisesRegex(c.CatalogError, "meter/unit mismatch"):
+            c.check_offering(ROOT, data, provider)
+
     def test_price_verification_cannot_substitute_protocol_evidence(self):
         v = self.data["models"][0]["capabilities"]["interface_assessment"]["verification"]
         v.update(status="needs_review", checked_at=None)
@@ -399,12 +577,36 @@ class ProtocolContracts(unittest.TestCase):
         with self.assertRaisesRegex(c.CatalogError, "duplicate"):
             c.check_offering(ROOT, data, provider)
 
+    def test_code_assist_is_only_a_google_tool_subscription_face(self):
+        faces = c.read_json(ROOT / "schemas/protocol-faces.json")
+        self.assertEqual(faces["gemini_code_assist"]["modalities"], ["text", "image"])
+        self.data["models"][0]["capabilities"]["interfaces"] = ["gemini_code_assist"]
+        with self.assertRaisesRegex(c.CatalogError, "Google tool subscriptions"):
+            self.check()
+
+    def test_xai_imagine_faces_are_not_openai_image(self):
+        faces = c.read_json(ROOT / "schemas/protocol-faces.json")
+        self.assertEqual(faces["xai_image"]["modalities"], ["image"])
+        self.assertEqual(faces["xai_video"]["modalities"], ["video"])
+        grok = c.read_json(ROOT / "providers/xai/offerings/grok-build/catalog.json")
+        media = [m for m in grok["models"] if m["modalities"] != ["text"]]
+        self.assertTrue(media)
+        for model in media:
+            interfaces = model["capabilities"]["interfaces"]
+            self.assertNotIn("openai_image", interfaces)
+            self.assertTrue(set(interfaces) <= {"xai_image", "xai_video"})
+
     def test_tool_subscription_is_not_provider_api(self):
-        def interfaces(provider, offering):
+        def interfaces(provider, offering, text_only=False):
             data = c.read_json(ROOT / f"providers/{provider}/offerings/{offering}/catalog.json")
-            return [m["capabilities"]["interfaces"] for m in data["models"]]
+            return [m["capabilities"]["interfaces"] for m in data["models"]
+                    if not text_only or m["modalities"] == ["text"]]
         self.assertTrue(all(x == ["cursor_agent"] for x in interfaces("cursor", "individual")))
-        self.assertTrue(all(x == ["openai_responses"] for x in interfaces("openai", "codex")))
+        self.assertTrue(all(x == ["openai_responses"] for x in interfaces("openai", "codex", text_only=True)))
+        codex = c.read_json(ROOT / "providers/openai/offerings/codex/catalog.json")
+        for model in codex["models"]:
+            if model["modalities"] != ["text"]:
+                self.assertTrue(set(model["capabilities"]["interfaces"]) <= {"openai_image", "openai_responses"})
         self.assertTrue(all(x == ["anthropic_messages"] for x in interfaces("anthropic", "claude-code")))
         self.assertTrue(all("openai_responses" not in x for x in interfaces("bailian", "coding-plan-cn")))
 
@@ -431,16 +633,16 @@ class ReasoningContracts(unittest.TestCase):
     def test_codex_partial_records_expose_request_effort_without_ui_translation(self):
         data = c.read_json(ROOT / "providers/openai/offerings/codex/catalog.json")
         for model in data["models"]:
+            if model["modalities"] != ["text"]:
+                continue  # 图像型号经 image_generation 工具承载，没有 reasoning.effort
             reasoning = model["capabilities"]["reasoning"]
             profiles = {p["surface"]: p for p in reasoning["profiles"]}
             if model["id"] == "gpt-6-1-sol":
-                # 新型号只有产品界面证据，不能从标签补造请求枚举。
-                self.assertEqual(set(profiles), {"client_ui"})
+                # 新界面标签与此前独立核实的请求、客户端设置分别保留。
+                self.assertEqual(set(profiles), {"client_ui", "api_request", "client_setting"})
                 control = profiles["client_ui"]["controls"][0]
                 self.assertEqual(control["parameter"], "/model")
                 self.assertEqual(control["values"], ["Light", "Medium", "High", "Extra High", "Max"])
-                self.assertEqual(reasoning["coverage"], "partial")
-                continue
             request = profiles["api_request"]
             self.assertEqual(request["interface"], "openai_responses")
             effort = request["controls"][0]
@@ -641,6 +843,16 @@ class ApprovalFreshness(unittest.TestCase):
                 if context["status"] in {"partial", "unknown"}:
                     self.assertIn(f"{doc['provider_id']}/{doc['id']}/{model['id']}: "
                                   f"{context['status']}", report)
+
+    def test_review_keeps_media_io_gaps_visible_without_data_changes(self):
+        c.review(self.root, "HEAD")
+        report = (self.root / ".review/REVIEW.md").read_text().split("## 媒体输入输出待核对清单")[1]
+        for path in (self.root / "providers").glob("*/offerings/*/catalog.json"):
+            doc = c.read_json(path)
+            for model in doc["models"]:
+                media = model["capabilities"].get("media_io")
+                if media is not None and media["status"] != "known":
+                    self.assertIn(f"{doc['provider_id']}/{doc['id']}/{model['id']}: {media['status']}", report)
 
     def test_new_untracked_data_invalidates_confirmation(self):
         expected = c.review(self.root, "HEAD")

@@ -1,0 +1,182 @@
+{
+  "artifact": "@openai/codex 0.163.0-linux-x64 (npm)",
+  "artifact_path": "package/vendor/x86_64-unknown-linux-musl/bin/codex",
+  "artifact_sha256": "399ff69c431c066e40de318fba45c2b07f45a76b19939d247ee4828fc70c4215",
+  "npm_integrity": "sha512-uwRaOsrYogLQhcxAM/GoeWrw0QIWEMRo7c9gM8sKAviVkZQHlu9kRLJ5PkufbV+ABGjyZgIwiFdJ0LCJ0N6e8w==",
+  "checked_at": "2026-10-16T07:47:02Z",
+  "models": [
+    {
+      "slug": "gpt-6-astra",
+      "display_name": "GPT-6-Astra",
+      "visibility": "list",
+      "minimal_client_version": "0.153.0",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "low",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "upgrade_to": null
+    },
+    {
+      "slug": "gpt-6.1-sol",
+      "display_name": "GPT-6.1-Sol",
+      "visibility": "list",
+      "minimal_client_version": "0.153.0",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "low",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "upgrade_to": null
+    },
+    {
+      "slug": "gpt-6-sol",
+      "display_name": "GPT-6-Sol",
+      "visibility": "list",
+      "minimal_client_version": "0.155.0",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "upgrade_to": null
+    },
+    {
+      "slug": "gpt-6-luna",
+      "display_name": "GPT-6-Luna",
+      "visibility": "list",
+      "minimal_client_version": "0.155.0",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "upgrade_to": null
+    },
+    {
+      "slug": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol",
+      "visibility": "list",
+      "minimal_client_version": "0.144.0",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "low",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "upgrade_to": "gpt-6-sol"
+    },
+    {
+      "slug": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra",
+      "visibility": "list",
+      "minimal_client_version": "0.144.0",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "upgrade_to": "gpt-6-sol"
+    },
+    {
+      "slug": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna",
+      "visibility": "list",
+      "minimal_client_version": "0.144.0",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 872000,
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "upgrade_to": "gpt-6-luna"
+    },
+    {
+      "slug": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "visibility": "list",
+      "minimal_client_version": "0.124.0",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "context_window": 272000,
+      "max_context_window": 272000,
+      "default_reasoning_level": "medium",
+      "supported_reasoning_levels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "upgrade_to": "gpt-6-sol"
+    }
+  ],
+  "notes": "仅摘录公开客户端静态模型元数据；官方 npm 包完整性与本机二进制 SHA-256 一致。可见清单不覆盖订阅退役公告，运行时账号目录另行决定准入。"
+}

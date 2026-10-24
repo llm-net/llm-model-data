@@ -10,7 +10,7 @@
     "status": "needs_review",
     "checked_at": null,
     "source_ids": [],
-    "evidence": "evidence/opencode/2026-09-23-go.md",
+    "evidence": "evidence/opencode/go-current.json",
     "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
   },
   "plans": [
@@ -172,7 +172,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -338,7 +338,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -496,7 +496,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -656,7 +656,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -816,7 +816,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -976,7 +976,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -1134,7 +1134,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -1294,7 +1294,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -1518,7 +1518,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -1741,7 +1741,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -1964,7 +1964,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -2191,7 +2191,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -2351,7 +2351,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -2509,7 +2509,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -2663,7 +2663,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -2821,7 +2821,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -2969,7 +2969,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -3127,7 +3127,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -3230,7 +3230,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -3335,7 +3335,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -3489,7 +3489,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -3643,7 +3643,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -3750,7 +3750,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -3857,7 +3857,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -3962,7 +3962,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -4122,7 +4122,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -4282,7 +4282,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -4442,7 +4442,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -4600,7 +4600,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -4760,7 +4760,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -4914,7 +4914,7 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [],
-          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "evidence": "evidence/opencode/go-current.json",
           "notes": "订阅仅保存按量参考价，不调查实际扣费。"
         },
         "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
@@ -6161,6 +6161,218 @@
             "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
           },
           "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+        }
+      }
+    },
+    {
+      "id": "cat-jam-free",
+      "request_id": "cat-jam-free",
+      "display_name": "Cat Jam Free",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-16T07:57:03.198617Z",
+        "source_ids": [
+          "go-docs-current",
+          "go-models-current"
+        ],
+        "evidence": "evidence/opencode/go-current.json",
+        "notes": "当前 Go Endpoints 与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/go-current.json",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "go-console-models",
+            "go-docs-current"
+          ],
+          "evidence": "evidence/opencode/go-current.json",
+          "notes": "官方匿名模型未披露可确认的开发方身份及原厂价；不猜底模，不采用 Go 免费或余额价。"
+        },
+        "notes": "官方匿名模型未披露可确认的开发方身份及原厂价；不猜底模，不采用 Go 免费或余额价。"
+      },
+      "notes": "Go 当前 Endpoints 表列出，端点 https://opencode.ai/inference/go/openai/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。 Go 的临时免费标记不代表开发方永久零参考价。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-16T07:57:03.198617Z",
+            "source_ids": [
+              "go-docs-current"
+            ],
+            "evidence": "evidence/opencode/go-current.json",
+            "notes": "逐型号核对 Go 当前 Endpoints 表；未实调。"
+          },
+          "notes": "Go Endpoints 表仅确认此协议面；其余 OpenAI Chat / OpenAI Responses / Anthropic Messages 及适用原生面的逐型号可用性未公布，整体 partial。对外使用 Endpoints 表的原始 Model ID；opencode-go/ 仅为客户端配置前缀，Gemini 原生面把型号放在 URL 路径中。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs-current",
+              "go-modelsdev-current"
+            ],
+            "evidence": "evidence/opencode/go-current.json",
+            "notes": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。"
+          },
+          "notes": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-16T07:57:03.198617Z",
+            "source_ids": [
+              "go-modelsdev-current",
+              "go-docs-current"
+            ],
+            "evidence": "evidence/opencode/go-current.json",
+            "notes": "仅取 models.dev opencode-go 条目的 limit.context；不取原厂条目。"
+          },
+          "notes": "OpenCode 客户端使用的 opencode-go 模型元数据整数上下文窗口；不是原厂 API 窗口，不等于输出上限或压缩阈值，未实测。"
+        }
+      }
+    },
+    {
+      "id": "space-bunny",
+      "request_id": "space-bunny",
+      "display_name": "Space Bunny",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-16T07:57:03.198617Z",
+        "source_ids": [
+          "go-docs-current",
+          "go-models-current"
+        ],
+        "evidence": "evidence/opencode/go-current.json",
+        "notes": "当前 Go Endpoints 与匿名型号列表均列出；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/go-current.json",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "go-console-models",
+            "go-docs-current"
+          ],
+          "evidence": "evidence/opencode/go-current.json",
+          "notes": "未确认此匿名模型的开发方身份及原厂公开价格；不按名字猜底模，不采用 Go 用量换算价。"
+        },
+        "notes": "未确认此匿名模型的开发方身份及原厂公开价格；不按名字猜底模，不采用 Go 用量换算价。"
+      },
+      "notes": "Go 当前 Endpoints 表列出，端点 https://opencode.ai/inference/go/openai/v1/chat/completions；实际准入依 Go 订阅、用量上限与地区。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-16T07:57:03.198617Z",
+            "source_ids": [
+              "go-docs-current"
+            ],
+            "evidence": "evidence/opencode/go-current.json",
+            "notes": "逐型号核对 Go 当前 Endpoints 表；未实调。"
+          },
+          "notes": "Go Endpoints 表仅确认此协议面；其余 OpenAI Chat / OpenAI Responses / Anthropic Messages 及适用原生面的逐型号可用性未公布，整体 partial。对外使用 Endpoints 表的原始 Model ID；opencode-go/ 仅为客户端配置前缀，Gemini 原生面把型号放在 URL 路径中。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "go-docs-current",
+              "go-modelsdev-current"
+            ],
+            "evidence": "evidence/opencode/go-current.json",
+            "notes": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。"
+          },
+          "notes": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-16T07:57:03.198617Z",
+            "source_ids": [
+              "go-modelsdev-current",
+              "go-docs-current"
+            ],
+            "evidence": "evidence/opencode/go-current.json",
+            "notes": "仅取 models.dev opencode-go 条目的 limit.context；不取原厂条目。"
+          },
+          "notes": "OpenCode 客户端使用的 opencode-go 模型元数据整数上下文窗口；不是原厂 API 窗口，不等于输出上限或压缩阈值，未实测。"
         }
       }
     }

@@ -546,7 +546,7 @@
                   "notes": "订阅快速开始只明确 output_config.effort=max；其余档位和默认值未从本产品独立确认。"
                 }
               ],
-              "notes": "参数省略仍思考，默认 max；不借用 M3 的模式开关行为。"
+              "notes": "本产品仅确认示例使用 output_config.effort=max；省略参数时的默认行为及能否关闭尚未独立确认。"
             }
           ],
           "verification": {
@@ -759,7 +759,7 @@
                   "notes": "订阅快速开始只明确 output_config.effort=max；其余档位和默认值未从本产品独立确认。"
                 }
               ],
-              "notes": "参数省略仍思考，默认 max；不借用 M3 的模式开关行为。"
+              "notes": "本产品仅确认示例使用 output_config.effort=max；省略参数时的默认行为及能否关闭尚未独立确认。"
             }
           ],
           "verification": {

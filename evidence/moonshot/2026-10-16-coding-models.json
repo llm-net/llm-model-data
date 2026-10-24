@@ -1,0 +1,144 @@
+{
+  "checked_at": "2026-10-16T07:48:33.668811Z",
+  "scope": [
+    "moonshot/kimi-code/k3",
+    "moonshot/kimi-code/k3-256k",
+    "moonshot/kimi-code/kimi-for-coding",
+    "moonshot/kimi-code/kimi-for-coding-highspeed",
+    "moonshot/api-cn/kimi-k3"
+  ],
+  "sources": [
+    {
+      "id": "refresh-code-models",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "retrieved_at": "2026-10-16T07:43:08.173408Z"
+    },
+    {
+      "id": "refresh-code-codex",
+      "url": "https://www.kimi.com/code/docs/en/third-party-tools/codex.html",
+      "retrieved_at": "2026-10-16T07:43:08.173408Z"
+    },
+    {
+      "id": "refresh-code-claude",
+      "url": "https://www.kimi.com/code/docs/en/third-party-tools/claude-code.html",
+      "retrieved_at": "2026-10-16T07:43:08.173408Z"
+    },
+    {
+      "id": "refresh-code-membership",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/membership.html",
+      "retrieved_at": "2026-10-16T07:43:08.173408Z"
+    },
+    {
+      "id": "refresh-kimi-pricing",
+      "url": "https://platform.kimi.com/docs/pricing/chat.md",
+      "retrieved_at": "2026-10-16T07:43:08.173408Z"
+    },
+    {
+      "id": "refresh-kimi-cache",
+      "url": "https://platform.kimi.com/docs/guide/context-caching",
+      "retrieved_at": "2026-10-16T07:43:08.173408Z"
+    },
+    {
+      "id": "refresh-k3-guide",
+      "url": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart",
+      "retrieved_at": "2026-10-16T07:43:08.173408Z"
+    }
+  ],
+  "findings": [
+    {
+      "section": "Model Overview / How to Switch Models",
+      "models": {
+        "k3": {
+          "version": "K3",
+          "context_window_tokens": 1048576,
+          "effort": [
+            "low",
+            "high",
+            "max"
+          ],
+          "default_effort": "high"
+        },
+        "k3-256k": {
+          "version": "K3",
+          "context_window_tokens": 262144,
+          "effort": [
+            "low",
+            "high",
+            "max"
+          ],
+          "default_effort": "high"
+        },
+        "kimi-for-coding": {
+          "version": "K2.8 Preview",
+          "context_window_tokens": 1048576,
+          "effort": [
+            "low",
+            "high",
+            "max"
+          ],
+          "default_effort": "max"
+        },
+        "kimi-for-coding-highspeed": {
+          "version": "K2.7 Code HighSpeed",
+          "context_window_tokens": 262144,
+          "reasoning": "Thinking:ON"
+        }
+      },
+      "notes": "四请求名均在当前订阅模型表。HighSpeed 不适用表中其他列的 effort 档位；关闭 K3/K2.8 思考会改由 K2.8 Preview 承载。"
+    },
+    {
+      "section": "Codex introduction / Membership / Step 1 / Step 2 / Switching reasoning effort",
+      "models": [
+        "k3",
+        "k3-256k",
+        "kimi-for-coding",
+        "kimi-for-coding-highspeed"
+      ],
+      "protocol": "openai_responses",
+      "notes": "Membership 表逐个列四个请求名；coding/v1 端点 wire_api=responses，开头确认文本/图片输入，不支持视频。后面的 models.json 只是 K3 系列示例；K3 的 /model 提供 low/high/max、默认 high。Responses 请求字段仍未逐型号完整公开。"
+    },
+    {
+      "section": "Membership Tiers / Quota and Limits",
+      "notes": "Plus 及以上可用 Code 与 K3；Pro 及以上可用 K3 1M 和 HighSpeed。legacy K3 要 Moderato，1M/HighSpeed 要 Allegretto，标准 coding 要 Andante。当前套餐只有 5 小时和月度窗口；legacy 另有每周窗口。未采集套餐价和真实扣费。"
+    },
+    {
+      "section": "模型定价 / K3 系列模型 / K2 系列模型",
+      "currency": "CNY",
+      "per": 1000000,
+      "unit": "token",
+      "rates": {
+        "kimi-k3": {
+          "input_uncached_tokens": "20",
+          "input_cached_tokens": "2",
+          "output_tokens": "100",
+          "cache_write_5m_tokens": "20",
+          "cache_write_1h_tokens": "40"
+        },
+        "kimi-k2.7-code": {
+          "input_uncached_tokens": "6.5",
+          "input_cached_tokens": "1.3",
+          "output_tokens": "27"
+        },
+        "kimi-k2.7-code-highspeed": {
+          "input_uncached_tokens": "13",
+          "input_cached_tokens": "2.6",
+          "output_tokens": "54"
+        }
+      },
+      "notes": "K2.8 Preview 按用户指定参考 K2.7 Code，并非官方同价。K3 表明确上下文 1,048,576 tokens。"
+    },
+    {
+      "section": "上下文缓存 / 查看缓存读写用量",
+      "notes": "K3 缓存读取、缓存写入和未缓存输入为互斥 token 分量；总输入须扣除读取与写入后计算未缓存输入，不能重复收费。5m 为缺省 TTL；1h 写入使用独立分量。 Chat/Responses 总输入含读取与写入，Messages input_tokens 排除这两者。K3 精确示例确认三个协议面。"
+    },
+    {
+      "section": "Kimi K3 / 推理强度",
+      "notes": "API K3 始终思考；Chat 顶层 reasoning_effort 支持 low/high/max，默认 max。不得套用订阅的默认 high。"
+    }
+  ],
+  "gaps": [
+    "全部 Kimi Code 型号的逐协议请求字段未完整公布；HighSpeed effort 与可关闭性未知。",
+    "API K3 的 Responses / Messages 思考参数尚未完整核对。",
+    "Responses 不支持视频；产品级输入模态是多协议的能力并集，具体限制须结合 interface_assessment.notes。"
+  ]
+}

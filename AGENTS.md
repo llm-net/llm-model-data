@@ -9,6 +9,7 @@
 - 模型主键是 (provider_id, offering_id, model.id)。request_id 保留官方大小写和斜杠；未知写 null，不根据展示名猜请求名。
 - **上下文长度是新增模型与每次更新的必查项**：先读 [docs/CONTEXT.md](docs/CONTEXT.md)，逐模型查询本平台、本产品官方窗口，填写 `capabilities.context_window_tokens` 与独立 `context_assessment`。包括全部订阅产品；不从同名原厂继承，不混淆输入 / 输出上限、压缩阈值与计费阶梯。查不到写 unknown 与原因；只有标称规格写 partial，保留原始写法，全部 partial / unknown 必须进入审阅报告。
 - **思考能力是每次更新的必查项**：先读 [docs/REASONING.md](docs/REASONING.md)，逐模型填写 `capabilities.reasoning`（支持状态、协议 / 工具入口、官方档位与参数、开关、预算、默认行为和独立证据）。不从原厂、价格或同名订阅继承；部分和未知必须列入审阅报告。
+- **非文本模型的输入输出契约**：先读 [docs/MEDIA-IO.md](docs/MEDIA-IO.md)，逐模型维护 `capabilities.media_io`（操作、输入、输出、参数）与独立 verification。只记厂商原样字段与取值，不跨厂商归一，不写消费者策略；同名型号不跨产品继承。查不到写 unknown / partial，全部进入审阅报告。
 - **协议面是每次更新的必查项**：先读 [docs/PROTOCOLS.md](docs/PROTOCOLS.md)，逐模型维护 `capabilities.interfaces` 与独立 `interface_assessment`，包括所有订阅产品。缺项明示 unknown / partial，不从价格、模态、原厂或整家平台能力推导。校验器会拒绝漏填、旧面名、缺证据和模态错配。
 - 同名模型在不同产品中的能力、可用性、单价逐份维护。价格完整重复保存，不做运行时继承。订阅参考价按下面明确顺序对齐，不用全局同名猜匹配。
 - usage_prices是按量产品公开计价；reference_prices是示意估价；plans是套餐资料。所有订阅模型usage_prices=not_applicable，只维护reference_prices，不核对实际扣费、AFP/CREDIT或额外使用费。

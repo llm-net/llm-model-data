@@ -248,6 +248,60 @@
       "url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
       "purpose": "models",
       "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1010-code-models",
+      "url": "https://code.claude.com/docs/en/model-config.md",
+      "purpose": "models",
+      "notes": "Claude Code 别名解析、版本要求、effort、思考开关与 1M 上下文；2026-10-10 核对。"
+    },
+    {
+      "id": "r1010-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "purpose": "pricing",
+      "notes": "Model pricing 表与缓存倍率脚注；2026-10-10 核对。"
+    },
+    {
+      "id": "r1010-effort",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort.md",
+      "purpose": "models",
+      "notes": "Sonnet 5.5 / Haiku 5.5 API effort 档位与缺省，只作对照；2026-10-10 核对。"
+    },
+    {
+      "id": "r1010-code-protocol",
+      "url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
+      "purpose": "models",
+      "notes": "Claude Code API formats；2026-10-10 核对。"
+    },
+    {
+      "id": "r1010-sonnet-5-5",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "purpose": "pricing",
+      "notes": "Sonnet 5.5 型号页：请求名、价格、窗口与发布状态；2026-10-10 核对。"
+    },
+    {
+      "id": "r1010-haiku-5-5",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview.md",
+      "purpose": "pricing",
+      "notes": "Haiku 5.5 型号页：请求名、两档价格、窗口与发布状态；2026-10-10 核对。"
+    },
+    {
+      "id": "current-code-models",
+      "url": "https://code.claude.com/docs/en/model-config",
+      "purpose": "models",
+      "notes": "Claude Code 当前型号、别名、effort、思考开关与上下文条件；逐模型结论见 claude-code-current 证据。"
+    },
+    {
+      "id": "current-code-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "purpose": "pricing",
+      "notes": "Claude Code 订阅参考价所用的同平台完整公开按量价表；不证明订阅可用性。"
+    },
+    {
+      "id": "current-code-protocol",
+      "url": "https://code.claude.com/docs/en/llm-gateway-protocol",
+      "purpose": "models",
+      "notes": "Claude Code 官方 Anthropic Messages 传输契约；不从按量 API 推导其他协议面。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

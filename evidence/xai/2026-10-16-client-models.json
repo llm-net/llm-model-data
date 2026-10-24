@@ -1,0 +1,36 @@
+{
+  "artifact_version": "1.0.60",
+  "artifact_url": "https://x.ai/cli/grok-1.0.60-linux-x86_64",
+  "artifact_sha256": "10e6af64b24724fc1074c373e906b9ad121110044dddcbd97ad43c3a25f96d5f",
+  "checked_at": "2026-10-16T07:50:54.926345Z",
+  "models": [
+    {
+      "id": "grok-4.6",
+      "model": "grok-4.6",
+      "context_window": 500000,
+      "api_backend": "responses",
+      "supports_reasoning_effort": true,
+      "reasoning_effort": "high",
+      "reasoning_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    {
+      "id": "grok-4.5",
+      "model": "grok-4.5",
+      "context_window": 500000,
+      "api_backend": "responses",
+      "supports_reasoning_effort": true,
+      "reasoning_effort": "high",
+      "reasoning_efforts": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  ],
+  "notes": "官网 stable 指向的公开 linux-x86_64 程序；只读提取内嵌默认目录，未执行程序，不是账号在线目录。"
+}

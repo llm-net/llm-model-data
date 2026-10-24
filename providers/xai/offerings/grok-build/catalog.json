@@ -491,15 +491,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-22T05:59:06Z",
+            "checked_at": "2026-10-16T07:52:16Z",
             "source_ids": [
-              "grok-build-models",
-              "refresh-settings"
+              "r1016-cli",
+              "r1016-settings"
             ],
-            "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
-            "notes": "本型号在线目录 api_backend=responses；不从 API 或其他型号继承。"
+            "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+            "notes": "核对本型号内嵌 api_backend=responses；没有取得当前订阅在线目录，其他协议未确认。"
           },
-          "notes": "确认 Grok Build 当前在线目录的 Responses 承载；未确认其他客户端版本或更多兼容面，不添加 Chat、Messages 或 gRPC。"
+          "notes": "官方 CLI 1.0.60 本型号静态默认使用 Responses；订阅在线目录、其他客户端版本与更多协议面本次未确认，保持 partial，不添加 Chat、Messages 或 gRPC。"
         },
         "reasoning": {
           "support": "supported",
@@ -674,15 +674,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-22T05:59:06Z",
+            "checked_at": "2026-10-16T07:52:16Z",
             "source_ids": [
-              "grok-build-models",
-              "refresh-settings"
+              "r1016-cli",
+              "r1016-settings"
             ],
-            "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
-            "notes": "本型号在线目录 api_backend=responses；不从 API 或其他型号继承。"
+            "evidence": "evidence/xai/2026-10-16-grok-build-models.json",
+            "notes": "核对本型号内嵌 api_backend=responses；没有取得当前订阅在线目录，其他协议未确认。"
           },
-          "notes": "确认 Grok Build 当前在线目录的 Responses 承载；未确认其他客户端版本或更多兼容面，不添加 Chat、Messages 或 gRPC。"
+          "notes": "官方 CLI 1.0.60 本型号静态默认使用 Responses；订阅在线目录、其他客户端版本与更多协议面本次未确认，保持 partial，不添加 Chat、Messages 或 gRPC。"
         },
         "reasoning": {
           "support": "supported",
@@ -739,7 +739,1870 @@
           "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。 本轮未重取登录态目录，500000为历史本产品核对值；不刷新成功日期。"
         }
       }
+    },
+    {
+      "id": "grok-imagine-image-2-0",
+      "request_id": "grok-imagine-image-2.0",
+      "display_name": "Grok Imagine Image 2.0",
+      "modalities": [
+        "image"
+      ],
+      "availability": "unknown",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "needs_review",
+        "checked_at": null,
+        "source_ids": [],
+        "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+        "notes": "型号在 xAI 官方型号表中存在；Grok Build 文档未写 /imagine 使用哪个型号，订阅内可用性未确认。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+          "notes": "工具订阅不采集实际扣费，仅维护 reference_prices。"
+        },
+        "notes": "工具订阅不采集实际扣费，仅维护 reference_prices。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "xAI API Imagine Pricing 表中本型号的单一标准价。",
+            "rates": [
+              {
+                "meter": "generated_images",
+                "amount": "0.04",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "data"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "none",
+                  "increment": null,
+                  "notes": "按返回的图片张数；编辑另对输入图计费，单价未查到，不在此基准内。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.x.ai/developers/pricing",
+              "subject": "grok-imagine-image-2.0",
+              "reason": "同平台 xAI API 对应型号的按量价，仅作订阅消耗示意；本仓库 xAI 按量目录尚未收录 Imagine 型号。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-28T06:22:38Z",
+              "source_ids": [
+                "imagine-pricing"
+              ],
+              "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+              "notes": "Imagine Pricing 表原文 $0.04 / image。"
+            },
+            "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-28T06:22:38Z",
+          "source_ids": [
+            "imagine-pricing"
+          ],
+          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+          "notes": "同平台按量价，仅作订阅消耗参考。"
+        },
+        "notes": "按量等价消耗示意，不是订阅真实扣费。"
+      },
+      "notes": "Grok Imagine 图像型号。接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "xai_image"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-openapi",
+              "imagine-rest-images",
+              "imagine-model-image2",
+              "build-commands"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "只核对协议面：xAI 公开 Imagine 端点与本型号；不刷新其他能力的核对时间。"
+          },
+          "notes": "接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。 不登记 openai_image：字段与 OpenAI Image 不同。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "imagine-model-image2"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "思考能力独立核对。"
+          },
+          "notes": "型号页与 Imagine 指南没有思考控制资料；不按模态推断不支持。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-model-image2",
+              "imagine-rest-images"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "仅核对上下文适用性。"
+          },
+          "notes": "Imagine 图像生成接口没有文本对话窗口；提示词长度、参考图数量、视频时长等限制不能填入 context_window_tokens。"
+        },
+        "media_io": {
+          "status": "partial",
+          "operations": [
+            {
+              "id": "image_generation",
+              "interface": "xai_image",
+              "endpoint": "POST /v1/images/generations",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到（仅 models 接口示例有 grok-imagine-image 的 max_prompt_length 1024）。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [],
+                  "delivery": [
+                    "url",
+                    "base64"
+                  ],
+                  "max_items": 10,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "data[].url 或 data[].b64_json，另有 data[].mime_type（文档示例 image/png、image/jpeg、image/webp，产物示例为 .jpg）；URL 为临时地址，有效期未查到。未查到比例 × 分辨率像素表。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "n",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 10,
+                  "unit": "item",
+                  "default": 1,
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "3:4",
+                    "4:3",
+                    "9:16",
+                    "16:9",
+                    "2:3",
+                    "3:2",
+                    "9:19.5",
+                    "19.5:9",
+                    "9:20",
+                    "20:9",
+                    "1:2",
+                    "2:1",
+                    "21:9",
+                    "5:2",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "1k",
+                    "2k"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "1k",
+                  "required": false,
+                  "notes": "指南列 1k、2k；OpenAPI 枚举另有 1.5k，未在指南出现，未列入。"
+                },
+                {
+                  "field": "quality",
+                  "type": "enum",
+                  "values": [
+                    "low",
+                    "medium",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "只对 grok-imagine-image-2.0 生效；auto 目前生成取 low、编辑取 medium。REST 参考与 OpenAPI 请求 schema 未列此字段，计价层文档另写 low / medium / high。"
+                },
+                {
+                  "field": "response_format",
+                  "type": "enum",
+                  "values": [
+                    "url",
+                    "b64_json"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "url",
+                  "required": false,
+                  "notes": null
+                }
+              ],
+              "notes": "另有 storage_options（写入 Files API 并返回 file_output）与 user 字段，未列为参数。"
+            },
+            {
+              "id": "image_edit",
+              "interface": "xai_image",
+              "endpoint": "POST /v1/images/edits",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到（仅 models 接口示例有 grok-imagine-image 的 max_prompt_length 1024）。"
+                },
+                {
+                  "role": "source_image",
+                  "field": "image",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "单图编辑。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。与 images 互斥，二者必填其一。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "images[]",
+                  "required": false,
+                  "min_items": 1,
+                  "max_items": 5,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "多图编辑，最多 5 张（指南与 release notes；OpenAPI 无 maxItems）；提示词用 <IMAGE_0>、<IMAGE_1> 指代。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。与 image 互斥。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [],
+                  "delivery": [
+                    "url",
+                    "base64"
+                  ],
+                  "max_items": null,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "data[].url 或 data[].b64_json，另有 data[].mime_type（文档示例 image/png、image/jpeg、image/webp，产物示例为 .jpg）；URL 为临时地址，有效期未查到。未查到比例 × 分辨率像素表。 编辑的 n 未写上限。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "n",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": null,
+                  "unit": "item",
+                  "default": null,
+                  "required": false,
+                  "notes": "编辑的数量上限与缺省未写明。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "3:4",
+                    "4:3",
+                    "9:16",
+                    "16:9",
+                    "2:3",
+                    "3:2",
+                    "9:19.5",
+                    "19.5:9",
+                    "9:20",
+                    "20:9",
+                    "1:2",
+                    "2:1",
+                    "21:9",
+                    "5:2",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "只用于多图编辑，缺省跟随第一张图；单图编辑不要设置，自动跟随输入图。"
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "1k",
+                    "2k"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "1k",
+                  "required": false,
+                  "notes": "指南列 1k、2k；OpenAPI 枚举另有 1.5k，未在指南出现，未列入。"
+                },
+                {
+                  "field": "quality",
+                  "type": "enum",
+                  "values": [
+                    "low",
+                    "medium",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "只对 grok-imagine-image-2.0 生效；auto 目前生成取 low、编辑取 medium。REST 参考与 OpenAPI 请求 schema 未列此字段，计价层文档另写 low / medium / high。"
+                },
+                {
+                  "field": "response_format",
+                  "type": "enum",
+                  "values": [
+                    "url",
+                    "b64_json"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "url",
+                  "required": false,
+                  "notes": null
+                }
+              ],
+              "notes": "只收 JSON，官方说明 OpenAI SDK 的 images.edit() 不适用。编辑按输入图与输出图双向计费，输入图单价未查到。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-image-generation",
+              "imagine-image-editing",
+              "imagine-image-multi",
+              "imagine-openapi",
+              "imagine-rest-images",
+              "imagine-model-image2",
+              "build-commands"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "按 xAI 官方 .md 文档、渲染页警示框与 OpenAPI 核对；未实调，不刷新模型身份、价格或其他能力的核对结论。"
+          },
+          "notes": "缺口：订阅通道未经公开文档证实与实调；quality、resolution 取值存在文档冲突（见参数说明）；提示词长度、输入图大小、URL 有效期、像素表未查到。"
+        }
+      }
+    },
+    {
+      "id": "grok-imagine-video-1-5",
+      "request_id": "grok-imagine-video-1.5",
+      "display_name": "Grok Imagine Video 1.5",
+      "modalities": [
+        "video"
+      ],
+      "availability": "unknown",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "needs_review",
+        "checked_at": null,
+        "source_ids": [],
+        "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+        "notes": "型号在 xAI 官方型号表中存在；Grok Build 文档未写 /imagine 使用哪个型号，订阅内可用性未确认。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+          "notes": "工具订阅不采集实际扣费，仅维护 reference_prices。"
+        },
+        "notes": "工具订阅不采集实际扣费，仅维护 reference_prices。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "xAI API Imagine Pricing 表中本型号的单一标准价。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.080",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "video.duration"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "查询结果没有按秒计量字段，秒数取 video.duration；imagine 总览称时长与分辨率都影响费用，价格表只列单一单价。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.x.ai/developers/pricing",
+              "subject": "grok-imagine-video-1.5",
+              "reason": "同平台 xAI API 对应型号的按量价，仅作订阅消耗示意；本仓库 xAI 按量目录尚未收录 Imagine 型号。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-28T06:22:38Z",
+              "source_ids": [
+                "imagine-pricing"
+              ],
+              "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+              "notes": "Imagine Pricing 表原文 $0.080 / sec。"
+            },
+            "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-28T06:22:38Z",
+          "source_ids": [
+            "imagine-pricing"
+          ],
+          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+          "notes": "同平台按量价，仅作订阅消耗参考。"
+        },
+        "notes": "按量等价消耗示意，不是订阅真实扣费。"
+      },
+      "notes": "Grok Imagine 视频型号。接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "xai_video"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-openapi",
+              "imagine-rest-videos",
+              "imagine-model-video15",
+              "build-commands"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "只核对协议面：xAI 公开 Imagine 端点与本型号；不刷新其他能力的核对时间。"
+          },
+          "notes": "接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。 不登记 openai_image：字段与 OpenAI Image 不同。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "imagine-model-video15"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "思考能力独立核对。"
+          },
+          "notes": "型号页与 Imagine 指南没有思考控制资料；不按模态推断不支持。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-model-video15",
+              "imagine-rest-videos"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "仅核对上下文适用性。"
+          },
+          "notes": "Imagine 视频生成接口没有文本对话窗口；提示词长度、参考图数量、视频时长等限制不能填入 context_window_tokens。"
+        },
+        "media_io": {
+          "status": "partial",
+          "operations": [
+            {
+              "id": "text_to_video",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/generations",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "见本操作时长参数。"
+                    }
+                  ],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 15,
+                  "unit": "second",
+                  "default": 8,
+                  "required": false,
+                  "notes": "兼容键 seconds，数字或字符串均可。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "16:9",
+                    "9:16",
+                    "4:3",
+                    "3:4",
+                    "3:2",
+                    "2:3"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "16:9",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480p",
+                    "720p",
+                    "1080p"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "480p",
+                  "required": false,
+                  "notes": "1080p 只在 grok-imagine-video-1.5 的文生 / 图生视频。"
+                },
+                {
+                  "field": "generate_audio",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": true,
+                  "required": false,
+                  "notes": "指南写缺省带音轨、传 false 得无声视频；OpenAPI 未列此字段。"
+                }
+              ],
+              "notes": "另有 output.upload_url（签名 PUT 地址，Grok Build 的 ZDR 视频存储使用）、storage_options 与 user，未列为参数。"
+            },
+            {
+              "id": "image_to_video",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/generations",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "可省，省略时只按图生成。"
+                },
+                {
+                  "role": "first_frame",
+                  "field": "image",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "首帧。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。兼容键 input_reference。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "见本操作时长参数。"
+                    }
+                  ],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 15,
+                  "unit": "second",
+                  "default": 8,
+                  "required": false,
+                  "notes": "兼容键 seconds，数字或字符串均可。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "16:9",
+                    "9:16",
+                    "4:3",
+                    "3:4",
+                    "3:2",
+                    "2:3"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "文档冲突：指南写设置后覆盖并拉伸输入图，OpenAPI 写图生视频忽略此字段、比例取自输入图。"
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480p",
+                    "720p",
+                    "1080p"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "480p",
+                  "required": false,
+                  "notes": "1080p 只在 grok-imagine-video-1.5 的文生 / 图生视频。"
+                },
+                {
+                  "field": "generate_audio",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": true,
+                  "required": false,
+                  "notes": "指南写缺省带音轨、传 false 得无声视频；OpenAPI 未列此字段。"
+                }
+              ],
+              "notes": "输出比例缺省跟随输入图。本型号的 image 可与 reference_images、reference_audios、last_frame 组合（作为首帧钉点），组合时按参考生视频或首尾帧处理。"
+            },
+            {
+              "id": "first_last_frame_to_video",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/generations",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "可省。"
+                },
+                {
+                  "role": "first_frame",
+                  "field": "image",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "首帧，可省：只给尾帧时模型生成开头并落在尾帧上。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。兼容键 input_reference。"
+                },
+                {
+                  "role": "last_frame",
+                  "field": "last_frame",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "尾帧，只 grok-imagine-video-1.5 支持；见于指南，OpenAPI 未列。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "见本操作时长参数。"
+                    }
+                  ],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 15,
+                  "unit": "second",
+                  "default": 8,
+                  "required": false,
+                  "notes": "兼容键 seconds，数字或字符串均可。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "16:9",
+                    "9:16",
+                    "4:3",
+                    "3:4",
+                    "3:2",
+                    "2:3"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "文档冲突：指南写设置后覆盖并拉伸输入图，OpenAPI 写图生视频忽略此字段、比例取自输入图。"
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480p",
+                    "720p",
+                    "1080p"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "480p",
+                  "required": false,
+                  "notes": "1080p 只在 grok-imagine-video-1.5 的文生 / 图生视频。"
+                },
+                {
+                  "field": "generate_audio",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": true,
+                  "required": false,
+                  "notes": "指南写缺省带音轨、传 false 得无声视频；OpenAPI 未列此字段。"
+                }
+              ],
+              "notes": "官方写「prompt is optional in every first & last frame request」。尾帧可与参考图、reference_audios 组合，再加 image 同时钉首帧。另可加 keyframes[]（≤ 4 个 {image, timestamp_s}，0 < t < duration，按 1/3 秒网格对齐）钉住中间画面，未单列为输入。"
+            },
+            {
+              "id": "reference_to_video",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/generations",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "reference_images[]",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 7,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "最多 7 张（渲染页警示框；OpenAPI 无 maxItems）。参考图与 reference_audios 至少给一种：只给音色即 audio-only 参考生视频。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。"
+                },
+                {
+                  "role": "reference_audio",
+                  "field": "reference_audios[].url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 3,
+                  "formats": [],
+                  "transports": [
+                    "url",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "自带音频片段至多 15 秒。"
+                    }
+                  ],
+                  "notes": "自带音频只对受信任合作方开放（on request）；与同一元素的 voice_id 互斥，reference_audios 合计至多 3 个，提示词用 <AUDIO_0..2> 指代。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "见本操作时长参数。"
+                    }
+                  ],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 15,
+                  "unit": "second",
+                  "default": 8,
+                  "required": false,
+                  "notes": "兼容键 seconds，数字或字符串均可。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "16:9",
+                    "9:16",
+                    "4:3",
+                    "3:4",
+                    "3:2",
+                    "2:3"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "16:9",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480p",
+                    "720p"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "480p",
+                  "required": false,
+                  "notes": "参考图生视频上限 720p。"
+                },
+                {
+                  "field": "generate_audio",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": true,
+                  "required": false,
+                  "notes": "指南写缺省带音轨、传 false 得无声视频；OpenAPI 未列此字段。"
+                },
+                {
+                  "field": "reference_audios[].voice_id",
+                  "type": "enum",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "预设音色，每个元素一个、至多 3 个，大小写不敏感；未知 ID 返回 400 并附可用列表。",
+                  "values_ref": "xai-imagine-voices"
+                }
+              ],
+              "notes": "带参考图或 reference_audios 任一即为参考生视频模式（分辨率最高 720p）；可再加 image 钉首帧、last_frame 钉尾帧。参考音色只在本型号。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-video-generation",
+              "imagine-video-i2v",
+              "imagine-video-r2v",
+              "imagine-openapi",
+              "imagine-rest-videos",
+              "imagine-model-video15",
+              "imagine-tts-voices",
+              "build-commands",
+              "build-zdr-video"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "按 xAI 官方 .md 文档、渲染页警示框与 OpenAPI 核对；未实调，不刷新模型身份、价格或其他能力的核对结论。"
+          },
+          "notes": "缺口：订阅通道未经公开文档证实与实调；last_frame、generate_audio 只在指南不在 OpenAPI；图生视频 aspect_ratio 行为文档冲突；是否支持编辑 / 延长文档未明说（示例均用 Classic），未列入；视频大小上限、URL 有效期、seed 未查到。"
+        }
+      }
+    },
+    {
+      "id": "grok-imagine-video",
+      "request_id": "grok-imagine-video",
+      "display_name": "Grok Imagine Video",
+      "modalities": [
+        "video"
+      ],
+      "availability": "unknown",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "needs_review",
+        "checked_at": null,
+        "source_ids": [],
+        "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+        "notes": "型号在 xAI 官方型号表中存在；Grok Build 文档未写 /imagine 使用哪个型号，订阅内可用性未确认。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+          "notes": "工具订阅不采集实际扣费，仅维护 reference_prices。"
+        },
+        "notes": "工具订阅不采集实际扣费，仅维护 reference_prices。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "xAI API Imagine Pricing 表中本型号的单一标准价。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.050",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "video.duration"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "查询结果没有按秒计量字段，秒数取 video.duration；imagine 总览称时长与分辨率都影响费用，价格表只列单一单价。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://docs.x.ai/developers/pricing",
+              "subject": "grok-imagine-video",
+              "reason": "同平台 xAI API 对应型号的按量价，仅作订阅消耗示意；本仓库 xAI 按量目录尚未收录 Imagine 型号。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-09-28T06:22:38Z",
+              "source_ids": [
+                "imagine-pricing"
+              ],
+              "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+              "notes": "Imagine Pricing 表原文 $0.050 / sec。"
+            },
+            "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-09-28T06:22:38Z",
+          "source_ids": [
+            "imagine-pricing"
+          ],
+          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+          "notes": "同平台按量价，仅作订阅消耗参考。"
+        },
+        "notes": "按量等价消耗示意，不是订阅真实扣费。"
+      },
+      "notes": "Grok Imagine 视频型号。接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "xai_video"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-openapi",
+              "imagine-rest-videos",
+              "imagine-model-video",
+              "build-commands"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "只核对协议面：xAI 公开 Imagine 端点与本型号；不刷新其他能力的核对时间。"
+          },
+          "notes": "接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。 不登记 openai_image：字段与 OpenAI Image 不同。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "imagine-model-video"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "思考能力独立核对。"
+          },
+          "notes": "型号页与 Imagine 指南没有思考控制资料；不按模态推断不支持。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-model-video",
+              "imagine-rest-videos"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "仅核对上下文适用性。"
+          },
+          "notes": "Imagine 视频生成接口没有文本对话窗口；提示词长度、参考图数量、视频时长等限制不能填入 context_window_tokens。"
+        },
+        "media_io": {
+          "status": "partial",
+          "operations": [
+            {
+              "id": "text_to_video",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/generations",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "见本操作时长参数。"
+                    }
+                  ],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 15,
+                  "unit": "second",
+                  "default": 8,
+                  "required": false,
+                  "notes": "兼容键 seconds，数字或字符串均可。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "16:9",
+                    "9:16",
+                    "4:3",
+                    "3:4",
+                    "3:2",
+                    "2:3"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "16:9",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480p",
+                    "720p"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "480p",
+                  "required": false,
+                  "notes": "1080p 只属于 grok-imagine-video-1.5，本型号未列。"
+                },
+                {
+                  "field": "generate_audio",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": true,
+                  "required": false,
+                  "notes": "指南写缺省带音轨、传 false 得无声视频；OpenAPI 未列此字段。"
+                }
+              ],
+              "notes": "另有 output.upload_url（签名 PUT 地址，Grok Build 的 ZDR 视频存储使用）、storage_options 与 user，未列为参数。"
+            },
+            {
+              "id": "image_to_video",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/generations",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "可省，省略时只按图生成。"
+                },
+                {
+                  "role": "first_frame",
+                  "field": "image",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "首帧。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。兼容键 input_reference。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "见本操作时长参数。"
+                    }
+                  ],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 15,
+                  "unit": "second",
+                  "default": 8,
+                  "required": false,
+                  "notes": "兼容键 seconds，数字或字符串均可。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "16:9",
+                    "9:16",
+                    "4:3",
+                    "3:4",
+                    "3:2",
+                    "2:3"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "文档冲突：指南写设置后覆盖并拉伸输入图，OpenAPI 写图生视频忽略此字段、比例取自输入图。"
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480p",
+                    "720p"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "480p",
+                  "required": false,
+                  "notes": "1080p 只属于 grok-imagine-video-1.5，本型号未列。"
+                },
+                {
+                  "field": "generate_audio",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": true,
+                  "required": false,
+                  "notes": "指南写缺省带音轨、传 false 得无声视频；OpenAPI 未列此字段。"
+                }
+              ],
+              "notes": "输出比例缺省跟随输入图。"
+            },
+            {
+              "id": "reference_to_video",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/generations",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "reference_images[]",
+                  "required": true,
+                  "min_items": 1,
+                  "max_items": 7,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "最多 7 张（渲染页警示框；OpenAPI 无 maxItems）。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "见本操作时长参数。"
+                    }
+                  ],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 15,
+                  "unit": "second",
+                  "default": 8,
+                  "required": false,
+                  "notes": "兼容键 seconds，数字或字符串均可。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "16:9",
+                    "9:16",
+                    "4:3",
+                    "3:4",
+                    "3:2",
+                    "2:3"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "16:9",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480p",
+                    "720p"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "480p",
+                  "required": false,
+                  "notes": "参考图生视频上限 720p。"
+                },
+                {
+                  "field": "generate_audio",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": true,
+                  "required": false,
+                  "notes": "指南写缺省带音轨、传 false 得无声视频；OpenAPI 未列此字段。"
+                }
+              ],
+              "notes": "本型号不能把 image 与参考输入同时使用，也不收 last_frame、keyframes；参考音色只属于 grok-imagine-video-1.5。"
+            },
+            {
+              "id": "video_edit",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/edits",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到。"
+                },
+                {
+                  "role": "source_video",
+                  "field": "video",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "mp4"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "8.7",
+                      "unit": "second",
+                      "notes": "输入视频最长 8.7 秒。"
+                    }
+                  ],
+                  "notes": "对象 {url | file_id}：url 为公网地址或 base64 data URL，须为 .mp4（H.265 / H.264 / AV1）。被编辑的视频。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": null,
+                      "max": "8.7",
+                      "unit": "second",
+                      "notes": "见本操作时长参数。"
+                    }
+                  ],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。 输出沿用输入的时长与分辨率，分辨率上限 720p。"
+                }
+              ],
+              "params": [],
+              "notes": "不收 duration、aspect_ratio、resolution。"
+            },
+            {
+              "id": "video_extend",
+              "interface": "xai_video",
+              "endpoint": "POST /v1/videos/extensions",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "描述接下来发生的事。"
+                },
+                {
+                  "role": "source_video",
+                  "field": "video",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "mp4"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "2",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "输入视频须为 2–15 秒。"
+                    }
+                  ],
+                  "notes": "对象 {url | file_id}：url 为公网地址或 base64 data URL，须为 .mp4（H.265 / H.264 / AV1）。从末尾接着延长。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [
+                    "mp4"
+                  ],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "受理返回 request_id，GET /v1/videos/{request_id} 查询：status pending | done | expired | failed，完成后 video{url, duration}；URL 为临时地址，有效期未查到。 输出沿用输入的比例与分辨率，分辨率上限 720p。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 2,
+                  "max": 10,
+                  "unit": "second",
+                  "default": 6,
+                  "required": false,
+                  "notes": "只指新增段的长度。"
+                }
+              ],
+              "notes": "视频输入大小上限未查到。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-09-28T06:28:43Z",
+            "source_ids": [
+              "imagine-video-generation",
+              "imagine-video-i2v",
+              "imagine-video-r2v",
+              "imagine-video-editing",
+              "imagine-video-extension",
+              "imagine-openapi",
+              "imagine-rest-videos",
+              "imagine-model-video",
+              "build-commands",
+              "build-zdr-video"
+            ],
+            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+            "notes": "按 xAI 官方 .md 文档、渲染页警示框与 OpenAPI 核对；未实调，不刷新模型身份、价格或其他能力的核对结论。"
+          },
+          "notes": "缺口：订阅通道未经公开文档证实与实调；generate_audio 只在指南不在 OpenAPI；图生视频 aspect_ratio 行为文档冲突；/v1/video-generation-models 示例输入模态只有 text、image，与型号页不一致；视频大小上限、URL 有效期、seed 未查到。"
+        }
+      }
     }
   ],
-  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。",
+  "media_value_sets": {
+    "xai-imagine-voices": {
+      "values": [
+        "carina",
+        "zagan",
+        "helix",
+        "orion",
+        "luna",
+        "iris",
+        "altair",
+        "zenith",
+        "perseus",
+        "helios",
+        "lux",
+        "kepler",
+        "rigel",
+        "cosmo",
+        "celeste",
+        "ursa",
+        "sirius",
+        "lumen",
+        "castor",
+        "naksh",
+        "atlas",
+        "aurora",
+        "liora",
+        "ara",
+        "eve",
+        "leo",
+        "rex",
+        "sal"
+      ],
+      "labels": null,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-09-28T06:28:43Z",
+        "source_ids": [
+          "imagine-tts-voices",
+          "imagine-video-generation"
+        ],
+        "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
+        "notes": "TTS 渲染页音色清单；视频指南写参考音色与 TTS 同一清单。"
+      },
+      "notes": "xAI 预设音色，grok-imagine-video-1.5 参考图生视频的 reference_audios[].voice_id 可用；大小写不敏感。"
+    }
+  }
 }
