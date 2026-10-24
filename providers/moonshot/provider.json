@@ -110,6 +110,24 @@
       "url": "https://platform.kimi.com/docs/guide/kimi-k2-7-code-quickstart.md",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "audit-pricing-html",
+      "url": "https://platform.kimi.com/docs/pricing/chat",
+      "purpose": "pricing",
+      "notes": "2026-10-24 官方资料核对；价格 HTML 内嵌 DocTable 保留完整币种、列名与数字。"
+    },
+    {
+      "id": "audit-context-cache",
+      "url": "https://platform.kimi.com/docs/guide/context-caching",
+      "purpose": "billing",
+      "notes": "2026-10-24 官方资料核对；价格 HTML 内嵌 DocTable 保留完整币种、列名与数字。"
+    },
+    {
+      "id": "context-kimi-k31",
+      "url": "https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart",
+      "purpose": "models",
+      "notes": "2026-10-24 官方资料核对；价格 HTML 内嵌 DocTable 保留完整币种、列名与数字。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

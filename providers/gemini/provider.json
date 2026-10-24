@@ -68,6 +68,78 @@
       "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "r1024-gemini-flash37",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-deprecations",
+      "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-flash38",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-argon",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "purpose": "pricing",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-generation",
+      "url": "https://ai.google.dev/api/generate-content",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-openai",
+      "url": "https://ai.google.dev/gemini-api/docs/openai",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-migration",
+      "url": "https://ai.google.dev/gemini-api/docs/migrate-to-interactions",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-thinking",
+      "url": "https://ai.google.dev/gemini-api/docs/thinking",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-latest",
+      "url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/gemini/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-gemini-whatsnew38",
+      "url": "https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.8",
+      "purpose": "pricing",
+      "notes": "New model 与 Introductory pricing 小节确认推出优惠至 2026-12-31，标准价自 2027-01-01 生效。"
+    },
+    {
+      "id": "r1024-gemini-changelog",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "purpose": "pricing",
+      "notes": "2026-08-13 的 Gemini 3.7 Flash 发布记录明确 introductory price。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

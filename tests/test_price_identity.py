@@ -11,6 +11,9 @@ class PriceIdentity(unittest.TestCase):
         self.api = c.read_json(ROOT / "providers/ark/offerings/api-cn/catalog.json")
         self.plan = c.read_json(ROOT / "providers/ark/offerings/agent-plan-cn/catalog.json")
         self.docs = [self.api, self.plan]
+        # 身份夹具只覆盖 Seedance；其他订阅的跨厂商引用由全仓校验覆盖。
+        for doc in self.docs:
+            doc["models"] = [m for m in doc["models"] if m["id"].startswith("doubao-seedance-")]
         self.short = c.lookup_model(self.docs, "ark", "api-cn", "doubao-seedance-2-0-mini")
         self.dated = c.lookup_model(self.docs, "ark", "api-cn", "doubao-seedance-2-0-mini-260615")
 

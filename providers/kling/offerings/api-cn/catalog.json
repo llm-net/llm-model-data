@@ -10,7 +10,7 @@
     "status": "needs_review",
     "checked_at": null,
     "source_ids": [],
-    "evidence": "evidence/kling/2026-09-16-audit.md",
+    "evidence": "evidence/kling/2026-10-24-audit.md",
     "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
   },
   "plans": [],
@@ -27,13 +27,14 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
           "audit-models-md",
-          "audit-prices-md"
+          "audit-prices-md",
+          "audit-20261024-kling-3-0-turbo"
         ],
-        "evidence": "evidence/kling/2026-09-16-audit.md",
-        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+        "evidence": "evidence/kling/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -68,12 +69,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-prices-md"
               ],
-              "evidence": "evidence/kling/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/kling/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -82,12 +83,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-prices-md"
           ],
-          "evidence": "evidence/kling/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/kling/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -103,7 +104,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。",
+      "notes": "本轮能力表、在线价格表和精确任务路径均仍列此型号；Kling4.0价表标明尚未开放API，未加入在线清单。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -118,15 +119,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-models",
-              "protocol-api"
+              "audit-20261024-kling-3-0-turbo"
             ],
-            "evidence": "evidence/kling/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "可灵视频厂商面；普通文生视频与 Omni / O1 的任务路径按型号区分。协议面共同不代表请求体或操作完全相同。"
+          "notes": "逐型号核对创建任务及任务查询；普通文生视频与 Omni/O1 路径分别处理，不能因共面互换请求体。"
         },
         "reasoning": {
           "support": "unknown",
@@ -135,25 +135,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/kling/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "audit-20261024-kling-3-0-turbo"
+            ],
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.702336+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "context-kling-models"
+              "audit-20261024-kling-3-0-turbo"
             ],
-            "evidence": "evidence/kling/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "已核对本型号生成任务 API，而非仅按模态判断。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "接口是视频生成任务，提示词与视频时长限制不等于文本对话 token 窗口。"
         }
       }
     },
@@ -169,13 +171,14 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
           "audit-models-md",
-          "audit-prices-md"
+          "audit-prices-md",
+          "audit-20261024-kling-3-0"
         ],
-        "evidence": "evidence/kling/2026-09-16-audit.md",
-        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+        "evidence": "evidence/kling/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -210,12 +213,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-prices-md"
               ],
-              "evidence": "evidence/kling/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/kling/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -224,12 +227,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-prices-md"
           ],
-          "evidence": "evidence/kling/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/kling/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -245,7 +248,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。",
+      "notes": "本轮能力表、在线价格表和精确任务路径均仍列此型号；Kling4.0价表标明尚未开放API，未加入在线清单。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -260,15 +263,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-models",
-              "protocol-api"
+              "audit-20261024-kling-3-0"
             ],
-            "evidence": "evidence/kling/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "可灵视频厂商面；普通文生视频与 Omni / O1 的任务路径按型号区分。协议面共同不代表请求体或操作完全相同。"
+          "notes": "逐型号核对创建任务及任务查询；普通文生视频与 Omni/O1 路径分别处理，不能因共面互换请求体。"
         },
         "reasoning": {
           "support": "unknown",
@@ -277,25 +279,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/kling/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "audit-20261024-kling-3-0"
+            ],
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.702336+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "context-kling-models"
+              "audit-20261024-kling-3-0"
             ],
-            "evidence": "evidence/kling/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "已核对本型号生成任务 API，而非仅按模态判断。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "接口是视频生成任务，提示词与视频时长限制不等于文本对话 token 窗口。"
         }
       }
     },
@@ -311,13 +315,14 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
           "audit-models-md",
-          "audit-prices-md"
+          "audit-prices-md",
+          "audit-20261024-kling-3-0-omni"
         ],
-        "evidence": "evidence/kling/2026-09-16-audit.md",
-        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+        "evidence": "evidence/kling/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -352,12 +357,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-prices-md"
               ],
-              "evidence": "evidence/kling/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/kling/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -366,12 +371,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-prices-md"
           ],
-          "evidence": "evidence/kling/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/kling/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -387,7 +392,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。",
+      "notes": "本轮能力表、在线价格表和精确任务路径均仍列此型号；Kling4.0价表标明尚未开放API，未加入在线清单。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -402,15 +407,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-models",
-              "protocol-api"
+              "audit-20261024-kling-3-0-omni"
             ],
-            "evidence": "evidence/kling/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "可灵视频厂商面；普通文生视频与 Omni / O1 的任务路径按型号区分。协议面共同不代表请求体或操作完全相同。"
+          "notes": "逐型号核对创建任务及任务查询；普通文生视频与 Omni/O1 路径分别处理，不能因共面互换请求体。"
         },
         "reasoning": {
           "support": "unknown",
@@ -419,25 +423,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/kling/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "audit-20261024-kling-3-0-omni"
+            ],
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.702336+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "context-kling-models"
+              "audit-20261024-kling-3-0-omni"
             ],
-            "evidence": "evidence/kling/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "已核对本型号生成任务 API，而非仅按模态判断。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "接口是视频生成任务，提示词与视频时长限制不等于文本对话 token 窗口。"
         }
       }
     },
@@ -453,13 +459,14 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
           "audit-models-md",
-          "audit-prices-md"
+          "audit-prices-md",
+          "audit-20261024-kling-o1"
         ],
-        "evidence": "evidence/kling/2026-09-16-audit.md",
-        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+        "evidence": "evidence/kling/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -494,12 +501,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-prices-md"
               ],
-              "evidence": "evidence/kling/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/kling/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -508,12 +515,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-prices-md"
           ],
-          "evidence": "evidence/kling/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/kling/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -529,7 +536,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。",
+      "notes": "本轮能力表、在线价格表和精确任务路径均仍列此型号；Kling4.0价表标明尚未开放API，未加入在线清单。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -544,15 +551,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-models",
-              "protocol-api"
+              "audit-20261024-kling-o1"
             ],
-            "evidence": "evidence/kling/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "可灵视频厂商面；普通文生视频与 Omni / O1 的任务路径按型号区分。协议面共同不代表请求体或操作完全相同。"
+          "notes": "逐型号核对创建任务及任务查询；普通文生视频与 Omni/O1 路径分别处理，不能因共面互换请求体。"
         },
         "reasoning": {
           "support": "unknown",
@@ -561,25 +567,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/kling/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "audit-20261024-kling-o1"
+            ],
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.702336+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "context-kling-models"
+              "audit-20261024-kling-o1"
             ],
-            "evidence": "evidence/kling/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "已核对本型号生成任务 API，而非仅按模态判断。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "接口是视频生成任务，提示词与视频时长限制不等于文本对话 token 窗口。"
         }
       }
     },
@@ -595,13 +603,14 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
           "audit-models-md",
-          "audit-prices-md"
+          "audit-prices-md",
+          "audit-20261024-kling-2-6"
         ],
-        "evidence": "evidence/kling/2026-09-16-audit.md",
-        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+        "evidence": "evidence/kling/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -636,12 +645,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-prices-md"
               ],
-              "evidence": "evidence/kling/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/kling/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -650,12 +659,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-prices-md"
           ],
-          "evidence": "evidence/kling/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/kling/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -671,7 +680,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。",
+      "notes": "本轮能力表、在线价格表和精确任务路径均仍列此型号；Kling4.0价表标明尚未开放API，未加入在线清单。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -686,15 +695,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-models",
-              "protocol-api"
+              "audit-20261024-kling-2-6"
             ],
-            "evidence": "evidence/kling/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "可灵视频厂商面；普通文生视频与 Omni / O1 的任务路径按型号区分。协议面共同不代表请求体或操作完全相同。"
+          "notes": "逐型号核对创建任务及任务查询；普通文生视频与 Omni/O1 路径分别处理，不能因共面互换请求体。"
         },
         "reasoning": {
           "support": "unknown",
@@ -703,25 +711,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/kling/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "audit-20261024-kling-2-6"
+            ],
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.702336+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "context-kling-models"
+              "audit-20261024-kling-2-6"
             ],
-            "evidence": "evidence/kling/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "已核对本型号生成任务 API，而非仅按模态判断。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "接口是视频生成任务，提示词与视频时长限制不等于文本对话 token 窗口。"
         }
       }
     },
@@ -737,13 +747,14 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
           "audit-models-md",
-          "audit-prices-md"
+          "audit-prices-md",
+          "audit-20261024-kling-2-5-turbo"
         ],
-        "evidence": "evidence/kling/2026-09-16-audit.md",
-        "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。"
+        "evidence": "evidence/kling/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -778,12 +789,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-prices-md"
               ],
-              "evidence": "evidence/kling/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/kling/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -792,12 +803,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-prices-md"
           ],
-          "evidence": "evidence/kling/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/kling/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -813,7 +824,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方能力表与价格表确认型号；请求标识沿用该产品公开路径命名，未实调。",
+      "notes": "本轮能力表、在线价格表和精确任务路径均仍列此型号；Kling4.0价表标明尚未开放API，未加入在线清单。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -828,15 +839,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-models",
-              "protocol-api"
+              "audit-20261024-kling-2-5-turbo"
             ],
-            "evidence": "evidence/kling/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "可灵视频厂商面；普通文生视频与 Omni / O1 的任务路径按型号区分。协议面共同不代表请求体或操作完全相同。"
+          "notes": "逐型号核对创建任务及任务查询；普通文生视频与 Omni/O1 路径分别处理，不能因共面互换请求体。"
         },
         "reasoning": {
           "support": "unknown",
@@ -845,28 +855,30 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/kling/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "audit-20261024-kling-2-5-turbo"
+            ],
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "逐型号检查任务字段，未找到思考开关/档位/预算；质量、时长、音画设置不是思考控制，不能据此认定不支持。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.702336+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "context-kling-models"
+              "audit-20261024-kling-2-5-turbo"
             ],
-            "evidence": "evidence/kling/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/kling/2026-10-24-audit.md",
+            "notes": "已核对本型号生成任务 API，而非仅按模态判断。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "接口是视频生成任务，提示词与视频时长限制不等于文本对话 token 窗口。"
         }
       }
     }
   ],
-  "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"
+  "notes": "2026-10-24 核对清单内全部模型；覆盖范围仍为部分收录，逐项结论与缺口见 evidence/kling/2026-10-24-audit.md。"
 }

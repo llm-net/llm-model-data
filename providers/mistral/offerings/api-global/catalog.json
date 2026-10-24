@@ -27,13 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:03:13+00:00",
         "source_ids": [
-          "audit-api-pricing",
-          "audit-aliases"
+          "r1024-mistral-config",
+          "r1024-mistral-large3"
         ],
-        "evidence": "evidence/mistral/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/mistral/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -71,13 +71,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:02:04+00:00",
               "source_ids": [
-                "audit-api-pricing",
-                "audit-aliases"
+                "r1024-mistral-pricing",
+                "r1024-mistral-config"
               ],
-              "evidence": "evidence/mistral/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/mistral/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -86,13 +86,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:02:04+00:00",
           "source_ids": [
-            "audit-api-pricing",
-            "audit-aliases"
+            "r1024-mistral-pricing",
+            "r1024-mistral-config"
           ],
-          "evidence": "evidence/mistral/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/mistral/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -108,7 +108,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "notes": "官方Vibe配置清单确认latest身份；Large latest仍对应Large3，不能因Large4发布擅自改映射。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -123,14 +123,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:03:13+00:00",
             "source_ids": [
-              "protocol-chat"
+              "r1024-mistral-large3",
+              "r1024-mistral-chat"
             ],
-            "evidence": "evidence/mistral/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Mistral 托管 Chat Completions 模型接口。Agents / Conversations 是另一个托管编排产品，本清单不据此添加 Responses 或 Messages。"
+          "notes": "官方型号功能列/v1/chat/completions；托管Agents/Conversations不归入本型号直接兼容面。"
         },
         "reasoning": {
           "support": "unknown",
@@ -139,26 +140,29 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/mistral/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "r1024-mistral-large3",
+              "r1024-mistral-reasoning"
+            ],
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "官方可调思考表没有精确列mistral-large-latest/Large3；不从Large4或Small4继承。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "256k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:02:47.074757+00:00",
+            "checked_at": "2026-10-23T22:03:13+00:00",
             "source_ids": [
-              "context-mistral-alias",
-              "context-mistral-large"
+              "r1024-mistral-large3",
+              "r1024-mistral-config"
             ],
-            "evidence": "evidence/mistral/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "官方配置页 latest 别名分别指向 Large 3 / Small 4；托管型号页公布 256k，不使用开源权重配置补整数。 官方窗口原文为 256k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "官方只给256k标称，未核实精确整数单位，不猜乘1000或1024。"
         }
       }
     },
@@ -174,13 +178,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:03:13+00:00",
         "source_ids": [
-          "audit-api-pricing",
-          "audit-aliases"
+          "r1024-mistral-config",
+          "r1024-mistral-small4"
         ],
-        "evidence": "evidence/mistral/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/mistral/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -218,13 +222,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:02:04+00:00",
               "source_ids": [
-                "audit-api-pricing",
-                "audit-aliases"
+                "r1024-mistral-pricing",
+                "r1024-mistral-config"
               ],
-              "evidence": "evidence/mistral/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/mistral/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -233,13 +237,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:02:04+00:00",
           "source_ids": [
-            "audit-api-pricing",
-            "audit-aliases"
+            "r1024-mistral-pricing",
+            "r1024-mistral-config"
           ],
-          "evidence": "evidence/mistral/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/mistral/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -255,7 +259,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "notes": "官方Vibe配置清单确认latest身份；Large latest仍对应Large3，不能因Large4发布擅自改映射。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -270,42 +274,422 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:03:13+00:00",
             "source_ids": [
-              "protocol-chat"
+              "r1024-mistral-small4",
+              "r1024-mistral-chat"
             ],
-            "evidence": "evidence/mistral/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Mistral 托管 Chat Completions 模型接口。Agents / Conversations 是另一个托管编排产品，本清单不据此添加 Responses 或 Messages。"
+          "notes": "官方型号功能列/v1/chat/completions；托管Agents/Conversations不归入本型号直接兼容面。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "none",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "high返回完整thinking chunk；none是最少思考并省略chunk，不能声称完全关闭思考。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/mistral/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:13+00:00",
+            "source_ids": [
+              "r1024-mistral-reasoning",
+              "r1024-mistral-small4"
+            ],
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "官方精确列mistral-small-latest支持可调思考；默认与完全关闭能力未明，保持partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "256k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:06:26.514538+00:00",
+            "checked_at": "2026-10-23T22:03:13+00:00",
             "source_ids": [
-              "context-mistral-alias",
-              "context-mistral-small"
+              "r1024-mistral-small4",
+              "r1024-mistral-config"
             ],
-            "evidence": "evidence/mistral/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "官方配置页 latest 别名分别指向 Large 3 / Small 4；托管型号页公布 256k，不使用开源权重配置补整数。 官方窗口原文为 256k；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "官方只给256k标称，未核实精确整数单位，不猜乘1000或1024。"
+        }
+      }
+    },
+    {
+      "id": "mistral-medium-3-5",
+      "request_id": "mistral-medium-3-5",
+      "display_name": "mistral-medium-3-5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:04:24+00:00",
+        "source_ids": [
+          "r1024-mistral-medium35",
+          "r1024-mistral-reasoning"
+        ],
+        "evidence": "evidence/mistral/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.15",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "7.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:04:24+00:00",
+              "source_ids": [
+                "r1024-mistral-pricing",
+                "r1024-mistral-medium35"
+              ],
+              "evidence": "evidence/mistral/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:04:24+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "r1024-mistral-medium35"
+          ],
+          "evidence": "evidence/mistral/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "r1024-mistral-medium35"
+          ],
+          "evidence": "evidence/mistral/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
+        },
+        "notes": "已有唯一用量价，不另设参考价。"
+      },
+      "notes": "新增官方托管API精确型号；Medium3.5为GA，Large4为2026-10-06公开预览，别名不自动替换其他条目。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "256k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:24+00:00",
+            "source_ids": [
+              "r1024-mistral-medium35"
+            ],
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "官方只给标称窗口，未取得精确整数边界；保持partial，不继承开源配置。"
+        },
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:24+00:00",
+            "source_ids": [
+              "r1024-mistral-medium35",
+              "r1024-mistral-chat"
+            ],
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "型号功能明确/v1/chat/completions；单独Agents/Conversations产品不附加成Responses或Messages。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "none",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "none减少思考并隐藏thinking chunk，不足以证明思考完全关闭。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:13+00:00",
+            "source_ids": [
+              "r1024-mistral-reasoning"
+            ],
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "官方可调思考表精确列本请求ID；省略默认与完全关闭能力未知。"
+        }
+      }
+    },
+    {
+      "id": "mistral-large-4-0",
+      "request_id": "mistral-large-4-0",
+      "display_name": "mistral-large-4-0",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:04:24+00:00",
+        "source_ids": [
+          "r1024-mistral-large4",
+          "r1024-mistral-reasoning"
+        ],
+        "evidence": "evidence/mistral/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1.36",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.14",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "4.18",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:04:24+00:00",
+              "source_ids": [
+                "r1024-mistral-pricing",
+                "r1024-mistral-large4"
+              ],
+              "evidence": "evidence/mistral/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:04:24+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "r1024-mistral-large4"
+          ],
+          "evidence": "evidence/mistral/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "r1024-mistral-large4"
+          ],
+          "evidence": "evidence/mistral/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
+        },
+        "notes": "已有唯一用量价，不另设参考价。"
+      },
+      "notes": "新增官方托管API精确型号；Medium3.5为GA，Large4为2026-10-06公开预览，别名不自动替换其他条目。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:24+00:00",
+            "source_ids": [
+              "r1024-mistral-large4"
+            ],
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "官方只给标称窗口，未取得精确整数边界；保持partial，不继承开源配置。"
+        },
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:24+00:00",
+            "source_ids": [
+              "r1024-mistral-large4",
+              "r1024-mistral-chat"
+            ],
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "型号功能明确/v1/chat/completions；单独Agents/Conversations产品不附加成Responses或Messages。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "none",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "none减少思考并隐藏thinking chunk，不足以证明思考完全关闭。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:13+00:00",
+            "source_ids": [
+              "r1024-mistral-reasoning"
+            ],
+            "evidence": "evidence/mistral/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "官方可调思考表精确列本请求ID；省略默认与完全关闭能力未知。"
         }
       }
     }

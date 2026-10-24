@@ -8,7 +8,7 @@
 | [DeepSeek](deepseek/README.md) | api-cn |
 | [火山方舟](ark/README.md) | api-cn, agent-plan-cn, coding-plan-cn |
 | [阿里云百炼](bailian/README.md) | api-cn, token-plan-cn, coding-plan-cn |
-| [MiniMax](minimax/README.md) | api-cn, token-plan-cn |
+| [MiniMax](minimax/README.md) | api-cn, token-plan-cn, m-plan-cn |
 | [智谱 BigModel](zhipu/README.md) | api-cn, coding-plan-cn |
 | [Moonshot / Kimi](moonshot/README.md) | api-cn, kimi-code |
 | [百度千帆](qianfan/README.md) | api-cn |

@@ -21,12 +21,14 @@
 | 图像 | `openai_image`、`minimax_image`、`ark_image`、`bailian_image` |
 | 视频 | `minimax_video`、`ark_video`、`bailian_video`、`kling_video` |
 | 语音 | `minimax_speech` |
-| 其他已核对的供应商协议 | `gemini_generate_content`、`bailian_text`、`minimax_text`、`xai_grpc` |
+| 其他已核对的供应商协议 | `gemini_generate_content`、`gemini_interactions`、`bailian_text`、`minimax_text`、`xai_grpc` |
 | 私有工具订阅承载 | `cursor_agent` |
 
 同一协议面的同步 / SSE / WebSocket 传输和异步任务查询不重复建面。厂商 body 与操作不同，即使路径都叫 `images/generations`，也不能直接判定为 `openai_image`。厂商 slug（如 `ark`）不是协议面。新发现无法表达的协议时，先增注册表、schema、证据和测试，不能使用 `native` / `vendor_native` 占位，也不把 Gemini 原生面称作 OpenAI Chat。
 
 本字段的范围是**当前 catalog 所收录模型的直接推理协议，以及订阅工具实际使用的模型承载协议**。另行购买的托管 Agent / Conversations 产品、管理 API、计费查询、模型发现、文件上传、批任务外包装不因同平台存在就附加到本模型。尚未收录的 embedding / rerank 等模型不在本轮新增范围。
+
+Gemini Interactions 的 `model` 请求直接调用基础模型，按独立原生推理面登记；同一路径的托管 `agent` 请求不因此纳入模型协议面。`generation_config.thinking_level` 与 GenerateContent 的 `generationConfig.thinkingConfig.thinkingLevel` 分别记录，不混用字段或枚举。新增协议 ID 需要消费者显式支持，资料收录不代表已部署适配。
 
 ## 每次更新步骤
 

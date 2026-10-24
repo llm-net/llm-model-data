@@ -8,6 +8,8 @@
 
 选择顺序：本产品公开标准在线价 → 常规短上下文 / 默认画质 → 非临时促销价。分时模型完整记录峰谷，首档选高峰；永久降价采用降价后的价格。没有证据就保留 unknown，不能采用最低价、训练方价格或同名产品价格来补洞。
 
+`Standard` 是服务档名，不足以证明其中金额不是限时优惠。官方明确称为 introductory / promotional、而常规价只在未来生效时，当前标准估价保留 unknown，已知优惠数字和未来日期写入证据；不提前使用未来价。长期的 Contributor 数据许可档属于独立价格条件，其常设折扣不等于临时促销，但该档自身仍可能另有限期推出优惠。
+
 ## DeepSeek 随时间变价
 
 catalog schema_version=2 在同一 rule 内保存 `time_pricing`，时区为 `Asia/Shanghai`，bands 各带完整 rates；按序首个匹配者胜，末档为无条件兜底。days 使用 ISO 星期（1–7），hours 是当天半开区间（不跨午夜，可拆两段），所有档的 meter 集合相同。rule.rates 必须等于首档，仅作基准投影。每天跨峰谷不更新文件，消费者按本笔时刻选档；跨时段请求的官方 time_basis 未知时保留 unknown，不能猜成官方规定。
@@ -15,6 +17,8 @@ catalog schema_version=2 在同一 rule 内保存 `time_pricing`，时区为 `As
 官方调整基准时：Agent 重新核对，更新这一组数字，生成价格前后差异交人确认。旧价留在 Git 历史，不在当前模型里并排放多个版本。官方已公告但尚未生效的价格先写证据与提醒，到期复核后替换。
 
 `verification.checked_at` 是资料核对时间；`effective_from / effective_until` 只填证实的生效时刻，不知道就 null。二者不能互相替代。历史账单要使用消费者当时固定的数据版本，不能拿今天的目录重新结算。
+
+缓存写入按来源确认的 TTL 选择 `cache_write_5m_tokens`、`cache_write_30m_tokens` 或 `cache_write_1h_tokens`。来源仅公布写入价、没有明确 TTL 时用 `cache_write_tokens`，不能按价格倍率或模型原厂的 TTL 猜测。不同 TTL 是可替代的估价档，不把同一批缓存写入 token 按多个 TTL 重复相加；基准外的档位写备注。新增 meter 扩展严格 schema 的枚举，消费者须先支持该词汇再激活相关资料，不能将未知 meter 丢弃后声称完整计价。
 
 ## 图像、视频、语音
 
@@ -48,9 +52,9 @@ Codex统一采用OpenAI API现金标价；GLM Coding Plan采用智谱API现金�
 
 ## API短名对齐日期版
 
-用户指定：方舟doubao-seedance-2.5、2.0、2.0-fast、2.0-mini，以及千帆deepseek-v4-pro、deepseek-v4-flash，价格参考同平台同系列最新日期后缀版本。
+用户指定：方舟doubao-seedance-2.5、2.0、2.0-fast、2.0-mini，以及千帆deepseek-v4-pro，价格参考同平台同系列最新日期后缀版本。千帆deepseek-v4-flash短名原先同样采用日期版参考，但已于2026-09-29退役，本轮删除；独立日期版0731仍是官方列出的替代型号。
 
-当前选取：Seedance分别为260628、260128、fast-260128、mini-260615；千帆Pro为0813、Flash为0731。后续从官方目录确认完整日期再比较，不跨系列选版本。已有短名保留请求ID，新条目请求名未证实则为 null；价格放reference_prices，reference_origin写选定日期版。估价映射不声明实际调用路由等价。
+当前选取：Seedance分别为260628、260128、fast-260128、mini-260615；千帆Pro为0813（本地完整日期ID为deepseek-v4-pro-260813，官方请求ID保留deepseek-v4-pro-0813）。后续从官方目录确认完整日期再比较，不跨系列选版本。已有短名保留请求ID，新条目请求名未证实则为 null；价格放reference_prices，reference_origin写选定日期版。估价映射不声明实际调用路由等价。
 
 ## 聚合平台
 

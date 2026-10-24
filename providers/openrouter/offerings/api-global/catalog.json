@@ -27,12 +27,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:02:04+00:00",
         "source_ids": [
-          "audit-pricing"
+          "r1024-openrouter-models"
         ],
-        "evidence": "evidence/openrouter/2026-09-16-audit.md",
-        "notes": "平台模型级公开目录确认ID；只取该条pricing，实际路由账单可能不同。"
+        "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -42,7 +42,7 @@
             "basis": "public_list",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "OpenRouter该模型目录pricing的模型级报价；每token精确乘1000000转换为每百万token，不展开路由供应商。",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -58,7 +58,13 @@
               },
               {
                 "meter": "input_cached_tokens",
-                "amount": "0.2000000",
+                "amount": "0.1000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_tokens",
+                "amount": "2.5000000",
                 "per": 1000000,
                 "unit": "token"
               }
@@ -70,28 +76,28 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:02:04+00:00",
               "source_ids": [
-                "audit-pricing"
+                "r1024-openrouter-models"
               ],
-              "evidence": "evidence/openrouter/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:02:04+00:00",
           "source_ids": [
-            "audit-pricing"
+            "r1024-openrouter-models"
           ],
-          "evidence": "evidence/openrouter/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -99,13 +105,15 @@
         "verification": {
           "status": "needs_review",
           "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/openrouter/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
         },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        "notes": "已有唯一用量价，不另设参考价。"
       },
-      "notes": "平台模型级公开目录确认ID；只取该条pricing，实际路由账单可能不同。",
+      "notes": "仅按OpenRouter精确ID的模型级机读资料，不用原厂价补缺。 当前alias_target为anthropic/claude-sonnet-5.5；原始请求名与~前缀保持。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -113,9 +121,9 @@
           "file"
         ],
         "context_window_tokens": 1000000,
-        "max_output_tokens": null,
-        "tool_calling": null,
-        "structured_output": null,
+        "max_output_tokens": 128000,
+        "tool_calling": true,
+        "structured_output": true,
         "streaming": null,
         "interfaces": [
           "openai_chat",
@@ -123,46 +131,820 @@
           "anthropic_messages"
         ],
         "interface_assessment": {
-          "coverage": "complete",
+          "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:03:14+00:00",
             "source_ids": [
-              "protocol-chat",
-              "protocol-responses",
-              "protocol-messages"
+              "r1024-openrouter-chat",
+              "r1024-openrouter-responses",
+              "r1024-openrouter-messages",
+              "r1024-openrouter-models"
             ],
-            "evidence": "evidence/openrouter/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "OpenRouter 自身提供三种入口，模型使用本平台精确 ID；协议转换发生在 OpenRouter 服务端，不等于底层训练方原生支持全部三面。"
+          "notes": "本平台精确模型级目录与Chat入口已核对；既有别名保留历史核对的Responses/Messages，新型号未取得逐型号兼容矩阵，不从平台总体能力推导。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "max",
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "模型级reasoning.supported_efforts给本精确ID档位，字段来自OpenRouter本平台reasoning文档。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/openrouter/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-models",
+              "r1024-openrouter-reasoning"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "机读目录新增逐模型reasoning元数据；仅登记Chat reasoning.effort，Responses与Messages的对应控制还未逐项核实。mandatory=false不能证明所有兼容入口都支持相同关法。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.502111+00:00",
+            "checked_at": "2026-10-23T22:02:04+00:00",
             "source_ids": [
-              "context-openrouter-models"
+              "r1024-openrouter-models"
             ],
-            "evidence": "evidence/openrouter/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "OpenRouter 模型级公开 API 原始整数；不从 Anthropic 模型页或路由端点继承，动态 ID 后续须重查。"
+          "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
+        }
+      }
+    },
+    {
+      "id": "anthropic-claude-sonnet-5-5",
+      "request_id": "anthropic/claude-sonnet-5.5",
+      "display_name": "anthropic/claude-sonnet-5.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:02:04+00:00",
+        "source_ids": [
+          "r1024-openrouter-models"
+        ],
+        "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "10.00000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.1000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_tokens",
+                "amount": "2.5000000",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:02:04+00:00",
+              "source_ids": [
+                "r1024-openrouter-models"
+              ],
+              "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:02:04+00:00",
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
+        },
+        "notes": "已有唯一用量价，不另设参考价。"
+      },
+      "notes": "仅按OpenRouter精确ID的模型级机读资料，不用原厂价补缺。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:02:04+00:00",
+            "source_ids": [
+              "r1024-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
+        },
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-chat",
+              "r1024-openrouter-responses",
+              "r1024-openrouter-messages",
+              "r1024-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台精确模型级目录与Chat入口已核对；既有别名保留历史核对的Responses/Messages，新型号未取得逐型号兼容矩阵，不从平台总体能力推导。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "max",
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "模型级reasoning.supported_efforts给本精确ID档位，字段来自OpenRouter本平台reasoning文档。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-models",
+              "r1024-openrouter-reasoning"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "机读目录新增逐模型reasoning元数据；仅登记Chat reasoning.effort，Responses与Messages的对应控制还未逐项核实。mandatory=false不能证明所有兼容入口都支持相同关法。"
+        }
+      }
+    },
+    {
+      "id": "anthropic-claude-haiku-5-5",
+      "request_id": "anthropic/claude-haiku-5.5",
+      "display_name": "anthropic/claude-haiku-5.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:02:04+00:00",
+        "source_ids": [
+          "r1024-openrouter-models"
+        ],
+        "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.1000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "0.5000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.01000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_tokens",
+                "amount": "0.125000000",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:02:04+00:00",
+              "source_ids": [
+                "r1024-openrouter-models"
+              ],
+              "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:02:04+00:00",
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
+        },
+        "notes": "已有唯一用量价，不另设参考价。"
+      },
+      "notes": "仅按OpenRouter精确ID的模型级机读资料，不用原厂价补缺。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:02:04+00:00",
+            "source_ids": [
+              "r1024-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
+        },
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-chat",
+              "r1024-openrouter-responses",
+              "r1024-openrouter-messages",
+              "r1024-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台精确模型级目录与Chat入口已核对；既有别名保留历史核对的Responses/Messages，新型号未取得逐型号兼容矩阵，不从平台总体能力推导。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "max",
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low",
+                    "none"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "模型级reasoning.supported_efforts给本精确ID档位，字段来自OpenRouter本平台reasoning文档。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-models",
+              "r1024-openrouter-reasoning"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "机读目录新增逐模型reasoning元数据；仅登记Chat reasoning.effort，Responses与Messages的对应控制还未逐项核实。mandatory=false不能证明所有兼容入口都支持相同关法。"
+        }
+      }
+    },
+    {
+      "id": "openai-gpt-6-1-sol",
+      "request_id": "openai/gpt-6.1-sol",
+      "display_name": "openai/gpt-6.1-sol",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:02:04+00:00",
+        "source_ids": [
+          "r1024-openrouter-models"
+        ],
+        "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "10.00000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.1000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_tokens",
+                "amount": "2.5000000",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:02:04+00:00",
+              "source_ids": [
+                "r1024-openrouter-models"
+              ],
+              "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:02:04+00:00",
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
+        },
+        "notes": "已有唯一用量价，不另设参考价。"
+      },
+      "notes": "仅按OpenRouter精确ID的模型级机读资料，不用原厂价补缺。",
+      "capabilities": {
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "context_window_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1050000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:02:04+00:00",
+            "source_ids": [
+              "r1024-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
+        },
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-chat",
+              "r1024-openrouter-responses",
+              "r1024-openrouter-messages",
+              "r1024-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台精确模型级目录与Chat入口已核对；既有别名保留历史核对的Responses/Messages，新型号未取得逐型号兼容矩阵，不从平台总体能力推导。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "max",
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "模型级reasoning.supported_efforts给本精确ID档位，字段来自OpenRouter本平台reasoning文档。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-models",
+              "r1024-openrouter-reasoning"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "机读目录新增逐模型reasoning元数据；仅登记Chat reasoning.effort，Responses与Messages的对应控制还未逐项核实。mandatory=false不能证明所有兼容入口都支持相同关法。"
+        }
+      }
+    },
+    {
+      "id": "google-gemini-4-argon",
+      "request_id": "google/gemini-4-argon",
+      "display_name": "google/gemini-4-argon",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:02:04+00:00",
+        "source_ids": [
+          "r1024-openrouter-models"
+        ],
+        "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "10.00000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.1000000",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_tokens",
+                "amount": "0.1875000000",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:02:04+00:00",
+              "source_ids": [
+                "r1024-openrouter-models"
+              ],
+              "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:02:04+00:00",
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-openrouter-models"
+          ],
+          "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
+        },
+        "notes": "已有唯一用量价，不另设参考价。"
+      },
+      "notes": "仅按OpenRouter精确ID的模型级机读资料，不用原厂价补缺。",
+      "capabilities": {
+        "input_modalities": [
+          "audio",
+          "file",
+          "image",
+          "text",
+          "video"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 943718,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:02:04+00:00",
+            "source_ids": [
+              "r1024-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
+        },
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-chat",
+              "r1024-openrouter-responses",
+              "r1024-openrouter-messages",
+              "r1024-openrouter-models"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台精确模型级目录与Chat入口已核对；既有别名保留历史核对的Responses/Messages，新型号未取得逐型号兼容矩阵，不从平台总体能力推导。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "模型级reasoning.supported_efforts给本精确ID档位，字段来自OpenRouter本平台reasoning文档。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:03:14+00:00",
+            "source_ids": [
+              "r1024-openrouter-models",
+              "r1024-openrouter-reasoning"
+            ],
+            "evidence": "evidence/openrouter/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "机读目录新增逐模型reasoning元数据；仅登记Chat reasoning.effort，Responses与Messages的对应控制还未逐项核实。mandatory=false不能证明所有兼容入口都支持相同关法。"
         }
       }
     }

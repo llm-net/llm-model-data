@@ -9,7 +9,8 @@
 ## 独立产品
 
 - [api-cn](offerings/api-cn/catalog.json)
-- [token-plan-cn](offerings/token-plan-cn/catalog.json)
+- [token-plan-cn](offerings/token-plan-cn/catalog.json)：停止新售，既有用户按原价和权益续费。
+- [m-plan-cn](offerings/m-plan-cn/catalog.json)：新订阅产品，不能覆盖旧 Token Plan 档位。
 
 ## 更新纪律
 
@@ -30,3 +31,7 @@
 ## 上下文长度核对
 
 新增及每次更新模型必须按 [CONTEXT.md](../../docs/CONTEXT.md) 查询本产品官方窗口，包含全部订阅型号。填写 `context_window_tokens` 与独立 `context_assessment`，记录单位及套餐 / 扩展模式条件；未知写原因并进入审阅报告，不从同名原厂或其他产品继承。
+
+## 本轮核对
+
+2026-10-24 的新增型号、M2.7 存量 API 下线计划、订阅兼容请求路由及未核实项见 [核对记录](../../evidence/minimax/2026-10-24-audit.md)。Token Plan 与 M Plan 保持独立身份，旧文档重定向不能当成两产品权益相同的证据。

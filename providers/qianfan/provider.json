@@ -56,6 +56,30 @@
       "url": "https://cloud.baidu.com/doc/qianfan/s/rmh4stp0j",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "audit-20261024-chat",
+      "url": "https://cloud.baidu.com/doc/qianfan-api/s/3m7of64lb",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "audit-20261024-thinking",
+      "url": "https://cloud.baidu.com/doc/qianfan-docs/s/Wm95lyynv",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "audit-20261024-retirement",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/zmh4stou3",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "audit-20261024-changelog",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/Kmh4stnjp",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

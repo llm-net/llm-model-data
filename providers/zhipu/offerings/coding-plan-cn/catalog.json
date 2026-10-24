@@ -10,7 +10,7 @@
     "status": "needs_review",
     "checked_at": null,
     "source_ids": [],
-    "evidence": "evidence/zhipu/2026-09-16-audit.md",
+    "evidence": "evidence/zhipu/2026-10-24-audit.md",
     "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
   },
   "plans": [],
@@ -27,12 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-coding-plan-cn"
+          "context-zhipu-latest",
+          "audit-20261024-flash"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "当前 Coding Plan 明确列两款可用；FlashX 尚未开放套餐，不自动追加。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -86,12 +87,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "alignment-zhipu-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -100,16 +101,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "alignment-zhipu-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "Coding Plan 只保留官方明确可用的 GLM-5.3 / Flash；参考同平台常规 API 价，不调查积分或额外扣费。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -126,16 +127,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-coding",
-              "protocol-codex",
-              "protocol-messages"
+              "context-zhipu-latest",
+              "protocol-codex"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "GLM Coding Plan 的 Chat 专用根、Codex Responses 根及 Anthropic 根分别核对，不能把 /api/v1 的支持推给按量产品。"
+          "notes": "订阅切换页逐项给出 OpenAI 兼容、Codex、Claude Code 地址和两款模型；无须从按量产品继承。"
         },
         "reasoning": {
           "support": "supported",
@@ -151,12 +151,16 @@
                   "kind": "mode",
                   "parameter": "thinking.type",
                   "values": [
-                    "enabled"
+                    "enabled",
+                    "adaptive",
+                    "disabled",
+                    "none",
+                    "off"
                   ],
                   "minimum": null,
                   "maximum": null,
                   "default": "enabled",
-                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                  "notes": "关闭或 off/none 配置会映射 low，仍然思考；官方另列布尔开关，但本模式枚举只保存字符串。省略按 max 处理。"
                 },
                 {
                   "kind": "effort",
@@ -164,45 +168,119 @@
                   "values": [
                     "none",
                     "minimal",
+                    "light",
                     "low",
                     "medium",
                     "high",
                     "xhigh",
-                    "max"
+                    "max",
+                    "ultra"
                   ],
                   "minimum": null,
                   "maximum": null,
                   "default": "max",
-                  "notes": "5.3 API 只接受 low/high/max；Coding Plan 把 none/minimal/low→low、medium/high→high、xhigh/max→max。5.2 API 的 none/minimal 会放弃思考。"
+                  "notes": "none/minimal/light/low 映射 low，medium/high 映射 high，xhigh/max/ultra 映射 max；兼容档位不代表独立深度。"
                 }
               ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "notes": "订阅工具切换指南明确各协议字段；关闭转换为 low，不切换型号。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "minimal",
+                    "light",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "none/minimal/light/low 映射 low，medium/high 映射 high，xhigh/max/ultra 映射 max；兼容档位不代表独立深度。"
+                }
+              ],
+              "notes": "订阅工具切换指南明确各协议字段；关闭转换为 low，不切换型号。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "adaptive",
+                    "disabled",
+                    "none",
+                    "off"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "关闭或 off/none 配置会映射 low，仍然思考；官方另列布尔开关，但本模式枚举只保存字符串。省略按 max 处理。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "none",
+                    "minimal",
+                    "light",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "none/minimal/light/low 映射 low，medium/high 映射 high，xhigh/max/ultra 映射 max；兼容档位不代表独立深度。"
+                }
+              ],
+              "notes": "订阅工具切换指南明确各协议字段；关闭转换为 low，不切换型号。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
+              "context-zhipu-latest",
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "逐协议核实订阅思考参数，包含新的 light/ultra 兼容映射；独立思考预算仍未披露，保持 partial。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "逐协议核实订阅思考参数，包含新的 light/ultra 兼容映射；独立思考预算仍未披露，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:08:58.659814+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-latest"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "Coding Plan 文档针对 GLM-5.3 / GLM-5.3-Flash 要求 [1m] 后缀；配置示例 1000000 是 CLAUDE_CODE_AUTO_COMPACT_WINDOW 压缩阈值，不能据此确认服务窗口整数。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "订阅切换页标称 1M；Claude Code 需 [1m] 后缀，1000000 是工具配置的窗口/压缩值，不据此断言 API 总窗口精确边界。"
         }
       }
     },
@@ -218,12 +296,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-coding-plan-cn"
+          "context-zhipu-latest",
+          "audit-20261024-flash"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "当前 Coding Plan 明确列两款可用；FlashX 尚未开放套餐，不自动追加。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -277,12 +356,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "alignment-zhipu-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -291,16 +370,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "alignment-zhipu-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "Coding Plan 只保留官方明确可用的 GLM-5.3 / Flash；参考同平台常规 API 价，不调查积分或额外扣费。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -317,16 +396,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-coding",
-              "protocol-codex",
-              "protocol-messages"
+              "context-zhipu-latest",
+              "protocol-codex"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "GLM Coding Plan 的 Chat 专用根、Codex Responses 根及 Anthropic 根分别核对，不能把 /api/v1 的支持推给按量产品。"
+          "notes": "订阅切换页逐项给出 OpenAI 兼容、Codex、Claude Code 地址和两款模型；无须从按量产品继承。"
         },
         "reasoning": {
           "support": "supported",
@@ -342,12 +420,16 @@
                   "kind": "mode",
                   "parameter": "thinking.type",
                   "values": [
-                    "enabled"
+                    "enabled",
+                    "adaptive",
+                    "disabled",
+                    "none",
+                    "off"
                   ],
                   "minimum": null,
                   "maximum": null,
                   "default": "enabled",
-                  "notes": "仅保存已核对的官方值；不与其他模型换算。"
+                  "notes": "关闭或 off/none 配置会映射 low，仍然思考；官方另列布尔开关，但本模式枚举只保存字符串。省略按 max 处理。"
                 },
                 {
                   "kind": "effort",
@@ -355,48 +437,122 @@
                   "values": [
                     "none",
                     "minimal",
+                    "light",
                     "low",
                     "medium",
                     "high",
                     "xhigh",
-                    "max"
+                    "max",
+                    "ultra"
                   ],
                   "minimum": null,
                   "maximum": null,
                   "default": "max",
-                  "notes": "5.3 API 只接受 low/high/max；Coding Plan 把 none/minimal/low→low、medium/high→high、xhigh/max→max。5.2 API 的 none/minimal 会放弃思考。"
+                  "notes": "none/minimal/light/low 映射 low，medium/high 映射 high，xhigh/max/ultra 映射 max；兼容档位不代表独立深度。"
                 }
               ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "notes": "订阅工具切换指南明确各协议字段；关闭转换为 low，不切换型号。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "none",
+                    "minimal",
+                    "light",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "none/minimal/light/low 映射 low，medium/high 映射 high，xhigh/max/ultra 映射 max；兼容档位不代表独立深度。"
+                }
+              ],
+              "notes": "订阅工具切换指南明确各协议字段；关闭转换为 low，不切换型号。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "adaptive",
+                    "disabled",
+                    "none",
+                    "off"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "关闭或 off/none 配置会映射 low，仍然思考；官方另列布尔开关，但本模式枚举只保存字符串。省略按 max 处理。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "none",
+                    "minimal",
+                    "light",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "none/minimal/light/low 映射 low，medium/high 映射 high，xhigh/max/ultra 映射 max；兼容档位不代表独立深度。"
+                }
+              ],
+              "notes": "订阅工具切换指南明确各协议字段；关闭转换为 low，不切换型号。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
+              "context-zhipu-latest",
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "逐协议核实订阅思考参数，包含新的 light/ultra 兼容映射；独立思考预算仍未披露，保持 partial。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "逐协议核实订阅思考参数，包含新的 light/ultra 兼容映射；独立思考预算仍未披露，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:08:58.659814+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-latest"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "Coding Plan 文档针对 GLM-5.3 / GLM-5.3-Flash 要求 [1m] 后缀；配置示例 1000000 是 CLAUDE_CODE_AUTO_COMPACT_WINDOW 压缩阈值，不能据此确认服务窗口整数。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "订阅切换页标称 1M；Claude Code 需 [1m] 后缀，1000000 是工具配置的窗口/压缩值，不据此断言 API 总窗口精确边界。"
         }
       }
     }
   ],
-  "notes": "模型价格统一用于按量等价消耗示意：优先同平台按量价，缺价再取模型开发方公开价。不核对订阅真实扣费或积分单价。套餐资料独立保存。"
+  "notes": "2026-10-24 核对清单内全部模型；覆盖范围仍为部分收录，逐项结论与缺口见 evidence/zhipu/2026-10-24-audit.md。"
 }

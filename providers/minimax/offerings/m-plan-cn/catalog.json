@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "provider_id": "minimax",
+  "id": "m-plan-cn",
+  "display_name": "MiniMax / M Plan（国内）",
+  "kind": "api_subscription",
+  "market": "cn",
+  "coverage": "partial",
+  "verification": {
+    "status": "needs_review",
+    "checked_at": null,
+    "source_ids": [
+      "m-plan-cn"
+    ],
+    "evidence": "evidence/minimax/2026-10-24-audit.md",
+    "notes": "逐项见模型；标准月费未取得，不以产品级已核对替代子项。"
+  },
+  "plans": [],
+  "models": [
+    {
+      "id": "minimax-m3-1-flash",
+      "request_id": "MiniMax-M3.1-Flash",
+      "display_name": "MiniMax M3.1 Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
+        "source_ids": [
+          "m-plan-cn",
+          "m-plan-quickstart"
+        ],
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "参考 MiniMax-M3.1-Flash；人民币标准在线价；按独立输入、缓存读取、输出分量计费。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.minimax.cn/docs/pricing/overview",
+              "subject": "MiniMax-M3.1-Flash",
+              "reason": "M Plan 同平台对应型号公开按量价，仅作参考。",
+              "catalog_model": {
+                "provider_id": "minimax",
+                "offering_id": "api-cn",
+                "model_id": "minimax-m3-1-flash",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
+              "source_ids": [
+                "audit-pricing-overview"
+              ],
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            },
+            "notes": "不套用 M3 的长上下文阶梯或 priority 服务层价格。 按量参考价不是订阅实际扣款。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
+          "source_ids": [
+            "audit-pricing-overview"
+          ],
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
+        },
+        "notes": "不套用 M3 的长上下文阶梯或 priority 服务层价格。"
+      },
+      "notes": "Go / Explore / Build 均支持 M3.1 Flash；M Plan 与 Token Plan 独立，不把旧套餐 ID 合并。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "m-plan-quickstart",
+              "protocol-codex",
+              "protocol-cursor"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "M Plan 快速开始与 Codex/Cursor 接入文档分别确认三兼容面。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "M3.1 Flash 明确可调深度；none / disabled 被拒绝。"
+                }
+              ],
+              "notes": "参数省略仍思考，默认 max；不借用 M3 的模式开关行为。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "订阅快速开始只明确 output_config.effort=max；其余档位和默认值未从本产品独立确认。"
+                }
+              ],
+              "notes": "参数省略仍思考，默认 max；不借用 M3 的模式开关行为。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "m-plan-quickstart",
+              "protocol-codex"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "M Plan 接入文档核实 Responses 的 low/medium/high/xhigh/max 和默认 max、禁止 none；Messages 样例确认 max，其他档位仅通用 API 说明，整体仍 partial。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "protocol-codex"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "M Plan Codex 指南明示模型最高 1M；524288 是客户端推荐窗口，不作为模型真实上限，也不借用 API 整数。"
+        }
+      }
+    }
+  ],
+  "notes": "M Plan 是独立订阅产品；Token Plan 老用户可选择升级。当前仅收录证据完整的文本型号；Go/Explore/Build 标准月费未取得，plans 暂空，不从旧档价推断。"
+}

@@ -56,6 +56,36 @@
       "url": "https://openrouter.ai/api/v1/models",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "r1024-openrouter-models",
+      "url": "https://openrouter.ai/api/v1/models",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/openrouter/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-openrouter-chat",
+      "url": "https://openrouter.ai/docs/quickstart",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/openrouter/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-openrouter-responses",
+      "url": "https://openrouter.ai/docs/api_reference/responses/overview",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/openrouter/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-openrouter-messages",
+      "url": "https://openrouter.ai/docs/api/api-reference/anthropic-messages/create-a-message.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/openrouter/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-openrouter-reasoning",
+      "url": "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/openrouter/2026-10-24-refresh.md。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

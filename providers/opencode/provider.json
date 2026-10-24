@@ -98,6 +98,114 @@
       "url": "https://dev.meta.ai/docs/pricing-rate-limits",
       "purpose": "pricing",
       "notes": "开发方 Meta Muse Spark API 价格（含 Contributor 档）；Muse Spark 型号参考价来源。"
+    },
+    {
+      "id": "audit-20261024-go",
+      "url": "https://opencode.ai/v2/docs/console/go/",
+      "purpose": "models",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-models",
+      "url": "https://opencode.ai/inference/go/v1/models",
+      "purpose": "models",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-modelsdev",
+      "url": "https://models.dev/api.json",
+      "purpose": "models",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-moonshot",
+      "url": "https://platform.kimi.com/docs/pricing/chat",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-zhipu",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-deepseek",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-minimax",
+      "url": "https://platform.minimax.cn/docs/pricing/overview",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-longcat-2-0",
+      "url": "https://longcat.chat/platform/docs/zh/pricing/longcat-2.0",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-hunyuan",
+      "url": "https://cloud.tencent.com/document/product/1823/130055",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-xai",
+      "url": "https://docs.x.ai/developers/pricing.md",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-openai",
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-anthropic",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-gemini-contributor",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-longcat-2-5-preview-free",
+      "url": "https://longcat.chat/platform/docs/zh/pricing/longcat-2.5",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-stepfun",
+      "url": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-bailian",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-qwen3-7-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-max",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+    },
+    {
+      "id": "audit-20261024-ref-qwen3-6-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-6-plus",
+      "purpose": "pricing",
+      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
     }
   ],
   "notes": "OpenCode Go 包月套餐资料；参考价按用户指定取各模型源头厂商官网按量价，不采用 Go 用量上限换算表或 Zen 余额价。"

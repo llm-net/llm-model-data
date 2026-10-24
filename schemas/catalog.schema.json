@@ -127,7 +127,9 @@
           "enum": [
             "input_uncached_tokens",
             "input_cached_tokens",
+            "cache_write_tokens",
             "cache_write_5m_tokens",
+            "cache_write_30m_tokens",
             "cache_write_1h_tokens",
             "output_tokens",
             "image_input_tokens",
@@ -697,6 +699,7 @@
                   "kling_video",
                   "minimax_speech",
                   "gemini_generate_content",
+                  "gemini_interactions",
                   "bailian_text",
                   "minimax_text",
                   "cursor_agent",

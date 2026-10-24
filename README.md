@@ -27,16 +27,17 @@ tests/                             # 数据边界回归测试
 .github/                           # PR 模板与只读校验 CI
 ```
 
+- [本轮模型、价格与下线盘点](docs/AUDIT-2026-10-24.md)
 - [当前价格对齐结果与剩余缺项](docs/PRICE-ALIGNMENT.md)
 - [首轮核对历史报告](docs/AUDIT-2026-09-16.md)
 - [服务商索引](providers/README.md)
 - [数据模型](docs/DATA-MODEL.md)
 - [上下文长度维护（新增及更新必查）](docs/CONTEXT.md)
-- [当前上下文长度核对结果](docs/CONTEXT-AUDIT-2026-09-16.md)
+- [首轮上下文长度核对记录](docs/CONTEXT-AUDIT-2026-09-16.md)
 - [思考能力维护（每次更新必读）](docs/REASONING.md)
-- [当前思考能力核对结果](docs/REASONING-AUDIT-2026-09-16.md)
+- [首轮思考能力核对记录](docs/REASONING-AUDIT-2026-09-16.md)
 - [协议面维护（每次更新必读）](docs/PROTOCOLS.md)
-- [当前协议面核对结果](docs/PROTOCOL-AUDIT-2026-09-16.md)
+- [首轮协议面核对记录](docs/PROTOCOL-AUDIT-2026-09-16.md)
 - [统一估价与多模态计费](docs/PRICING.md)
 - [聚合平台简化收录](docs/COLLECTION.md)
 - [人工确认](docs/REVIEW.md)

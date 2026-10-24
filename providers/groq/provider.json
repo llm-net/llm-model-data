@@ -50,6 +50,48 @@
       "url": "https://console.groq.com/docs/models",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "r1024-groq-models",
+      "url": "https://console.groq.com/docs/models",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/groq/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-groq-deprecations",
+      "url": "https://console.groq.com/docs/deprecations",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/groq/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-groq-caching",
+      "url": "https://console.groq.com/docs/prompt-caching",
+      "purpose": "pricing",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/groq/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-groq-chat",
+      "url": "https://console.groq.com/docs/openai",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/groq/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-groq-responses",
+      "url": "https://console.groq.com/docs/responses-api",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/groq/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-groq-reasoning",
+      "url": "https://console.groq.com/docs/reasoning",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/groq/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-groq-qwen",
+      "url": "https://console.groq.com/docs/model/qwen/qwen3.8-27b",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/groq/2026-10-24-refresh.md。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

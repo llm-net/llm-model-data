@@ -118,6 +118,25 @@ class DataContracts(unittest.TestCase):
         schema = c.read_json(ROOT / "schemas/catalog.schema.json")
         self.assertFalse(c.Draft202012Validator(schema).is_valid(self.data))
 
+    def test_cache_write_ttl_variants_keep_token_units(self):
+        schema = c.read_json(ROOT / "schemas/catalog.schema.json")
+        validator = c.Draft202012Validator(schema)
+        for meter in ("cache_write_tokens", "cache_write_30m_tokens"):
+            with self.subTest(meter=meter):
+                data = deepcopy(self.data)
+                rule = data["models"][0]["usage_prices"]["rules"][0]
+                rate = {"meter": meter, "amount": "0.125", "per": 1000000, "unit": "token"}
+                rule["rates"].append(deepcopy(rate))
+                for band in rule.get("time_pricing", {}).get("bands", []):
+                    band["rates"].append(deepcopy(rate))
+                self.assertTrue(validator.is_valid(data))
+                c.check_offering(ROOT, data, self.provider)
+                rule["rates"][-1]["unit"] = "second"
+                for band in rule.get("time_pricing", {}).get("bands", []):
+                    band["rates"][-1]["unit"] = "second"
+                with self.assertRaisesRegex(c.CatalogError, "meter/unit mismatch"):
+                    c.check_offering(ROOT, data, self.provider)
+
     def test_unknown_fields_rejected(self):
         self.data["cloud"] = {"enabled": True}
         schema = c.read_json(ROOT / "schemas/catalog.schema.json")
@@ -370,6 +389,16 @@ class ProtocolContracts(unittest.TestCase):
         with self.assertRaisesRegex(c.CatalogError, "does not match output modality"):
             self.check()
 
+    def test_gemini_interactions_has_independent_protocol_identity(self):
+        data = c.read_json(ROOT / "providers/gemini/offerings/api-global/catalog.json")
+        provider = c.read_json(ROOT / "providers/gemini/provider.json")
+        model = next(m for m in data["models"] if m["id"] == "gemini-4-argon")
+        self.assertIn("gemini_interactions", model["capabilities"]["interfaces"])
+        c.check_offering(ROOT, data, provider)
+        model["capabilities"]["interfaces"].append("gemini_interactions")
+        with self.assertRaisesRegex(c.CatalogError, "duplicate"):
+            c.check_offering(ROOT, data, provider)
+
     def test_tool_subscription_is_not_provider_api(self):
         def interfaces(provider, offering):
             data = c.read_json(ROOT / f"providers/{provider}/offerings/{offering}/catalog.json")
@@ -404,6 +433,14 @@ class ReasoningContracts(unittest.TestCase):
         for model in data["models"]:
             reasoning = model["capabilities"]["reasoning"]
             profiles = {p["surface"]: p for p in reasoning["profiles"]}
+            if model["id"] == "gpt-6-1-sol":
+                # 新型号只有产品界面证据，不能从标签补造请求枚举。
+                self.assertEqual(set(profiles), {"client_ui"})
+                control = profiles["client_ui"]["controls"][0]
+                self.assertEqual(control["parameter"], "/model")
+                self.assertEqual(control["values"], ["Light", "Medium", "High", "Extra High", "Max"])
+                self.assertEqual(reasoning["coverage"], "partial")
+                continue
             request = profiles["api_request"]
             self.assertEqual(request["interface"], "openai_responses")
             effort = request["controls"][0]

@@ -212,6 +212,168 @@
       "url": "https://bailian-cs.console.aliyun.com/cli/api.json?action=BroadScopeAspnGateway&product=sfm_bailian&api=zeldaHttp.dashscopeModel.%2Fzelda%2Fapi%2Fv1%2FmodelCenter%2FlistFoundationModels",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "audit-current-context-cache",
+      "url": "https://help.aliyun.com/zh/model-studio/context-cache",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-minimax-api-by-minimax",
+      "url": "https://help.aliyun.com/zh/model-studio/minimax-api-by-minimax",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-deepseek-api",
+      "url": "https://help.aliyun.com/zh/model-studio/deepseek-api",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-model-depreciation",
+      "url": "https://help.aliyun.com/zh/model-studio/model-depreciation",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-glm",
+      "url": "https://help.aliyun.com/zh/model-studio/glm",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-glm-5-3",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-5-3",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-glm-zhipu",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-zhipu",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-glm-5-3-by-zhipu",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-5-3-by-zhipu",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-glm-5-3-flash-by-zhipu",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-5-3-flash-by-zhipu",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-glm-5-3-flashx-by-zhipu",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-5-3-flashx-by-zhipu",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-8-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-max",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-8-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-flash",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-7-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-7-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-flash",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-8-2-4t-a95b",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-2-4t-a95b",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-8-27b",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-27b",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-vl-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-vl-plus",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-6-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-6-plus",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-6-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-6-flash",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-qwen3-7-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-max",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-current-deepseek-v4-1-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/deepseek-v4-1-flash",
+      "purpose": "models",
+      "notes": "2026-10-24 本平台当前文档/精确模型卡；位置和读取结果见本轮证据。"
+    },
+    {
+      "id": "audit-retire-118177",
+      "url": "https://www.aliyun.com/notice/118177",
+      "purpose": "models",
+      "notes": "本轮公告外壳可读但正文为空，未作为具体模型已下线证明。"
+    },
+    {
+      "id": "audit-retire-118434",
+      "url": "https://www.aliyun.com/notice/118434",
+      "purpose": "models",
+      "notes": "本轮公告外壳可读但正文为空，未作为具体模型已下线证明。"
+    },
+    {
+      "id": "audit-retire-118344",
+      "url": "https://www.aliyun.com/notice/118344",
+      "purpose": "models",
+      "notes": "本轮公告外壳可读但正文为空，未作为具体模型已下线证明。"
+    },
+    {
+      "id": "audit-retire-118345",
+      "url": "https://www.aliyun.com/notice/118345",
+      "purpose": "models",
+      "notes": "本轮公告外壳可读但正文为空，未作为具体模型已下线证明。"
+    },
+    {
+      "id": "audit-retire-118331",
+      "url": "https://www.aliyun.com/notice/118331",
+      "purpose": "models",
+      "notes": "本轮公告外壳可读但正文为空，未作为具体模型已下线证明。"
+    },
+    {
+      "id": "audit-retire-118332",
+      "url": "https://www.aliyun.com/notice/118332",
+      "purpose": "models",
+      "notes": "本轮公告外壳可读但正文为空，未作为具体模型已下线证明。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

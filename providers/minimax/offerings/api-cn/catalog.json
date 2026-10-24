@@ -27,12 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -70,12 +71,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -84,12 +85,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -105,9 +106,13 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
-        "input_modalities": [],
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
         "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": null,
@@ -123,17 +128,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-chat",
               "protocol-responses",
               "protocol-messages",
               "protocol-native"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "M3 / M2.7 系列三种兼容文本面；原生 text/chatcompletion_v2 仍有型号文档，但已标 deprecated。Responses 的 M2.x 思考不可关闭，与 M3 不同。"
+          "notes": "分别核对 Chat、Responses、Messages 与已废弃的 text/chatcompletion_v2。原生废弃面仍有本型号示例，不作为新接入推荐。"
         },
         "reasoning": {
           "support": "supported",
@@ -208,30 +213,31 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "reasoning-minimax",
               "reasoning-minimax-chat",
               "reasoning-minimax-messages"
             ],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "M3 的 Chat 默认开启，Messages / Responses 默认关闭；M2.x 不能关闭。废弃原生文本面的控制参数未核对，整体 partial。"
+          "notes": "本轮重核：Chat 默认 adaptive；Messages/Responses 默认不思考；非 none Responses effort 只开启思考，不代表深度档位。废弃原生文本面仍有缺项。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1,000,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T15:02:46.702222+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-text"
+              "context-minimax-text",
+              "protocol-chat"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "MiniMax 国内 API 文本生成指南逐型号给出的整数窗口。"
+          "notes": "官方型号表明确整数窗口；Codex 推荐 524288 是客户端建议，不是模型总窗口。"
         }
       }
     },
@@ -247,12 +253,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "官方具体公告：2026-10-19 停止新用户调用，存量按量 API 可继续到 2026-11-18；同页历史表却写已下线，存在冲突，按明确时间计划保留而不提前删除。当前价表未列该型号，历史价格和能力核对日期不刷新。"
       },
       "usage_prices": {
         "status": "published",
@@ -325,7 +331,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方具体公告：2026-10-19 停止新用户调用，存量按量 API 可继续到 2026-11-18；同页历史表却写已下线，存在冲突，按明确时间计划保留而不提前删除。当前价表未列该型号，历史价格和能力核对日期不刷新。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 204800,
@@ -425,12 +431,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "官方具体公告：2026-10-19 停止新用户调用，存量按量 API 可继续到 2026-11-18；同页历史表却写已下线，存在冲突，按明确时间计划保留而不提前删除。当前价表未列该型号，历史价格和能力核对日期不刷新。"
       },
       "usage_prices": {
         "status": "published",
@@ -503,7 +509,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方具体公告：2026-10-19 停止新用户调用，存量按量 API 可继续到 2026-11-18；同页历史表却写已下线，存在冲突，按明确时间计划保留而不提前删除。当前价表未列该型号，历史价格和能力核对日期不刷新。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 204800,
@@ -603,12 +609,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -643,12 +650,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -657,12 +664,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -678,7 +685,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -693,12 +700,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-image"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -709,25 +716,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-image"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-image"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     },
@@ -743,12 +752,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -783,12 +793,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -797,12 +807,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -818,7 +828,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -833,12 +843,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-image"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -849,25 +859,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-image"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-image"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     },
@@ -883,12 +895,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -953,12 +966,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -967,12 +980,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -988,9 +1001,14 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
-        "input_modalities": [],
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
         "context_window_tokens": null,
         "max_output_tokens": null,
         "tool_calling": null,
@@ -1003,12 +1021,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-video"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -1019,25 +1037,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-video"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     },
@@ -1053,12 +1073,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -1095,13 +1116,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing",
-                "audit-speech-http"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -1110,13 +1130,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing",
-            "audit-speech-http"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1132,7 +1151,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1147,12 +1166,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -1163,25 +1182,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     },
@@ -1197,12 +1218,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -1239,13 +1261,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing",
-                "audit-speech-http"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -1254,13 +1275,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing",
-            "audit-speech-http"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1276,7 +1296,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1291,12 +1311,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -1307,25 +1327,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     },
@@ -1341,12 +1363,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -1383,13 +1406,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing",
-                "audit-speech-http"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -1398,13 +1420,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing",
-            "audit-speech-http"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1420,7 +1441,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1435,12 +1456,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -1451,25 +1472,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     },
@@ -1485,12 +1508,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -1527,13 +1551,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing",
-                "audit-speech-http"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -1542,13 +1565,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing",
-            "audit-speech-http"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1564,7 +1586,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1579,12 +1601,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -1595,25 +1617,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     },
@@ -1629,12 +1653,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -1671,13 +1696,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing",
-                "audit-speech-http"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -1686,13 +1710,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing",
-            "audit-speech-http"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1708,7 +1731,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1723,12 +1746,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -1739,25 +1762,27 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     },
@@ -1773,12 +1798,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
         "source_ids": [
-          "audit-pricing"
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
         ],
-        "evidence": "evidence/minimax/2026-09-16-audit.md",
-        "notes": "官方当前模型表列出本模型；未实调。"
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "published",
@@ -1815,13 +1841,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
               "source_ids": [
-                "audit-pricing",
-                "audit-speech-http"
+                "audit-pricing-overview"
               ],
-              "evidence": "evidence/minimax/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -1830,13 +1855,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
           "source_ids": [
-            "audit-pricing",
-            "audit-speech-http"
+            "audit-pricing-overview"
           ],
-          "evidence": "evidence/minimax/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1852,7 +1876,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方当前模型表列出本模型；未实调。",
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1867,12 +1891,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
               "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -1883,25 +1907,793 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/minimax/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "protocol-speech"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
           },
-          "notes": "当前是图片、视频或语音型号；本轮未取得其思考控制能力的型号证据。不能按模态推断“不支持”，也不把质量、速度或生成预算当成思考深度。"
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
         },
         "context_assessment": {
           "status": "not_applicable",
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.668713+00:00",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
             "source_ids": [
-              "context-minimax-models"
+              "protocol-speech"
             ],
-            "evidence": "evidence/minimax/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "官方资料将此型号列为图像 / 视频 / 语音生成任务接口；本字段的文本对话窗口不适用。提示词字符、图片数量、音视频时长等限制不能填入 context_window_tokens。"
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
+        }
+      }
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "request_id": "MiniMax-M3.1-Flash",
+      "display_name": "MiniMax M3.1 Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
+        "source_ids": [
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
+        ],
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "人民币标准在线价；按独立输入、缓存读取、输出分量计费。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
+              "source_ids": [
+                "audit-pricing-overview"
+              ],
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            },
+            "notes": "不套用 M3 的长上下文阶梯或 priority 服务层价格。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
+          "source_ids": [
+            "audit-pricing-overview"
+          ],
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
+        },
+        "notes": "不套用 M3 的长上下文阶梯或 priority 服务层价格。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "minimax_text"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "protocol-chat",
+              "protocol-responses",
+              "protocol-messages",
+              "protocol-native"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "分别核对 Chat、Responses、Messages 与已废弃的 text/chatcompletion_v2。原生废弃面仍有本型号示例，不作为新接入推荐。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "M3.1 Flash 明确可调深度；none / disabled 被拒绝。"
+                }
+              ],
+              "notes": "参数省略仍思考，默认 max；不借用 M3 的模式开关行为。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "M3.1 Flash 明确可调深度；none / disabled 被拒绝。"
+                }
+              ],
+              "notes": "参数省略仍思考，默认 max；不借用 M3 的模式开关行为。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "M3.1 Flash 明确可调深度；none / disabled 被拒绝。"
+                }
+              ],
+              "notes": "参数省略仍思考，默认 max；不借用 M3 的模式开关行为。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "reasoning-minimax",
+              "reasoning-minimax-chat",
+              "reasoning-minimax-messages"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "三兼容面独立核对五档、默认 max 与不可关闭。废弃原生文本面控制未核清，整体 partial。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1,000,000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "context-minimax-text",
+              "protocol-chat"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "官方型号表明确整数窗口；Codex 推荐 524288 是客户端建议，不是模型总窗口。"
+        }
+      }
+    },
+    {
+      "id": "minimax-h3-highspeed",
+      "request_id": "MiniMax-H3-Highspeed",
+      "display_name": "MiniMax-H3-Highspeed",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
+        "source_ids": [
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
+        ],
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准 768P 生成；输出视频、输入视频及超出 5 张的输入图片按分量计费。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.40",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              },
+              {
+                "meter": "video_input_seconds",
+                "amount": "0.40",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              },
+              {
+                "meter": "input_images",
+                "amount": "0.20",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": "5",
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "前 5 张输入图片免费，超出部分计费。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
+              "source_ids": [
+                "audit-pricing-overview"
+              ],
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
+          "source_ids": [
+            "audit-pricing-overview"
+          ],
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_video"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
+          },
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
+        }
+      }
+    },
+    {
+      "id": "minimax-h3-lite",
+      "request_id": "MiniMax-H3-Lite",
+      "display_name": "MiniMax-H3-Lite",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
+        "source_ids": [
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
+        ],
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准 768P 生成；输出视频、输入视频及超出 5 张的输入图片按分量计费。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.26",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              },
+              {
+                "meter": "video_input_seconds",
+                "amount": "0.26",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              },
+              {
+                "meter": "input_images",
+                "amount": "0.13",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": "5",
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "前 5 张输入图片免费，超出部分计费。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
+              "source_ids": [
+                "audit-pricing-overview"
+              ],
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
+          "source_ids": [
+            "audit-pricing-overview"
+          ],
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_video"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
+          },
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
+        }
+      }
+    },
+    {
+      "id": "minimax-h3-max",
+      "request_id": "MiniMax-H3-Max",
+      "display_name": "MiniMax-H3-Max",
+      "modalities": [
+        "video"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:06:01.101090Z",
+        "source_ids": [
+          "audit-pricing-overview",
+          "audit-model-lifecycle"
+        ],
+        "evidence": "evidence/minimax/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准 768P 生成；输出视频、输入视频及超出 2 张的输入图片按分量计费。",
+            "rates": [
+              {
+                "meter": "video_output_seconds",
+                "amount": "0.50",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              },
+              {
+                "meter": "video_input_seconds",
+                "amount": "0.97",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按官方计费单位估算；本次未确认响应数量字段和取整。"
+                }
+              },
+              {
+                "meter": "input_images",
+                "amount": "0.50",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": "2",
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "前 2 张输入图片免费，超出部分计费。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:06:01.101090Z",
+              "source_ids": [
+                "audit-pricing-overview"
+              ],
+              "evidence": "evidence/minimax/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            },
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:06:01.101090Z",
+          "source_ids": [
+            "audit-pricing-overview"
+          ],
+          "evidence": "evidence/minimax/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方当前价表 / 型号说明核对本型号；按量 API 与订阅独立。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "minimax_video"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "已检查生成接口，但未取得该型号的思考控制证据；未知不等于不支持。"
+          },
+          "notes": "本轮检查生成 API，没有足以确认思考控制的型号证据；质量、时长、速度参数不作为 reasoning。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "source_ids": [
+              "protocol-video"
+            ],
+            "evidence": "evidence/minimax/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         }
       }
     }

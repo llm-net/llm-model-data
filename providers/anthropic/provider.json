@@ -182,6 +182,72 @@
       "url": "https://code.claude.com/docs/en/llm-gateway-protocol",
       "purpose": "models",
       "notes": "Claude Code API formats 与请求头；2026-09-23 核对。"
+    },
+    {
+      "id": "r1024-claude-models",
+      "url": "https://platform.claude.com/docs/en/models/overview.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-deprecations",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "purpose": "pricing",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-openai",
+      "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/openai-sdk.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-context",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-effort",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-thinking-config",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/thinking-troubleshooting.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-sonnet55",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-haiku55",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-code",
+      "url": "https://code.claude.com/docs/en/model-config.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-claude-code-protocol",
+      "url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/anthropic/2026-10-24-refresh.md。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

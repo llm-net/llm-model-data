@@ -93,32 +93,30 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-22T05:42:30.863266+00:00",
+              "checked_at": "2026-10-23T22:02:04+00:00",
               "source_ids": [
-                "refresh-47",
-                "refresh-pricing"
+                "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-22-grok-47.md",
-              "notes": "同平台 4.7 标准 API 价格，仅作订阅消耗参考。"
+              "evidence": "evidence/xai/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
+            "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-22T05:42:30.863266+00:00",
+          "checked_at": "2026-10-23T22:02:04+00:00",
           "source_ids": [
-            "refresh-47",
-            "refresh-pricing"
+            "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-22-grok-47.md",
-          "notes": "同平台 4.7 标准 API 价格，仅作订阅消耗参考。"
+          "evidence": "evidence/xai/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "按量等价消耗示意，不是订阅真实扣费。"
+        "notes": "按量等价消耗示意，不是订阅真实扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
-      "notes": "2026-09-22 官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API 与客户端旧内嵌目录。实际准入仍取决于账号与套餐。",
+      "notes": "2026-09-22 官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API 与客户端旧内嵌目录。实际准入仍取决于账号与套餐。 本轮公开Build配置文档未列完整在线型号能力，匿名模型接口要求登录；保留历史可用性，不以接口不可匿名取到作为下线。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 500000,
@@ -181,10 +179,10 @@
             "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
             "notes": "本型号 supports_reasoning_effort、reasoning_efforts 和客户端默认独立确认。"
           },
-          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。"
+          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。 本轮未取得登录态逐型号参数，保留原独立核对日期。"
         },
         "context_assessment": {
-          "status": "known",
+          "status": "partial",
           "reported_value": "500000",
           "verification": {
             "status": "verified",
@@ -196,7 +194,7 @@
             "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
             "notes": "本订阅精确型号在线目录明确 context_window 整数。"
           },
-          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。"
+          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。 本轮未重取登录态目录，500000为历史本产品核对值；不刷新成功日期。"
         }
       }
     },
@@ -272,32 +270,30 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-23T07:33:10Z",
+              "checked_at": "2026-10-23T22:02:04+00:00",
               "source_ids": [
-                "r0923-pricing",
-                "r0923-47"
+                "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-23-grok-47-fast.md",
-              "notes": "核对开发方 xAI 官方价格页的 Grok 4.7 Fast 费率；按用户指定采用开发方官网价，不核对订阅真实扣费。"
+              "evidence": "evidence/xai/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "按量等价消耗示意，不代表订阅实际扣款。官方文档未出现 grok-4.7-build-fast 字样，对应关系依据展示名 Grok 4.7 Fast 与 xAI 的 Grok Build 专供说明。",
+            "notes": "按量等价消耗示意，不代表订阅实际扣款。官方文档未出现 grok-4.7-build-fast 字样，对应关系依据展示名 Grok 4.7 Fast 与 xAI 的 Grok Build 专供说明。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-23T07:33:10Z",
+          "checked_at": "2026-10-23T22:02:04+00:00",
           "source_ids": [
-            "r0923-pricing",
-            "r0923-47"
+            "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-23-grok-47-fast.md",
-          "notes": "核对开发方 xAI 官方价格页的 Grok 4.7 Fast 费率；按用户指定采用开发方官网价，不核对订阅真实扣费。"
+          "evidence": "evidence/xai/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "开发方官网价参考；非公开 API 型号，不能凭此调用 xAI API。"
+        "notes": "开发方官网价参考；非公开 API 型号，不能凭此调用 xAI API。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
-      "notes": "官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API。xAI 说明 Grok 4.7 Fast 为同一 Grok 4.7 模型的更快服务档，Grok Build 免费档不含；实际准入仍取决于账号与套餐。参考价采用 xAI 官网公布的 Fast 费率。",
+      "notes": "官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API。xAI 说明 Grok 4.7 Fast 为同一 Grok 4.7 模型的更快服务档，Grok Build 免费档不含；实际准入仍取决于账号与套餐。参考价采用 xAI 官网公布的 Fast 费率。 本轮公开Build配置文档未列完整在线型号能力，匿名模型接口要求登录；保留历史可用性，不以接口不可匿名取到作为下线。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 500000,
@@ -360,10 +356,10 @@
             "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
             "notes": "本型号 supports_reasoning_effort、reasoning_efforts 和客户端默认独立确认。"
           },
-          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。"
+          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。 本轮未取得登录态逐型号参数，保留原独立核对日期。"
         },
         "context_assessment": {
-          "status": "known",
+          "status": "partial",
           "reported_value": "500000",
           "verification": {
             "status": "verified",
@@ -375,7 +371,7 @@
             "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
             "notes": "本订阅精确型号在线目录明确 context_window 整数。"
           },
-          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。"
+          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。 本轮未重取登录态目录，500000为历史本产品核对值；不刷新成功日期。"
         }
       }
     },
@@ -457,32 +453,30 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-22T05:42:30.863266+00:00",
+              "checked_at": "2026-10-23T22:02:04+00:00",
               "source_ids": [
-                "refresh-46",
-                "refresh-pricing"
+                "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-22-grok-47.md",
-              "notes": "同平台精确型号按量参考价；不代表订阅真实扣费。"
+              "evidence": "evidence/xai/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
+            "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-22T05:42:30.863266+00:00",
+          "checked_at": "2026-10-23T22:02:04+00:00",
           "source_ids": [
-            "refresh-46",
-            "refresh-pricing"
+            "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-22-grok-47.md",
-          "notes": "同平台精确型号按量参考价；不代表订阅真实扣费。"
+          "evidence": "evidence/xai/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。"
+        "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
-      "notes": "2026-09-22 官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API 与客户端旧内嵌目录。实际准入仍取决于账号与套餐。",
+      "notes": "2026-09-22 官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API 与客户端旧内嵌目录。实际准入仍取决于账号与套餐。 本轮公开Build配置文档未列完整在线型号能力，匿名模型接口要求登录；保留历史可用性，不以接口不可匿名取到作为下线。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 500000,
@@ -545,10 +539,10 @@
             "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
             "notes": "本型号 supports_reasoning_effort、reasoning_efforts 和客户端默认独立确认。"
           },
-          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。"
+          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。 本轮未取得登录态逐型号参数，保留原独立核对日期。"
         },
         "context_assessment": {
-          "status": "known",
+          "status": "partial",
           "reported_value": "500000",
           "verification": {
             "status": "verified",
@@ -560,7 +554,7 @@
             "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
             "notes": "本订阅精确型号在线目录明确 context_window 整数。"
           },
-          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。"
+          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。 本轮未重取登录态目录，500000为历史本产品核对值；不刷新成功日期。"
         }
       }
     },
@@ -642,32 +636,30 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-22T05:42:30.863266+00:00",
+              "checked_at": "2026-10-23T22:02:04+00:00",
               "source_ids": [
-                "refresh-45",
-                "refresh-pricing"
+                "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-22-grok-47.md",
-              "notes": "同平台精确型号按量参考价；不代表订阅真实扣费。"
+              "evidence": "evidence/xai/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。",
+            "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-22T05:42:30.863266+00:00",
+          "checked_at": "2026-10-23T22:02:04+00:00",
           "source_ids": [
-            "refresh-45",
-            "refresh-pricing"
+            "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-22-grok-47.md",
-          "notes": "同平台精确型号按量参考价；不代表订阅真实扣费。"
+          "evidence": "evidence/xai/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。"
+        "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
-      "notes": "2026-09-22 官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API 与客户端旧内嵌目录。实际准入仍取决于账号与套餐。",
+      "notes": "2026-09-22 官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API 与客户端旧内嵌目录。实际准入仍取决于账号与套餐。 本轮公开Build配置文档未列完整在线型号能力，匿名模型接口要求登录；保留历史可用性，不以接口不可匿名取到作为下线。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 500000,
@@ -729,10 +721,10 @@
             "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
             "notes": "本型号 supports_reasoning_effort、reasoning_efforts 和客户端默认独立确认。"
           },
-          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。"
+          "notes": "已核实工具订阅客户端档位与默认；未知后端行为仍 partial，不当成公开 API 的档位继承。 本轮未取得登录态逐型号参数，保留原独立核对日期。"
         },
         "context_assessment": {
-          "status": "known",
+          "status": "partial",
           "reported_value": "500000",
           "verification": {
             "status": "verified",
@@ -744,7 +736,7 @@
             "evidence": "evidence/xai/2026-09-22-grok-build-live-catalog.md",
             "notes": "本订阅精确型号在线目录明确 context_window 整数。"
           },
-          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。"
+          "notes": "官方订阅目录返回 500000 tokens；不是压缩阈值、输出限制或 API 继承值，配置或后续目录可能覆盖。 本轮未重取登录态目录，500000为历史本产品核对值；不刷新成功日期。"
         }
       }
     }

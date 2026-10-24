@@ -27,12 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:02:04+00:00",
         "source_ids": [
-          "audit-models"
+          "r1024-groq-models",
+          "r1024-groq-deprecations"
         ],
-        "evidence": "evidence/groq/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/groq/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -42,11 +43,17 @@
             "basis": "public_list",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
                 "amount": "0.15",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.075",
                 "per": 1000000,
                 "unit": "token"
               },
@@ -64,28 +71,30 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:03+00:00",
               "source_ids": [
-                "audit-models"
+                "r1024-groq-models",
+                "r1024-groq-caching"
               ],
-              "evidence": "evidence/groq/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/groq/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "标准在线；官方缓存页对这两个精确型号明确命中输入5折，无额外缓存写入收费；按Decimal由输入价乘0.5保存缓存读价。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:03+00:00",
           "source_ids": [
-            "audit-models"
+            "r1024-groq-models",
+            "r1024-groq-caching"
           ],
-          "evidence": "evidence/groq/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/groq/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "标准在线；官方缓存页对这两个精确型号明确命中输入5折，无额外缓存写入收费；按Decimal由输入价乘0.5保存缓存读价。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -93,13 +102,16 @@
         "verification": {
           "status": "needs_review",
           "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/groq/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+          "source_ids": [
+            "r1024-groq-models",
+            "r1024-groq-caching"
+          ],
+          "evidence": "evidence/groq/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
         },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        "notes": "已有唯一用量价，不另设参考价。"
       },
-      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "notes": "现有GPT-OSS仍为公开Production模型；未见本型号已到期下线。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -117,15 +129,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:03:14+00:00",
             "source_ids": [
-              "protocol-chat",
-              "protocol-responses"
+              "r1024-groq-chat",
+              "r1024-groq-responses"
             ],
-            "evidence": "evidence/groq/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Groq 平台的 GPT-OSS 120B / 20B；Responses 与 Chat 各有参数限制，不继承 OpenAI 自家托管服务的其他 API。"
+          "notes": "GroqChat兼容层及所有模型可用的Responses；未确认Messages。"
         },
         "reasoning": {
           "support": "supported",
@@ -178,29 +190,29 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:02:04+00:00",
             "source_ids": [
-              "reasoning-groq",
-              "reasoning-groq-responses"
+              "r1024-groq-reasoning",
+              "r1024-groq-responses"
             ],
-            "evidence": "evidence/groq/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Groq 明确 GPT-OSS 20B / 120B 的三档与两个协议参数。缺省档位、是否有关闭方法仍未知；reasoning_format / include_reasoning 只控制展示，不是深度。"
+          "notes": "本平台两GPT-OSS型号的low/medium/high已核实；reasoning_format仅控制展示。裸请求省略effort的精确默认及能否关闭未在本轮来源中完整确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "131,072",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.103237+00:00",
+            "checked_at": "2026-10-23T22:02:04+00:00",
             "source_ids": [
-              "context-groq-models"
+              "r1024-groq-models"
             ],
-            "evidence": "evidence/groq/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Groq 平台 GPT OSS 对应型号行的 CONTEXT WINDOW (TOKENS)，不是原厂规格。"
+          "notes": "Groq官方总窗口整数；最大完成65,536另列。"
         }
       }
     },
@@ -216,12 +228,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:02:04+00:00",
         "source_ids": [
-          "audit-models"
+          "r1024-groq-models",
+          "r1024-groq-deprecations"
         ],
-        "evidence": "evidence/groq/2026-09-16-audit.md",
-        "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。"
+        "evidence": "evidence/groq/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -231,11 +244,17 @@
             "basis": "public_list",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
                 "amount": "0.075",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.0375",
                 "per": 1000000,
                 "unit": "token"
               },
@@ -253,28 +272,30 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:03+00:00",
               "source_ids": [
-                "audit-models"
+                "r1024-groq-models",
+                "r1024-groq-caching"
               ],
-              "evidence": "evidence/groq/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/groq/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "标准在线；官方缓存页对这两个精确型号明确命中输入5折，无额外缓存写入收费；按Decimal由输入价乘0.5保存缓存读价。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:03+00:00",
           "source_ids": [
-            "audit-models"
+            "r1024-groq-models",
+            "r1024-groq-caching"
           ],
-          "evidence": "evidence/groq/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/groq/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "标准在线；官方缓存页对这两个精确型号明确命中输入5折，无额外缓存写入收费；按Decimal由输入价乘0.5保存缓存读价。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -282,13 +303,16 @@
         "verification": {
           "status": "needs_review",
           "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/groq/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+          "source_ids": [
+            "r1024-groq-models",
+            "r1024-groq-caching"
+          ],
+          "evidence": "evidence/groq/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
         },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        "notes": "已有唯一用量价，不另设参考价。"
       },
-      "notes": "官方价格表确认本模型；未实调，能力上限未明确时不填。",
+      "notes": "现有GPT-OSS仍为公开Production模型；未见本型号已到期下线。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -306,15 +330,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:03:14+00:00",
             "source_ids": [
-              "protocol-chat",
-              "protocol-responses"
+              "r1024-groq-chat",
+              "r1024-groq-responses"
             ],
-            "evidence": "evidence/groq/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Groq 平台的 GPT-OSS 120B / 20B；Responses 与 Chat 各有参数限制，不继承 OpenAI 自家托管服务的其他 API。"
+          "notes": "GroqChat兼容层及所有模型可用的Responses；未确认Messages。"
         },
         "reasoning": {
           "support": "supported",
@@ -367,29 +391,207 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:02:04+00:00",
             "source_ids": [
-              "reasoning-groq",
-              "reasoning-groq-responses"
+              "r1024-groq-reasoning",
+              "r1024-groq-responses"
             ],
-            "evidence": "evidence/groq/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Groq 明确 GPT-OSS 20B / 120B 的三档与两个协议参数。缺省档位、是否有关闭方法仍未知；reasoning_format / include_reasoning 只控制展示，不是深度。"
+          "notes": "本平台两GPT-OSS型号的low/medium/high已核实；reasoning_format仅控制展示。裸请求省略effort的精确默认及能否关闭未在本轮来源中完整确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "131,072",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:43.103237+00:00",
+            "checked_at": "2026-10-23T22:02:04+00:00",
             "source_ids": [
-              "context-groq-models"
+              "r1024-groq-models"
             ],
-            "evidence": "evidence/groq/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "Groq 平台 GPT OSS 对应型号行的 CONTEXT WINDOW (TOKENS)，不是原厂规格。"
+          "notes": "Groq官方总窗口整数；最大完成65,536另列。"
+        }
+      }
+    },
+    {
+      "id": "qwen-qwen3-8-27b",
+      "request_id": "qwen/qwen3.8-27b",
+      "display_name": "Qwen 3.8 27B",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:04:03+00:00",
+        "source_ids": [
+          "r1024-groq-models",
+          "r1024-groq-qwen"
+        ],
+        "evidence": "evidence/groq/2026-10-24-refresh.md",
+        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:04:03+00:00",
+              "source_ids": [
+                "r1024-groq-models",
+                "r1024-groq-qwen"
+              ],
+              "evidence": "evidence/groq/2026-10-24-refresh.md",
+              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            },
+            "notes": "公开标准在线预览价；缓存页未列本型号，缓存单价保持未知，不套原厂价。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:04:03+00:00",
+          "source_ids": [
+            "r1024-groq-models",
+            "r1024-groq-qwen"
+          ],
+          "evidence": "evidence/groq/2026-10-24-refresh.md",
+          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        },
+        "notes": "公开标准在线预览价；缓存页未列本型号，缓存单价保持未知，不套原厂价。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-groq-models",
+            "r1024-groq-qwen"
+          ],
+          "evidence": "evidence/groq/2026-10-24-refresh.md",
+          "notes": "已有唯一用量价，不另设参考价。"
+        },
+        "notes": "已有唯一用量价，不另设参考价。"
+      },
+      "notes": "新增Groq公开Preview模型；预览可能随时停止，不描述成生产SLA。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 131072,
+        "max_output_tokens": 16384,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": true,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses"
+        ],
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "131,072",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:03+00:00",
+            "source_ids": [
+              "r1024-groq-qwen",
+              "r1024-groq-models"
+            ],
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本平台官方整数窗口；最大输出16,384，非原厂权重窗口。"
+        },
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:03+00:00",
+            "source_ids": [
+              "r1024-groq-qwen",
+              "r1024-groq-responses",
+              "r1024-groq-chat"
+            ],
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "本型号Chat示例与Groq所有模型的Responses支持；未确认Messages。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "none",
+                    "default",
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "none明确关闭；default在型号页与通用reasoning页结论冲突，不能据此写省略参数的默认。"
+                }
+              ],
+              "notes": "未展开的控制或条件见独立证据。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:03+00:00",
+            "source_ids": [
+              "r1024-groq-qwen",
+              "r1024-groq-reasoning"
+            ],
+            "evidence": "evidence/groq/2026-10-24-refresh.md",
+            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          },
+          "notes": "官方型号页称default为思考模式，reasoning页称default不返回思考token；保留原始值并将默认行为设unknown。Responses档位映射未独立核对，保持partial。"
         }
       }
     }

@@ -164,6 +164,36 @@
       "url": "https://platform.minimax.cn/docs/guides/models-intro",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "audit-pricing-overview",
+      "url": "https://platform.minimax.cn/docs/pricing/overview",
+      "purpose": "pricing",
+      "notes": "2026-10-24 核对当前来源；Token Plan 与 M Plan 独立记录。"
+    },
+    {
+      "id": "audit-model-lifecycle",
+      "url": "https://platform.minimax.cn/docs/faq/models",
+      "purpose": "models",
+      "notes": "2026-10-24 核对当前来源；Token Plan 与 M Plan 独立记录。"
+    },
+    {
+      "id": "audit-token-legacy",
+      "url": "https://platform.minimax.cn/docs/m-plan/token-plan-notice",
+      "purpose": "subscription",
+      "notes": "2026-10-24 核对当前来源；Token Plan 与 M Plan 独立记录。"
+    },
+    {
+      "id": "m-plan-cn",
+      "url": "https://platform.minimax.cn/docs/m-plan/intro",
+      "purpose": "subscription",
+      "notes": "2026-10-24 核对当前来源；Token Plan 与 M Plan 独立记录。"
+    },
+    {
+      "id": "m-plan-quickstart",
+      "url": "https://platform.minimax.cn/docs/m-plan/quickstart",
+      "purpose": "models",
+      "notes": "2026-10-24 核对当前来源；Token Plan 与 M Plan 独立记录。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

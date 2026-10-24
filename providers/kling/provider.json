@@ -44,6 +44,42 @@
       "url": "https://klingai.com/document-api/guides/capability-map/video.md",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "audit-20261024-kling-3-0-turbo",
+      "url": "https://klingai.com/document-api/api/video/3-0-turbo/text-to-video.md",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "audit-20261024-kling-3-0",
+      "url": "https://klingai.com/document-api/api/video/3-0-omni/text-to-video.md",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "audit-20261024-kling-3-0-omni",
+      "url": "https://klingai.com/document-api/api/video/3-0-omni/video-omni.md",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "audit-20261024-kling-o1",
+      "url": "https://klingai.com/document-api/api/video/o1/video-omni.md",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "audit-20261024-kling-2-6",
+      "url": "https://klingai.com/document-api/api/video/2-6/text-to-video.md",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "audit-20261024-kling-2-5-turbo",
+      "url": "https://klingai.com/document-api/api/video/2-5-turbo/text-to-video.md",
+      "purpose": "models",
+      "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

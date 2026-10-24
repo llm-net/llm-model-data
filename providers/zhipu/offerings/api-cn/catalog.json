@@ -10,7 +10,7 @@
     "status": "needs_review",
     "checked_at": null,
     "source_ids": [],
-    "evidence": "evidence/zhipu/2026-09-16-audit.md",
+    "evidence": "evidence/zhipu/2026-10-24-audit.md",
     "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
   },
   "plans": [],
@@ -27,12 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -70,26 +71,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -105,7 +106,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -121,15 +122,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -171,28 +172,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -208,12 +209,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -251,26 +253,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -286,7 +288,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -302,15 +304,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -352,28 +354,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -389,12 +391,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -432,26 +435,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -467,7 +470,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -483,15 +486,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -538,28 +541,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -575,12 +578,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -590,7 +594,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "国内标准在线、输入 [0,32K) 档；更长输入档不并列收录。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -618,26 +622,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -653,7 +657,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -669,15 +673,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -707,28 +711,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "200K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -744,12 +748,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -759,7 +764,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "国内标准在线、输入 [0,32K) 档；更长输入档不并列收录。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -787,26 +792,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -822,7 +827,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -838,15 +843,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -876,28 +881,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "200K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -913,12 +918,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -928,7 +934,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "国内标准在线、输入 [0,32K) 档；更长输入档不并列收录。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -956,26 +962,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -991,7 +997,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1007,15 +1013,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -1045,28 +1051,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "200K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -1082,12 +1088,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -1097,7 +1104,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "输入低于32K、输出至少0.2K的常规档；不采用极短输出优惠档。",
+            "selection": "常规在线，输入 [0,32K)、输出 ≥0.2K；保留原普通生成基准，不改取更低的超短输出价。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -1125,26 +1132,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1160,7 +1167,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1176,15 +1183,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -1214,28 +1221,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "200K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -1251,12 +1258,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -1294,26 +1302,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1329,7 +1337,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1345,15 +1353,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "unknown",
@@ -1362,25 +1370,28 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "reasoning-zhipu",
+              "audit-models-current"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "已查询本产品模型表、深度思考页和 Chat schema；未取得此精确 Flash / Air 型号独立思考控制与支持证据，不从同系列基座继承。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "已查询本产品模型表、深度思考页和 Chat schema；未取得此精确 Flash / Air 型号独立思考控制与支持证据，不从同系列基座继承。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "200K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -1396,12 +1407,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -1439,26 +1451,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1474,7 +1486,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1490,15 +1502,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "unknown",
@@ -1507,25 +1519,28 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "reasoning-zhipu",
+              "audit-models-current"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "已查询本产品模型表、深度思考页和 Chat schema；未取得此精确 Flash / Air 型号独立思考控制与支持证据，不从同系列基座继承。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "已查询本产品模型表、深度思考页和 Chat schema；未取得此精确 Flash / Air 型号独立思考控制与支持证据，不从同系列基座继承。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "200K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -1541,12 +1556,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -1556,7 +1572,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "输入低于32K、输出至少0.2K的常规档；不采用极短输出优惠档。",
+            "selection": "常规在线，输入 [0,32K)、输出 ≥0.2K；保留原普通生成基准。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -1584,26 +1600,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1619,7 +1635,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1635,15 +1651,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "unknown",
@@ -1652,25 +1668,28 @@
           "verification": {
             "status": "needs_review",
             "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "source_ids": [
+              "reasoning-zhipu",
+              "audit-models-current"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "已查询本产品模型表、深度思考页和 Chat schema；未取得此精确 Flash / Air 型号独立思考控制与支持证据，不从同系列基座继承。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "已查询本产品模型表、深度思考页和 Chat schema；未取得此精确 Flash / Air 型号独立思考控制与支持证据，不从同系列基座继承。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "128K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 128K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -1686,12 +1705,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -1701,7 +1721,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "国内标准在线、输入 [0,32K) 档；更长输入档不并列收录。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -1729,26 +1749,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1764,7 +1784,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1780,15 +1800,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -1818,28 +1838,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "200K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 200K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -1855,12 +1875,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -1870,7 +1891,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "国内标准在线、输入 [0,32K) 档；更长输入档不并列收录。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -1898,26 +1919,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1933,7 +1954,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1949,15 +1970,15 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
           "support": "supported",
@@ -1987,28 +2008,28 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "reasoning-zhipu"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
           },
-          "notes": "以深度思考页的精确型号与 API / Coding Plan 差异为准；5.3 系列思考不可关闭。Messages / Responses 的控制字段待独立核对。"
+          "notes": "独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "128K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 128K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     },
@@ -2024,12 +2045,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:04:23Z",
         "source_ids": [
-          "audit-models-current"
+          "audit-models-current",
+          "audit-20261024-chat"
         ],
-        "evidence": "evidence/zhipu/2026-09-16-audit.md",
-        "notes": "当前官方模型清单确认标识；价格另行核对，未实调。"
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
       },
       "usage_prices": {
         "status": "published",
@@ -2067,26 +2089,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:21:18.046564Z",
+              "checked_at": "2026-10-23T22:04:23Z",
               "source_ids": [
                 "audit-full-prices"
               ],
-              "evidence": "evidence/zhipu/2026-09-16-audit.md",
-              "notes": "核对公开官方资料；未用真实 Key 实调。"
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:21:18.046564Z",
+          "checked_at": "2026-10-23T22:04:23Z",
           "source_ids": [
             "audit-full-prices"
           ],
-          "evidence": "evidence/zhipu/2026-09-16-audit.md",
-          "notes": "核对公开官方资料；未用真实 Key 实调。"
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -2102,7 +2124,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "当前官方模型清单确认标识；价格另行核对，未实调。",
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -2118,45 +2140,426 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
-              "protocol-chat",
+              "audit-20261024-chat",
               "protocol-messages"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
           },
-          "notes": "官方 Chat 模型接口与 Claude SDK 兼容层；Responses 的明确接入资料只针对 Coding Plan，按量产品不自动继承，待补按量凭证与具体型号证据。"
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": "evidence/zhipu/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:23Z",
+            "source_ids": [
+              "audit-models-current"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "官方模型概览明确此免费型号支持视觉推理，但未在本轮来源中给出其独立开关、档位、预算及默认值。"
           },
-          "notes": "未取得本产品、本精确模型 ID 的完整思考控制依据；通用接口或同名原厂模型不作为支持证据。参数、档位、默认值及开关保持未知。"
+          "notes": "官方模型概览明确此免费型号支持视觉推理，但未在本轮来源中给出其独立开关、档位、预算及默认值。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "128K",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.091588+00:00",
+            "checked_at": "2026-10-23T22:04:23Z",
             "source_ids": [
               "context-zhipu-models"
             ],
-            "evidence": "evidence/zhipu/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
           },
-          "notes": "智谱国内 API 型号表；不把百炼 Coding Plan 的 202752 或原厂权重配置当作本产品值。 官方窗口原文为 128K；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。"
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-3-flashx",
+      "request_id": "glm-5.3-flashx",
+      "display_name": "GLM-5.3-FlashX",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:04:23Z",
+        "source_ids": [
+          "audit-models-current",
+          "audit-20261024-chat"
+        ],
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.57",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "7",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:04:23Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
+            },
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:04:23Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:23Z",
+            "source_ids": [
+              "audit-20261024-chat",
+              "protocol-messages",
+              "audit-20261024-flash"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
+          },
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存该产品、型号与协议面已明确的控制值。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "仅保存该产品、型号与协议面已明确的控制值。"
+                }
+              ],
+              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:23Z",
+            "source_ids": [
+              "audit-20261024-flash",
+              "reasoning-zhipu"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "Flash 模型页将三个 Model Code 并列，并声明文本参数与 GLM-5.3 一致、thinking.type 仅 enabled；其他兼容面及预算未知。"
+          },
+          "notes": "Flash 模型页将三个 Model Code 并列，并声明文本参数与 GLM-5.3 一致、thinking.type 仅 enabled；其他兼容面及预算未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:23Z",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
+          },
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-3-flashx-legal",
+      "request_id": "glm-5.3-flashx-legal",
+      "display_name": "GLM-5.3-FlashX-Legal",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:04:23Z",
+        "source_ids": [
+          "audit-models-current",
+          "audit-20261024-flash"
+        ],
+        "evidence": "evidence/zhipu/2026-10-24-audit.md",
+        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.57",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "7",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:04:23Z",
+              "source_ids": [
+                "audit-full-prices"
+              ],
+              "evidence": "evidence/zhipu/2026-10-24-audit.md",
+              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
+            },
+            "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:04:23Z",
+          "source_ids": [
+            "audit-full-prices"
+          ],
+          "evidence": "evidence/zhipu/2026-10-24-audit.md",
+          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
+        },
+        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/zhipu/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "当前国内 BigModel 型号、接口和常规按量价独立核对；未实调。 GLM-5.3-FlashX-Legal 面向企业客户定向开放，必须申请开通；active 不表示普通账号可直接调用。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:23Z",
+            "source_ids": [
+              "audit-20261024-chat",
+              "protocol-messages",
+              "audit-20261024-flash"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "协议面独立核对。"
+          },
+          "notes": "Chat 型号与 API 文档明确对应；Claude 兼容层未提供完整逐型号支持矩阵，按量 Responses 亦缺独立型号证据。新增 FlashX / Legal 仅登记已明确的 Chat 面。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存该产品、型号与协议面已明确的控制值。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "仅保存该产品、型号与协议面已明确的控制值。"
+                }
+              ],
+              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:23Z",
+            "source_ids": [
+              "audit-20261024-flash",
+              "reasoning-zhipu"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "Flash 模型页将三个 Model Code 并列，并声明文本参数与 GLM-5.3 一致、thinking.type 仅 enabled；其他兼容面及预算未知。"
+          },
+          "notes": "Flash 模型页将三个 Model Code 并列，并声明文本参数与 GLM-5.3 一致、thinking.type 仅 enabled；其他兼容面及预算未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:04:23Z",
+            "source_ids": [
+              "context-zhipu-models"
+            ],
+            "evidence": "evidence/zhipu/2026-10-24-audit.md",
+            "notes": "独立核对当前型号上下文标称规格。"
+          },
+          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
     }
   ],
-  "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"
+  "notes": "2026-10-24 核对清单内全部模型；覆盖范围仍为部分收录，逐项结论与缺口见 evidence/zhipu/2026-10-24-audit.md。"
 }

@@ -176,6 +176,114 @@
       "url": "https://www.volcengine.com/docs/82379/2516286",
       "purpose": "models",
       "notes": "Agent Plan 接入语音模型（豆包语音合成 2.0 / 流式语音识别 2.0，openspeech 专属路径）；协议面尚未登记，模型未收录。"
+    },
+    {
+      "id": "audit-md-model-list",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/model-list.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-model-pricing",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/model-pricing.md",
+      "purpose": "pricing",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-model-deprecation-notice",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/model-deprecation-notice.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-coding-plan-personal-model-deprecation",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/coding-plan-personal-model-deprecation.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-agent-plan-personal-model-deprecation-announcement",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-model-deprecation-announcement.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-coding-plan-personal-plan-overview",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/coding-plan-personal-plan-overview.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-agent-plan-personal-plan-overview",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-plan-overview.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-coding-plan-personal-get-started",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/coding-plan-personal-get-started.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-agent-plan-personal-get-started",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-get-started.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-messages-api",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/messages-api.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-image-generation-api",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/image-generation-api.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-deep-thinking",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/deep-thinking.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-create-model-responses-api",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/create-model-responses-api.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-coding-plan-personal-ai-codex",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/coding-plan-personal-ai-codex.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "audit-md-agent-plan-personal-codex",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-codex.md",
+      "purpose": "models",
+      "notes": "2026-10-24 官方 Markdown 正文；逐型号结论见本轮 evidence。"
+    },
+    {
+      "id": "alignment-moonshot-pricing-html",
+      "url": "https://platform.kimi.com/docs/pricing/chat",
+      "purpose": "pricing",
+      "notes": "同平台完整按量价表无该型，核对原厂现行参考价。"
+    },
+    {
+      "id": "alignment-moonshot-cache",
+      "url": "https://platform.kimi.com/docs/guide/context-caching",
+      "purpose": "pricing",
+      "notes": "同平台完整按量价表无该型，核对原厂现行参考价。"
+    },
+    {
+      "id": "alignment-minimax-current",
+      "url": "https://platform.minimax.cn/docs/pricing/overview",
+      "purpose": "pricing",
+      "notes": "同平台完整按量价表无该型，核对原厂现行参考价。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

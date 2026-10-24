@@ -18,7 +18,7 @@
     {
       "id": "deepseek-flash",
       "request_id": "deepseek-flash",
-      "display_name": "DeepSeek-V4.1-Flash",
+      "display_name": "DeepSeek-V4.1-Flash-1017",
       "modalities": [
         "text"
       ],
@@ -27,12 +27,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:03:03.612748Z",
         "source_ids": [
-          "audit-pricing"
+          "pricing"
         ],
-        "evidence": "evidence/deepseek/2026-09-16-audit.md",
-        "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。"
+        "evidence": "evidence/deepseek/2026-10-24-audit.md",
+        "notes": "当前 Flash 底模为 DeepSeek-V4.1-Flash-1017，Pro 为 DeepSeek-V4-Pro-0813。旧 Flash / vision-exp 请求名仍可调用并转到当前 Flash；下线的是旧底模，不能据此删除仍接受的请求别名。"
       },
       "usage_prices": {
         "status": "published",
@@ -42,7 +42,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
+            "selection": "常规工作周估算：北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余为空闲；中国法定节假日全天空闲，但当前周循环格式不能表达该例外。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -70,14 +70,14 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T18:11:35.617731Z",
+              "checked_at": "2026-10-23T22:03:03.612748Z",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
-              "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
+              "evidence": "evidence/deepseek/2026-10-24-audit.md",
+              "notes": "核对官方中文价表及脚注；金额未变。循环周时段只能近似表达法定节假日例外，见价格说明。"
             },
-            "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。",
+            "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。",
             "time_basis": "unknown",
             "charge_on": "unknown",
             "time_pricing": {
@@ -148,14 +148,14 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T18:11:35.617731Z",
+          "checked_at": "2026-10-23T22:03:03.612748Z",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
-          "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
+          "evidence": "evidence/deepseek/2026-10-24-audit.md",
+          "notes": "核对官方中文价表及脚注；金额未变。循环周时段只能近似表达法定节假日例外，见价格说明。"
         },
-        "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。"
+        "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -169,7 +169,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。",
+      "notes": "当前 Flash 底模为 DeepSeek-V4.1-Flash-1017，Pro 为 DeepSeek-V4-Pro-0813。旧 Flash / vision-exp 请求名仍可调用并转到当前 Flash；下线的是旧底模，不能据此删除仍接受的请求别名。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -189,14 +189,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:03:03.612748Z",
             "source_ids": [
               "protocol-chat",
               "protocol-responses",
               "protocol-messages"
             ],
-            "evidence": "evidence/deepseek/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/deepseek/2026-10-24-audit.md",
+            "notes": "当前价格能力表与 Responses 精确 model 枚举、Anthropic 接入说明分别核对。"
           },
           "notes": "Responses model 枚举明确列此 ID；Messages 文档说明 DeepSeek 型号与 Claude 名称映射。不能把不支持型号自动回退的响应当作原型号支持证据。"
         },
@@ -306,28 +306,29 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:03:03.612748Z",
             "source_ids": [
-              "reasoning-deepseek"
+              "reasoning-deepseek",
+              "protocol-messages"
             ],
-            "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/deepseek/2026-10-24-audit.md",
+            "notes": "本轮核对三协议参数表、默认 high 与兼容枚举映射；budget_tokens 被忽略，不能当独立预算。"
           },
-          "notes": "按当前 Thinking Mode 的三协议对照表记录；默认 high。旧 deepseek-v4-flash 与实验 ID 不继承此结论。"
+          "notes": "当前 Thinking Mode 三协议控制表保持不变；默认思考开启、high。Anthropic budget_tokens 被忽略；effort 别名映射不是独立深度。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:42.681533+00:00",
+            "checked_at": "2026-10-23T22:03:03.612748Z",
             "source_ids": [
               "context-deepseek-models"
             ],
-            "evidence": "evidence/deepseek/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/deepseek/2026-10-24-audit.md",
+            "notes": "本轮核对官方表的 1M 标称窗口；未发现 K/M 精确换算依据。"
           },
-          "notes": "原厂 API 型号表；旧 Flash 请求名由脚注明确接受并转到当前 Flash，不是猜测别名。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
+          "notes": "官方模型表标称上下文 1M、输出最大 384K；旧 Flash 名称由价格脚注明确转当前模型。历史上下文整数保留供追溯，本轮未核实其精确边界，不以标称 M/K 猜测换算。"
         }
       }
     },
@@ -343,12 +344,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:03:03.612748Z",
         "source_ids": [
-          "audit-pricing"
+          "pricing"
         ],
-        "evidence": "evidence/deepseek/2026-09-16-audit.md",
-        "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。"
+        "evidence": "evidence/deepseek/2026-10-24-audit.md",
+        "notes": "当前 Flash 底模为 DeepSeek-V4.1-Flash-1017，Pro 为 DeepSeek-V4-Pro-0813。旧 Flash / vision-exp 请求名仍可调用并转到当前 Flash；下线的是旧底模，不能据此删除仍接受的请求别名。"
       },
       "usage_prices": {
         "status": "published",
@@ -358,7 +359,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
+            "selection": "常规工作周估算：北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余为空闲；中国法定节假日全天空闲，但当前周循环格式不能表达该例外。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -386,14 +387,14 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T18:11:35.617731Z",
+              "checked_at": "2026-10-23T22:03:03.612748Z",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
-              "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
+              "evidence": "evidence/deepseek/2026-10-24-audit.md",
+              "notes": "核对官方中文价表及脚注；金额未变。循环周时段只能近似表达法定节假日例外，见价格说明。"
             },
-            "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。",
+            "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。",
             "time_basis": "unknown",
             "charge_on": "unknown",
             "time_pricing": {
@@ -464,14 +465,14 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T18:11:35.617731Z",
+          "checked_at": "2026-10-23T22:03:03.612748Z",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
-          "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
+          "evidence": "evidence/deepseek/2026-10-24-audit.md",
+          "notes": "核对官方中文价表及脚注；金额未变。循环周时段只能近似表达法定节假日例外，见价格说明。"
         },
-        "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。"
+        "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -485,7 +486,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。",
+      "notes": "当前 Flash 底模为 DeepSeek-V4.1-Flash-1017，Pro 为 DeepSeek-V4-Pro-0813。旧 Flash / vision-exp 请求名仍可调用并转到当前 Flash；下线的是旧底模，不能据此删除仍接受的请求别名。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -504,14 +505,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:03:03.612748Z",
             "source_ids": [
               "protocol-chat",
               "protocol-responses",
               "protocol-messages"
             ],
-            "evidence": "evidence/deepseek/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/deepseek/2026-10-24-audit.md",
+            "notes": "当前价格能力表与 Responses 精确 model 枚举、Anthropic 接入说明分别核对。"
           },
           "notes": "Responses model 枚举明确列此 ID；Messages 文档说明 DeepSeek 型号与 Claude 名称映射。不能把不支持型号自动回退的响应当作原型号支持证据。"
         },
@@ -621,28 +622,29 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:03:03.612748Z",
             "source_ids": [
-              "reasoning-deepseek"
+              "reasoning-deepseek",
+              "protocol-messages"
             ],
-            "evidence": "evidence/deepseek/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/deepseek/2026-10-24-audit.md",
+            "notes": "本轮核对三协议参数表、默认 high 与兼容枚举映射；budget_tokens 被忽略，不能当独立预算。"
           },
-          "notes": "按当前 Thinking Mode 的三协议对照表记录；默认 high。旧 deepseek-v4-flash 与实验 ID 不继承此结论。"
+          "notes": "当前 Thinking Mode 三协议控制表保持不变；默认思考开启、high。Anthropic budget_tokens 被忽略；effort 别名映射不是独立深度。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:42.681533+00:00",
+            "checked_at": "2026-10-23T22:03:03.612748Z",
             "source_ids": [
               "context-deepseek-models"
             ],
-            "evidence": "evidence/deepseek/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/deepseek/2026-10-24-audit.md",
+            "notes": "本轮核对官方表的 1M 标称窗口；未发现 K/M 精确换算依据。"
           },
-          "notes": "原厂 API 型号表；旧 Flash 请求名由脚注明确接受并转到当前 Flash，不是猜测别名。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
+          "notes": "官方模型表标称上下文 1M、输出最大 384K；旧 Flash 名称由价格脚注明确转当前模型。历史上下文整数保留供追溯，本轮未核实其精确边界，不以标称 M/K 猜测换算。"
         }
       }
     },
@@ -658,12 +660,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:03:03.612748Z",
         "source_ids": [
-          "audit-pricing"
+          "pricing"
         ],
-        "evidence": "evidence/deepseek/2026-09-16-audit.md",
-        "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。"
+        "evidence": "evidence/deepseek/2026-10-24-audit.md",
+        "notes": "当前 Flash 底模为 DeepSeek-V4.1-Flash-1017，Pro 为 DeepSeek-V4-Pro-0813。旧 Flash / vision-exp 请求名仍可调用并转到当前 Flash；下线的是旧底模，不能据此删除仍接受的请求别名。"
       },
       "usage_prices": {
         "status": "published",
@@ -673,7 +675,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
+            "selection": "常规工作周估算：北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余为空闲；中国法定节假日全天空闲，但当前周循环格式不能表达该例外。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -701,14 +703,14 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T18:11:35.617731Z",
+              "checked_at": "2026-10-23T22:03:03.612748Z",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
-              "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
+              "evidence": "evidence/deepseek/2026-10-24-audit.md",
+              "notes": "核对官方中文价表及脚注；金额未变。循环周时段只能近似表达法定节假日例外，见价格说明。"
             },
-            "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。",
+            "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。",
             "time_basis": "unknown",
             "charge_on": "unknown",
             "time_pricing": {
@@ -779,14 +781,14 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T18:11:35.617731Z",
+          "checked_at": "2026-10-23T22:03:03.612748Z",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
-          "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
+          "evidence": "evidence/deepseek/2026-10-24-audit.md",
+          "notes": "核对官方中文价表及脚注；金额未变。循环周时段只能近似表达法定节假日例外，见价格说明。"
         },
-        "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。"
+        "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -800,7 +802,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。",
+      "notes": "当前 Flash 底模为 DeepSeek-V4.1-Flash-1017，Pro 为 DeepSeek-V4-Pro-0813。旧 Flash / vision-exp 请求名仍可调用并转到当前 Flash；下线的是旧底模，不能据此删除仍接受的请求别名。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -847,14 +849,14 @@
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:42.681533+00:00",
+            "checked_at": "2026-10-23T22:03:03.612748Z",
             "source_ids": [
               "context-deepseek-models"
             ],
-            "evidence": "evidence/deepseek/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/deepseek/2026-10-24-audit.md",
+            "notes": "本轮核对官方表的 1M 标称窗口；未发现 K/M 精确换算依据。"
           },
-          "notes": "原厂 API 型号表；旧 Flash 请求名由脚注明确接受并转到当前 Flash，不是猜测别名。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
+          "notes": "官方模型表标称上下文 1M、输出最大 384K；旧 Flash 名称由价格脚注明确转当前模型。历史上下文整数保留供追溯，本轮未核实其精确边界，不以标称 M/K 猜测换算。"
         }
       }
     },
@@ -870,12 +872,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:03:03.612748Z",
         "source_ids": [
-          "audit-pricing"
+          "pricing"
         ],
-        "evidence": "evidence/deepseek/2026-09-16-audit.md",
-        "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。"
+        "evidence": "evidence/deepseek/2026-10-24-audit.md",
+        "notes": "当前 Flash 底模为 DeepSeek-V4.1-Flash-1017，Pro 为 DeepSeek-V4-Pro-0813。旧 Flash / vision-exp 请求名仍可调用并转到当前 Flash；下线的是旧底模，不能据此删除仍接受的请求别名。"
       },
       "usage_prices": {
         "status": "published",
@@ -885,7 +887,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余时间（含周末）为空闲；按时段选价。",
+            "selection": "常规工作周估算：北京时间周一至周五 09:00–12:00、14:00–18:00 高峰，其余为空闲；中国法定节假日全天空闲，但当前周循环格式不能表达该例外。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -913,14 +915,14 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T18:11:35.617731Z",
+              "checked_at": "2026-10-23T22:03:03.612748Z",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
-              "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
+              "evidence": "evidence/deepseek/2026-10-24-audit.md",
+              "notes": "核对官方中文价表及脚注；金额未变。循环周时段只能近似表达法定节假日例外，见价格说明。"
             },
-            "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。",
+            "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。",
             "time_basis": "unknown",
             "charge_on": "unknown",
             "time_pricing": {
@@ -991,14 +993,14 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T18:11:35.617731Z",
+          "checked_at": "2026-10-23T22:03:03.612748Z",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/deepseek/2026-09-17-time-pricing.md",
-          "notes": "核对官方中文价表及峰谷脚注；未用真实 Key 实调。"
+          "evidence": "evidence/deepseek/2026-10-24-audit.md",
+          "notes": "核对官方中文价表及脚注；金额未变。循环周时段只能近似表达法定节假日例外，见价格说明。"
         },
-        "notes": "各时段包含完整价格；半开区间，包含开始、不含结束。官方未明确跨时段请求的选价事件，time_basis 保持 unknown，由消费者明确自己的记账时刻口径。"
+        "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。"
       },
       "reference_prices": {
         "status": "not_applicable",
@@ -1012,7 +1014,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "官方保留旧请求别名；V4-Flash 与 vision-exp 指向 V4.1-Flash，非旧底模继续服务。",
+      "notes": "当前 Flash 底模为 DeepSeek-V4.1-Flash-1017，Pro 为 DeepSeek-V4-Pro-0813。旧 Flash / vision-exp 请求名仍可调用并转到当前 Flash；下线的是旧底模，不能据此删除仍接受的请求别名。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -1059,14 +1061,14 @@
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:42.681533+00:00",
+            "checked_at": "2026-10-23T22:03:03.612748Z",
             "source_ids": [
               "context-deepseek-models"
             ],
-            "evidence": "evidence/deepseek/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/deepseek/2026-10-24-audit.md",
+            "notes": "本轮核对官方表的 1M 标称窗口；未发现 K/M 精确换算依据。"
           },
-          "notes": "原厂 API 型号表；旧 Flash 请求名由脚注明确接受并转到当前 Flash，不是猜测别名。 官方窗口原文为 1M；本次未找到精确整数及缩写换算依据，不自行把 K/M 乘以 1000 或 1024。 历史整数 1048576 保留供追溯，当前来源未能独立复核其精确值，不能视为本轮已确认。"
+          "notes": "官方模型表标称上下文 1M、输出最大 384K；旧 Flash 名称由价格脚注明确转当前模型。历史上下文整数保留供追溯，本轮未核实其精确边界，不以标称 M/K 猜测换算。"
         }
       }
     }

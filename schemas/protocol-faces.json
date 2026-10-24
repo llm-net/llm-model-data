@@ -12,6 +12,7 @@
   "kling_video": {"display_name": "Kling Video", "modalities": ["video"], "description": "可灵视频生成及 Omni 任务；具体操作依型号确定。"},
   "minimax_speech": {"display_name": "MiniMax Speech", "modalities": ["audio"], "description": "MiniMax TTS，同步 HTTP / WebSocket 或异步操作在证据中说明。"},
   "gemini_generate_content": {"display_name": "Gemini GenerateContent", "modalities": ["text"], "description": "Google Gemini 原生 generateContent / streamGenerateContent；是否由消费者实现另定。"},
+  "gemini_interactions": {"display_name": "Gemini Interactions", "modalities": ["text"], "description": "Google Gemini 原生 Interactions 基础模型推理；用 model 指定模型，不包含另行托管 Agent 产品。"},
   "bailian_text": {"display_name": "Bailian Text", "modalities": ["text"], "description": "DashScope 原生文本 / 多模态生成协议。"},
   "minimax_text": {"display_name": "MiniMax Text", "modalities": ["text"], "description": "MiniMax 原生 text/chatcompletion_v2。"},
   "cursor_agent": {"display_name": "Cursor Agent", "modalities": ["text"], "description": "Cursor 工具订阅的私有 Agent ConnectRPC / protobuf；不是 OpenAI 或 Anthropic 公开模型 API。"},

@@ -27,12 +27,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:05:01.300149Z",
         "source_ids": [
           "audit-kimi-code"
         ],
-        "evidence": "evidence/moonshot/2026-09-16-audit.md",
-        "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。"
+        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -54,7 +54,7 @@
             "basis": "reference",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "按已确认底模映射到同平台API；k3-256k仅上下文差别，统一采用K3按量价。 参考对象：kimi-k3。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "参考对象 kimi-k3；标准在线，人民币标价；默认 5m TTL 的缓存读写基准。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -73,6 +73,12 @@
                 "amount": "100",
                 "per": 1000000,
                 "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
               }
             ],
             "effective_from": null,
@@ -80,38 +86,50 @@
             "billing_period": null,
             "charge_unit": null,
             "reference_origin": {
-              "url": "https://platform.kimi.com/docs/pricing/chat.md",
+              "url": "https://platform.kimi.com/docs/pricing/chat",
               "subject": "kimi-k3",
-              "reason": "按已确认底模映射到同平台API；k3-256k仅上下文差别，统一采用K3按量价。"
+              "reason": "同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k3",
+                "selection": "exact"
+              }
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-10-23T22:05:01.300149Z",
               "source_ids": [
-                "alignment-moonshot-pricing-policy"
+                "audit-pricing-html",
+                "audit-context-cache"
               ],
-              "evidence": "evidence/moonshot/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
-            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 仅按量标价等价消耗示意，不是订阅真实扣费。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-10-23T22:05:01.300149Z",
           "source_ids": [
-            "alignment-moonshot-pricing-policy"
+            "audit-pricing-html",
+            "audit-context-cache"
           ],
-          "evidence": "evidence/moonshot/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
-        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+        "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。"
       },
-      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
+      "notes": "本条为 Kimi Code 独立产品型号。同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
       "capabilities": {
-        "input_modalities": [],
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
         "context_window_tokens": 1048576,
         "max_output_tokens": null,
         "tool_calling": null,
@@ -119,20 +137,21 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
+          "openai_responses",
           "anthropic_messages"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "protocol-coding"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "Kimi Code 模型配置逐项列四个 ID，接入表列 OpenAI Chat 与 Anthropic；未承诺订阅 Responses，不从 Kimi 按量 K3 推导。"
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
         },
         "reasoning": {
           "support": "supported",
@@ -142,7 +161,29 @@
               "interface": "openai_chat",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "unknown",
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "本产品精确型号的原生档位；不从界面标签推测其他枚举。"
+                }
+              ],
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -155,16 +196,16 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "high",
-                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
             },
             {
               "interface": "anthropic_messages",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "unknown",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -177,36 +218,36 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "high",
-                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "reasoning-kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+          "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.769941+00:00",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "context-kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "Kimi Code 官方产品表的整数窗口；不从按量 API 继承。 此值仅 Allegretto 及更高套餐可用；Moderato 仅 262144。不是所有套餐无条件拥有 1M。"
+          "notes": "本产品模型表明确整数窗口。1M 需要新套餐 Pro 或以上 / 旧套餐 Allegretto 或以上；低档可用性不意味着可用 1M。"
         }
       }
     },
@@ -222,12 +263,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:05:01.300149Z",
         "source_ids": [
           "audit-kimi-code"
         ],
-        "evidence": "evidence/moonshot/2026-09-16-audit.md",
-        "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。"
+        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -249,7 +290,7 @@
             "basis": "reference",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "按已确认底模映射到同平台API；k3-256k仅上下文差别，统一采用K3按量价。 参考对象：kimi-k3。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "参考对象 kimi-k3；标准在线，人民币标价；默认 5m TTL 的缓存读写基准。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -268,6 +309,12 @@
                 "amount": "100",
                 "per": 1000000,
                 "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
               }
             ],
             "effective_from": null,
@@ -275,38 +322,49 @@
             "billing_period": null,
             "charge_unit": null,
             "reference_origin": {
-              "url": "https://platform.kimi.com/docs/pricing/chat.md",
+              "url": "https://platform.kimi.com/docs/pricing/chat",
               "subject": "kimi-k3",
-              "reason": "按已确认底模映射到同平台API；k3-256k仅上下文差别，统一采用K3按量价。"
+              "reason": "同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k3",
+                "selection": "exact"
+              }
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-10-23T22:05:01.300149Z",
               "source_ids": [
-                "alignment-moonshot-pricing-policy"
+                "audit-pricing-html",
+                "audit-context-cache"
               ],
-              "evidence": "evidence/moonshot/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
-            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 仅按量标价等价消耗示意，不是订阅真实扣费。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-10-23T22:05:01.300149Z",
           "source_ids": [
-            "alignment-moonshot-pricing-policy"
+            "audit-pricing-html",
+            "audit-context-cache"
           ],
-          "evidence": "evidence/moonshot/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
-        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+        "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。"
       },
-      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
+      "notes": "本条为 Kimi Code 独立产品型号。同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
       "capabilities": {
-        "input_modalities": [],
+        "input_modalities": [
+          "text",
+          "image"
+        ],
         "context_window_tokens": 262144,
         "max_output_tokens": null,
         "tool_calling": null,
@@ -314,20 +372,21 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
+          "openai_responses",
           "anthropic_messages"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "protocol-coding"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "Kimi Code 模型配置逐项列四个 ID，接入表列 OpenAI Chat 与 Anthropic；未承诺订阅 Responses，不从 Kimi 按量 K3 推导。"
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
         },
         "reasoning": {
           "support": "supported",
@@ -337,7 +396,29 @@
               "interface": "openai_chat",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "unknown",
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "本产品精确型号的原生档位；不从界面标签推测其他枚举。"
+                }
+              ],
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -350,16 +431,16 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "high",
-                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
             },
             {
               "interface": "anthropic_messages",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "unknown",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -372,36 +453,36 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "high",
-                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "reasoning-kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+          "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "262144",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.769941+00:00",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "context-kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "Kimi Code 官方产品表的整数窗口；不从按量 API 继承。"
+          "notes": "本产品模型表明确整数窗口。"
         }
       }
     },
@@ -417,12 +498,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:05:01.300149Z",
         "source_ids": [
           "audit-kimi-code"
         ],
-        "evidence": "evidence/moonshot/2026-09-16-audit.md",
-        "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。"
+        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -444,7 +525,7 @@
             "basis": "reference",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "用户明确指定：K2.8 Preview按Kimi K2.7 Code按量价做示意；仅价格参考，不改变底模身份，不表示官方同价。",
+            "selection": "参考对象 kimi-k2.7-code；标准在线，人民币标价；未命中输入、缓存命中及输出各自计费。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -470,38 +551,48 @@
             "billing_period": null,
             "charge_unit": null,
             "reference_origin": {
-              "url": "https://platform.kimi.com/docs/pricing/chat.md",
+              "url": "https://platform.kimi.com/docs/pricing/chat",
               "subject": "kimi-k2.7-code",
-              "reason": "用户明确指定：K2.8 Preview按Kimi K2.7 Code按量价做示意；仅价格参考，不改变底模身份，不表示官方同价。"
+              "reason": "用户明确指定 K2.8 Preview 的示意参考对象为 kimi-k2.7-code，不代表官方同价。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k2-7-code",
+                "selection": "exact"
+              }
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-10-23T22:05:01.300149Z",
               "source_ids": [
-                "alignment-moonshot-pricing-policy"
+                "audit-pricing-html"
               ],
-              "evidence": "evidence/moonshot/2026-09-16-alignment.md",
-              "notes": "参考对象kimi-k2.7-code的公开按量价沿用已核对证据；本次仅按用户指示确定近似参考，不声称重新抓取或K2.8官方同价。"
+              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
-            "notes": "每百万token：未缓存输入6.5元、缓存输入1.3元、输出27元；用于按量等价消耗示意，不是订阅实际扣款。",
+            "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。 仅按量标价等价消耗示意，不是订阅真实扣费。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-10-23T22:05:01.300149Z",
           "source_ids": [
-            "alignment-moonshot-pricing-policy"
+            "audit-pricing-html"
           ],
-          "evidence": "evidence/moonshot/2026-09-16-alignment.md",
-          "notes": "参考对象kimi-k2.7-code的公开按量价沿用已核对证据；本次仅按用户指示确定近似参考，不声称重新抓取或K2.8官方同价。"
+          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
-        "notes": "用户明确指定：K2.8 Preview按Kimi K2.7 Code按量价做示意；仅价格参考，不改变底模身份，不表示官方同价。"
+        "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。"
       },
-      "notes": "当前底模K2.8 Preview，请求ID仍为kimi-for-coding；按用户指定仅参考kimi-k2.7-code的按量价。",
+      "notes": "本条为 Kimi Code 独立产品型号。用户明确指定 K2.8 Preview 的示意参考对象为 kimi-k2.7-code，不代表官方同价。",
       "capabilities": {
-        "input_modalities": [],
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
         "context_window_tokens": 1048576,
         "max_output_tokens": null,
         "tool_calling": null,
@@ -509,20 +600,21 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
+          "openai_responses",
           "anthropic_messages"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "protocol-coding"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "Kimi Code 模型配置逐项列四个 ID，接入表列 OpenAI Chat 与 Anthropic；未承诺订阅 Responses，不从 Kimi 按量 K3 推导。"
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
         },
         "reasoning": {
           "support": "supported",
@@ -532,7 +624,29 @@
               "interface": "openai_chat",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "unknown",
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "本产品精确型号的原生档位；不从界面标签推测其他枚举。"
+                }
+              ],
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -545,16 +659,16 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "max",
-                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
             },
             {
               "interface": "anthropic_messages",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "unknown",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -567,36 +681,36 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "max",
-                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "reasoning-kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+          "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.769941+00:00",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "context-kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "Kimi Code 官方产品表的整数窗口；不从按量 API 继承。 本产品实际标为 K2.8 Preview；价格参考 K2.7 Code 不代表窗口也按 K2.7 Code。"
+          "notes": "本产品模型表明确整数窗口。"
         }
       }
     },
@@ -612,12 +726,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "checked_at": "2026-10-23T22:05:01.300149Z",
         "source_ids": [
           "audit-kimi-code"
         ],
-        "evidence": "evidence/moonshot/2026-09-16-audit.md",
-        "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。"
+        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -639,7 +753,7 @@
             "basis": "reference",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "按已确认底模映射到同平台API；k3-256k仅上下文差别，统一采用K3按量价。 参考对象：kimi-k2.7-code-highspeed。标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "参考对象 kimi-k2.7-code-highspeed；标准在线，人民币标价；未命中输入、缓存命中及输出各自计费。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -665,38 +779,48 @@
             "billing_period": null,
             "charge_unit": null,
             "reference_origin": {
-              "url": "https://platform.kimi.com/docs/pricing/chat.md",
+              "url": "https://platform.kimi.com/docs/pricing/chat",
               "subject": "kimi-k2.7-code-highspeed",
-              "reason": "按已确认底模映射到同平台API；k3-256k仅上下文差别，统一采用K3按量价。"
+              "reason": "同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k2-7-code-highspeed",
+                "selection": "exact"
+              }
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-16T05:39:26.808377Z",
+              "checked_at": "2026-10-23T22:05:01.300149Z",
               "source_ids": [
-                "alignment-moonshot-pricing-policy"
+                "audit-pricing-html"
               ],
-              "evidence": "evidence/moonshot/2026-09-16-alignment.md",
-              "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
-            "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
+            "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。 仅按量标价等价消耗示意，不是订阅真实扣费。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-16T05:39:26.808377Z",
+          "checked_at": "2026-10-23T22:05:01.300149Z",
           "source_ids": [
-            "alignment-moonshot-pricing-policy"
+            "audit-pricing-html"
           ],
-          "evidence": "evidence/moonshot/2026-09-16-alignment.md",
-          "notes": "核对的是参考对象的按量标价；对齐规则由用户指定，不核对订阅真实扣费。"
+          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
-        "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
+        "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。"
       },
-      "notes": "Kimi Code官方模型表；kimi-for-coding当前对应K2.8 Preview，独立于API模型名。",
+      "notes": "本条为 Kimi Code 独立产品型号。同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
       "capabilities": {
-        "input_modalities": [],
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
         "context_window_tokens": 262144,
         "max_output_tokens": null,
         "tool_calling": null,
@@ -704,20 +828,21 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
+          "openai_responses",
           "anthropic_messages"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:02:58.787297Z",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "protocol-coding"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-protocols.md",
-            "notes": "仅核对协议面，不刷新模型身份、价格或其他能力的核对时间。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "Kimi Code 模型配置逐项列四个 ID，接入表列 OpenAI Chat 与 Anthropic；未承诺订阅 Responses，不从 Kimi 按量 K3 推导。"
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
         },
         "reasoning": {
           "support": "supported",
@@ -727,71 +852,523 @@
               "interface": "openai_chat",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "unknown",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": null,
-                  "values": [
-                    "low",
-                    "high",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "max",
-                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
-                }
-              ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
             },
             {
               "interface": "anthropic_messages",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "unknown",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": null,
-                  "values": [
-                    "low",
-                    "high",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "max",
-                  "notes": "订阅模型页确认原生档位及工具别名映射，但未在该页定义各协议的具体字段，parameter=null。"
-                }
-              ],
-              "notes": "仅适用于本产品、本模型及此协议面。"
+              "default_behavior": "enabled",
+              "controls": [],
+              "notes": "关闭思考会改由 K2.8 Preview 非思考模式承载，不代表当前底模可关闭思考。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T12:53:46.356875Z",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "reasoning-kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-reasoning.md",
-            "notes": "思考能力独立核对；不刷新协议、身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "K3 与 K2.8 Preview 的订阅档位独立核对。none 会关闭思考并改由 K2.8 Preview（非思考）承载，不能当成原 K3 无思考版本；具体 wire 字段仍待核对。"
+          "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "262144",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-16T14:59:41.769941+00:00",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
             "source_ids": [
               "context-kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
-          "notes": "Kimi Code 官方产品表的整数窗口；不从按量 API 继承。 需要 Allegretto 或更高套餐。"
+          "notes": "本产品模型表明确整数窗口。"
+        }
+      }
+    },
+    {
+      "id": "k3-1-pro",
+      "request_id": "k3.1-pro",
+      "display_name": "k3.1-pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:05:01.300149Z",
+        "source_ids": [
+          "audit-kimi-code"
+        ],
+        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/moonshot/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "参考对象 kimi-k3.1-pro；标准在线，人民币标价；默认 5m TTL 的缓存读写基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "13",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "68",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "13",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat",
+              "subject": "kimi-k3.1-pro",
+              "reason": "同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k3-1-pro",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:05:01.300149Z",
+              "source_ids": [
+                "audit-pricing-html",
+                "audit-context-cache"
+              ],
+              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            },
+            "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 仅按量标价等价消耗示意，不是订阅真实扣费。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:05:01.300149Z",
+          "source_ids": [
+            "audit-pricing-html",
+            "audit-context-cache"
+          ],
+          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
+        },
+        "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。"
+      },
+      "notes": "本条为 Kimi Code 独立产品型号。同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "source_ids": [
+              "protocol-coding"
+            ],
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "本产品精确型号的原生档位；不从界面标签推测其他枚举。"
+                }
+              ],
+              "notes": "K3.1 Pro 关闭思考会返回 400。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
+                }
+              ],
+              "notes": "K3.1 Pro 关闭思考会返回 400。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
+                }
+              ],
+              "notes": "K3.1 Pro 关闭思考会返回 400。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "source_ids": [
+              "reasoning-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "source_ids": [
+              "context-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "本产品模型表明确整数窗口。1M 需要新套餐 Pro 或以上 / 旧套餐 Allegretto 或以上；低档可用性不意味着可用 1M。"
+        }
+      }
+    },
+    {
+      "id": "k3-1-pro-highspeed",
+      "request_id": "k3.1-pro-highspeed",
+      "display_name": "k3.1-pro-highspeed",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-23T22:05:01.300149Z",
+        "source_ids": [
+          "audit-kimi-code"
+        ],
+        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "notes": "逐项核对官方文档，未用真实 Key 调用。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/moonshot/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "参考对象 kimi-k3.1-pro-highspeed；标准在线，人民币标价；默认 5m TTL 的缓存读写基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "26",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "136",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "26",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://platform.kimi.com/docs/pricing/chat",
+              "subject": "kimi-k3.1-pro-highspeed",
+              "reason": "同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
+              "catalog_model": {
+                "provider_id": "moonshot",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k3-1-pro-highspeed",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-23T22:05:01.300149Z",
+              "source_ids": [
+                "audit-pricing-html",
+                "audit-context-cache"
+              ],
+              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            },
+            "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 仅按量标价等价消耗示意，不是订阅真实扣费。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-23T22:05:01.300149Z",
+          "source_ids": [
+            "audit-pricing-html",
+            "audit-context-cache"
+          ],
+          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "notes": "逐项核对官方文档，未用真实 Key 调用。"
+        },
+        "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。"
+      },
+      "notes": "本条为 Kimi Code 独立产品型号。同平台公开按量价；按 Kimi Code 官方型号版本独立匹配。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "source_ids": [
+              "protocol-coding"
+            ],
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "Kimi Code 本轮产品模型页明确六个 ID 与 Chat、Responses、Messages 三接口。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "本产品精确型号的原生档位；不从界面标签推测其他枚举。"
+                }
+              ],
+              "notes": "K3.1 Pro 关闭思考会返回 400。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
+                }
+              ],
+              "notes": "K3.1 Pro 关闭思考会返回 400。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
+                }
+              ],
+              "notes": "K3.1 Pro 关闭思考会返回 400。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "source_ids": [
+              "reasoning-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "source_ids": [
+              "context-kimi-code"
+            ],
+            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+          },
+          "notes": "本产品模型表明确整数窗口。新套餐 Pro 或以上 / 旧套餐 Allegretto 或以上可用。"
         }
       }
     }

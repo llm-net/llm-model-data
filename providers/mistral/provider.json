@@ -50,6 +50,54 @@
       "url": "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
       "purpose": "models",
       "notes": "上下文长度专项来源；位置、UTC 获取时间、整数 / 标称规格和缺项见本地 context 证据。"
+    },
+    {
+      "id": "r1024-mistral-config",
+      "url": "https://docs.mistral.ai/vibe/code/cli/configuration",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-mistral-large3",
+      "url": "https://docs.mistral.ai/models/mistral-large-3-25-12",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-mistral-pricing",
+      "url": "https://docs.mistral.ai/inference/pricing",
+      "purpose": "pricing",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-mistral-chat",
+      "url": "https://docs.mistral.ai/api/endpoint/chat",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-mistral-reasoning",
+      "url": "https://docs.mistral.ai/capabilities/reasoning",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-mistral-small4",
+      "url": "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-mistral-medium35",
+      "url": "https://docs.mistral.ai/models/mistral-medium-3-5-26-04",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1024-mistral-large4",
+      "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+      "purpose": "models",
+      "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"
