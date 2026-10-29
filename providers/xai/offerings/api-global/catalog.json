@@ -27,13 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:41+00:00",
+        "checked_at": "2026-10-29T01:55:25.555866+00:00",
         "source_ids": [
           "r1024-xai-47",
           "r1024-xai-release"
         ],
-        "evidence": "evidence/xai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/xai/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -71,12 +71,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
                 "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -85,12 +85,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
             "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -135,7 +135,7 @@
             "evidence": "evidence/xai/2026-10-24-refresh.md",
             "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。4.7 Responses 总是携带 reasoning.encrypted_content；多轮应原样传回。 本轮确认Chat为legacy仍有官方示例、Responses为直接推理；旧gRPC参考页重定向REST，gRPC逐型号细节未重新核全。"
+          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。4.7 Responses 总是携带 reasoning.encrypted_content；多轮应原样传回。 本轮确认Chat为legacy仍有官方示例、Responses为直接推理；旧gRPC参考页重定向REST，gRPC逐型号细节未重新核全。 2026-10-29 已重新核对当前公开 Chat/Responses，但登记的 gRPC 文档入口现返回 REST Responses 内容，不能重核 gRPC 面；保留原成功日期，协议覆盖降为 partial，不据此认定 gRPC 下线。"
         },
         "reasoning": {
           "support": "supported",
@@ -190,13 +190,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:41+00:00",
+            "checked_at": "2026-10-29T01:55:25.657591+00:00",
             "source_ids": [
               "r1024-xai-47",
               "r1024-xai-reasoning"
             ],
-            "evidence": "evidence/xai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "低/中/高/xhigh 四档；默认 high，不能关闭。gRPC 原始控制字段仍待证实，coverage 保持 partial。 本轮确认grok4.5三档、4.6/4.7四档，默认high且不能关闭；gRPC细节页面迁移造成未重核缺口。"
         },
@@ -205,12 +205,12 @@
           "reported_value": "500,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:41+00:00",
+            "checked_at": "2026-10-29T01:55:25.520598+00:00",
             "source_ids": [
               "r1024-xai-47"
             ],
-            "evidence": "evidence/xai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本型号官方整数总窗口；价阶200k不是窗口。"
         }
@@ -228,13 +228,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:41+00:00",
+        "checked_at": "2026-10-29T01:55:25.811187+00:00",
         "source_ids": [
           "r1024-xai-46",
           "r1024-xai-release"
         ],
-        "evidence": "evidence/xai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/xai/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -272,12 +272,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
                 "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -286,12 +286,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
             "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -336,7 +336,7 @@
             "evidence": "evidence/xai/2026-10-24-refresh.md",
             "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。 本轮确认Chat为legacy仍有官方示例、Responses为直接推理；旧gRPC参考页重定向REST，gRPC逐型号细节未重新核全。"
+          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。 本轮确认Chat为legacy仍有官方示例、Responses为直接推理；旧gRPC参考页重定向REST，gRPC逐型号细节未重新核全。 2026-10-29 已重新核对当前公开 Chat/Responses，但登记的 gRPC 文档入口现返回 REST Responses 内容，不能重核 gRPC 面；保留原成功日期，协议覆盖降为 partial，不据此认定 gRPC 下线。"
         },
         "reasoning": {
           "support": "supported",
@@ -391,13 +391,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:41+00:00",
+            "checked_at": "2026-10-29T01:55:25.811187+00:00",
             "source_ids": [
               "r1024-xai-46",
               "r1024-xai-reasoning"
             ],
-            "evidence": "evidence/xai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "低/中/高/xhigh 四档；默认 high，不能关闭。gRPC 原始控制字段仍待证实，coverage 保持 partial。 本轮确认grok4.5三档、4.6/4.7四档，默认high且不能关闭；gRPC细节页面迁移造成未重核缺口。"
         },
@@ -406,12 +406,12 @@
           "reported_value": "500,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:41+00:00",
+            "checked_at": "2026-10-29T01:55:25.811187+00:00",
             "source_ids": [
               "r1024-xai-46"
             ],
-            "evidence": "evidence/xai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本型号官方整数总窗口；价阶200k不是窗口。"
         }
@@ -429,13 +429,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:41+00:00",
+        "checked_at": "2026-10-29T01:55:25.943192+00:00",
         "source_ids": [
           "r1024-xai-45",
           "r1024-xai-release"
         ],
-        "evidence": "evidence/xai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/xai/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -473,12 +473,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
                 "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -487,12 +487,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
             "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -537,7 +537,7 @@
             "evidence": "evidence/xai/2026-10-24-refresh.md",
             "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
           },
-          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。 本轮确认Chat为legacy仍有官方示例、Responses为直接推理；旧gRPC参考页重定向REST，gRPC逐型号细节未重新核全。"
+          "notes": "按量 Chat Completions（legacy）、Responses 与官方原生 gRPC；无官方 Anthropic Messages 兼容面依据。 本轮确认Chat为legacy仍有官方示例、Responses为直接推理；旧gRPC参考页重定向REST，gRPC逐型号细节未重新核全。 2026-10-29 已重新核对当前公开 Chat/Responses，但登记的 gRPC 文档入口现返回 REST Responses 内容，不能重核 gRPC 面；保留原成功日期，协议覆盖降为 partial，不据此认定 gRPC 下线。"
         },
         "reasoning": {
           "support": "supported",
@@ -590,27 +590,27 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:41+00:00",
+            "checked_at": "2026-10-29T01:55:25.943192+00:00",
             "source_ids": [
               "r1024-xai-45",
               "r1024-xai-reasoning"
             ],
-            "evidence": "evidence/xai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
-          "notes": "低/中/高三档；4.5 型号页列 xhigh，但思考专页明确其等同 high，不登记为独立档位。gRPC 原始控制字段仍待证实，coverage 保持 partial。 本轮确认grok4.5三档、4.6/4.7四档，默认high且不能关闭；gRPC细节页面迁移造成未重核缺口。"
+          "notes": "本轮型号页将xhigh列为supported，但思考指南明确仅4.6及以后有独立xhigh，4.5收到xhigh按high处理。保留low/medium/high作为已确认独立档位；gRPC控制与该文档冲突保持partial。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "500,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:41+00:00",
+            "checked_at": "2026-10-29T01:55:25.943192+00:00",
             "source_ids": [
               "r1024-xai-45"
             ],
-            "evidence": "evidence/xai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本型号官方整数总窗口；价阶200k不是窗口。"
         }

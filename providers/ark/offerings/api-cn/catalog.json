@@ -15828,6 +15828,231 @@
           "notes": "本轮已核对型号、价格与协议面；尚缺本产品、本型号的操作、输入、输出与参数独立证据。"
         }
       }
+    },
+    {
+      "id": "kimi-k3-1-pro-261024",
+      "request_id": "kimi-k3-1-pro-261024",
+      "display_name": "Kimi K3.1 Pro（261024）",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-29T01:55:40.465665+00:00",
+        "source_ids": [
+          "audit-md-model-list"
+        ],
+        "evidence": "evidence/ark/2026-10-29-audit.md",
+        "notes": "本产品模型列表明确列出精确日期版。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "方舟国内标准在线；非音频输入，缓存存储另按时长计费。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "13",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "68",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-29T01:55:40.465665+00:00",
+              "source_ids": [
+                "audit-md-model-pricing",
+                "audit-md-model-list"
+              ],
+              "evidence": "evidence/ark/2026-10-29-audit.md",
+              "notes": "同平台标准在线刊例价；不套原厂缓存写入费，也不把订阅限时抵扣当按量价。"
+            },
+            "notes": "完整方舟价表给出 Kimi K3.1 Pro 的标准输入、缓存命中及输出价格；缓存存储为0.017元/百万token/小时，未并入 token 价格。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-29T01:55:40.465665+00:00",
+          "source_ids": [
+            "audit-md-model-pricing",
+            "audit-md-model-list"
+          ],
+          "evidence": "evidence/ark/2026-10-29-audit.md",
+          "notes": "同平台标准在线刊例价；不套原厂缓存写入费，也不把订阅限时抵扣当按量价。"
+        },
+        "notes": "标准在线非音频输入估算；缓存存储为独立时长计费，未并入。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-10-29-audit.md",
+          "notes": "已有唯一按量基准，不另设参考价。"
+        },
+        "notes": "已有唯一按量基准，不另设参考价。"
+      },
+      "notes": "方舟国内按量产品精确日期版；独立于原厂与订阅请求名。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "audit-md-model-list",
+              "audit-md-create-model-responses-api",
+              "audit-md-messages-api"
+            ],
+            "evidence": "evidence/ark/2026-10-29-audit.md",
+            "notes": "文本模型列表挂接 Chat/Responses，Responses 的 temperature/top_p 精确列该 ID；Messages 的 model 明确引用本模型列表。"
+          },
+          "notes": "只确认方舟按量三兼容面；未做真实 Key 调用。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "audit-md-model-list"
+            ],
+            "evidence": "evidence/ark/2026-10-29-audit.md",
+            "notes": "精确型号行标称上下文1024k、最大回答128k；未给出k到token的整数换算依据。"
+          },
+          "notes": "保留官方标称，不从原厂或同名订阅推导整数。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "精确型号行：low/medium→low，high→high，xhigh/max→max。通用表称支持七档，但本型号始终思考，none/minimal 的具体行为未写明，不把它们作可用关闭选项。"
+                }
+              ],
+              "notes": "本型号始终开启思考，不使用thinking参数；默认max。none/minimal的兼容行为未明。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "精确型号行：low/medium→low，high→high，xhigh/max→max。通用表称支持七档，但本型号始终思考，none/minimal 的具体行为未写明，不把它们作可用关闭选项。"
+                }
+              ],
+              "notes": "本型号始终开启思考，不使用thinking参数；默认max。none/minimal的兼容行为未明。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "精确型号行：low/medium→low，high→high，xhigh/max→max。通用表称支持七档，但本型号始终思考，none/minimal 的具体行为未写明，不把它们作可用关闭选项。"
+                }
+              ],
+              "notes": "本型号始终开启思考，不使用thinking参数；默认max。none/minimal的兼容行为未明。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "audit-md-deep-thinking",
+              "audit-md-messages-api"
+            ],
+            "evidence": "evidence/ark/2026-10-29-audit.md",
+            "notes": "按精确型号默认档和兼容映射维护，Messages参数映射由其API页指向同一思考支持表。"
+          },
+          "notes": "已核实五个有明确映射的值；通用七档说明与不可关闭约束存在未解释边界，保持partial。"
+        }
+      }
     }
   ],
   "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"

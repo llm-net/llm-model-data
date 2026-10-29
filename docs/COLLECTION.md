@@ -18,6 +18,7 @@
 | --- | --- |
 | OpenRouter | `~openai/gpt-latest` |
 | Groq | `llama-3.3-70b-versatile` |
+| DeepSeek | `deepseek-v4-flash`、`deepseek-v4-flash-vision-exp`（旧兼容别名） |
 
 这些是用户收录决定，不都表示厂商下线。自动更新即使再发现价格或模型名也不能重新加入；用户明确变更决定后才能改排除清单。
 

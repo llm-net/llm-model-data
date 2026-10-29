@@ -154,12 +154,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:40+00:00",
+        "checked_at": "2026-10-29T01:56:56.492423+00:00",
         "source_ids": [
           "r1024-claude-code"
         ],
-        "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -225,12 +225,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.825548+00:00",
               "source_ids": [
                 "r1024-claude-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -239,12 +239,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.825548+00:00",
           "source_ids": [
             "r1024-claude-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。"
       },
@@ -263,12 +263,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:24.284517+00:00",
             "source_ids": [
               "r1024-claude-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Claude Code 使用 Messages；不继承官方API的Chat兼容层。"
         },
@@ -303,12 +303,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "按本次Claude Code型号effort表、默认和思考开关独立核对；只登记已有控制入口，组织策略与其他入口未穷尽。"
         },
@@ -317,12 +317,12 @@
           "reported_value": "1 million tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本产品Extended context明确1 million tokens；默认启用，可通过CLAUDE_CODE_DISABLE_1M_CONTEXT降到200K，约967K压缩阈值不是窗口。"
         }
@@ -340,12 +340,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:40+00:00",
+        "checked_at": "2026-10-29T01:56:56.492423+00:00",
         "source_ids": [
           "r1024-claude-code"
         ],
-        "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -411,12 +411,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.825548+00:00",
               "source_ids": [
                 "r1024-claude-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -425,12 +425,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.825548+00:00",
           "source_ids": [
             "r1024-claude-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -449,12 +449,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:24.284517+00:00",
             "source_ids": [
               "r1024-claude-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Claude Code 使用 Messages；不继承官方API的Chat兼容层。"
         },
@@ -489,12 +489,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "按本次Claude Code型号effort表、默认和思考开关独立核对；只登记已有控制入口，组织策略与其他入口未穷尽。"
         },
@@ -503,12 +503,12 @@
           "reported_value": "1 million tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本产品Extended context明确1 million tokens；默认启用，可通过CLAUDE_CODE_DISABLE_1M_CONTEXT降到200K，约967K压缩阈值不是窗口。"
         }
@@ -526,12 +526,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:40+00:00",
+        "checked_at": "2026-10-29T01:56:56.492423+00:00",
         "source_ids": [
           "r1024-claude-code"
         ],
-        "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -597,12 +597,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.825548+00:00",
               "source_ids": [
                 "r1024-claude-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量等价消耗示意；不代表订阅实际扣款或短名路由等价。",
             "time_basis": "unknown",
@@ -611,12 +611,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.825548+00:00",
           "source_ids": [
             "r1024-claude-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣款。"
       },
@@ -635,12 +635,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:24.284517+00:00",
             "source_ids": [
               "r1024-claude-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Claude Code 使用 Messages；不继承官方API的Chat兼容层。"
         },
@@ -675,12 +675,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "按本次Claude Code型号effort表、默认和思考开关独立核对；只登记已有控制入口，组织策略与其他入口未穷尽。"
         },
@@ -689,12 +689,12 @@
           "reported_value": "1 million tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本产品Extended context明确1 million tokens；默认启用，可通过CLAUDE_CODE_DISABLE_1M_CONTEXT降到200K，约967K压缩阈值不是窗口。"
         }
@@ -712,12 +712,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:40+00:00",
+        "checked_at": "2026-10-29T01:56:56.492423+00:00",
         "source_ids": [
           "r1024-claude-code"
         ],
-        "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -777,12 +777,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.825548+00:00",
               "source_ids": [
                 "r1024-claude-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -791,12 +791,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.825548+00:00",
           "source_ids": [
             "r1024-claude-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -815,12 +815,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:24.284517+00:00",
             "source_ids": [
               "r1024-claude-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Claude Code 使用 Messages；不继承官方API的Chat兼容层。"
         },
@@ -867,12 +867,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "按本次Claude Code型号effort表、默认和思考开关独立核对；只登记已有控制入口，组织策略与其他入口未穷尽。"
         },
@@ -881,12 +881,12 @@
           "reported_value": "1 million tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本产品Extended context明确1 million tokens；默认启用，可通过CLAUDE_CODE_DISABLE_1M_CONTEXT降到200K，约967K压缩阈值不是窗口。"
         }
@@ -904,12 +904,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:40+00:00",
+        "checked_at": "2026-10-29T01:56:56.492423+00:00",
         "source_ids": [
           "r1024-claude-code"
         ],
-        "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -969,12 +969,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.825548+00:00",
               "source_ids": [
                 "r1024-claude-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -983,12 +983,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.825548+00:00",
           "source_ids": [
             "r1024-claude-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -1007,12 +1007,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:24.284517+00:00",
             "source_ids": [
               "r1024-claude-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Claude Code 使用 Messages；不继承官方API的Chat兼容层。"
         },
@@ -1059,12 +1059,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "按本次Claude Code型号effort表、默认和思考开关独立核对；只登记已有控制入口，组织策略与其他入口未穷尽。"
         },
@@ -1073,12 +1073,12 @@
           "reported_value": "1 million tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本产品Extended context明确1 million tokens；默认启用，可通过CLAUDE_CODE_DISABLE_1M_CONTEXT降到200K，约967K压缩阈值不是窗口。"
         }
@@ -1096,12 +1096,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:40+00:00",
+        "checked_at": "2026-10-29T01:56:56.492423+00:00",
         "source_ids": [
           "r1024-claude-code"
         ],
-        "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1161,12 +1161,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.825548+00:00",
               "source_ids": [
                 "r1024-claude-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量标价等价消耗示意，不代表订阅费、积分消耗或实际扣款。",
             "time_basis": "unknown",
@@ -1175,12 +1175,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.825548+00:00",
           "source_ids": [
             "r1024-claude-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -1199,12 +1199,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:24.284517+00:00",
             "source_ids": [
               "r1024-claude-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Claude Code 使用 Messages；不继承官方API的Chat兼容层。"
         },
@@ -1236,12 +1236,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "按本次Claude Code型号effort表、默认和思考开关独立核对；只登记已有控制入口，组织策略与其他入口未穷尽。"
         },
@@ -1252,10 +1252,10 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "context-claude-code"
+              "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-09-16-context.md",
-            "notes": "仅核对上下文；不代表其他能力已核对。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本次 Claude Code 型号配置页未明确这两个精确订阅型号的上下文窗口；API 的 200K 不能自动作为订阅限制。 本轮产品文档只单列Haiku5.5的1M窗口，Haiku4.5仍未查明，不继承API的200k。"
           },
           "notes": "本次 Claude Code 型号配置页未明确这两个精确订阅型号的上下文窗口；API 的 200K 不能自动作为订阅限制。 本轮产品文档只单列Haiku5.5的1M窗口，Haiku4.5仍未查明，不继承API的200k。"
         }
@@ -1273,12 +1273,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:40+00:00",
+        "checked_at": "2026-10-29T01:56:56.492423+00:00",
         "source_ids": [
           "r1024-claude-code"
         ],
-        "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1347,13 +1347,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:40+00:00",
+              "checked_at": "2026-10-29T01:55:23.825548+00:00",
               "source_ids": [
-                "r1024-claude-pricing",
-                "r1024-claude-sonnet55"
+                "r1024-claude-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "标准在线，选择5分钟缓存写入。Haiku5.5只取提示不超过100,000 token档，超出时全部token另价；1小时缓存写入与额外服务不并列。",
             "time_basis": "unknown",
@@ -1362,13 +1361,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:40+00:00",
+          "checked_at": "2026-10-29T01:55:23.825548+00:00",
           "source_ids": [
-            "r1024-claude-pricing",
-            "r1024-claude-sonnet55"
+            "r1024-claude-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "标准在线，选择5分钟缓存写入。Haiku5.5只取提示不超过100,000 token档，超出时全部token另价；1小时缓存写入与额外服务不并列。"
       },
@@ -1390,13 +1388,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:24.284517+00:00",
             "source_ids": [
-              "r1024-claude-code-protocol",
-              "r1024-claude-code"
+              "r1024-claude-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Code仅Messages；API的Chat兼容层不继承。"
         },
@@ -1405,12 +1402,12 @@
           "reported_value": "1 million tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "产品Extended context明确本型号默认1 million；可关闭1M上下文，压缩阈值不是窗口。"
         },
@@ -1445,12 +1442,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本产品默认medium，与Sonnet5.5原厂API默认high不同；会话effort已核对，其他入口未全部展开。"
         }
@@ -1468,12 +1465,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:40+00:00",
+        "checked_at": "2026-10-29T01:56:56.492423+00:00",
         "source_ids": [
           "r1024-claude-code"
         ],
-        "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1542,13 +1539,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:40+00:00",
+              "checked_at": "2026-10-29T01:55:23.825548+00:00",
               "source_ids": [
-                "r1024-claude-pricing",
-                "r1024-claude-haiku55"
+                "r1024-claude-pricing"
               ],
-              "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "标准在线，选择5分钟缓存写入。Haiku5.5只取提示不超过100,000 token档，超出时全部token另价；1小时缓存写入与额外服务不并列。",
             "time_basis": "unknown",
@@ -1557,13 +1553,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:40+00:00",
+          "checked_at": "2026-10-29T01:55:23.825548+00:00",
           "source_ids": [
-            "r1024-claude-pricing",
-            "r1024-claude-haiku55"
+            "r1024-claude-pricing"
           ],
-          "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "标准在线，选择5分钟缓存写入。Haiku5.5只取提示不超过100,000 token档，超出时全部token另价；1小时缓存写入与额外服务不并列。"
       },
@@ -1585,13 +1580,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:24.284517+00:00",
             "source_ids": [
-              "r1024-claude-code-protocol",
-              "r1024-claude-code"
+              "r1024-claude-code-protocol"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Code仅Messages；API的Chat兼容层不继承。"
         },
@@ -1600,12 +1594,12 @@
           "reported_value": "1 million tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "产品Extended context明确本型号默认1 million；可关闭1M上下文，压缩阈值不是窗口。"
         },
@@ -1640,12 +1634,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:40+00:00",
+            "checked_at": "2026-10-29T01:56:56.492423+00:00",
             "source_ids": [
               "r1024-claude-code"
             ],
-            "evidence": "evidence/anthropic/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/anthropic/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "本产品默认medium，与Sonnet5.5原厂API默认high不同；会话effort已核对，其他入口未全部展开。"
         }

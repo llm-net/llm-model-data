@@ -87,12 +87,13 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-28T06:25:51Z",
+              "checked_at": "2026-10-29T01:56:55.231450+00:00",
               "source_ids": [
-                "pricing"
+                "r1024-gemini-pricing",
+                "gemini-image-model"
               ],
-              "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
-              "notes": "Gemini 3.1 Flash Image Standard 表：输入 0.50（text/image），输出 3（text and thinking）/ 60（images）USD 每百万 token。"
+              "evidence": "evidence/gemini/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "输入价同时适用文本与图片输入 token；文本与思考输出按 output_tokens，图像输出按 image_output_tokens。官方折算每张 512 / 1K / 2K / 4K 为 0.045 / 0.067 / 0.101 / 0.151 USD（747 / 1120 / 1680 / 2520 token），本通道实测 usage 计数与之不同，见证据。",
             "time_basis": "unknown",
@@ -101,12 +102,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-28T06:25:51Z",
+          "checked_at": "2026-10-29T01:56:55.231450+00:00",
           "source_ids": [
-            "pricing"
+            "r1024-gemini-pricing",
+            "gemini-image-model"
           ],
-          "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
-          "notes": "同平台按量价，仅作订阅消耗参考。"
+          "evidence": "evidence/gemini/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。"
       },
@@ -182,12 +184,11 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "antigravity-code-assist",
               "antigravity-models",
               "gemini-image-model"
             ],
-            "evidence": "evidence/gemini/2026-09-28-antigravity-media-io.md",
-            "notes": "查过订阅通道、Antigravity 模型页与 Gemini API 型号页，未找到本产品公布的窗口。"
+            "evidence": "evidence/gemini/2026-10-29-refresh.md",
+            "notes": "已查本产品模型页；只确认Nano Banana 2用于生图，未公开本订阅通道窗口，不继承Developer API。"
           },
           "notes": "Antigravity 未公布本型号窗口；Gemini API 型号页的 131,072 输入 / 32,768 输出属于按量产品，不继承。"
         },

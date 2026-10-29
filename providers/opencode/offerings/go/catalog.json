@@ -41,12 +41,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:15:38.927632+00:00",
+              "checked_at": "2026-10-29T01:56:21.205783+00:00",
               "source_ids": [
                 "audit-20261024-go"
               ],
-              "evidence": "evidence/opencode/2026-10-24-go.md",
-              "notes": "Go 官方套餐表核对：Go 每月 USD 10，Go Plus 每月 USD 40，仅限单成员工作空间。"
+              "evidence": "evidence/opencode/2026-10-29-refresh.md",
+              "notes": "套餐表 Go/Go Plus 标准月费 USD 10/40 不变；单成员工作空间。只刷新已核对套餐价格。"
             },
             "notes": "仅限单成员工作空间。不同型号的用量限额独立；不把额度换算价当模型参考价。Extra Usage 可选开启，达到上限后使用控制台按量余额。",
             "time_basis": "unknown",
@@ -55,12 +55,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:15:38.927632+00:00",
+          "checked_at": "2026-10-29T01:56:21.205783+00:00",
           "source_ids": [
             "audit-20261024-go"
           ],
-          "evidence": "evidence/opencode/2026-10-24-go.md",
-          "notes": "Go 官方套餐表核对：Go 每月 USD 10，Go Plus 每月 USD 40，仅限单成员工作空间。"
+          "evidence": "evidence/opencode/2026-10-29-refresh.md",
+          "notes": "套餐表 Go/Go Plus 标准月费 USD 10/40 不变；单成员工作空间。只刷新已核对套餐价格。"
         },
         "notes": "仅限单成员工作空间。不同型号的用量限额独立；不把额度换算价当模型参考价。Extra Usage 可选开启，达到上限后使用控制台按量余额。"
       },
@@ -104,12 +104,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:15:38.927632+00:00",
+              "checked_at": "2026-10-29T01:56:21.205783+00:00",
               "source_ids": [
                 "audit-20261024-go"
               ],
-              "evidence": "evidence/opencode/2026-10-24-go.md",
-              "notes": "Go 官方套餐表核对：Go 每月 USD 10，Go Plus 每月 USD 40，仅限单成员工作空间。"
+              "evidence": "evidence/opencode/2026-10-29-refresh.md",
+              "notes": "套餐表 Go/Go Plus 标准月费 USD 10/40 不变；单成员工作空间。只刷新已核对套餐价格。"
             },
             "notes": "仅限单成员工作空间。不同型号的用量限额独立；不把额度换算价当模型参考价。Extra Usage 可选开启，达到上限后使用控制台按量余额。",
             "time_basis": "unknown",
@@ -118,12 +118,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:15:38.927632+00:00",
+          "checked_at": "2026-10-29T01:56:21.205783+00:00",
           "source_ids": [
             "audit-20261024-go"
           ],
-          "evidence": "evidence/opencode/2026-10-24-go.md",
-          "notes": "Go 官方套餐表核对：Go 每月 USD 10，Go Plus 每月 USD 40，仅限单成员工作空间。"
+          "evidence": "evidence/opencode/2026-10-29-refresh.md",
+          "notes": "套餐表 Go/Go Plus 标准月费 USD 10/40 不变；单成员工作空间。只刷新已核对套餐价格。"
         },
         "notes": "仅限单成员工作空间。不同型号的用量限额独立；不把额度换算价当模型参考价。Extra Usage 可选开启，达到上限后使用控制台按量余额。"
       },
@@ -157,13 +157,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -252,7 +252,7 @@
         },
         "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `kimi-k3`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
@@ -261,20 +261,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -284,10 +289,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -296,15 +303,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -323,13 +329,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -412,7 +418,7 @@
         },
         "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `kimi-k2.7-code`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 262144,
@@ -421,20 +427,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -444,10 +455,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -456,15 +469,14 @@
           "reported_value": "262144",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -602,10 +614,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -641,13 +655,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -730,7 +744,7 @@
         },
         "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `glm-5.3`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -739,20 +753,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -762,10 +781,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -774,15 +795,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -801,13 +821,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -890,7 +910,7 @@
         },
         "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `glm-5.3-flash`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -899,20 +919,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -922,10 +947,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -934,15 +961,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -961,13 +987,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1050,7 +1076,7 @@
         },
         "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `glm-5.2`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -1059,20 +1085,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -1082,10 +1113,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -1094,15 +1127,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -1240,10 +1272,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -1279,13 +1313,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1432,7 +1466,7 @@
         },
         "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `deepseek-v4.1-flash`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -1441,20 +1475,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -1464,10 +1503,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -1476,15 +1517,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -1503,13 +1543,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1656,7 +1696,7 @@
         },
         "notes": "官方排除中国法定节假日，高峰价之外为半价空闲。当前 time_pricing 仅表达星期和时段，法定节假日落在工作日高峰窗口时会高估，不能用于声称精确覆盖全年官方时段。跨时段请求的官方选价事件未明确，time_basis 保持 unknown。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `deepseek-v4-pro`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -1665,20 +1705,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -1688,10 +1733,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -1700,15 +1747,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -1781,12 +1827,12 @@
             "charge_unit": null,
             "reference_origin": {
               "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
-              "subject": "deepseek-v4-flash",
-              "reason": "按用户指定核对开发方按量价；完整独立保存同一标准基准，不证明 Go 型号映射或实际扣费。",
+              "subject": "deepseek-flash",
+              "reason": "按用户指定取开发方按量价；DeepSeek 官方确认该旧请求名映射 deepseek-flash，原厂目录按用户要求不再收录旧别名，参考对象改为主型号。完整独立保存同一标准基准，不证明 Go 型号映射或实际扣费。",
               "catalog_model": {
                 "provider_id": "deepseek",
                 "offering_id": "api-cn",
-                "model_id": "deepseek-v4-flash",
+                "model_id": "deepseek-flash",
                 "selection": "exact"
               }
             },
@@ -1911,10 +1957,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -2004,12 +2052,12 @@
             "charge_unit": null,
             "reference_origin": {
               "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
-              "subject": "deepseek-v4-flash-vision-exp",
-              "reason": "按用户指定核对开发方按量价；完整独立保存同一标准基准，不证明 Go 型号映射或实际扣费。",
+              "subject": "deepseek-flash",
+              "reason": "按用户指定取开发方按量价；DeepSeek 官方确认该旧请求名映射 deepseek-flash，原厂目录按用户要求不再收录旧别名，参考对象改为主型号。完整独立保存同一标准基准，不证明 Go 型号映射或实际扣费。",
               "catalog_model": {
                 "provider_id": "deepseek",
                 "offering_id": "api-cn",
-                "model_id": "deepseek-v4-flash-vision-exp",
+                "model_id": "deepseek-flash",
                 "selection": "exact"
               }
             },
@@ -2137,10 +2185,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -2176,13 +2226,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2265,7 +2315,7 @@
         },
         "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/anthropic/v1/messages。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `qwen3.8-max`；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -2274,20 +2324,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "anthropic_messages"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/anthropic/v1/messages；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -2297,10 +2352,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -2309,15 +2366,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -2336,13 +2392,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2425,7 +2481,7 @@
         },
         "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/anthropic/v1/messages。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `qwen3.8-flash`；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -2434,20 +2490,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "anthropic_messages"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/anthropic/v1/messages；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -2457,10 +2518,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -2469,15 +2532,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -2609,10 +2671,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -2648,13 +2712,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2737,7 +2801,7 @@
         },
         "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/anthropic/v1/messages。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `qwen3.7-plus`；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -2746,20 +2810,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "anthropic_messages"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/anthropic/v1/messages；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -2769,10 +2838,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -2781,15 +2852,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -2915,10 +2985,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -2954,13 +3026,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3043,7 +3115,7 @@
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/anthropic/v1/messages。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `minimax-m3`；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -3052,20 +3124,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "anthropic_messages"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/anthropic/v1/messages；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -3075,10 +3152,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -3087,15 +3166,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -3178,10 +3256,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -3190,15 +3270,14 @@
           "reported_value": "204800",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录的整数 token 限额；缺少当前 Endpoints 的历史型号仍须单独核实可用性，客户端存在记录不证明服务仍可调用。"
         }
       }
     },
@@ -3281,10 +3360,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -3320,13 +3401,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3403,7 +3484,7 @@
         },
         "notes": "小米 MiMo 国内普通 API 实时标准价；缓存写入限免不记永久零价，不取 Batch 或 Ultraspeed 价格。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `mimo-v2.6-pro`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
@@ -3412,20 +3493,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -3435,10 +3521,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -3447,15 +3535,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -3474,13 +3561,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3557,7 +3644,7 @@
         },
         "notes": "小米 MiMo 国内普通 API 实时标准价；缓存写入限免不记永久零价，不取 Batch 或 Ultraspeed 价格。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `mimo-v2.6-flash`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
@@ -3566,20 +3653,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -3589,10 +3681,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -3601,15 +3695,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -3628,13 +3721,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3664,7 +3757,7 @@
         },
         "notes": "小米官网确认原厂 API 于北京时间 2026-10-21 10:00 下线，现价表无该精确型号标准价；Go 文档和型号接口仍列出，保留 Go 身份但参考价 unknown，不能把原厂下线当作 Go 下线。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `mimo-v2.5-pro`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
@@ -3673,20 +3766,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -3696,10 +3794,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -3708,15 +3808,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -3735,13 +3834,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3771,7 +3870,7 @@
         },
         "notes": "小米官网确认原厂 API 于北京时间 2026-10-21 10:00 下线，现价表无该精确型号标准价；Go 文档和型号接口仍列出，保留 Go 身份但参考价 unknown，不能把原厂下线当作 Go 下线。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `mimo-v2.5`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -3780,20 +3879,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -3803,10 +3907,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -3815,15 +3921,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -3842,13 +3947,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3876,7 +3981,7 @@
         },
         "notes": "原厂现页只公布限时折扣 2 / 0.04 / 8 CNY 每百万 token，未取得非促销标准价；按本仓标准基准规则不把限时优惠或 Go 限时免费填成标准参考价。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `longcat-2.0`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -3885,20 +3990,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -3908,10 +4018,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -3920,15 +4032,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -3947,13 +4058,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4036,7 +4147,7 @@
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `hy4-preview`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1024000,
@@ -4045,20 +4156,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -4068,10 +4184,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -4080,15 +4198,14 @@
           "reported_value": "1024000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -4107,13 +4224,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4196,7 +4313,7 @@
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `hy3`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 256000,
@@ -4205,20 +4322,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -4228,10 +4350,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -4240,15 +4364,14 @@
           "reported_value": "256000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -4267,13 +4390,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4356,7 +4479,7 @@
         },
         "notes": "原厂 Standard 短上下文基准，选 30 分钟缓存写入；12 小时写入为 USD 0.50 / 百万 token，不与本档并加。输入超过 272K 的长上下文价不在本基准。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/responses。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `gpt-5.6-luna`；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1050000,
@@ -4365,20 +4488,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_responses"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/responses；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -4388,10 +4516,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -4400,15 +4530,14 @@
           "reported_value": "1050000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -4427,13 +4556,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4516,7 +4645,7 @@
         },
         "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/responses。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `grok-4.7`；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 500000,
@@ -4525,20 +4654,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_responses"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/responses；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -4548,10 +4682,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -4560,15 +4696,14 @@
           "reported_value": "500000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -4706,10 +4841,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -4745,13 +4882,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4828,7 +4965,7 @@
         },
         "notes": "Meta 官网 Muse Spark Contributor 精确档；以数据用于训练许可换取折扣，非普通 Standard 档，无长上下文加价。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/responses。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。 Contributor 型号涉及数据用于模型改进，受工作空间隐私设置和地区限制；参考价也必须采用精确 Contributor 档。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `muse-spark-1.3-contributor`；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。 Contributor 档允许内容用于训练，受地区和工作空间隐私设置限制。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
@@ -4837,20 +4974,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_responses"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/responses；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -4860,10 +5002,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -4872,15 +5016,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -4899,13 +5042,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4982,7 +5125,7 @@
         },
         "notes": "Meta 官网 Muse Spark Contributor 精确档；以数据用于训练许可换取折扣，非普通 Standard 档，无长上下文加价。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/responses。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。 Contributor 型号涉及数据用于模型改进，受工作空间隐私设置和地区限制；参考价也必须采用精确 Contributor 档。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `muse-spark-1.2-contributor`；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。 Contributor 档允许内容用于训练，受地区和工作空间隐私设置限制。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
@@ -4991,20 +5134,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_responses"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/responses；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -5014,10 +5162,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -5026,15 +5176,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -5053,13 +5202,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -5148,7 +5297,7 @@
         },
         "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/responses。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `gpt-6-luna`；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1050000,
@@ -5157,20 +5306,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_responses"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/responses；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -5180,10 +5334,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -5192,15 +5348,14 @@
           "reported_value": "1050000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -5219,13 +5374,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -5314,7 +5469,7 @@
         },
         "notes": "标准在线，选择5分钟缓存写入。Haiku5.5只取提示不超过100,000 token档，超出时全部token另价；1小时缓存写入与额外服务不并列。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/anthropic/v1/messages。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `claude-haiku-5-5`；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -5323,20 +5478,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "anthropic_messages"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/anthropic/v1/messages；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -5346,10 +5506,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -5358,15 +5520,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -5451,10 +5612,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -5463,15 +5626,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录的整数 token 限额；缺少当前 Endpoints 的历史型号仍须单独核实可用性，客户端存在记录不证明服务仍可调用。"
         }
       }
     },
@@ -5490,13 +5652,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -5585,7 +5747,7 @@
         },
         "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `kimi-k3.1-pro`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
@@ -5594,20 +5756,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -5617,10 +5784,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -5629,15 +5798,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -5656,13 +5824,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -5745,7 +5913,7 @@
         },
         "notes": "不套用 M3 的长上下文阶梯或 priority 服务层价格。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `minimax-m3.1-flash`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -5754,20 +5922,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -5777,10 +5950,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -5789,15 +5964,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -5881,10 +6055,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -5893,15 +6069,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录的整数 token 限额；缺少当前 Endpoints 的历史型号仍须单独核实可用性，客户端存在记录不证明服务仍可调用。"
         }
       }
     },
@@ -5920,13 +6095,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -6003,7 +6178,7 @@
         },
         "notes": "阶跃星辰国内标准按量价，采用 2026-10-14 00:30 北京时间后新用户缓存价；此前已调用用户缓存价 0.35 不并列。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `step-5-preview`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -6012,20 +6187,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -6035,10 +6215,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -6047,15 +6229,14 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -6074,13 +6255,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:15:38.927632+00:00",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
         "source_ids": [
           "audit-20261024-go",
           "audit-20261024-models"
         ],
-        "evidence": "evidence/opencode/2026-10-24-go.md",
-        "notes": "精确型号仍在本平台官方文档和/或匿名型号接口中；未实调。"
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -6108,7 +6289,7 @@
         },
         "notes": "Go 只公布 Beam 限时免费，未明确开发方精确型号及原厂标准按量价；不能把套餐内限免作为原厂零价。"
       },
-      "notes": "Go 官方 Endpoints 表列出；当前端点 https://opencode.ai/inference/go/openai/v1/chat/completions。请求体使用裸型号 ID，opencode-go/ 仅为客户端配置前缀。官方标为限时免费，并列地区限制；本仓仅维护开发方按量参考价，不以 Go 限时免费作零价。",
+      "notes": "当前 Go Endpoints 表精确请求 ID `beam-free`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。 官方明确限时免费和地区限制；不能据此写原厂零价。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
@@ -6117,20 +6298,25 @@
         "structured_output": null,
         "streaming": null,
         "interfaces": [
-          "openai_chat"
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "逐型号核对 Go Endpoints 表。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
           },
-          "notes": "本型号文档列 https://opencode.ai/inference/go/openai/v1/chat/completions；未列的 Chat/Responses/Messages 和其他厂商面仍未确认，不能从共同域名或原厂能力推导。"
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
         },
         "reasoning": {
           "support": "unknown",
@@ -6140,10 +6326,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "audit-20261024-go"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "已查 Go 本产品公开文档，未列逐型号思考控制；models.dev 的布尔标记不证明具体设置。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
         },
@@ -6152,15 +6340,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:15:38.927632+00:00",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "audit-20261024-modelsdev",
-              "audit-20261024-go"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/2026-10-24-go.md",
-            "notes": "客户端采用的 models.dev 中 opencode-go 精确 ID 的 limit.context 整数。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "本产品客户端目录上限，单位 token；独立于原厂 API，不用输入/输出上限或计价阈值冒充总窗口。"
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     },
@@ -6217,7 +6404,7 @@
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
-        "max_output_tokens": null,
+        "max_output_tokens": 131072,
         "tool_calling": null,
         "structured_output": null,
         "streaming": null,
@@ -6245,11 +6432,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "go-docs-current",
-              "go-modelsdev-current"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/go-current.json",
-            "notes": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。"
         },
@@ -6258,15 +6446,14 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:57:03.198617Z",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "go-modelsdev-current",
-              "go-docs-current"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/go-current.json",
-            "notes": "仅取 models.dev opencode-go 条目的 limit.context；不取原厂条目。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "OpenCode 客户端使用的 opencode-go 模型元数据整数上下文窗口；不是原厂 API 窗口，不等于输出上限或压缩阈值，未实测。"
+          "notes": "本产品客户端目录的整数 token 限额；缺少当前 Endpoints 的历史型号仍须单独核实可用性，客户端存在记录不证明服务仍可调用。"
         }
       }
     },
@@ -6323,7 +6510,7 @@
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1048576,
-        "max_output_tokens": null,
+        "max_output_tokens": 524288,
         "tool_calling": null,
         "structured_output": null,
         "streaming": null,
@@ -6351,11 +6538,12 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "go-docs-current",
-              "go-modelsdev-current"
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
             ],
-            "evidence": "evidence/opencode/go-current.json",
-            "notes": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
           },
           "notes": "Go 文档未公布本型号的思考开关、有效档位、预算和默认值；models.dev 的 reasoning/options 是模型元数据，缺少 Go 协议映射证据，不据此继承开发方 API 控制。"
         },
@@ -6364,15 +6552,236 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:57:03.198617Z",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
             "source_ids": [
-              "go-modelsdev-current",
-              "go-docs-current"
+              "go-modelsdev"
             ],
-            "evidence": "evidence/opencode/go-current.json",
-            "notes": "仅取 models.dev opencode-go 条目的 limit.context；不取原厂条目。"
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
           },
-          "notes": "OpenCode 客户端使用的 opencode-go 模型元数据整数上下文窗口；不是原厂 API 窗口，不等于输出上限或压缩阈值，未实测。"
+          "notes": "本产品客户端目录的整数 token 限额；缺少当前 Endpoints 的历史型号仍须单独核实可用性，客户端存在记录不证明服务仍可调用。"
+        }
+      }
+    },
+    {
+      "id": "iceman-contributor-free",
+      "request_id": "iceman-contributor-free",
+      "display_name": "Iceman Contributor Free",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go",
+        "go-plus"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
+        "source_ids": [
+          "audit-20261024-go",
+          "audit-20261024-models"
+        ],
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "audit-20261024-go"
+          ],
+          "evidence": "evidence/opencode/2026-10-29-refresh.md",
+          "notes": "Go 公开资料只确认 Iceman 限时免费且允许请求内容用于模型改进；开发方身份和原厂标准按量价未知，不将套餐内限免作为原厂零价。"
+        },
+        "notes": "Go 公开资料只确认 Iceman 限时免费且允许请求内容用于模型改进；开发方身份和原厂标准按量价未知，不将套餐内限免作为原厂零价。"
+      },
+      "notes": "当前 Go Endpoints 表精确请求 ID `iceman-contributor-free`；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。 Iceman 为限时免费 Contributor 入口，公开条款允许请求内容用于模型改进；原厂身份与标准参考价未知。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 262144,
+        "max_output_tokens": 131072,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
+            "source_ids": [
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
+            ],
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
+          },
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
+            ],
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
+          },
+          "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "262144",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
+            "source_ids": [
+              "go-modelsdev"
+            ],
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
+          },
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
+        }
+      }
+    },
+    {
+      "id": "gemini-4-argon",
+      "request_id": "gemini-4-argon",
+      "display_name": "Gemini 4 Argon",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go",
+        "go-plus"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-29T01:56:21.205783+00:00",
+        "source_ids": [
+          "audit-20261024-go",
+          "audit-20261024-models"
+        ],
+        "evidence": "evidence/opencode/2026-10-29-refresh.md",
+        "notes": "Go Endpoints 与匿名模型接口同时列出精确请求 ID；未实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "ref-gemini-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-10-29-refresh.md",
+          "notes": "原厂 Gemini 4 Argon Standard 当前仅有截至 2026-11-30 的推出优惠，12 月 1 日常规价尚未生效；按目录标准价规则保持 unknown。裸请求 ID 与 Contributor ID 独立，不混淆授权条件。"
+        },
+        "notes": "原厂 Gemini 4 Argon Standard 当前仅有截至 2026-11-30 的推出优惠，12 月 1 日常规价尚未生效；按目录标准价规则保持 unknown。裸请求 ID 与 Contributor ID 独立，不混淆授权条件。"
+      },
+      "notes": "当前 Go Endpoints 表精确请求 ID `gemini-4-argon`；原生入口 https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon。其他已登记面由 Console 转换，客户端选模前缀 opencode-go/ 不属于请求 ID。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:56:21.205783+00:00",
+            "source_ids": [
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
+            ],
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "Go 的逐型号 Endpoints 与 Harnesses 的全部 Go 文本模型兼容声明相互核对；区分原生入口与平台协议转换。"
+          },
+          "notes": "本型号原生入口为 https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon。Go 文档明确全部当前文本型号可用其他 API；Harnesses 列出 Chat、Responses、Messages、Gemini GenerateContent，非原生面由 Console 转换。此为平台公开支持声明，不表示参数逐项等价或真实 Key 已实调。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "audit-20261024-go",
+              "go-harnesses",
+              "go-inference"
+            ],
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "查本产品公开接口与接入说明，未列出逐型号各兼容面的思考控制；models.dev 布尔值/选项不证明参数路径、默认和关闭行为。"
+          },
+          "notes": "逐型号的思考开关、默认值、档位、预算和协议差异未由 Go 官方文档说明；不套用原厂 API，不将未知写成不支持。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:56:21.799728+00:00",
+            "source_ids": [
+              "go-modelsdev"
+            ],
+            "evidence": "evidence/opencode/2026-10-29-refresh.md",
+            "notes": "OpenCode 客户端采用的 opencode-go 精确 ID limit.context；本轮查询，独立于原厂上限。"
+          },
+          "notes": "本产品客户端目录整数 token 限额；上下文与输出分开，不从原厂继承。"
         }
       }
     }

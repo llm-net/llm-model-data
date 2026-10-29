@@ -14,6 +14,8 @@
 
 模型身份独立核对；按量产品核价，订阅模型只维护按量参考价：优先本平台，缺价才取开发方。完整重复保存价格，不做运行时继承。只选一个标准基准，其他规格和促销写备注。更新前检查provider.json排除清单。
 
+按用户要求，仅保留 `deepseek-flash` 与 `deepseek-v4-pro` 两个主型号；旧兼容别名 `deepseek-v4-flash`、`deepseek-v4-flash-vision-exp` 已删除并加入 `excluded_request_ids`。这是收录决定，不表示官方已停止接受旧请求名，见[本轮核对记录](../../evidence/deepseek/2026-10-29-audit.md)。
+
 ## 当前核价口径
 
 使用 catalog v2 的规则内 time_pricing，完整保存高峰与空闲价格及北京时间作息；历史调价仍留 Git。 最新分时结论见[核对证据](../../evidence/deepseek/2026-09-17-time-pricing.md)。

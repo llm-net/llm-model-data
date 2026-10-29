@@ -283,12 +283,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:03+00:00",
+        "checked_at": "2026-10-29T01:55:23.747966+00:00",
         "source_ids": [
-          "r1024-codex-models"
+          "r1024-codex-models",
+          "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -356,12 +357,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.028922+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "同平台精确型号 Standard 短上下文、30分钟缓存写入参考价，不代表订阅实际扣费。",
             "time_basis": "unknown",
@@ -370,12 +371,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.028922+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文、30分钟缓存写入参考价，不代表订阅实际扣费。"
       },
@@ -385,7 +386,7 @@
           "text",
           "image"
         ],
-        "context_window_tokens": 272000,
+        "context_window_tokens": 500000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -397,29 +398,29 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:03+00:00",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方 Codex 模型及配置说明确认 Responses；不能继承按量 API 的 Chat 面。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "272000",
+          "status": "known",
+          "reported_value": "500,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-10-29T01:55:23.032804+00:00",
             "source_ids": [
-              "r1016-cli"
+              "r1024-codex-models"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "官方 npm CLI 0.163.0 静态目录的精确 slug；未访问账号、配置或会话。"
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
           },
-          "notes": "官方 CLI 0.163.0 内嵌精确 slug 的常规 context_window；max_context_window=872000，不是 API 模型页的窗口，也不是自动压缩阈值。客户端版本、服务端目录或用户覆盖可改变实际值。 2026-10-24 未重新核对当前运行时目录，保留该历史静态目录数值及成功核对日期，当前窗口覆盖按 partial 记录。"
+          "notes": "官方 Codex / ChatGPT Work 模型页明确本型号默认窗口500,000 tokens，替换历史CLI静态目录272000；实际客户端覆盖与服务端策略可改变窗口，不继承API的1,050,000。"
         },
         "reasoning": {
           "support": "supported",
@@ -514,6 +515,190 @@
       }
     },
     {
+      "id": "gpt-6-1-terra",
+      "request_id": "gpt-6.1-terra",
+      "display_name": "GPT-6.1 Terra",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "plus",
+        "pro-5x"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "source_ids": [
+          "r1024-codex-models",
+          "r1024-codex-pricing"
+        ],
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-codex-models"
+          ],
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "订阅仅维护按量参考价。"
+        },
+        "notes": "订阅仅保存按量参考价，不表示实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.05",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_30m_tokens",
+                "amount": "1.25",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+              "subject": "gpt-6.1-terra",
+              "reason": "同平台精确型号的公开按量标准价，完整独立保存，作为订阅参考消耗。",
+              "catalog_model": {
+                "provider_id": "openai",
+                "offering_id": "api-global",
+                "model_id": "gpt-6-1-terra",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-29T01:56:56.484667+00:00",
+              "source_ids": [
+                "r1029-openai-terra61",
+                "r1024-openai-pricing"
+              ],
+              "evidence": "evidence/openai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+            },
+            "notes": "同平台API的Standard短上下文、30分钟缓存写入参考价，不表示订阅实际扣费或订阅窗口。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-29T01:56:56.484667+00:00",
+          "source_ids": [
+            "r1029-openai-terra61",
+            "r1024-openai-pricing"
+          ],
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+        },
+        "notes": "同平台API的Standard短上下文、30分钟缓存写入参考价，不表示订阅实际扣费或订阅窗口。"
+      },
+      "notes": "Codex官方已列GPT-6.1 Terra，CLI至少0.159.0；Plus、Pro、Business、Enterprise、Edu可用，仍受表面访问权及组织策略约束，不支持UAE推理驻留。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "source_ids": [
+              "r1024-codex-models",
+              "r1024-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+          },
+          "notes": "官方 Codex 模型及配置说明确认 Responses；不能继承按量 API 的 Chat 面。"
+        },
+        "context_assessment": {
+          "status": "unknown",
+          "reported_value": null,
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "r1024-codex-models",
+              "r1024-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本产品只明确6.1 Sol默认500000，未找到Terra精确订阅窗口。"
+          },
+          "notes": "Codex的GPT-6.1 Terra上下文未独立公布；不继承同名API的1,050,000或Sol的500,000，不复用旧CLI其他型号的272000。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "本产品模型页确认可调整思考，配置键model_reasoning_effort依型号与客户端目录提供；未取得Terra逐型号档位和缺省，不复制API枚举。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "source_ids": [
+              "r1024-codex-models",
+              "r1024-codex-config"
+            ],
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+          },
+          "notes": "只确认本产品支持可调思考；精确档位、关闭能力、默认及裸订阅请求行为待核对。Ultra为自动委派，不是单次模型档位。"
+        }
+      }
+    },
+    {
       "id": "gpt-6-astra",
       "request_id": "gpt-6-astra",
       "display_name": "gpt-6-astra",
@@ -525,12 +710,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:03+00:00",
+        "checked_at": "2026-10-29T01:55:23.747966+00:00",
         "source_ids": [
-          "r1024-codex-models"
+          "r1024-codex-models",
+          "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -598,12 +784,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.028922+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -612,12 +798,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.028922+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -639,13 +825,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:03+00:00",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -750,12 +936,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:03+00:00",
+        "checked_at": "2026-10-29T01:55:23.747966+00:00",
         "source_ids": [
-          "r1024-codex-models"
+          "r1024-codex-models",
+          "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -823,12 +1010,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.028922+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -837,12 +1024,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.028922+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -864,13 +1051,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:03+00:00",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -975,12 +1162,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:03+00:00",
+        "checked_at": "2026-10-29T01:55:23.747966+00:00",
         "source_ids": [
-          "r1024-codex-models"
+          "r1024-codex-models",
+          "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1048,12 +1236,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.028922+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -1062,12 +1250,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.028922+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -1089,13 +1277,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:03+00:00",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1200,12 +1388,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:03+00:00",
+        "checked_at": "2026-10-29T01:55:23.747966+00:00",
         "source_ids": [
-          "r1024-codex-models"
+          "r1024-codex-models",
+          "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1253,13 +1442,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:03+00:00",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1380,12 +1569,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:03+00:00",
+        "checked_at": "2026-10-29T01:55:23.747966+00:00",
         "source_ids": [
-          "r1024-codex-models"
+          "r1024-codex-models",
+          "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1447,12 +1637,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.028922+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -1461,12 +1651,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.028922+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -1488,13 +1678,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:03+00:00",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1599,12 +1789,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:02:03+00:00",
+        "checked_at": "2026-10-29T01:55:23.747966+00:00",
         "source_ids": [
-          "r1024-codex-models"
+          "r1024-codex-models",
+          "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1666,12 +1857,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:03+00:00",
+              "checked_at": "2026-10-29T01:55:23.028922+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -1680,12 +1871,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:03+00:00",
+          "checked_at": "2026-10-29T01:55:23.028922+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -1707,13 +1898,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:02:03+00:00",
+            "checked_at": "2026-10-29T01:55:23.033394+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1818,12 +2009,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-16T07:47:02Z",
+        "checked_at": "2026-10-29T01:56:55.227713+00:00",
         "source_ids": [
-          "r1016-imagegen"
+          "codex-imagegen"
         ],
-        "evidence": "evidence/openai/2026-10-16-codex-models.json",
-        "notes": "官方 Codex 图像生成页仍指定 gpt-image-2；未见独立选择 2.5 Flare / Sunburst 请求名的方法。"
+        "evidence": "evidence/openai/2026-10-29-refresh.md",
+        "notes": "官方 Codex 文档明确内置生图使用 gpt-image-2；后端私有字段仍使用历史独立证据。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1883,12 +2074,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-16T07:47:02Z",
+              "checked_at": "2026-10-29T01:55:23.028922+00:00",
               "source_ids": [
-                "r1016-pricing"
+                "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-16-codex-models.json",
-              "notes": "Image tokens Standard：图像输入 8、缓存 2、输出 30；文本输入 5、缓存 1.25 USD / 百万 token。图像缓存缺少对应 meter，保持未收录，不视为零。"
+              "evidence": "evidence/openai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "input_uncached_tokens 与 input_cached_tokens 指文本输入；图像缓存输入 2 USD / 百万 token 没有对应计量名，未列入，且官方注明缓存价只适用于 Responses 出图。",
             "time_basis": "unknown",
@@ -1897,12 +2088,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-16T07:47:02Z",
+          "checked_at": "2026-10-29T01:55:23.028922+00:00",
           "source_ids": [
-            "r1016-pricing"
+            "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-16-codex-models.json",
-          "notes": "核对同平台 gpt-image-2 API Standard 图像与文本 token 标价；现有四个分量不变。"
+          "evidence": "evidence/openai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费；Codex 文档称出图计入一般用量、消耗约快 3–5 倍。"
       },

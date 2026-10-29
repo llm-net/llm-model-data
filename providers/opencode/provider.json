@@ -290,6 +290,18 @@
       "url": "https://help.aliyun.com/zh/model-studio/context-cache",
       "purpose": "pricing",
       "notes": "Qwen 原厂显式缓存；5 分钟写入分量、命中倍率及 Max / Flash 特例。"
+    },
+    {
+      "id": "go-harnesses",
+      "url": "https://opencode.ai/v2/docs/console/harnesses/",
+      "purpose": "models",
+      "notes": "Go 全部文本模型的兼容 API 与平台转换说明；逐型号是否仍列出另查 Go Endpoints 和模型接口。"
+    },
+    {
+      "id": "go-inference",
+      "url": "https://opencode.ai/v2/docs/console/api/inference/",
+      "purpose": "models",
+      "notes": "Go 全部文本模型的兼容 API 与平台转换说明；逐型号是否仍列出另查 Go Endpoints 和模型接口。"
     }
   ],
   "notes": "OpenCode Go 包月套餐资料；参考价按用户指定取各模型源头厂商官网按量价，不采用 Go 用量上限换算表或 Zen 余额价。"

@@ -382,13 +382,14 @@ class SubscriptionAndCollectionPolicy(unittest.TestCase):
             c.check_offering(ROOT, data, provider)
 
     def test_explicitly_excluded_model_cannot_be_reimported(self):
-        for vendor, offering in [("openrouter", "api-global"), ("groq", "api-global")]:
-            with self.subTest(vendor=vendor):
-                data = c.read_json(ROOT / f"providers/{vendor}/offerings/{offering}/catalog.json")
-                provider = c.read_json(ROOT / f"providers/{vendor}/provider.json")
-                data["models"][0]["request_id"] = provider["excluded_request_ids"][0]
-                with self.assertRaisesRegex(c.CatalogError, "explicitly excluded"):
-                    c.check_offering(ROOT, data, provider)
+        for vendor, offering in [("openrouter", "api-global"), ("groq", "api-global"), ("deepseek", "api-cn")]:
+            provider = c.read_json(ROOT / f"providers/{vendor}/provider.json")
+            for request_id in provider["excluded_request_ids"]:
+                with self.subTest(vendor=vendor, request_id=request_id):
+                    data = c.read_json(ROOT / f"providers/{vendor}/offerings/{offering}/catalog.json")
+                    data["models"][0]["request_id"] = request_id
+                    with self.assertRaisesRegex(c.CatalogError, "explicitly excluded"):
+                        c.check_offering(ROOT, data, provider)
 
     def test_excluded_local_id_cannot_hide_behind_null_request_id(self):
         data = c.read_json(ROOT / "providers/openrouter/offerings/api-global/catalog.json")
@@ -632,9 +633,15 @@ class ProtocolContracts(unittest.TestCase):
 class ReasoningContracts(unittest.TestCase):
     def test_codex_partial_records_expose_request_effort_without_ui_translation(self):
         data = c.read_json(ROOT / "providers/openai/offerings/codex/catalog.json")
-        for model in data["models"]:
-            if model["modalities"] != ["text"]:
-                continue  # 图像型号经 image_generation 工具承载，没有 reasoning.effort
+        # 这组回归保护已有独立请求证据的型号；新增型号不能从它们继承控制项。
+        verified_request_ids = {
+            "gpt-6-1-sol", "gpt-6-astra", "gpt-6-sol", "gpt-6-luna",
+            "gpt-5-6-sol", "gpt-5-6-terra", "gpt-5-6-luna",
+        }
+        by_id = {model["id"]: model for model in data["models"]}
+        self.assertTrue(verified_request_ids <= by_id.keys())
+        for model_id in sorted(verified_request_ids):
+            model = by_id[model_id]
             reasoning = model["capabilities"]["reasoning"]
             profiles = {p["surface"]: p for p in reasoning["profiles"]}
             if model["id"] == "gpt-6-1-sol":
@@ -653,6 +660,24 @@ class ReasoningContracts(unittest.TestCase):
             self.assertIsNone(effort["default"])
             self.assertIsNotNone(profiles["client_setting"]["controls"][0]["default"])
             self.assertEqual(reasoning["coverage"], "partial")
+
+    def test_codex_terra_does_not_inherit_api_context_or_reasoning_controls(self):
+        codex = c.read_json(ROOT / "providers/openai/offerings/codex/catalog.json")
+        api = c.read_json(ROOT / "providers/openai/offerings/api-global/catalog.json")
+        subscription = next(m["capabilities"] for m in codex["models"] if m["id"] == "gpt-6-1-terra")
+        usage = next(m["capabilities"] for m in api["models"] if m["id"] == "gpt-6-1-terra")
+        self.assertEqual(usage["context_assessment"]["status"], "known")
+        self.assertTrue(any(p["controls"] for p in usage["reasoning"]["profiles"]))
+        self.assertEqual(subscription["context_assessment"]["status"], "unknown")
+        self.assertIsNone(subscription["context_window_tokens"])
+        reasoning = subscription["reasoning"]
+        self.assertEqual(reasoning["support"], "supported")
+        self.assertEqual(reasoning["coverage"], "partial")
+        self.assertEqual({p["surface"] for p in reasoning["profiles"]}, {"client_setting"})
+        for profile in reasoning["profiles"]:
+            self.assertEqual(profile["controls"], [])
+            self.assertIsNone(profile["can_disable"])
+            self.assertEqual(profile["default_behavior"], "unknown")
 
     def setUp(self):
         self.provider = c.read_json(ROOT / "providers/openai/provider.json")

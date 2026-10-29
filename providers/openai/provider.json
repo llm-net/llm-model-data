@@ -392,6 +392,12 @@
       "url": "https://registry.npmjs.org/@openai/codex/0.163.0-linux-x64",
       "purpose": "models",
       "notes": "Codex 逐型号复核；来源位置、UTC 获取时间、客户端摘要与缺项见 evidence/openai/2026-10-16-codex-models.json。"
+    },
+    {
+      "id": "r1029-openai-terra61",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra.md",
+      "purpose": "models",
+      "notes": "2026-10-29核对GPT-6.1 Terra精确型号、价格、窗口、协议与思考；见本轮证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

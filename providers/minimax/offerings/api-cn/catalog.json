@@ -1861,7 +1861,7 @@
                   "unit": null,
                   "default": null,
                   "required": true,
-                  "notes": "必填。MiniMax-H3 可用 768P / 2K；接口枚举中的 480P 仅 MiniMax-H3-Max。"
+                  "notes": "必填。MiniMax-H3可用768P/2K；V2共用枚举中的480P用于Lite/Max，不属于本型号。"
                 },
                 {
                   "field": "duration",
@@ -2067,7 +2067,7 @@
                   "unit": null,
                   "default": null,
                   "required": true,
-                  "notes": "必填。MiniMax-H3 可用 768P / 2K；接口枚举中的 480P 仅 MiniMax-H3-Max。"
+                  "notes": "必填。MiniMax-H3可用768P/2K；V2共用枚举中的480P用于Lite/Max，不属于本型号。"
                 },
                 {
                   "field": "duration",
@@ -2310,7 +2310,7 @@
                   "unit": null,
                   "default": null,
                   "required": true,
-                  "notes": "必填。MiniMax-H3 可用 768P / 2K；接口枚举中的 480P 仅 MiniMax-H3-Max。"
+                  "notes": "必填。MiniMax-H3可用768P/2K；V2共用枚举中的480P用于Lite/Max，不属于本型号。"
                 },
                 {
                   "field": "duration",
@@ -16331,12 +16331,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
             "source_ids": [
-              "protocol-video"
+              "media-video-create"
             ],
-            "evidence": "evidence/minimax/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "evidence": "evidence/minimax/2026-10-29-audit.md",
+            "notes": "V2 API的model枚举明确包含本精确请求ID。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -16370,16 +16370,587 @@
           "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         },
         "media_io": {
-          "status": "unknown",
-          "operations": [],
+          "status": "partial",
+          "operations": [
+            {
+              "id": "text_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "4",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Highspeed只支持768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 4,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Highspeed为4–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": true,
+                  "notes": "文生视频（content 仅含 text）必填且不能为 adaptive。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                }
+              ],
+              "notes": "content 只含一个 text 元素。本型号不支持extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            },
+            {
+              "id": "image_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                },
+                {
+                  "role": "first_frame",
+                  "field": "content[type=image_url,role=first_frame].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "首帧图，最多 1 张；只有一张图且不填 role 时按 first_frame 处理。首帧、尾帧至少提供一张。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "last_frame",
+                  "field": "content[type=image_url,role=last_frame].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "尾帧图，最多 1 张。content 说明与指南允许只传尾帧（text + role=last_frame），但 role 字段说明写 last_frame「需与 first_frame 成对」，两处冲突。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "4",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Highspeed只支持768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 4,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Highspeed为4–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "adaptive",
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "adaptive",
+                  "required": false,
+                  "notes": "宽高比由输入图片决定，恒按 adaptive；传其他合理值不报错但被忽略。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                }
+              ],
+              "notes": "图生视频：首帧、尾帧或首尾帧（指南写图片 0、1、2 张）。不得与 reference_image / reference_video / reference_audio 混用。本型号不支持extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            },
+            {
+              "id": "reference_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "content[type=image_url,role=reference_image].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 9,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "参考图最多 9 张。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "reference_video",
+                  "field": "content[type=video_url,role=reference_video].video_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 3,
+                  "formats": [
+                    "mp4",
+                    "mov"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "2",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "单段 [2, 15] 秒；全部参考视频总时长 ≤ 15 秒。"
+                    },
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": null
+                    },
+                    {
+                      "measure": "fps",
+                      "min": "23.976",
+                      "max": "60",
+                      "unit": "fps",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "参考视频最多 3 段。 视频编码 H.264/AVC、H.265/HEVC，音轨 AAC、MP3；data URI 写作 data:video/mp4;base64,...。单文件大小「≤ 50 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "reference_audio",
+                  "field": "content[type=audio_url,role=reference_audio].audio_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 3,
+                  "formats": [
+                    "wav",
+                    "mp3"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "2",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "单段 [2, 15] 秒；全部参考音频总时长 ≤ 15 秒。"
+                    }
+                  ],
+                  "notes": "参考音频最多 3 段。 单文件大小「≤ 15 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "4",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Highspeed只支持768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 4,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Highspeed为4–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "adaptive",
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "adaptive",
+                  "required": false,
+                  "notes": "多模态参考生视频可选，默认 adaptive（实际比例见查询结果 ratio），也可指定具体比例。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                }
+              ],
+              "notes": "多模态参考生视频（全能参考）：text + 参考图 / 视频 / 音频的组合；文档未写最少需要哪类参考（没有任何参考素材即为文生视频）。V2参考未说明混合输入合计上限，不从旧H3指南继承。不得与 first_frame / last_frame 混用。本型号不支持extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": null,
-            "notes": "本型号的媒体输入输出契约尚未按本产品独立核对，不从同系列或其他产品继承。"
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "media-video-create",
+              "media-video-query",
+              "audit-pricing-overview",
+              "audit-model-lifecycle"
+            ],
+            "evidence": "evidence/minimax/2026-10-29-audit.md",
+            "notes": "V2创建接口逐型号列出操作、分辨率和时长；与价格页核对，模型概览中Max只支持文生/图生的描述与V2接口冲突，采用精确接口并明示。"
           },
-          "notes": "本轮已核对型号、价格与协议面；尚缺本产品、本型号的操作、输入、输出与参数独立证据。"
+          "notes": "已补文生、首尾帧图生、多模态参考三种操作。产物容器与URL有效期未明确；仅尾帧的字段说明存在冲突。Max概览与精确V2文档对参考生成支持存在冲突。未将H3专属再生成扩展给这些型号。"
         }
       }
     },
@@ -16521,12 +17092,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
             "source_ids": [
-              "protocol-video"
+              "media-video-create"
             ],
-            "evidence": "evidence/minimax/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "evidence": "evidence/minimax/2026-10-29-audit.md",
+            "notes": "V2 API的model枚举明确包含本精确请求ID。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -16560,16 +17131,589 @@
           "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         },
         "media_io": {
-          "status": "unknown",
-          "operations": [],
+          "status": "partial",
+          "operations": [
+            {
+              "id": "text_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "4",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480P",
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "768P",
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Lite只支持480P/768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 4,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Lite为4–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": true,
+                  "notes": "文生视频（content 仅含 text）必填且不能为 adaptive。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                }
+              ],
+              "notes": "content 只含一个 text 元素。本型号不支持extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            },
+            {
+              "id": "image_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                },
+                {
+                  "role": "first_frame",
+                  "field": "content[type=image_url,role=first_frame].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "首帧图，最多 1 张；只有一张图且不填 role 时按 first_frame 处理。首帧、尾帧至少提供一张。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "last_frame",
+                  "field": "content[type=image_url,role=last_frame].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "尾帧图，最多 1 张。content 说明与指南允许只传尾帧（text + role=last_frame），但 role 字段说明写 last_frame「需与 first_frame 成对」，两处冲突。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "4",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480P",
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "768P",
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Lite只支持480P/768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 4,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Lite为4–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "adaptive",
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "adaptive",
+                  "required": false,
+                  "notes": "宽高比由输入图片决定，恒按 adaptive；传其他合理值不报错但被忽略。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                }
+              ],
+              "notes": "图生视频：首帧、尾帧或首尾帧（指南写图片 0、1、2 张）。不得与 reference_image / reference_video / reference_audio 混用。本型号不支持extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            },
+            {
+              "id": "reference_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "content[type=image_url,role=reference_image].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 9,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "参考图最多 9 张。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "reference_video",
+                  "field": "content[type=video_url,role=reference_video].video_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 3,
+                  "formats": [
+                    "mp4",
+                    "mov"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "2",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "单段 [2, 15] 秒；全部参考视频总时长 ≤ 15 秒。"
+                    },
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": null
+                    },
+                    {
+                      "measure": "fps",
+                      "min": "23.976",
+                      "max": "60",
+                      "unit": "fps",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "参考视频最多 3 段。 视频编码 H.264/AVC、H.265/HEVC，音轨 AAC、MP3；data URI 写作 data:video/mp4;base64,...。单文件大小「≤ 50 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "reference_audio",
+                  "field": "content[type=audio_url,role=reference_audio].audio_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 3,
+                  "formats": [
+                    "wav",
+                    "mp3"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "2",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "单段 [2, 15] 秒；全部参考音频总时长 ≤ 15 秒。"
+                    }
+                  ],
+                  "notes": "参考音频最多 3 段。 单文件大小「≤ 15 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "4",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480P",
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "768P",
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Lite只支持480P/768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 4,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Lite为4–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Lite多模态参考暂不支持adaptive，必须显式指定具体比例；不扩大到图生场景。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                }
+              ],
+              "notes": "多模态参考生视频（全能参考）：text + 参考图 / 视频 / 音频的组合；文档未写最少需要哪类参考（没有任何参考素材即为文生视频）。V2参考未说明混合输入合计上限，不从旧H3指南继承。不得与 first_frame / last_frame 混用。本型号不支持extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": null,
-            "notes": "本型号的媒体输入输出契约尚未按本产品独立核对，不从同系列或其他产品继承。"
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "media-video-create",
+              "media-video-query",
+              "audit-pricing-overview",
+              "audit-model-lifecycle"
+            ],
+            "evidence": "evidence/minimax/2026-10-29-audit.md",
+            "notes": "V2创建接口逐型号列出操作、分辨率和时长；与价格页核对，模型概览中Max只支持文生/图生的描述与V2接口冲突，采用精确接口并明示。"
           },
-          "notes": "本轮已核对型号、价格与协议面；尚缺本产品、本型号的操作、输入、输出与参数独立证据。"
+          "notes": "已补文生、首尾帧图生、多模态参考三种操作。产物容器与URL有效期未明确；仅尾帧的字段说明存在冲突。Max概览与精确V2文档对参考生成支持存在冲突。未将H3专属再生成扩展给这些型号。"
         }
       }
     },
@@ -16711,12 +17855,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:06:01.101090Z",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
             "source_ids": [
-              "protocol-video"
+              "media-video-create"
             ],
-            "evidence": "evidence/minimax/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "evidence": "evidence/minimax/2026-10-29-audit.md",
+            "notes": "V2 API的model枚举明确包含本精确请求ID。"
           },
           "notes": "按当前型号 API 登记厂商面：图片 image-01 系列、H3 v2 视频任务或 speech TTS；TTS HTTP / WebSocket 与异步方式归同一面，具体操作并非所有型号均支持。"
         },
@@ -16750,16 +17894,635 @@
           "notes": "已查此型号的生成 API：按图像、视频或语音任务处理，不提供适用的文本对话上下文窗口；提示词字符数不当作 token 窗口。"
         },
         "media_io": {
-          "status": "unknown",
-          "operations": [],
+          "status": "partial",
+          "operations": [
+            {
+              "id": "text_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "5",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480P",
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "768P",
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Max只支持480P/768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 5,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Max为5–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": true,
+                  "notes": "文生视频（content 仅含 text）必填且不能为 adaptive。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                },
+                {
+                  "field": "extra.prompt_expansion_mode",
+                  "type": "enum",
+                  "values": [
+                    "disabled",
+                    "balanced",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "balanced",
+                  "required": false,
+                  "notes": "Max专属提示词扩写模式；balance、空字符串和布尔值不是有效值。"
+                }
+              ],
+              "notes": "content 只含一个 text 元素。Max可用extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            },
+            {
+              "id": "image_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                },
+                {
+                  "role": "first_frame",
+                  "field": "content[type=image_url,role=first_frame].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "首帧图，最多 1 张；只有一张图且不填 role 时按 first_frame 处理。首帧、尾帧至少提供一张。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "last_frame",
+                  "field": "content[type=image_url,role=last_frame].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "尾帧图，最多 1 张。content 说明与指南允许只传尾帧（text + role=last_frame），但 role 字段说明写 last_frame「需与 first_frame 成对」，两处冲突。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "5",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480P",
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "768P",
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Max只支持480P/768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 5,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Max为5–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "adaptive",
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "adaptive",
+                  "required": false,
+                  "notes": "宽高比由输入图片决定，恒按 adaptive；传其他合理值不报错但被忽略。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                },
+                {
+                  "field": "extra.prompt_expansion_mode",
+                  "type": "enum",
+                  "values": [
+                    "disabled",
+                    "balanced",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "balanced",
+                  "required": false,
+                  "notes": "Max专属提示词扩写模式；balance、空字符串和布尔值不是有效值。"
+                }
+              ],
+              "notes": "图生视频：首帧、尾帧或首尾帧（指南写图片 0、1、2 张）。不得与 reference_image / reference_video / reference_audio 混用。Max可用extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            },
+            {
+              "id": "reference_to_video",
+              "interface": "minimax_video",
+              "endpoint": "POST /v2/video_generation",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "content[type=text].text",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "7000",
+                      "unit": "character",
+                      "notes": "单个 text 最多 7,000 个字符。"
+                    }
+                  ],
+                  "notes": "每次请求必须包含一个非空 text 项（prompt 必填）；按字符数计算长度。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "content[type=image_url,role=reference_image].image_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 9,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": "宽 / 高 [0.4, 2.5]（指南写 5:2～2:5）。"
+                    }
+                  ],
+                  "notes": "参考图最多 9 张。 单文件大小「≤ 30 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "reference_video",
+                  "field": "content[type=video_url,role=reference_video].video_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 3,
+                  "formats": [
+                    "mp4",
+                    "mov"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "2",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "单段 [2, 15] 秒；全部参考视频总时长 ≤ 15 秒。"
+                    },
+                    {
+                      "measure": "width",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "256",
+                      "max": "5760",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "aspect_ratio",
+                      "min": "0.4",
+                      "max": "2.5",
+                      "unit": "ratio",
+                      "notes": null
+                    },
+                    {
+                      "measure": "fps",
+                      "min": "23.976",
+                      "max": "60",
+                      "unit": "fps",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "参考视频最多 3 段。 视频编码 H.264/AVC、H.265/HEVC，音轨 AAC、MP3；data URI 写作 data:video/mp4;base64,...。单文件大小「≤ 50 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                },
+                {
+                  "role": "reference_audio",
+                  "field": "content[type=audio_url,role=reference_audio].audio_url.url",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 3,
+                  "formats": [
+                    "wav",
+                    "mp3"
+                  ],
+                  "transports": [
+                    "url",
+                    "file_id",
+                    "data_uri"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "2",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "单段 [2, 15] 秒；全部参考音频总时长 ≤ 15 秒。"
+                    }
+                  ],
+                  "notes": "参考音频最多 3 段。 单文件大小「≤ 15 MB」（官方未写 MB 与字节的换算关系，未记 file_size 限制。）"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "video",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 1,
+                  "url_ttl_seconds": null,
+                  "limits": [
+                    {
+                      "measure": "duration",
+                      "min": "5",
+                      "max": "15",
+                      "unit": "second",
+                      "notes": "等于本型号请求duration。"
+                    }
+                  ],
+                  "notes": "创建返回task_id；GET /v2/query/video_generation/{task_id}成功后以task.content.url取回。仅支持最近7天任务查询；地址有效时长和产物容器未明确，示例为mp4，不能据此声称固定容器。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "480P",
+                    "768P"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "768P",
+                  "required": true,
+                  "notes": "V2精确型号说明：MiniMax-H3-Max只支持480P/768P；schema仍将resolution列为必填，Lite/Max文字给出缺省768P，保留该差异。"
+                },
+                {
+                  "field": "duration",
+                  "type": "integer",
+                  "values": null,
+                  "min": 5,
+                  "max": 15,
+                  "unit": "second",
+                  "default": null,
+                  "required": true,
+                  "notes": "MiniMax-H3-Max为5–15秒整数，必填。"
+                },
+                {
+                  "field": "ratio",
+                  "type": "enum",
+                  "values": [
+                    "adaptive",
+                    "21:9",
+                    "16:9",
+                    "4:3",
+                    "1:1",
+                    "3:4",
+                    "9:16"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "adaptive",
+                  "required": false,
+                  "notes": "多模态参考生视频可选，默认 adaptive（实际比例见查询结果 ratio），也可指定具体比例。"
+                },
+                {
+                  "field": "callback_url",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "状态回调地址：先收到含 challenge 的验证请求（3 秒内原样返回），之后每次状态变更 POST 与查询接口同结构的消息；status 取 queued / running / succeeded / failed / cancelled。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "是否添加 AIGC 标识水印，默认 false。"
+                },
+                {
+                  "field": "extra.prompt_expansion_mode",
+                  "type": "enum",
+                  "values": [
+                    "disabled",
+                    "balanced",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "balanced",
+                  "required": false,
+                  "notes": "Max专属提示词扩写模式；balance、空字符串和布尔值不是有效值。"
+                }
+              ],
+              "notes": "多模态参考生视频（全能参考）：text + 参考图 / 视频 / 音频的组合；文档未写最少需要哪类参考（没有任何参考素材即为文生视频）。V2参考未说明混合输入合计上限，不从旧H3指南继承。不得与 first_frame / last_frame 混用。Max可用extra.prompt_expansion_mode。url 字段支持公网 URL、mm_file://{file_id}（引用平台已有文件）或 data URI；请求体总大小 ≤ 64 MB，大文件建议用 URL。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [],
-            "evidence": null,
-            "notes": "本型号的媒体输入输出契约尚未按本产品独立核对，不从同系列或其他产品继承。"
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "media-video-create",
+              "media-video-query",
+              "audit-pricing-overview",
+              "audit-model-lifecycle"
+            ],
+            "evidence": "evidence/minimax/2026-10-29-audit.md",
+            "notes": "V2创建接口逐型号列出操作、分辨率和时长；与价格页核对，模型概览中Max只支持文生/图生的描述与V2接口冲突，采用精确接口并明示。"
           },
-          "notes": "本轮已核对型号、价格与协议面；尚缺本产品、本型号的操作、输入、输出与参数独立证据。"
+          "notes": "已补文生、首尾帧图生、多模态参考三种操作。产物容器与URL有效期未明确；仅尾帧的字段说明存在冲突。Max概览与精确V2文档对参考生成支持存在冲突。未将H3专属再生成扩展给这些型号。"
         }
       }
     }

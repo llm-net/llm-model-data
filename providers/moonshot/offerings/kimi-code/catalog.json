@@ -1122,7 +1122,7 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": "max",
+                  "default": "high",
                   "notes": "本产品精确型号的原生档位；不从界面标签推测其他枚举。"
                 }
               ],
@@ -1144,7 +1144,7 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": "max",
+                  "default": "high",
                   "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
@@ -1166,7 +1166,7 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": "max",
+                  "default": "high",
                   "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
@@ -1175,14 +1175,14 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "checked_at": "2026-10-29T01:55:25Z",
             "source_ids": [
-              "reasoning-kimi-code"
+              "kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "evidence": "evidence/moonshot/2026-10-29-audit.md",
+            "notes": "当前 Kimi Code Model Overview 与 Effort mapping 表独立确认 K3.1 Pro 系列默认 high；不采用开放平台 API 默认 max。"
           },
-          "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
+          "notes": "Kimi Code 当前模型表明确 K3.1 Pro / Highspeed 默认 high，三档 low/high/max 且不能关闭思考；Responses/Messages 具体请求字段和独立预算仍未明确，保留 partial。"
         },
         "context_assessment": {
           "status": "known",
@@ -1358,7 +1358,7 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": "max",
+                  "default": "high",
                   "notes": "本产品精确型号的原生档位；不从界面标签推测其他枚举。"
                 }
               ],
@@ -1380,7 +1380,7 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": "max",
+                  "default": "high",
                   "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
@@ -1402,7 +1402,7 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": "max",
+                  "default": "high",
                   "notes": "产品页提供档位与默认值，但本协议具体参数字段仍未单独说明，不能套用按量 API。"
                 }
               ],
@@ -1411,14 +1411,14 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "checked_at": "2026-10-29T01:55:25Z",
             "source_ids": [
-              "reasoning-kimi-code"
+              "kimi-code"
             ],
-            "evidence": "evidence/moonshot/2026-10-24-audit.md",
-            "notes": "逐项核对官方文档，未用真实 Key 调用。"
+            "evidence": "evidence/moonshot/2026-10-29-audit.md",
+            "notes": "当前 Kimi Code Model Overview 与 Effort mapping 表独立确认 K3.1 Pro 系列默认 high；不采用开放平台 API 默认 max。"
           },
-          "notes": "K3.1 Pro 默认 max 且不可关闭；K3 默认 high；K2.8 Preview 默认 max。K2.7 Code Highspeed 始终思考且不支持调节 effort；修正旧资料错误的三档控制。Responses / Messages 的具体字段保持待核实。"
+          "notes": "Kimi Code 当前模型表明确 K3.1 Pro / Highspeed 默认 high，三档 low/high/max 且不能关闭思考；Responses/Messages 具体请求字段和独立预算仍未明确，保留 partial。"
         },
         "context_assessment": {
           "status": "known",

@@ -93,12 +93,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
                 "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -107,12 +107,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
             "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -270,12 +270,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
                 "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官方文档未出现 grok-4.7-build-fast 字样，对应关系依据展示名 Grok 4.7 Fast 与 xAI 的 Grok Build 专供说明。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -284,12 +284,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
             "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "开发方官网价参考；非公开 API 型号，不能凭此调用 xAI API。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -453,12 +453,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
                 "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -467,12 +467,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
             "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -636,12 +636,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
                 "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -650,12 +650,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
             "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -808,12 +808,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-28T06:22:38Z",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
-                "imagine-pricing"
+                "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-              "notes": "Imagine Pricing 表原文 $0.04 / image。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
             "time_basis": "unknown",
@@ -822,12 +822,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-28T06:22:38Z",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
-            "imagine-pricing"
+            "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-          "notes": "同平台按量价，仅作订阅消耗参考。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。"
       },
@@ -1171,11 +1171,307 @@
                 }
               ],
               "notes": "只收 JSON，官方说明 OpenAI SDK 的 images.edit() 不适用。编辑按输入图与输出图双向计费，输入图单价未查到。"
+            },
+            {
+              "id": "image_generation_deferred",
+              "interface": "xai_image",
+              "endpoint": "POST /v1/images/generations",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到（仅 models 接口示例有 grok-imagine-image 的 max_prompt_length 1024）。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": 10,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "受理立即返回 request_id；GET /v1/images/{request_id} 返回 pending（HTTP 202）、done 或 failed（HTTP 200）。done 的 data/usage 与同步响应同形；结果保留 24 小时，不等同于产物 URL 有效期。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "n",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 10,
+                  "unit": "item",
+                  "default": 1,
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "3:4",
+                    "4:3",
+                    "9:16",
+                    "16:9",
+                    "2:3",
+                    "3:2",
+                    "9:19.5",
+                    "19.5:9",
+                    "9:20",
+                    "20:9",
+                    "1:2",
+                    "2:1",
+                    "21:9",
+                    "5:2",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "1k",
+                    "2k"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "1k",
+                  "required": false,
+                  "notes": "指南列 1k、2k；OpenAPI 枚举另有 1.5k，未在指南出现，未列入。"
+                },
+                {
+                  "field": "quality",
+                  "type": "enum",
+                  "values": [
+                    "low",
+                    "medium",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "只对 grok-imagine-image-2.0 生效；auto 目前生成取 low、编辑取 medium。REST 参考与 OpenAPI 请求 schema 未列此字段，计价层文档另写 low / medium / high。"
+                },
+                {
+                  "field": "response_format",
+                  "type": "enum",
+                  "values": [
+                    "url"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "url",
+                  "required": false,
+                  "notes": "deferred 模式仅支持 url。"
+                },
+                {
+                  "field": "deferred",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": true,
+                  "notes": "本异步操作必须传 true；省略时为对应同步操作。"
+                }
+              ],
+              "notes": "另有 storage_options（写入 Files API 并返回 file_output）与 user 字段，未列为参数。 deferred=true 复用同一生成/编辑端点，结果保留 24 小时。"
+            },
+            {
+              "id": "image_edit_deferred",
+              "interface": "xai_image",
+              "endpoint": "POST /v1/images/edits",
+              "mode": "async_task",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [],
+                  "notes": "长度上限未查到（仅 models 接口示例有 grok-imagine-image 的 max_prompt_length 1024）。"
+                },
+                {
+                  "role": "source_image",
+                  "field": "image",
+                  "required": false,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "单图编辑。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。与 images 互斥，二者必填其一。"
+                },
+                {
+                  "role": "reference_image",
+                  "field": "images[]",
+                  "required": false,
+                  "min_items": 1,
+                  "max_items": 5,
+                  "formats": [
+                    "jpeg",
+                    "png",
+                    "webp"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [],
+                  "notes": "多图编辑，最多 5 张（指南与 release notes；OpenAPI 无 maxItems）；提示词用 <IMAGE_0>、<IMAGE_1> 指代。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。与 image 互斥。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [],
+                  "delivery": [
+                    "url"
+                  ],
+                  "max_items": null,
+                  "url_ttl_seconds": null,
+                  "limits": [],
+                  "notes": "受理立即返回 request_id；GET /v1/images/{request_id} 返回 pending（HTTP 202）、done 或 failed（HTTP 200）。done 的 data/usage 与同步响应同形；结果保留 24 小时，不等同于产物 URL 有效期。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "n",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": null,
+                  "unit": "item",
+                  "default": null,
+                  "required": false,
+                  "notes": "编辑的数量上限与缺省未写明。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "enum",
+                  "values": [
+                    "1:1",
+                    "3:4",
+                    "4:3",
+                    "9:16",
+                    "16:9",
+                    "2:3",
+                    "3:2",
+                    "9:19.5",
+                    "19.5:9",
+                    "9:20",
+                    "20:9",
+                    "1:2",
+                    "2:1",
+                    "21:9",
+                    "5:2",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "只用于多图编辑，缺省跟随第一张图；单图编辑不要设置，自动跟随输入图。"
+                },
+                {
+                  "field": "resolution",
+                  "type": "enum",
+                  "values": [
+                    "1k",
+                    "2k"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "1k",
+                  "required": false,
+                  "notes": "指南列 1k、2k；OpenAPI 枚举另有 1.5k，未在指南出现，未列入。"
+                },
+                {
+                  "field": "quality",
+                  "type": "enum",
+                  "values": [
+                    "low",
+                    "medium",
+                    "auto"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "只对 grok-imagine-image-2.0 生效；auto 目前生成取 low、编辑取 medium。REST 参考与 OpenAPI 请求 schema 未列此字段，计价层文档另写 low / medium / high。"
+                },
+                {
+                  "field": "response_format",
+                  "type": "enum",
+                  "values": [
+                    "url"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "url",
+                  "required": false,
+                  "notes": "deferred 模式仅支持 url。"
+                },
+                {
+                  "field": "deferred",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": true,
+                  "notes": "本异步操作必须传 true；省略时为对应同步操作。"
+                }
+              ],
+              "notes": "只收 JSON，官方说明 OpenAI SDK 的 images.edit() 不适用。编辑按输入图与输出图双向计费，输入图单价未查到。 deferred=true 复用同一生成/编辑端点，结果保留 24 小时。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T06:28:43Z",
+            "checked_at": "2026-10-29T02:02:42Z",
             "source_ids": [
               "imagine-image-generation",
               "imagine-image-editing",
@@ -1185,8 +1481,8 @@
               "imagine-model-image2",
               "build-commands"
             ],
-            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-            "notes": "按 xAI 官方 .md 文档、渲染页警示框与 OpenAPI 核对；未实调，不刷新模型身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "重新核对当前公开 API 指南、REST 与 OpenAPI 的操作、输入、输出和参数；仅确认这些公开 API 字段，订阅通道映射及授权仍未证实，保持 partial；未实调。"
           },
           "notes": "缺口：订阅通道未经公开文档证实与实调；quality、resolution 取值存在文档冲突（见参数说明）；提示词长度、输入图大小、URL 有效期、像素表未查到。"
         }
@@ -1260,12 +1556,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-28T06:22:38Z",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
-                "imagine-pricing"
+                "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-              "notes": "Imagine Pricing 表原文 $0.080 / sec。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
             "time_basis": "unknown",
@@ -1274,12 +1570,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-28T06:22:38Z",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
-            "imagine-pricing"
+            "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-          "notes": "同平台按量价，仅作订阅消耗参考。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。"
       },
@@ -1411,7 +1707,9 @@
                     "4:3",
                     "3:4",
                     "3:2",
-                    "2:3"
+                    "2:3",
+                    "21:9",
+                    "5:2"
                   ],
                   "min": null,
                   "max": null,
@@ -1533,14 +1831,16 @@
                     "4:3",
                     "3:4",
                     "3:2",
-                    "2:3"
+                    "2:3",
+                    "21:9",
+                    "5:2"
                   ],
                   "min": null,
                   "max": null,
                   "unit": null,
                   "default": null,
                   "required": false,
-                  "notes": "文档冲突：指南写设置后覆盖并拉伸输入图，OpenAPI 写图生视频忽略此字段、比例取自输入图。"
+                  "notes": "当前指南与 OpenAPI 一致：图生视频忽略 aspect_ratio，输出始终匹配输入图比例。"
                 },
                 {
                   "field": "resolution",
@@ -1674,7 +1974,9 @@
                     "4:3",
                     "3:4",
                     "3:2",
-                    "2:3"
+                    "2:3",
+                    "21:9",
+                    "5:2"
                   ],
                   "min": null,
                   "max": null,
@@ -1736,7 +2038,7 @@
                   "field": "reference_images[]",
                   "required": false,
                   "min_items": null,
-                  "max_items": 7,
+                  "max_items": 14,
                   "formats": [
                     "jpeg",
                     "png",
@@ -1748,7 +2050,7 @@
                     "file_id"
                   ],
                   "limits": [],
-                  "notes": "最多 7 张（渲染页警示框；OpenAPI 无 maxItems）。参考图与 reference_audios 至少给一种：只给音色即 audio-only 参考生视频。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。"
+                  "notes": "最多 14 张（渲染页警示框；OpenAPI 无 maxItems）。参考图与 reference_audios 至少给一种：只给音色即 audio-only 参考生视频。对象 {url | file_id}：url 为公网地址或 base64 data URL（兼容键 image_url），file_id 来自 xAI Files API；格式 JPEG / PNG / WebP，大小上限未查到。"
                 },
                 {
                   "role": "reference_audio",
@@ -1818,7 +2120,9 @@
                     "4:3",
                     "3:4",
                     "3:2",
-                    "2:3"
+                    "2:3",
+                    "21:9",
+                    "5:2"
                   ],
                   "min": null,
                   "max": null,
@@ -1870,7 +2174,7 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T06:28:43Z",
+            "checked_at": "2026-10-29T02:02:42Z",
             "source_ids": [
               "imagine-video-generation",
               "imagine-video-i2v",
@@ -1882,10 +2186,10 @@
               "build-commands",
               "build-zdr-video"
             ],
-            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-            "notes": "按 xAI 官方 .md 文档、渲染页警示框与 OpenAPI 核对；未实调，不刷新模型身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "重新核对当前公开 API 指南、REST 与 OpenAPI 的操作、输入、输出和参数；仅确认这些公开 API 字段，订阅通道映射及授权仍未证实，保持 partial；未实调。"
           },
-          "notes": "缺口：订阅通道未经公开文档证实与实调；last_frame、generate_audio 只在指南不在 OpenAPI；图生视频 aspect_ratio 行为文档冲突；是否支持编辑 / 延长文档未明说（示例均用 Classic），未列入；视频大小上限、URL 有效期、seed 未查到。"
+          "notes": "缺口：订阅通道未经公开文档证实与实调；last_frame、generate_audio 只在指南不在 OpenAPI；编辑页与延长页适用表列 Classic，但延长页一处 SDK 示例写 1.5，存在适用型号冲突，未列入 1.5 操作；keyframes 规则已在首尾帧操作说明记录，未结构化全部组合；视频大小上限、URL 有效期、seed 未查到。"
         }
       }
     },
@@ -1957,12 +2261,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-09-28T06:22:38Z",
+              "checked_at": "2026-10-29T01:55:25.382515+00:00",
               "source_ids": [
-                "imagine-pricing"
+                "r1024-xai-pricing"
               ],
-              "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-              "notes": "Imagine Pricing 表原文 $0.050 / sec。"
+              "evidence": "evidence/xai/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
             "time_basis": "unknown",
@@ -1971,12 +2275,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-09-28T06:22:38Z",
+          "checked_at": "2026-10-29T01:55:25.382515+00:00",
           "source_ids": [
-            "imagine-pricing"
+            "r1024-xai-pricing"
           ],
-          "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-          "notes": "同平台按量价，仅作订阅消耗参考。"
+          "evidence": "evidence/xai/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。"
       },
@@ -2109,7 +2413,9 @@
                     "4:3",
                     "3:4",
                     "3:2",
-                    "2:3"
+                    "2:3",
+                    "21:9",
+                    "5:2"
                   ],
                   "min": null,
                   "max": null,
@@ -2230,14 +2536,16 @@
                     "4:3",
                     "3:4",
                     "3:2",
-                    "2:3"
+                    "2:3",
+                    "21:9",
+                    "5:2"
                   ],
                   "min": null,
                   "max": null,
                   "unit": null,
                   "default": null,
                   "required": false,
-                  "notes": "文档冲突：指南写设置后覆盖并拉伸输入图，OpenAPI 写图生视频忽略此字段、比例取自输入图。"
+                  "notes": "当前指南与 OpenAPI 一致：图生视频忽略 aspect_ratio，输出始终匹配输入图比例。"
                 },
                 {
                   "field": "resolution",
@@ -2321,7 +2629,7 @@
                     {
                       "measure": "duration",
                       "min": null,
-                      "max": "15",
+                      "max": "10",
                       "unit": "second",
                       "notes": "见本操作时长参数。"
                     }
@@ -2335,11 +2643,11 @@
                   "type": "integer",
                   "values": null,
                   "min": 1,
-                  "max": 15,
+                  "max": 10,
                   "unit": "second",
                   "default": 8,
                   "required": false,
-                  "notes": "兼容键 seconds，数字或字符串均可。"
+                  "notes": "Classic 参考图生视频最高 10 秒；兼容键 seconds。"
                 },
                 {
                   "field": "aspect_ratio",
@@ -2351,7 +2659,9 @@
                     "4:3",
                     "3:4",
                     "3:2",
-                    "2:3"
+                    "2:3",
+                    "21:9",
+                    "5:2"
                   ],
                   "min": null,
                   "max": null,
@@ -2537,7 +2847,7 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T06:28:43Z",
+            "checked_at": "2026-10-29T02:02:42Z",
             "source_ids": [
               "imagine-video-generation",
               "imagine-video-i2v",
@@ -2550,10 +2860,10 @@
               "build-commands",
               "build-zdr-video"
             ],
-            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-            "notes": "按 xAI 官方 .md 文档、渲染页警示框与 OpenAPI 核对；未实调，不刷新模型身份、价格或其他能力的核对结论。"
+            "evidence": "evidence/xai/2026-10-29-refresh.md",
+            "notes": "重新核对当前公开 API 指南、REST 与 OpenAPI 的操作、输入、输出和参数；仅确认这些公开 API 字段，订阅通道映射及授权仍未证实，保持 partial；未实调。"
           },
-          "notes": "缺口：订阅通道未经公开文档证实与实调；generate_audio 只在指南不在 OpenAPI；图生视频 aspect_ratio 行为文档冲突；/v1/video-generation-models 示例输入模态只有 text、image，与型号页不一致；视频大小上限、URL 有效期、seed 未查到。"
+          "notes": "缺口：订阅通道未经公开文档证实与实调；generate_audio 只在指南不在 OpenAPI；/v1/video-generation-models 示例输入模态只有 text、image，与型号页不一致；视频大小上限、URL 有效期、seed 未查到。"
         }
       }
     }

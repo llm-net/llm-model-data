@@ -116,16 +116,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
         },
         "reasoning": {
           "support": "supported",
@@ -185,18 +185,18 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-10-29T01:55:27Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
-        "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
+        "evidence": "evidence/qianfan/2026-10-29-audit.md",
+        "notes": "退役表明确日期为 2026-10-29，但未给时区内具体时刻；同次抓取模型列表仍列出，当前可调用性未实调，标为 unknown 而不声称已经停服。"
       },
       "usage_prices": {
         "status": "published",
@@ -263,7 +263,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "千帆国内产品独立资料；未以原厂能力或价格补缺。 官方已公告于 2026-10-29 退役，本次核对尚未生效，因此保留 active；届时须再核对删除。",
+      "notes": "官方退役公告列本精确型号于 2026-10-29 退役，推荐 DeepSeek-V4.1-Flash；当前模型列表仍列出且未给具体停服时刻，故保留身份及历史价格，将可用性标为 unknown。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -279,16 +279,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
         },
         "reasoning": {
           "support": "supported",
@@ -338,18 +338,18 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-10-29T01:55:27Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
-        "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
+        "evidence": "evidence/qianfan/2026-10-29-audit.md",
+        "notes": "退役表明确日期为 2026-10-29，但未给时区内具体时刻；同次抓取模型列表仍列出，当前可调用性未实调，标为 unknown 而不声称已经停服。"
       },
       "usage_prices": {
         "status": "published",
@@ -422,7 +422,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "千帆国内产品独立资料；未以原厂能力或价格补缺。 官方已公告于 2026-10-29 退役，本次核对尚未生效，因此保留 active；届时须再核对删除。",
+      "notes": "官方退役公告列本精确型号于 2026-10-29 退役，推荐 DeepSeek-V4.1-Flash；当前模型列表仍列出且未给具体停服时刻，故保留身份及历史价格，将可用性标为 unknown。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -438,16 +438,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
         },
         "reasoning": {
           "support": "unknown",
@@ -488,18 +488,18 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-10-29T01:55:27Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
-        "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
+        "evidence": "evidence/qianfan/2026-10-29-audit.md",
+        "notes": "退役表明确日期为 2026-10-29，但未给时区内具体时刻；同次抓取模型列表仍列出，当前可调用性未实调，标为 unknown 而不声称已经停服。"
       },
       "usage_prices": {
         "status": "published",
@@ -572,7 +572,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "千帆国内产品独立资料；未以原厂能力或价格补缺。 官方已公告于 2026-10-29 退役，本次核对尚未生效，因此保留 active；届时须再核对删除。",
+      "notes": "官方退役公告列本精确型号于 2026-10-29 退役，推荐 DeepSeek-V4.1-Flash；当前模型列表仍列出且未给具体停服时刻，故保留身份及历史价格，将可用性标为 unknown。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -588,16 +588,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
         },
         "reasoning": {
           "support": "unknown",
@@ -787,16 +787,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
         },
         "reasoning": {
           "support": "supported",
@@ -968,22 +968,23 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
-          "anthropic_messages"
+          "anthropic_messages",
+          "openai_responses"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "Responses 2026-10-28 支持型号清单逐条列出本型号，独立核对 Chat / Messages 现有入口。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "本产品 Chat 模型列表、全量 Chat 的 Messages 兼容说明及 2026-10-28 Responses 精确型号列表均覆盖本型号；新增 Responses 不表示各面思考参数相同。"
         },
         "reasoning": {
           "support": "supported",
@@ -1044,18 +1045,18 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-10-29T01:55:27Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
-        "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
+        "evidence": "evidence/qianfan/2026-10-29-audit.md",
+        "notes": "退役表明确日期为 2026-10-29，但未给时区内具体时刻；同次抓取模型列表仍列出，当前可调用性未实调，标为 unknown 而不声称已经停服。"
       },
       "usage_prices": {
         "status": "published",
@@ -1128,7 +1129,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "千帆国内产品独立资料；未以原厂能力或价格补缺。 官方已公告于 2026-10-29 退役，本次核对尚未生效，因此保留 active；届时须再核对删除。",
+      "notes": "官方退役公告列本精确型号于 2026-10-29 退役，推荐 DeepSeek-V4.1-Flash；当前模型列表仍列出且未给具体停服时刻，故保留身份及历史价格，将可用性标为 unknown。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1144,16 +1145,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
         },
         "reasoning": {
           "support": "unknown",
@@ -1295,16 +1296,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
         },
         "reasoning": {
           "support": "supported",
@@ -1499,22 +1500,23 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
-          "anthropic_messages"
+          "anthropic_messages",
+          "openai_responses"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "Responses 2026-10-28 支持型号清单逐条列出本型号，独立核对 Chat / Messages 现有入口。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "本产品 Chat 模型列表、全量 Chat 的 Messages 兼容说明及 2026-10-28 Responses 精确型号列表均覆盖本型号；新增 Responses 不表示各面思考参数相同。"
         },
         "reasoning": {
           "support": "supported",
@@ -1696,22 +1698,23 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
-          "anthropic_messages"
+          "anthropic_messages",
+          "openai_responses"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "Responses 2026-10-28 支持型号清单逐条列出本型号，独立核对 Chat / Messages 现有入口。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "本产品 Chat 模型列表、全量 Chat 的 Messages 兼容说明及 2026-10-28 Responses 精确型号列表均覆盖本型号；新增 Responses 不表示各面思考参数相同。"
         },
         "reasoning": {
           "support": "supported",
@@ -1911,22 +1914,23 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
-          "anthropic_messages"
+          "anthropic_messages",
+          "openai_responses"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "Responses 2026-10-28 支持型号清单逐条列出本型号，独立核对 Chat / Messages 现有入口。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "本产品 Chat 模型列表、全量 Chat 的 Messages 兼容说明及 2026-10-28 Responses 精确型号列表均覆盖本型号；新增 Responses 不表示各面思考参数相同。"
         },
         "reasoning": {
           "support": "supported",
@@ -2126,22 +2130,23 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
-          "anthropic_messages"
+          "anthropic_messages",
+          "openai_responses"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "Responses 2026-10-28 支持型号清单逐条列出本型号，独立核对 Chat / Messages 现有入口。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "本产品 Chat 模型列表、全量 Chat 的 Messages 兼容说明及 2026-10-28 Responses 精确型号列表均覆盖本型号；新增 Responses 不表示各面思考参数相同。"
         },
         "reasoning": {
           "support": "supported",
@@ -2285,22 +2290,23 @@
         "streaming": null,
         "interfaces": [
           "openai_chat",
-          "anthropic_messages"
+          "anthropic_messages",
+          "openai_responses"
         ],
         "interface_assessment": {
-          "coverage": "partial",
+          "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-10-29T01:55:26Z",
             "source_ids": [
               "audit-20261024-chat",
               "protocol-messages",
               "protocol-responses"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
+            "evidence": "evidence/qianfan/2026-10-29-audit.md",
+            "notes": "Responses 2026-10-28 支持型号清单逐条列出本型号，独立核对 Chat / Messages 现有入口。"
           },
-          "notes": "Chat 文本生成接口与模型表对应；Messages 文档明确全量 Chat 兼容。Responses 精确支持清单仅覆盖本目录 Pro 短名与 GLM-5.1，不能继承给日期版或 V4.1 / GLM-5.3。"
+          "notes": "本产品 Chat 模型列表、全量 Chat 的 Messages 兼容说明及 2026-10-28 Responses 精确型号列表均覆盖本型号；新增 Responses 不表示各面思考参数相同。"
         },
         "reasoning": {
           "support": "supported",

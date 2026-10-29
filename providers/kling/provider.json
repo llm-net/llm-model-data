@@ -200,6 +200,36 @@
       "url": "https://klingai.com/document-api/pricing/base/video.md",
       "purpose": "pricing",
       "notes": "视频价格表中的功能档位（有声 / 无声 / 动作控制），仅作能力佐证，不用于本次改价。媒体输入输出专项（capabilities.media_io）来源；抓取时间、SHA-256、小节与结论见 evidence/kling/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "audit-20261029-4-0-text-to-video",
+      "url": "https://klingai.com/document-api/api/video/4-0/text-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 4.0 本型号 API 与素材说明；2026-10-29 独立核对，详见本地证据。"
+    },
+    {
+      "id": "audit-20261029-4-0-image-to-video",
+      "url": "https://klingai.com/document-api/api/video/4-0/image-to-video.md",
+      "purpose": "models",
+      "notes": "Kling 4.0 本型号 API 与素材说明；2026-10-29 独立核对，详见本地证据。"
+    },
+    {
+      "id": "audit-20261029-4-0-video-omni",
+      "url": "https://klingai.com/document-api/api/video/4-0/video-omni.md",
+      "purpose": "models",
+      "notes": "Kling 4.0 本型号 API 与素材说明；2026-10-29 独立核对，详见本地证据。"
+    },
+    {
+      "id": "audit-20261029-4-0-elements",
+      "url": "https://klingai.com/document-api/api/video/4-0/elements.md",
+      "purpose": "models",
+      "notes": "Kling 4.0 本型号 API 与素材说明；2026-10-29 独立核对，详见本地证据。"
+    },
+    {
+      "id": "audit-20261029-4-0-voice-customization",
+      "url": "https://klingai.com/document-api/api/video/4-0/voice-customization.md",
+      "purpose": "models",
+      "notes": "Kling 4.0 本型号 API 与素材说明；2026-10-29 独立核对，详见本地证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

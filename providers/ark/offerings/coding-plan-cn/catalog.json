@@ -1073,171 +1073,6 @@
       }
     },
     {
-      "id": "kimi-k2-7-code",
-      "request_id": "kimi-k2.7-code",
-      "display_name": "kimi-k2.7-code",
-      "modalities": [
-        "text"
-      ],
-      "availability": "active",
-      "alias_of": null,
-      "plan_ids": [],
-      "verification": {
-        "status": "verified",
-        "checked_at": "2026-10-23T22:10:47.985153Z",
-        "source_ids": [
-          "audit-md-coding-plan-personal-plan-overview",
-          "audit-md-coding-plan-personal-get-started",
-          "audit-md-coding-plan-personal-model-deprecation"
-        ],
-        "evidence": "evidence/ark/2026-10-24-audit.md",
-        "notes": "独立核对本订阅产品支持表；不从按量产品继承能力。 已停止对新用户提供服务；EOS 2026-10-28 14:00 UTC+8 尚未到期，保留存量。"
-      },
-      "usage_prices": {
-        "status": "not_applicable",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/ark/2026-09-16-alignment.md",
-          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
-        },
-        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
-      },
-      "reference_prices": {
-        "status": "published",
-        "rules": [
-          {
-            "id": "baseline",
-            "basis": "reference",
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "开发方按量参考；标准在线，人民币标价；未命中输入、缓存命中及输出各自计费。",
-            "rates": [
-              {
-                "meter": "input_uncached_tokens",
-                "amount": "6.5",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "input_cached_tokens",
-                "amount": "1.3",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "output_tokens",
-                "amount": "27",
-                "per": 1000000,
-                "unit": "token"
-              }
-            ],
-            "effective_from": null,
-            "effective_until": null,
-            "billing_period": null,
-            "charge_unit": null,
-            "reference_origin": {
-              "url": "https://platform.kimi.com/docs/pricing/chat",
-              "subject": "kimi-k2.7-code",
-              "reason": "已检查方舟完整按量价表无对应价格；取开发方公开价。",
-              "catalog_model": {
-                "provider_id": "moonshot",
-                "offering_id": "api-cn",
-                "model_id": "kimi-k2-7-code",
-                "selection": "exact"
-              }
-            },
-            "verification": {
-              "status": "verified",
-              "checked_at": "2026-10-23T22:10:47.985153Z",
-              "source_ids": [
-                "audit-md-model-pricing",
-                "alignment-moonshot-pricing-html"
-              ],
-              "evidence": "evidence/ark/2026-10-24-audit.md",
-              "notes": "本轮同平台标准按量价；仅选单一估算档，非全条件精确结算。"
-            },
-            "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。",
-            "time_basis": "unknown",
-            "charge_on": "unknown"
-          }
-        ],
-        "verification": {
-          "status": "verified",
-          "checked_at": "2026-10-23T22:10:47.985153Z",
-          "source_ids": [
-            "audit-md-model-pricing",
-            "alignment-moonshot-pricing-html"
-          ],
-          "evidence": "evidence/ark/2026-10-24-audit.md",
-          "notes": "本轮同平台标准按量价；仅选单一估算档，非全条件精确结算。"
-        },
-        "notes": "仅公开按量参考，不是本产品实际扣费。"
-      },
-      "notes": "独立核对本订阅产品支持表；不从按量产品继承能力。 已停止对新用户提供服务；EOS 2026-10-28 14:00 UTC+8 尚未到期，保留存量。",
-      "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
-        "max_output_tokens": null,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
-        "interfaces": [
-          "openai_chat",
-          "openai_responses",
-          "anthropic_messages"
-        ],
-        "interface_assessment": {
-          "coverage": "complete",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:10:47.985153Z",
-            "source_ids": [
-              "audit-md-coding-plan-personal-plan-overview",
-              "audit-md-coding-plan-personal-get-started",
-              "audit-md-coding-plan-personal-ai-codex"
-            ],
-            "evidence": "evidence/ark/2026-10-24-audit.md",
-            "notes": "本轮核对官方当前正文；未使用真实 Key 实调。"
-          },
-          "notes": "本产品快速接入明确 Chat/Messages 兼容，Codex专页 wire_api=responses。未来下线型号由本产品现行概览确认仍供存量。"
-        },
-        "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
-          "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [
-              "audit-md-coding-plan-personal-plan-overview",
-              "audit-md-coding-plan-personal-get-started",
-              "audit-md-coding-plan-personal-ai-codex"
-            ],
-            "evidence": "evidence/ark/2026-10-24-audit.md",
-            "notes": "本轮检查本产品概览/快速开始/Codex；未取得精确本型号的全协议思考控制。通用工具low/medium/high不作为该型支持枚举。"
-          },
-          "notes": "本轮检查本产品概览/快速开始/Codex；未取得精确本型号的全协议思考控制。通用工具low/medium/high不作为该型支持枚举。"
-        },
-        "context_assessment": {
-          "status": "partial",
-          "reported_value": "256k",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:10:47.985153Z",
-            "source_ids": [
-              "audit-md-coding-plan-personal-plan-overview"
-            ],
-            "evidence": "evidence/ark/2026-10-24-audit.md",
-            "notes": "本轮核对官方当前正文；未使用真实 Key 实调。"
-          },
-          "notes": "本产品精确型号行标称窗口 256k；未给出缩写换算依据，不自行计算精确整数；输出上限、客户端压缩阈值和计价阶梯不是上下文。"
-        }
-      }
-    },
-    {
       "id": "kimi-k3",
       "request_id": "kimi-k3",
       "display_name": "kimi-k3",
@@ -2534,6 +2369,193 @@
             "notes": "本轮核对官方当前正文；未使用真实 Key 实调。"
           },
           "notes": "本产品精确型号行标称窗口 1049k；未给出缩写换算依据，不自行计算精确整数；输出上限、客户端压缩阈值和计价阶梯不是上下文。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k3-1-pro",
+      "request_id": "kimi-k3.1-pro",
+      "display_name": "Kimi K3.1 Pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-10-29T01:55:40.465665+00:00",
+        "source_ids": [
+          "audit-md-coding-plan-personal-plan-overview",
+          "audit-md-coding-plan-personal-get-started"
+        ],
+        "evidence": "evidence/ark/2026-10-29-audit.md",
+        "notes": "本订阅支持表及接入文档明确列出kimi-k3.1-pro。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/ark/2026-10-29-audit.md",
+          "notes": "订阅不采集实际扣费；仅保存独立按量参考价。"
+        },
+        "notes": "订阅不采集实际扣费；仅保存独立按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "同平台 Kimi K3.1 Pro 标准在线非音频输入参考价；缓存存储另计。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "13",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "68",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://ark.volcengine.com/region:cn-beijing/docs/model-pricing.md",
+              "subject": "kimi-k3-1-pro-261024",
+              "reason": "方舟完整按量价表已有对应型号，优先同平台价格，非订阅实际扣费。",
+              "catalog_model": {
+                "provider_id": "ark",
+                "offering_id": "api-cn",
+                "model_id": "kimi-k3-1-pro-261024",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-10-29T01:55:40.465665+00:00",
+              "source_ids": [
+                "audit-md-model-pricing",
+                "audit-md-model-list"
+              ],
+              "evidence": "evidence/ark/2026-10-29-audit.md",
+              "notes": "同平台标准在线刊例价；不套原厂缓存写入费，也不把订阅限时抵扣当按量价。"
+            },
+            "notes": "完整方舟价表给出 Kimi K3.1 Pro 的标准输入、缓存命中及输出价格；缓存存储为0.017元/百万token/小时，未并入 token 价格。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-10-29T01:55:40.465665+00:00",
+          "source_ids": [
+            "audit-md-model-pricing",
+            "audit-md-model-list"
+          ],
+          "evidence": "evidence/ark/2026-10-29-audit.md",
+          "notes": "同平台标准在线刊例价；不套原厂缓存写入费，也不把订阅限时抵扣当按量价。"
+        },
+        "notes": "按用户既定顺序取同平台同型号标准按量价；独立保存数字，非订阅账单。"
+      },
+      "notes": "本订阅产品独立收录；参考同平台Kimi K3.1 Pro标准按量价，不使用限时AFP抵扣价。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1024k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "audit-md-coding-plan-personal-plan-overview"
+            ],
+            "evidence": "evidence/ark/2026-10-29-audit.md",
+            "notes": "本订阅精确型号标称上下文1024k、最大输出128k。"
+          },
+          "notes": "未给出缩写的精确整数边界；不继承原厂或按量窗口。"
+        },
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "audit-md-coding-plan-personal-plan-overview",
+              "audit-md-coding-plan-personal-get-started",
+              "audit-md-coding-plan-personal-ai-codex"
+            ],
+            "evidence": "evidence/ark/2026-10-29-audit.md",
+            "notes": "本产品支持表与专属Chat/Messages接入、Codex Responses分别核对。"
+          },
+          "notes": "本产品支持表将该型号纳入文本模型；三兼容入口经本产品接入页确认。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "本产品精确型号介绍确认深度思考；未公开该型号各协议的档位、参数、默认值及关闭行为。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "本产品精确型号介绍确认深度思考；未公开该型号各协议的档位、参数、默认值及关闭行为。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "本产品精确型号介绍确认深度思考；未公开该型号各协议的档位、参数、默认值及关闭行为。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-10-29T01:55:40.465665+00:00",
+            "source_ids": [
+              "audit-md-coding-plan-personal-plan-overview"
+            ],
+            "evidence": "evidence/ark/2026-10-29-audit.md",
+            "notes": "Coding Plan精确型号说明确认深度思考，不借用按量参数。"
+          },
+          "notes": "参数、档位与开关未知；不得套用同名原厂或方舟按量控制。"
         }
       }
     }

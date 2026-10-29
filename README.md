@@ -27,7 +27,8 @@ tests/                             # 数据边界回归测试
 .github/                           # PR 模板与只读校验 CI
 ```
 
-- [本轮模型、价格与下线盘点](docs/AUDIT-2026-10-24.md)
+- [本轮模型、价格与能力核对](docs/AUDIT-2026-10-29.md)
+- [上一轮模型、价格与下线盘点](docs/AUDIT-2026-10-24.md)
 - [当前价格对齐结果与剩余缺项](docs/PRICE-ALIGNMENT.md)
 - [首轮核对历史报告](docs/AUDIT-2026-09-16.md)
 - [服务商索引](providers/README.md)

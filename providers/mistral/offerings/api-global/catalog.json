@@ -27,13 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:03:13+00:00",
+        "checked_at": "2026-10-29T01:55:26.513844+00:00",
         "source_ids": [
-          "r1024-mistral-config",
-          "r1024-mistral-large3"
+          "r1024-mistral-large3",
+          "r1024-mistral-config"
         ],
-        "evidence": "evidence/mistral/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/mistral/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -71,13 +71,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:27.034317+00:00",
               "source_ids": [
                 "r1024-mistral-pricing",
-                "r1024-mistral-config"
+                "r1024-mistral-large3"
               ],
-              "evidence": "evidence/mistral/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/mistral/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -86,13 +86,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:27.034317+00:00",
           "source_ids": [
             "r1024-mistral-pricing",
-            "r1024-mistral-config"
+            "r1024-mistral-large3"
           ],
-          "evidence": "evidence/mistral/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/mistral/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -123,13 +123,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:27.053840+00:00",
             "source_ids": [
               "r1024-mistral-large3",
               "r1024-mistral-chat"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方型号功能列/v1/chat/completions；托管Agents/Conversations不归入本型号直接兼容面。"
         },
@@ -141,11 +141,10 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "r1024-mistral-large3",
               "r1024-mistral-reasoning"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "官方可调思考表未列Large3；不以未列出推断不支持。"
           },
           "notes": "官方可调思考表没有精确列mistral-large-latest/Large3；不从Large4或Small4继承。"
         },
@@ -154,13 +153,12 @@
           "reported_value": "256k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:26.513844+00:00",
             "source_ids": [
-              "r1024-mistral-large3",
-              "r1024-mistral-config"
+              "r1024-mistral-large3"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方只给256k标称，未核实精确整数单位，不猜乘1000或1024。"
         }
@@ -178,13 +176,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:03:13+00:00",
+        "checked_at": "2026-10-29T01:55:27.076058+00:00",
         "source_ids": [
-          "r1024-mistral-config",
-          "r1024-mistral-small4"
+          "r1024-mistral-small4",
+          "r1024-mistral-config"
         ],
-        "evidence": "evidence/mistral/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/mistral/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -222,13 +220,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:02:04+00:00",
+              "checked_at": "2026-10-29T01:55:27.076058+00:00",
               "source_ids": [
                 "r1024-mistral-pricing",
-                "r1024-mistral-config"
+                "r1024-mistral-small4"
               ],
-              "evidence": "evidence/mistral/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/mistral/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -237,13 +235,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:02:04+00:00",
+          "checked_at": "2026-10-29T01:55:27.076058+00:00",
           "source_ids": [
             "r1024-mistral-pricing",
-            "r1024-mistral-config"
+            "r1024-mistral-small4"
           ],
-          "evidence": "evidence/mistral/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/mistral/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -274,13 +272,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:27.076058+00:00",
             "source_ids": [
               "r1024-mistral-small4",
               "r1024-mistral-chat"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方型号功能列/v1/chat/completions；托管Agents/Conversations不归入本型号直接兼容面。"
         },
@@ -312,13 +310,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:27.068063+00:00",
             "source_ids": [
-              "r1024-mistral-reasoning",
-              "r1024-mistral-small4"
+              "r1024-mistral-reasoning"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方精确列mistral-small-latest支持可调思考；默认与完全关闭能力未明，保持partial。"
         },
@@ -327,13 +324,12 @@
           "reported_value": "256k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:27.076058+00:00",
             "source_ids": [
-              "r1024-mistral-small4",
-              "r1024-mistral-config"
+              "r1024-mistral-small4"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方只给256k标称，未核实精确整数单位，不猜乘1000或1024。"
         }
@@ -351,13 +347,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:24+00:00",
+        "checked_at": "2026-10-29T01:55:27.102407+00:00",
         "source_ids": [
           "r1024-mistral-medium35",
           "r1024-mistral-reasoning"
         ],
-        "evidence": "evidence/mistral/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/mistral/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -395,13 +391,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:24+00:00",
+              "checked_at": "2026-10-29T01:55:27.102407+00:00",
               "source_ids": [
                 "r1024-mistral-pricing",
                 "r1024-mistral-medium35"
               ],
-              "evidence": "evidence/mistral/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/mistral/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。",
             "time_basis": "unknown",
@@ -410,13 +406,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:24+00:00",
+          "checked_at": "2026-10-29T01:55:27.102407+00:00",
           "source_ids": [
             "r1024-mistral-pricing",
             "r1024-mistral-medium35"
           ],
-          "evidence": "evidence/mistral/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/mistral/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。"
       },
@@ -454,12 +450,12 @@
           "reported_value": "256k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:24+00:00",
+            "checked_at": "2026-10-29T01:55:27.102407+00:00",
             "source_ids": [
               "r1024-mistral-medium35"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方只给标称窗口，未取得精确整数边界；保持partial，不继承开源配置。"
         },
@@ -467,13 +463,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:24+00:00",
+            "checked_at": "2026-10-29T01:55:27.102407+00:00",
             "source_ids": [
               "r1024-mistral-medium35",
               "r1024-mistral-chat"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "型号功能明确/v1/chat/completions；单独Agents/Conversations产品不附加成Responses或Messages。"
         },
@@ -505,12 +501,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:27.068063+00:00",
             "source_ids": [
               "r1024-mistral-reasoning"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方可调思考表精确列本请求ID；省略默认与完全关闭能力未知。"
         }
@@ -528,13 +524,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:24+00:00",
+        "checked_at": "2026-10-29T01:55:27.113949+00:00",
         "source_ids": [
           "r1024-mistral-large4",
           "r1024-mistral-reasoning"
         ],
-        "evidence": "evidence/mistral/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/mistral/2026-10-29-refresh.md",
+        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -572,13 +568,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:24+00:00",
+              "checked_at": "2026-10-29T01:55:27.113949+00:00",
               "source_ids": [
                 "r1024-mistral-pricing",
                 "r1024-mistral-large4"
               ],
-              "evidence": "evidence/mistral/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/mistral/2026-10-29-refresh.md",
+              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
             },
             "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。",
             "time_basis": "unknown",
@@ -587,13 +583,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:24+00:00",
+          "checked_at": "2026-10-29T01:55:27.113949+00:00",
           "source_ids": [
             "r1024-mistral-pricing",
             "r1024-mistral-large4"
           ],
-          "evidence": "evidence/mistral/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/mistral/2026-10-29-refresh.md",
+          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
         },
         "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。"
       },
@@ -631,12 +627,12 @@
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:24+00:00",
+            "checked_at": "2026-10-29T01:55:27.113949+00:00",
             "source_ids": [
               "r1024-mistral-large4"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方只给标称窗口，未取得精确整数边界；保持partial，不继承开源配置。"
         },
@@ -644,13 +640,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:24+00:00",
+            "checked_at": "2026-10-29T01:55:27.113949+00:00",
             "source_ids": [
               "r1024-mistral-large4",
               "r1024-mistral-chat"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "型号功能明确/v1/chat/completions；单独Agents/Conversations产品不附加成Responses或Messages。"
         },
@@ -682,12 +678,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:03:13+00:00",
+            "checked_at": "2026-10-29T01:55:27.068063+00:00",
             "source_ids": [
               "r1024-mistral-reasoning"
             ],
-            "evidence": "evidence/mistral/2026-10-24-refresh.md",
-            "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+            "evidence": "evidence/mistral/2026-10-29-refresh.md",
+            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
           },
           "notes": "官方可调思考表精确列本请求ID；省略默认与完全关闭能力未知。"
         }
