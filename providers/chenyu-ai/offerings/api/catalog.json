@@ -8,15 +8,15 @@
   "coverage": "partial",
   "verification": {
     "status": "verified",
-    "checked_at": "2026-11-11T11:23:00.566540+00:00",
+    "checked_at": "2026-11-11T12:46:17.937938+00:00",
     "source_ids": [
       "public-models",
       "public-pricing",
       "public-reasoning",
       "billing"
     ],
-    "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-    "notes": "覆盖全部 30 条既有记录与 1 条新增：21 条实时在列，10 条缺项保留并标可用性 unknown；独立核对身份、价格、窗口、协议和思考。媒体核对范围见各自证据与日期。"
+    "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+    "notes": "本轮重新取得本产品公开模型与价格簿31：21条在列、10条历史缺项；21条身份、50条价格行、上下文、协议和已发布思考参数均与基线一致。媒体参数未逐项重验，保留其原日期与证据。"
   },
   "plans": [],
   "models": [
@@ -32,13 +32,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -75,13 +75,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI本产品公开人民币价，时段和每档金额均来自本型号 conditions.timeBand；请求开始后跨时段、异步补结算及重算仍沿用请求开始时的档位。不继承原厂日程，不补充法定节假日例外。未列计费项不表示免费；税费及逐型号首次生效时间未公开。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -155,13 +155,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI本产品公开人民币价，时段和每档金额均来自本型号 conditions.timeBand；请求开始后跨时段、异步补结算及重算仍沿用请求开始时的档位。不继承原厂日程，不补充法定节假日例外。未列计费项不表示免费；税费及逐型号首次生效时间未公开。费用按每个计费项向上取整到纳元。"
       },
@@ -170,11 +170,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -196,13 +196,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -312,13 +312,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐协议复核本请求 ID 公开的支持状态、参数、枚举、预算、默认与关闭能力；与前次相同。接口携带的原厂 verification 不充当本产品核验。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号比较晨羽云本次公开 reasoning 的 support、coverage、profiles，全部与基线一致；不沿用响应内原厂 verification 作为本产品证据。"
           },
           "notes": "晨羽AI公开接口对此精确请求 ID 的产品声明；参数、取值、默认值和映射来自本平台当前发布配置，不自动继承原厂。当前 Thinking Mode 三协议控制表保持不变；默认思考开启、high。Anthropic budget_tokens 被忽略；effort 别名映射不是独立深度。"
         },
@@ -327,13 +327,13 @@
           "reported_value": "1048576 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。"
         }
@@ -356,8 +356,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -675,8 +675,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -894,8 +894,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -1113,8 +1113,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -1332,8 +1332,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -1551,8 +1551,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -1770,8 +1770,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -1989,8 +1989,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -2203,13 +2203,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -2260,13 +2260,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -2276,13 +2276,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -2291,11 +2291,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -2316,13 +2316,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -2967,8 +2967,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -2977,13 +2977,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -3001,13 +3001,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -3043,13 +3043,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -3059,13 +3059,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -3074,11 +3074,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -3099,13 +3099,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -3914,8 +3914,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -3924,13 +3924,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -3948,13 +3948,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -3988,13 +3988,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。",
             "time_basis": "request_started",
@@ -4004,13 +4004,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。"
       },
@@ -4019,11 +4019,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -4043,13 +4043,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -6015,8 +6015,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -6025,13 +6025,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -6049,13 +6049,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -6089,13 +6089,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。",
             "time_basis": "request_started",
@@ -6105,13 +6105,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。"
       },
@@ -6120,11 +6120,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -6144,13 +6144,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -7888,8 +7888,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -7898,13 +7898,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -7922,13 +7922,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -7962,13 +7962,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。",
             "time_basis": "request_started",
@@ -7978,13 +7978,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。"
       },
@@ -7993,11 +7993,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -8017,13 +8017,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -9749,8 +9749,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -9759,13 +9759,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -9783,13 +9783,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -9826,13 +9826,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -9842,13 +9842,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -9857,11 +9857,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -9883,13 +9883,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -10009,13 +10009,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐协议复核本请求 ID 公开的支持状态、参数、枚举、预算、默认与关闭能力；与前次相同。接口携带的原厂 verification 不充当本产品核验。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号比较晨羽云本次公开 reasoning 的 support、coverage、profiles，全部与基线一致；不沿用响应内原厂 verification 作为本产品证据。"
           },
           "notes": "晨羽AI公开接口对此精确请求 ID 的产品声明；参数、取值、默认值和映射来自本平台当前发布配置，不自动继承原厂。四种协议面均有独立 profile。Qwen3.8 的有效 effort 与别名映射按协议分别记录；原生 HTTP 参数位于 parameters 内。未确认原生预算数字、完整预算边界和 Messages 预算默认值，整体 partial。 逐协议参数细节保留 2026-10-16 独立证据；2026-10-24 的简略核对不撤销已记录的原生 parameters 路径、预算参数及别名映射。"
         },
@@ -10024,13 +10024,13 @@
           "reported_value": "1000000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。"
         }
@@ -10053,8 +10053,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -10285,13 +10285,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -10328,13 +10328,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -10344,13 +10344,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -10359,11 +10359,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -10385,13 +10385,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -10511,13 +10511,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐协议复核本请求 ID 公开的支持状态、参数、枚举、预算、默认与关闭能力；与前次相同。接口携带的原厂 verification 不充当本产品核验。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号比较晨羽云本次公开 reasoning 的 support、coverage、profiles，全部与基线一致；不沿用响应内原厂 verification 作为本产品证据。"
           },
           "notes": "晨羽AI公开接口对此精确请求 ID 的产品声明；参数、取值、默认值和映射来自本平台当前发布配置，不自动继承原厂。四种协议面均有独立 profile。Qwen3.8 的有效 effort 与别名映射按协议分别记录；原生 HTTP 参数位于 parameters 内。未确认原生预算数字、完整预算边界和 Messages 预算默认值，整体 partial。 逐协议参数细节保留 2026-10-16 独立证据；2026-10-24 的简略核对不撤销已记录的原生 parameters 路径、预算参数及别名映射。"
         },
@@ -10526,13 +10526,13 @@
           "reported_value": "1000000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。"
         }
@@ -10555,8 +10555,8 @@
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "2026-11-11 查询晨羽云当前公开接口未列出此精确请求 ID；缺项不证明永久退役。既有价格、窗口、协议和思考参数仅保留为历史已核对线索，本轮未确认当前可用性及现价；各字段不刷新成功核验日期。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "本轮实时公开清单仍未列出该历史请求 ID；保留记录，availability=unknown，不认定永久退役。价格和能力保留原成功核对日期，未将历史值标为本轮现价。"
       },
       "usage_prices": {
         "status": "published",
@@ -10748,13 +10748,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -10791,13 +10791,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -10807,13 +10807,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -10822,11 +10822,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -10848,13 +10848,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -10933,13 +10933,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐协议复核本请求 ID 公开的支持状态、参数、枚举、预算、默认与关闭能力；与前次相同。接口携带的原厂 verification 不充当本产品核验。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号比较晨羽云本次公开 reasoning 的 support、coverage、profiles，全部与基线一致；不沿用响应内原厂 verification 作为本产品证据。"
           },
           "notes": "晨羽AI公开接口对此精确请求 ID 的产品声明；参数、取值、默认值和映射来自本平台当前发布配置，不自动继承原厂。当前精确型号思考表与各协议控制复核；部分协议默认/预算或型号范围未齐。2.4t仅思考与Responses none冲突，保留partial。"
         },
@@ -10948,13 +10948,13 @@
           "reported_value": "1000000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。"
         }
@@ -10972,13 +10972,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -11029,13 +11029,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。",
             "time_basis": "request_started",
@@ -11045,13 +11045,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。"
       },
@@ -11060,11 +11060,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -11084,13 +11084,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -12590,8 +12590,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -12600,13 +12600,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -12624,13 +12624,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -12681,13 +12681,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。",
             "time_basis": "request_started",
@@ -12697,13 +12697,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。"
       },
@@ -12712,11 +12712,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -12736,13 +12736,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -14242,8 +14242,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -14252,13 +14252,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -14276,13 +14276,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -14319,13 +14319,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -14335,13 +14335,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -14350,11 +14350,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -14376,13 +14376,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -14459,13 +14459,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐协议复核本请求 ID 公开的支持状态、参数、枚举、预算、默认与关闭能力；与前次相同。接口携带的原厂 verification 不充当本产品核验。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号比较晨羽云本次公开 reasoning 的 support、coverage、profiles，全部与基线一致；不沿用响应内原厂 verification 作为本产品证据。"
           },
           "notes": "晨羽AI公开接口对此精确请求 ID 的产品声明；参数、取值、默认值和映射来自本平台当前发布配置，不自动继承原厂。本轮重核：Chat 默认 adaptive；Messages/Responses 默认不思考；非 none Responses effort 只开启思考，不代表深度档位。废弃原生文本面仍有缺项。"
         },
@@ -14474,13 +14474,13 @@
           "reported_value": "1000000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。"
         }
@@ -14498,13 +14498,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -14568,13 +14568,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。",
             "time_basis": "request_started",
@@ -14584,13 +14584,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 成功任务在观察到终态后结算；明确失败 / 取消不收成功生成费，未知或查询过期不能按失败清零。"
       },
@@ -14599,11 +14599,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -14623,13 +14623,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -15228,8 +15228,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -15238,13 +15238,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -15262,13 +15262,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -15305,13 +15305,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 同步成功时结算，异步在受理时结算且失败 / 过期不退字符费；单个 charge_on 枚举无法同时表达两入口，保留 unknown 并明确本差异。",
             "time_basis": "request_started",
@@ -15321,13 +15321,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 同步成功时结算，异步在受理时结算且失败 / 过期不退字符费；单个 charge_on 枚举无法同时表达两入口，保留 unknown 并明确本差异。"
       },
@@ -15336,11 +15336,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -15360,13 +15360,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -16273,8 +16273,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -16283,13 +16283,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -16307,13 +16307,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -16350,13 +16350,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 同步成功时结算，异步在受理时结算且失败 / 过期不退字符费；单个 charge_on 枚举无法同时表达两入口，保留 unknown 并明确本差异。",
             "time_basis": "request_started",
@@ -16366,13 +16366,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。 同步成功时结算，异步在受理时结算且失败 / 过期不退字符费；单个 charge_on 枚举无法同时表达两入口，保留 unknown 并明确本差异。"
       },
@@ -16381,11 +16381,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -16405,13 +16405,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -17318,8 +17318,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -17328,13 +17328,13 @@
           "reported_value": null,
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品是图片 / 视频生成任务或 T2A 合成接口；公开接口没有文本对话窗口，contextLength/maxOutput=0 保存为 null。提示词字符上限或 T2A 文本长度不等于对话 token 窗口。"
         }
@@ -17352,13 +17352,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -17395,13 +17395,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -17411,13 +17411,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -17426,11 +17426,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -17451,13 +17451,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -17501,13 +17501,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐协议复核本请求 ID 公开的支持状态、参数、枚举、预算、默认与关闭能力；与前次相同。接口携带的原厂 verification 不充当本产品核验。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号比较晨羽云本次公开 reasoning 的 support、coverage、profiles，全部与基线一致；不沿用响应内原厂 verification 作为本产品证据。"
           },
           "notes": "晨羽AI公开接口对此精确请求 ID 的产品声明；参数、取值、默认值和映射来自本平台当前发布配置，不自动继承原厂。独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
@@ -17516,13 +17516,13 @@
           "reported_value": "1048576 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。"
         }
@@ -17540,13 +17540,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -17583,13 +17583,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -17599,13 +17599,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -17614,11 +17614,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -17639,13 +17639,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -17689,13 +17689,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐协议复核本请求 ID 公开的支持状态、参数、枚举、预算、默认与关闭能力；与前次相同。接口携带的原厂 verification 不充当本产品核验。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号比较晨羽云本次公开 reasoning 的 support、coverage、profiles，全部与基线一致；不沿用响应内原厂 verification 作为本产品证据。"
           },
           "notes": "晨羽AI公开接口对此精确请求 ID 的产品声明；参数、取值、默认值和映射来自本平台当前发布配置，不自动继承原厂。独立复核本型号 Chat 思考控制；其他兼容面的参数仍待证实，保持 partial。"
         },
@@ -17704,13 +17704,13 @@
           "reported_value": "1048576 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。"
         }
@@ -17728,13 +17728,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -17777,13 +17777,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -17793,13 +17793,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -17808,11 +17808,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -17834,13 +17834,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -17917,13 +17917,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐协议复核本请求 ID 公开的支持状态、参数、枚举、预算、默认与关闭能力；与前次相同。接口携带的原厂 verification 不充当本产品核验。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号比较晨羽云本次公开 reasoning 的 support、coverage、profiles，全部与基线一致；不沿用响应内原厂 verification 作为本产品证据。"
           },
           "notes": "晨羽AI公开接口对此精确请求 ID 的产品声明；参数、取值、默认值和映射来自本平台当前发布配置，不自动继承原厂。K3 系列仅思考模式，三协议均为 low/high/max，默认 max。旧 Claude Code 指南仍写 K3 可关闭，与当前精确模型 schema 冲突，采用较精确的新接口规范并保留冲突记录。"
         },
@@ -17932,13 +17932,13 @@
           "reported_value": "1048576 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。"
         }
@@ -17956,13 +17956,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -17999,13 +17999,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -18015,13 +18015,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -18030,11 +18030,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -18056,13 +18056,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -18077,8 +18077,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -18087,13 +18087,13 @@
           "reported_value": "262144 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。 maxOutput=0 表示没有公开正整数上限，保存 null，不解释成零输出或无限制。"
         }
@@ -18111,13 +18111,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -18148,13 +18148,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -18164,13 +18164,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "以 Decimal 逐分量核对纳元单价、unitSize、免费量与完整分时条件，金额与前次相同；计费文档确认请求开始时刻和纳元取整，未实测扣费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -18179,11 +18179,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -18205,13 +18205,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条复核实时 protocols，另查 Responses、Messages 和媒体接入说明；集合未变，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -18226,8 +18226,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "本轮已查询晨羽AI公开模型接口及模型/协议说明；本型号未公开可用的逐协议面思考配置，继续 unknown，未以原厂同名模型或通用透传说明补入。"
         },
@@ -18236,13 +18236,13 @@
           "reported_value": "262144 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。 maxOutput=0 表示没有公开正整数上限，保存 null，不解释成零输出或无限制。"
         }
@@ -18260,13 +18260,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.566540+00:00",
+        "checked_at": "2026-11-11T12:46:17.937938+00:00",
         "source_ids": [
           "public-models",
           "catalog"
         ],
-        "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-        "notes": "逐条确认本产品当前公开的精确请求 ID、展示名和模态；active 表示实时清单在列，未实调。"
+        "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+        "notes": "逐条重新确认本产品公开清单中的精确请求 ID、展示名和模态，均与基线一致；active 表示当前在列，未实调。"
       },
       "usage_prices": {
         "status": "published",
@@ -18297,13 +18297,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.566540+00:00",
+              "checked_at": "2026-11-11T12:46:17.937938+00:00",
               "source_ids": [
                 "public-pricing",
                 "billing"
               ],
-              "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-              "notes": "逐分量从本型号公开纳元价格以 Decimal 换算：未缓存输入 1.8、输出 10.8 CNY/百万 token；缓存价格未发布，不当作免费。"
+              "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+              "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
             },
             "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。",
             "time_basis": "request_started",
@@ -18313,13 +18313,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing",
             "billing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-          "notes": "逐分量从本型号公开纳元价格以 Decimal 换算：未缓存输入 1.8、输出 10.8 CNY/百万 token；缓存价格未发布，不当作免费。"
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+          "notes": "逐条以 Decimal 核对本产品价格簿31的纳元单价、unitSize、免费量和完整分时条件；与基线完全一致，未新增或调整计费分量。"
         },
         "notes": "取晨羽AI当前公开人民币价，不换汇、不继承采购厂商价格。未列费率分量不表示免费；未公开税费口径、逐型号首次生效时间或额外阶梯。费用按每个计费项向上取整到纳元。"
       },
@@ -18328,11 +18328,11 @@
         "rules": [],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.566540+00:00",
+          "checked_at": "2026-11-11T12:46:17.937938+00:00",
           "source_ids": [
             "public-pricing"
           ],
-          "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
+          "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
           "notes": "本产品已保存本平台独立按量价，不另指定订阅参考价。"
         },
         "notes": "已保存晨羽AI本产品公开按量价，不另设参考价。"
@@ -18354,13 +18354,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "protocol-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "独立读取本新增型号的实时 protocols，确认三种文本兼容面；没有从名称或其他本地部署型号继承，未实调。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "逐型号重新核对实时 protocols，并查本平台模型、文本兼容面和媒体入口文档；本轮协议集合与基线一致，未实调。"
           },
           "notes": "逐型号读取 public-models.protocols，覆盖本产品当前公开声明的文本兼容面或厂商面；不从原厂、价格或其他型号推导。Responses 与 Messages 专页均要求按实时逐模型徽标选择；临时无可用渠道可能返回 404，不能据此推定永久下架。"
         },
@@ -18375,8 +18375,8 @@
               "public-reasoning",
               "reasoning-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "本轮接口及本产品协议说明未提供该型号明确的思考配置；保留 unknown，不从同名原厂或通用透传补入。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮晨羽云实时清单未提供该型号独立 reasoning 元数据；本产品页面也未给出逐型号参数，继续 unknown，不从原厂或同族模型继承。"
           },
           "notes": "晨羽云未公开此型号 reasoning 配置；不能由 Image-PE 名称、底模或其他本地部署型号推断。"
         },
@@ -18385,13 +18385,13 @@
           "reported_value": "65536 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:00.566540+00:00",
+            "checked_at": "2026-11-11T12:46:17.937938+00:00",
             "source_ids": [
               "public-models",
               "context-chenyu-models"
             ],
-            "evidence": "evidence/chenyu-ai/2026-11-11-refresh.md",
-            "notes": "逐条确认本产品 contextLength/maxOutput；非文本生成接口另查其媒体文档，0 不写作零窗口或无限上限。"
+            "evidence": "evidence/chenyu-ai/2026-11-11-current.md",
+            "notes": "本轮逐型号重查本产品公开 contextLength/maxOutput；文本整数窗口与基线一致，媒体的零值结合相应生成接口文档确认无适用文本对话窗口。"
           },
           "notes": "本产品公开接口 contextLength 的整数 token 窗口；不作 K/M 换算，不继承原厂或把最大输出算作窗口。未公布套餐或扩展模式差异。 maxOutput=0 表示没有公开正整数上限，保存 null，不解释成零输出或无限制。"
         }

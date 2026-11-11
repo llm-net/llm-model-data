@@ -44,6 +44,10 @@ catalog schema_version=2 在同一 rule 内保存 `time_pricing`，时区为 `As
 
 来源型号、URL、同平台/原厂选择理由写进reference_origin；价格数字完整独立保存。这里表示“按量标价等价消耗”，不是订阅实际成本。既有plans套餐资料单独保留，不参与模型单价计算；本流程不追加订阅真实收费调查。
 
+Codex、Grok Build、Cursor、Claude Code 编程工具订阅，每次更新都须逐型号检查参考价。先从工具官方型号说明确认模型开发方及精确型号，再查同平台完整公开价表；无对应价时继续查开发方官网的 API 价格页、型号页和缓存计价文档。工具不公布 token 单价、本仓尚未收录原厂按量型号，都不能作为停止核价的理由。原厂无需先加入本仓才能用其官网价作参考；登记原厂 URL 和来源 ID、保存本地核对证据即可，已有对应按量条目时另存完整 `catalog_model` 身份。
+
+核对时区分普通、Fast、Preview、Contributor 等型号或服务条件，逐项查输入、输出、缓存读取和缓存写入；缓存 TTL、原币种、每百万或每千 token 单位也要有证据。匿名型号尚未确认开发方、原厂没有精确型号公开价、只剩历史价或仅有不符合本仓基准的促销价时，保留 `unknown`，证据列出已查官网、抓取时间、型号、可见价格条件与缺口；不能笼统写“订阅无价”，不能把工具限免当作原厂免费。参考价不证明原厂 API 与工具订阅的能力、上下文、协议或生命周期相同。
+
 明确映射：Kimi Code的k3、k3-256k按kimi-k3，highspeed按kimi-k2.7-code-highspeed。kimi-for-coding底模仍为K2.8 Preview，用户已明确指定按kimi-k2.7-code公开按量价做示意；不是K2.8官方报价。
 
 用户指定：OpenCode Go 全部型号取模型源头厂商官网公开按量价（中国厂商取国内官网人民币价，不换汇），不采用 Go 文档的用量上限换算价或 Zen 余额价；开发方按量目录已收录时保存 `catalog_model`。Grok Build 的 grok-4.7-build-fast 取 xAI 官网单列的 Grok 4.7 Fast 费率，它不是公开 API 型号，只登记 URL。

@@ -13,6 +13,7 @@
 - **协议面是每次更新的必查项**：先读 [docs/PROTOCOLS.md](docs/PROTOCOLS.md)，逐模型维护 `capabilities.interfaces` 与独立 `interface_assessment`，包括所有订阅产品。缺项明示 unknown / partial，不从价格、模态、原厂或整家平台能力推导。校验器会拒绝漏填、旧面名、缺证据和模态错配。
 - 同名模型在不同产品中的能力、可用性、单价逐份维护。价格完整重复保存，不做运行时继承。订阅参考价按下面明确顺序对齐，不用全局同名猜匹配。
 - usage_prices是按量产品公开计价；reference_prices是示意估价；plans是套餐资料。所有订阅模型usage_prices=not_applicable，只维护reference_prices，不核对实际扣费、AFP/CREDIT或额外使用费。
+- **编程工具订阅必查模型参考价**（Codex、Grok Build、Cursor、Claude Code）：逐型号按下述顺序核价，同平台缺价必须继续查对应模型方官网 API 价；不能因工具未标价或本仓未收录原厂型号就留空。完整核对输入、输出、缓存与媒体分量，写入 `reference_prices` 和 `reference_origin`；缺价记录已查官网及原因，优惠数字只写证据。详见[订阅核价](docs/PRICING.md#订阅模型统一使用按量参考价)。
 - 订阅参考顺序固定：同平台对应型号的按量价 → 模型开发方的公开按量价。先查同平台完整官方价表，不能因为本仓库按量清单没收录就跳到原厂。两处均无对应价格时保留unknown；只有用户明确指定时才采用其他型号作近似参考，不能自行猜价。每条写清reference_origin并完整保存数字；不自动换汇。
 - Kimi Code的kimi-for-coding（K2.8 Preview）按用户指定参考kimi-k2.7-code按量价；保留原底模身份和请求名，不冒充官方同价。
 - OpenCode Go 全部型号与 Grok Build 的 grok-4.7-build-fast 按用户指定取模型源头厂商官网价：Go 文档的用量换算价与 Zen 余额价不作参考，中国厂商取国内官网人民币价，Grok 4.7 Fast 取 xAI 官网单列的 Fast 费率。

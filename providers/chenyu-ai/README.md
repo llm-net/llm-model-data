@@ -6,7 +6,7 @@
 
 模型与价格的当前入口是 [模型页](https://chenyu.pro/api-docs/docs/models/)，页面从匿名 [公开模型接口](https://chenyu.pro/api/v1/public/models) 实时读取。常规更新先查这个接口中的精确请求 ID、协议面、上下文和价格行，不能只抓 HTML 的加载占位，也不能用设备发布目录代替当前可用清单。
 
-本轮逐模型核对见 [2026-11-11 证据](../../evidence/chenyu-ai/2026-11-11-refresh.md)，逐项核验日期以 catalog.json 中各独立 assessment 为准。实时清单缺项的历史记录保留但标明可用性未知，不把旧价格与能力视为本轮确认，也不据此断言永久退役。DeepSeek 价格行的 `conditions.timeBand` 按本平台发布的时段与每档金额保存；不能从原厂推造本平台未公开的节假日或其他档位。图片输入免费张数来自 `conditions.freeUnits`；视频 token、视频秒和语音计费字符保持独立单位。金额按纳元用 Decimal 精确换算，不使用浮点。
+最新逐模型复核见 [2026-11-11 再次查询证据](../../evidence/chenyu-ai/2026-11-11-current.md)，同日媒体参数核对范围见[此前证据](../../evidence/chenyu-ai/2026-11-11-refresh.md)，逐项核验日期以 catalog.json 中各独立 assessment 为准。实时清单缺项的历史记录保留但标明可用性未知，不把旧价格与能力视为本轮确认，也不据此断言永久退役。DeepSeek 价格行的 `conditions.timeBand` 按本平台发布的时段与每档金额保存；不能从原厂推造本平台未公开的节假日或其他档位。图片输入免费张数来自 `conditions.freeUnits`；视频 token、视频秒和语音计费字符保持独立单位。金额按纳元用 Decimal 精确换算，不使用浮点。
 
 先读取 provider.json 的官方来源入口；入口本身不代表当前事实已经核实。具体核对状态以 catalog.json 各条 verification 为准。
 

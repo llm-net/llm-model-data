@@ -578,6 +578,18 @@
       "url": "https://cursor.com/docs/models/gemini-4-carbon",
       "purpose": "models",
       "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "subscription-google-api-pricing",
+      "url": "https://aistudio.google.com/docs/pricing",
+      "purpose": "pricing",
+      "notes": "编程工具订阅参考价回查模型开发方完整API价表；区分Standard、Contributor和未来价格。"
+    },
+    {
+      "id": "subscription-google-carbon-intro",
+      "url": "https://aistudio.google.com/docs/whats-new-gemini-4-carbon",
+      "purpose": "pricing",
+      "notes": "Gemini 4 Carbon原厂推出优惠、截止日期与未来价说明；不能作为现行非促销标准基准。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

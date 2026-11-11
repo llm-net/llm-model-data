@@ -398,6 +398,18 @@
       "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra.md",
       "purpose": "models",
       "notes": "2026-10-29核对GPT-6.1 Terra精确型号、价格、窗口、协议与思考；见本轮证据。"
+    },
+    {
+      "id": "subscription-sol-api-model",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+      "purpose": "pricing",
+      "notes": "Codex缺价时逐型号查询原厂API；当前Sol为限时促销，标准基准缺项见订阅价格独立证据。"
+    },
+    {
+      "id": "subscription-image-api-caching",
+      "url": "https://developers.openai.com/api/docs/guides/image-generation.md",
+      "purpose": "pricing",
+      "notes": "Cached input pricing明确GPT Image 2缓存优惠仅适用于Responses，直接Images请求不适用；用于限定订阅参考价的唯一基准。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

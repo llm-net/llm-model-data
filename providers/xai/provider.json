@@ -518,6 +518,12 @@
       "url": "https://docs.x.ai/build/settings/reference",
       "purpose": "models",
       "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "subscription-image-quality-retirement",
+      "url": "https://docs.x.ai/developers/migration/imagine-image-quality-nov-2",
+      "purpose": "pricing",
+      "notes": "核对旧图像型号退役后的 low 价格、默认 auto 在生成和编辑的不同质量档；不据重定向新增订阅型号。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

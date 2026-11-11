@@ -4598,12 +4598,14 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [
-            "r1111-gemini-4-carbon"
+            "r1111-gemini-4-carbon",
+            "subscription-google-api-pricing",
+            "subscription-google-carbon-intro"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "本产品明确当前价为限期促销，不作为标准参考；不提前应用未来价格。"
+          "evidence": "evidence/cursor/2026-11-11-subscription-prices.md",
+          "notes": "已查Cursor本产品及Google原厂API完整价表；当前均为截至2026-11-30的推出优惠，2026-12-01起的常规价尚未生效，保留unknown。优惠数字及未来价格仅存本轮独立证据，不采用未来价或Contributor档。"
         },
-        "notes": "Cursor本产品明确当前为Google introductory费率，至2026-11-30；12月1日起4/0.20/20美元每百万token尚未生效。没有当前非促销标准价，保留unknown。"
+        "notes": "已查Cursor本产品及Google原厂API完整价表；当前均为截至2026-11-30的推出优惠，2026-12-01起的常规价尚未生效，保留unknown。优惠数字及未来价格仅存本轮独立证据，不采用未来价或Contributor档。"
       },
       "notes": "Cursor旧版Pro/Pro+/Ultra的Other Models可用；请求ID与上下文来自Cursor本产品页面，不继承Gemini Developer API。",
       "capabilities": {

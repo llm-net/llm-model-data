@@ -782,7 +782,7 @@
             "basis": "reference",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "xAI API Imagine Pricing 表中本型号的单一标准价。",
+            "selection": "xAI API 标准在线、1K 分辨率、low 质量；生成默认 auto 当前采用 low，编辑须显式指定 low 才属于本基准。",
             "rates": [
               {
                 "meter": "generated_images",
@@ -798,7 +798,25 @@
                   "minimum_units": null,
                   "rounding": "none",
                   "increment": null,
-                  "notes": "按返回的图片张数；编辑另对输入图计费，单价未查到，不在此基准内。"
+                  "notes": "按返回 data 中实际生成的图片张数；输入图另按实际提交张数计价，不按请求期望 n 代替出图量。"
+                }
+              },
+              {
+                "meter": "input_images",
+                "amount": "0.01",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "request",
+                  "fields": [
+                    "image",
+                    "images[]"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "none",
+                  "increment": null,
+                  "notes": "编辑按实际提交的输入图片张数；image 与 images 互斥，不能对同一图片重复计数。未公布独立免费量或最低量。"
                 }
               }
             ],
@@ -813,28 +831,36 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-11T12:47:02Z",
               "source_ids": [
-                "r1111-pricing"
+                "imagine-pricing",
+                "imagine-openapi",
+                "imagine-model-image2",
+                "imagine-image-generation",
+                "subscription-image-quality-retirement"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
+              "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
             },
-            "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
+            "notes": "按量等价消耗示意，不是订阅真实扣费。1K low 输出 0.04 USD/图，输入 0.01 USD/图；auto 编辑当前使用 medium，1K 输出为 0.06 USD/图，不属于本基准。2K low 输出为 0.06 USD/图，其他分辨率和质量档不另设规则。2026-11-02 退役的是旧 grok-imagine-image-quality 请求名，重定向到本型号 low，并非停用 low。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-11T12:47:02Z",
           "source_ids": [
-            "r1111-pricing"
+            "imagine-pricing",
+            "imagine-openapi",
+            "imagine-model-image2",
+            "imagine-image-generation",
+            "subscription-image-quality-retirement"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
+          "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
         },
-        "notes": "按量等价消耗示意，不是订阅真实扣费。"
+        "notes": "按量等价消耗示意，不是订阅真实扣费。1K low 输出 0.04 USD/图，输入 0.01 USD/图；auto 编辑当前使用 medium，1K 输出为 0.06 USD/图，不属于本基准。2K low 输出为 0.06 USD/图，其他分辨率和质量档不另设规则。2026-11-02 退役的是旧 grok-imagine-image-quality 请求名，重定向到本型号 low，并非停用 low。"
       },
       "notes": "Grok Imagine 图像型号。接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。",
       "capabilities": {
@@ -1533,7 +1559,7 @@
             "basis": "reference",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "xAI API Imagine Pricing 表中本型号的单一标准价。",
+            "selection": "xAI API 标准在线、默认 480p 视频生成；输出按秒，适用操作中的输入图片按张另计。",
             "rates": [
               {
                 "meter": "video_output_seconds",
@@ -1549,7 +1575,27 @@
                   "minimum_units": null,
                   "rounding": "unknown",
                   "increment": null,
-                  "notes": "查询结果没有按秒计量字段，秒数取 video.duration；imagine 总览称时长与分辨率都影响费用，价格表只列单一单价。"
+                  "notes": "按完成结果 video.duration 的实际输出秒数；默认 480p 为本基准，不能把请求期望 duration 当作已生成时长。官方未说明最小计费量和秒数取整。"
+                }
+              },
+              {
+                "meter": "input_images",
+                "amount": "0.01",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "request",
+                  "fields": [
+                    "image",
+                    "last_frame",
+                    "reference_images[]",
+                    "keyframes[].image"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "none",
+                  "increment": null,
+                  "notes": "按当前操作实际提交的首帧、尾帧、参考图或关键帧图片张数计量；字段受各操作支持范围约束，不跨操作重复计数。未公布独立免费量或最低量。"
                 }
               }
             ],
@@ -1564,28 +1610,38 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-11T12:47:02Z",
               "source_ids": [
-                "r1111-pricing"
+                "imagine-pricing",
+                "imagine-openapi",
+                "imagine-model-video15",
+                "imagine-video-generation",
+                "imagine-video-i2v",
+                "imagine-video-r2v"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
+              "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
             },
-            "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
+            "notes": "按量等价消耗示意，不是订阅真实扣费。480p 输出 0.08 USD/秒，输入图片 0.01 USD/图；720p 为 0.14 USD/秒、1080p 为 0.25 USD/秒，仅作档外说明。型号页明确预设音色输入免费，但没有对应按秒计量定义，不新增猜测的音频计价分量。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-11T12:47:02Z",
           "source_ids": [
-            "r1111-pricing"
+            "imagine-pricing",
+            "imagine-openapi",
+            "imagine-model-video15",
+            "imagine-video-generation",
+            "imagine-video-i2v",
+            "imagine-video-r2v"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
+          "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
         },
-        "notes": "按量等价消耗示意，不是订阅真实扣费。"
+        "notes": "按量等价消耗示意，不是订阅真实扣费。480p 输出 0.08 USD/秒，输入图片 0.01 USD/图；720p 为 0.14 USD/秒、1080p 为 0.25 USD/秒，仅作档外说明。型号页明确预设音色输入免费，但没有对应按秒计量定义，不新增猜测的音频计价分量。"
       },
       "notes": "Grok Imagine 视频型号。接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。",
       "capabilities": {
@@ -2241,7 +2297,7 @@
             "basis": "reference",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "xAI API Imagine Pricing 表中本型号的单一标准价。",
+            "selection": "xAI API 标准在线、480p 普通视频生成或编辑；输出按秒，适用操作中的输入图片按张、输入视频按秒另计；不含视频延长的促销价。",
             "rates": [
               {
                 "meter": "video_output_seconds",
@@ -2257,7 +2313,42 @@
                   "minimum_units": null,
                   "rounding": "unknown",
                   "increment": null,
-                  "notes": "查询结果没有按秒计量字段，秒数取 video.duration；imagine 总览称时长与分辨率都影响费用，价格表只列单一单价。"
+                  "notes": "按完成结果 video.duration 的实际输出秒数；普通生成默认 480p，编辑沿用输入分辨率，只有输出为 480p 才属于本基准。官方未说明最小计费量和秒数取整。"
+                }
+              },
+              {
+                "meter": "input_images",
+                "amount": "0.002",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "request",
+                  "fields": [
+                    "image",
+                    "reference_images[]"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "none",
+                  "increment": null,
+                  "notes": "按当前生成操作实际提交的首帧或参考图片张数计量；不跨操作重复计数。未公布独立免费量或最低量。"
+                }
+              },
+              {
+                "meter": "video_input_seconds",
+                "amount": "0.01",
+                "per": 1,
+                "unit": "second",
+                "quantity": {
+                  "source": "derived",
+                  "fields": [
+                    "video"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "普通视频编辑按 video 指向的输入媒体实际时长计秒；请求只提供媒体引用，未见独立输入秒数 usage 字段，需读取媒体时长，不能用输出时长或请求 duration 替代。免费量、最低量和取整未知；视频延长促销不纳入。"
                 }
               }
             ],
@@ -2272,28 +2363,40 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-11T12:47:02Z",
               "source_ids": [
-                "r1111-pricing"
+                "imagine-pricing",
+                "imagine-openapi",
+                "imagine-model-video",
+                "imagine-video-generation",
+                "imagine-video-i2v",
+                "imagine-video-r2v",
+                "imagine-video-editing"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
+              "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
             },
-            "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
+            "notes": "按量等价消耗示意，不是订阅真实扣费。480p 输出 0.05 USD/秒、输入图片 0.002 USD/图、输入视频 0.01 USD/秒；720p 输出为 0.07 USD/秒，不另设规则。Video Extension API 官方标为促销，不能将普通生成或编辑标准基准声称为延长任务的精确账单。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-11T12:47:02Z",
           "source_ids": [
-            "r1111-pricing"
+            "imagine-pricing",
+            "imagine-openapi",
+            "imagine-model-video",
+            "imagine-video-generation",
+            "imagine-video-i2v",
+            "imagine-video-r2v",
+            "imagine-video-editing"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
+          "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
         },
-        "notes": "按量等价消耗示意，不是订阅真实扣费。"
+        "notes": "按量等价消耗示意，不是订阅真实扣费。480p 输出 0.05 USD/秒、输入图片 0.002 USD/图、输入视频 0.01 USD/秒；720p 输出为 0.07 USD/秒，不另设规则。Video Extension API 官方标为促销，不能将普通生成或编辑标准基准声称为延长任务的精确账单。"
       },
       "notes": "Grok Imagine 视频型号。接口契约按 xAI 公开 API 文档；Grok Build 文档只写 /imagine、/imagine-video 命令与视频工具把上传地址「passes it to the API」，订阅令牌调用 api.x.ai 的 Imagine 端点未见公开说明，本次未实调。",
       "capabilities": {
