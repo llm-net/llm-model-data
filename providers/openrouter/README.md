@@ -6,6 +6,8 @@
 
 先读取 provider.json 的官方来源入口；入口本身不代表当前事实已经核实。具体核对状态以 catalog.json 各条 verification 为准。
 
+本次更新见 [2026-11-11 核对记录](../../evidence/openrouter/2026-11-11-refresh.md)；各字段的核对范围与保留的历史日期见该记录及 catalog.json。
+
 ## 独立产品
 
 - [api-global](offerings/api-global/catalog.json)
@@ -16,7 +18,7 @@
 
 ## 当前核价口径
 
-按模型级公开pricing保存唯一估算价，不维护端点价格。清单即收录范围，不设额外数量上限。 本次结论见[核对证据](../../evidence/openrouter/2026-09-16-audit.md)。
+按模型级公开pricing保存唯一估算价，不维护端点价格。清单即收录范围，不设额外数量上限。 历史核价记录见[核对证据](../../evidence/openrouter/2026-09-16-audit.md)。
 
 ## 后续排除
 
@@ -24,11 +26,11 @@
 
 ## 协议面核对
 
-每次更新必须按 [PROTOCOLS.md](../../docs/PROTOCOLS.md) 逐模型核对 `capabilities.interfaces` 与独立 `interface_assessment`，包括本家的所有订阅产品。不能从模型原厂、价格或同家其他产品继承协议；partial / unknown 必须进入候选报告。本轮证据见 [协议核对记录](../../evidence/openrouter/2026-09-16-protocols.md)。
+每次更新必须按 [PROTOCOLS.md](../../docs/PROTOCOLS.md) 逐模型核对 `capabilities.interfaces` 与独立 `interface_assessment`，包括本家的所有订阅产品。不能从模型原厂、价格或同家其他产品继承协议；partial / unknown 必须进入候选报告。历史协议专项见 [协议核对记录](../../evidence/openrouter/2026-09-16-protocols.md)。
 
 ## 思考能力核对
 
-每次更新同时按 [REASONING.md](../../docs/REASONING.md) 逐模型维护 `capabilities.reasoning`；官方参数、档位、开关、预算、默认值按产品及协议 / 工具入口独立核对，未证实的部分保留 unknown / partial，不能继承原厂 API。本轮记录见 [思考能力证据](../../evidence/openrouter/2026-09-16-reasoning.md)。
+每次更新同时按 [REASONING.md](../../docs/REASONING.md) 逐模型维护 `capabilities.reasoning`；官方参数、档位、开关、预算、默认值按产品及协议 / 工具入口独立核对，未证实的部分保留 unknown / partial，不能继承原厂 API。历史思考专项见 [思考能力证据](../../evidence/openrouter/2026-09-16-reasoning.md)。
 
 ## 上下文长度核对
 

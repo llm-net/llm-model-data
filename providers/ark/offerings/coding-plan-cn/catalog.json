@@ -180,171 +180,6 @@
       }
     },
     {
-      "id": "minimax-m3",
-      "request_id": "minimax-m3",
-      "display_name": "minimax-m3",
-      "modalities": [
-        "text"
-      ],
-      "availability": "active",
-      "alias_of": null,
-      "plan_ids": [],
-      "verification": {
-        "status": "verified",
-        "checked_at": "2026-10-23T22:10:47.985153Z",
-        "source_ids": [
-          "audit-md-coding-plan-personal-plan-overview",
-          "audit-md-coding-plan-personal-get-started",
-          "audit-md-coding-plan-personal-model-deprecation"
-        ],
-        "evidence": "evidence/ark/2026-10-24-audit.md",
-        "notes": "独立核对本订阅产品支持表；不从按量产品继承能力。 已停止对新用户提供服务；EOS 2026-11-02 14:00 UTC+8 尚未到期，保留存量。"
-      },
-      "usage_prices": {
-        "status": "not_applicable",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/ark/2026-09-16-alignment.md",
-          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
-        },
-        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
-      },
-      "reference_prices": {
-        "status": "published",
-        "rules": [
-          {
-            "id": "baseline",
-            "basis": "reference",
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "开发方按量参考；标准在线、输入不超过512K；M3使用官方永久降价后的价格。缓存写入TTL未核清不填。",
-            "rates": [
-              {
-                "meter": "input_uncached_tokens",
-                "amount": "2.1",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "input_cached_tokens",
-                "amount": "0.42",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "output_tokens",
-                "amount": "8.4",
-                "per": 1000000,
-                "unit": "token"
-              }
-            ],
-            "effective_from": null,
-            "effective_until": null,
-            "billing_period": null,
-            "charge_unit": null,
-            "reference_origin": {
-              "url": "https://platform.minimax.cn/docs/pricing/overview",
-              "subject": "MiniMax-M3",
-              "reason": "已检查方舟完整按量价表无对应价格；取开发方公开价。",
-              "catalog_model": {
-                "provider_id": "minimax",
-                "offering_id": "api-cn",
-                "model_id": "minimax-m3",
-                "selection": "exact"
-              }
-            },
-            "verification": {
-              "status": "verified",
-              "checked_at": "2026-10-23T22:10:47.985153Z",
-              "source_ids": [
-                "audit-md-model-pricing",
-                "alignment-minimax-current"
-              ],
-              "evidence": "evidence/ark/2026-10-24-audit.md",
-              "notes": "本轮同平台标准按量价；仅选单一估算档，非全条件精确结算。"
-            },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
-            "time_basis": "unknown",
-            "charge_on": "unknown"
-          }
-        ],
-        "verification": {
-          "status": "verified",
-          "checked_at": "2026-10-23T22:10:47.985153Z",
-          "source_ids": [
-            "audit-md-model-pricing",
-            "alignment-minimax-current"
-          ],
-          "evidence": "evidence/ark/2026-10-24-audit.md",
-          "notes": "本轮同平台标准按量价；仅选单一估算档，非全条件精确结算。"
-        },
-        "notes": "仅公开按量参考，不是本产品实际扣费。"
-      },
-      "notes": "独立核对本订阅产品支持表；不从按量产品继承能力。 已停止对新用户提供服务；EOS 2026-11-02 14:00 UTC+8 尚未到期，保留存量。",
-      "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
-        "max_output_tokens": null,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
-        "interfaces": [
-          "openai_chat",
-          "openai_responses",
-          "anthropic_messages"
-        ],
-        "interface_assessment": {
-          "coverage": "complete",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:10:47.985153Z",
-            "source_ids": [
-              "audit-md-coding-plan-personal-plan-overview",
-              "audit-md-coding-plan-personal-get-started",
-              "audit-md-coding-plan-personal-ai-codex"
-            ],
-            "evidence": "evidence/ark/2026-10-24-audit.md",
-            "notes": "本轮核对官方当前正文；未使用真实 Key 实调。"
-          },
-          "notes": "本产品快速接入明确 Chat/Messages 兼容，Codex专页 wire_api=responses。未来下线型号由本产品现行概览确认仍供存量。"
-        },
-        "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
-          "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [
-              "audit-md-coding-plan-personal-plan-overview",
-              "audit-md-coding-plan-personal-get-started",
-              "audit-md-coding-plan-personal-ai-codex"
-            ],
-            "evidence": "evidence/ark/2026-10-24-audit.md",
-            "notes": "本轮检查本产品概览/快速开始/Codex；未取得精确本型号的全协议思考控制。通用工具low/medium/high不作为该型支持枚举。"
-          },
-          "notes": "本轮检查本产品概览/快速开始/Codex；未取得精确本型号的全协议思考控制。通用工具low/medium/high不作为该型支持枚举。"
-        },
-        "context_assessment": {
-          "status": "partial",
-          "reported_value": "1024k",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:10:47.985153Z",
-            "source_ids": [
-              "audit-md-coding-plan-personal-plan-overview"
-            ],
-            "evidence": "evidence/ark/2026-10-24-audit.md",
-            "notes": "本轮核对官方当前正文；未使用真实 Key 实调。"
-          },
-          "notes": "本产品精确型号行标称窗口 1024k；未给出缩写换算依据，不自行计算精确整数；输出上限、客户端压缩阈值和计价阶梯不是上下文。"
-        }
-      }
-    },
-    {
       "id": "glm-5-3",
       "request_id": "glm-5.3",
       "display_name": "glm-5.3",
@@ -1084,13 +919,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:10:47.985153Z",
+        "checked_at": "2026-11-11T11:23:14.812508+00:00",
         "source_ids": [
-          "audit-md-coding-plan-personal-plan-overview",
-          "audit-md-coding-plan-personal-get-started"
+          "audit-md-coding-plan-personal-model-deprecation"
         ],
-        "evidence": "evidence/ark/2026-10-24-audit.md",
-        "notes": "独立核对本订阅产品支持表；不从按量产品继承能力。"
+        "evidence": "evidence/ark/2026-11-11-refresh.md",
+        "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1183,7 +1017,7 @@
         },
         "notes": "仅公开按量参考，不是本产品实际扣费。"
       },
-      "notes": "独立核对本订阅产品支持表；不从按量产品继承能力。",
+      "notes": "独立核对本订阅产品支持表；不从按量产品继承能力。 2026-11-11 本产品公告：11月11日10:00（UTC+8）停止新用户接入，11月25日14:00停止服务；现保留存量服务，不提前删除。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,

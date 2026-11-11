@@ -566,6 +566,18 @@
       "url": "https://cursor.com/install",
       "purpose": "models",
       "notes": "官方安装脚本定位当前 CLI；只读检查 AgentService.Run 双向流与 Composer Fast 请求名，版本和摘要在证据元数据。"
+    },
+    {
+      "id": "r1111-claude-fable-5-2",
+      "url": "https://cursor.com/docs/models/claude-fable-5-2",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-gemini-4-carbon",
+      "url": "https://cursor.com/docs/models/gemini-4-carbon",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

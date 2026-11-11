@@ -464,6 +464,60 @@
       "url": "https://x.ai/cli/grok-1.0.60-linux-x86_64",
       "purpose": "models",
       "notes": "Grok Build 当前公开资料与 CLI 静态目录复核；UTC 时间、逐型号范围与缺项见 evidence/xai/2026-10-16-grok-build-models.json。"
+    },
+    {
+      "id": "r1111-pricing",
+      "url": "https://docs.x.ai/developers/pricing",
+      "purpose": "pricing",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-47",
+      "url": "https://docs.x.ai/developers/models/grok-4.7",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-46",
+      "url": "https://docs.x.ai/developers/models/grok-4.6",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-45",
+      "url": "https://docs.x.ai/developers/models/grok-4.5",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-release",
+      "url": "https://docs.x.ai/developers/release-notes",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-chat",
+      "url": "https://docs.x.ai/developers/model-capabilities/legacy/chat-completions",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-reasoning",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/reasoning",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-build",
+      "url": "https://docs.x.ai/build/overview",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-build-settings",
+      "url": "https://docs.x.ai/build/settings/reference",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

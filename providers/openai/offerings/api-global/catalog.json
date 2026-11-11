@@ -7,11 +7,13 @@
   "market": "global",
   "coverage": "partial",
   "verification": {
-    "status": "needs_review",
-    "checked_at": null,
-    "source_ids": [],
-    "evidence": "evidence/openai/2026-09-16-audit.md",
-    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+    "status": "verified",
+    "checked_at": "2026-11-11T11:22:59.756511+00:00",
+    "source_ids": [
+      "r1024-openai-pricing"
+    ],
+    "evidence": "evidence/openai/2026-11-11-refresh.md",
+    "notes": "本产品现有维护清单逐型号复核；未重获的订阅目录/私有契约保留原成功日期，详见各字段与本轮证据。"
   },
   "plans": [],
   "models": [
@@ -27,13 +29,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.028041+00:00",
+        "checked_at": "2026-11-11T11:22:59.755945+00:00",
         "source_ids": [
           "r1024-openai-52",
           "r1024-openai-deprecations"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
         "status": "published",
@@ -71,12 +73,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
+                "r1024-openai-52",
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
             "time_basis": "unknown",
@@ -85,12 +88,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
+            "r1024-openai-52",
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -125,12 +129,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.027104+00:00",
+            "checked_at": "2026-11-11T11:22:59.754922+00:00",
             "source_ids": [
               "r1024-openai-52"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本型号 Endpoints 明列 Chat Completions 与 Responses；未发现 Messages 面。"
         },
@@ -189,13 +193,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.030258+00:00",
+            "checked_at": "2026-11-11T11:22:59.754922+00:00",
             "source_ids": [
-              "r1024-openai-52",
-              "r1024-openai-latest"
+              "r1024-openai-52"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "GPT-5.2 按量模型的官方五档；none 关闭思考。不是 Codex 订阅设置。"
         },
@@ -204,12 +207,12 @@
           "reported_value": "400,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.027104+00:00",
+            "checked_at": "2026-11-11T11:22:59.754922+00:00",
             "source_ids": [
               "r1024-openai-52"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方整数上下文窗口；128,000 是独立输出上限。"
         }
@@ -227,13 +230,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.029488+00:00",
+        "checked_at": "2026-11-11T11:22:59.757072+00:00",
         "source_ids": [
           "r1024-openai-astra",
           "r1024-openai-deprecations"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
         "status": "published",
@@ -277,12 +280,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.757072+00:00",
               "source_ids": [
+                "r1024-openai-astra",
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。",
             "time_basis": "unknown",
@@ -291,12 +295,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.757072+00:00",
           "source_ids": [
+            "r1024-openai-astra",
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。"
       },
@@ -334,12 +339,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.029488+00:00",
+            "checked_at": "2026-11-11T11:22:59.757072+00:00",
             "source_ids": [
               "r1024-openai-astra"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本型号明列 Chat Completions 与 Responses；Astra/6.1 Sol 的 Chat 不支持工具，Sol/Luna 的 Chat 工具仅在 none 下支持。Messages 未确认支持。"
         },
@@ -348,12 +353,12 @@
           "reported_value": "1,050,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.029488+00:00",
+            "checked_at": "2026-11-11T11:22:59.757072+00:00",
             "source_ids": [
               "r1024-openai-astra"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方整数总窗口；最大输入922,000与最大输出128,000独立，不从价阶272K推算窗口。"
         },
@@ -412,13 +417,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.030258+00:00",
+            "checked_at": "2026-11-11T11:22:59.757072+00:00",
             "source_ids": [
-              "r1024-openai-astra",
-              "r1024-openai-latest"
+              "r1024-openai-astra"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Astra 本轮型号页未明确裸请求默认档位，保留未知。"
         }
@@ -436,13 +440,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.030920+00:00",
+        "checked_at": "2026-11-11T11:22:59.758251+00:00",
         "source_ids": [
           "r1024-openai-sol61",
           "r1024-openai-deprecations"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
         "status": "published",
@@ -486,12 +490,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.758251+00:00",
               "source_ids": [
+                "r1024-openai-sol61",
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。",
             "time_basis": "unknown",
@@ -500,12 +505,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.758251+00:00",
           "source_ids": [
+            "r1024-openai-sol61",
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。"
       },
@@ -543,12 +549,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.030920+00:00",
+            "checked_at": "2026-11-11T11:22:59.758251+00:00",
             "source_ids": [
               "r1024-openai-sol61"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本型号明列 Chat Completions 与 Responses；Astra/6.1 Sol 的 Chat 不支持工具，Sol/Luna 的 Chat 工具仅在 none 下支持。Messages 未确认支持。"
         },
@@ -557,12 +563,12 @@
           "reported_value": "1,050,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.030920+00:00",
+            "checked_at": "2026-11-11T11:22:59.758251+00:00",
             "source_ids": [
               "r1024-openai-sol61"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方整数总窗口；最大输入922,000与最大输出128,000独立，不从价阶272K推算窗口。"
         },
@@ -621,13 +627,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.030920+00:00",
+            "checked_at": "2026-11-11T11:22:59.758251+00:00",
             "source_ids": [
-              "r1024-openai-sol61",
-              "r1024-openai-latest"
+              "r1024-openai-sol61"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "逐型号 API 档位与默认 medium；none 是否可用按本型号确定，不继承 Codex。"
         }
@@ -645,13 +650,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.031575+00:00",
+        "checked_at": "2026-11-11T11:22:59.758890+00:00",
         "source_ids": [
           "r1024-openai-sol6",
           "r1024-openai-deprecations"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
         "status": "published",
@@ -695,12 +700,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.758890+00:00",
               "source_ids": [
+                "r1024-openai-sol6",
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。",
             "time_basis": "unknown",
@@ -709,12 +715,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.758890+00:00",
           "source_ids": [
+            "r1024-openai-sol6",
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。"
       },
@@ -752,12 +759,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.031575+00:00",
+            "checked_at": "2026-11-11T11:22:59.758890+00:00",
             "source_ids": [
               "r1024-openai-sol6"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本型号明列 Chat Completions 与 Responses；Astra/6.1 Sol 的 Chat 不支持工具，Sol/Luna 的 Chat 工具仅在 none 下支持。Messages 未确认支持。"
         },
@@ -766,12 +773,12 @@
           "reported_value": "1,050,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.031575+00:00",
+            "checked_at": "2026-11-11T11:22:59.758890+00:00",
             "source_ids": [
               "r1024-openai-sol6"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方整数总窗口；最大输入922,000与最大输出128,000独立，不从价阶272K推算窗口。"
         },
@@ -832,13 +839,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.031575+00:00",
+            "checked_at": "2026-11-11T11:22:59.758890+00:00",
             "source_ids": [
-              "r1024-openai-sol6",
-              "r1024-openai-latest"
+              "r1024-openai-sol6"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "逐型号 API 档位与默认 medium；none 是否可用按本型号确定，不继承 Codex。"
         }
@@ -856,13 +862,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.032196+00:00",
+        "checked_at": "2026-11-11T11:22:59.759708+00:00",
         "source_ids": [
           "r1024-openai-luna",
           "r1024-openai-deprecations"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
         "status": "published",
@@ -906,12 +912,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.759708+00:00",
               "source_ids": [
+                "r1024-openai-luna",
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。",
             "time_basis": "unknown",
@@ -920,12 +927,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.759708+00:00",
           "source_ids": [
+            "r1024-openai-luna",
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。"
       },
@@ -963,12 +971,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.032196+00:00",
+            "checked_at": "2026-11-11T11:22:59.759708+00:00",
             "source_ids": [
               "r1024-openai-luna"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本型号明列 Chat Completions 与 Responses；Astra/6.1 Sol 的 Chat 不支持工具，Sol/Luna 的 Chat 工具仅在 none 下支持。Messages 未确认支持。"
         },
@@ -977,12 +985,12 @@
           "reported_value": "1,050,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.032196+00:00",
+            "checked_at": "2026-11-11T11:22:59.759708+00:00",
             "source_ids": [
               "r1024-openai-luna"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方整数总窗口；最大输入922,000与最大输出128,000独立，不从价阶272K推算窗口。"
         },
@@ -1043,13 +1051,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.032196+00:00",
+            "checked_at": "2026-11-11T11:22:59.759708+00:00",
             "source_ids": [
-              "r1024-openai-luna",
-              "r1024-openai-latest"
+              "r1024-openai-luna"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "逐型号 API 档位与默认 medium；none 是否可用按本型号确定，不继承 Codex。"
         }
@@ -1067,12 +1074,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:56:56.484667+00:00",
+        "checked_at": "2026-11-11T11:23:00.920150+00:00",
         "source_ids": [
-          "r1029-openai-terra61"
+          "r1029-openai-terra61",
+          "r1024-openai-deprecations"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
         "status": "published",
@@ -1116,13 +1124,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:56:56.484667+00:00",
+              "checked_at": "2026-11-11T11:23:00.920150+00:00",
               "source_ids": [
                 "r1029-openai-terra61",
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台Standard短上下文；30分钟缓存写入为基准，12小时写入2.50美元/百万token不并列；提示超过272K时输入及缓存2倍、输出1.5倍。",
             "time_basis": "unknown",
@@ -1131,13 +1139,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:56:56.484667+00:00",
+          "checked_at": "2026-11-11T11:23:00.920150+00:00",
           "source_ids": [
             "r1029-openai-terra61",
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台Standard短上下文；30分钟缓存写入为基准，12小时写入2.50美元/百万token不并列；提示超过272K时输入及缓存2倍、输出1.5倍。"
       },
@@ -1174,13 +1182,12 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:56:56.484667+00:00",
+            "checked_at": "2026-11-11T11:23:00.920150+00:00",
             "source_ids": [
-              "r1029-openai-terra61",
-              "r1024-openai-latest"
+              "r1029-openai-terra61"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本型号明确支持Chat Completions与Responses；工具调用仅Responses。未确认Messages。"
         },
@@ -1189,13 +1196,12 @@
           "reported_value": "1,050,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:56:56.484667+00:00",
+            "checked_at": "2026-11-11T11:23:00.920150+00:00",
             "source_ids": [
-              "r1029-openai-terra61",
-              "r1024-openai-latest"
+              "r1029-openai-terra61"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方整数总窗口；最大输入922,000与最大输出128,000独立，不从价阶272K推算窗口。"
         },
@@ -1256,13 +1262,12 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:56:56.484667+00:00",
+            "checked_at": "2026-11-11T11:23:00.920150+00:00",
             "source_ids": [
-              "r1029-openai-terra61",
-              "r1024-openai-latest"
+              "r1029-openai-terra61"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "逐型号页与GPT-6指南确认六档、默认medium及none关闭；Chat与Responses字段分别登记。"
         }

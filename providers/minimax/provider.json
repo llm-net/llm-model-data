@@ -356,6 +356,24 @@
       "url": "https://platform.minimax.cn/docs/api-reference/text-post",
       "purpose": "models",
       "notes": "HTML 文本合成页在标题下独立标 deprecated；Markdown 导出缺失顶层标记，须结合 HTML 判定。"
+    },
+    {
+      "id": "refresh-h3-image-edit",
+      "url": "https://platform.minimax.cn/docs/api-reference/image-generation-h3-edits.md",
+      "purpose": "models",
+      "notes": "2026-11-11 本轮独立官方核对；范围与限制见对应refresh证据。"
+    },
+    {
+      "id": "refresh-h3-image-generate",
+      "url": "https://platform.minimax.cn/docs/api-reference/image-generation-h3-generations.md",
+      "purpose": "models",
+      "notes": "2026-11-11 本轮独立官方核对；范围与限制见对应refresh证据。"
+    },
+    {
+      "id": "refresh-pricing-md",
+      "url": "https://platform.minimax.cn/docs/pricing/overview.md",
+      "purpose": "pricing",
+      "notes": "2026-11-11 本轮独立官方核对；范围与限制见对应refresh证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

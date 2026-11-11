@@ -302,6 +302,66 @@
       "url": "https://code.claude.com/docs/en/llm-gateway-protocol",
       "purpose": "models",
       "notes": "Claude Code 官方 Anthropic Messages 传输契约；不从按量 API 推导其他协议面。"
+    },
+    {
+      "id": "r1111-opus-5",
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-sonnet-5",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-opus-5-5",
+      "url": "https://platform.claude.com/docs/en/models/opus-5-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-haiku-4-5",
+      "url": "https://platform.claude.com/docs/en/models/haiku-4-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-fable-5-1",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-fable-5",
+      "url": "https://platform.claude.com/docs/en/models/fable-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-sonnet-5-5",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-haiku-5-5",
+      "url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-fable-5-2",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-2/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1111-thinking",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/thinking.md",
+      "purpose": "models",
+      "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

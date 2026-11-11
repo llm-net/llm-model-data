@@ -7,11 +7,13 @@
   "market": "global",
   "coverage": "partial",
   "verification": {
-    "status": "needs_review",
-    "checked_at": null,
-    "source_ids": [],
-    "evidence": "evidence/xai/2026-09-16-audit.md",
-    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+    "status": "verified",
+    "checked_at": "2026-11-11T11:24:10.522909+00:00",
+    "source_ids": [
+      "r1111-build"
+    ],
+    "evidence": "evidence/xai/2026-11-11-refresh.md",
+    "notes": "本产品现有维护清单逐型号复核；未重获的订阅目录/私有契约保留原成功日期，详见各字段与本轮证据。"
   },
   "plans": [],
   "models": [
@@ -93,12 +95,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:25.382515+00:00",
+              "checked_at": "2026-11-11T11:24:10.105870+00:00",
               "source_ids": [
-                "r1024-xai-pricing"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/xai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -107,12 +109,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:25.382515+00:00",
+          "checked_at": "2026-11-11T11:24:10.105870+00:00",
           "source_ids": [
-            "r1024-xai-pricing"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/xai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -270,12 +272,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:25.382515+00:00",
+              "checked_at": "2026-11-11T11:24:10.105870+00:00",
               "source_ids": [
-                "r1024-xai-pricing"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/xai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官方文档未出现 grok-4.7-build-fast 字样，对应关系依据展示名 Grok 4.7 Fast 与 xAI 的 Grok Build 专供说明。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -284,12 +286,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:25.382515+00:00",
+          "checked_at": "2026-11-11T11:24:10.105870+00:00",
           "source_ids": [
-            "r1024-xai-pricing"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/xai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "开发方官网价参考；非公开 API 型号，不能凭此调用 xAI API。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -453,12 +455,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:25.382515+00:00",
+              "checked_at": "2026-11-11T11:24:10.105870+00:00",
               "source_ids": [
-                "r1024-xai-pricing"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/xai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -467,12 +469,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:25.382515+00:00",
+          "checked_at": "2026-11-11T11:24:10.105870+00:00",
           "source_ids": [
-            "r1024-xai-pricing"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/xai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -636,12 +638,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:25.382515+00:00",
+              "checked_at": "2026-11-11T11:24:10.105870+00:00",
               "source_ids": [
-                "r1024-xai-pricing"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/xai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -650,12 +652,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:25.382515+00:00",
+          "checked_at": "2026-11-11T11:24:10.105870+00:00",
           "source_ids": [
-            "r1024-xai-pricing"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/xai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -753,9 +755,12 @@
       "verification": {
         "status": "needs_review",
         "checked_at": null,
-        "source_ids": [],
-        "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-        "notes": "型号在 xAI 官方型号表中存在；Grok Build 文档未写 /imagine 使用哪个型号，订阅内可用性未确认。"
+        "source_ids": [
+          "r1111-build",
+          "build-commands"
+        ],
+        "evidence": "evidence/xai/2026-11-11-refresh.md",
+        "notes": "公开资料未确认本订阅命令对应哪一个Imagine型号；availability仍unknown。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -808,12 +813,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:25.382515+00:00",
+              "checked_at": "2026-11-11T11:24:10.105870+00:00",
               "source_ids": [
-                "r1024-xai-pricing"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/xai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
             "time_basis": "unknown",
@@ -822,12 +827,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:25.382515+00:00",
+          "checked_at": "2026-11-11T11:24:10.105870+00:00",
           "source_ids": [
-            "r1024-xai-pricing"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/xai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。"
       },
@@ -871,8 +876,8 @@
             "source_ids": [
               "imagine-model-image2"
             ],
-            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-            "notes": "思考能力独立核对。"
+            "evidence": "evidence/xai/2026-11-11-refresh.md",
+            "notes": "本型号公开型号页/媒体指南仍未公布思考控制；订阅通道能力亦未知。"
           },
           "notes": "型号页与 Imagine 指南没有思考控制资料；不按模态推断不支持。"
         },
@@ -1471,7 +1476,7 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T02:02:42Z",
+            "checked_at": "2026-11-11T11:23:04.521966+00:00",
             "source_ids": [
               "imagine-image-generation",
               "imagine-image-editing",
@@ -1481,8 +1486,8 @@
               "imagine-model-image2",
               "build-commands"
             ],
-            "evidence": "evidence/xai/2026-10-29-refresh.md",
-            "notes": "重新核对当前公开 API 指南、REST 与 OpenAPI 的操作、输入、输出和参数；仅确认这些公开 API 字段，订阅通道映射及授权仍未证实，保持 partial；未实调。"
+            "evidence": "evidence/xai/2026-11-11-refresh.md",
+            "notes": "重新核对当前公开API的操作、输入、输出与参数；订阅通道映射和授权仍未证实，保持partial，未实调。"
           },
           "notes": "缺口：订阅通道未经公开文档证实与实调；quality、resolution 取值存在文档冲突（见参数说明）；提示词长度、输入图大小、URL 有效期、像素表未查到。"
         }
@@ -1501,9 +1506,12 @@
       "verification": {
         "status": "needs_review",
         "checked_at": null,
-        "source_ids": [],
-        "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-        "notes": "型号在 xAI 官方型号表中存在；Grok Build 文档未写 /imagine 使用哪个型号，订阅内可用性未确认。"
+        "source_ids": [
+          "r1111-build",
+          "build-commands"
+        ],
+        "evidence": "evidence/xai/2026-11-11-refresh.md",
+        "notes": "公开资料未确认本订阅命令对应哪一个Imagine型号；availability仍unknown。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1556,12 +1564,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:25.382515+00:00",
+              "checked_at": "2026-11-11T11:24:10.105870+00:00",
               "source_ids": [
-                "r1024-xai-pricing"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/xai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
             "time_basis": "unknown",
@@ -1570,12 +1578,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:25.382515+00:00",
+          "checked_at": "2026-11-11T11:24:10.105870+00:00",
           "source_ids": [
-            "r1024-xai-pricing"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/xai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。"
       },
@@ -1619,8 +1627,8 @@
             "source_ids": [
               "imagine-model-video15"
             ],
-            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-            "notes": "思考能力独立核对。"
+            "evidence": "evidence/xai/2026-11-11-refresh.md",
+            "notes": "本型号公开型号页/媒体指南仍未公布思考控制；订阅通道能力亦未知。"
           },
           "notes": "型号页与 Imagine 指南没有思考控制资料；不按模态推断不支持。"
         },
@@ -2174,7 +2182,7 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T02:02:42Z",
+            "checked_at": "2026-11-11T11:23:04.539366+00:00",
             "source_ids": [
               "imagine-video-generation",
               "imagine-video-i2v",
@@ -2186,8 +2194,8 @@
               "build-commands",
               "build-zdr-video"
             ],
-            "evidence": "evidence/xai/2026-10-29-refresh.md",
-            "notes": "重新核对当前公开 API 指南、REST 与 OpenAPI 的操作、输入、输出和参数；仅确认这些公开 API 字段，订阅通道映射及授权仍未证实，保持 partial；未实调。"
+            "evidence": "evidence/xai/2026-11-11-refresh.md",
+            "notes": "重新核对当前公开API的操作、输入、输出与参数；订阅通道映射和授权仍未证实，保持partial，未实调。"
           },
           "notes": "缺口：订阅通道未经公开文档证实与实调；last_frame、generate_audio 只在指南不在 OpenAPI；编辑页与延长页适用表列 Classic，但延长页一处 SDK 示例写 1.5，存在适用型号冲突，未列入 1.5 操作；keyframes 规则已在首尾帧操作说明记录，未结构化全部组合；视频大小上限、URL 有效期、seed 未查到。"
         }
@@ -2206,9 +2214,12 @@
       "verification": {
         "status": "needs_review",
         "checked_at": null,
-        "source_ids": [],
-        "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-        "notes": "型号在 xAI 官方型号表中存在；Grok Build 文档未写 /imagine 使用哪个型号，订阅内可用性未确认。"
+        "source_ids": [
+          "r1111-build",
+          "build-commands"
+        ],
+        "evidence": "evidence/xai/2026-11-11-refresh.md",
+        "notes": "公开资料未确认本订阅命令对应哪一个Imagine型号；availability仍unknown。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2261,12 +2272,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:25.382515+00:00",
+              "checked_at": "2026-11-11T11:24:10.105870+00:00",
               "source_ids": [
-                "r1024-xai-pricing"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/xai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费；Grok Build 的 SuperGrok 用量池口径未公开。",
             "time_basis": "unknown",
@@ -2275,12 +2286,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:25.382515+00:00",
+          "checked_at": "2026-11-11T11:24:10.105870+00:00",
           "source_ids": [
-            "r1024-xai-pricing"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/xai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。"
       },
@@ -2325,8 +2336,8 @@
             "source_ids": [
               "imagine-model-video"
             ],
-            "evidence": "evidence/xai/2026-09-28-imagine-media-io.md",
-            "notes": "思考能力独立核对。"
+            "evidence": "evidence/xai/2026-11-11-refresh.md",
+            "notes": "本型号公开型号页/媒体指南仍未公布思考控制；订阅通道能力亦未知。"
           },
           "notes": "型号页与 Imagine 指南没有思考控制资料；不按模态推断不支持。"
         },
@@ -2847,7 +2858,7 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T02:02:42Z",
+            "checked_at": "2026-11-11T11:23:04.539366+00:00",
             "source_ids": [
               "imagine-video-generation",
               "imagine-video-i2v",
@@ -2860,8 +2871,8 @@
               "build-commands",
               "build-zdr-video"
             ],
-            "evidence": "evidence/xai/2026-10-29-refresh.md",
-            "notes": "重新核对当前公开 API 指南、REST 与 OpenAPI 的操作、输入、输出和参数；仅确认这些公开 API 字段，订阅通道映射及授权仍未证实，保持 partial；未实调。"
+            "evidence": "evidence/xai/2026-11-11-refresh.md",
+            "notes": "重新核对当前公开API的操作、输入、输出与参数；订阅通道映射和授权仍未证实，保持partial，未实调。"
           },
           "notes": "缺口：订阅通道未经公开文档证实与实调；generate_audio 只在指南不在 OpenAPI；/v1/video-generation-models 示例输入模态只有 text、image，与型号页不一致；视频大小上限、URL 有效期、seed 未查到。"
         }

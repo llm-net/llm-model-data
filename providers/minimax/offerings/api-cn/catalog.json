@@ -3031,7 +3031,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化（改善数字朗读，略增延迟），默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -3254,6 +3254,20 @@
                   "default": false,
                   "required": false,
                   "notes": "在音频末尾添加节奏标识，仅非流式生效。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 非流式（stream=false）。参考页另列备用地址 https://api-bj.minimaxi.com/v1/t2a_v2。"
@@ -3424,7 +3438,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化，默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -3634,6 +3648,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级（仅 stream=true）。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 流式（stream=true），与非流式同一路径；因 mode、取回方式及 output_format / aigc_watermark / stream_options / force_cbr / word_streaming 的适用范围不同，单列为操作。"
@@ -3769,7 +3797,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -3979,6 +4007,20 @@
                   "default": false,
                   "required": false,
                   "notes": "仅 speech-2.8 系列：true 模型侧不切分文本连续推理（长文本韵律更自然），false 切分后并发推理（延迟更低）。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 单向流式：connected_success → task_start / task_started → task_continue / task_continued（分块音频）→ task_finish / task_finished（立即关闭连接）；失败返回 task_failed。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -4114,7 +4156,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -4335,6 +4377,20 @@
                   "default": null,
                   "required": false,
                   "notes": "客户端生成的会话 id，可不传（服务端以 connect_id 兜底），仅透传回显。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 双向流式（文本流式输入）：task_start 参数与 /ws/v1/t2a_v2 完全一致；另有 task_flush（催出残留、会话继续）、task_cancel（打断后可继续）；task_finish 先合成残留再关闭。空闲约 120 秒关闭（2201），服务端不主动 ping；2205 表示待合成文本积压（软失败，稍后重发）。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -4927,21 +4983,16 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T04:48:20Z",
+            "checked_at": "2026-11-11T11:23:23.568689+00:00",
             "source_ids": [
               "media-speech-http",
               "media-speech-ws",
-              "media-speech-ws-bidi",
-              "media-speech-async",
-              "media-speech-guide",
-              "media-speech-async-guide",
-              "media-voice-list",
-              "media-api-overview"
+              "media-speech-ws-bidi"
             ],
-            "evidence": "evidence/minimax/2026-09-28-media-io.md",
-            "notes": "仅核对媒体输入输出契约（官方文档 .md 与 OpenAPI / AsyncAPI 源），未用真实 Key 实调；不刷新模型身份、价格、协议面或其他能力的核对结论。"
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本次逐接口核对新增规范化参数与语言枚举；其他参数沿用既有独立证据，原缺口仍保留。"
           },
-          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-2.8：支持语气词标签与 continuous_sound；emotion 不含 whisper，fluent 存疑。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。"
+          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-2.8：支持语气词标签与 continuous_sound；emotion 不含 whisper，fluent 存疑。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。 本次仅补HTTP/WS当前明示字段；异步接口未明示新字段，不跨接口继承。"
         }
       }
     },
@@ -5247,7 +5298,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化（改善数字朗读，略增延迟），默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -5470,6 +5521,20 @@
                   "default": false,
                   "required": false,
                   "notes": "在音频末尾添加节奏标识，仅非流式生效。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 非流式（stream=false）。参考页另列备用地址 https://api-bj.minimaxi.com/v1/t2a_v2。"
@@ -5640,7 +5705,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化，默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -5850,6 +5915,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级（仅 stream=true）。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 流式（stream=true），与非流式同一路径；因 mode、取回方式及 output_format / aigc_watermark / stream_options / force_cbr / word_streaming 的适用范围不同，单列为操作。"
@@ -5985,7 +6064,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -6195,6 +6274,20 @@
                   "default": false,
                   "required": false,
                   "notes": "仅 speech-2.8 系列：true 模型侧不切分文本连续推理（长文本韵律更自然），false 切分后并发推理（延迟更低）。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 单向流式：connected_success → task_start / task_started → task_continue / task_continued（分块音频）→ task_finish / task_finished（立即关闭连接）；失败返回 task_failed。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -6330,7 +6423,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -6551,6 +6644,20 @@
                   "default": null,
                   "required": false,
                   "notes": "客户端生成的会话 id，可不传（服务端以 connect_id 兜底），仅透传回显。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 双向流式（文本流式输入）：task_start 参数与 /ws/v1/t2a_v2 完全一致；另有 task_flush（催出残留、会话继续）、task_cancel（打断后可继续）；task_finish 先合成残留再关闭。空闲约 120 秒关闭（2201），服务端不主动 ping；2205 表示待合成文本积压（软失败，稍后重发）。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -7143,21 +7250,16 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T04:48:20Z",
+            "checked_at": "2026-11-11T11:23:23.568689+00:00",
             "source_ids": [
               "media-speech-http",
               "media-speech-ws",
-              "media-speech-ws-bidi",
-              "media-speech-async",
-              "media-speech-guide",
-              "media-speech-async-guide",
-              "media-voice-list",
-              "media-api-overview"
+              "media-speech-ws-bidi"
             ],
-            "evidence": "evidence/minimax/2026-09-28-media-io.md",
-            "notes": "仅核对媒体输入输出契约（官方文档 .md 与 OpenAPI / AsyncAPI 源），未用真实 Key 实调；不刷新模型身份、价格、协议面或其他能力的核对结论。"
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本次逐接口核对新增规范化参数与语言枚举；其他参数沿用既有独立证据，原缺口仍保留。"
           },
-          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-2.8：支持语气词标签与 continuous_sound；emotion 不含 whisper，fluent 存疑。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。"
+          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-2.8：支持语气词标签与 continuous_sound；emotion 不含 whisper，fluent 存疑。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。 本次仅补HTTP/WS当前明示字段；异步接口未明示新字段，不跨接口继承。"
         }
       }
     },
@@ -7465,7 +7567,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化（改善数字朗读，略增延迟），默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -7688,6 +7790,20 @@
                   "default": false,
                   "required": false,
                   "notes": "在音频末尾添加节奏标识，仅非流式生效。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 非流式（stream=false）。参考页另列备用地址 https://api-bj.minimaxi.com/v1/t2a_v2。"
@@ -7860,7 +7976,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化，默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -8070,6 +8186,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级（仅 stream=true）。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 流式（stream=true），与非流式同一路径；因 mode、取回方式及 output_format / aigc_watermark / stream_options / force_cbr / word_streaming 的适用范围不同，单列为操作。"
@@ -8207,7 +8337,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -8406,6 +8536,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级。WebSocket 下字幕的返回字段文档未写。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 单向流式：connected_success → task_start / task_started → task_continue / task_continued（分块音频）→ task_finish / task_finished（立即关闭连接）；失败返回 task_failed。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -8543,7 +8687,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -8753,6 +8897,20 @@
                   "default": null,
                   "required": false,
                   "notes": "客户端生成的会话 id，可不传（服务端以 connect_id 兜底），仅透传回显。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 双向流式（文本流式输入）：task_start 参数与 /ws/v1/t2a_v2 完全一致；另有 task_flush（催出残留、会话继续）、task_cancel（打断后可继续）；task_finish 先合成残留再关闭。空闲约 120 秒关闭（2201），服务端不主动 ping；2205 表示待合成文本积压（软失败，稍后重发）。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -9349,21 +9507,16 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T04:48:20Z",
+            "checked_at": "2026-11-11T11:23:23.568689+00:00",
             "source_ids": [
               "media-speech-http",
               "media-speech-ws",
-              "media-speech-ws-bidi",
-              "media-speech-async",
-              "media-speech-guide",
-              "media-speech-async-guide",
-              "media-voice-list",
-              "media-api-overview"
+              "media-speech-ws-bidi"
             ],
-            "evidence": "evidence/minimax/2026-09-28-media-io.md",
-            "notes": "仅核对媒体输入输出契约（官方文档 .md 与 OpenAPI / AsyncAPI 源），未用真实 Key 实调；不刷新模型身份、价格、协议面或其他能力的核对结论。"
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本次逐接口核对新增规范化参数与语言枚举；其他参数沿用既有独立证据，原缺口仍保留。"
           },
-          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-2.6：emotion 含 fluent / whisper；无语气词标签与 continuous_sound。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。"
+          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-2.6：emotion 含 fluent / whisper；无语气词标签与 continuous_sound。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。 本次仅补HTTP/WS当前明示字段；异步接口未明示新字段，不跨接口继承。"
         }
       }
     },
@@ -9671,7 +9824,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化（改善数字朗读，略增延迟），默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -9894,6 +10047,20 @@
                   "default": false,
                   "required": false,
                   "notes": "在音频末尾添加节奏标识，仅非流式生效。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 非流式（stream=false）。参考页另列备用地址 https://api-bj.minimaxi.com/v1/t2a_v2。"
@@ -10066,7 +10233,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化，默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -10276,6 +10443,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级（仅 stream=true）。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 流式（stream=true），与非流式同一路径；因 mode、取回方式及 output_format / aigc_watermark / stream_options / force_cbr / word_streaming 的适用范围不同，单列为操作。"
@@ -10413,7 +10594,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -10612,6 +10793,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级。WebSocket 下字幕的返回字段文档未写。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 单向流式：connected_success → task_start / task_started → task_continue / task_continued（分块音频）→ task_finish / task_finished（立即关闭连接）；失败返回 task_failed。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -10749,7 +10944,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -10959,6 +11154,20 @@
                   "default": null,
                   "required": false,
                   "notes": "客户端生成的会话 id，可不传（服务端以 connect_id 兜底），仅透传回显。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 双向流式（文本流式输入）：task_start 参数与 /ws/v1/t2a_v2 完全一致；另有 task_flush（催出残留、会话继续）、task_cancel（打断后可继续）；task_finish 先合成残留再关闭。空闲约 120 秒关闭（2201），服务端不主动 ping；2205 表示待合成文本积压（软失败，稍后重发）。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -11555,21 +11764,16 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T04:48:20Z",
+            "checked_at": "2026-11-11T11:23:23.568689+00:00",
             "source_ids": [
               "media-speech-http",
               "media-speech-ws",
-              "media-speech-ws-bidi",
-              "media-speech-async",
-              "media-speech-guide",
-              "media-speech-async-guide",
-              "media-voice-list",
-              "media-api-overview"
+              "media-speech-ws-bidi"
             ],
-            "evidence": "evidence/minimax/2026-09-28-media-io.md",
-            "notes": "仅核对媒体输入输出契约（官方文档 .md 与 OpenAPI / AsyncAPI 源），未用真实 Key 实调；不刷新模型身份、价格、协议面或其他能力的核对结论。"
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本次逐接口核对新增规范化参数与语言枚举；其他参数沿用既有独立证据，原缺口仍保留。"
           },
-          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-2.6：emotion 含 fluent / whisper；无语气词标签与 continuous_sound。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。"
+          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-2.6：emotion 含 fluent / whisper；无语气词标签与 continuous_sound。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。 本次仅补HTTP/WS当前明示字段；异步接口未明示新字段，不跨接口继承。"
         }
       }
     },
@@ -11875,7 +12079,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化（改善数字朗读，略增延迟），默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -12098,6 +12302,20 @@
                   "default": false,
                   "required": false,
                   "notes": "在音频末尾添加节奏标识，仅非流式生效。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 非流式（stream=false）。参考页另列备用地址 https://api-bj.minimaxi.com/v1/t2a_v2。"
@@ -12268,7 +12486,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化，默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -12478,6 +12696,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级（仅 stream=true）。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 流式（stream=true），与非流式同一路径；因 mode、取回方式及 output_format / aigc_watermark / stream_options / force_cbr / word_streaming 的适用范围不同，单列为操作。"
@@ -12613,7 +12845,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -12812,6 +13044,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级。WebSocket 下字幕的返回字段文档未写。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 单向流式：connected_success → task_start / task_started → task_continue / task_continued（分块音频）→ task_finish / task_finished（立即关闭连接）；失败返回 task_failed。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -12947,7 +13193,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -13157,6 +13403,20 @@
                   "default": null,
                   "required": false,
                   "notes": "客户端生成的会话 id，可不传（服务端以 connect_id 兜底），仅透传回显。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 双向流式（文本流式输入）：task_start 参数与 /ws/v1/t2a_v2 完全一致；另有 task_flush（催出残留、会话继续）、task_cancel（打断后可继续）；task_finish 先合成残留再关闭。空闲约 120 秒关闭（2201），服务端不主动 ping；2205 表示待合成文本积压（软失败，稍后重发）。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -13749,21 +14009,16 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T04:48:20Z",
+            "checked_at": "2026-11-11T11:23:23.568689+00:00",
             "source_ids": [
               "media-speech-http",
               "media-speech-ws",
-              "media-speech-ws-bidi",
-              "media-speech-async",
-              "media-speech-guide",
-              "media-speech-async-guide",
-              "media-voice-list",
-              "media-api-overview"
+              "media-speech-ws-bidi"
             ],
-            "evidence": "evidence/minimax/2026-09-28-media-io.md",
-            "notes": "仅核对媒体输入输出契约（官方文档 .md 与 OpenAPI / AsyncAPI 源），未用真实 Key 实调；不刷新模型身份、价格、协议面或其他能力的核对结论。"
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本次逐接口核对新增规范化参数与语言枚举；其他参数沿用既有独立证据，原缺口仍保留。"
           },
-          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-02：language_boost 不含 Persian / Filipino / Tamil；emotion 不含 fluent / whisper；无语气词标签与 continuous_sound。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。"
+          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-02：language_boost 不含 Persian / Filipino / Tamil；emotion 不含 fluent / whisper；无语气词标签与 continuous_sound。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。 本次仅补HTTP/WS当前明示字段；异步接口未明示新字段，不跨接口继承。"
         }
       }
     },
@@ -14069,7 +14324,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化（改善数字朗读，略增延迟），默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -14292,6 +14547,20 @@
                   "default": false,
                   "required": false,
                   "notes": "在音频末尾添加节奏标识，仅非流式生效。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 非流式（stream=false）。参考页另列备用地址 https://api-bj.minimaxi.com/v1/t2a_v2。"
@@ -14462,7 +14731,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "中文、英语文本规范化，默认 false。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -14672,6 +14941,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级（仅 stream=true）。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "T2A v2 HTTP 流式（stream=true），与非流式同一路径；因 mode、取回方式及 output_format / aigc_watermark / stream_options / force_cbr / word_streaming 的适用范围不同，单列为操作。"
@@ -14807,7 +15090,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -15006,6 +15289,20 @@
                   "default": "sentence",
                   "required": false,
                   "notes": "sentence 句级、word 词级、word_streaming 流式优化的词级。WebSocket 下字幕的返回字段文档未写。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 单向流式：connected_success → task_start / task_started → task_continue / task_continued（分块音频）→ task_finish / task_finished（立即关闭连接）；失败返回 task_failed。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -15141,7 +15438,7 @@
                   "unit": null,
                   "default": false,
                   "required": false,
-                  "notes": "英语文本规范化，默认 false（HTTP 对应字段为 text_normalization）。"
+                  "notes": "已废弃：true等价于顶层text_normalization_mode=basic；false或省略不启用；顶层参数优先。"
                 },
                 {
                   "field": "voice_setting.latex_read",
@@ -15351,6 +15648,20 @@
                   "default": null,
                   "required": false,
                   "notes": "客户端生成的会话 id，可不传（服务端以 connect_id 兜底），仅透传回显。"
+                },
+                {
+                  "field": "text_normalization_mode",
+                  "type": "enum",
+                  "values": [
+                    "basic",
+                    "quality"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": null,
+                  "required": false,
+                  "notes": "顶层规范化模式；quality仅非流式HTTP生效，流式/WS按basic处理。不传沿用旧voice_setting规范化参数（默认关闭），同时传入时顶层优先。"
                 }
               ],
               "notes": "WebSocket 双向流式（文本流式输入）：task_start 参数与 /ws/v1/t2a_v2 完全一致；另有 task_flush（催出残留、会话继续）、task_cancel（打断后可继续）；task_finish 先合成残留再关闭。空闲约 120 秒关闭（2201），服务端不主动 ping；2205 表示待合成文本积压（软失败，稍后重发）。params 字段路径均相对 task_start 事件 JSON，text 在 task_continue 事件中（规范无法标注事件归属）。"
@@ -15943,21 +16254,16 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-09-28T04:48:20Z",
+            "checked_at": "2026-11-11T11:23:23.568689+00:00",
             "source_ids": [
               "media-speech-http",
               "media-speech-ws",
-              "media-speech-ws-bidi",
-              "media-speech-async",
-              "media-speech-guide",
-              "media-speech-async-guide",
-              "media-voice-list",
-              "media-api-overview"
+              "media-speech-ws-bidi"
             ],
-            "evidence": "evidence/minimax/2026-09-28-media-io.md",
-            "notes": "仅核对媒体输入输出契约（官方文档 .md 与 OpenAPI / AsyncAPI 源），未用真实 Key 实调；不刷新模型身份、价格、协议面或其他能力的核对结论。"
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本次逐接口核对新增规范化参数与语言枚举；其他参数沿用既有独立证据，原缺口仍保留。"
           },
-          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-02：language_boost 不含 Persian / Filipino / Tamil；emotion 不含 fluent / whisper；无语气词标签与 continuous_sound。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。"
+          "notes": "覆盖 minimax_speech 面（同步 HTTP / WebSocket / 异步）：T2A v2 HTTP 非流式与流式分两个操作（mode、取回方式与部分参数不同），WebSocket 单向与双向流式，异步长文本按文本内联与文件输入分两个操作；接口根 https://api.minimax.cn。speech-02：language_boost 不含 Persian / Filipino / Tamil；emotion 不含 fluent / whisper；无语气词标签与 continuous_sound。partial：①系统音色列表与 40 种语言表是全平台口径，未按型号列适用范围；②文档冲突（异步文本长度、WebSocket timbre_weights 类型、事件 / 响应中的音频格式列举、2.8 的 fluent）；③WebSocket 字幕返回字段未写。音色快速复刻、音色设计、音色查询 / 删除属音色管理接口，不列为本型号的生成操作。 本次仅补HTTP/WS当前明示字段；异步接口未明示新字段，不跨接口继承。"
         }
       }
     },
@@ -18525,6 +18831,1188 @@
           "notes": "已补文生、首尾帧图生、多模态参考三种操作。产物容器与URL有效期未明确；仅尾帧的字段说明存在冲突。Max概览与精确V2文档对参考生成支持存在冲突。未将H3专属再生成扩展给这些型号。"
         }
       }
+    },
+    {
+      "id": "minimax-h3-image",
+      "request_id": "MiniMax-H3-Image",
+      "display_name": "MiniMax H3 Image",
+      "modalities": [
+        "image"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-11T11:25:31.258239+00:00",
+        "source_ids": [
+          "refresh-h3-image-generate",
+          "refresh-h3-image-edit"
+        ],
+        "evidence": "evidence/minimax/2026-11-11-refresh.md",
+        "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线，按文本输入/图片输入/图片输出token独立计费，不取单张示意价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "15",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "usage.input_tokens_details.text_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按厂商返回的本分量用量计；不与包含本分量的总 token 重复相加。"
+                }
+              },
+              {
+                "meter": "image_input_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "usage.input_tokens_details.image_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按厂商返回的本分量用量计；不与包含本分量的总 token 重复相加。"
+                }
+              },
+              {
+                "meter": "image_output_tokens",
+                "amount": "25",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "usage.output_tokens_details.image_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按厂商返回的本分量用量计；不与包含本分量的总 token 重复相加。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-11T11:25:31.304468+00:00",
+              "source_ids": [
+                "refresh-pricing-md",
+                "refresh-h3-image-generate"
+              ],
+              "evidence": "evidence/minimax/2026-11-11-refresh.md",
+              "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+            },
+            "notes": "文本输入含Prompt增强token；仅成功产物计费。4K≥1660万像素至2026-11-18 00:00北京限时五折未纳入标准基准；不把额外Context-IR单独调用费用叠加。",
+            "time_basis": "unknown",
+            "charge_on": "success"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-11T11:25:31.304468+00:00",
+          "source_ids": [
+            "refresh-pricing-md",
+            "refresh-h3-image-generate"
+          ],
+          "evidence": "evidence/minimax/2026-11-11-refresh.md",
+          "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+        },
+        "notes": "文本输入含Prompt增强token；仅成功产物计费。4K≥1660万像素至2026-11-18 00:00北京限时五折未纳入标准基准；不把额外Context-IR单独调用费用叠加。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-11-11-refresh.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "新独立H3图片型号，不能继承image-01的张计费、字段或尺寸。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": true,
+        "interfaces": [
+          "openai_image"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:25:31.258239+00:00",
+            "source_ids": [
+              "media-image-guide",
+              "refresh-h3-image-generate",
+              "refresh-h3-image-edit"
+            ],
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "生成/编辑明确支持OpenAI SDK images；厂商JSON扩展字段单独按原样保存。标准版另有Context-IR辅助接口，未将其冒充OpenAI Image协议。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "refresh-h3-image-generate",
+              "refresh-h3-image-edit"
+            ],
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "未公布模型思考档位/预算；Prompt增强和图片质量不是思考控制。"
+          },
+          "notes": "未公布模型思考档位/预算；Prompt增强和图片质量不是思考控制。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:25:31.258239+00:00",
+            "source_ids": [
+              "refresh-h3-image-generate",
+              "refresh-h3-image-edit"
+            ],
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "图像生成/编辑接口；32000字符或关闭增强后约4096token提示词限制不是文本对话上下文。"
+        },
+        "media_io": {
+          "status": "partial",
+          "operations": [
+            {
+              "id": "text_to_image",
+              "interface": "openai_image",
+              "endpoint": "POST /v1/images/generations",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "32000",
+                      "unit": "character",
+                      "notes": "Unicode字符，忽略首尾空白；不是token窗口。"
+                    }
+                  ],
+                  "notes": null
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [
+                    "png",
+                    "jpeg",
+                    "webp"
+                  ],
+                  "delivery": [
+                    "url",
+                    "base64"
+                  ],
+                  "max_items": 10,
+                  "url_ttl_seconds": 86400,
+                  "limits": [
+                    {
+                      "measure": "pixels",
+                      "min": "655360",
+                      "max": "20000000",
+                      "unit": "pixel",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "只按成功图片计费；data按张序，失败项只有error；流式通过SSE事件交付URL。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "disable_prompt_enhanced",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "关闭增强时约前4096token生效，必须显式尺寸或比例；并非思考开关。"
+                },
+                {
+                  "field": "n",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 10,
+                  "unit": null,
+                  "default": 1,
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "size",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "自定义宽x高与aspect_ratio/area互斥；面积655360–20000000px，宽高比1:3–3:1。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "auto或X:Y，X/Y为1–300整数且比例1:3–3:1；size自定义时不可传。"
+                },
+                {
+                  "field": "area",
+                  "type": "enum",
+                  "values": [
+                    "1K",
+                    "2K",
+                    "4K"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "4K",
+                  "required": false,
+                  "notes": "1K/2K/4K对应1024²/2048²/4096²目标像素，仅size=auto可用。"
+                },
+                {
+                  "field": "output_format",
+                  "type": "enum",
+                  "values": [
+                    "png",
+                    "jpeg",
+                    "jpg",
+                    "webp"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "jpeg",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "response_format",
+                  "type": "enum",
+                  "values": [
+                    "url",
+                    "b64_json"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "url",
+                  "required": false,
+                  "notes": "URL有效24小时；b64_json不支持流式，总输出面积PNG上限20000000px、JPEG/WEBP上限80000000px。"
+                },
+                {
+                  "field": "stream",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "SSE按图片完成顺序推送，image_index区分；仅response_format=url。"
+                },
+                {
+                  "field": "output_compression",
+                  "type": "integer",
+                  "values": null,
+                  "min": 0,
+                  "max": 100,
+                  "unit": null,
+                  "default": 95,
+                  "required": false,
+                  "notes": "仅JPEG/WEBP生效；PNG忽略。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "仅控制可见水印，不控制隐式AIGC标识。"
+                }
+              ],
+              "notes": "同时支持同步JSON与SSE；JSON扩展参数和multipart image[]不能互换，详见本操作来源。"
+            },
+            {
+              "id": "image_edit",
+              "interface": "openai_image",
+              "endpoint": "POST /v1/images/edits",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "32000",
+                      "unit": "character",
+                      "notes": "Unicode字符，忽略首尾空白；不是token窗口。"
+                    }
+                  ],
+                  "notes": null
+                },
+                {
+                  "role": "reference_image",
+                  "field": "images[].image_url",
+                  "required": true,
+                  "min_items": 1,
+                  "max_items": 16,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "128",
+                      "max": "8192",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "128",
+                      "max": "8192",
+                      "unit": "pixel",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "单文件与请求体≤64 MiB；长边/短边≤4；mm_file://引用文件，另支持OpenAI SDK multipart image[]上传。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [
+                    "png",
+                    "jpeg",
+                    "webp"
+                  ],
+                  "delivery": [
+                    "url",
+                    "base64"
+                  ],
+                  "max_items": 10,
+                  "url_ttl_seconds": 86400,
+                  "limits": [
+                    {
+                      "measure": "pixels",
+                      "min": "655360",
+                      "max": "20000000",
+                      "unit": "pixel",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "只按成功图片计费；data按张序，失败项只有error；流式通过SSE事件交付URL。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "n",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 10,
+                  "unit": null,
+                  "default": 1,
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "size",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "自定义宽x高与aspect_ratio/area互斥；面积655360–20000000px，宽高比1:3–3:1。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "auto或X:Y，X/Y为1–300整数且比例1:3–3:1；size自定义时不可传。"
+                },
+                {
+                  "field": "area",
+                  "type": "enum",
+                  "values": [
+                    "1K",
+                    "2K",
+                    "4K"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "4K",
+                  "required": false,
+                  "notes": "1K/2K/4K对应1024²/2048²/4096²目标像素，仅size=auto可用。"
+                },
+                {
+                  "field": "output_format",
+                  "type": "enum",
+                  "values": [
+                    "png",
+                    "jpeg",
+                    "jpg",
+                    "webp"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "jpeg",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "response_format",
+                  "type": "enum",
+                  "values": [
+                    "url",
+                    "b64_json"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "url",
+                  "required": false,
+                  "notes": "URL有效24小时；b64_json不支持流式，总输出面积PNG上限20000000px、JPEG/WEBP上限80000000px。"
+                },
+                {
+                  "field": "stream",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "SSE按图片完成顺序推送，image_index区分；仅response_format=url。"
+                },
+                {
+                  "field": "output_compression",
+                  "type": "integer",
+                  "values": null,
+                  "min": 0,
+                  "max": 100,
+                  "unit": null,
+                  "default": 95,
+                  "required": false,
+                  "notes": "仅JPEG/WEBP生效；PNG忽略。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "仅控制可见水印，不控制隐式AIGC标识。"
+                }
+              ],
+              "notes": "同时支持同步JSON与SSE；JSON扩展参数和multipart image[]不能互换，详见本操作来源。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:25:31.258239+00:00",
+            "source_ids": [
+              "refresh-h3-image-generate",
+              "refresh-h3-image-edit",
+              "media-image-guide"
+            ],
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "已核对生成、编辑、同步/SSE、输入输出与全部标量参数；multipart字段未另建操作、标准版独立Context-IR辅助接口未收录，保持partial。"
+        }
+      }
+    },
+    {
+      "id": "minimax-h3-image-highspeed",
+      "request_id": "MiniMax-H3-Image-Highspeed",
+      "display_name": "MiniMax H3 Image Highspeed",
+      "modalities": [
+        "image"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-11T11:25:31.258239+00:00",
+        "source_ids": [
+          "refresh-h3-image-generate",
+          "refresh-h3-image-edit"
+        ],
+        "evidence": "evidence/minimax/2026-11-11-refresh.md",
+        "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "标准在线，按文本输入/图片输入/图片输出token独立计费，不取单张示意价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "15",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "usage.input_tokens_details.text_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按厂商返回的本分量用量计；不与包含本分量的总 token 重复相加。"
+                }
+              },
+              {
+                "meter": "image_input_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "usage.input_tokens_details.image_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按厂商返回的本分量用量计；不与包含本分量的总 token 重复相加。"
+                }
+              },
+              {
+                "meter": "image_output_tokens",
+                "amount": "50",
+                "per": 1000000,
+                "unit": "token",
+                "quantity": {
+                  "source": "provider_usage",
+                  "fields": [
+                    "usage.output_tokens_details.image_tokens"
+                  ],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "按厂商返回的本分量用量计；不与包含本分量的总 token 重复相加。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-11T11:25:31.304468+00:00",
+              "source_ids": [
+                "refresh-pricing-md",
+                "refresh-h3-image-generate"
+              ],
+              "evidence": "evidence/minimax/2026-11-11-refresh.md",
+              "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+            },
+            "notes": "文本输入含Prompt增强token；仅成功产物计费。4K≥1660万像素至2026-11-18 00:00北京限时五折未纳入标准基准；不把额外Context-IR单独调用费用叠加。",
+            "time_basis": "unknown",
+            "charge_on": "success"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-11T11:25:31.304468+00:00",
+          "source_ids": [
+            "refresh-pricing-md",
+            "refresh-h3-image-generate"
+          ],
+          "evidence": "evidence/minimax/2026-11-11-refresh.md",
+          "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+        },
+        "notes": "文本输入含Prompt增强token；仅成功产物计费。4K≥1660万像素至2026-11-18 00:00北京限时五折未纳入标准基准；不把额外Context-IR单独调用费用叠加。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/minimax/2026-11-11-refresh.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "新独立H3图片型号，不能继承image-01的张计费、字段或尺寸。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": true,
+        "interfaces": [
+          "openai_image"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:25:31.258239+00:00",
+            "source_ids": [
+              "media-image-guide",
+              "refresh-h3-image-generate",
+              "refresh-h3-image-edit"
+            ],
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "生成/编辑明确支持OpenAI SDK images；厂商JSON扩展字段单独按原样保存。标准版另有Context-IR辅助接口，未将其冒充OpenAI Image协议。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "refresh-h3-image-generate",
+              "refresh-h3-image-edit"
+            ],
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "未公布模型思考档位/预算；Prompt增强和图片质量不是思考控制。"
+          },
+          "notes": "未公布模型思考档位/预算；Prompt增强和图片质量不是思考控制。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:25:31.258239+00:00",
+            "source_ids": [
+              "refresh-h3-image-generate",
+              "refresh-h3-image-edit"
+            ],
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "图像生成/编辑接口；32000字符或关闭增强后约4096token提示词限制不是文本对话上下文。"
+        },
+        "media_io": {
+          "status": "partial",
+          "operations": [
+            {
+              "id": "text_to_image",
+              "interface": "openai_image",
+              "endpoint": "POST /v1/images/generations",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "32000",
+                      "unit": "character",
+                      "notes": "Unicode字符，忽略首尾空白；不是token窗口。"
+                    }
+                  ],
+                  "notes": null
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [
+                    "png",
+                    "jpeg",
+                    "webp"
+                  ],
+                  "delivery": [
+                    "url",
+                    "base64"
+                  ],
+                  "max_items": 10,
+                  "url_ttl_seconds": 86400,
+                  "limits": [
+                    {
+                      "measure": "pixels",
+                      "min": "655360",
+                      "max": "20000000",
+                      "unit": "pixel",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "只按成功图片计费；data按张序，失败项只有error；流式通过SSE事件交付URL。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "disable_prompt_enhanced",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "关闭增强时约前4096token生效，必须显式尺寸或比例；并非思考开关。"
+                },
+                {
+                  "field": "n",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 10,
+                  "unit": null,
+                  "default": 1,
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "size",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "自定义宽x高与aspect_ratio/area互斥；面积655360–20000000px，宽高比1:3–3:1。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "auto或X:Y，X/Y为1–300整数且比例1:3–3:1；size自定义时不可传。"
+                },
+                {
+                  "field": "area",
+                  "type": "enum",
+                  "values": [
+                    "1K",
+                    "2K",
+                    "4K"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "4K",
+                  "required": false,
+                  "notes": "1K/2K/4K对应1024²/2048²/4096²目标像素，仅size=auto可用。"
+                },
+                {
+                  "field": "output_format",
+                  "type": "enum",
+                  "values": [
+                    "png",
+                    "jpeg",
+                    "jpg",
+                    "webp"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "jpeg",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "response_format",
+                  "type": "enum",
+                  "values": [
+                    "url",
+                    "b64_json"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "url",
+                  "required": false,
+                  "notes": "URL有效24小时；b64_json不支持流式，总输出面积PNG上限20000000px、JPEG/WEBP上限80000000px。"
+                },
+                {
+                  "field": "stream",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "SSE按图片完成顺序推送，image_index区分；仅response_format=url。"
+                },
+                {
+                  "field": "output_compression",
+                  "type": "integer",
+                  "values": null,
+                  "min": 0,
+                  "max": 100,
+                  "unit": null,
+                  "default": 95,
+                  "required": false,
+                  "notes": "仅JPEG/WEBP生效；PNG忽略。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "仅控制可见水印，不控制隐式AIGC标识。"
+                }
+              ],
+              "notes": "同时支持同步JSON与SSE；JSON扩展参数和multipart image[]不能互换，详见本操作来源。"
+            },
+            {
+              "id": "image_edit",
+              "interface": "openai_image",
+              "endpoint": "POST /v1/images/edits",
+              "mode": "sync",
+              "inputs": [
+                {
+                  "role": "prompt",
+                  "field": "prompt",
+                  "required": true,
+                  "min_items": null,
+                  "max_items": 1,
+                  "formats": [],
+                  "transports": [
+                    "inline"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "length",
+                      "min": null,
+                      "max": "32000",
+                      "unit": "character",
+                      "notes": "Unicode字符，忽略首尾空白；不是token窗口。"
+                    }
+                  ],
+                  "notes": null
+                },
+                {
+                  "role": "reference_image",
+                  "field": "images[].image_url",
+                  "required": true,
+                  "min_items": 1,
+                  "max_items": 16,
+                  "formats": [
+                    "jpg",
+                    "jpeg",
+                    "png",
+                    "webp",
+                    "heic",
+                    "heif"
+                  ],
+                  "transports": [
+                    "url",
+                    "data_uri",
+                    "file_id"
+                  ],
+                  "limits": [
+                    {
+                      "measure": "width",
+                      "min": "128",
+                      "max": "8192",
+                      "unit": "pixel",
+                      "notes": null
+                    },
+                    {
+                      "measure": "height",
+                      "min": "128",
+                      "max": "8192",
+                      "unit": "pixel",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "单文件与请求体≤64 MiB；长边/短边≤4；mm_file://引用文件，另支持OpenAI SDK multipart image[]上传。"
+                }
+              ],
+              "outputs": [
+                {
+                  "media": "image",
+                  "formats": [
+                    "png",
+                    "jpeg",
+                    "webp"
+                  ],
+                  "delivery": [
+                    "url",
+                    "base64"
+                  ],
+                  "max_items": 10,
+                  "url_ttl_seconds": 86400,
+                  "limits": [
+                    {
+                      "measure": "pixels",
+                      "min": "655360",
+                      "max": "20000000",
+                      "unit": "pixel",
+                      "notes": null
+                    }
+                  ],
+                  "notes": "只按成功图片计费；data按张序，失败项只有error；流式通过SSE事件交付URL。"
+                }
+              ],
+              "params": [
+                {
+                  "field": "n",
+                  "type": "integer",
+                  "values": null,
+                  "min": 1,
+                  "max": 10,
+                  "unit": null,
+                  "default": 1,
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "size",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "自定义宽x高与aspect_ratio/area互斥；面积655360–20000000px，宽高比1:3–3:1。"
+                },
+                {
+                  "field": "aspect_ratio",
+                  "type": "string",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "auto",
+                  "required": false,
+                  "notes": "auto或X:Y，X/Y为1–300整数且比例1:3–3:1；size自定义时不可传。"
+                },
+                {
+                  "field": "area",
+                  "type": "enum",
+                  "values": [
+                    "1K",
+                    "2K",
+                    "4K"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "4K",
+                  "required": false,
+                  "notes": "1K/2K/4K对应1024²/2048²/4096²目标像素，仅size=auto可用。"
+                },
+                {
+                  "field": "output_format",
+                  "type": "enum",
+                  "values": [
+                    "png",
+                    "jpeg",
+                    "jpg",
+                    "webp"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "jpeg",
+                  "required": false,
+                  "notes": null
+                },
+                {
+                  "field": "response_format",
+                  "type": "enum",
+                  "values": [
+                    "url",
+                    "b64_json"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "url",
+                  "required": false,
+                  "notes": "URL有效24小时；b64_json不支持流式，总输出面积PNG上限20000000px、JPEG/WEBP上限80000000px。"
+                },
+                {
+                  "field": "stream",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "SSE按图片完成顺序推送，image_index区分；仅response_format=url。"
+                },
+                {
+                  "field": "output_compression",
+                  "type": "integer",
+                  "values": null,
+                  "min": 0,
+                  "max": 100,
+                  "unit": null,
+                  "default": 95,
+                  "required": false,
+                  "notes": "仅JPEG/WEBP生效；PNG忽略。"
+                },
+                {
+                  "field": "aigc_watermark",
+                  "type": "boolean",
+                  "values": null,
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": false,
+                  "required": false,
+                  "notes": "仅控制可见水印，不控制隐式AIGC标识。"
+                }
+              ],
+              "notes": "同时支持同步JSON与SSE；JSON扩展参数和multipart image[]不能互换，详见本操作来源。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:25:31.258239+00:00",
+            "source_ids": [
+              "refresh-h3-image-generate",
+              "refresh-h3-image-edit",
+              "media-image-guide"
+            ],
+            "evidence": "evidence/minimax/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "已核对生成、编辑、同步/SSE、输入输出与全部标量参数；multipart字段未另建操作、标准版独立Context-IR辅助接口未收录，保持partial。"
+        }
+      }
     }
   ],
   "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。",
@@ -18595,7 +20083,7 @@
         "Cantonese_PlayfulMan",
         "Cantonese_CuteGirl",
         "Cantonese_KindWoman",
-        "Santa_Claus ",
+        "Santa_Claus",
         "Grinch",
         "Rudolph",
         "Arnold",
@@ -18938,7 +20426,7 @@
         "Cantonese_PlayfulMan": "活泼男声",
         "Cantonese_CuteGirl": "可爱女孩",
         "Cantonese_KindWoman": "善良女声",
-        "Santa_Claus ": "Santa Claus",
+        "Santa_Claus": "Santa Claus",
         "Grinch": "Grinch",
         "Rudolph": "Rudolph",
         "Arnold": "Arnold",
@@ -19204,18 +20692,15 @@
       },
       "verification": {
         "status": "verified",
-        "checked_at": "2026-09-28T04:48:20Z",
+        "checked_at": "2026-11-11T11:23:23.450356+00:00",
         "source_ids": [
           "media-voice-list",
-          "media-speech-http",
-          "media-speech-ws",
-          "media-speech-ws-bidi",
-          "media-speech-async"
+          "media-speech-http"
         ],
-        "evidence": "evidence/minimax/2026-09-28-media-io.md",
-        "notes": "系统音色列表页与四个 T2A 参考页的 voice_id 说明；未调用需鉴权的查询可用音色 API。"
+        "evidence": "evidence/minimax/2026-11-11-refresh.md",
+        "notes": "当前主表与HTTP参数补充列表并集，共341；主表缺少的14个在HTTP文档仍明确列出。"
       },
-      "notes": "MiniMax api-cn 语音型号（speech-2.8 / 2.6 / 02 的 hd 与 turbo）共用的系统音色 341 个：系统音色列表页 327 个（labels 为列表页「音色名称」；按语言：中文 (普通话) 58、中文 (粤语) 6、英文 16、日文 15、韩文 49、西班牙文 47、葡萄牙文 73、法文 6、印尼文 9、德文 3、俄文 8、意大利文 4、阿拉伯文 2、土耳其文 2、乌克兰文 2、荷兰文 2、越南文 1、泰文 4、波兰文 4、罗马尼亚文 4、希腊文 3、捷克文 3、芬兰文 3、印地文 3），加上 T2A HTTP 参考页「部分最新的系统音色」中列出而列表页未收的 14 个（moss_audio_ce44fc67-7ce3-11f0-8de5-96e35d26fb85、moss_audio_aaa1346a-7ce7-11f0-8e61-2e6e3c7ee85d、English_Insightful_Speaker、English_radiant_girl、English_Persuasive_Man、moss_audio_6dc281eb-713c-11f0-a447-9613c873494c、moss_audio_570551b1-735c-11f0-b236-0adeeecad052、moss_audio_ad5baf92-735f-11f0-8263-fe5a2fe98ec8、English_Lucky_Robot、Japanese_Whisper_Belle、moss_audio_24875c4a-7be4-11f0-9359-4e72c55db738、moss_audio_7f4ee608-78ea-11f0-bb73-1e2a4cfcd245、moss_audio_c1a6a3ac-7be6-11f0-8e8e-36b92fbb4f95、Cantonese_podacast_host_1；WebSocket / 异步参考页列出其中除 Cantonese_podacast_host_1 外的 13 个），这 14 个无官方展示名。列表页与参考页均未按型号限定音色，因此六个型号引用同一集合。粤语音色需 language_boost=Chinese,Yue。列表页 Cantonese_ProfessionalHost（F) / （M) 的全角左括号按原文保留。异步指南示例用的 audiobook_male_1 不在任何列表中，未列入。复刻音色与文生音色是账号私有 voice_id，不列入。"
+      "notes": "系统音色取当前列表与HTTP文档补充音色并集，保留ID大小写和内部空格，按官方要求去除首尾空白；不含账号私有复刻音色。"
     },
     "minimax-language-boost-41": {
       "values": [

@@ -109,7 +109,7 @@
       "id": "audit-20261024-models",
       "url": "https://opencode.ai/inference/go/v1/models",
       "purpose": "models",
-      "notes": "2026-10-24 复核来源；UTC 与精确型号范围见本轮 evidence。"
+      "notes": "Go 官方匿名精确模型元数据：本轮包含 limit、原生 api 和 capabilities.reasoning；不从 cost 字段取原厂参考价。"
     },
     {
       "id": "audit-20261024-modelsdev",
@@ -211,13 +211,13 @@
       "id": "go-docs-current",
       "url": "https://opencode.ai/v2/docs/console/go/",
       "purpose": "subscription",
-      "notes": "Go 当前型号与逐型号 Endpoints；套餐未在本轮更新。"
+      "notes": "Go 当前型号 Endpoints、Go / Go Plus / Go Teams 标准月费与产品限制。"
     },
     {
       "id": "go-models-current",
       "url": "https://opencode.ai/inference/go/v1/models",
       "purpose": "models",
-      "notes": "匿名 Go 型号列表；只确认当前请求 ID，不证明协议或窗口。"
+      "notes": "Go 官方匿名精确模型元数据：本轮包含 limit、原生 api 和 capabilities.reasoning；不从 cost 字段取原厂参考价。"
     },
     {
       "id": "go-modelsdev-current",
@@ -302,6 +302,24 @@
       "url": "https://opencode.ai/v2/docs/console/api/inference/",
       "purpose": "models",
       "notes": "Go 全部文本模型的兼容 API 与平台转换说明；逐型号是否仍列出另查 Go Endpoints 和模型接口。"
+    },
+    {
+      "id": "r1111-qwen38max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-max",
+      "purpose": "pricing",
+      "notes": "本轮独立核对开发方华北2（北京）标准按量价、缓存读取分量；不继承产品能力。"
+    },
+    {
+      "id": "r1111-qwen38flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-flash",
+      "purpose": "pricing",
+      "notes": "本轮独立核对开发方华北2（北京）标准按量价、缓存读取分量；不继承产品能力。"
+    },
+    {
+      "id": "r1111-qwen37plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+      "purpose": "pricing",
+      "notes": "本轮独立核对开发方华北2（北京）标准按量价、缓存读取分量；不继承产品能力。"
     }
   ],
   "notes": "OpenCode Go 包月套餐资料；参考价按用户指定取各模型源头厂商官网按量价，不采用 Go 用量上限换算表或 Zen 余额价。"

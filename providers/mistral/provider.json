@@ -98,6 +98,18 @@
       "url": "https://docs.mistral.ai/models/mistral-large-4-0",
       "purpose": "models",
       "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/mistral/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1111-responses",
+      "url": "https://docs.mistral.ai/inference/conversations/responses",
+      "purpose": "models",
+      "notes": "2026-11-11 复核直接 Responses 接口与生命周期语义；见本轮 evidence。"
+    },
+    {
+      "id": "r1111-lifecycle",
+      "url": "https://docs.mistral.ai/inference/model-lifecycle",
+      "purpose": "models",
+      "notes": "2026-11-11 复核直接 Responses 接口与生命周期语义；见本轮 evidence。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

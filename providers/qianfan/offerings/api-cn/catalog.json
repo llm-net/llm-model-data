@@ -2359,6 +2359,210 @@
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
         }
       }
+    },
+    {
+      "id": "ernie-5-5-flash-preview",
+      "request_id": "ernie-5.5-flash-preview",
+      "display_name": "ERNIE-5.5-Flash-Preview",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-11T11:23:24.466167+00:00",
+        "source_ids": [
+          "catalog"
+        ],
+        "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+        "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "国内在线标准原价，每日北京时间08:00–22:00高峰，其余空闲。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-11T11:23:24.526907+00:00",
+              "source_ids": [
+                "audit-current-prices"
+              ],
+              "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+              "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+            },
+            "notes": "官方另列活动半价，起止未确认，不替代标准估价；每千token价格用Decimal等价换为每百万。跨时段判定事件未公布。",
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "time_pricing": {
+              "timezone": "Asia/Shanghai",
+              "bands": [
+                {
+                  "id": "peak",
+                  "label": "高峰时段",
+                  "hours": [
+                    "08:00-22:00"
+                  ],
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "2",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.2",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "8",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                },
+                {
+                  "id": "off_peak",
+                  "label": "其余时段",
+                  "rates": [
+                    {
+                      "meter": "input_uncached_tokens",
+                      "amount": "1",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "input_cached_tokens",
+                      "amount": "0.1",
+                      "per": 1000000,
+                      "unit": "token"
+                    },
+                    {
+                      "meter": "output_tokens",
+                      "amount": "4",
+                      "per": 1000000,
+                      "unit": "token"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-11T11:23:24.526907+00:00",
+          "source_ids": [
+            "audit-current-prices"
+          ],
+          "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+          "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+        },
+        "notes": "官方另列活动半价，起止未确认，不替代标准估价；每千token价格用Decimal等价换为每百万。跨时段判定事件未公布。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方当前模型表的新预览请求ID；不从ERNIE 5.1继承窗口、协议或思考控制。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:23:24.775525+00:00",
+            "source_ids": [
+              "catalog",
+              "audit-20261024-chat"
+            ],
+            "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "当前模型表列精确 model 接入点；Chat文档按模型列表选model。Responses/Messages未取得该预览型号明确支持表，不从全平台兼容说明补入。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "catalog",
+              "audit-20261024-thinking",
+              "audit-20261024-chat"
+            ],
+            "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+            "notes": "已查询模型表与思考/Chat说明，未找到本预览请求ID的独立思考档位、开关或默认值。"
+          },
+          "notes": "已查询模型表与思考/Chat说明，未找到本预览请求ID的独立思考档位、开关或默认值。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:23:24.466167+00:00",
+            "source_ids": [
+              "catalog"
+            ],
+            "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "上下文、最大输入、最大输出均标称1M；精确整数及单位约定未公布，不自行乘1000或1024。"
+        }
+      }
     }
   ],
   "notes": "2026-10-24 核对清单内全部模型；覆盖范围仍为部分收录，逐项结论与缺口见 evidence/qianfan/2026-10-24-audit.md。"

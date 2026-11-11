@@ -230,6 +230,24 @@
       "url": "https://klingai.com/document-api/api/video/4-0/voice-customization.md",
       "purpose": "models",
       "notes": "Kling 4.0 本型号 API 与素材说明；2026-10-29 独立核对，详见本地证据。"
+    },
+    {
+      "id": "refresh-4-flash-i2v",
+      "url": "https://klingai.com/document-api/api/video/4-0-flash/image-to-video.md",
+      "purpose": "models",
+      "notes": "2026-11-11 本轮独立官方核对；范围与限制见对应refresh证据。"
+    },
+    {
+      "id": "refresh-4-flash-omni",
+      "url": "https://klingai.com/document-api/api/video/4-0-flash/video-omni.md",
+      "purpose": "models",
+      "notes": "2026-11-11 本轮独立官方核对；范围与限制见对应refresh证据。"
+    },
+    {
+      "id": "refresh-4-flash-t2v",
+      "url": "https://klingai.com/document-api/api/video/4-0-flash/text-to-video.md",
+      "purpose": "models",
+      "notes": "2026-11-11 本轮独立官方核对；范围与限制见对应refresh证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

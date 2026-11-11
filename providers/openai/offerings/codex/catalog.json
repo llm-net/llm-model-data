@@ -7,11 +7,13 @@
   "market": "global",
   "coverage": "partial",
   "verification": {
-    "status": "needs_review",
-    "checked_at": null,
-    "source_ids": [],
-    "evidence": "evidence/openai/2026-09-16-audit.md",
-    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+    "status": "verified",
+    "checked_at": "2026-11-11T11:22:59.760385+00:00",
+    "source_ids": [
+      "r1024-codex-models"
+    ],
+    "evidence": "evidence/openai/2026-11-11-refresh.md",
+    "notes": "本产品现有维护清单逐型号复核；未重获的订阅目录/私有契约保留原成功日期，详见各字段与本轮证据。"
   },
   "plans": [
     {
@@ -41,12 +43,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:03:14+00:00",
+              "checked_at": "2026-11-11T11:23:00.363588+00:00",
               "source_ids": [
                 "r1024-codex-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。",
             "time_basis": "unknown",
@@ -55,12 +57,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:03:14+00:00",
+          "checked_at": "2026-11-11T11:23:00.363588+00:00",
           "source_ids": [
             "r1024-codex-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。"
       },
@@ -68,12 +70,12 @@
       "overage": "unknown",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:03:14+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "当前公开个人套餐月费复核；未调查实际用量扣费。"
       },
       "notes": "本轮官方个人月付卡片复核：Free0、Go8、Plus20、Pro起价100美元；Pro另外有200/500档，本产品部分收录；未调查实际额度扣费。"
     },
@@ -104,12 +106,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:03:14+00:00",
+              "checked_at": "2026-11-11T11:23:00.363588+00:00",
               "source_ids": [
                 "r1024-codex-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。",
             "time_basis": "unknown",
@@ -118,12 +120,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:03:14+00:00",
+          "checked_at": "2026-11-11T11:23:00.363588+00:00",
           "source_ids": [
             "r1024-codex-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。"
       },
@@ -131,12 +133,12 @@
       "overage": "unknown",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:03:14+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "当前公开个人套餐月费复核；未调查实际用量扣费。"
       },
       "notes": "本轮官方个人月付卡片复核：Free0、Go8、Plus20、Pro起价100美元；Pro另外有200/500档，本产品部分收录；未调查实际额度扣费。"
     },
@@ -167,12 +169,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:03:14+00:00",
+              "checked_at": "2026-11-11T11:23:00.363588+00:00",
               "source_ids": [
                 "r1024-codex-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。",
             "time_basis": "unknown",
@@ -181,12 +183,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:03:14+00:00",
+          "checked_at": "2026-11-11T11:23:00.363588+00:00",
           "source_ids": [
             "r1024-codex-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。"
       },
@@ -194,12 +196,12 @@
       "overage": "unknown",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:03:14+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "当前公开个人套餐月费复核；未调查实际用量扣费。"
       },
       "notes": "本轮官方个人月付卡片复核：Free0、Go8、Plus20、Pro起价100美元；Pro另外有200/500档，本产品部分收录；未调查实际额度扣费。"
     },
@@ -230,12 +232,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:03:14+00:00",
+              "checked_at": "2026-11-11T11:23:00.363588+00:00",
               "source_ids": [
                 "r1024-codex-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-24-refresh.md",
-              "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。",
             "time_basis": "unknown",
@@ -244,12 +246,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:03:14+00:00",
+          "checked_at": "2026-11-11T11:23:00.363588+00:00",
           "source_ids": [
             "r1024-codex-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。"
       },
@@ -257,14 +259,14 @@
       "overage": "unknown",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:03:14+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-24-refresh.md",
-        "notes": "本轮核对官方公开资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "当前公开个人套餐月费复核；未调查实际用量扣费。"
       },
-      "notes": "本轮官方个人月付卡片复核：Free0、Go8、Plus20、Pro起价100美元；Pro另外有200/500档，本产品部分收录；未调查实际额度扣费。"
+      "notes": "当前 Pro 起价100美元/月，本条保留基础5x档；另有200/500美元档。本轮文档称 Pro 当前无5小时限制，周额度和具体型号资格仍依方案。"
     }
   ],
   "models": [
@@ -283,13 +285,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-models",
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -357,12 +359,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文、30分钟缓存写入参考价，不代表订阅实际扣费。",
             "time_basis": "unknown",
@@ -371,12 +373,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文、30分钟缓存写入参考价，不代表订阅实际扣费。"
       },
@@ -398,13 +400,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方 Codex 模型及配置说明确认 Responses；不能继承按量 API 的 Chat 面。"
         },
@@ -413,12 +415,12 @@
           "reported_value": "500,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.032804+00:00",
+            "checked_at": "2026-11-11T11:22:59.760385+00:00",
             "source_ids": [
               "r1024-codex-models"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方 Codex / ChatGPT Work 模型页明确本型号默认窗口500,000 tokens，替换历史CLI静态目录272000；实际客户端覆盖与服务端策略可改变窗口，不继承API的1,050,000。"
         },
@@ -529,13 +531,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-models",
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -603,13 +605,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:56:56.484667+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
-                "r1029-openai-terra61",
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台API的Standard短上下文、30分钟缓存写入参考价，不表示订阅实际扣费或订阅窗口。",
             "time_basis": "unknown",
@@ -618,13 +619,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:56:56.484667+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
-            "r1029-openai-terra61",
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台API的Standard短上下文、30分钟缓存写入参考价，不表示订阅实际扣费或订阅窗口。"
       },
@@ -646,13 +646,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方 Codex 模型及配置说明确认 Responses；不能继承按量 API 的 Chat 面。"
         },
@@ -666,8 +666,8 @@
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本产品只明确6.1 Sol默认500000，未找到Terra精确订阅窗口。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "只明确 Sol 默认500000，仍没有 Terra 的本订阅精确窗口。"
           },
           "notes": "Codex的GPT-6.1 Terra上下文未独立公布；不继承同名API的1,050,000或Sol的500,000，不复用旧CLI其他型号的272000。"
         },
@@ -686,13 +686,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "逐项核对本产品官方资料；未使用真实 Key 实调。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "只确认本产品支持可调思考；逐型号枚举、缺省与关闭能力仍未公开。"
           },
           "notes": "只确认本产品支持可调思考；精确档位、关闭能力、默认及裸订阅请求行为待核对。Ultra为自动委派，不是单次模型档位。"
         }
@@ -710,13 +710,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-models",
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -784,12 +784,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -798,12 +798,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -825,13 +825,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -936,13 +936,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-models",
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1010,12 +1010,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -1024,12 +1024,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -1051,13 +1051,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1162,13 +1162,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-models",
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1236,12 +1236,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -1250,12 +1250,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -1277,13 +1277,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1388,13 +1388,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-models",
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1419,10 +1419,10 @@
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-24-refresh.md",
-          "notes": "已核促销性质，但未取得当前生效的非促销标准价；不刷新成功核价日期。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
-        "notes": "OpenAI Pricing 明确 GPT-5.6 Sol 为促销价，至少持续至 2026-11-21。当前输入/缓存读/输出/30分钟写入为 4/0.4/20/5 USD 每百万 token，12小时写入10；仅留证据，不充当本仓非促销标准基准。未公布当前可用的非促销价，reference_prices 保留 unknown，不从其他型号补价。"
+        "notes": "GPT-5.6 Sol 的 API 当前价仍为促销，尚无本日非促销标准价；维持 unknown，不采用未来价，也不把订阅 CREDIT 费率当现金价格。"
       },
       "notes": "官方当前 Codex 订阅目录仍列本型号；资格受客户端、套餐、管理员与分批开放限制。",
       "capabilities": {
@@ -1442,13 +1442,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1569,13 +1569,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-models",
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1637,12 +1637,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -1651,12 +1651,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -1678,13 +1678,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1789,13 +1789,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:55:23.747966+00:00",
+        "checked_at": "2026-11-11T11:23:00.363588+00:00",
         "source_ids": [
           "r1024-codex-models",
           "r1024-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "按本产品模型页及当前型号用量表核对；不表示账号已获准使用。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1857,12 +1857,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
             "time_basis": "unknown",
@@ -1871,12 +1871,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
       },
@@ -1898,13 +1898,13 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:55:23.033394+00:00",
+            "checked_at": "2026-11-11T11:22:59.760951+00:00",
             "source_ids": [
               "r1024-codex-models",
               "r1024-codex-config"
             ],
-            "evidence": "evidence/openai/2026-10-29-refresh.md",
-            "notes": "本字段独立核对；保留已注明的部分覆盖与未知项。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -2009,12 +2009,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-29T01:56:55.227713+00:00",
+        "checked_at": "2026-11-11T11:23:00.400624+00:00",
         "source_ids": [
           "codex-imagegen"
         ],
-        "evidence": "evidence/openai/2026-10-29-refresh.md",
-        "notes": "官方 Codex 文档明确内置生图使用 gpt-image-2；后端私有字段仍使用历史独立证据。"
+        "evidence": "evidence/openai/2026-11-11-refresh.md",
+        "notes": "当前 Codex 生图文档仍明确 gpt-image-2；私有订阅字段没有重跑探针。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2074,12 +2074,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-29T01:55:23.028922+00:00",
+              "checked_at": "2026-11-11T11:22:59.756511+00:00",
               "source_ids": [
                 "r1024-openai-pricing"
               ],
-              "evidence": "evidence/openai/2026-10-29-refresh.md",
-              "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "input_uncached_tokens 与 input_cached_tokens 指文本输入；图像缓存输入 2 USD / 百万 token 没有对应计量名，未列入，且官方注明缓存价只适用于 Responses 出图。",
             "time_basis": "unknown",
@@ -2088,12 +2088,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-29T01:55:23.028922+00:00",
+          "checked_at": "2026-11-11T11:22:59.756511+00:00",
           "source_ids": [
             "r1024-openai-pricing"
           ],
-          "evidence": "evidence/openai/2026-10-29-refresh.md",
-          "notes": "核对同平台精确型号的标准按量基准；订阅仅作独立参考价。"
+          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费；Codex 文档称出图计入一般用量、消耗约快 3–5 倍。"
       },
@@ -2135,10 +2135,10 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "r1016-imagegen"
+              "codex-imagegen"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "重新查询本产品图像生成资料，仍无图像型号的思考开关、档位或默认资料。"
+            "evidence": "evidence/openai/2026-11-11-refresh.md",
+            "notes": "官方产品生图页仍未给图像型号的思考开关、档位与默认值。"
           },
           "notes": "图像型号没有思考控制资料；Responses 承载文本模型的 reasoning.effort 板测不改变图像工具标识，不是图像型号的思考深度。"
         },

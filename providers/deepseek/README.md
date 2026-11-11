@@ -6,6 +6,8 @@
 
 先读取 provider.json 的官方来源入口；入口本身不代表当前事实已经核实。具体核对状态以 catalog.json 各条 verification 为准。
 
+本次更新见 [2026-11-11 核对记录](../../evidence/deepseek/2026-11-11-refresh.md)；各字段的核对范围与保留的历史日期见该记录及 catalog.json。
+
 ## 独立产品
 
 - [api-cn](offerings/api-cn/catalog.json)
@@ -14,19 +16,19 @@
 
 模型身份独立核对；按量产品核价，订阅模型只维护按量参考价：优先本平台，缺价才取开发方。完整重复保存价格，不做运行时继承。只选一个标准基准，其他规格和促销写备注。更新前检查provider.json排除清单。
 
-按用户要求，仅保留 `deepseek-flash` 与 `deepseek-v4-pro` 两个主型号；旧兼容别名 `deepseek-v4-flash`、`deepseek-v4-flash-vision-exp` 已删除并加入 `excluded_request_ids`。这是收录决定，不表示官方已停止接受旧请求名，见[本轮核对记录](../../evidence/deepseek/2026-10-29-audit.md)。
+按用户要求，仅保留 `deepseek-flash` 与 `deepseek-v4-pro` 两个主型号；旧兼容别名 `deepseek-v4-flash`、`deepseek-v4-flash-vision-exp` 已删除并加入 `excluded_request_ids`。这是收录决定，不表示官方已停止接受旧请求名，见[2026-10-29 收录决定](../../evidence/deepseek/2026-10-29-audit.md)。
 
 ## 当前核价口径
 
-使用 catalog v2 的规则内 time_pricing，完整保存高峰与空闲价格及北京时间作息；历史调价仍留 Git。 最新分时结论见[核对证据](../../evidence/deepseek/2026-09-17-time-pricing.md)。
+使用 catalog v2 的规则内 time_pricing，完整保存高峰与空闲价格及北京时间作息；历史调价仍留 Git。 历史分时建模记录见[核对证据](../../evidence/deepseek/2026-09-17-time-pricing.md)。
 
 ## 协议面核对
 
-每次更新必须按 [PROTOCOLS.md](../../docs/PROTOCOLS.md) 逐模型核对 `capabilities.interfaces` 与独立 `interface_assessment`，包括本家的所有订阅产品。不能从模型原厂、价格或同家其他产品继承协议；partial / unknown 必须进入候选报告。本轮证据见 [协议核对记录](../../evidence/deepseek/2026-09-16-protocols.md)。
+每次更新必须按 [PROTOCOLS.md](../../docs/PROTOCOLS.md) 逐模型核对 `capabilities.interfaces` 与独立 `interface_assessment`，包括本家的所有订阅产品。不能从模型原厂、价格或同家其他产品继承协议；partial / unknown 必须进入候选报告。历史协议专项见 [协议核对记录](../../evidence/deepseek/2026-09-16-protocols.md)。
 
 ## 思考能力核对
 
-每次更新同时按 [REASONING.md](../../docs/REASONING.md) 逐模型维护 `capabilities.reasoning`；官方参数、档位、开关、预算、默认值按产品及协议 / 工具入口独立核对，未证实的部分保留 unknown / partial，不能继承原厂 API。本轮记录见 [思考能力证据](../../evidence/deepseek/2026-09-16-reasoning.md)。
+每次更新同时按 [REASONING.md](../../docs/REASONING.md) 逐模型维护 `capabilities.reasoning`；官方参数、档位、开关、预算、默认值按产品及协议 / 工具入口独立核对，未证实的部分保留 unknown / partial，不能继承原厂 API。历史思考专项见 [思考能力证据](../../evidence/deepseek/2026-09-16-reasoning.md)。
 
 ## 上下文长度核对
 

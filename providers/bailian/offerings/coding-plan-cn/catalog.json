@@ -1161,19 +1161,19 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [
         "pro"
       ],
       "verification": {
-        "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "status": "needs_review",
+        "checked_at": null,
         "source_ids": [
-          "audit-coding-plan-cn"
+          "coding-plan-cn"
         ],
-        "evidence": "evidence/bailian/2026-09-16-audit.md",
-        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+        "evidence": "evidence/bailian/2026-11-11-refresh.md",
+        "notes": "本轮当前精确支持清单不再列此ID，未查得本订阅的明确EOS公告；保留条目及历史价格/能力，当前可用性记unknown。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1244,7 +1244,7 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。 本轮完整同平台价表未列精确型号，旧公开价格保留且不刷新成功日期；不套同族或原厂价格。"
       },
-      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。 本轮本产品支持表/FAQ缺项，未有明确已到期具体下线证据，保留旧日期及型号待复核。",
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。 本轮本产品支持表/FAQ缺项，未有明确已到期具体下线证据，保留旧日期及型号待复核。 2026-11-11 当前产品精确支持清单缺此ID；不据此宣布下线，待平台进一步确认。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 262144,
@@ -1309,19 +1309,19 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [
         "pro"
       ],
       "verification": {
-        "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "status": "needs_review",
+        "checked_at": null,
         "source_ids": [
-          "audit-coding-plan-cn"
+          "coding-plan-cn"
         ],
-        "evidence": "evidence/bailian/2026-09-16-audit.md",
-        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+        "evidence": "evidence/bailian/2026-11-11-refresh.md",
+        "notes": "本轮当前精确支持清单不再列此ID，未查得本订阅的明确EOS公告；保留条目及历史价格/能力，当前可用性记unknown。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1392,7 +1392,7 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。 本轮完整同平台价表未列精确型号，旧公开价格保留且不刷新成功日期；不套同族或原厂价格。"
       },
-      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。 本轮本产品支持表/FAQ缺项，未有明确已到期具体下线证据，保留旧日期及型号待复核。",
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。 本轮本产品支持表/FAQ缺项，未有明确已到期具体下线证据，保留旧日期及型号待复核。 2026-11-11 当前产品精确支持清单缺此ID；不据此宣布下线，待平台进一步确认。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 262144,
@@ -1457,19 +1457,19 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [
         "pro"
       ],
       "verification": {
-        "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "status": "needs_review",
+        "checked_at": null,
         "source_ids": [
-          "audit-coding-plan-cn"
+          "coding-plan-cn"
         ],
-        "evidence": "evidence/bailian/2026-09-16-audit.md",
-        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+        "evidence": "evidence/bailian/2026-11-11-refresh.md",
+        "notes": "本轮当前精确支持清单不再列此ID，未查得本订阅的明确EOS公告；保留条目及历史价格/能力，当前可用性记unknown。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1540,7 +1540,7 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。 本轮完整同平台价表未列精确型号，旧公开价格保留且不刷新成功日期；不套同族或原厂价格。"
       },
-      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。 本轮本产品支持表/FAQ缺项，未有明确已到期具体下线证据，保留旧日期及型号待复核。",
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。 本轮本产品支持表/FAQ缺项，未有明确已到期具体下线证据，保留旧日期及型号待复核。 2026-11-11 当前产品精确支持清单缺此ID；不据此宣布下线，待平台进一步确认。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 1000000,
@@ -1605,19 +1605,19 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [
         "pro"
       ],
       "verification": {
-        "status": "verified",
-        "checked_at": "2026-09-16T05:21:18.046564Z",
+        "status": "needs_review",
+        "checked_at": null,
         "source_ids": [
-          "audit-coding-plan-cn"
+          "coding-plan-cn"
         ],
-        "evidence": "evidence/bailian/2026-09-16-audit.md",
-        "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。"
+        "evidence": "evidence/bailian/2026-11-11-refresh.md",
+        "notes": "本轮当前精确支持清单不再列此ID，未查得本订阅的明确EOS公告；保留条目及历史价格/能力，当前可用性记unknown。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1688,7 +1688,7 @@
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。 本轮完整同平台价表未列精确型号，旧公开价格保留且不刷新成功日期；不套同族或原厂价格。"
       },
-      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。 本轮本产品支持表/FAQ缺项，未有明确已到期具体下线证据，保留旧日期及型号待复核。",
+      "notes": "独立核对Coding Plan列出的十个模型；原厂下线不自动传播到本订阅。 本轮本产品支持表/FAQ缺项，未有明确已到期具体下线证据，保留旧日期及型号待复核。 2026-11-11 当前产品精确支持清单缺此ID；不据此宣布下线，待平台进一步确认。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 202752,

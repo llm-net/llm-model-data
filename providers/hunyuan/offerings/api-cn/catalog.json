@@ -158,12 +158,12 @@
                   "parameter": "reasoning_effort",
                   "values": [
                     "high",
-                    "none"
+                    "no_think"
                   ],
                   "minimum": null,
                   "maximum": null,
                   "default": "high",
-                  "notes": "仅保存该产品、型号与协议面已明确的控制值。"
+                  "notes": "TokenHub 本型号官方取值；no_think 关闭思考，不把 none 当同义值。"
                 }
               ],
               "notes": "其他协议面控制、未列档位与预算仍待核实。"
@@ -171,15 +171,14 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-11T11:23:25.184809+00:00",
             "source_ids": [
-              "audit-20261024-thinking",
-              "protocol-hy"
+              "audit-20261024-thinking"
             ],
-            "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-            "notes": "TokenHub 专页现已列完整 Chat 开关及 effort；Hy3 带 tools 时 low 映射 high，其他协议参数仍未核清。"
+            "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
           },
-          "notes": "TokenHub 专页现已列完整 Chat 开关及 effort；Hy3 带 tools 时 low 映射 high，其他协议参数仍未核清。"
+          "notes": "TokenHub 专页现已列完整 Chat 开关及 effort；Hy3 带 tools 时 low 映射 high，其他协议参数仍未核清。 本次将旧 none 更正为官方 no_think；其他协议控制仍不完整。"
         },
         "context_assessment": {
           "status": "partial",
@@ -341,12 +340,12 @@
                   "values": [
                     "low",
                     "high",
-                    "none"
+                    "no_think"
                   ],
                   "minimum": null,
                   "maximum": null,
                   "default": "high",
-                  "notes": "仅保存该产品、型号与协议面已明确的控制值。"
+                  "notes": "TokenHub 本型号官方取值；no_think 关闭思考，不把 none 当同义值。"
                 }
               ],
               "notes": "其他协议面控制、未列档位与预算仍待核实。"
@@ -354,15 +353,14 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-11T11:23:25.184809+00:00",
             "source_ids": [
-              "audit-20261024-thinking",
-              "protocol-hy"
+              "audit-20261024-thinking"
             ],
-            "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-            "notes": "TokenHub 专页现已列完整 Chat 开关及 effort；Hy3 带 tools 时 low 映射 high，其他协议参数仍未核清。"
+            "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
           },
-          "notes": "TokenHub 专页现已列完整 Chat 开关及 effort；Hy3 带 tools 时 low 映射 high，其他协议参数仍未核清。"
+          "notes": "TokenHub 专页现已列完整 Chat 开关及 effort；Hy3 带 tools 时 low 映射 high，其他协议参数仍未核清。 本次将旧 none 更正为官方 no_think；其他协议控制仍不完整。"
         },
         "context_assessment": {
           "status": "partial",
@@ -1332,6 +1330,12 @@
                 "amount": "100",
                 "per": 1000000,
                 "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "20",
+                "per": 1000000,
+                "unit": "token"
               }
             ],
             "effective_from": null,
@@ -1341,26 +1345,26 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-11T11:23:25.448451+00:00",
               "source_ids": [
                 "audit-prices"
               ],
-              "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
+              "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+              "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 新增本平台明确的5分钟缓存写入20元/百万token；1小时40元作为替代TTL档不叠加。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-11T11:23:25.448451+00:00",
           "source_ids": [
             "audit-prices"
           ],
-          "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
+          "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+          "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -1611,14 +1615,14 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-11T11:23:25.184809+00:00",
             "source_ids": [
               "audit-20261024-thinking"
             ],
-            "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-            "notes": "TokenHub 默认 adaptive，通用控制允许 enabled/disabled；未证明显式 adaptive 的请求枚举与其他协议默认，故不填该枚举。"
+            "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
           },
-          "notes": "TokenHub 默认 adaptive，通用控制允许 enabled/disabled；未证明显式 adaptive 的请求枚举与其他协议默认，故不填该枚举。"
+          "notes": "TokenHub当前默认值表写adaptive，通用开启/关闭控制只明确enabled/disabled；只记录default_behavior，不把adaptive推成显式请求枚举或control.default。其他协议默认与控制仍未知。"
         },
         "context_assessment": {
           "status": "partial",
@@ -2876,6 +2880,191 @@
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
+        }
+      }
+    },
+    {
+      "id": "hy4",
+      "request_id": "hy4",
+      "display_name": "混元 Hy4",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-11T11:23:25.311174+00:00",
+        "source_ids": [
+          "catalog"
+        ],
+        "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+        "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "TokenHub 广州标准在线目录价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "6",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "18",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-11T11:23:25.448451+00:00",
+              "source_ids": [
+                "audit-prices"
+              ],
+              "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+              "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+            },
+            "notes": "Hy4 限时5折至2026-12-31 23:59:59（北京时间），起点未明确；这里只保存非促销基准，不把折扣扩及Hy4 preview。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-11T11:23:25.448451+00:00",
+          "source_ids": [
+            "audit-prices"
+          ],
+          "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+          "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+        },
+        "notes": "Hy4 限时5折至2026-12-31 23:59:59（北京时间），起点未明确；这里只保存非促销基准，不把折扣扩及Hy4 preview。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "TokenHub 广州正式 Hy4；官方独立支持表确认视觉输入与三种文本协议。标准目录价不混新加坡或限时折扣。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:23:25.670575+00:00",
+            "source_ids": [
+              "protocol-language"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "按 TokenHub 精确 model 参数行核对三面；MT2 Plus/Lite/Pro 明确仅 Chat。平台转换兼容面受对应工具与参数限制。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "仅保存该产品、型号与协议面已明确的控制值。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "high",
+                    "no_think"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "TokenHub 本型号官方取值；no_think 关闭思考，不把 none 当同义值。"
+                }
+              ],
+              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:23:25.184809+00:00",
+            "source_ids": [
+              "audit-20261024-thinking"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "TokenHub 专页现已列完整 Chat 开关及 effort；Hy3 带 tools 时 low 映射 high，其他协议参数仍未核清。 本次将旧 none 更正为官方 no_think；其他协议控制仍不完整。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M（模型表）；1024k（Hy 调用指南）",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-11T11:23:25.541204+00:00",
+            "source_ids": [
+              "catalog",
+              "protocol-hy"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          },
+          "notes": "两页均为标称规格，未确认K/M整数边界；最大输入960k、输出64k仅原文保留，不换算。"
         }
       }
     }
