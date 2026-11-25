@@ -98,6 +98,12 @@
       "url": "https://cloud.tencent.com/document/product/1823/132232",
       "purpose": "models",
       "notes": "TokenHub Kimi 精确型号调用、上下文、思考和缓存。"
+    },
+    {
+      "id": "context-hunyuan-guide",
+      "url": "https://cloud.tencent.com/document/product/1823/132252",
+      "purpose": "models",
+      "notes": "上下文专项：混元调用指南的窗口、最大输入与最大输出写法。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

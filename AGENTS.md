@@ -16,6 +16,7 @@
 - **编程工具订阅必查模型参考价**（Codex、Grok Build、Cursor、Claude Code）：逐型号按下述顺序核价，同平台缺价必须继续查对应模型方官网 API 价；不能因工具未标价或本仓未收录原厂型号就留空。完整核对输入、输出、缓存与媒体分量，写入 `reference_prices` 和 `reference_origin`；缺价记录已查官网及原因，优惠数字只写证据。详见[订阅核价](docs/PRICING.md#订阅模型统一使用按量参考价)。
 - 订阅参考顺序固定：同平台对应型号的按量价 → 模型开发方的公开按量价。先查同平台完整官方价表，不能因为本仓库按量清单没收录就跳到原厂。两处均无对应价格时保留unknown；只有用户明确指定时才采用其他型号作近似参考，不能自行猜价。每条写清reference_origin并完整保存数字；不自动换汇。
 - Kimi Code的kimi-for-coding（K2.8 Preview）按用户指定参考kimi-k2.7-code按量价；保留原底模身份和请求名，不冒充官方同价。
+- 腾讯 TokenHub（hunyuan/api-cn）模型列表只写 K/M 的上下文窗口与最大输出，按用户指定以 1k=1024、1M=1048576 换算；状态保持 partial、`reported_value` 留官方原文，notes 写明换算。计费阶梯的 K 不适用此口径，其他平台不套用。依据见 [证据](evidence/hunyuan/2026-11-25-context.md)。
 - OpenCode Go 全部型号与 Grok Build 的 grok-4.7-build-fast 按用户指定取模型源头厂商官网价：Go 文档的用量换算价与 Zen 余额价不作参考，中国厂商取国内官网人民币价，Grok 4.7 Fast 取 xAI 官网单列的 Fast 费率。
 - 方舟Seedance 2.5/2.0/2.0-fast/2.0-mini与千帆DeepSeek V4 Pro/Flash短名按同平台同系列最新日期版本估价；多个版本按实际日期排序，不按返回顺序或价格高低。该规则不证明官方路由等价。参考对象已入按量目录时保存完整 `reference_origin.catalog_model` 身份用于一致性检查，数字仍独立维护；不将价格关系写成 `alias_of`，不从本地 ID 猜请求名。
 - 金额用原币种十进制字符串，禁止浮点和默认美元折人民币。免费必须有明确零价和证据。
