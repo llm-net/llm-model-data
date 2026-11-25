@@ -382,13 +382,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:06:01.101090Z",
+        "checked_at": "2026-11-25T10:30:52Z",
         "source_ids": [
-          "audit-model-lifecycle",
-          "audit-token-legacy"
+          "current-lifecycle-md",
+          "m-plan-cn"
         ],
-        "evidence": "evidence/minimax/2026-10-24-audit.md",
-        "notes": "官方公告明确自 2026-10-19 起 Token Plan 的 M2.7 请求路由 M3.1 Flash，旧请求名保留；参考当前实际承载模型的同平台按量价。"
+        "evidence": "evidence/minimax/2026-11-25-refresh.md",
+        "notes": "生命周期公告明确订阅兼容输入名仍路由至 M3.1 Flash。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -471,7 +471,7 @@
         },
         "notes": "不套用 M3 的长上下文阶梯或 priority 服务层价格。"
       },
-      "notes": "官方公告明确自 2026-10-19 起 Token Plan 的 M2.7 请求路由 M3.1 Flash，旧请求名保留；参考当前实际承载模型的同平台按量价。",
+      "notes": "旧 M2.7 请求名仍用于兼容；MiniMax 自 2026-10-19 将 M Plan 和 Token Plan 的 M2.7 请求统一路由至 M3.1 Flash。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,

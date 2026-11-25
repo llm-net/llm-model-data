@@ -8,12 +8,13 @@
   "coverage": "partial",
   "verification": {
     "status": "verified",
-    "checked_at": "2026-11-11T11:23:05.344468+00:00",
+    "checked_at": "2026-11-25T10:37:42+00:00",
     "source_ids": [
-      "audit-20261024-legacy"
+      "audit-20261024-legacy",
+      "r1125-cursor-price"
     ],
-    "evidence": "evidence/cursor/2026-11-11-refresh.md",
-    "notes": "本产品现有维护清单逐型号复核；未重获的订阅目录/私有契约保留原成功日期，详见各字段与本轮证据。"
+    "evidence": "evidence/cursor/2026-11-25-refresh.md",
+    "notes": "维护旧 Cursor individual 订阅型号，按型号记录两份官方资料。"
   },
   "plans": [
     {
@@ -43,12 +44,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:05.344468+00:00",
+              "checked_at": "2026-11-25T10:26:28.152255+00:00",
               "source_ids": [
                 "audit-20261024-legacy"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "核对旧版每月公开套餐价格。"
             },
             "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。",
             "time_basis": "unknown",
@@ -57,12 +58,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:05.344468+00:00",
+          "checked_at": "2026-11-25T10:26:28.152255+00:00",
           "source_ids": [
             "audit-20261024-legacy"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "核对旧版每月公开套餐价格。"
         },
         "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。"
       },
@@ -70,12 +71,12 @@
       "overage": "pay_as_you_go",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:05.344468+00:00",
+        "checked_at": "2026-11-25T10:26:28.152255+00:00",
         "source_ids": [
           "audit-20261024-legacy"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "旧Pro/Pro+/Ultra的月费与月度双用量池仍适用，个人按需付费需开启；不混用The X Subscription。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 旧套餐官方价仍适用既有用户；新购买产品独立。"
       },
       "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。"
     },
@@ -106,12 +107,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:05.344468+00:00",
+              "checked_at": "2026-11-25T10:26:28.152255+00:00",
               "source_ids": [
                 "audit-20261024-legacy"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "核对旧版每月公开套餐价格。"
             },
             "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。",
             "time_basis": "unknown",
@@ -120,12 +121,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:05.344468+00:00",
+          "checked_at": "2026-11-25T10:26:28.152255+00:00",
           "source_ids": [
             "audit-20261024-legacy"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "核对旧版每月公开套餐价格。"
         },
         "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。"
       },
@@ -133,12 +134,12 @@
       "overage": "pay_as_you_go",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:05.344468+00:00",
+        "checked_at": "2026-11-25T10:26:28.152255+00:00",
         "source_ids": [
           "audit-20261024-legacy"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "旧Pro/Pro+/Ultra的月费与月度双用量池仍适用，个人按需付费需开启；不混用The X Subscription。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 旧套餐官方价仍适用既有用户；新购买产品独立。"
       },
       "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。"
     },
@@ -169,12 +170,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:05.344468+00:00",
+              "checked_at": "2026-11-25T10:26:28.152255+00:00",
               "source_ids": [
                 "audit-20261024-legacy"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "核对旧版每月公开套餐价格。"
             },
             "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。",
             "time_basis": "unknown",
@@ -183,12 +184,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:05.344468+00:00",
+          "checked_at": "2026-11-25T10:26:28.152255+00:00",
           "source_ids": [
             "audit-20261024-legacy"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "核对旧版每月公开套餐价格。"
         },
         "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。"
       },
@@ -196,12 +197,12 @@
       "overage": "pay_as_you_go",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:05.344468+00:00",
+        "checked_at": "2026-11-25T10:26:28.152255+00:00",
         "source_ids": [
           "audit-20261024-legacy"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "旧Pro/Pro+/Ultra的月费与月度双用量池仍适用，个人按需付费需开启；不混用The X Subscription。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 旧套餐官方价仍适用既有用户；新购买产品独立。"
       },
       "notes": "旧版个人套餐，既有用户继续按原月付价格与条款使用；新客户使用独立 The X Subscription。本条不代表新售套餐，不混用同名新 Ultra 的周额度。"
     }
@@ -223,12 +224,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:25.750533+00:00",
+        "checked_at": "2026-11-25T10:26:28.258240+00:00",
         "source_ids": [
           "tool-model-cursor-composer-2-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -284,24 +285,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:25.750533+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-cursor-composer-2-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:25.750533+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-cursor-composer-2-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -345,11 +348,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:25.750533+00:00",
+            "checked_at": "2026-11-25T10:26:28.258240+00:00",
             "source_ids": [
               "tool-model-cursor-composer-2-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -359,11 +362,11 @@
           "reported_value": "200k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:25.750533+00:00",
+            "checked_at": "2026-11-25T10:26:28.258240+00:00",
             "source_ids": [
               "tool-model-cursor-composer-2-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 200k，Max context 标称 -；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
@@ -386,12 +389,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:25.750533+00:00",
+        "checked_at": "2026-11-25T10:26:28.258240+00:00",
         "source_ids": [
           "tool-model-cursor-composer-2-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -447,24 +450,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:25.750533+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-cursor-composer-2-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:25.750533+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-cursor-composer-2-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -508,11 +513,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:25.750533+00:00",
+            "checked_at": "2026-11-25T10:26:28.258240+00:00",
             "source_ids": [
               "tool-model-cursor-composer-2-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "与 Composer 2.5 同一模型的 Fast 档；Cursor 标注 Thinking，Composer 没有 effort 档位，具体参数、开关与默认值未公布。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -522,11 +527,11 @@
           "reported_value": "200k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:25.750533+00:00",
+            "checked_at": "2026-11-25T10:26:28.258240+00:00",
             "source_ids": [
               "tool-model-cursor-composer-2-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 200k，Max context 标称 -；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
@@ -549,12 +554,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:25.751498+00:00",
+        "checked_at": "2026-11-25T10:26:28.334193+00:00",
         "source_ids": [
           "tool-model-grok-4-7"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -610,24 +615,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:25.751498+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-grok-4-7"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。仅取标准速度 256k 档；500k 档及 Fast 价另有倍率，不扩大本基准。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:25.751498+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-grok-4-7"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。仅取标准速度 256k 档；500k 档及 Fast 价另有倍率，不扩大本基准。"
       },
@@ -686,11 +693,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:25.751498+00:00",
+            "checked_at": "2026-11-25T10:26:28.334193+00:00",
             "source_ids": [
               "tool-model-grok-4-7"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
@@ -700,11 +707,11 @@
           "reported_value": "256k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:25.751498+00:00",
+            "checked_at": "2026-11-25T10:26:28.334193+00:00",
             "source_ids": [
               "tool-model-grok-4-7"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 256k，Max context 标称 500k；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
@@ -727,12 +734,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:25.752074+00:00",
+        "checked_at": "2026-11-25T10:26:28.336243+00:00",
         "source_ids": [
           "tool-model-grok-4-6"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -788,24 +795,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:25.752074+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-grok-4-6"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:25.752074+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-grok-4-6"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -864,11 +873,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:25.752074+00:00",
+            "checked_at": "2026-11-25T10:26:28.336243+00:00",
             "source_ids": [
               "tool-model-grok-4-6"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
@@ -878,11 +887,11 @@
           "reported_value": "256k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:25.752074+00:00",
+            "checked_at": "2026-11-25T10:26:28.336243+00:00",
             "source_ids": [
               "tool-model-grok-4-6"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 256k，Max context 标称 -；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
@@ -905,12 +914,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:26.386596+00:00",
+        "checked_at": "2026-11-25T10:26:28.379737+00:00",
         "source_ids": [
           "tool-model-grok-4-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -966,24 +975,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:26.386596+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-grok-4-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:26.386596+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-grok-4-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -1041,11 +1052,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.386596+00:00",
+            "checked_at": "2026-11-25T10:26:28.379737+00:00",
             "source_ids": [
               "tool-model-grok-4-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
@@ -1055,11 +1066,11 @@
           "reported_value": "256k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.386596+00:00",
+            "checked_at": "2026-11-25T10:26:28.379737+00:00",
             "source_ids": [
               "tool-model-grok-4-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 256k，Max context 标称 -；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。"
@@ -1082,12 +1093,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:26.447552+00:00",
+        "checked_at": "2026-11-25T10:26:28.499976+00:00",
         "source_ids": [
           "tool-model-claude-fable-5-1"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1149,24 +1160,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:26.447552+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-claude-fable-5-1"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:26.447552+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-claude-fable-5-1"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -1210,11 +1223,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.447552+00:00",
+            "checked_at": "2026-11-25T10:26:28.499976+00:00",
             "source_ids": [
               "tool-model-claude-fable-5-1"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -1224,11 +1237,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.447552+00:00",
+            "checked_at": "2026-11-25T10:26:28.499976+00:00",
             "source_ids": [
               "tool-model-claude-fable-5-1"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -1251,12 +1264,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:26.471596+00:00",
+        "checked_at": "2026-11-25T10:26:28.512931+00:00",
         "source_ids": [
           "tool-model-claude-opus-5-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1318,24 +1331,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:26.471596+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-claude-opus-5-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:26.471596+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-claude-opus-5-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -1379,11 +1394,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.471596+00:00",
+            "checked_at": "2026-11-25T10:26:28.512931+00:00",
             "source_ids": [
               "tool-model-claude-opus-5-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 型号页：支持 thinking 变体，推荐 high thinking；具体参数、档位清单、开关与默认值未公布，不继承 Anthropic API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -1393,11 +1408,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.471596+00:00",
+            "checked_at": "2026-11-25T10:26:28.512931+00:00",
             "source_ids": [
               "tool-model-claude-opus-5-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -1420,12 +1435,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:26.471596+00:00",
+        "checked_at": "2026-11-25T10:26:28.512931+00:00",
         "source_ids": [
           "tool-model-claude-opus-5-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1487,24 +1502,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:26.471596+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-claude-opus-5-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。 旧版按请求计费套餐须开启 Max Mode 才可用此 Fast 档。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:26.471596+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-claude-opus-5-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -1548,11 +1565,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.471596+00:00",
+            "checked_at": "2026-11-25T10:26:28.512931+00:00",
             "source_ids": [
               "tool-model-claude-opus-5-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 型号页：支持 thinking 变体，推荐 high thinking；具体参数、档位清单、开关与默认值未公布，不继承 Anthropic API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -1562,11 +1579,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.471596+00:00",
+            "checked_at": "2026-11-25T10:26:28.512931+00:00",
             "source_ids": [
               "tool-model-claude-opus-5-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -1589,12 +1606,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:26.930666+00:00",
+        "checked_at": "2026-11-25T10:26:28.542973+00:00",
         "source_ids": [
           "tool-model-claude-opus-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1656,24 +1673,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:26.930666+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-claude-opus-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:26.930666+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-claude-opus-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -1717,11 +1736,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.930666+00:00",
+            "checked_at": "2026-11-25T10:26:28.542973+00:00",
             "source_ids": [
               "tool-model-claude-opus-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -1731,11 +1750,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.930666+00:00",
+            "checked_at": "2026-11-25T10:26:28.542973+00:00",
             "source_ids": [
               "tool-model-claude-opus-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -1758,12 +1777,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:26.979706+00:00",
+        "checked_at": "2026-11-25T10:26:28.588745+00:00",
         "source_ids": [
           "tool-model-claude-sonnet-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1825,24 +1844,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:26.979706+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-claude-sonnet-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:26.979706+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-claude-sonnet-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -1886,11 +1907,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.979706+00:00",
+            "checked_at": "2026-11-25T10:26:28.588745+00:00",
             "source_ids": [
               "tool-model-claude-sonnet-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -1900,11 +1921,11 @@
           "reported_value": "200k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.979706+00:00",
+            "checked_at": "2026-11-25T10:26:28.588745+00:00",
             "source_ids": [
               "tool-model-claude-sonnet-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -1927,12 +1948,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:27.184873+00:00",
+        "checked_at": "2026-11-25T10:26:28.650454+00:00",
         "source_ids": [
           "tool-model-gemini-3-1-pro"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1988,24 +2009,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:27.184873+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gemini-3-1-pro"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:27.184873+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gemini-3-1-pro"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -2049,11 +2072,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.184873+00:00",
+            "checked_at": "2026-11-25T10:26:28.650454+00:00",
             "source_ids": [
               "tool-model-gemini-3-1-pro"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -2063,11 +2086,11 @@
           "reported_value": "200k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.184873+00:00",
+            "checked_at": "2026-11-25T10:26:28.650454+00:00",
             "source_ids": [
               "tool-model-gemini-3-1-pro"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -2090,12 +2113,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:27.584990+00:00",
+        "checked_at": "2026-11-25T10:26:28.661047+00:00",
         "source_ids": [
           "tool-model-gemini-3-8-flash"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2151,24 +2174,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:27.584990+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gemini-3-8-flash"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:27.584990+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gemini-3-8-flash"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -2226,11 +2251,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.584990+00:00",
+            "checked_at": "2026-11-25T10:26:28.661047+00:00",
             "source_ids": [
               "tool-model-gemini-3-8-flash"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
@@ -2240,11 +2265,11 @@
           "reported_value": "200k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.584990+00:00",
+            "checked_at": "2026-11-25T10:26:28.661047+00:00",
             "source_ids": [
               "tool-model-gemini-3-8-flash"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -2267,12 +2292,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:27.661908+00:00",
+        "checked_at": "2026-11-25T10:26:28.714005+00:00",
         "source_ids": [
           "tool-model-gpt-5-6-luna"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2334,24 +2359,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:27.661908+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gpt-5-6-luna"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:27.661908+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gpt-5-6-luna"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
       },
@@ -2395,11 +2422,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.661908+00:00",
+            "checked_at": "2026-11-25T10:26:28.714005+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-luna"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -2409,11 +2436,11 @@
           "reported_value": "272k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.661908+00:00",
+            "checked_at": "2026-11-25T10:26:28.714005+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-luna"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -2436,12 +2463,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:27.661908+00:00",
+        "checked_at": "2026-11-25T10:26:28.714005+00:00",
         "source_ids": [
           "tool-model-gpt-5-6-luna"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2503,24 +2530,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:27.661908+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gpt-5-6-luna"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:27.661908+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gpt-5-6-luna"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
       },
@@ -2564,11 +2593,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.661908+00:00",
+            "checked_at": "2026-11-25T10:26:28.714005+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-luna"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 Fast 档沿用同一型号页的思考说明，未另列档位。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -2578,11 +2607,11 @@
           "reported_value": "272k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.661908+00:00",
+            "checked_at": "2026-11-25T10:26:28.714005+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-luna"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -2605,12 +2634,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:27.889975+00:00",
+        "checked_at": "2026-11-25T10:26:28.734577+00:00",
         "source_ids": [
           "tool-model-gpt-5-6-sol"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2672,24 +2701,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:27.889975+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gpt-5-6-sol"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:27.889975+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gpt-5-6-sol"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
       },
@@ -2733,11 +2764,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.889975+00:00",
+            "checked_at": "2026-11-25T10:26:28.734577+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-sol"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -2747,11 +2778,11 @@
           "reported_value": "272k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.889975+00:00",
+            "checked_at": "2026-11-25T10:26:28.734577+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-sol"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -2774,12 +2805,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:27.889975+00:00",
+        "checked_at": "2026-11-25T10:26:28.734577+00:00",
         "source_ids": [
           "tool-model-gpt-5-6-sol"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2841,24 +2872,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:27.889975+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gpt-5-6-sol"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:27.889975+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gpt-5-6-sol"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
       },
@@ -2902,11 +2935,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.889975+00:00",
+            "checked_at": "2026-11-25T10:26:28.734577+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-sol"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 Fast 档沿用同一型号页的思考说明，未另列档位。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -2916,11 +2949,11 @@
           "reported_value": "272k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:27.889975+00:00",
+            "checked_at": "2026-11-25T10:26:28.734577+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-sol"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -2943,12 +2976,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:28.172279+00:00",
+        "checked_at": "2026-11-25T10:26:28.769350+00:00",
         "source_ids": [
           "tool-model-gpt-5-6-terra"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3010,24 +3043,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:28.172279+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gpt-5-6-terra"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:28.172279+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gpt-5-6-terra"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
       },
@@ -3071,11 +3106,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:28.172279+00:00",
+            "checked_at": "2026-11-25T10:26:28.769350+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-terra"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -3085,11 +3120,11 @@
           "reported_value": "272k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:28.172279+00:00",
+            "checked_at": "2026-11-25T10:26:28.769350+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-terra"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -3112,12 +3147,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:28.172279+00:00",
+        "checked_at": "2026-11-25T10:26:28.769350+00:00",
         "source_ids": [
           "tool-model-gpt-5-6-terra"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3179,24 +3214,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:28.172279+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gpt-5-6-terra"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:28.172279+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gpt-5-6-terra"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 272k 时输入/缓存分量为所选速度档 2 倍、输出为 1.5 倍，基准不覆盖长上下文。"
       },
@@ -3240,11 +3277,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:28.172279+00:00",
+            "checked_at": "2026-11-25T10:26:28.769350+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-terra"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 官方该型号页标注 Thinking；具体参数、完整档位、开关与默认值未公布，不能继承模型原厂 API。 Fast 档沿用同一型号页的思考说明，未另列档位。 当前页仍未补齐所有公开控制细节，保持partial。"
@@ -3254,11 +3291,11 @@
           "reported_value": "272k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:28.172279+00:00",
+            "checked_at": "2026-11-25T10:26:28.769350+00:00",
             "source_ids": [
               "tool-model-gpt-5-6-terra"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 272k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -3281,12 +3318,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:28.359015+00:00",
+        "checked_at": "2026-11-25T10:26:28.891439+00:00",
         "source_ids": [
           "tool-model-muse-spark-1-3"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3348,24 +3385,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:28.359015+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-muse-spark-1-3"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "按量等价消耗示意，不是订阅实际扣款。虽然价格表 Cache Write 为横杠，型号页 Pricing 正文明示不收缓存写入费，因此记录 cache_write_tokens=0；不是把缺项推成免费。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:28.359015+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-muse-spark-1-3"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "按量等价消耗示意，不是订阅实际扣款。虽然价格表 Cache Write 为横杠，型号页 Pricing 正文明示不收缓存写入费，因此记录 cache_write_tokens=0；不是把缺项推成免费。"
       },
@@ -3426,11 +3465,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:28.359015+00:00",
+            "checked_at": "2026-11-25T10:26:28.891439+00:00",
             "source_ids": [
               "tool-model-muse-spark-1-3"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
@@ -3440,11 +3479,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:28.359015+00:00",
+            "checked_at": "2026-11-25T10:26:28.891439+00:00",
             "source_ids": [
               "tool-model-muse-spark-1-3"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -3467,12 +3506,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:28.497089+00:00",
+        "checked_at": "2026-11-25T10:26:28.917894+00:00",
         "source_ids": [
           "tool-model-claude-sonnet-5-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3534,24 +3573,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:28.497089+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-claude-sonnet-5-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:28.497089+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-claude-sonnet-5-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -3609,11 +3650,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:28.497089+00:00",
+            "checked_at": "2026-11-25T10:26:28.917894+00:00",
             "source_ids": [
               "tool-model-claude-sonnet-5-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。只列页内明确出现的 low/high/max，未声称是完整枚举。"
@@ -3623,11 +3664,11 @@
           "reported_value": "200k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:28.497089+00:00",
+            "checked_at": "2026-11-25T10:26:28.917894+00:00",
             "source_ids": [
               "tool-model-claude-sonnet-5-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -3650,12 +3691,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:29.042646+00:00",
+        "checked_at": "2026-11-25T10:26:28.958394+00:00",
         "source_ids": [
           "tool-model-claude-haiku-5-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3717,24 +3758,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:29.042646+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-claude-haiku-5-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 100k 时所有 token 分量为标准价 5 倍。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:29.042646+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-claude-haiku-5-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。输入超过 100k 时所有 token 分量为标准价 5 倍。"
       },
@@ -3805,11 +3848,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:29.042646+00:00",
+            "checked_at": "2026-11-25T10:26:28.958394+00:00",
             "source_ids": [
               "tool-model-claude-haiku-5-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。关闭 thinking 仅在 low/medium/high 可用；max 未确认可关闭。"
@@ -3819,11 +3862,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:29.042646+00:00",
+            "checked_at": "2026-11-25T10:26:28.958394+00:00",
             "source_ids": [
               "tool-model-claude-haiku-5-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -3846,12 +3889,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:33:39.077304+00:00",
+        "checked_at": "2026-11-25T10:26:28.971226+00:00",
         "source_ids": [
           "tool-model-gemini-4-argon"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3907,24 +3950,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:33:39.077304+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-gemini-4-argon"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:33:39.077304+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-gemini-4-argon"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -3983,11 +4028,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:33:39.077304+00:00",
+            "checked_at": "2026-11-25T10:26:28.971226+00:00",
             "source_ids": [
               "tool-model-gemini-4-argon"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
@@ -3997,11 +4042,11 @@
           "reported_value": "200k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:33:39.077304+00:00",
+            "checked_at": "2026-11-25T10:26:28.971226+00:00",
             "source_ids": [
               "tool-model-gemini-4-argon"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 200k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -4024,12 +4069,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:29.081526+00:00",
+        "checked_at": "2026-11-25T10:26:29.046561+00:00",
         "source_ids": [
           "tool-model-muse-wonder"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4091,24 +4136,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:29.081526+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-muse-wonder"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "按量等价消耗示意，不是订阅实际扣款。虽然价格表 Cache Write 为横杠，型号页 Pricing 正文明示不收缓存写入费，因此记录 cache_write_tokens=0；不是把缺项推成免费。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:29.081526+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-muse-wonder"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "按量等价消耗示意，不是订阅实际扣款。虽然价格表 Cache Write 为横杠，型号页 Pricing 正文明示不收缓存写入费，因此记录 cache_write_tokens=0；不是把缺项推成免费。"
       },
@@ -4172,11 +4219,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:29.081526+00:00",
+            "checked_at": "2026-11-25T10:26:29.046561+00:00",
             "source_ids": [
               "tool-model-muse-wonder"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
@@ -4186,11 +4233,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:29.081526+00:00",
+            "checked_at": "2026-11-25T10:26:29.046561+00:00",
             "source_ids": [
               "tool-model-muse-wonder"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口标称 300k，Max context 标称 1M；未给出精确 token 整数或 K/M 换算，不套原厂 API 窗口。 先前本产品证据另注明 Max Mode 仅适用于 legacy request-based 套餐；当前套餐扩展窗口的开启入口未完整说明，见 evidence/cursor/tool-model-alignment.md。"
@@ -4213,12 +4260,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:37:26.930666+00:00",
+        "checked_at": "2026-11-25T10:26:28.542973+00:00",
         "source_ids": [
           "tool-model-claude-opus-5"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "Cursor精确型号页仍存在，标准和Fast档按本产品分别核对。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4280,24 +4327,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:37:26.930666+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "tool-model-claude-opus-5"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣费。Cursor 官网 Fast Mode 行缓存写入为 12.5 USD/百万 token，未说明 TTL；以 cache_write_tokens 独立保存，不继承原厂缓存时长。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:37:26.930666+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "tool-model-claude-opus-5"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "按量等价消耗示意，不代表订阅实际扣费。Cursor 官网 Fast Mode 行缓存写入为 12.5 USD/百万 token，未说明 TTL；以 cache_write_tokens 独立保存，不继承原厂缓存时长。"
       },
@@ -4343,11 +4392,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.930666+00:00",
+            "checked_at": "2026-11-25T10:26:28.542973+00:00",
             "source_ids": [
               "tool-model-claude-opus-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "型号页明确支持 thinking 变体并推荐 high；推荐值不作为默认值，完整档位、开关与 RPC 参数未知。"
@@ -4357,11 +4406,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:37:26.930666+00:00",
+            "checked_at": "2026-11-25T10:26:28.542973+00:00",
             "source_ids": [
               "tool-model-claude-opus-5"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "Cursor 型号卡常规窗口 300k；Max context 1M。仅有 k / M 缩写，未确认精确整数，不自行换算。 型号页将扩展窗口称为 Max Mode；总价页说明 Max Mode 仅适用于 legacy request-based 套餐。当前套餐扩展窗口的具体开启入口未完整说明。"
@@ -4384,12 +4433,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:33:39.078005+00:00",
+        "checked_at": "2026-11-25T10:26:29.112197+00:00",
         "source_ids": [
           "r1111-claude-fable-5-2"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "本产品官方型号页明确请求ID、可用性及Legacy Other Models适用；未实调。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4453,24 +4502,26 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:33:39.078005+00:00",
+              "checked_at": "2026-11-25T10:37:42+00:00",
               "source_ids": [
+                "r1125-cursor-price",
                 "r1111-claude-fable-5-2"
               ],
-              "evidence": "evidence/cursor/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
             },
             "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:33:39.078005+00:00",
+          "checked_at": "2026-11-25T10:37:42+00:00",
           "source_ids": [
+            "r1125-cursor-price",
             "r1111-claude-fable-5-2"
           ],
-          "evidence": "evidence/cursor/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "复核 Cursor 本产品完整价表及对应型号的标准 / 特定速度档。"
         },
         "notes": "只作按量等价消耗示意，不是订阅实际扣款。Cache Write 未说明 TTL，使用 cache_write_tokens，不套原厂 TTL；横杠分量不记零。"
       },
@@ -4529,11 +4580,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:33:39.078005+00:00",
+            "checked_at": "2026-11-25T10:26:29.112197+00:00",
             "source_ids": [
               "r1111-claude-fable-5-2"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "当前页明确始终思考、不能关闭；high是建议起点，不声明为默认值。具体请求字段与预算仍未知。"
@@ -4543,11 +4594,11 @@
           "reported_value": "300k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:33:39.078005+00:00",
+            "checked_at": "2026-11-25T10:26:29.112197+00:00",
             "source_ids": [
               "r1111-claude-fable-5-2"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口300k，Max context为1M；当前只给k/M标称值，不填整数也不继承原厂。"
@@ -4570,12 +4621,12 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:33:39.076435+00:00",
+        "checked_at": "2026-11-25T10:26:29.151640+00:00",
         "source_ids": [
           "r1111-gemini-4-carbon"
         ],
-        "evidence": "evidence/cursor/2026-11-11-refresh.md",
-        "notes": "本产品官方型号页明确请求ID、可用性及Legacy Other Models适用；未实调。"
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 精确型号页仍公开保留。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4598,14 +4649,15 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [
+            "r1125-cursor-price",
             "r1111-gemini-4-carbon",
             "subscription-google-api-pricing",
             "subscription-google-carbon-intro"
           ],
-          "evidence": "evidence/cursor/2026-11-11-subscription-prices.md",
-          "notes": "已查Cursor本产品及Google原厂API完整价表；当前均为截至2026-11-30的推出优惠，2026-12-01起的常规价尚未生效，保留unknown。优惠数字及未来价格仅存本轮独立证据，不采用未来价或Contributor档。"
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "Cursor 当前仍为推出优惠，标准非促销费率自 12 月 1 日起；Google 官方价表亦未支持提前采用常规费率。"
         },
-        "notes": "已查Cursor本产品及Google原厂API完整价表；当前均为截至2026-11-30的推出优惠，2026-12-01起的常规价尚未生效，保留unknown。优惠数字及未来价格仅存本轮独立证据，不采用未来价或Contributor档。"
+        "notes": "Cursor 当前仍为推出优惠，标准非促销费率自 12 月 1 日起；Google 官方价表亦未支持提前采用常规费率。"
       },
       "notes": "Cursor旧版Pro/Pro+/Ultra的Other Models可用；请求ID与上下文来自Cursor本产品页面，不继承Gemini Developer API。",
       "capabilities": {
@@ -4660,11 +4712,11 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:33:39.076435+00:00",
+            "checked_at": "2026-11-25T10:26:29.151640+00:00",
             "source_ids": [
               "r1111-gemini-4-carbon"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品明确三档effort及默认medium；是否可关闭、底层字段和预算未公布。"
@@ -4674,14 +4726,351 @@
           "reported_value": "200k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:33:39.076435+00:00",
+            "checked_at": "2026-11-25T10:26:29.151640+00:00",
             "source_ids": [
               "r1111-gemini-4-carbon"
             ],
-            "evidence": "evidence/cursor/2026-11-11-refresh.md",
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "本产品常规窗口200k，Max context为1M；当前只给k/M标称值，不填整数也不继承原厂。"
+        }
+      }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "request_id": "gemini-4-hydrogen",
+      "display_name": "Gemini 4 Hydrogen",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:37:42+00:00",
+        "source_ids": [
+          "r1125-gemini-4-hydrogen",
+          "r1125-cursor-price"
+        ],
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 型号页、产品公开费率及对旧套餐的范围说明。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.075",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "7.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台标准公开参考价；保留本条速度档，选择常规短上下文、非地区加价档。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/gemini-4-hydrogen",
+              "subject": "gemini-4-hydrogen",
+              "reason": "Cursor 同产品精确型号的已公布标准在线费率。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:37:42+00:00",
+              "source_ids": [
+                "r1125-cursor-price",
+                "r1125-gemini-4-hydrogen"
+              ],
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "Cursor 型号页 Pricing 与同平台完整标准价表数字一致。"
+            },
+            "notes": "本平台标准参考价，未列缓存创建单价；其他产品费率独立。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:37:42+00:00",
+          "source_ids": [
+            "r1125-cursor-price",
+            "r1125-gemini-4-hydrogen"
+          ],
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "Cursor 型号页 Pricing 与同平台完整标准价表数字一致。"
+        },
+        "notes": "本平台标准参考价，未列缓存创建单价；其他产品费率独立。"
+      },
+      "notes": "本产品当前模型页明确列出；旧方案由 Other Models 池使用。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:37:42+00:00",
+            "source_ids": [
+              "r1125-gemini-4-hydrogen"
+            ],
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
+            "notes": "精确型号页与当前官方 CLI 服务定义共同核对。"
+          },
+          "notes": "官方型号页确认 Cursor Agent；此产品未提供该型号的公开 Chat、Responses、Messages 说明，私有协议尚未逐请求检查。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "cursor_agent",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "界面标签保留官方拼写；请求参数未知，不作为可直接发送的 API 枚举。"
+                }
+              ],
+              "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:37:42+00:00",
+            "source_ids": [
+              "r1125-gemini-4-hydrogen"
+            ],
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
+            "notes": "Cursor 型号页 Effort levels；参数和关闭未公开。"
+          },
+          "notes": "官方型号页确认所列界面档位；私有 RPC 参数、完整预算和部分默认/关闭条件未公开。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:37:42+00:00",
+            "source_ids": [
+              "r1125-gemini-4-hydrogen"
+            ],
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+          },
+          "notes": "Cursor 型号页标称 200k 常规窗口和 1M 最大窗口；未说明精确整数及窗口扩展条件。"
+        }
+      }
+    },
+    {
+      "id": "gemini-4-neon",
+      "request_id": "gemini-4-neon",
+      "display_name": "Gemini 4 Neon",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "pro",
+        "pro-plus",
+        "ultra"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:37:42+00:00",
+        "source_ids": [
+          "r1125-gemini-4-neon",
+          "r1125-cursor-price"
+        ],
+        "evidence": "evidence/cursor/2026-11-25-refresh.md",
+        "notes": "Cursor 型号页、产品公开费率及对旧套餐的范围说明。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/cursor/2026-09-16-subscription-completeness.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.15",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "15",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "Cursor 本平台标准公开参考价；保留本条速度档，选择常规短上下文、非地区加价档。",
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "time_basis": "unknown",
+            "charge_on": "unknown",
+            "id": "baseline",
+            "basis": "reference",
+            "reference_origin": {
+              "url": "https://cursor.com/docs/models/gemini-4-neon",
+              "subject": "gemini-4-neon",
+              "reason": "Cursor 同产品精确型号的已公布标准在线费率。"
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:37:42+00:00",
+              "source_ids": [
+                "r1125-cursor-price",
+                "r1125-gemini-4-neon"
+              ],
+              "evidence": "evidence/cursor/2026-11-25-refresh.md",
+              "notes": "Cursor 型号页 Pricing 与同平台完整标准价表数字一致。"
+            },
+            "notes": "本平台标准参考价，未列缓存创建单价；其他产品费率独立。"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:37:42+00:00",
+          "source_ids": [
+            "r1125-cursor-price",
+            "r1125-gemini-4-neon"
+          ],
+          "evidence": "evidence/cursor/2026-11-25-refresh.md",
+          "notes": "Cursor 型号页 Pricing 与同平台完整标准价表数字一致。"
+        },
+        "notes": "本平台标准参考价，未列缓存创建单价；其他产品费率独立。"
+      },
+      "notes": "本产品当前模型页明确列出；旧方案由 Other Models 池使用。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "cursor_agent"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:37:42+00:00",
+            "source_ids": [
+              "r1125-gemini-4-neon"
+            ],
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
+            "notes": "精确型号页与当前官方 CLI 服务定义共同核对。"
+          },
+          "notes": "官方型号页确认 Cursor Agent；此产品未提供该型号的公开 Chat、Responses、Messages 说明，私有协议尚未逐请求检查。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "r1125-gemini-4-neon",
+              "r1125-cursor-price"
+            ],
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
+            "notes": "Cursor 型号页及本产品总览未列该型号思考档位、默认或控制。保持未知。"
+          },
+          "notes": "Cursor 型号页及本产品总览未列该型号思考档位、默认或控制。保持未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "200k",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:37:42+00:00",
+            "source_ids": [
+              "r1125-gemini-4-neon"
+            ],
+            "evidence": "evidence/cursor/2026-11-25-refresh.md",
+            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+          },
+          "notes": "Cursor 型号页标称 200k 常规窗口和 1M 最大窗口；未说明精确整数及窗口扩展条件。"
         }
       }
     }

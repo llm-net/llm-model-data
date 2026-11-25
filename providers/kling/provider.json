@@ -248,6 +248,30 @@
       "url": "https://klingai.com/document-api/api/video/4-0-flash/text-to-video.md",
       "purpose": "models",
       "notes": "2026-11-11 本轮独立官方核对；范围与限制见对应refresh证据。"
+    },
+    {
+      "id": "current-kling-image-map",
+      "url": "https://klingai.com/document-api/guides/capability-map/image.md",
+      "purpose": "models",
+      "notes": "图片模型身份及媒体能力表。"
+    },
+    {
+      "id": "current-kling-image-prices",
+      "url": "https://klingai.com/document-api/pricing/base/image.md",
+      "purpose": "pricing",
+      "notes": "图片各规格的输入素材、输出图现金价。"
+    },
+    {
+      "id": "current-kling-image-create",
+      "url": "https://klingai.com/document-api/api/image/4-0/image-generation.md",
+      "purpose": "models",
+      "notes": "Kling Image 4.0 单图和组图异步接口。"
+    },
+    {
+      "id": "current-kling-image-long",
+      "url": "https://klingai.com/document-api/api/image/4-0/long-image-generation.md",
+      "purpose": "models",
+      "notes": "Kling Image 4.0 长图独立异步接口。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

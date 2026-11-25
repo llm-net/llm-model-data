@@ -2520,7 +2520,7 @@
               },
               {
                 "meter": "input_cached_tokens",
-                "amount": "0.2",
+                "amount": "0.04",
                 "per": 1000000,
                 "unit": "token"
               },
@@ -2548,16 +2548,16 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:14:21.233768Z",
+              "checked_at": "2026-11-25T10:38:08Z",
               "source_ids": [
                 "pricing",
-                "audit-current-context-cache",
-                "audit-current-deepseek-v4-1-flash"
+                "current-qwen-cache",
+                "current-deepseek-cache-cut"
               ],
-              "evidence": "evidence/bailian/2026-10-24-audit.md",
-              "notes": "本轮核对官方当前正文；未用真实Key实调。"
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "现行现金价表给输入与输出；缓存文档给两型号在忙闲各档输入价的固定 2%。"
             },
-            "notes": "不代表套餐实际扣费；缓存命中和普通输入互斥，不能重复计算。",
+            "notes": "不代表套餐实际扣费；缓存命中和普通输入互斥，不能重复计算。 缓存命中价格为相同计费档输入价的 2%。公告计划 2026-11-11 00:00（北京时间），实际生效时刻未独立确认。",
             "time_basis": "unknown",
             "charge_on": "unknown",
             "time_pricing": {
@@ -2578,7 +2578,7 @@
                     },
                     {
                       "meter": "input_cached_tokens",
-                      "amount": "0.2",
+                      "amount": "0.04",
                       "per": 1000000,
                       "unit": "token"
                     },
@@ -2602,7 +2602,7 @@
                     },
                     {
                       "meter": "input_cached_tokens",
-                      "amount": "0.1",
+                      "amount": "0.02",
                       "per": 1000000,
                       "unit": "token"
                     },
@@ -2620,14 +2620,14 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:14:21.233768Z",
+          "checked_at": "2026-11-25T10:38:08Z",
           "source_ids": [
             "pricing",
-            "audit-current-context-cache",
-            "audit-current-deepseek-v4-1-flash"
+            "current-qwen-cache",
+            "current-deepseek-cache-cut"
           ],
-          "evidence": "evidence/bailian/2026-10-24-audit.md",
-          "notes": "本轮核对官方当前正文；未用真实Key实调。"
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "现行现金价表给输入与输出；缓存文档给两型号在忙闲各档输入价的固定 2%。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -2755,7 +2755,7 @@
               },
               {
                 "meter": "input_cached_tokens",
-                "amount": "0.2",
+                "amount": "0.04",
                 "per": 1000000,
                 "unit": "token"
               },
@@ -2783,15 +2783,16 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:14:21.233768Z",
+              "checked_at": "2026-11-25T10:38:08Z",
               "source_ids": [
                 "pricing",
-                "audit-current-context-cache"
+                "current-qwen-cache",
+                "current-deepseek-cache-cut"
               ],
-              "evidence": "evidence/bailian/2026-10-24-audit.md",
-              "notes": "本轮核对官方当前正文；未用真实Key实调。"
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "现行现金价表给输入与输出；缓存文档给两型号在忙闲各档输入价的固定 2%。"
             },
-            "notes": "不代表套餐实际扣费；缓存命中和普通输入互斥，不能重复计算。",
+            "notes": "不代表套餐实际扣费；缓存命中和普通输入互斥，不能重复计算。 缓存命中价格为相同计费档输入价的 2%。公告计划 2026-11-11 00:00（北京时间），实际生效时刻未独立确认。",
             "time_basis": "unknown",
             "charge_on": "unknown",
             "time_pricing": {
@@ -2812,7 +2813,7 @@
                     },
                     {
                       "meter": "input_cached_tokens",
-                      "amount": "0.2",
+                      "amount": "0.04",
                       "per": 1000000,
                       "unit": "token"
                     },
@@ -2836,7 +2837,7 @@
                     },
                     {
                       "meter": "input_cached_tokens",
-                      "amount": "0.1",
+                      "amount": "0.02",
                       "per": 1000000,
                       "unit": "token"
                     },
@@ -2854,13 +2855,14 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:14:21.233768Z",
+          "checked_at": "2026-11-25T10:38:08Z",
           "source_ids": [
             "pricing",
-            "audit-current-context-cache"
+            "current-qwen-cache",
+            "current-deepseek-cache-cut"
           ],
-          "evidence": "evidence/bailian/2026-10-24-audit.md",
-          "notes": "本轮核对官方当前正文；未用真实Key实调。"
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "现行现金价表给输入与输出；缓存文档给两型号在忙闲各档输入价的固定 2%。"
         },
         "notes": "只保存这一组参考价；与其他产品完整重复保存，不在运行时继承。"
       },
@@ -3917,21 +3919,22 @@
     {
       "id": "qwen4-max-preview",
       "request_id": "qwen4-max-preview",
-      "display_name": "Qwen4 Max Preview",
+      "display_name": "Qwen4-Max Preview 兼容请求名",
       "modalities": [
         "text"
       ],
       "availability": "active",
-      "alias_of": null,
+      "alias_of": "qwen4-max",
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:19.379053+00:00",
+        "checked_at": "2026-11-25T10:30:52Z",
         "source_ids": [
-          "token-plan-cn"
+          "current-token-team",
+          "current-token-release"
         ],
-        "evidence": "evidence/bailian/2026-11-11-refresh.md",
-        "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+        "evidence": "evidence/bailian/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3946,21 +3949,89 @@
         "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
       },
       "reference_prices": {
-        "status": "unknown",
-        "rules": [],
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "同平台正式型号华北2在线按量参考，采用 5 分钟缓存创建档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "12.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen4-max",
+              "reason": "Token Plan 官方确认该请求名复用正式型号；参考同平台正式型号按量现金基准。",
+              "catalog_model": {
+                "provider_id": "bailian",
+                "offering_id": "api-cn",
+                "model_id": "qwen4-max",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:30:52Z",
+              "source_ids": [
+                "pricing",
+                "current-qwen4-max",
+                "current-qwen4-cache",
+                "current-token-release",
+                "current-qwen4-cache-price"
+              ],
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "原预览底模无独立按量价；此处仅估算兼容请求路由后的正式型号。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
         "verification": {
-          "status": "needs_review",
-          "checked_at": null,
+          "status": "verified",
+          "checked_at": "2026-11-25T10:30:52Z",
           "source_ids": [
             "pricing",
-            "token-plan-cn"
+            "current-qwen4-max",
+            "current-qwen4-cache",
+            "current-token-release",
+            "current-qwen4-cache-price"
           ],
-          "evidence": "evidence/bailian/2026-11-11-refresh.md",
-          "notes": "已查同平台完整公开价表，未找到该预览型号现金按量价；不能用Qwen3.8同价代替。"
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
         },
-        "notes": "同平台和开发方均为百炼，当前未公开本型号现金参考价。"
+        "notes": "原预览底模无独立按量价；此处仅估算兼容请求路由后的正式型号。"
       },
-      "notes": "团队版官方精确ID；别名qwen4.0-max-preview同可调用、账单使用后者。预览期2026-11-11 10:00至11-25 24:00（UTC+8），届时下线；不把Credits折扣换成现金token价格。",
+      "notes": "原预览底模于 2026-11-25 10:00（UTC+8）下线；团队版继续接收此请求名，官方确认自动路由正式 qwen4-max。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -3979,14 +4050,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:19.379053+00:00",
+            "checked_at": "2026-11-25T10:30:52Z",
             "source_ids": [
-              "token-plan-cn"
+              "current-token-team",
+              "current-token-release",
+              "protocol-tools"
             ],
-            "evidence": "evidence/bailian/2026-11-11-refresh.md",
-            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
           },
-          "notes": "团队版明确OpenAI/Anthropic兼容；说明内置工具可经Responses，但缺逐型号适用表，未把全体模型推为Responses。"
+          "notes": "团队版文本入口明确提供 OpenAI 和 Anthropic 兼容方式；通用内置工具说明未逐型号确认 Responses。"
         },
         "reasoning": {
           "support": "supported",
@@ -3998,7 +4071,7 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "本产品证实思考支持，精确参数/默认行为未完整公布。"
+              "notes": "团队版支持表确认推理；请求控制与默认值未独立披露。"
             },
             {
               "interface": "anthropic_messages",
@@ -4006,19 +4079,19 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "本产品证实思考支持，精确参数/默认行为未完整公布。"
+              "notes": "团队版支持表确认推理；请求控制与默认值未独立披露。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:19.379053+00:00",
+            "checked_at": "2026-11-25T10:30:52Z",
             "source_ids": [
-              "token-plan-cn"
+              "current-token-team"
             ],
-            "evidence": "evidence/bailian/2026-11-11-refresh.md",
-            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "具体思考参数、档位、默认值与预算待核。"
           },
-          "notes": "本产品表将此型号列为推理模型；具体思考档位/开关/默认行为未公布，保留partial。"
+          "notes": "具体思考参数、档位、默认值与预算待核。"
         },
         "context_assessment": {
           "status": "unknown",
@@ -4027,13 +4100,204 @@
             "status": "needs_review",
             "checked_at": null,
             "source_ids": [
-              "token-plan-cn",
+              "current-token-team",
               "context-bailian-token-faq"
             ],
-            "evidence": "evidence/bailian/2026-11-11-refresh.md",
-            "notes": "该产品未公开本预览型号独立上下文窗口。"
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "团队版当前支持表未列出正式型号上下文整数或独立限额。"
           },
-          "notes": "已查团队版支持表与FAQ，未公开本预览型号独立上下文窗口。"
+          "notes": "团队版当前支持表未列出正式型号上下文整数或独立限额。"
+        }
+      }
+    },
+    {
+      "id": "qwen4-max",
+      "request_id": "qwen4-max",
+      "display_name": "Qwen4-Max",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:30:52Z",
+        "source_ids": [
+          "current-token-team",
+          "current-token-release"
+        ],
+        "evidence": "evidence/bailian/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-alignment.md",
+          "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+        },
+        "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "同平台华北2在线按量现金参考，采用 5 分钟缓存创建档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "12.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen4-max",
+              "reason": "同平台中国大陆按量 API 正式型号现金基准。",
+              "catalog_model": {
+                "provider_id": "bailian",
+                "offering_id": "api-cn",
+                "model_id": "qwen4-max",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:30:52Z",
+              "source_ids": [
+                "pricing",
+                "current-qwen4-max",
+                "current-qwen4-cache",
+                "current-qwen4-cache-price"
+              ],
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "仅用于用量等价估算。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:30:52Z",
+          "source_ids": [
+            "pricing",
+            "current-qwen4-max",
+            "current-qwen4-cache",
+            "current-qwen4-cache-price"
+          ],
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
+        },
+        "notes": "仅用于用量等价估算。"
+      },
+      "notes": "2026-11-16 正式加入团队版。本产品支持表确认视觉理解与思考。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:52Z",
+            "source_ids": [
+              "current-token-team",
+              "protocol-tools"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
+          },
+          "notes": "团队版文本入口明确提供 OpenAI 和 Anthropic 兼容方式；通用内置工具说明未逐型号确认 Responses。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "团队版支持表确认推理；请求控制与默认值未独立披露。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "团队版支持表确认推理；请求控制与默认值未独立披露。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:52Z",
+            "source_ids": [
+              "current-token-team"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "具体思考参数、档位、默认值与预算待核。"
+          },
+          "notes": "具体思考参数、档位、默认值与预算待核。"
+        },
+        "context_assessment": {
+          "status": "unknown",
+          "reported_value": null,
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "current-token-team",
+              "context-bailian-token-faq"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "团队版当前支持表未列出正式型号上下文整数或独立限额。"
+          },
+          "notes": "团队版当前支持表未列出正式型号上下文整数或独立限额。"
         }
       }
     }

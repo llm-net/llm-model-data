@@ -668,16 +668,24 @@ class ReasoningContracts(unittest.TestCase):
         usage = next(m["capabilities"] for m in api["models"] if m["id"] == "gpt-6-1-terra")
         self.assertEqual(usage["context_assessment"]["status"], "known")
         self.assertTrue(any(p["controls"] for p in usage["reasoning"]["profiles"]))
-        self.assertEqual(subscription["context_assessment"]["status"], "unknown")
-        self.assertIsNone(subscription["context_window_tokens"])
+        self.assertEqual(subscription["context_assessment"]["status"], "known")
+        self.assertEqual(subscription["context_window_tokens"], 500_000)
+        self.assertNotEqual(subscription["context_window_tokens"], usage["context_window_tokens"])
+        context_sources = set(subscription["context_assessment"]["verification"]["source_ids"])
+        self.assertIn("r1125-codex-catalog", context_sources)
+        self.assertTrue(context_sources.isdisjoint(usage["context_assessment"]["verification"]["source_ids"]))
         reasoning = subscription["reasoning"]
         self.assertEqual(reasoning["support"], "supported")
         self.assertEqual(reasoning["coverage"], "partial")
-        self.assertEqual({p["surface"] for p in reasoning["profiles"]}, {"client_setting"})
-        for profile in reasoning["profiles"]:
-            self.assertEqual(profile["controls"], [])
-            self.assertIsNone(profile["can_disable"])
-            self.assertEqual(profile["default_behavior"], "unknown")
+        profiles = {p["surface"]: p for p in reasoning["profiles"]}
+        request = profiles["api_request"]
+        self.assertEqual(request["interface"], "openai_responses")
+        self.assertEqual(request["controls"][0]["parameter"], "reasoning.effort")
+        self.assertNotIn("none", request["controls"][0]["values"])
+        self.assertIsNone(request["controls"][0]["default"])
+        self.assertIsNone(request["can_disable"])
+        self.assertEqual(request["default_behavior"], "unknown")
+        self.assertEqual(profiles["client_setting"]["controls"][0]["default"], "low")
 
     def setUp(self):
         self.provider = c.read_json(ROOT / "providers/openai/provider.json")

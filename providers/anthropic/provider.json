@@ -362,6 +362,18 @@
       "url": "https://platform.claude.com/docs/en/build-with-claude/thinking.md",
       "purpose": "models",
       "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1125-claude-deprecations",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations.md",
+      "purpose": "models",
+      "notes": "2026-11-25 官方页面；核对范围见本轮证据。"
+    },
+    {
+      "id": "r1125-claude-release",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview.md",
+      "purpose": "models",
+      "notes": "2026-11-25 官方页面；核对范围见本轮证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

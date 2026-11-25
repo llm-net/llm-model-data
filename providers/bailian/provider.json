@@ -434,6 +434,60 @@
       "url": "https://help.aliyun.com/zh/model-studio/text-generation-model/",
       "purpose": "models",
       "notes": "仅 Qwen3.8 Max / Flash 与 Qwen3.7 Plus 的 API 协议、思考或上下文复核；不继承到 Go。"
+    },
+    {
+      "id": "current-qwen4-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen4-max",
+      "purpose": "models",
+      "notes": "Qwen4-Max 正式版精确型号、北京端点及能力。"
+    },
+    {
+      "id": "current-qwen4-cache",
+      "url": "https://help.aliyun.com/zh/model-studio/explicit-cache-qwen4",
+      "purpose": "billing",
+      "notes": "Qwen4 命中、按 TTL 创建和用量字段。"
+    },
+    {
+      "id": "current-token-team",
+      "url": "https://docs.agent.bailian.aliyun.com/zh/token-plan/token-plan-team-overview",
+      "purpose": "subscription",
+      "notes": "当前团队版资费和独立型号表。"
+    },
+    {
+      "id": "current-token-release",
+      "url": "https://docs.agent.bailian.aliyun.com/zh/token-plan/token-plan-product-updates",
+      "purpose": "subscription",
+      "notes": "Token Plan 正式版上线与预览名转发公告。"
+    },
+    {
+      "id": "current-deepseek-cache-cut",
+      "url": "https://www.aliyun.com/notice/118827",
+      "purpose": "pricing",
+      "notes": "两种 DeepSeek-V4.1-Flash 缓存命中价调整公告，计划 11 月 11 日零点，以实际变更为准。"
+    },
+    {
+      "id": "current-qwen4-cache-price",
+      "url": "https://platform.qianwenai.com/docs/developer-guides/run-and-scale/explicit-cache-qwen4",
+      "purpose": "pricing",
+      "notes": "千问开发者指南明确中国站 5 分钟/1 小时缓存写入和读取现金价格。"
+    },
+    {
+      "id": "current-kimi-k31",
+      "url": "https://help.aliyun.com/zh/model-studio/kimi-k3-1-pro",
+      "purpose": "models",
+      "notes": "百炼部署的 Kimi K3.1 Pro 独立模型卡。"
+    },
+    {
+      "id": "current-kimi-api",
+      "url": "https://help.aliyun.com/zh/model-studio/kimi-api",
+      "purpose": "models",
+      "notes": "百炼部署 Kimi 系列逐协议调用和思考控制。"
+    },
+    {
+      "id": "current-bailian-launches",
+      "url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "purpose": "models",
+      "notes": "华北2上架公告，逐型号更新与 Prime 独立说明。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

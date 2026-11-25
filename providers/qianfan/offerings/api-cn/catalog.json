@@ -27,12 +27,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -65,11 +65,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
@@ -79,11 +79,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
@@ -134,9 +134,21 @@
             {
               "interface": "openai_chat",
               "surface": "api_request",
-              "can_disable": null,
-              "default_behavior": "unknown",
+              "can_disable": true,
+              "default_behavior": "disabled",
               "controls": [
+                {
+                  "kind": "toggle",
+                  "parameter": "enable_thinking",
+                  "values": [
+                    false,
+                    true
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": false,
+                  "notes": "思考指南的 enable_thinking 说明默认 false，预算示例精确用于 ernie-5.1。"
+                },
                 {
                   "kind": "budget_tokens",
                   "parameter": "thinking_budget",
@@ -144,487 +156,34 @@
                   "minimum": 100,
                   "maximum": null,
                   "default": null,
-                  "notes": "指南写默认模型思维链上限，API schema 写16384，口径冲突；只确认最小100，默认与上限保留未知。"
+                  "notes": "支持表明确列本型号，超预算会截断思考并开始生成回答；默认采用型号思维链长度，当前无精确整数。"
                 }
               ],
-              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+              "notes": "官方精确 Chat 示例给出 enable_thinking 和 thinking_budget；预算最小 100，具体最大值未在当前型号表查明。其它兼容面思考仍未独立核清。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:37:29Z",
             "source_ids": [
-              "audit-20261024-thinking",
-              "audit-20261024-chat"
-            ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "ERNIE-5.1 在 thinking_budget 支持表；默认值两官方页面冲突且窗口表未给其思维链上限，保留 partial。"
-          },
-          "notes": "ERNIE-5.1 在 thinking_budget 支持表；默认值两官方页面冲突且窗口表未给其思维链上限，保留 partial。"
-        },
-        "context_assessment": {
-          "status": "partial",
-          "reported_value": "128k",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
-            "source_ids": [
-              "context-qianfan-models"
-            ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "独立核对当前型号上下文标称规格。"
-          },
-          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
-        }
-      }
-    },
-    {
-      "id": "ernie-5-0",
-      "request_id": "ernie-5.0",
-      "display_name": "ERNIE 5.0",
-      "modalities": [
-        "text"
-      ],
-      "availability": "unknown",
-      "alias_of": null,
-      "plan_ids": [],
-      "verification": {
-        "status": "verified",
-        "checked_at": "2026-10-29T01:55:27Z",
-        "source_ids": [
-          "catalog",
-          "audit-20261024-retirement"
-        ],
-        "evidence": "evidence/qianfan/2026-10-29-audit.md",
-        "notes": "退役表明确日期为 2026-10-29，但未给时区内具体时刻；同次抓取模型列表仍列出，当前可调用性未实调，标为 unknown 而不声称已经停服。"
-      },
-      "usage_prices": {
-        "status": "published",
-        "rules": [
-          {
-            "id": "baseline",
-            "basis": "public_list",
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "千帆国内标准在线、常规短输入档；不采用 Batch、量包或限时活动价。",
-            "rates": [
-              {
-                "meter": "input_uncached_tokens",
-                "amount": "6",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "output_tokens",
-                "amount": "24",
-                "per": 1000000,
-                "unit": "token"
-              }
-            ],
-            "effective_from": null,
-            "effective_until": null,
-            "billing_period": null,
-            "charge_unit": null,
-            "reference_origin": null,
-            "verification": {
-              "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
-              "source_ids": [
-                "audit-current-prices"
-              ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
-              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-            },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
-            "time_basis": "unknown",
-            "charge_on": "unknown"
-          }
-        ],
-        "verification": {
-          "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
-          "source_ids": [
-            "audit-current-prices"
-          ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
-          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-        },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
-      },
-      "reference_prices": {
-        "status": "not_applicable",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/qianfan/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
-        },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
-      },
-      "notes": "官方退役公告列本精确型号于 2026-10-29 退役，推荐 DeepSeek-V4.1-Flash；当前模型列表仍列出且未给具体停服时刻，故保留身份及历史价格，将可用性标为 unknown。",
-      "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
-        "max_output_tokens": 65536,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
-        "interfaces": [
-          "openai_chat",
-          "anthropic_messages"
-        ],
-        "interface_assessment": {
-          "coverage": "partial",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-29T01:55:26Z",
-            "source_ids": [
-              "audit-20261024-chat",
-              "protocol-messages",
-              "protocol-responses"
-            ],
-            "evidence": "evidence/qianfan/2026-10-29-audit.md",
-            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
-          },
-          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
-        },
-        "reasoning": {
-          "support": "supported",
-          "coverage": "partial",
-          "profiles": [
-            {
-              "interface": "openai_chat",
-              "surface": "api_request",
-              "can_disable": null,
-              "default_behavior": "unknown",
-              "controls": [],
-              "notes": "其他协议面控制、未列档位与预算仍待核实。"
-            }
-          ],
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
-            "source_ids": [
-              "audit-catalog",
+              "catalog",
               "audit-20261024-thinking"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "模型表深度思考分类含精确 ernie-5.0；控制页仅对 thinking-preview 等其他 ID 说明参数，本条不继承。"
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "官方精确 Chat 示例给出 enable_thinking 和 thinking_budget；预算最小 100，具体最大值未在当前型号表查明。其它兼容面思考仍未独立核清。"
           },
-          "notes": "模型表深度思考分类含精确 ernie-5.0；控制页仅对 thinking-preview 等其他 ID 说明参数，本条不继承。"
+          "notes": "官方精确 Chat 示例给出 enable_thinking 和 thinking_budget；预算最小 100，具体最大值未在当前型号表查明。其它兼容面思考仍未独立核清。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "128k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "独立核对当前型号上下文标称规格。"
-          },
-          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
-        }
-      }
-    },
-    {
-      "id": "ernie-4-5-turbo-128k",
-      "request_id": "ernie-4.5-turbo-128k",
-      "display_name": "ERNIE 4.5 Turbo 128k",
-      "modalities": [
-        "text"
-      ],
-      "availability": "unknown",
-      "alias_of": null,
-      "plan_ids": [],
-      "verification": {
-        "status": "verified",
-        "checked_at": "2026-10-29T01:55:27Z",
-        "source_ids": [
-          "catalog",
-          "audit-20261024-retirement"
-        ],
-        "evidence": "evidence/qianfan/2026-10-29-audit.md",
-        "notes": "退役表明确日期为 2026-10-29，但未给时区内具体时刻；同次抓取模型列表仍列出，当前可调用性未实调，标为 unknown 而不声称已经停服。"
-      },
-      "usage_prices": {
-        "status": "published",
-        "rules": [
-          {
-            "id": "baseline",
-            "basis": "public_list",
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "千帆国内标准在线、常规短输入档；不采用 Batch、量包或限时活动价。",
-            "rates": [
-              {
-                "meter": "input_uncached_tokens",
-                "amount": "0.8",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "input_cached_tokens",
-                "amount": "0.2",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "output_tokens",
-                "amount": "3.2",
-                "per": 1000000,
-                "unit": "token"
-              }
-            ],
-            "effective_from": null,
-            "effective_until": null,
-            "billing_period": null,
-            "charge_unit": null,
-            "reference_origin": null,
-            "verification": {
-              "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
-              "source_ids": [
-                "audit-current-prices"
-              ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
-              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-            },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
-            "time_basis": "unknown",
-            "charge_on": "unknown"
-          }
-        ],
-        "verification": {
-          "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
-          "source_ids": [
-            "audit-current-prices"
-          ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
-          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-        },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
-      },
-      "reference_prices": {
-        "status": "not_applicable",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/qianfan/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
-        },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
-      },
-      "notes": "官方退役公告列本精确型号于 2026-10-29 退役，推荐 DeepSeek-V4.1-Flash；当前模型列表仍列出且未给具体停服时刻，故保留身份及历史价格，将可用性标为 unknown。",
-      "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
-        "max_output_tokens": 12288,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
-        "interfaces": [
-          "openai_chat",
-          "anthropic_messages"
-        ],
-        "interface_assessment": {
-          "coverage": "partial",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-29T01:55:26Z",
-            "source_ids": [
-              "audit-20261024-chat",
-              "protocol-messages",
-              "protocol-responses"
-            ],
-            "evidence": "evidence/qianfan/2026-10-29-audit.md",
-            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
-          },
-          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
-        },
-        "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
-          "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [
-              "audit-20261024-thinking",
-              "audit-20261024-chat"
-            ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "已查询千帆当前型号与思考参数支持清单；未获得本精确 ERNIE 4.5 Turbo 型号的思考控制证据，preview 的参数不移植。"
-          },
-          "notes": "已查询千帆当前型号与思考参数支持清单；未获得本精确 ERNIE 4.5 Turbo 型号的思考控制证据，preview 的参数不移植。"
-        },
-        "context_assessment": {
-          "status": "partial",
-          "reported_value": "128k",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
-            "source_ids": [
-              "context-qianfan-models"
-            ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "独立核对当前型号上下文标称规格。"
-          },
-          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
-        }
-      }
-    },
-    {
-      "id": "ernie-4-5-turbo-vl-32k",
-      "request_id": "ernie-4.5-turbo-vl-32k",
-      "display_name": "ERNIE 4.5 Turbo VL 32k",
-      "modalities": [
-        "text"
-      ],
-      "availability": "unknown",
-      "alias_of": null,
-      "plan_ids": [],
-      "verification": {
-        "status": "verified",
-        "checked_at": "2026-10-29T01:55:27Z",
-        "source_ids": [
-          "catalog",
-          "audit-20261024-retirement"
-        ],
-        "evidence": "evidence/qianfan/2026-10-29-audit.md",
-        "notes": "退役表明确日期为 2026-10-29，但未给时区内具体时刻；同次抓取模型列表仍列出，当前可调用性未实调，标为 unknown 而不声称已经停服。"
-      },
-      "usage_prices": {
-        "status": "published",
-        "rules": [
-          {
-            "id": "baseline",
-            "basis": "public_list",
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "千帆国内标准在线、常规短输入档；不采用 Batch、量包或限时活动价。",
-            "rates": [
-              {
-                "meter": "input_uncached_tokens",
-                "amount": "3",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "input_cached_tokens",
-                "amount": "0.75",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "output_tokens",
-                "amount": "9",
-                "per": 1000000,
-                "unit": "token"
-              }
-            ],
-            "effective_from": null,
-            "effective_until": null,
-            "billing_period": null,
-            "charge_unit": null,
-            "reference_origin": null,
-            "verification": {
-              "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
-              "source_ids": [
-                "audit-current-prices"
-              ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
-              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-            },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
-            "time_basis": "unknown",
-            "charge_on": "unknown"
-          }
-        ],
-        "verification": {
-          "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
-          "source_ids": [
-            "audit-current-prices"
-          ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
-          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-        },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
-      },
-      "reference_prices": {
-        "status": "not_applicable",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/qianfan/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
-        },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
-      },
-      "notes": "官方退役公告列本精确型号于 2026-10-29 退役，推荐 DeepSeek-V4.1-Flash；当前模型列表仍列出且未给具体停服时刻，故保留身份及历史价格，将可用性标为 unknown。",
-      "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
-        "max_output_tokens": 12288,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
-        "interfaces": [
-          "openai_chat",
-          "anthropic_messages"
-        ],
-        "interface_assessment": {
-          "coverage": "partial",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-29T01:55:26Z",
-            "source_ids": [
-              "audit-20261024-chat",
-              "protocol-messages",
-              "protocol-responses"
-            ],
-            "evidence": "evidence/qianfan/2026-10-29-audit.md",
-            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
-          },
-          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
-        },
-        "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
-          "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [
-              "audit-20261024-thinking",
-              "audit-20261024-chat"
-            ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "已查询千帆当前型号与思考参数支持清单；未获得本精确 ERNIE 4.5 Turbo 型号的思考控制证据，preview 的参数不移植。"
-          },
-          "notes": "已查询千帆当前型号与思考参数支持清单；未获得本精确 ERNIE 4.5 Turbo 型号的思考控制证据，preview 的参数不移植。"
-        },
-        "context_assessment": {
-          "status": "partial",
-          "reported_value": "32k",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
-            "source_ids": [
-              "context-qianfan-models"
-            ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -643,12 +202,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -657,8 +216,10 @@
         "verification": {
           "status": "needs_review",
           "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/qianfan/2026-09-16-alignment.md",
+          "source_ids": [
+            "audit-current-prices"
+          ],
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
         },
         "notes": "按用户规则不采集本条实际扣费，仅使用reference_prices中的按量参考价。"
@@ -703,11 +264,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
-                "audit-current-prices"
+                "audit-current-prices",
+                "catalog"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。 当前缓存单价标明仅在9月9日至10月30日限时有效，未公布常规缓存价，因此标准基准不收该分量；缺项不表示免费。",
@@ -761,11 +323,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
-            "audit-current-prices"
+            "audit-current-prices",
+            "catalog"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "短名官方另有12/24/1元直接价，本条按用户指定仍参考0813；新增峰谷，移除无法证明为常规价的限时缓存分量。"
@@ -806,7 +369,7 @@
               "interface": "openai_chat",
               "surface": "api_request",
               "can_disable": true,
-              "default_behavior": "disabled",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "mode",
@@ -817,8 +380,8 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": "disabled",
-                  "notes": "仅保存该产品、型号与协议面已明确的控制值。"
+                  "default": "enabled",
+                  "notes": "千帆思考支持清单明确默认开启。"
                 },
                 {
                   "kind": "effort",
@@ -834,33 +397,42 @@
                   "maximum": null,
                   "default": "high",
                   "notes": "普通请求 high；复杂 Agent 类自动 max；low/medium→high，xhigh→max。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking_budget",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "模型列表 DeepSeek 分节明确支持；思考指南详细预算支持清单只列 ERNIE-5.1，因此不把其最小值100推广至 DeepSeek。"
                 }
               ],
-              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+              "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:37:29Z",
             "source_ids": [
-              "audit-20261024-thinking",
-              "audit-20261024-chat"
+              "catalog",
+              "audit-20261024-thinking"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "精确 Pro 短名已列入开关和 effort 支持表；其他协议面的思考参数未独立核清。"
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
           },
-          "notes": "精确 Pro 短名已列入开关和 effort 支持表；其他协议面的思考参数未独立核清。"
+          "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -879,12 +451,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -923,11 +495,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
@@ -937,11 +509,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
@@ -1027,161 +599,11 @@
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "独立核对当前型号上下文标称规格。"
-          },
-          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
-        }
-      }
-    },
-    {
-      "id": "ernie-4-5-turbo-20260402",
-      "request_id": "ernie-4.5-turbo-20260402",
-      "display_name": "ernie-4.5-turbo-20260402",
-      "modalities": [
-        "text"
-      ],
-      "availability": "unknown",
-      "alias_of": null,
-      "plan_ids": [],
-      "verification": {
-        "status": "verified",
-        "checked_at": "2026-10-29T01:55:27Z",
-        "source_ids": [
-          "catalog",
-          "audit-20261024-retirement"
-        ],
-        "evidence": "evidence/qianfan/2026-10-29-audit.md",
-        "notes": "退役表明确日期为 2026-10-29，但未给时区内具体时刻；同次抓取模型列表仍列出，当前可调用性未实调，标为 unknown 而不声称已经停服。"
-      },
-      "usage_prices": {
-        "status": "published",
-        "rules": [
-          {
-            "id": "baseline",
-            "basis": "public_list",
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "千帆国内标准在线、常规短输入档；不采用 Batch、量包或限时活动价。",
-            "rates": [
-              {
-                "meter": "input_uncached_tokens",
-                "amount": "0.8",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "input_cached_tokens",
-                "amount": "0.2",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "output_tokens",
-                "amount": "3.2",
-                "per": 1000000,
-                "unit": "token"
-              }
-            ],
-            "effective_from": null,
-            "effective_until": null,
-            "billing_period": null,
-            "charge_unit": null,
-            "reference_origin": null,
-            "verification": {
-              "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
-              "source_ids": [
-                "audit-current-prices"
-              ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
-              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-            },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
-            "time_basis": "unknown",
-            "charge_on": "unknown"
-          }
-        ],
-        "verification": {
-          "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
-          "source_ids": [
-            "audit-current-prices"
-          ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
-          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-        },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
-      },
-      "reference_prices": {
-        "status": "not_applicable",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/qianfan/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
-        },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
-      },
-      "notes": "官方退役公告列本精确型号于 2026-10-29 退役，推荐 DeepSeek-V4.1-Flash；当前模型列表仍列出且未给具体停服时刻，故保留身份及历史价格，将可用性标为 unknown。",
-      "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
-        "max_output_tokens": 12288,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
-        "interfaces": [
-          "openai_chat",
-          "anthropic_messages"
-        ],
-        "interface_assessment": {
-          "coverage": "partial",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-29T01:55:26Z",
-            "source_ids": [
-              "audit-20261024-chat",
-              "protocol-messages",
-              "protocol-responses"
-            ],
-            "evidence": "evidence/qianfan/2026-10-29-audit.md",
-            "notes": "独立复核当前三协议文档；当前 Responses 列表为举例，未列出的历史明确支持项不据此删除。"
-          },
-          "notes": "Chat 与 Messages 现有证据保留；2026-10-28 Responses 指南列主售型号示例，未列本型号，不能从同族推定支持或不支持。已登记的 Pro 短名 / GLM-5.1 Responses 保留历史证据，仍为 partial。"
-        },
-        "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
-          "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [
-              "audit-20261024-thinking",
-              "audit-20261024-chat"
-            ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "已查询千帆当前型号与思考参数支持清单；未获得本精确 ERNIE 4.5 Turbo 型号的思考控制证据，preview 的参数不移植。"
-          },
-          "notes": "已查询千帆当前型号与思考参数支持清单；未获得本精确 ERNIE 4.5 Turbo 型号的思考控制证据，preview 的参数不移植。"
-        },
-        "context_assessment": {
-          "status": "partial",
-          "reported_value": "128k",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
-            "source_ids": [
-              "context-qianfan-models"
-            ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -1200,12 +622,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -1244,11 +666,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
@@ -1258,11 +680,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
@@ -1350,11 +772,11 @@
           "reported_value": "198k",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -1373,12 +795,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -1411,11 +833,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。 当前缓存单价标明仅在9月9日至10月30日限时有效，未公布常规缓存价，因此标准基准不收该分量；缺项不表示免费。",
@@ -1469,11 +891,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。 当前缓存单价标明仅在9月9日至10月30日限时有效，未公布常规缓存价，因此标准基准不收该分量；缺项不表示免费。"
@@ -1525,34 +947,56 @@
             {
               "interface": "openai_chat",
               "surface": "api_request",
-              "can_disable": null,
-              "default_behavior": "unknown",
-              "controls": [],
-              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "千帆思考支持清单明确默认开启。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking_budget",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "模型列表 DeepSeek 分节明确支持；思考指南详细预算支持清单只列 ERNIE-5.1，因此不把其最小值100推广至 DeepSeek。"
+                }
+              ],
+              "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:37:29Z",
             "source_ids": [
-              "audit-catalog",
+              "catalog",
               "audit-20261024-thinking"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "模型表的深度思考分类列出此精确日期版 / V4.1 型号；控制支持表仍只列旧短名，不把它们的参数移植到本条。"
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
           },
-          "notes": "模型表的深度思考分类列出此精确日期版 / V4.1 型号；控制支持表仍只列旧短名，不把它们的参数移植到本条。"
+          "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -1571,12 +1015,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -1609,11 +1053,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。 当前缓存单价标明仅在9月9日至10月30日限时有效，未公布常规缓存价，因此标准基准不收该分量；缺项不表示免费。",
@@ -1667,11 +1111,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。 当前缓存单价标明仅在9月9日至10月30日限时有效，未公布常规缓存价，因此标准基准不收该分量；缺项不表示免费。"
@@ -1688,7 +1132,7 @@
         },
         "notes": "本产品有直接公开按量价，不设置第二组参考价。"
       },
-      "notes": "千帆国内产品独立资料；未以原厂能力或价格补缺。",
+      "notes": "千帆国内产品独立资料；未以原厂能力或价格补缺。官方退役表公告2026-12-04退役，推荐DeepSeek-V4.1-Flash-1017；本轮仍保留在用记录。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -1723,34 +1167,56 @@
             {
               "interface": "openai_chat",
               "surface": "api_request",
-              "can_disable": null,
-              "default_behavior": "unknown",
-              "controls": [],
-              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "千帆思考支持清单明确默认开启。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking_budget",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "模型列表 DeepSeek 分节明确支持；思考指南详细预算支持清单只列 ERNIE-5.1，因此不把其最小值100推广至 DeepSeek。"
+                }
+              ],
+              "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:37:29Z",
             "source_ids": [
-              "audit-catalog",
+              "catalog",
               "audit-20261024-thinking"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "模型表的深度思考分类列出此精确日期版 / V4.1 型号；控制支持表仍只列旧短名，不把它们的参数移植到本条。"
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
           },
-          "notes": "模型表的深度思考分类列出此精确日期版 / V4.1 型号；控制支持表仍只列旧短名，不把它们的参数移植到本条。"
+          "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -1769,12 +1235,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -1813,11 +1279,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。",
@@ -1883,11 +1349,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。"
@@ -1939,34 +1405,56 @@
             {
               "interface": "openai_chat",
               "surface": "api_request",
-              "can_disable": null,
-              "default_behavior": "unknown",
-              "controls": [],
-              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "千帆思考支持清单明确默认开启。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking_budget",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "模型列表 DeepSeek 分节明确支持；思考指南详细预算支持清单只列 ERNIE-5.1，因此不把其最小值100推广至 DeepSeek。"
+                }
+              ],
+              "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:37:29Z",
             "source_ids": [
-              "audit-catalog",
+              "catalog",
               "audit-20261024-thinking"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "模型表的深度思考分类列出此精确日期版 / V4.1 型号；控制支持表仍只列旧短名，不把它们的参数移植到本条。"
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
           },
-          "notes": "模型表的深度思考分类列出此精确日期版 / V4.1 型号；控制支持表仍只列旧短名，不把它们的参数移植到本条。"
+          "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -1985,12 +1473,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -2029,11 +1517,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。",
@@ -2099,11 +1587,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "元/百万 tokens；跨时段单次请求的判定时刻未核清。"
@@ -2155,34 +1643,56 @@
             {
               "interface": "openai_chat",
               "surface": "api_request",
-              "can_disable": null,
-              "default_behavior": "unknown",
-              "controls": [],
-              "notes": "其他协议面控制、未列档位与预算仍待核实。"
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "千帆思考支持清单明确默认开启。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking_budget",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "模型列表 DeepSeek 分节明确支持；思考指南详细预算支持清单只列 ERNIE-5.1，因此不把其最小值100推广至 DeepSeek。"
+                }
+              ],
+              "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:37:29Z",
             "source_ids": [
-              "audit-catalog",
+              "catalog",
               "audit-20261024-thinking"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
-            "notes": "模型表的深度思考分类列出此精确日期版 / V4.1 型号；控制支持表仍只列旧短名，不把它们的参数移植到本条。"
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
           },
-          "notes": "模型表的深度思考分类列出此精确日期版 / V4.1 型号；控制支持表仍只列旧短名，不把它们的参数移植到本条。"
+          "notes": "思考指南精确列本请求 ID，Chat thinking.type 可开关且默认开启。型号表列 thinking_budget，思维链标称32k，精确整数边界和缺省未确认。Responses/Messages 的独立参数仍缺证。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -2201,12 +1711,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-catalog",
+          "catalog",
           "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-10-24-audit.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "独立核对当前模型表及退役表；只删除已到期的精确请求 ID。"
       },
       "usage_prices": {
@@ -2245,11 +1755,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-10-24-audit.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
@@ -2259,11 +1769,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-10-24-audit.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
@@ -2349,11 +1859,11 @@
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "context-qianfan-models"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-10-24-audit.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "独立核对当前型号上下文标称规格。"
           },
           "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
@@ -2372,11 +1882,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:24.466167+00:00",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "catalog"
+          "catalog",
+          "audit-20261024-retirement"
         ],
-        "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
         "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
       },
       "usage_prices": {
@@ -2415,11 +1926,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:24.526907+00:00",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-current-prices"
               ],
-              "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
               "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
             },
             "notes": "官方另列活动半价，起止未确认，不替代标准估价；每千token价格用Decimal等价换为每百万。跨时段判定事件未公布。",
@@ -2485,11 +1996,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:24.526907+00:00",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-current-prices"
           ],
-          "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
           "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
         },
         "notes": "官方另列活动半价，起止未确认，不替代标准估价；每千token价格用Decimal等价换为每百万。跨时段判定事件未公布。"
@@ -2532,35 +2043,428 @@
           "notes": "当前模型表列精确 model 接入点；Chat文档按模型列表选model。Responses/Messages未取得该预览型号明确支持表，不从全平台兼容说明补入。"
         },
         "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "官方指南列出本型号已知取值；未披露的界限见本字段说明。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方指南列出本型号已知取值；未披露的界限见本字段说明。"
+                }
+              ],
+              "notes": "思考指南列本型号开关和档位；未披露不传 thinking 时是否开启，也未给独立预算。"
+            }
+          ],
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "catalog",
               "audit-20261024-thinking",
-              "audit-20261024-chat"
+              "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-11-11-refresh.md",
-            "notes": "已查询模型表与思考/Chat说明，未找到本预览请求ID的独立思考档位、开关或默认值。"
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "千帆 Chat 可开关思考，档位 low、medium、high，启用时缺省 high；整体开关缺省未知。"
           },
-          "notes": "已查询模型表与思考/Chat说明，未找到本预览请求ID的独立思考档位、开关或默认值。"
+          "notes": "千帆 Chat 可开关思考，档位 low、medium、high，启用时缺省 high；整体开关缺省未知。"
         },
         "context_assessment": {
           "status": "partial",
           "reported_value": "1M",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:24.466167+00:00",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
               "catalog"
             ],
-            "evidence": "evidence/qianfan/2026-11-11-refresh.md",
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
             "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
           },
           "notes": "上下文、最大输入、最大输出均标称1M；精确整数及单位约定未公布，不自行乘1000或1024。"
+        }
+      }
+    },
+    {
+      "id": "ernie-light-dt-1-0",
+      "request_id": "ernie-light-dt-1.0",
+      "display_name": "ERNIE-Light-DT-1.0",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:29:34Z",
+        "source_ids": [
+          "catalog"
+        ],
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+        "notes": "当前千帆模型表列出精确请求名。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "千帆在线推理标准价，官方人民币/千token转为每百万token。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "28",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:29:34Z",
+              "source_ids": [
+                "audit-current-prices"
+              ],
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+              "notes": "当前官方价表，原币种标准在线费率。"
+            },
+            "notes": "千帆在线推理标准价，官方人民币/千token转为每百万token。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:29:34Z",
+          "source_ids": [
+            "audit-current-prices"
+          ],
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+          "notes": "当前官方价表，原币种标准在线费率。"
+        },
+        "notes": "千帆在线推理标准价，官方人民币/千token转为每百万token。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "audit-current-prices"
+          ],
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+          "notes": "本按量产品使用公开按量价。"
+        },
+        "notes": "本按量产品使用公开按量价。"
+      },
+      "notes": "本平台模型表明确列出请求名、上下文和深度思考接入。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "catalog",
+              "audit-20261024-chat",
+              "protocol-responses",
+              "protocol-messages"
+            ],
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "模型表和文本生成 API 证明 Chat；Responses 与 Messages 的现有清单未取得本型号确证。"
+          },
+          "notes": "模型表和文本生成 API 证明 Chat；Responses 与 Messages 的现有清单未取得本型号确证。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "官方指南列出本型号已知取值；未披露的界限见本字段说明。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "官方指南列出本型号已知取值；未披露的界限见本字段说明。"
+                }
+              ],
+              "notes": "官方思考指南列本型号，未披露缺省开关和独立预算。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "audit-20261024-thinking",
+              "catalog"
+            ],
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "思考指南的 thinking 支持清单明确本型号；其他协议以及缺省思考开关未知。"
+          },
+          "notes": "思考指南的 thinking 支持清单明确本型号；其他协议以及缺省思考开关未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "catalog"
+            ],
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "官方模型表标称总窗口和最大输入1M、最大输出128k；没有可用于确认精确边界的换算说明。"
+          },
+          "notes": "官方模型表标称总窗口和最大输入1M、最大输出128k；没有可用于确认精确边界的换算说明。"
+        }
+      }
+    },
+    {
+      "id": "glm-5-2",
+      "request_id": "glm-5.2",
+      "display_name": "GLM-5.2",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:29:34Z",
+        "source_ids": [
+          "catalog"
+        ],
+        "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+        "notes": "当前千帆模型表列出精确请求名。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "千帆在线推理标准价，官方人民币/千token转为每百万token。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "28",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:29:34Z",
+              "source_ids": [
+                "audit-current-prices"
+              ],
+              "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+              "notes": "当前官方价表，原币种标准在线费率。"
+            },
+            "notes": "千帆在线推理标准价，官方人民币/千token转为每百万token。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:29:34Z",
+          "source_ids": [
+            "audit-current-prices"
+          ],
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+          "notes": "当前官方价表，原币种标准在线费率。"
+        },
+        "notes": "千帆在线推理标准价，官方人民币/千token转为每百万token。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "audit-current-prices"
+          ],
+          "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+          "notes": "本按量产品使用公开按量价。"
+        },
+        "notes": "本按量产品使用公开按量价。"
+      },
+      "notes": "本平台模型表明确列出请求名、上下文和深度思考接入。",
+      "capabilities": {
+        "input_modalities": [],
+        "context_window_tokens": null,
+        "max_output_tokens": 131072,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "catalog",
+              "audit-20261024-chat",
+              "protocol-responses",
+              "protocol-messages"
+            ],
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "模型表和文本生成 API 证明 Chat；Responses 与 Messages 的现有清单未取得本型号确证。"
+          },
+          "notes": "模型表和文本生成 API 证明 Chat；Responses 与 Messages 的现有清单未取得本型号确证。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "官方指南列出本型号已知取值；未披露的界限见本字段说明。"
+                }
+              ],
+              "notes": "官方思考指南列本型号，未披露缺省开关和独立预算。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "audit-20261024-thinking",
+              "catalog"
+            ],
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "思考指南的 thinking 支持清单明确本型号；其他协议以及缺省思考开关未知。"
+          },
+          "notes": "思考指南的 thinking 支持清单明确本型号；其他协议以及缺省思考开关未知。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "catalog"
+            ],
+            "evidence": "evidence/qianfan/2026-11-25-refresh.md",
+            "notes": "官方模型表标称总窗口和最大输入1M；同时明确最大输出区间[1,131072]，不从输出推算窗口。"
+          },
+          "notes": "官方模型表标称总窗口和最大输入1M；同时明确最大输出区间[1,131072]，不从输出推算窗口。"
         }
       }
     }

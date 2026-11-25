@@ -95,12 +95,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-25T10:26:26.707615+00:00",
               "source_ids": [
                 "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -109,12 +109,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-25T10:26:26.707615+00:00",
           "source_ids": [
             "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -272,12 +272,13 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-25T10:27:09.506348+00:00",
               "source_ids": [
-                "r1111-pricing"
+                "r1111-pricing",
+                "r1125-xai-release"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
             },
             "notes": "按量等价消耗示意，不代表订阅实际扣款。官方文档未出现 grok-4.7-build-fast 字样，对应关系依据展示名 Grok 4.7 Fast 与 xAI 的 Grok Build 专供说明。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -286,16 +287,17 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-25T10:27:09.506348+00:00",
           "source_ids": [
-            "r1111-pricing"
+            "r1111-pricing",
+            "r1125-xai-release"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
         },
         "notes": "开发方官网价参考；非公开 API 型号，不能凭此调用 xAI API。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
-      "notes": "官方 Grok Build 在线目录列出本型号；请求 ID 直接取 model 字段，独立于公开 API。xAI 说明 Grok 4.7 Fast 为同一 Grok 4.7 模型的更快服务档，Grok Build 免费档不含；实际准入仍取决于账号与套餐。参考价采用 xAI 官网公布的 Fast 费率。 本轮公开Build配置文档未列完整在线型号能力，匿名模型接口要求登录；保留历史可用性，不以接口不可匿名取到作为下线。",
+      "notes": "xAI 官方确认 Fast 属 Grok Build 与 Cursor，且 Grok Build 免费层不含。订阅精确端点与能力沿用此前证据。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": 500000,
@@ -455,12 +457,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-25T10:26:26.707615+00:00",
               "source_ids": [
                 "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -469,12 +471,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-25T10:26:26.707615+00:00",
           "source_ids": [
             "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
         },
         "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -638,12 +640,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-25T10:26:26.707615+00:00",
               "source_ids": [
                 "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -652,12 +654,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-25T10:26:26.707615+00:00",
           "source_ids": [
             "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
         },
         "notes": "只用于按量等价消耗示意，不表示订阅实际扣费。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -831,16 +833,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T12:47:02Z",
+              "checked_at": "2026-11-25T10:26:26.707615+00:00",
               "source_ids": [
-                "imagine-pricing",
-                "imagine-openapi",
-                "imagine-model-image2",
-                "imagine-image-generation",
-                "subscription-image-quality-retirement"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
-              "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费。1K low 输出 0.04 USD/图，输入 0.01 USD/图；auto 编辑当前使用 medium，1K 输出为 0.06 USD/图，不属于本基准。2K low 输出为 0.06 USD/图，其他分辨率和质量档不另设规则。2026-11-02 退役的是旧 grok-imagine-image-quality 请求名，重定向到本型号 low，并非停用 low。",
             "time_basis": "unknown",
@@ -849,16 +847,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T12:47:02Z",
+          "checked_at": "2026-11-25T10:26:26.707615+00:00",
           "source_ids": [
-            "imagine-pricing",
-            "imagine-openapi",
-            "imagine-model-image2",
-            "imagine-image-generation",
-            "subscription-image-quality-retirement"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
-          "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。1K low 输出 0.04 USD/图，输入 0.01 USD/图；auto 编辑当前使用 medium，1K 输出为 0.06 USD/图，不属于本基准。2K low 输出为 0.06 USD/图，其他分辨率和质量档不另设规则。2026-11-02 退役的是旧 grok-imagine-image-quality 请求名，重定向到本型号 low，并非停用 low。"
       },
@@ -1610,17 +1604,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T12:47:02Z",
+              "checked_at": "2026-11-25T10:26:26.707615+00:00",
               "source_ids": [
-                "imagine-pricing",
-                "imagine-openapi",
-                "imagine-model-video15",
-                "imagine-video-generation",
-                "imagine-video-i2v",
-                "imagine-video-r2v"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
-              "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费。480p 输出 0.08 USD/秒，输入图片 0.01 USD/图；720p 为 0.14 USD/秒、1080p 为 0.25 USD/秒，仅作档外说明。型号页明确预设音色输入免费，但没有对应按秒计量定义，不新增猜测的音频计价分量。",
             "time_basis": "unknown",
@@ -1629,17 +1618,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T12:47:02Z",
+          "checked_at": "2026-11-25T10:26:26.707615+00:00",
           "source_ids": [
-            "imagine-pricing",
-            "imagine-openapi",
-            "imagine-model-video15",
-            "imagine-video-generation",
-            "imagine-video-i2v",
-            "imagine-video-r2v"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
-          "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。480p 输出 0.08 USD/秒，输入图片 0.01 USD/图；720p 为 0.14 USD/秒、1080p 为 0.25 USD/秒，仅作档外说明。型号页明确预设音色输入免费，但没有对应按秒计量定义，不新增猜测的音频计价分量。"
       },
@@ -2363,18 +2347,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T12:47:02Z",
+              "checked_at": "2026-11-25T10:26:26.707615+00:00",
               "source_ids": [
-                "imagine-pricing",
-                "imagine-openapi",
-                "imagine-model-video",
-                "imagine-video-generation",
-                "imagine-video-i2v",
-                "imagine-video-r2v",
-                "imagine-video-editing"
+                "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
-              "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
             },
             "notes": "按量等价消耗示意，不是订阅真实扣费。480p 输出 0.05 USD/秒、输入图片 0.002 USD/图、输入视频 0.01 USD/秒；720p 输出为 0.07 USD/秒，不另设规则。Video Extension API 官方标为促销，不能将普通生成或编辑标准基准声称为延长任务的精确账单。",
             "time_basis": "unknown",
@@ -2383,18 +2361,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T12:47:02Z",
+          "checked_at": "2026-11-25T10:26:26.707615+00:00",
           "source_ids": [
-            "imagine-pricing",
-            "imagine-openapi",
-            "imagine-model-video",
-            "imagine-video-generation",
-            "imagine-video-i2v",
-            "imagine-video-r2v",
-            "imagine-video-editing"
+            "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-subscription-prices.md",
-          "notes": "核对原厂 HTML 价格表、精确型号页与默认档位；补齐公开输入分量，不代表 Grok Build 实际扣费或订阅通道契约。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "xAI 官方公开按量参考价；Grok Build 的 Fast 取专列短上下文档。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费。480p 输出 0.05 USD/秒、输入图片 0.002 USD/图、输入视频 0.01 USD/秒；720p 输出为 0.07 USD/秒，不另设规则。Video Extension API 官方标为促销，不能将普通生成或编辑标准基准声称为延长任务的精确账单。"
       },

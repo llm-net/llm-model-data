@@ -6,7 +6,7 @@
 
 先读取 provider.json 的官方来源入口；入口本身不代表当前事实已经核实。具体核对状态以 catalog.json 各条 verification 为准。
 
-本次更新见 [2026-11-11 核对记录](../../evidence/mistral/2026-11-11-refresh.md)；各字段的核对范围与保留的历史日期见该记录及 catalog.json。
+本次更新见 [2026-11-25 核对记录](../../evidence/mistral/2026-11-25-refresh.md)。各字段的核对范围与历史日期见该记录及 catalog.json。
 
 ## 独立产品
 

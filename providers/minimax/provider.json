@@ -374,6 +374,12 @@
       "url": "https://platform.minimax.cn/docs/pricing/overview.md",
       "purpose": "pricing",
       "notes": "2026-11-11 本轮独立官方核对；范围与限制见对应refresh证据。"
+    },
+    {
+      "id": "current-lifecycle-md",
+      "url": "https://platform.minimax.cn/docs/faq/models.md",
+      "purpose": "models",
+      "notes": "按量旧 M2.7 系列停止日期与订阅兼容入口。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

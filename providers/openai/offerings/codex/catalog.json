@@ -43,39 +43,39 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.363588+00:00",
+              "checked_at": "2026-11-25T10:26:14.246057+00:00",
               "source_ids": [
-                "r1024-codex-pricing"
+                "r1016-codex-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "公开个人月付，不把月费或额度用作模型单价。"
             },
-            "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。",
+            "notes": "公开个人月付，不把月费或额度用作模型单价。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.363588+00:00",
+          "checked_at": "2026-11-25T10:26:14.246057+00:00",
           "source_ids": [
-            "r1024-codex-pricing"
+            "r1016-codex-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "公开个人月付，不把月费或额度用作模型单价。"
         },
-        "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。"
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
       },
       "quotas": [],
       "overage": "unknown",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:26:14.246057+00:00",
         "source_ids": [
-          "r1024-codex-pricing"
+          "r1016-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "当前公开个人套餐月费复核；未调查实际用量扣费。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
       },
       "notes": "本轮官方个人月付卡片复核：Free0、Go8、Plus20、Pro起价100美元；Pro另外有200/500档，本产品部分收录；未调查实际额度扣费。"
     },
@@ -106,39 +106,39 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.363588+00:00",
+              "checked_at": "2026-11-25T10:26:14.246057+00:00",
               "source_ids": [
-                "r1024-codex-pricing"
+                "r1016-codex-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "公开个人月付，不把月费或额度用作模型单价。"
             },
-            "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。",
+            "notes": "公开个人月付，不把月费或额度用作模型单价。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.363588+00:00",
+          "checked_at": "2026-11-25T10:26:14.246057+00:00",
           "source_ids": [
-            "r1024-codex-pricing"
+            "r1016-codex-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "公开个人月付，不把月费或额度用作模型单价。"
         },
-        "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。"
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
       },
       "quotas": [],
       "overage": "unknown",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:26:14.246057+00:00",
         "source_ids": [
-          "r1024-codex-pricing"
+          "r1016-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "当前公开个人套餐月费复核；未调查实际用量扣费。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
       },
       "notes": "本轮官方个人月付卡片复核：Free0、Go8、Plus20、Pro起价100美元；Pro另外有200/500档，本产品部分收录；未调查实际额度扣费。"
     },
@@ -169,39 +169,39 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.363588+00:00",
+              "checked_at": "2026-11-25T10:26:14.246057+00:00",
               "source_ids": [
-                "r1024-codex-pricing"
+                "r1016-codex-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "公开个人月付，不把月费或额度用作模型单价。"
             },
-            "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。",
+            "notes": "公开个人月付，不把月费或额度用作模型单价。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.363588+00:00",
+          "checked_at": "2026-11-25T10:26:14.246057+00:00",
           "source_ids": [
-            "r1024-codex-pricing"
+            "r1016-codex-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "公开个人月付，不把月费或额度用作模型单价。"
         },
-        "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。"
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
       },
       "quotas": [],
       "overage": "unknown",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:26:14.246057+00:00",
         "source_ids": [
-          "r1024-codex-pricing"
+          "r1016-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "当前公开个人套餐月费复核；未调查实际用量扣费。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
       },
       "notes": "本轮官方个人月付卡片复核：Free0、Go8、Plus20、Pro起价100美元；Pro另外有200/500档，本产品部分收录；未调查实际额度扣费。"
     },
@@ -232,41 +232,167 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:00.363588+00:00",
+              "checked_at": "2026-11-25T10:26:14.246057+00:00",
               "source_ids": [
-                "r1024-codex-pricing"
+                "r1016-codex-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "公开个人月付，不把月费或额度用作模型单价。"
             },
-            "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。",
+            "notes": "公开个人月付，不把月费或额度用作模型单价。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:00.363588+00:00",
+          "checked_at": "2026-11-25T10:26:14.246057+00:00",
           "source_ids": [
-            "r1024-codex-pricing"
+            "r1016-codex-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "公开个人月付，不把月费或额度用作模型单价。"
         },
-        "notes": "公开个人月付；Pro页面标起价100，本条仅基础5x档，不代表20x。具体模型资格独立核对。"
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
       },
       "quotas": [],
       "overage": "unknown",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:26:14.246057+00:00",
         "source_ids": [
-          "r1024-codex-pricing"
+          "r1016-codex-pricing"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "当前公开个人套餐月费复核；未调查实际用量扣费。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
       },
       "notes": "当前 Pro 起价100美元/月，本条保留基础5x档；另有200/500美元档。本轮文档称 Pro 当前无5小时限制，周额度和具体型号资格仍依方案。"
+    },
+    {
+      "id": "pro-200",
+      "display_name": "Pro $200",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "200",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:26:14.246057+00:00",
+              "source_ids": [
+                "r1016-codex-pricing"
+              ],
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "公开个人月付，不把月费或额度用作模型单价。"
+            },
+            "notes": "公开个人月付，不把月费或额度用作模型单价。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:26:14.246057+00:00",
+          "source_ids": [
+            "r1016-codex-pricing"
+          ],
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "公开个人月付，不把月费或额度用作模型单价。"
+        },
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
+      },
+      "quotas": [],
+      "overage": "unknown",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:26:14.246057+00:00",
+        "source_ids": [
+          "r1016-codex-pricing"
+        ],
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
+      },
+      "notes": "按公开月付价独立记录；Ultrafast 机型范围另见型号和证据。"
+    },
+    {
+      "id": "pro-500",
+      "display_name": "Pro $500",
+      "prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "subscription_fee",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准月付套餐",
+            "rates": [
+              {
+                "meter": "subscription_fee",
+                "amount": "500",
+                "per": 1,
+                "unit": "subscription"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": "P1M",
+            "charge_unit": "account",
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:26:14.246057+00:00",
+              "source_ids": [
+                "r1016-codex-pricing"
+              ],
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "公开个人月付，不把月费或额度用作模型单价。"
+            },
+            "notes": "公开个人月付，不把月费或额度用作模型单价。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:26:14.246057+00:00",
+          "source_ids": [
+            "r1016-codex-pricing"
+          ],
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "公开个人月付，不把月费或额度用作模型单价。"
+        },
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
+      },
+      "quotas": [],
+      "overage": "unknown",
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:26:14.246057+00:00",
+        "source_ids": [
+          "r1016-codex-pricing"
+        ],
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "公开个人月付，不把月费或额度用作模型单价。"
+      },
+      "notes": "按公开月付价独立记录；Ultrafast 机型范围另见型号和证据。"
     }
   ],
   "models": [
@@ -285,13 +411,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:30:48+00:00",
         "source_ids": [
-          "r1024-codex-models",
-          "r1024-codex-pricing"
+          "r1016-models",
+          "r1125-codex-catalog"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -359,11 +485,11 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:59.756511+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
-                "r1024-openai-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
               "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文、30分钟缓存写入参考价，不代表订阅实际扣费。",
@@ -373,11 +499,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:59.756511+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
-            "r1024-openai-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
           "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文、30分钟缓存写入参考价，不代表订阅实际扣费。"
@@ -400,13 +526,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
           },
           "notes": "官方 Codex 模型及配置说明确认 Responses；不能继承按量 API 的 Chat 面。"
         },
@@ -415,14 +542,15 @@
           "reported_value": "500,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760385+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models"
+              "r1016-models",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
           },
-          "notes": "官方 Codex / ChatGPT Work 模型页明确本型号默认窗口500,000 tokens，替换历史CLI静态目录272000；实际客户端覆盖与服务端策略可改变窗口，不继承API的1,050,000。"
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 500,000、客户端扩展上限 872,000 token。"
         },
         "reasoning": {
           "support": "supported",
@@ -447,10 +575,34 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方产品文档显示标签，非请求枚举；Ultra是自动委派模式，不作为单次推理档位。"
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
                 }
               ],
-              "notes": "未展开的控制或条件见独立证据。"
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "low",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
             },
             {
               "interface": "openai_responses",
@@ -471,48 +623,24 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "档位来自 Codex 0.163.0 内嵌本型号 supported_reasoning_levels；Responses reasoning.effort 字段沿用先前独立请求核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
                 }
               ],
-              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
-            },
-            {
-              "interface": "openai_responses",
-              "surface": "client_setting",
-              "can_disable": null,
-              "default_behavior": "enabled",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": "model_reasoning_effort",
-                  "values": [
-                    "low",
-                    "medium",
-                    "high",
-                    "xhigh",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "low",
-                  "notes": "官方 CLI 0.163.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
-                }
-              ],
-              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
+              "r1016-models",
               "r1016-config",
-              "r1016-cli",
-              "r1024-codex-models"
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "核对官方 CLI 0.163.0 本型号档位与默认；请求字段仍由既有独立请求证据支持，未重跑推理探针。 UI 的 /model 标签另于 2026-10-24 核对，见 evidence/openai/2026-10-24-refresh.md；请求枚举和客户端默认保留 2026-10-16 的独立核对日期。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
           },
-          "notes": "官方 CLI 0.163.0 本型号的思考档位和客户端默认可确认；裸订阅请求默认与关闭能力仍未知，保持 partial。Ultra 包含自动任务委派，不登记为单次请求档位。 UI 标签采用 2026-10-24 公开产品页；不将标签推导为裸请求枚举。"
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         }
       }
     },
@@ -531,13 +659,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:30:48+00:00",
         "source_ids": [
-          "r1024-codex-models",
-          "r1024-codex-pricing"
+          "r1016-models",
+          "r1125-codex-catalog"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -605,11 +733,11 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:59.756511+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
-                "r1024-openai-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
               "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台API的Standard短上下文、30分钟缓存写入参考价，不表示订阅实际扣费或订阅窗口。",
@@ -619,11 +747,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:59.756511+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
-            "r1024-openai-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
           "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台API的Standard短上下文、30分钟缓存写入参考价，不表示订阅实际扣费或订阅窗口。"
@@ -634,7 +762,7 @@
           "text",
           "image"
         ],
-        "context_window_tokens": null,
+        "context_window_tokens": 500000,
         "max_output_tokens": null,
         "tool_calling": null,
         "structured_output": null,
@@ -646,30 +774,31 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
           },
           "notes": "官方 Codex 模型及配置说明确认 Responses；不能继承按量 API 的 Chat 面。"
         },
         "context_assessment": {
-          "status": "unknown",
-          "reported_value": null,
+          "status": "known",
+          "reported_value": "500,000 tokens",
           "verification": {
-            "status": "needs_review",
-            "checked_at": null,
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "只明确 Sol 默认500000，仍没有 Terra 的本订阅精确窗口。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
           },
-          "notes": "Codex的GPT-6.1 Terra上下文未独立公布；不继承同名API的1,050,000或Sol的500,000，不复用旧CLI其他型号的272000。"
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 500,000、客户端扩展上限 872,000 token。"
         },
         "reasoning": {
           "support": "supported",
@@ -677,24 +806,89 @@
           "profiles": [
             {
               "interface": "openai_responses",
-              "surface": "client_setting",
+              "surface": "client_ui",
               "can_disable": null,
               "default_behavior": "unknown",
-              "controls": [],
-              "notes": "本产品模型页确认可调整思考，配置键model_reasoning_effort依型号与客户端目录提供；未取得Terra逐型号档位和缺省，不复制API枚举。"
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Light",
+                    "Medium",
+                    "High",
+                    "Extra High",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
+                }
+              ],
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "low",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
+                }
+              ],
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "只确认本产品支持可调思考；逐型号枚举、缺省与关闭能力仍未公开。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
           },
-          "notes": "只确认本产品支持可调思考；精确档位、关闭能力、默认及裸订阅请求行为待核对。Ultra为自动委派，不是单次模型档位。"
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         }
       }
     },
@@ -710,13 +904,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:30:48+00:00",
         "source_ids": [
-          "r1024-codex-models",
-          "r1024-codex-pricing"
+          "r1016-models",
+          "r1125-codex-catalog"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -784,11 +978,11 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:59.756511+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
-                "r1024-openai-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
               "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
@@ -798,11 +992,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:59.756511+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
-            "r1024-openai-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
           "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
@@ -825,13 +1019,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -844,8 +1039,48 @@
               "surface": "client_ui",
               "can_disable": null,
               "default_behavior": "unknown",
-              "controls": [],
-              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Light",
+                    "Medium",
+                    "High",
+                    "Extra High",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
+                }
+              ],
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "low",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
             },
             {
               "interface": "openai_responses",
@@ -866,61 +1101,39 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "档位来自 Codex 0.163.0 内嵌本型号 supported_reasoning_levels；Responses reasoning.effort 字段沿用先前独立请求核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
                 }
               ],
-              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
-            },
-            {
-              "interface": "openai_responses",
-              "surface": "client_setting",
-              "can_disable": null,
-              "default_behavior": "enabled",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": "model_reasoning_effort",
-                  "values": [
-                    "low",
-                    "medium",
-                    "high",
-                    "xhigh",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "low",
-                  "notes": "官方 CLI 0.163.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
-                }
-              ],
-              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
+              "r1016-models",
               "r1016-config",
-              "r1016-cli"
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "核对官方 CLI 0.163.0 本型号档位与默认；请求字段仍由既有独立请求证据支持，未重跑推理探针。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
           },
-          "notes": "官方 CLI 0.163.0 本型号的思考档位和客户端默认可确认；裸订阅请求默认与关闭能力仍未知，保持 partial。Ultra 包含自动任务委派，不登记为单次请求档位。"
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "272000",
+          "status": "known",
+          "reported_value": "272,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1016-cli"
+              "r1016-models",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "官方 npm CLI 0.163.0 静态目录的精确 slug；未访问账号、配置或会话。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
           },
-          "notes": "官方 CLI 0.163.0 内嵌精确 slug 的常规 context_window；max_context_window=872000，不是 API 模型页的窗口，也不是自动压缩阈值。客户端版本、服务端目录或用户覆盖可改变实际值。 2026-10-24 未重新核对当前运行时目录，保留该历史静态目录数值及成功核对日期，当前窗口覆盖按 partial 记录。"
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 272,000、客户端扩展上限 872,000 token。"
         }
       }
     },
@@ -936,13 +1149,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:30:48+00:00",
         "source_ids": [
-          "r1024-codex-models",
-          "r1024-codex-pricing"
+          "r1016-models",
+          "r1125-codex-catalog"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1010,11 +1223,11 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:59.756511+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
-                "r1024-openai-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
               "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
@@ -1024,11 +1237,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:59.756511+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
-            "r1024-openai-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
           "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
@@ -1051,13 +1264,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1070,8 +1284,48 @@
               "surface": "client_ui",
               "can_disable": null,
               "default_behavior": "unknown",
-              "controls": [],
-              "notes": "官方文档的选择器说明；可执行请求档位见独立 api_request profile。"
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Light",
+                    "Medium",
+                    "High",
+                    "Extra High",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
+                }
+              ],
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
             },
             {
               "interface": "openai_responses",
@@ -1092,61 +1346,39 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "档位来自 Codex 0.163.0 内嵌本型号 supported_reasoning_levels；Responses reasoning.effort 字段沿用先前独立请求核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
                 }
               ],
-              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
-            },
-            {
-              "interface": "openai_responses",
-              "surface": "client_setting",
-              "can_disable": null,
-              "default_behavior": "enabled",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": "model_reasoning_effort",
-                  "values": [
-                    "low",
-                    "medium",
-                    "high",
-                    "xhigh",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "medium",
-                  "notes": "官方 CLI 0.163.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
-                }
-              ],
-              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
+              "r1016-models",
               "r1016-config",
-              "r1016-cli"
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "核对官方 CLI 0.163.0 本型号档位与默认；请求字段仍由既有独立请求证据支持，未重跑推理探针。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
           },
-          "notes": "官方 CLI 0.163.0 本型号的思考档位和客户端默认可确认；裸订阅请求默认与关闭能力仍未知，保持 partial。Ultra 包含自动任务委派，不登记为单次请求档位。"
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "272000",
+          "status": "known",
+          "reported_value": "272,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1016-cli"
+              "r1016-models",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "官方 npm CLI 0.163.0 静态目录的精确 slug；未访问账号、配置或会话。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
           },
-          "notes": "官方 CLI 0.163.0 内嵌精确 slug 的常规 context_window；max_context_window=872000，不是 API 模型页的窗口，也不是自动压缩阈值。客户端版本、服务端目录或用户覆盖可改变实际值。 2026-10-24 未重新核对当前运行时目录，保留该历史静态目录数值及成功核对日期，当前窗口覆盖按 partial 记录。"
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 272,000、客户端扩展上限 872,000 token。"
         }
       }
     },
@@ -1162,13 +1394,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:30:48+00:00",
         "source_ids": [
-          "r1024-codex-models",
-          "r1024-codex-pricing"
+          "r1016-models",
+          "r1125-codex-catalog"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1236,11 +1468,11 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:59.756511+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
-                "r1024-openai-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
               "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
@@ -1250,11 +1482,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:59.756511+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
-            "r1024-openai-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
           "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
@@ -1277,13 +1509,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1296,8 +1529,48 @@
               "surface": "client_ui",
               "can_disable": null,
               "default_behavior": "unknown",
-              "controls": [],
-              "notes": "官方文档的选择器说明；可执行请求档位见独立 api_request profile。GPT-6 Luna 最高到 Max，不支持 Ultra。"
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Light",
+                    "Medium",
+                    "High",
+                    "Extra High",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
+                }
+              ],
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
             },
             {
               "interface": "openai_responses",
@@ -1318,61 +1591,39 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "档位来自 Codex 0.163.0 内嵌本型号 supported_reasoning_levels；Responses reasoning.effort 字段沿用先前独立请求核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
                 }
               ],
-              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
-            },
-            {
-              "interface": "openai_responses",
-              "surface": "client_setting",
-              "can_disable": null,
-              "default_behavior": "enabled",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": "model_reasoning_effort",
-                  "values": [
-                    "low",
-                    "medium",
-                    "high",
-                    "xhigh",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "medium",
-                  "notes": "官方 CLI 0.163.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
-                }
-              ],
-              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
+              "r1016-models",
               "r1016-config",
-              "r1016-cli"
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "核对官方 CLI 0.163.0 本型号档位与默认；请求字段仍由既有独立请求证据支持，未重跑推理探针。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
           },
-          "notes": "官方 CLI 0.163.0 本型号的思考档位和客户端默认可确认；裸订阅请求默认与关闭能力仍未知，保持 partial。Ultra 包含自动任务委派，不登记为单次请求档位。"
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "272000",
+          "status": "known",
+          "reported_value": "272,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1016-cli"
+              "r1016-models",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "官方 npm CLI 0.163.0 静态目录的精确 slug；未访问账号、配置或会话。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
           },
-          "notes": "官方 CLI 0.163.0 内嵌精确 slug 的常规 context_window；max_context_window=872000，不是 API 模型页的窗口，也不是自动压缩阈值。客户端版本、服务端目录或用户覆盖可改变实际值。 2026-10-24 未重新核对当前运行时目录，保留该历史静态目录数值及成功核对日期，当前窗口覆盖按 partial 记录。"
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 272,000、客户端扩展上限 872,000 token。"
         }
       }
     },
@@ -1388,13 +1639,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:30:48+00:00",
         "source_ids": [
-          "r1024-codex-models",
-          "r1024-codex-pricing"
+          "r1016-models",
+          "r1125-codex-catalog"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1417,13 +1668,13 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [
-            "r1024-openai-pricing",
+            "r1016-pricing",
             "subscription-sol-api-model"
           ],
-          "evidence": "evidence/openai/2026-11-11-subscription-prices.md",
-          "notes": "已查OpenAI原厂API完整价表和精确型号页；当前费率属于截至2026-11-30的限时促销，未取得现行非促销标准基准，保留unknown。优惠数字及其他档位仅存本轮独立证据，不采用订阅CREDIT或其他型号价格。"
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "API 型号页及价表标明促销至 2026-11-30；未公布届时标准全部分量，参考价保持未知。"
         },
-        "notes": "已查OpenAI原厂API完整价表和精确型号页；当前费率属于截至2026-11-30的限时促销，未取得现行非促销标准基准，保留unknown。优惠数字及其他档位仅存本轮独立证据，不采用订阅CREDIT或其他型号价格。"
+        "notes": "API 型号页及价表标明促销至 2026-11-30；未公布届时标准全部分量，参考价保持未知。"
       },
       "notes": "官方当前 Codex 订阅目录仍列本型号；资格受客户端、套餐、管理员与分批开放限制。",
       "capabilities": {
@@ -1443,13 +1694,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1467,19 +1719,43 @@
                   "kind": "effort",
                   "parameter": "/model",
                   "values": [
-                    "Low",
+                    "Light",
                     "Medium",
                     "High",
-                    "Extra high",
+                    "Extra High",
                     "Max"
                   ],
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方文档中的显示标签；示例 Medium 预选不作为所有 CLI 版本的默认值，实际 CLI 默认见 client_setting。Ultra 包含自动委派，未列入单模型档位。"
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
                 }
               ],
-              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "low",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
             },
             {
               "interface": "openai_responses",
@@ -1500,61 +1776,39 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "档位来自 Codex 0.163.0 内嵌本型号 supported_reasoning_levels；Responses reasoning.effort 字段沿用先前独立请求核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
                 }
               ],
-              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
-            },
-            {
-              "interface": "openai_responses",
-              "surface": "client_setting",
-              "can_disable": null,
-              "default_behavior": "enabled",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": "model_reasoning_effort",
-                  "values": [
-                    "low",
-                    "medium",
-                    "high",
-                    "xhigh",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "low",
-                  "notes": "官方 CLI 0.163.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
-                }
-              ],
-              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
+              "r1016-models",
               "r1016-config",
-              "r1016-cli"
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "核对官方 CLI 0.163.0 本型号档位与默认；请求字段仍由既有独立请求证据支持，未重跑推理探针。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
           },
-          "notes": "官方 CLI 0.163.0 本型号的思考档位和客户端默认可确认；裸订阅请求默认与关闭能力仍未知，保持 partial。Ultra 包含自动任务委派，不登记为单次请求档位。"
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "272000",
+          "status": "known",
+          "reported_value": "272,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1016-cli"
+              "r1016-models",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "官方 npm CLI 0.163.0 静态目录的精确 slug；未访问账号、配置或会话。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
           },
-          "notes": "官方 CLI 0.163.0 内嵌精确 slug 的常规 context_window；max_context_window=872000，不是 API 模型页的窗口，也不是自动压缩阈值。客户端版本、服务端目录或用户覆盖可改变实际值。 2026-10-24 未重新核对当前运行时目录，保留该历史静态目录数值及成功核对日期，当前窗口覆盖按 partial 记录。"
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 272,000、客户端扩展上限 872,000 token。"
         }
       }
     },
@@ -1570,13 +1824,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:30:48+00:00",
         "source_ids": [
-          "r1024-codex-models",
-          "r1024-codex-pricing"
+          "r1016-models",
+          "r1125-codex-catalog"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1638,11 +1892,11 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:59.756511+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
-                "r1024-openai-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
               "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
@@ -1652,11 +1906,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:59.756511+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
-            "r1024-openai-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
           "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
@@ -1679,13 +1933,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1698,8 +1953,48 @@
               "surface": "client_ui",
               "can_disable": null,
               "default_behavior": "unknown",
-              "controls": [],
-              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Light",
+                    "Medium",
+                    "High",
+                    "Extra High",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
+                }
+              ],
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
             },
             {
               "interface": "openai_responses",
@@ -1720,61 +2015,39 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "档位来自 Codex 0.163.0 内嵌本型号 supported_reasoning_levels；Responses reasoning.effort 字段沿用先前独立请求核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
                 }
               ],
-              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
-            },
-            {
-              "interface": "openai_responses",
-              "surface": "client_setting",
-              "can_disable": null,
-              "default_behavior": "enabled",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": "model_reasoning_effort",
-                  "values": [
-                    "low",
-                    "medium",
-                    "high",
-                    "xhigh",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "medium",
-                  "notes": "官方 CLI 0.163.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
-                }
-              ],
-              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
+              "r1016-models",
               "r1016-config",
-              "r1016-cli"
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "核对官方 CLI 0.163.0 本型号档位与默认；请求字段仍由既有独立请求证据支持，未重跑推理探针。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
           },
-          "notes": "官方 CLI 0.163.0 本型号的思考档位和客户端默认可确认；裸订阅请求默认与关闭能力仍未知，保持 partial。Ultra 包含自动任务委派，不登记为单次请求档位。"
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "272000",
+          "status": "known",
+          "reported_value": "272,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1016-cli"
+              "r1016-models",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "官方 npm CLI 0.163.0 静态目录的精确 slug；未访问账号、配置或会话。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
           },
-          "notes": "官方 CLI 0.163.0 内嵌精确 slug 的常规 context_window；max_context_window=872000，不是 API 模型页的窗口，也不是自动压缩阈值。客户端版本、服务端目录或用户覆盖可改变实际值。 2026-10-24 未重新核对当前运行时目录，保留该历史静态目录数值及成功核对日期，当前窗口覆盖按 partial 记录。"
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 272,000、客户端扩展上限 872,000 token。"
         }
       }
     },
@@ -1790,13 +2063,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.363588+00:00",
+        "checked_at": "2026-11-25T10:30:48+00:00",
         "source_ids": [
-          "r1024-codex-models",
-          "r1024-codex-pricing"
+          "r1016-models",
+          "r1125-codex-catalog"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "本产品模型/价格文档保留本型号；不以 API 可用性替代订阅资格。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1858,11 +2131,11 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:59.756511+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
-                "r1024-openai-pricing"
+                "r1016-pricing"
               ],
-              "evidence": "evidence/openai/2026-11-11-refresh.md",
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
               "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
             },
             "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。",
@@ -1872,11 +2145,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:59.756511+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
-            "r1024-openai-pricing"
+            "r1016-pricing"
           ],
-          "evidence": "evidence/openai/2026-11-11-refresh.md",
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
           "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
         },
         "notes": "同平台精确型号 Standard 短上下文现金标价作参考；补30分钟缓存写入，12小时写入不并列，不是订阅实际扣费。"
@@ -1899,13 +2172,14 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:59.760951+00:00",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1024-codex-models",
-              "r1024-codex-config"
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
           },
           "notes": "Codex 当前只接受 Responses 兼容模型提供方；Chat-only 不支持。客户端和订阅后端能力分开。"
         },
@@ -1918,8 +2192,48 @@
               "surface": "client_ui",
               "can_disable": null,
               "default_behavior": "unknown",
-              "controls": [],
-              "notes": "官方文档的选择器示例；可执行请求档位见独立 api_request profile。"
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Light",
+                    "Medium",
+                    "High",
+                    "Extra High",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
+                }
+              ],
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
             },
             {
               "interface": "openai_responses",
@@ -1940,61 +2254,39 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "档位来自 Codex 0.163.0 内嵌本型号 supported_reasoning_levels；Responses reasoning.effort 字段沿用先前独立请求核对。Ultra 同时包含自动任务委派，不作为单次请求的档位；省略参数时订阅后端默认未单独确认。"
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
                 }
               ],
-              "notes": "Codex 订阅的单次 Responses 请求；不是复制同名按量 API，也不把客户端界面标签转换成枚举。"
-            },
-            {
-              "interface": "openai_responses",
-              "surface": "client_setting",
-              "can_disable": null,
-              "default_behavior": "enabled",
-              "controls": [
-                {
-                  "kind": "effort",
-                  "parameter": "model_reasoning_effort",
-                  "values": [
-                    "low",
-                    "medium",
-                    "high",
-                    "xhigh",
-                    "max"
-                  ],
-                  "minimum": null,
-                  "maximum": null,
-                  "default": "medium",
-                  "notes": "官方 CLI 0.163.0 内嵌本型号 default_reasoning_level；配置覆盖可改变默认。这里只登记单模型思考档位，不含自动委派模式。"
-                }
-              ],
-              "notes": "CLI 设置与未显式覆盖时的内嵌缺省；不把此缺省当成裸订阅 HTTP 请求的默认值。"
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
+              "r1016-models",
               "r1016-config",
-              "r1016-cli"
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "核对官方 CLI 0.163.0 本型号档位与默认；请求字段仍由既有独立请求证据支持，未重跑推理探针。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
           },
-          "notes": "官方 CLI 0.163.0 本型号的思考档位和客户端默认可确认；裸订阅请求默认与关闭能力仍未知，保持 partial。Ultra 包含自动任务委派，不登记为单次请求档位。"
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "272000",
+          "status": "known",
+          "reported_value": "272,000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-16T07:47:02Z",
+            "checked_at": "2026-11-25T10:30:48+00:00",
             "source_ids": [
-              "r1016-cli"
+              "r1016-models",
+              "r1125-codex-catalog"
             ],
-            "evidence": "evidence/openai/2026-10-16-codex-models.json",
-            "notes": "官方 npm CLI 0.163.0 静态目录的精确 slug；未访问账号、配置或会话。"
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
           },
-          "notes": "官方 CLI 0.163.0 内嵌精确 slug 的常规 context_window；max_context_window=872000，不是 API 模型页的窗口，也不是自动压缩阈值。客户端版本、服务端目录或用户覆盖可改变实际值。 2026-10-24 未重新核对当前运行时目录，保留该历史静态目录数值及成功核对日期，当前窗口覆盖按 partial 记录。"
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 272,000、客户端扩展上限 872,000 token。"
         }
       }
     },
@@ -2010,12 +2302,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:00.400624+00:00",
+        "checked_at": "2026-11-25T10:26:14.612109+00:00",
         "source_ids": [
-          "codex-imagegen"
+          "r1016-imagegen"
         ],
-        "evidence": "evidence/openai/2026-11-11-refresh.md",
-        "notes": "当前 Codex 生图文档仍明确 gpt-image-2；私有订阅字段没有重跑探针。"
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "公开 Codex 图片生成说明仍明确使用该型号。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2069,14 +2361,13 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T12:44:42.171109+00:00",
+              "checked_at": "2026-11-25T10:26:14.801572+00:00",
               "source_ids": [
                 "r1024-openai-pricing",
-                "subscription-image-api-caching",
-                "codex-imagegen"
+                "subscription-image-api-caching"
               ],
-              "evidence": "evidence/openai/2026-11-11-subscription-prices.md",
-              "notes": "逐项核对API Standard价格与Images/Responses缓存适用差异；仅更新所选价格基准，不刷新模型能力日期。"
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "Direct Images Standard：文本输入、图像输入、图像输出；官方明确只在 Responses 图像工具启用缓存折扣，独立基准不混入。"
             },
             "notes": "input_uncached_tokens仅指文本输入，image_input_tokens与image_output_tokens分别指图像输入和输出；直接Images请求不适用缓存优惠。Responses出图的文本及图像缓存价仅记在独立证据，不混入本条唯一基准；不表示订阅实际扣费。",
             "time_basis": "unknown",
@@ -2085,14 +2376,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T12:44:42.171109+00:00",
+          "checked_at": "2026-11-25T10:26:14.801572+00:00",
           "source_ids": [
             "r1024-openai-pricing",
-            "subscription-image-api-caching",
-            "codex-imagegen"
+            "subscription-image-api-caching"
           ],
-          "evidence": "evidence/openai/2026-11-11-subscription-prices.md",
-          "notes": "逐项核对API Standard价格与Images/Responses缓存适用差异；仅更新所选价格基准，不刷新模型能力日期。"
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "Direct Images Standard：文本输入、图像输入、图像输出；官方明确只在 Responses 图像工具启用缓存折扣，独立基准不混入。"
         },
         "notes": "按量等价消耗示意，不是订阅真实扣费；选用当前官方客户端Images路径对应的API直接Images标准价，Responses缓存档不混入同一基准。"
       },
@@ -2470,6 +2760,502 @@
             "notes": "Images 端点按官方客户端源码与 Codex 文档核对；Responses 工具路径取自 2026-09-17 消费者板测，本次未重跑。不刷新模型身份、价格或其他能力的核对结论。"
           },
           "notes": "缺口：Images 端点只核对了官方客户端发出的固定字段，其他取值、单次张数、参考图端点上限、提示词长度未核对；Responses 路径参考图格式与上限未核对；2.5 型号名是否生效无法证实。"
+        }
+      }
+    },
+    {
+      "id": "gpt-6-2-astra",
+      "request_id": "gpt-6.2-astra",
+      "display_name": "GPT-6.2 Astra",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "plus",
+        "pro-5x",
+        "pro-200",
+        "pro-500"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:30:48+00:00",
+        "source_ids": [
+          "r1016-models",
+          "r1125-codex-catalog"
+        ],
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "工具订阅独立记录官网 API 参考价。"
+        },
+        "notes": "订阅仅保存按量参考价，不表示实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "8.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.40",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "40.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_30m_tokens",
+                "amount": "10.00",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://developers.openai.com/api/docs/pricing.md",
+              "subject": "gpt-6.2-astra",
+              "reason": "同平台精确型号的公开按量价。",
+              "catalog_model": {
+                "provider_id": "openai",
+                "offering_id": "api-global",
+                "model_id": "gpt-6-2-astra",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
+              "source_ids": [
+                "r1016-pricing"
+              ],
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "核对 Standard 当前公开标准价。"
+            },
+            "notes": "Standard 短上下文，输入不超过 272,000 token；选 30 分钟缓存写入，12 小时及其他速度、批处理和长上下文另有价档。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
+          "source_ids": [
+            "r1016-pricing"
+          ],
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "核对 Standard 当前公开标准价。"
+        },
+        "notes": "Standard 短上下文，输入不超过 272,000 token；选 30 分钟缓存写入，12 小时及其他速度、批处理和长上下文另有价档。"
+      },
+      "notes": "ChatGPT 登录的 Codex App 与 CLI 0.166.0 起可选；Business、Enterprise 和 Edu 的访问按计划与工作区权限。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 272000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:48+00:00",
+            "source_ids": [
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
+            ],
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
+          },
+          "notes": "官方 Codex 模型及配置说明确认 Responses；不能继承按量 API 的 Chat 面。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "272,000 tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:48+00:00",
+            "source_ids": [
+              "r1016-models",
+              "r1125-codex-catalog"
+            ],
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
+          },
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 272,000、客户端扩展上限 872,000 token。 产品文档另称可配置至 1 million；按发行客户端整数独立记录，实际扩展受客户端和服务端条件。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Light",
+                    "Medium",
+                    "High",
+                    "Extra High",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
+                }
+              ],
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "low",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
+                }
+              ],
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:48+00:00",
+            "source_ids": [
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
+            ],
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
+          },
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
+        }
+      }
+    },
+    {
+      "id": "gpt-6-2-sol",
+      "request_id": "gpt-6.2-sol",
+      "display_name": "GPT-6.2 Sol",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "plus",
+        "pro-5x",
+        "pro-200",
+        "pro-500"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:30:48+00:00",
+        "source_ids": [
+          "r1016-models",
+          "r1125-codex-catalog"
+        ],
+        "evidence": "evidence/openai/2026-11-25-refresh.md",
+        "notes": "ChatGPT Learn 与官方发行客户端列明精确型号；不从 API 可用性推断权限。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "工具订阅独立记录官网 API 参考价。"
+        },
+        "notes": "订阅仅保存按量参考价，不表示实际扣费。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "2.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "10.00",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_30m_tokens",
+                "amount": "2.50",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://developers.openai.com/api/docs/pricing.md",
+              "subject": "gpt-6.2-sol",
+              "reason": "同平台精确型号的公开按量价。",
+              "catalog_model": {
+                "provider_id": "openai",
+                "offering_id": "api-global",
+                "model_id": "gpt-6-2-sol",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
+              "source_ids": [
+                "r1016-pricing"
+              ],
+              "evidence": "evidence/openai/2026-11-25-refresh.md",
+              "notes": "核对 Standard 当前公开标准价。"
+            },
+            "notes": "Standard 短上下文，输入不超过 272,000 token；选 30 分钟缓存写入，12 小时及其他速度、批处理和长上下文另有价档。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
+          "source_ids": [
+            "r1016-pricing"
+          ],
+          "evidence": "evidence/openai/2026-11-25-refresh.md",
+          "notes": "核对 Standard 当前公开标准价。"
+        },
+        "notes": "Standard 短上下文，输入不超过 272,000 token；选 30 分钟缓存写入，12 小时及其他速度、批处理和长上下文另有价档。"
+      },
+      "notes": "ChatGPT 登录的 Codex App 与 CLI 0.166.0 起可选；Business、Enterprise 和 Edu 的访问按计划与工作区权限。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 500000,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_responses"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:48+00:00",
+            "source_ids": [
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
+            ],
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "Codex 公开配置及官方 CLI 对本型号启用 Responses。"
+          },
+          "notes": "官方 Codex 模型及配置说明确认 Responses；不能继承按量 API 的 Chat 面。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "500,000 tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:48+00:00",
+            "source_ids": [
+              "r1016-models",
+              "r1125-codex-catalog"
+            ],
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "核对 Codex 官方产品文档和当前发行 CLI 精确型号默认窗口。"
+          },
+          "notes": "官方 CLI 0.172.0 内嵌默认窗口 500,000、客户端扩展上限 872,000 token。 产品文档另称可配置至 1 million；按发行客户端整数独立记录，实际扩展受客户端和服务端条件。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_responses",
+              "surface": "client_ui",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "/model",
+                  "values": [
+                    "Light",
+                    "Medium",
+                    "High",
+                    "Extra High",
+                    "Max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "产品选择器的界面档位；CLI 把 Light 显示为 Low。"
+                }
+              ],
+              "notes": "不同客户端和工作区可采用不同预选值。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "client_setting",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "model_reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "low",
+                  "notes": "官方 CLI 0.172.0 内嵌该型号档位与默认；配置可覆盖。"
+                }
+              ],
+              "notes": "内嵌客户端无关闭档；Ultra 委派模式独立于单次思考档。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "该型号的单次档位来自当前 Codex 客户端；裸订阅请求不传字段的默认未证实。"
+                }
+              ],
+              "notes": "订阅 Responses 入口，所列为客户端使用值。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:48+00:00",
+            "source_ids": [
+              "r1016-models",
+              "r1016-config",
+              "r1125-codex-catalog"
+            ],
+            "evidence": "evidence/openai/2026-11-25-refresh.md",
+            "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
+          },
+          "notes": "已确认 CLI 0.172.0 型号档位和客户端默认；裸订阅请求的省略默认及关闭能力仍未独立核实。"
         }
       }
     }

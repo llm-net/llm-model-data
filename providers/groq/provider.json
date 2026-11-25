@@ -92,6 +92,12 @@
       "url": "https://console.groq.com/docs/model/qwen/qwen3.8-27b",
       "purpose": "models",
       "notes": "2026-10-24 模型、价格和能力核对；逐项结论见 evidence/groq/2026-10-24-refresh.md。"
+    },
+    {
+      "id": "r1125-groq-safeguard",
+      "url": "https://console.groq.com/docs/model/openai/gpt-oss-safeguard-20b",
+      "purpose": "models",
+      "notes": "2026-11-25 官方页面；核对范围见本轮证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

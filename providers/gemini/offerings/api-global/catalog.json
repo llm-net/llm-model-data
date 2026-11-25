@@ -29,12 +29,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:01.753199+00:00",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
           "r1024-gemini-flash37",
           "r1024-gemini-deprecations"
         ],
-        "evidence": "evidence/gemini/2026-11-11-refresh.md",
+        "evidence": "evidence/gemini/2026-11-25-refresh.md",
         "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
@@ -45,9 +45,9 @@
           "checked_at": null,
           "source_ids": [
             "r1024-gemini-pricing",
-            "r1024-gemini-latest"
+            "r1024-gemini-deprecations"
           ],
-          "evidence": "evidence/gemini/2026-11-11-refresh.md",
+          "evidence": "evidence/gemini/2026-11-25-refresh.md",
           "notes": "本日仅有introductory价格及未来非促销价，未取得当前非促销标准价。"
         },
         "notes": "官方 Gemini 3.8 新特性及 3.7 发布公告明确 introductory pricing。当前输入/缓存读/输出为 0.75/0.075/3.75 USD 每百万 token，截至 2026-12-31；2027-01-01 生效的标准价 1.5/0.15/7.5 不提前应用。当前没有非促销标准价，usage_prices 为 unknown；3.7 API 当前自动路由 3.8，但各型号分别留证据。"
@@ -172,7 +172,7 @@
             "source_ids": [
               "r1024-gemini-flash37"
             ],
-            "evidence": "evidence/gemini/2026-11-11-refresh.md",
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
             "notes": "本型号窗口单独核对；只公布输入/输出上限时不合成总窗口。"
           },
           "notes": "型号页只公布输入上限1,048,576及输出上限65,536，未明确总上下文窗口；不相加也不拿最大输入冒充总窗口。"
@@ -191,12 +191,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:01.933430+00:00",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
           "r1024-gemini-flash38",
           "r1024-gemini-deprecations"
         ],
-        "evidence": "evidence/gemini/2026-11-11-refresh.md",
+        "evidence": "evidence/gemini/2026-11-25-refresh.md",
         "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
@@ -207,9 +207,9 @@
           "checked_at": null,
           "source_ids": [
             "r1024-gemini-pricing",
-            "r1024-gemini-latest"
+            "r1024-gemini-deprecations"
           ],
-          "evidence": "evidence/gemini/2026-11-11-refresh.md",
+          "evidence": "evidence/gemini/2026-11-25-refresh.md",
           "notes": "本日仅有introductory价格及未来非促销价，未取得当前非促销标准价。"
         },
         "notes": "官方 Gemini 3.8 新特性及 3.7 发布公告明确 introductory pricing。当前输入/缓存读/输出为 0.75/0.075/3.75 USD 每百万 token，截至 2026-12-31；2027-01-01 生效的标准价 1.5/0.15/7.5 不提前应用。当前没有非促销标准价，usage_prices 为 unknown；3.7 API 当前自动路由 3.8，但各型号分别留证据。"
@@ -256,7 +256,7 @@
             "source_ids": [
               "r1024-gemini-flash38"
             ],
-            "evidence": "evidence/gemini/2026-11-11-refresh.md",
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
             "notes": "本型号窗口单独核对；只公布输入/输出上限时不合成总窗口。"
           },
           "notes": "型号页只公布输入上限1,048,576及输出上限65,536，未明确总上下文窗口；不相加也不拿最大输入冒充总窗口。"
@@ -350,13 +350,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:27:04.630915+00:00",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
+              "r1024-gemini-flash38",
               "r1024-gemini-thinking",
-              "r1111-thinking-generate",
               "r1024-gemini-openai"
             ],
-            "evidence": "evidence/gemini/2026-11-11-refresh.md",
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "已核对三档与默认medium；GenerateContent手动budget参数对本型号的适用边界未全部核实，保持partial。"
@@ -375,12 +375,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:01.959364+00:00",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
           "r1024-gemini-argon",
           "r1024-gemini-deprecations"
         ],
-        "evidence": "evidence/gemini/2026-11-11-refresh.md",
+        "evidence": "evidence/gemini/2026-11-25-refresh.md",
         "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
@@ -391,9 +391,9 @@
           "checked_at": null,
           "source_ids": [
             "r1024-gemini-pricing",
-            "r1024-gemini-latest"
+            "r1024-gemini-deprecations"
           ],
-          "evidence": "evidence/gemini/2026-11-11-refresh.md",
+          "evidence": "evidence/gemini/2026-11-25-refresh.md",
           "notes": "本日仅有introductory价格及未来非促销价，未取得当前非促销标准价。"
         },
         "notes": "官方 latest-model 明确当前为 introductory pricing，截至 2026-11-30 的输入/缓存读/输出为 2/0.1/10 USD 每百万 token；2026-12-01 才生效的 4/0.2/20 不提前应用。当前没有非促销标准价，usage_prices 为 unknown；不将 Standard 服务层名称误当作非促销价。"
@@ -436,11 +436,11 @@
           "reported_value": "1,048,576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:23:01.959364+00:00",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
               "r1024-gemini-argon"
             ],
-            "evidence": "evidence/gemini/2026-11-11-refresh.md",
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
             "notes": "本型号窗口单独核对；只公布输入/输出上限时不合成总窗口。"
           },
           "notes": "输入、思考、输出共用1,048,576总窗口。模型卡/Interactions默认同步输出65,536；GenerateContent单次流式上限65,536、非流式32,768；long decode经续接或后台模式使用剩余总窗口，不能视为普通请求单次输出上限。"
@@ -469,7 +469,7 @@
               "interface": "gemini_generate_content",
               "surface": "api_request",
               "can_disable": false,
-              "default_behavior": "adaptive",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -491,12 +491,13 @@
               "interface": "openai_chat",
               "surface": "api_request",
               "can_disable": false,
-              "default_behavior": "adaptive",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
                   "parameter": "reasoning_effort",
                   "values": [
+                    "minimal",
                     "low",
                     "medium",
                     "high"
@@ -513,7 +514,7 @@
               "interface": "gemini_interactions",
               "surface": "api_request",
               "can_disable": false,
-              "default_behavior": "adaptive",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -534,13 +535,13 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:27:04.630915+00:00",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
+              "r1024-gemini-argon",
               "r1024-gemini-thinking",
-              "r1111-thinking-generate",
               "r1024-gemini-openai"
             ],
-            "evidence": "evidence/gemini/2026-11-11-refresh.md",
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "low/medium/high三档，默认medium且不能关闭。Gemini4的thinkingBudget已废弃：单独传入映射为最接近thinkingLevel并告警，与thinkingLevel同传返回400；不是可独立使用的硬token预算。兼容层minimal映射low；其他未列控制保持partial。"
@@ -559,12 +560,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:24:09.490208+00:00",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
           "r1111-carbon",
           "r1024-gemini-deprecations"
         ],
-        "evidence": "evidence/gemini/2026-11-11-refresh.md",
+        "evidence": "evidence/gemini/2026-11-25-refresh.md",
         "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
       },
       "usage_prices": {
@@ -575,9 +576,9 @@
           "checked_at": null,
           "source_ids": [
             "r1024-gemini-pricing",
-            "r1111-carbon-generate"
+            "r1024-gemini-deprecations"
           ],
-          "evidence": "evidence/gemini/2026-11-11-refresh.md",
+          "evidence": "evidence/gemini/2026-11-25-refresh.md",
           "notes": "本日仅有introductory价格及未来非促销价，未取得当前非促销标准价。"
         },
         "notes": "本日仅有推出优惠：至2026-11-30为输入/缓存读/输出2/0.1/10美元每百万token；2026-12-01起4/0.2/20尚未生效。usage_prices保持unknown，不将Standard服务层名称当成非促销价。"
@@ -620,11 +621,11 @@
           "reported_value": "1,048,576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:24:09.490208+00:00",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
               "r1111-carbon"
             ],
-            "evidence": "evidence/gemini/2026-11-11-refresh.md",
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
             "notes": "本型号窗口单独核对；只公布输入/输出上限时不合成总窗口。"
           },
           "notes": "输入、思考、输出共用1,048,576总窗口。模型卡/Interactions默认同步输出65,536；GenerateContent单次流式上限65,536、非流式32,768；long decode经续接或后台模式使用剩余总窗口，不能视为普通请求单次输出上限。"
@@ -655,7 +656,7 @@
               "interface": "gemini_generate_content",
               "surface": "api_request",
               "can_disable": false,
-              "default_behavior": "adaptive",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -677,12 +678,13 @@
               "interface": "openai_chat",
               "surface": "api_request",
               "can_disable": false,
-              "default_behavior": "adaptive",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
                   "parameter": "reasoning_effort",
                   "values": [
+                    "minimal",
                     "low",
                     "medium",
                     "high"
@@ -699,7 +701,7 @@
               "interface": "gemini_interactions",
               "surface": "api_request",
               "can_disable": false,
-              "default_behavior": "adaptive",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -720,18 +722,490 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:27:04.630915+00:00",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
+              "r1111-carbon",
               "r1024-gemini-thinking",
-              "r1111-thinking-generate",
-              "r1024-gemini-openai",
-              "r1111-carbon-generate",
-              "r1111-carbon-interactions"
+              "r1024-gemini-openai"
             ],
-            "evidence": "evidence/gemini/2026-11-11-refresh.md",
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
             "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
           },
           "notes": "low/medium/high三档，默认medium且不能关闭。Gemini4的thinkingBudget已废弃：单独传入映射为最接近thinkingLevel并告警，与thinkingLevel同传返回400；不是可独立使用的硬token预算。兼容层minimal映射low；其他未列控制保持partial。"
+        }
+      }
+    },
+    {
+      "id": "gemini-4-neon",
+      "request_id": "gemini-4-neon",
+      "display_name": "Gemini 4 Neon",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:29:34Z",
+        "source_ids": [
+          "r1125-neon",
+          "r1024-gemini-changelog"
+        ],
+        "evidence": "evidence/gemini/2026-11-25-refresh.md",
+        "notes": "官方型号卡和发布公告确认精确 ID 与稳定状态。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "付费 Standard 在线档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.15",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "15",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:29:34Z",
+              "source_ids": [
+                "r1024-gemini-pricing",
+                "r1024-gemini-changelog"
+              ],
+              "evidence": "evidence/gemini/2026-11-25-refresh.md",
+              "notes": "当前官方价表，原币种标准在线费率。"
+            },
+            "notes": "Standard 在线付费档，输入/隐式缓存读/输出，输出单价含思考；独立收费的基础工具费用不计入模型 token 基准。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:29:34Z",
+          "source_ids": [
+            "r1024-gemini-pricing",
+            "r1024-gemini-changelog"
+          ],
+          "evidence": "evidence/gemini/2026-11-25-refresh.md",
+          "notes": "当前官方价表，原币种标准在线费率。"
+        },
+        "notes": "Standard 在线付费档，输入/隐式缓存读/输出，输出单价含思考；独立收费的基础工具费用不计入模型 token 基准。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1125-neon"
+          ],
+          "evidence": "evidence/gemini/2026-11-25-refresh.md",
+          "notes": "本按量产品使用公开按量价。"
+        },
+        "notes": "本按量产品使用公开按量价。"
+      },
+      "notes": "Google AI Studio 发布的 Gemini Developer API 稳定文本型号。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "file"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": true,
+        "interfaces": [
+          "gemini_generate_content",
+          "openai_chat",
+          "gemini_interactions"
+        ],
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1,048,576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "r1125-neon",
+              "r1125-long-decode",
+              "r1024-gemini-thinking"
+            ],
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
+            "notes": "输入、思考、输出共用1,048,576 token；普通单次同步上限65,536，后台或客户端续接长解码上限计入剩余总窗口。"
+          },
+          "notes": "输入、思考、输出共用1,048,576 token；普通单次同步上限65,536，后台或客户端续接长解码上限计入剩余总窗口。"
+        },
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "r1125-neon",
+              "r1125-neon-generate",
+              "r1125-neon-interactions",
+              "r1024-gemini-openai"
+            ],
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
+            "notes": "型号适用 GenerateContent、OpenAI Chat 兼容和 Interactions 直接 model 调用；当前官方资料未列 Responses / Messages。"
+          },
+          "notes": "型号适用 GenerateContent、OpenAI Chat 兼容和 Interactions 直接 model 调用；当前官方资料未列 Responses / Messages。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "gemini_generate_content",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "generationConfig.thinkingConfig.thinkingLevel",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "按本型号新特性 REST 示例与档位表。"
+                }
+              ],
+              "notes": "思考不可关闭；独立硬预算未见。"
+            },
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "兼容层 minimal 映射 low。"
+                }
+              ],
+              "notes": "兼容 Chat 的 reasoning_effort；未将兼容别名作为实际档位。"
+            },
+            {
+              "interface": "gemini_interactions",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "generation_config.thinking_level",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方指南列出本型号已知取值；未披露的界限见本字段说明。"
+                }
+              ],
+              "notes": "max_output_tokens 约束思考加输出总量；非独立思考预算。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "r1125-neon-generate",
+              "r1125-neon-interactions",
+              "r1024-gemini-openai",
+              "r1024-gemini-thinking"
+            ],
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
+            "notes": "本型号低、中、高、超高四档，默认 high 且不可关闭；未独立验证 GenerateContent 的旧预算兼容细节。"
+          },
+          "notes": "本型号低、中、高、超高四档，默认 high 且不可关闭；未独立验证 GenerateContent 的旧预算兼容细节。"
+        }
+      }
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "request_id": "gemini-4-hydrogen",
+      "display_name": "Gemini 4 Hydrogen",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:29:34Z",
+        "source_ids": [
+          "r1125-hydrogen",
+          "r1024-gemini-changelog"
+        ],
+        "evidence": "evidence/gemini/2026-11-25-refresh.md",
+        "notes": "官方型号卡和发布公告确认精确 ID 与稳定状态。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "付费 Standard 在线档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.075",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "7.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:29:34Z",
+              "source_ids": [
+                "r1024-gemini-pricing",
+                "r1024-gemini-changelog"
+              ],
+              "evidence": "evidence/gemini/2026-11-25-refresh.md",
+              "notes": "当前官方价表，原币种标准在线费率。"
+            },
+            "notes": "Standard 在线付费档，输入/隐式缓存读/输出，输出单价含思考；独立收费的基础工具费用不计入模型 token 基准。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:29:34Z",
+          "source_ids": [
+            "r1024-gemini-pricing",
+            "r1024-gemini-changelog"
+          ],
+          "evidence": "evidence/gemini/2026-11-25-refresh.md",
+          "notes": "当前官方价表，原币种标准在线费率。"
+        },
+        "notes": "Standard 在线付费档，输入/隐式缓存读/输出，输出单价含思考；独立收费的基础工具费用不计入模型 token 基准。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1125-hydrogen"
+          ],
+          "evidence": "evidence/gemini/2026-11-25-refresh.md",
+          "notes": "本按量产品使用公开按量价。"
+        },
+        "notes": "本按量产品使用公开按量价。"
+      },
+      "notes": "Google AI Studio 发布的 Gemini Developer API 稳定文本型号。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "audio",
+          "video",
+          "file"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": true,
+        "interfaces": [
+          "gemini_generate_content",
+          "openai_chat",
+          "gemini_interactions"
+        ],
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1,048,576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "r1125-hydrogen",
+              "r1125-long-decode",
+              "r1024-gemini-thinking"
+            ],
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
+            "notes": "输入、思考、输出共用1,048,576 token；普通单次同步上限65,536，后台或客户端续接长解码上限计入剩余总窗口。"
+          },
+          "notes": "输入、思考、输出共用1,048,576 token；普通单次同步上限65,536，后台或客户端续接长解码上限计入剩余总窗口。"
+        },
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "r1125-hydrogen",
+              "r1125-hydrogen-generate",
+              "r1125-hydrogen-interactions",
+              "r1024-gemini-openai"
+            ],
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
+            "notes": "型号适用 GenerateContent、OpenAI Chat 兼容和 Interactions 直接 model 调用；当前官方资料未列 Responses / Messages。"
+          },
+          "notes": "型号适用 GenerateContent、OpenAI Chat 兼容和 Interactions 直接 model 调用；当前官方资料未列 Responses / Messages。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "gemini_generate_content",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "generationConfig.thinkingConfig.thinkingLevel",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "按本型号新特性 REST 示例与档位表。"
+                }
+              ],
+              "notes": "思考不可关闭；独立硬预算未见。"
+            },
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "兼容层 minimal 映射 low。"
+                }
+              ],
+              "notes": "兼容 Chat 的 reasoning_effort；未将兼容别名作为实际档位。"
+            },
+            {
+              "interface": "gemini_interactions",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "generation_config.thinking_level",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方指南列出本型号已知取值；未披露的界限见本字段说明。"
+                }
+              ],
+              "notes": "max_output_tokens 约束思考加输出总量；非独立思考预算。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:29:34Z",
+            "source_ids": [
+              "r1125-hydrogen-generate",
+              "r1125-hydrogen-interactions",
+              "r1024-gemini-openai",
+              "r1024-gemini-thinking"
+            ],
+            "evidence": "evidence/gemini/2026-11-25-refresh.md",
+            "notes": "本型号低、中、高、超高四档，默认 high 且不可关闭；未独立验证 GenerateContent 的旧预算兼容细节。"
+          },
+          "notes": "本型号低、中、高、超高四档，默认 high 且不可关闭；未独立验证 GenerateContent 的旧预算兼容细节。"
         }
       }
     }

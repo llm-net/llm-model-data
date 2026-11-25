@@ -27,12 +27,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
+        "checked_at": "2026-11-25T10:30:52Z",
         "source_ids": [
+          "current-hy4-preview-eos",
           "catalog"
         ],
-        "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
+        "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+        "notes": "当前仍在下线前窗口。"
       },
       "usage_prices": {
         "status": "published",
@@ -105,7 +106,7 @@
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "TokenHub 广州产品当前清单与价格；不混入新加坡或原厂直供同名路径。",
+      "notes": "TokenHub 广州产品当前清单与价格；不混入新加坡或原厂直供同名路径。 腾讯云公告定于 2026-12-07 00:00（北京时间）停止本型号服务；届时开通新型号按量付费的符合条件用户自动切换 hy4。",
       "capabilities": {
         "input_modalities": [],
         "context_window_tokens": null,
@@ -883,227 +884,6 @@
       }
     },
     {
-      "id": "deepseek-v4-flash-0731",
-      "request_id": "deepseek-v4-flash-0731",
-      "display_name": "DeepSeek V4 Flash 0731（TokenHub）",
-      "modalities": [
-        "text"
-      ],
-      "availability": "active",
-      "alias_of": null,
-      "plan_ids": [],
-      "verification": {
-        "status": "verified",
-        "checked_at": "2026-10-23T22:04:23Z",
-        "source_ids": [
-          "catalog"
-        ],
-        "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-        "notes": "本轮逐项核对公开官方资料；未进行真实 Key 推理或付费测试。"
-      },
-      "usage_prices": {
-        "status": "published",
-        "rules": [
-          {
-            "id": "baseline",
-            "basis": "public_list",
-            "currency": "CNY",
-            "tax": "unknown",
-            "selection": "TokenHub 广州标准在线、常规短输入档；不混入新加坡价或原厂直供路径。 高峰为基准，空闲费率在同一规则中保存。",
-            "rates": [
-              {
-                "meter": "input_uncached_tokens",
-                "amount": "3",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "input_cached_tokens",
-                "amount": "0.1",
-                "per": 1000000,
-                "unit": "token"
-              },
-              {
-                "meter": "output_tokens",
-                "amount": "9",
-                "per": 1000000,
-                "unit": "token"
-              }
-            ],
-            "effective_from": "2026-09-26T00:00:00+08:00",
-            "effective_until": null,
-            "billing_period": null,
-            "charge_unit": null,
-            "reference_origin": null,
-            "verification": {
-              "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
-              "source_ids": [
-                "audit-prices"
-              ],
-              "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-            },
-            "notes": "以平台服务端接收请求的北京时间判定；工作日9–12、14–18高峰，其余与周末为空闲；处理及返回时间不影响选档。",
-            "time_basis": "request_started",
-            "charge_on": "unknown",
-            "time_pricing": {
-              "timezone": "Asia/Shanghai",
-              "bands": [
-                {
-                  "id": "peak",
-                  "label": "高峰时段",
-                  "hours": [
-                    "09:00-12:00",
-                    "14:00-18:00"
-                  ],
-                  "rates": [
-                    {
-                      "meter": "input_uncached_tokens",
-                      "amount": "3",
-                      "per": 1000000,
-                      "unit": "token"
-                    },
-                    {
-                      "meter": "input_cached_tokens",
-                      "amount": "0.1",
-                      "per": 1000000,
-                      "unit": "token"
-                    },
-                    {
-                      "meter": "output_tokens",
-                      "amount": "9",
-                      "per": 1000000,
-                      "unit": "token"
-                    }
-                  ],
-                  "days": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
-                  ]
-                },
-                {
-                  "id": "off_peak",
-                  "label": "其余时段",
-                  "rates": [
-                    {
-                      "meter": "input_uncached_tokens",
-                      "amount": "1.5",
-                      "per": 1000000,
-                      "unit": "token"
-                    },
-                    {
-                      "meter": "input_cached_tokens",
-                      "amount": "0.05",
-                      "per": 1000000,
-                      "unit": "token"
-                    },
-                    {
-                      "meter": "output_tokens",
-                      "amount": "4.5",
-                      "per": 1000000,
-                      "unit": "token"
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        ],
-        "verification": {
-          "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
-          "source_ids": [
-            "audit-prices"
-          ],
-          "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
-        },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
-      },
-      "reference_prices": {
-        "status": "not_applicable",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/hunyuan/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
-        },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
-      },
-      "notes": "TokenHub 广州产品当前清单与价格；不混入新加坡或原厂直供同名路径。",
-      "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
-        "max_output_tokens": null,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
-        "interfaces": [
-          "openai_chat",
-          "openai_responses",
-          "anthropic_messages"
-        ],
-        "interface_assessment": {
-          "coverage": "complete",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
-            "source_ids": [
-              "protocol-language"
-            ],
-            "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-            "notes": "协议面独立核对。"
-          },
-          "notes": "按 TokenHub 精确 model 参数行核对三面；MT2 Plus/Lite/Pro 明确仅 Chat。平台转换兼容面受对应工具与参数限制。"
-        },
-        "reasoning": {
-          "support": "supported",
-          "coverage": "partial",
-          "profiles": [
-            {
-              "interface": "openai_chat",
-              "surface": "api_request",
-              "can_disable": null,
-              "default_behavior": "unknown",
-              "controls": [],
-              "notes": "其他协议面控制、未列档位与预算仍待核实。"
-            }
-          ],
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
-            "source_ids": [
-              "catalog",
-              "audit-20261024-thinking"
-            ],
-            "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-            "notes": "当前 TokenHub 精确型号列表明确深度思考支持；控制页未覆盖此日期版 / V4.1 / M3.1 精确 ID，不移植旧短名或原厂参数。"
-          },
-          "notes": "当前 TokenHub 精确型号列表明确深度思考支持；控制页未覆盖此日期版 / V4.1 / M3.1 精确 ID，不移植旧短名或原厂参数。"
-        },
-        "context_assessment": {
-          "status": "partial",
-          "reported_value": "1M",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-10-23T22:04:23Z",
-            "source_ids": [
-              "context-hunyuan-list"
-            ],
-            "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-            "notes": "独立核对当前型号上下文标称规格。"
-          },
-          "notes": "本产品官方窗口仅公布 K/M 标称值，未确认精确整数及换算约定；不从最大输入或原厂继承。"
-        }
-      }
-    },
-    {
       "id": "glm-5-3",
       "request_id": "glm-5.3",
       "display_name": "GLM-5.3（TokenHub）",
@@ -1498,7 +1278,7 @@
             "basis": "public_list",
             "currency": "CNY",
             "tax": "unknown",
-            "selection": "TokenHub 广州标准在线、输入不超过512k的常规档；不混入长输入档或新加坡价。",
+            "selection": "TokenHub 广州标准在线、输入不超过512k的常规档；不混入长输入档或新加坡价。 当前短输入档上限 512,000 token。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -1526,26 +1306,28 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:04:23Z",
+              "checked_at": "2026-11-25T10:38:08Z",
               "source_ids": [
-                "audit-prices"
+                "audit-prices",
+                "current-tokenhub-tier-units"
               ],
-              "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-              "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
+              "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+              "notes": "公布的价格不变，重新核对阶梯。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 2026-11-24 00:00（北京时间）起计费阶梯按 1K=1000 token；不据此换算模型窗口。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:04:23Z",
+          "checked_at": "2026-11-25T10:38:08Z",
           "source_ids": [
-            "audit-prices"
+            "audit-prices",
+            "current-tokenhub-tier-units"
           ],
-          "evidence": "evidence/hunyuan/2026-10-24-audit.md",
-          "notes": "核对当前官方非促销估价基准；金额按原币种十进制保存。"
+          "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+          "notes": "公布的价格不变，重新核对阶梯。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -3065,6 +2847,555 @@
             "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
           },
           "notes": "两页均为标称规格，未确认K/M整数边界；最大输入960k、输出64k仅原文保留，不换算。"
+        }
+      }
+    },
+    {
+      "id": "hy4-flash",
+      "request_id": "hy4-flash",
+      "display_name": "混元 Hy4 flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:30:52Z",
+        "source_ids": [
+          "catalog",
+          "current-tokenhub-updates"
+        ],
+        "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "广州 TokenHub 标准在线刊例价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.02",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:30:52Z",
+              "source_ids": [
+                "current-tokenhub-product",
+                "audit-prices"
+              ],
+              "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "限时五折与账号新人额度单独适用；保存标准目录价。 材料给半价结束时间为 2026-11-30 12:00（北京时间）。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:30:52Z",
+          "source_ids": [
+            "current-tokenhub-product",
+            "audit-prices"
+          ],
+          "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
+        },
+        "notes": "限时五折与账号新人额度单独适用；保存标准目录价。 材料给半价结束时间为 2026-11-30 12:00（北京时间）。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/hunyuan/2026-11-11-refresh.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "广州 TokenHub 按量模型；官方产品动态记载 2026-11-16 上线。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:52Z",
+            "source_ids": [
+              "protocol-hy",
+              "protocol-language"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
+          },
+          "notes": "混元调用指南逐名列出三种文本协议。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "enabled",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "enabled",
+                  "notes": "采用本产品官方开关与默认值。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "high",
+                    "no_think"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "no_think 关闭思考。"
+                }
+              ],
+              "notes": "仅记录当前产品文档明确的请求参数；其余控制待核。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:52Z",
+            "source_ids": [
+              "audit-20261024-thinking"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "本型号 Chat 开关与档位已核；其他协议的参数映射与预算待核。"
+          },
+          "notes": "本型号 Chat 开关与档位已核；其他协议的参数映射与预算待核。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M（模型列表），1024k（混元调用指南）",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:52Z",
+            "source_ids": [
+              "catalog",
+              "protocol-hy"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "官方同产品仅给缩写，最大输入 960k、最大输出 64k。"
+          },
+          "notes": "官方同产品仅给缩写，最大输入 960k、最大输出 64k。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k3-1-pro",
+      "request_id": "kimi-k3.1-pro",
+      "display_name": "Kimi K3.1 Pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:38:08Z",
+        "source_ids": [
+          "current-tokenhub-updates",
+          "current-kimi-products"
+        ],
+        "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "广州标准在线、5 分钟显式缓存写入基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "13",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "68",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "13",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:38:08Z",
+              "source_ids": [
+                "audit-prices",
+                "current-kimi-products"
+              ],
+              "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "1 小时缓存写入是替代档，不叠加。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:38:08Z",
+          "source_ids": [
+            "audit-prices",
+            "current-kimi-products"
+          ],
+          "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
+        },
+        "notes": "1 小时缓存写入是替代档，不叠加。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/hunyuan/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "目录维护一组按量现金基准。"
+      },
+      "notes": "TokenHub 2026-10-24 上架，请求名为本服务公开的独立型号；广州地域。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:38:08Z",
+            "source_ids": [
+              "current-kimi-products"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
+          },
+          "notes": "Kimi API 指南确认精确型号的 Chat；其余文本协议暂未查到足够的独立型号证据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "逐型号使用顶层字段。"
+                }
+              ],
+              "notes": "官方给出默认档；关闭和预算适用性另核。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:38:08Z",
+            "source_ids": [
+              "current-kimi-products"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "保留官方档位与默认值，思考关闭、预算和其他面未确认。"
+          },
+          "notes": "保留官方档位与默认值，思考关闭、预算和其他面未确认。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:38:08Z",
+            "source_ids": [
+              "current-kimi-products"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "TokenHub 精确行只标 1M，未公开窗口精确整数；计价阶梯 K 调整不用于换算窗口。"
+          },
+          "notes": "TokenHub 精确行只标 1M，未公开窗口精确整数；计价阶梯 K 调整不用于换算窗口。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k3-1-pro-highspeed",
+      "request_id": "kimi-k3.1-pro-highspeed",
+      "display_name": "Kimi K3.1 Pro HighSpeed",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:38:08Z",
+        "source_ids": [
+          "current-tokenhub-updates",
+          "current-kimi-products"
+        ],
+        "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "广州标准在线、5 分钟显式缓存写入基准。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "26",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "136",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "26",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:38:08Z",
+              "source_ids": [
+                "audit-prices",
+                "current-kimi-products"
+              ],
+              "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "1 小时缓存写入是替代档，不叠加。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:38:08Z",
+          "source_ids": [
+            "audit-prices",
+            "current-kimi-products"
+          ],
+          "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
+        },
+        "notes": "1 小时缓存写入是替代档，不叠加。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/hunyuan/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "目录维护一组按量现金基准。"
+      },
+      "notes": "TokenHub 2026-10-24 上架，请求名为本服务公开的独立型号；广州地域。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:38:08Z",
+            "source_ids": [
+              "current-kimi-products"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
+          },
+          "notes": "Kimi API 指南确认精确型号的 Chat；其余文本协议暂未查到足够的独立型号证据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "逐型号使用顶层字段。"
+                }
+              ],
+              "notes": "官方给出默认档；关闭和预算适用性另核。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:38:08Z",
+            "source_ids": [
+              "current-kimi-products"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "保留官方档位与默认值，思考关闭、预算和其他面未确认。"
+          },
+          "notes": "保留官方档位与默认值，思考关闭、预算和其他面未确认。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "1M",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:38:08Z",
+            "source_ids": [
+              "current-kimi-products"
+            ],
+            "evidence": "evidence/hunyuan/2026-11-25-refresh.md",
+            "notes": "TokenHub 精确行只标 1M，未公开窗口精确整数；计价阶梯 K 调整不用于换算窗口。"
+          },
+          "notes": "TokenHub 精确行只标 1M，未公开窗口精确整数；计价阶梯 K 调整不用于换算窗口。"
         }
       }
     }

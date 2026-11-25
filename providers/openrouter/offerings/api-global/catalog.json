@@ -7,11 +7,15 @@
   "market": "global",
   "coverage": "partial",
   "verification": {
-    "status": "needs_review",
-    "checked_at": null,
-    "source_ids": [],
-    "evidence": "evidence/openrouter/2026-09-16-audit.md",
-    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+    "status": "verified",
+    "checked_at": "2026-11-25T10:26:25.280664+00:00",
+    "source_ids": [
+      "pricing",
+      "r1024-openrouter-reasoning",
+      "protocol-messages"
+    ],
+    "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+    "notes": "完整核对目录内五条精确请求 ID，补 Messages 思考控制，保留现有收录范围。"
   },
   "plans": [],
   "models": [
@@ -27,12 +31,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:53.255657+00:00",
+        "checked_at": "2026-11-25T10:26:25.280664+00:00",
         "source_ids": [
           "pricing"
         ],
-        "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-        "notes": "逐项核对精确请求 ID 的本平台模型目录；未实调。"
+        "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+        "notes": "当前官方匿名清单按精确请求 ID 核对模型身份。"
       },
       "usage_prices": {
         "status": "published",
@@ -76,12 +80,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:53.255657+00:00",
+              "checked_at": "2026-11-25T10:26:25.280664+00:00",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-              "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+              "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+              "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
             },
             "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
             "time_basis": "unknown",
@@ -90,12 +94,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:53.255657+00:00",
+          "checked_at": "2026-11-25T10:26:25.280664+00:00",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-          "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+          "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+          "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
         },
         "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
       },
@@ -134,15 +138,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.259400+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
               "protocol-chat",
               "protocol-responses",
               "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "模型级 endpoints 明确列出 Chat、Responses、Messages，逐条核对相应官方入口。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "型号级 endpoints 和对应三份接入文档均确认 Chat / Responses / Messages。"
           },
           "notes": "本轮精确型号接口列表确认三种文本兼容面；这是平台公开支持声明，未作真实 Key 推理。Responses 是无状态接口，不能使用 store=true 或 previous_response_id。"
         },
@@ -172,7 +176,7 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
             },
             {
               "interface": "openai_responses",
@@ -196,32 +200,68 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "max",
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "取本型号 supported_efforts 与 Messages 请求枚举的交集；省略 thinking.type 时是否启用见模型默认行为。"
+                },
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "adaptive 由模型按档位推理。disabled 仅用于该精确型号元数据确认可关闭时。参数省略值未公开。"
+                }
+              ],
+              "notes": "OpenRouter 明确将该协议的 output_config.effort 与 thinking.type 映射为统一推理参数。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.260284+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
-              "r1024-openrouter-reasoning"
+              "r1024-openrouter-reasoning",
+              "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型 reasoning 元数据与 Reasoning Tokens 文档独立核对；文档明确 effort/enabled/max_tokens 在 Chat 与 Responses 相同。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "按精确型号元数据交叉核对三协议及 Messages OpenAPI 的档位枚举。"
           },
-          "notes": "Chat 与 Responses 的 reasoning.effort 已独立核对；Messages 的控制映射仍未知，覆盖 partial。本型号 mandatory=true，不可关闭且思考启用；档位按本模型 default_effort 保存，不从其他型号继承。"
+          "notes": "三个协议面均已核对档位与可公开确认的开关。各模型 thinking.budget_tokens 精确范围未获证实，保留 partial。可关闭型号缺 default_enabled 时，medium 只作为思考开启时的默认档位。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.255657+00:00",
+            "checked_at": "2026-11-25T10:26:25.280664+00:00",
             "source_ids": [
               "pricing"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型行 context_length 为整数 token；输出上限独立保存。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "核对精确模型行整数 context_length 和独立 top_provider.max_completion_tokens。"
           },
           "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
         }
@@ -239,12 +279,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:53.255657+00:00",
+        "checked_at": "2026-11-25T10:26:25.280664+00:00",
         "source_ids": [
           "pricing"
         ],
-        "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-        "notes": "逐项核对精确请求 ID 的本平台模型目录；未实调。"
+        "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+        "notes": "当前官方匿名清单按精确请求 ID 核对模型身份。"
       },
       "usage_prices": {
         "status": "published",
@@ -288,12 +328,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:53.255657+00:00",
+              "checked_at": "2026-11-25T10:26:25.280664+00:00",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-              "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+              "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+              "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
             },
             "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
             "time_basis": "unknown",
@@ -302,12 +342,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:53.255657+00:00",
+          "checked_at": "2026-11-25T10:26:25.280664+00:00",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-          "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+          "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+          "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
         },
         "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
       },
@@ -347,12 +387,12 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.255657+00:00",
+            "checked_at": "2026-11-25T10:26:25.280664+00:00",
             "source_ids": [
               "pricing"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型行 context_length 为整数 token；输出上限独立保存。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "核对精确模型行整数 context_length 和独立 top_provider.max_completion_tokens。"
           },
           "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
         },
@@ -360,15 +400,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.259400+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
               "protocol-chat",
               "protocol-responses",
               "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "模型级 endpoints 明确列出 Chat、Responses、Messages，逐条核对相应官方入口。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "型号级 endpoints 和对应三份接入文档均确认 Chat / Responses / Messages。"
           },
           "notes": "本轮精确型号接口列表确认三种文本兼容面；这是平台公开支持声明，未作真实 Key 推理。Responses 是无状态接口，不能使用 store=true 或 previous_response_id。"
         },
@@ -398,7 +438,7 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
             },
             {
               "interface": "openai_responses",
@@ -422,20 +462,56 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "max",
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "取本型号 supported_efforts 与 Messages 请求枚举的交集；省略 thinking.type 时是否启用见模型默认行为。"
+                },
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "adaptive 由模型按档位推理。disabled 仅用于该精确型号元数据确认可关闭时。参数省略值未公开。"
+                }
+              ],
+              "notes": "OpenRouter 明确将该协议的 output_config.effort 与 thinking.type 映射为统一推理参数。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.260284+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
-              "r1024-openrouter-reasoning"
+              "r1024-openrouter-reasoning",
+              "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型 reasoning 元数据与 Reasoning Tokens 文档独立核对；文档明确 effort/enabled/max_tokens 在 Chat 与 Responses 相同。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "按精确型号元数据交叉核对三协议及 Messages OpenAPI 的档位枚举。"
           },
-          "notes": "Chat 与 Responses 的 reasoning.effort 已独立核对；Messages 的控制映射仍未知，覆盖 partial。本型号 mandatory=true，不可关闭且思考启用；档位按本模型 default_effort 保存，不从其他型号继承。"
+          "notes": "三个协议面均已核对档位与可公开确认的开关。各模型 thinking.budget_tokens 精确范围未获证实，保留 partial。可关闭型号缺 default_enabled 时，medium 只作为思考开启时的默认档位。"
         }
       }
     },
@@ -451,12 +527,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:53.255657+00:00",
+        "checked_at": "2026-11-25T10:26:25.280664+00:00",
         "source_ids": [
           "pricing"
         ],
-        "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-        "notes": "逐项核对精确请求 ID 的本平台模型目录；未实调。"
+        "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+        "notes": "当前官方匿名清单按精确请求 ID 核对模型身份。"
       },
       "usage_prices": {
         "status": "published",
@@ -500,12 +576,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:53.255657+00:00",
+              "checked_at": "2026-11-25T10:26:25.280664+00:00",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-              "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+              "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+              "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
             },
             "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
             "time_basis": "unknown",
@@ -514,12 +590,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:53.255657+00:00",
+          "checked_at": "2026-11-25T10:26:25.280664+00:00",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-          "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+          "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+          "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
         },
         "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
       },
@@ -559,12 +635,12 @@
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.255657+00:00",
+            "checked_at": "2026-11-25T10:26:25.280664+00:00",
             "source_ids": [
               "pricing"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型行 context_length 为整数 token；输出上限独立保存。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "核对精确模型行整数 context_length 和独立 top_provider.max_completion_tokens。"
           },
           "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
         },
@@ -572,15 +648,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.259400+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
               "protocol-chat",
               "protocol-responses",
               "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "模型级 endpoints 明确列出 Chat、Responses、Messages，逐条核对相应官方入口。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "型号级 endpoints 和对应三份接入文档均确认 Chat / Responses / Messages。"
           },
           "notes": "本轮精确型号接口列表确认三种文本兼容面；这是平台公开支持声明，未作真实 Key 推理。Responses 是无状态接口，不能使用 store=true 或 previous_response_id。"
         },
@@ -611,7 +687,7 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
             },
             {
               "interface": "openai_responses",
@@ -636,20 +712,57 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "max",
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "取本型号 supported_efforts 与 Messages 请求枚举的交集；省略 thinking.type 时是否启用见模型默认行为。"
+                },
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive",
+                    "disabled"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "adaptive 由模型按档位推理。disabled 仅用于该精确型号元数据确认可关闭时。参数省略值未公开。"
+                }
+              ],
+              "notes": "OpenRouter 明确将该协议的 output_config.effort 与 thinking.type 映射为统一推理参数。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.260284+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
-              "r1024-openrouter-reasoning"
+              "r1024-openrouter-reasoning",
+              "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型 reasoning 元数据与 Reasoning Tokens 文档独立核对；文档明确 effort/enabled/max_tokens 在 Chat 与 Responses 相同。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "按精确型号元数据交叉核对三协议及 Messages OpenAPI 的档位枚举。"
           },
-          "notes": "Chat 与 Responses 的 reasoning.effort 已独立核对；Messages 的控制映射仍未知，覆盖 partial。本型号 mandatory=false 且有 none 档，可关闭；未提供 default_enabled，省略参数时是否启用保持 unknown，default_effort=medium 仅是启用思考时的默认/预选档。"
+          "notes": "三个协议面均已核对档位与可公开确认的开关。各模型 thinking.budget_tokens 精确范围未获证实，保留 partial。可关闭型号缺 default_enabled 时，medium 只作为思考开启时的默认档位。"
         }
       }
     },
@@ -665,12 +778,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:53.255657+00:00",
+        "checked_at": "2026-11-25T10:26:25.280664+00:00",
         "source_ids": [
           "pricing"
         ],
-        "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-        "notes": "逐项核对精确请求 ID 的本平台模型目录；未实调。"
+        "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+        "notes": "当前官方匿名清单按精确请求 ID 核对模型身份。"
       },
       "usage_prices": {
         "status": "published",
@@ -714,12 +827,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:53.255657+00:00",
+              "checked_at": "2026-11-25T10:26:25.280664+00:00",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-              "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+              "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+              "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
             },
             "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
             "time_basis": "unknown",
@@ -728,12 +841,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:53.255657+00:00",
+          "checked_at": "2026-11-25T10:26:25.280664+00:00",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-          "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+          "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+          "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
         },
         "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
       },
@@ -773,12 +886,12 @@
           "reported_value": "1050000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.255657+00:00",
+            "checked_at": "2026-11-25T10:26:25.280664+00:00",
             "source_ids": [
               "pricing"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型行 context_length 为整数 token；输出上限独立保存。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "核对精确模型行整数 context_length 和独立 top_provider.max_completion_tokens。"
           },
           "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
         },
@@ -786,15 +899,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.259400+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
               "protocol-chat",
               "protocol-responses",
               "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "模型级 endpoints 明确列出 Chat、Responses、Messages，逐条核对相应官方入口。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "型号级 endpoints 和对应三份接入文档均确认 Chat / Responses / Messages。"
           },
           "notes": "本轮精确型号接口列表确认三种文本兼容面；这是平台公开支持声明，未作真实 Key 推理。Responses 是无状态接口，不能使用 store=true 或 previous_response_id。"
         },
@@ -824,7 +937,7 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
             },
             {
               "interface": "openai_responses",
@@ -848,20 +961,56 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "max",
+                    "xhigh",
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "取本型号 supported_efforts 与 Messages 请求枚举的交集；省略 thinking.type 时是否启用见模型默认行为。"
+                },
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "adaptive 由模型按档位推理。disabled 仅用于该精确型号元数据确认可关闭时。参数省略值未公开。"
+                }
+              ],
+              "notes": "OpenRouter 明确将该协议的 output_config.effort 与 thinking.type 映射为统一推理参数。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.260284+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
-              "r1024-openrouter-reasoning"
+              "r1024-openrouter-reasoning",
+              "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型 reasoning 元数据与 Reasoning Tokens 文档独立核对；文档明确 effort/enabled/max_tokens 在 Chat 与 Responses 相同。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "按精确型号元数据交叉核对三协议及 Messages OpenAPI 的档位枚举。"
           },
-          "notes": "Chat 与 Responses 的 reasoning.effort 已独立核对；Messages 的控制映射仍未知，覆盖 partial。本型号 mandatory=true，不可关闭且思考启用；档位按本模型 default_effort 保存，不从其他型号继承。"
+          "notes": "三个协议面均已核对档位与可公开确认的开关。各模型 thinking.budget_tokens 精确范围未获证实，保留 partial。可关闭型号缺 default_enabled 时，medium 只作为思考开启时的默认档位。"
         }
       }
     },
@@ -877,12 +1026,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:53.255657+00:00",
+        "checked_at": "2026-11-25T10:26:25.280664+00:00",
         "source_ids": [
           "pricing"
         ],
-        "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-        "notes": "逐项核对精确请求 ID 的本平台模型目录；未实调。"
+        "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+        "notes": "当前官方匿名清单按精确请求 ID 核对模型身份。"
       },
       "usage_prices": {
         "status": "published",
@@ -926,12 +1075,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:53.255657+00:00",
+              "checked_at": "2026-11-25T10:26:25.280664+00:00",
               "source_ids": [
                 "pricing"
               ],
-              "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-              "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+              "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+              "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
             },
             "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。",
             "time_basis": "unknown",
@@ -940,12 +1089,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:53.255657+00:00",
+          "checked_at": "2026-11-25T10:26:25.280664+00:00",
           "source_ids": [
             "pricing"
           ],
-          "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-          "notes": "按精确 ID 的模型级 pricing 用 Decimal 换算每百万 token；未采用原厂或端点报价。"
+          "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+          "notes": "逐分量以 Decimal 核对模型级标准档，继续保存一个短上下文基准。"
         },
         "notes": "模型级pricing当前基础档，使用Decimal将每token价乘1,000,000。缓存写入input_cache_write未给TTL，使用无TTL通用分量；不猜5m/30m，不并列input_cache_write_1h。长上下文overrides、工具费与多模态其他单位不展开；不表示所有路由账单精确一致。"
       },
@@ -987,12 +1136,12 @@
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.255657+00:00",
+            "checked_at": "2026-11-25T10:26:25.280664+00:00",
             "source_ids": [
               "pricing"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型行 context_length 为整数 token；输出上限独立保存。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "核对精确模型行整数 context_length 和独立 top_provider.max_completion_tokens。"
           },
           "notes": "本平台模型级context_length整数；top_provider输出上限单列，不套原厂窗口。"
         },
@@ -1000,15 +1149,15 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.259400+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
               "protocol-chat",
               "protocol-responses",
               "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "模型级 endpoints 明确列出 Chat、Responses、Messages，逐条核对相应官方入口。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "型号级 endpoints 和对应三份接入文档均确认 Chat / Responses / Messages。"
           },
           "notes": "本轮精确型号接口列表确认三种文本兼容面；这是平台公开支持声明，未作真实 Key 推理。Responses 是无状态接口，不能使用 store=true 或 previous_response_id。"
         },
@@ -1036,7 +1185,7 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
             },
             {
               "interface": "openai_responses",
@@ -1058,20 +1207,54 @@
                   "notes": "本模型 supported_efforts 与 default_effort 原样保存；字段映射见本平台 Reasoning Tokens。"
                 }
               ],
-              "notes": "仅覆盖官方声明等价的 Chat/Responses 思考设置；Messages 映射待核。"
+              "notes": "模型级思考档位；Messages 的字段、档位和开关另列。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "high",
+                    "medium",
+                    "low"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "medium",
+                  "notes": "取本型号 supported_efforts 与 Messages 请求枚举的交集；省略 thinking.type 时是否启用见模型默认行为。"
+                },
+                {
+                  "kind": "mode",
+                  "parameter": "thinking.type",
+                  "values": [
+                    "adaptive"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "adaptive 由模型按档位推理。disabled 仅用于该精确型号元数据确认可关闭时。参数省略值未公开。"
+                }
+              ],
+              "notes": "OpenRouter 明确将该协议的 output_config.effort 与 thinking.type 映射为统一推理参数。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:53.260284+00:00",
+            "checked_at": "2026-11-25T10:28Z",
             "source_ids": [
               "pricing",
-              "r1024-openrouter-reasoning"
+              "r1024-openrouter-reasoning",
+              "protocol-messages"
             ],
-            "evidence": "evidence/openrouter/2026-11-11-refresh.md",
-            "notes": "精确模型 reasoning 元数据与 Reasoning Tokens 文档独立核对；文档明确 effort/enabled/max_tokens 在 Chat 与 Responses 相同。"
+            "evidence": "evidence/openrouter/2026-11-25-refresh.md",
+            "notes": "按精确型号元数据交叉核对三协议及 Messages OpenAPI 的档位枚举。"
           },
-          "notes": "Chat 与 Responses 的 reasoning.effort 已独立核对；Messages 的控制映射仍未知，覆盖 partial。本型号 mandatory=true，不可关闭且思考启用；档位按本模型 default_effort 保存，不从其他型号继承。"
+          "notes": "三个协议面均已核对档位与可公开确认的开关。各模型 thinking.budget_tokens 精确范围未获证实，保留 partial。可关闭型号缺 default_enabled 时，medium 只作为思考开启时的默认档位。"
         }
       }
     }

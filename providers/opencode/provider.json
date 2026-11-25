@@ -320,6 +320,66 @@
       "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
       "purpose": "pricing",
       "notes": "本轮独立核对开发方华北2（北京）标准按量价、缓存读取分量；不继承产品能力。"
+    },
+    {
+      "id": "r1125-qwen4-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen4-max",
+      "purpose": "pricing",
+      "notes": "原厂国内按量与缓存条件；独立参考，见本轮证据。"
+    },
+    {
+      "id": "r1125-qwen4-cache",
+      "url": "https://help.aliyun.com/zh/model-studio/explicit-cache-qwen4",
+      "purpose": "pricing",
+      "notes": "原厂国内按量与缓存条件；独立参考，见本轮证据。"
+    },
+    {
+      "id": "r1125-qwen-cache",
+      "url": "https://help.aliyun.com/zh/model-studio/context-cache",
+      "purpose": "pricing",
+      "notes": "原厂国内按量与缓存条件；独立参考，见本轮证据。"
+    },
+    {
+      "id": "r1125-qwen-pricing-main",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "purpose": "pricing",
+      "notes": "北京 qwen4-max 在线标价、缓存命中与 5 分钟 / 1 小时创建。"
+    },
+    {
+      "id": "r1125-qwen4-cache-exact",
+      "url": "https://platform.qianwenai.com/docs/developer-guides/run-and-scale/explicit-cache-qwen4",
+      "purpose": "pricing",
+      "notes": "本轮官方来源复核，适用范围见证据。"
+    },
+    {
+      "id": "r1125-beam-origin-model",
+      "url": "https://developers.reflection.ai/models.md",
+      "purpose": "models",
+      "notes": "本轮官方来源复核，适用范围见证据。"
+    },
+    {
+      "id": "r1125-beam-origin-platform",
+      "url": "https://platform.reflection.ai/",
+      "purpose": "discovery",
+      "notes": "本轮官方来源复核，适用范围见证据。"
+    },
+    {
+      "id": "r1125-minimax-retirement",
+      "url": "https://platform.minimax.cn/docs/faq/models.md",
+      "purpose": "models",
+      "notes": "本轮官方来源复核，适用范围见证据。"
+    },
+    {
+      "id": "r1125-minimax-paygo",
+      "url": "https://platform.minimax.cn/docs/guides/pricing-paygo",
+      "purpose": "pricing",
+      "notes": "本轮官方来源复核，适用范围见证据。"
+    },
+    {
+      "id": "r1125-kimi-origin",
+      "url": "https://platform.kimi.com/",
+      "purpose": "pricing",
+      "notes": "本轮官方来源复核，适用范围见证据。"
     }
   ],
   "notes": "OpenCode Go 包月套餐资料；参考价按用户指定取各模型源头厂商官网按量价，不采用 Go 用量上限换算表或 Zen 余额价。"

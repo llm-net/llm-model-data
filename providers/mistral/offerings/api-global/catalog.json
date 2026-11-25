@@ -7,137 +7,40 @@
   "market": "global",
   "coverage": "partial",
   "verification": {
-    "status": "needs_review",
-    "checked_at": null,
-    "source_ids": [],
-    "evidence": "evidence/mistral/2026-09-16-audit.md",
-    "notes": "逐项核对见模型、价格、套餐；不以产品级标记代替子项核对。"
+    "status": "verified",
+    "checked_at": "2026-11-25T10:28:27.465461+00:00",
+    "source_ids": [
+      "nov25-compare",
+      "nov25-models",
+      "r1024-mistral-pricing",
+      "nov25-reasoning"
+    ],
+    "evidence": "evidence/mistral/2026-11-25-refresh.md",
+    "notes": "核对原四条记录的请求身份，保留弃用 Large 3 的固定请求 ID，并新增三条按量通用文本模型。"
   },
   "plans": [],
   "models": [
     {
       "id": "mistral-large-latest",
       "request_id": "mistral-large-latest",
-      "display_name": "mistral-large-latest",
+      "display_name": "Mistral Large 4（latest）",
       "modalities": [
         "text"
       ],
       "availability": "active",
-      "alias_of": null,
+      "alias_of": "mistral-large-4-0",
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:25:53.269911+00:00",
+        "checked_at": "2026-11-25T10:28:27.465461+00:00",
         "source_ids": [
-          "r1024-mistral-large3",
-          "r1111-lifecycle"
+          "nov25-compare",
+          "nov25-models",
+          "r1024-mistral-pricing",
+          "nov25-mistral-large-4"
         ],
-        "evidence": "evidence/mistral/2026-11-11-refresh.md",
-        "notes": "精确型号页面（含页面 names 数据的别名）与生命周期定义独立核对；Deprecated 不等于 Retired。"
-      },
-      "usage_prices": {
-        "status": "unknown",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [
-            "r1024-mistral-pricing",
-            "r1024-mistral-large3"
-          ],
-          "evidence": "evidence/mistral/2026-11-11-refresh.md",
-          "notes": "官网标 Deprecated，弃用日期 2026-10-31；生命周期说明弃用期仍可访问，未取得 Retired 结论。当前官方价表及型号页均不再给本型号现行价格，旧价留 Git；不套替代的 Large 4 价格。"
-        },
-        "notes": "官网标 Deprecated，弃用日期 2026-10-31；生命周期说明弃用期仍可访问，未取得 Retired 结论。当前官方价表及型号页均不再给本型号现行价格，旧价留 Git；不套替代的 Large 4 价格。"
-      },
-      "reference_prices": {
-        "status": "not_applicable",
-        "rules": [],
-        "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/mistral/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
-        },
-        "notes": "已有唯一用量估算基准，不另设第二套价格。"
-      },
-      "notes": "官网标 Deprecated，弃用日期 2026-10-31；生命周期说明弃用期仍可访问，未取得 Retired 结论。当前官方价表及型号页均不再给本型号现行价格，旧价留 Git；不套替代的 Large 4 价格。 页面 names 仍列 mistral-large-latest 与 mistral-large-2512，未把该别名推定为 Large 4。",
-      "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
-        "max_output_tokens": null,
-        "tool_calling": null,
-        "structured_output": null,
-        "streaming": null,
-        "interfaces": [
-          "openai_chat"
-        ],
-        "interface_assessment": {
-          "coverage": "partial",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.356331+00:00",
-            "source_ids": [
-              "r1024-mistral-large3",
-              "r1024-mistral-chat"
-            ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "型号功能表仍登记 Chat Completions；当前直接 Responses 面另按型号核对。"
-          },
-          "notes": "保留型号页直接 Chat 面。该型号已弃用，当前 Responses 文档没有该精确型号示例或支持矩阵，不从 Large 4 推导；没有 Messages 证据。"
-        },
-        "reasoning": {
-          "support": "unknown",
-          "coverage": "unknown",
-          "profiles": [],
-          "verification": {
-            "status": "needs_review",
-            "checked_at": null,
-            "source_ids": [
-              "r1024-mistral-reasoning",
-              "r1024-mistral-large3"
-            ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "当前支持表仍未给 Large 3 独立可调思考证据，不继承 Large 4。"
-          },
-          "notes": "官方可调思考表没有精确列mistral-large-latest/Large3；不从Large4或Small4继承。"
-        },
-        "context_assessment": {
-          "status": "partial",
-          "reported_value": "256k",
-          "verification": {
-            "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.356331+00:00",
-            "source_ids": [
-              "r1024-mistral-large3"
-            ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "型号页仅公布 256k 或 1M 标称窗口，未取得单位换算依据；继续 partial，不猜整数。"
-          },
-          "notes": "官方只给256k标称，未核实精确整数单位，不猜乘1000或1024。"
-        }
-      }
-    },
-    {
-      "id": "mistral-small-latest",
-      "request_id": "mistral-small-latest",
-      "display_name": "mistral-small-latest",
-      "modalities": [
-        "text"
-      ],
-      "availability": "active",
-      "alias_of": null,
-      "plan_ids": [],
-      "verification": {
-        "status": "verified",
-        "checked_at": "2026-11-11T11:25:53.269911+00:00",
-        "source_ids": [
-          "r1024-mistral-small4",
-          "r1111-lifecycle"
-        ],
-        "evidence": "evidence/mistral/2026-11-11-refresh.md",
-        "notes": "精确型号页面（含页面 names 数据的别名）与生命周期定义独立核对；Deprecated 不等于 Retired。"
+        "evidence": "evidence/mistral/2026-11-25-refresh.md",
+        "notes": "按本产品 modelIds 核对请求身份及生命周期。"
       },
       "usage_prices": {
         "status": "published",
@@ -147,17 +50,220 @@
             "basis": "public_list",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价；统一用于本模型初步估算。",
+            "selection": "本平台全球 Standard 在线美元价，每百万 token。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
-                "amount": "0.15",
+                "amount": "0.7",
                 "per": 1000000,
                 "unit": "token"
               },
               {
                 "meter": "input_cached_tokens",
-                "amount": "0.015",
+                "amount": "0.07",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2.1",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:28:27.465461+00:00",
+              "source_ids": [
+                "r1024-mistral-pricing",
+                "nov25-mistral-large-4"
+              ],
+              "evidence": "evidence/mistral/2026-11-25-refresh.md",
+              "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+            },
+            "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-mistral-large-4"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+        },
+        "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-mistral-large-4"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "按量产品只维护公开用量价格。"
+        },
+        "notes": "已有唯一用量价，不另设参考价。"
+      },
+      "notes": "官方比较页与价表机读 modelIds 把此滚动请求 ID 列在 Mistral Large 4；固定请求 ID 为 mistral-large-4-0。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses"
+        ],
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000 tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-mistral-large-4"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "直接核对官方价目页面机读整数 contextWindow 和单列 maxOutputTokens。"
+          },
+          "notes": "公开页面机读字段为整数 token。最大输出仅填机读字段明确给出的整数。"
+        },
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-mistral-large-4",
+              "nov25-compare",
+              "r1111-responses"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号的 Features 与直接 Responses 文档共同核对。"
+          },
+          "notes": "Large 4 官方例示直接 Responses 与 Chat。未获 Messages 支持证据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "官方明确 Chat 省略 reasoning_effort 时使用 high。"
+                }
+              ],
+              "notes": "模型始终思考，最低档仍有思考输出。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": false,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "Responses 示例显式传 high，未单独确认省略 reasoning.effort 时选哪一档。"
+                }
+              ],
+              "notes": "模型始终思考，最低档仍有思考输出。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "nov25-reasoning",
+              "r1111-responses",
+              "nov25-compare",
+              "nov25-mistral-large-4"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "两种直连接口均有 low、medium、high，模型始终思考。Chat 的省略默认是 high；Responses 的省略档位待确认。"
+          },
+          "notes": "两种直连接口均有 low、medium、high，模型始终思考。Chat 的省略默认是 high；Responses 的省略档位待确认。"
+        }
+      }
+    },
+    {
+      "id": "mistral-small-latest",
+      "request_id": "mistral-small-latest",
+      "display_name": "Mistral Small 4（latest）",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:28:27.465461+00:00",
+        "source_ids": [
+          "nov25-compare",
+          "nov25-models",
+          "r1024-mistral-pricing",
+          "nov25-mistral-small-4"
+        ],
+        "evidence": "evidence/mistral/2026-11-25-refresh.md",
+        "notes": "按本产品 modelIds 核对请求身份及生命周期。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "本平台全球 Standard 在线美元价，每百万 token。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.15",
                 "per": 1000000,
                 "unit": "token"
               },
@@ -175,50 +281,56 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:58.457478+00:00",
+              "checked_at": "2026-11-25T10:28:27.465461+00:00",
               "source_ids": [
                 "r1024-mistral-pricing",
-                "r1024-mistral-small4"
+                "nov25-mistral-small-4"
               ],
-              "evidence": "evidence/mistral/2026-11-11-refresh.md",
-              "notes": "Standard USD 输入/缓存读/输出 0.15/0.015/0.6 每百万 token 未变。"
+              "evidence": "evidence/mistral/2026-11-25-refresh.md",
+              "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。当前表及型号元数据未列独立缓存价，未按零价保存；旧页面快照曾列 0.015。"
             },
-            "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。",
+            "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。当前表及型号元数据未列独立缓存价，未按零价保存；旧页面快照曾列 0.015。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:58.457478+00:00",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
           "source_ids": [
             "r1024-mistral-pricing",
-            "r1024-mistral-small4"
+            "nov25-mistral-small-4"
           ],
-          "evidence": "evidence/mistral/2026-11-11-refresh.md",
-          "notes": "Standard USD 输入/缓存读/输出 0.15/0.015/0.6 每百万 token 未变。"
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。当前表及型号元数据未列独立缓存价，未按零价保存；旧页面快照曾列 0.015。"
         },
-        "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
+        "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。当前表及型号元数据未列独立缓存价，未按零价保存；旧页面快照曾列 0.015。"
       },
       "reference_prices": {
         "status": "not_applicable",
         "rules": [],
         "verification": {
-          "status": "needs_review",
-          "checked_at": null,
-          "source_ids": [],
-          "evidence": "evidence/mistral/2026-09-16-audit.md",
-          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-mistral-small-4"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "按量产品只维护公开用量价格。"
         },
         "notes": "已有唯一用量估算基准，不另设第二套价格。"
       },
-      "notes": "型号页 names 同列 mistral-small-2603 和 mistral-small-latest，状态 GA；价格与窗口按本平台核对。",
+      "notes": "本平台当前官方模型清单给出该请求 ID。",
       "capabilities": {
-        "input_modalities": [],
-        "context_window_tokens": null,
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 256000,
         "max_output_tokens": null,
-        "tool_calling": null,
-        "structured_output": null,
+        "tool_calling": true,
+        "structured_output": true,
         "streaming": null,
         "interfaces": [
           "openai_chat"
@@ -227,15 +339,16 @@
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.457478+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-small4",
-              "r1024-mistral-chat"
+              "r1024-mistral-pricing",
+              "nov25-mistral-small-4",
+              "r1111-responses"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "型号功能表仍登记 Chat Completions；当前直接 Responses 面另按型号核对。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号的 Features 与直接 Responses 文档共同核对。"
           },
-          "notes": "型号页确认 Chat。已检查新 Responses 文档，但未给 Small 4 精确型号示例或支持表，尚不从 Large 4 扩面；Messages 未知。"
+          "notes": "型号 Features 确认 Chat；尚未取得此型号直接 Responses 或 Messages 的产品级依据。"
         },
         "reasoning": {
           "support": "supported",
@@ -265,36 +378,37 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.468298+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-reasoning",
-              "r1024-mistral-small4"
+              "nov25-reasoning",
+              "nov25-mistral-small-4"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "逐型号核对当前 reasoning 文档；默认不以推荐值代替。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "Chat 支持 none 与 high。none 执行最少思考并省略思考块；省略档位和完整关闭方式待确认。"
           },
-          "notes": "官方精确列mistral-small-latest支持可调思考；默认与完全关闭能力未明，保持partial。"
+          "notes": "Chat 支持 none 与 high。none 执行最少思考并省略思考块；省略档位和完整关闭方式待确认。"
         },
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "256k",
+          "status": "known",
+          "reported_value": "256000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.457478+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-small4"
+              "r1024-mistral-pricing",
+              "nov25-mistral-small-4"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "型号页仅公布 256k 或 1M 标称窗口，未取得单位换算依据；继续 partial，不猜整数。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "直接核对官方价目页面机读整数 contextWindow 和单列 maxOutputTokens。"
           },
-          "notes": "官方只给256k标称，未核实精确整数单位，不猜乘1000或1024。"
+          "notes": "公开页面机读字段为整数 token。最大输出仅填机读字段明确给出的整数。"
         }
       }
     },
     {
       "id": "mistral-medium-3-5",
       "request_id": "mistral-medium-3-5",
-      "display_name": "mistral-medium-3-5",
+      "display_name": "Mistral Medium 3.5",
       "modalities": [
         "text"
       ],
@@ -303,13 +417,15 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:25:53.269911+00:00",
+        "checked_at": "2026-11-25T10:28:27.465461+00:00",
         "source_ids": [
-          "r1024-mistral-medium35",
-          "r1111-lifecycle"
+          "nov25-compare",
+          "nov25-models",
+          "r1024-mistral-pricing",
+          "nov25-mistral-medium-3-5"
         ],
-        "evidence": "evidence/mistral/2026-11-11-refresh.md",
-        "notes": "精确型号页面（含页面 names 数据的别名）与生命周期定义独立核对；Deprecated 不等于 Retired。"
+        "evidence": "evidence/mistral/2026-11-25-refresh.md",
+        "notes": "按本产品 modelIds 核对请求身份及生命周期。"
       },
       "usage_prices": {
         "status": "unknown",
@@ -319,35 +435,35 @@
           "checked_at": null,
           "source_ids": [
             "r1024-mistral-pricing",
-            "r1024-mistral-medium35"
+            "nov25-mistral-medium-3-5"
           ],
-          "evidence": "evidence/mistral/2026-11-11-refresh.md",
-          "notes": "官网标 Deprecated，弃用日期 2026-10-31；生命周期说明弃用期仍可访问，未取得 Retired 结论。当前官方价表及型号页均不再给本型号现行价格，旧价留 Git；不套替代的 Large 4 价格。"
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "当前标准价表及渲染型号页未列现价。页面附带的弃用型号价格元数据仅作线索，现行计价待确认。"
         },
-        "notes": "官网标 Deprecated，弃用日期 2026-10-31；生命周期说明弃用期仍可访问，未取得 Retired 结论。当前官方价表及型号页均不再给本型号现行价格，旧价留 Git；不套替代的 Large 4 价格。"
+        "notes": "当前标准价表及渲染型号页未列现价。页面附带的弃用型号价格元数据仅作线索，现行计价待确认。"
       },
       "reference_prices": {
         "status": "not_applicable",
         "rules": [],
         "verification": {
-          "status": "needs_review",
-          "checked_at": null,
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
           "source_ids": [
             "r1024-mistral-pricing",
-            "r1024-mistral-medium35"
+            "nov25-mistral-medium-3-5"
           ],
-          "evidence": "evidence/mistral/2026-10-24-refresh.md",
-          "notes": "已有唯一用量价，不另设参考价。"
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "按量产品只维护公开用量价格。"
         },
         "notes": "已有唯一用量价，不另设参考价。"
       },
-      "notes": "官网标 Deprecated，弃用日期 2026-10-31；生命周期说明弃用期仍可访问，未取得 Retired 结论。当前官方价表及型号页均不再给本型号现行价格，旧价留 Git；不套替代的 Large 4 价格。",
+      "notes": "官方机读字段记录弃用日期 2026-10-31，计划退役日期 2027-04-30；当前为弃用期。",
       "capabilities": {
         "input_modalities": [
           "text",
           "image"
         ],
-        "context_window_tokens": null,
+        "context_window_tokens": 256000,
         "max_output_tokens": null,
         "tool_calling": true,
         "structured_output": true,
@@ -356,32 +472,34 @@
           "openai_chat"
         ],
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "256k",
+          "status": "known",
+          "reported_value": "256000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.637046+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-medium35"
+              "r1024-mistral-pricing",
+              "nov25-mistral-medium-3-5"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "型号页仅公布 256k 或 1M 标称窗口，未取得单位换算依据；继续 partial，不猜整数。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "直接核对官方价目页面机读整数 contextWindow 和单列 maxOutputTokens。"
           },
-          "notes": "官方只给标称窗口，未取得精确整数边界；保持partial，不继承开源配置。"
+          "notes": "公开页面机读字段为整数 token。最大输出仅填机读字段明确给出的整数。"
         },
         "interface_assessment": {
           "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.637046+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-medium35",
-              "r1024-mistral-chat"
+              "r1024-mistral-pricing",
+              "nov25-mistral-medium-3-5",
+              "r1111-responses"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "型号功能表仍登记 Chat Completions；当前直接 Responses 面另按型号核对。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号的 Features 与直接 Responses 文档共同核对。"
           },
-          "notes": "保留型号页直接 Chat 面。该型号已弃用，当前 Responses 文档没有该精确型号示例或支持矩阵，不从 Large 4 推导；没有 Messages 证据。"
+          "notes": "型号 Features 确认 Chat；尚未取得此型号直接 Responses 或 Messages 的产品级依据。"
         },
         "reasoning": {
           "support": "supported",
@@ -411,22 +529,22 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.637046+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-reasoning",
-              "r1024-mistral-medium35"
+              "nov25-reasoning",
+              "nov25-mistral-medium-3-5"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "逐型号核对当前 reasoning 文档；默认不以推荐值代替。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "Chat 支持 none 与 high。none 执行最少思考并省略思考块；省略档位和完整关闭方式待确认。"
           },
-          "notes": "官方可调思考表精确列本请求ID；省略默认与完全关闭能力未知。"
+          "notes": "Chat 支持 none 与 high。none 执行最少思考并省略思考块；省略档位和完整关闭方式待确认。"
         }
       }
     },
     {
       "id": "mistral-large-4-0",
       "request_id": "mistral-large-4-0",
-      "display_name": "mistral-large-4-0",
+      "display_name": "Mistral Large 4",
       "modalities": [
         "text"
       ],
@@ -435,13 +553,15 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:25:53.269911+00:00",
+        "checked_at": "2026-11-25T10:28:27.465461+00:00",
         "source_ids": [
-          "r1024-mistral-large4",
-          "r1111-lifecycle"
+          "nov25-compare",
+          "nov25-models",
+          "r1024-mistral-pricing",
+          "nov25-mistral-large-4"
         ],
-        "evidence": "evidence/mistral/2026-11-11-refresh.md",
-        "notes": "精确型号页面（含页面 names 数据的别名）与生命周期定义独立核对；Deprecated 不等于 Retired。"
+        "evidence": "evidence/mistral/2026-11-25-refresh.md",
+        "notes": "按本产品 modelIds 核对请求身份及生命周期。"
       },
       "usage_prices": {
         "status": "published",
@@ -451,7 +571,7 @@
             "basis": "public_list",
             "currency": "USD",
             "tax": "unknown",
-            "selection": "标准在线、常规短上下文价格；缓存写入只选一个默认时长基准。",
+            "selection": "本平台全球 Standard 在线美元价，每百万 token。",
             "rates": [
               {
                 "meter": "input_uncached_tokens",
@@ -479,53 +599,53 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:58.728052+00:00",
+              "checked_at": "2026-11-25T10:28:27.465461+00:00",
               "source_ids": [
                 "r1024-mistral-pricing",
-                "r1024-mistral-large4"
+                "nov25-mistral-large-4"
               ],
-              "evidence": "evidence/mistral/2026-11-11-refresh.md",
-              "notes": "当前 Standard USD 输入/缓存读/输出从 1.36/0.14/4.18 降为 0.7/0.07/2.1；未发现精确调价时刻，effective_from 保持 null。"
+              "evidence": "evidence/mistral/2026-11-25-refresh.md",
+              "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
             },
-            "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。",
+            "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:58.728052+00:00",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
           "source_ids": [
             "r1024-mistral-pricing",
-            "r1024-mistral-large4"
+            "nov25-mistral-large-4"
           ],
-          "evidence": "evidence/mistral/2026-11-11-refresh.md",
-          "notes": "当前 Standard USD 输入/缓存读/输出从 1.36/0.14/4.18 降为 0.7/0.07/2.1；未发现精确调价时刻，effective_from 保持 null。"
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
         },
-        "notes": "官方USD Standard基础推理价；地区与Priority/Batch价不并列。"
+        "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
       },
       "reference_prices": {
         "status": "not_applicable",
         "rules": [],
         "verification": {
-          "status": "needs_review",
-          "checked_at": null,
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
           "source_ids": [
             "r1024-mistral-pricing",
-            "r1024-mistral-large4"
+            "nov25-mistral-large-4"
           ],
-          "evidence": "evidence/mistral/2026-10-24-refresh.md",
-          "notes": "已有唯一用量价，不另设参考价。"
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "按量产品只维护公开用量价格。"
         },
         "notes": "已有唯一用量价，不另设参考价。"
       },
-      "notes": "官网 2026-11-05 的 Large 4 GA 页面；names 列 mistral-large-4 与 mistral-large-4-0。直接 Responses 支持按官方示例核对。",
+      "notes": "本平台当前官方模型清单给出该请求 ID。",
       "capabilities": {
         "input_modalities": [
           "text",
           "image"
         ],
-        "context_window_tokens": null,
+        "context_window_tokens": 1000000,
         "max_output_tokens": null,
         "tool_calling": true,
         "structured_output": true,
@@ -535,33 +655,35 @@
           "openai_responses"
         ],
         "context_assessment": {
-          "status": "partial",
-          "reported_value": "1M",
+          "status": "known",
+          "reported_value": "1000000 tokens",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:58.728052+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-large4"
+              "r1024-mistral-pricing",
+              "nov25-mistral-large-4"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "型号页仅公布 256k 或 1M 标称窗口，未取得单位换算依据；继续 partial，不猜整数。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "直接核对官方价目页面机读整数 contextWindow 和单列 maxOutputTokens。"
           },
-          "notes": "官方只给标称窗口，未取得精确整数边界；保持partial，不继承开源配置。"
+          "notes": "公开页面机读字段为整数 token。最大输出仅填机读字段明确给出的整数。"
         },
         "interface_assessment": {
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:25:52.442651+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-large4",
-              "r1024-mistral-chat",
+              "r1024-mistral-pricing",
+              "nov25-mistral-large-4",
+              "nov25-compare",
               "r1111-responses"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "Large 4 两个正式请求名由型号页 names 确认；Responses 官方示例使用 mistral-large-4，reasoning 文档同时列两个名称。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号的 Features 与直接 Responses 文档共同核对。"
           },
-          "notes": "Chat 与无状态 OpenAI Responses 是直接推理面；托管 Agents/Conversations 不纳入本模型协议；未见 Messages 支持证据。"
+          "notes": "Large 4 官方例示直接 Responses 与 Chat。未获 Messages 支持证据。"
         },
         "reasoning": {
           "support": "supported",
@@ -571,7 +693,7 @@
               "interface": "openai_chat",
               "surface": "api_request",
               "can_disable": false,
-              "default_behavior": "unknown",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -583,17 +705,17 @@
                   ],
                   "minimum": null,
                   "maximum": null,
-                  "default": null,
-                  "notes": "GA 的三个档位；官方明确拒绝 none/minimal/xhigh/max。high 是建议值，不是省略参数的已知默认。"
+                  "default": "high",
+                  "notes": "官方明确 Chat 省略 reasoning_effort 时使用 high。"
                 }
               ],
-              "notes": "旧 Preview 的 none 改名为 low；低档仍推理，不能当关闭。"
+              "notes": "模型始终思考，最低档仍有思考输出。"
             },
             {
               "interface": "openai_responses",
               "surface": "api_request",
               "can_disable": false,
-              "default_behavior": "unknown",
+              "default_behavior": "enabled",
               "controls": [
                 {
                   "kind": "effort",
@@ -606,27 +728,666 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "GA 的三个档位；官方明确拒绝 none/minimal/xhigh/max。high 是建议值，不是省略参数的已知默认。"
+                  "notes": "Responses 示例显式传 high，未单独确认省略 reasoning.effort 时选哪一档。"
                 }
               ],
-              "notes": "旧 Preview 的 none 改名为 low；低档仍推理，不能当关闭。"
+              "notes": "模型始终思考，最低档仍有思考输出。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:25:52.442651+00:00",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
             "source_ids": [
-              "r1024-mistral-reasoning",
-              "r1024-mistral-large4",
+              "nov25-reasoning",
+              "r1111-responses",
+              "nov25-compare",
+              "nov25-mistral-large-4"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "两种直连接口均有 low、medium、high，模型始终思考。Chat 的省略默认是 high；Responses 的省略档位待确认。"
+          },
+          "notes": "两种直连接口均有 low、medium、high，模型始终思考。Chat 的省略默认是 high；Responses 的省略档位待确认。"
+        }
+      }
+    },
+    {
+      "id": "mistral-large-2512",
+      "request_id": "mistral-large-2512",
+      "display_name": "Mistral Large 3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:28:27.465461+00:00",
+        "source_ids": [
+          "nov25-compare",
+          "nov25-models",
+          "r1024-mistral-pricing",
+          "nov25-mistral-large-3"
+        ],
+        "evidence": "evidence/mistral/2026-11-25-refresh.md",
+        "notes": "按本产品 modelIds 核对请求身份及生命周期。"
+      },
+      "usage_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-mistral-large-3"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "当前标准价表及渲染型号页未列现价。页面附带的弃用型号价格元数据仅作线索，现行计价待确认。"
+        },
+        "notes": "当前标准价表及渲染型号页未列现价。页面附带的弃用型号价格元数据仅作线索，现行计价待确认。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-mistral-large-3"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "按量产品只维护公开用量价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "官方机读字段记录弃用日期 2026-10-31，计划退役日期 2027-04-30；当前为弃用期。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 256000,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-mistral-large-3",
               "r1111-responses"
             ],
-            "evidence": "evidence/mistral/2026-11-11-refresh.md",
-            "notes": "逐型号核对当前 reasoning 文档；默认不以推荐值代替。"
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号的 Features 与直接 Responses 文档共同核对。"
           },
-          "notes": "GA 改为 low/medium/high；Chat 用 reasoning_effort，Responses 用 reasoning.effort。没有关闭档，省略参数的默认档仍未公布。"
+          "notes": "型号 Features 确认 Chat；尚未取得此型号直接 Responses 或 Messages 的产品级依据。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-mistral-large-3",
+              "nov25-reasoning"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "未取得该型号明确的思考支持或不支持结论。"
+          },
+          "notes": "核对该固定型号仅宣告文本输出，官方公开思考控制表没有该型号资料。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "256000 tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-mistral-large-3"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "直接核对官方价目页面机读整数 contextWindow 和单列 maxOutputTokens。"
+          },
+          "notes": "公开页面机读字段为整数 token。最大输出仅填机读字段明确给出的整数。"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash-1017",
+      "request_id": "deepseek-v4-1-flash-1017",
+      "display_name": "DeepSeek V4.1 Flash 1017",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:28:27.465461+00:00",
+        "source_ids": [
+          "nov25-compare",
+          "nov25-models",
+          "r1024-mistral-pricing",
+          "nov25-deepseek-v4-flash-1017"
+        ],
+        "evidence": "evidence/mistral/2026-11-25-refresh.md",
+        "notes": "按本产品 modelIds 核对请求身份及生命周期。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "本平台全球 Standard 在线美元价，每百万 token。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.007",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "1.2",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:28:27.465461+00:00",
+              "source_ids": [
+                "r1024-mistral-pricing",
+                "nov25-deepseek-v4-flash-1017"
+              ],
+              "evidence": "evidence/mistral/2026-11-25-refresh.md",
+              "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+            },
+            "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-deepseek-v4-flash-1017"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+        },
+        "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-deepseek-v4-flash-1017"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "按量产品只维护公开用量价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "本平台当前官方模型清单给出该请求 ID，生命周期为公开预览。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-deepseek-v4-flash-1017",
+              "r1111-responses"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号的 Features 与直接 Responses 文档共同核对。"
+          },
+          "notes": "型号 Features 确认 Chat；尚未取得此型号直接 Responses 或 Messages 的产品级依据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "本平台型号元数据声明 reasoning 输出并列 Chat，型号级控制参数和默认行为仍缺项。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-deepseek-v4-flash-1017",
+              "nov25-reasoning"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "本平台型号元数据声明 reasoning 输出并列 Chat，型号级控制参数和默认行为仍缺项。"
+          },
+          "notes": "本平台型号元数据声明 reasoning 输出并列 Chat，型号级控制参数和默认行为仍缺项。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000 tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-deepseek-v4-flash-1017"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "直接核对官方价目页面机读整数 contextWindow 和单列 maxOutputTokens。"
+          },
+          "notes": "公开页面机读字段为整数 token。最大输出仅填机读字段明确给出的整数。"
+        }
+      }
+    },
+    {
+      "id": "zai-glm-5-3",
+      "request_id": "zai-glm-5-3",
+      "display_name": "GLM 5.3",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:28:27.465461+00:00",
+        "source_ids": [
+          "nov25-compare",
+          "nov25-models",
+          "r1024-mistral-pricing",
+          "nov25-glm-53"
+        ],
+        "evidence": "evidence/mistral/2026-11-25-refresh.md",
+        "notes": "按本产品 modelIds 核对请求身份及生命周期。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "本平台全球 Standard 在线美元价，每百万 token。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "1.4",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.14",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "4.4",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:28:27.465461+00:00",
+              "source_ids": [
+                "r1024-mistral-pricing",
+                "nov25-glm-53"
+              ],
+              "evidence": "evidence/mistral/2026-11-25-refresh.md",
+              "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+            },
+            "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-glm-53"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+        },
+        "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-glm-53"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "按量产品只维护公开用量价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "本平台当前官方模型清单给出该请求 ID。",
+      "capabilities": {
+        "input_modalities": [
+          "text"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-glm-53",
+              "r1111-responses"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号的 Features 与直接 Responses 文档共同核对。"
+          },
+          "notes": "型号 Features 确认 Chat；尚未取得此型号直接 Responses 或 Messages 的产品级依据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "Mistral 的模型专属 Chat 枚举为 low / high / max；省略默认待核。"
+                }
+              ],
+              "notes": "精确型号公开的 Chat 档位已核对，默认和关停行为待查。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-glm-53",
+              "nov25-reasoning"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号公开的 Chat 档位已核对，默认和关停行为待查。"
+          },
+          "notes": "精确型号公开的 Chat 档位已核对，默认和关停行为待查。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000 tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-glm-53"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "直接核对官方价目页面机读整数 contextWindow 和单列 maxOutputTokens。"
+          },
+          "notes": "公开页面机读字段为整数 token。最大输出仅填机读字段明确给出的整数。"
+        }
+      }
+    },
+    {
+      "id": "zai-glm-5-3-flash",
+      "request_id": "zai-glm-5-3-flash",
+      "display_name": "GLM 5.3 Flash",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:28:27.465461+00:00",
+        "source_ids": [
+          "nov25-compare",
+          "nov25-models",
+          "r1024-mistral-pricing",
+          "nov25-zai-glm-5-3-flash"
+        ],
+        "evidence": "evidence/mistral/2026-11-25-refresh.md",
+        "notes": "按本产品 modelIds 核对请求身份及生命周期。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "USD",
+            "tax": "unknown",
+            "selection": "本平台全球 Standard 在线美元价，每百万 token。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.15",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.03",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:28:27.465461+00:00",
+              "source_ids": [
+                "r1024-mistral-pricing",
+                "nov25-zai-glm-5-3-flash"
+              ],
+              "evidence": "evidence/mistral/2026-11-25-refresh.md",
+              "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+            },
+            "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-zai-glm-5-3-flash"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+        },
+        "notes": "来自当前官网公开价表。域内推理附加费及 Priority / Batch 价独立于标准估算。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:28:27.465461+00:00",
+          "source_ids": [
+            "r1024-mistral-pricing",
+            "nov25-zai-glm-5-3-flash"
+          ],
+          "evidence": "evidence/mistral/2026-11-25-refresh.md",
+          "notes": "按量产品只维护公开用量价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "本平台当前官方模型清单给出该请求 ID。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat"
+        ],
+        "interface_assessment": {
+          "coverage": "partial",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-zai-glm-5-3-flash",
+              "r1111-responses"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "精确型号的 Features 与直接 Responses 文档共同核对。"
+          },
+          "notes": "型号 Features 确认 Chat；尚未取得此型号直接 Responses 或 Messages 的产品级依据。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "本平台型号元数据声明 reasoning 输出并列 Chat，型号级控制参数和默认行为仍缺项。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-zai-glm-5-3-flash",
+              "nov25-reasoning"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "本平台型号元数据声明 reasoning 输出并列 Chat，型号级控制参数和默认行为仍缺项。"
+          },
+          "notes": "本平台型号元数据声明 reasoning 输出并列 Chat，型号级控制参数和默认行为仍缺项。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000 tokens",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:28:27.465461+00:00",
+            "source_ids": [
+              "r1024-mistral-pricing",
+              "nov25-zai-glm-5-3-flash"
+            ],
+            "evidence": "evidence/mistral/2026-11-25-refresh.md",
+            "notes": "直接核对官方价目页面机读整数 contextWindow 和单列 maxOutputTokens。"
+          },
+          "notes": "公开页面机读字段为整数 token。最大输出仅填机读字段明确给出的整数。"
         }
       }
     }
   ],
-  "notes": "部分收录；每模型只保留一个价格基准。核对缺项见 evidence 与 docs/AUDIT-2026-09-16.md。"
+  "notes": "部分收录，聚焦通用文本模型；生命周期、单一标准费率和能力缺项见本轮独立证据。"
 }

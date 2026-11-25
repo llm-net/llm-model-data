@@ -410,6 +410,54 @@
       "url": "https://developers.openai.com/api/docs/guides/image-generation.md",
       "purpose": "pricing",
       "notes": "Cached input pricing明确GPT Image 2缓存优惠仅适用于Responses，直接Images请求不适用；用于限定订阅参考价的唯一基准。"
+    },
+    {
+      "id": "r1125-openai-reasoning",
+      "url": "https://developers.openai.com/api/docs/guides/reasoning.md",
+      "purpose": "models",
+      "notes": "2026-11-25 逐模型复核，字段范围见本次证据。"
+    },
+    {
+      "id": "r1125-openai-checklist",
+      "url": "https://developers.openai.com/api/docs/guides/deployment-checklist.md",
+      "purpose": "models",
+      "notes": "2026-11-25 逐模型复核，字段范围见本次证据。"
+    },
+    {
+      "id": "r1125-openai-changelog",
+      "url": "https://developers.openai.com/api/docs/changelog.md",
+      "purpose": "models",
+      "notes": "2026-11-25 逐模型复核，字段范围见本次证据。"
+    },
+    {
+      "id": "r1125-codex-release",
+      "url": "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol.md",
+      "purpose": "models",
+      "notes": "2026-11-25 逐模型复核，字段范围见本次证据。"
+    },
+    {
+      "id": "r1125-codex-catalog",
+      "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.172.0/codex-rs/models-manager/models.json",
+      "purpose": "models",
+      "notes": "2026-11-25 逐模型复核，字段范围见本次证据。"
+    },
+    {
+      "id": "r1125-chat-latest",
+      "url": "https://developers.openai.com/api/docs/models/chat-latest.md",
+      "purpose": "models",
+      "notes": "2026-11-25 逐模型复核，字段范围见本次证据。"
+    },
+    {
+      "id": "r1125-openai-gpt-6-2-astra",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md",
+      "purpose": "models",
+      "notes": "2026-11-25 逐模型复核，字段范围见本次证据。"
+    },
+    {
+      "id": "r1125-openai-gpt-6-2-sol",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol.md",
+      "purpose": "models",
+      "notes": "2026-11-25 逐模型复核，字段范围见本次证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。",

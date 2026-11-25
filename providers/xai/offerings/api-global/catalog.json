@@ -29,13 +29,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:24:10.196650+00:00",
+        "checked_at": "2026-11-25T10:27:09.506348+00:00",
         "source_ids": [
           "r1111-47",
-          "r1111-release"
+          "r1125-xai-release"
         ],
-        "evidence": "evidence/xai/2026-11-11-refresh.md",
-        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+        "evidence": "evidence/xai/2026-11-25-refresh.md",
+        "notes": "精确型号页及现行生命周期公告。"
       },
       "usage_prices": {
         "status": "published",
@@ -73,12 +73,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-25T10:26:27.796352+00:00",
               "source_ids": [
+                "r1111-47",
                 "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "Global 标准短上下文价按精确型号核对。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -87,12 +88,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-25T10:26:27.796352+00:00",
           "source_ids": [
+            "r1111-47",
             "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "Global 标准短上下文价按精确型号核对。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -192,13 +194,14 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:24:10.228538+00:00",
+            "checked_at": "2026-11-25T10:26:28.038412+00:00",
             "source_ids": [
               "r1111-47",
-              "r1111-reasoning"
+              "r1111-reasoning",
+              "r1125-xai-chat-md"
             ],
-            "evidence": "evidence/xai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/xai/2026-11-25-refresh.md",
+            "notes": "当前文字推理与 legacy Chat 官方指南；gRPC 参数仍未知。"
           },
           "notes": "低/中/高/xhigh 四档；默认 high，不能关闭。gRPC 原始控制字段仍待证实，coverage 保持 partial。 本轮确认grok4.5三档、4.6/4.7四档，默认high且不能关闭；gRPC细节页面迁移造成未重核缺口。"
         },
@@ -207,12 +210,12 @@
           "reported_value": "500,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:24:10.183056+00:00",
+            "checked_at": "2026-11-25T10:26:27.796352+00:00",
             "source_ids": [
               "r1111-47"
             ],
-            "evidence": "evidence/xai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/xai/2026-11-25-refresh.md",
+            "notes": "型号页官方整数窗口；价格的 200k 阶梯须分开。"
           },
           "notes": "本型号官方整数总窗口；价阶200k不是窗口。"
         }
@@ -230,13 +233,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:24:10.196650+00:00",
+        "checked_at": "2026-11-25T10:27:09.506348+00:00",
         "source_ids": [
           "r1111-46",
-          "r1111-release"
+          "r1125-xai-release"
         ],
-        "evidence": "evidence/xai/2026-11-11-refresh.md",
-        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+        "evidence": "evidence/xai/2026-11-25-refresh.md",
+        "notes": "精确型号页及现行生命周期公告。"
       },
       "usage_prices": {
         "status": "published",
@@ -274,12 +277,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-25T10:26:27.830291+00:00",
               "source_ids": [
+                "r1111-46",
                 "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "Global 标准短上下文价按精确型号核对。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -288,12 +292,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-25T10:26:27.830291+00:00",
           "source_ids": [
+            "r1111-46",
             "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "Global 标准短上下文价按精确型号核对。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -393,13 +398,14 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:24:10.228538+00:00",
+            "checked_at": "2026-11-25T10:26:28.038412+00:00",
             "source_ids": [
               "r1111-46",
-              "r1111-reasoning"
+              "r1111-reasoning",
+              "r1125-xai-chat-md"
             ],
-            "evidence": "evidence/xai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/xai/2026-11-25-refresh.md",
+            "notes": "当前文字推理与 legacy Chat 官方指南；gRPC 参数仍未知。"
           },
           "notes": "低/中/高/xhigh 四档；默认 high，不能关闭。gRPC 原始控制字段仍待证实，coverage 保持 partial。 本轮确认grok4.5三档、4.6/4.7四档，默认high且不能关闭；gRPC细节页面迁移造成未重核缺口。"
         },
@@ -408,12 +414,12 @@
           "reported_value": "500,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:24:10.183865+00:00",
+            "checked_at": "2026-11-25T10:26:27.830291+00:00",
             "source_ids": [
               "r1111-46"
             ],
-            "evidence": "evidence/xai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/xai/2026-11-25-refresh.md",
+            "notes": "型号页官方整数窗口；价格的 200k 阶梯须分开。"
           },
           "notes": "本型号官方整数总窗口；价阶200k不是窗口。"
         }
@@ -431,13 +437,13 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:24:10.196650+00:00",
+        "checked_at": "2026-11-25T10:27:09.506348+00:00",
         "source_ids": [
           "r1111-45",
-          "r1111-release"
+          "r1125-xai-release"
         ],
-        "evidence": "evidence/xai/2026-11-11-refresh.md",
-        "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+        "evidence": "evidence/xai/2026-11-25-refresh.md",
+        "notes": "精确型号页及现行生命周期公告。"
       },
       "usage_prices": {
         "status": "published",
@@ -475,12 +481,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:24:10.105870+00:00",
+              "checked_at": "2026-11-25T10:26:27.910400+00:00",
               "source_ids": [
+                "r1111-45",
                 "r1111-pricing"
               ],
-              "evidence": "evidence/xai/2026-11-11-refresh.md",
-              "notes": "核对对应产品、精确型号的非促销标准价格；不表示订阅实际扣费。"
+              "evidence": "evidence/xai/2026-11-25-refresh.md",
+              "notes": "Global 标准短上下文价按精确型号核对。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 0.60 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。",
             "time_basis": "unknown",
@@ -489,12 +496,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:24:10.105870+00:00",
+          "checked_at": "2026-11-25T10:26:27.910400+00:00",
           "source_ids": [
+            "r1111-45",
             "r1111-pricing"
           ],
-          "evidence": "evidence/xai/2026-11-11-refresh.md",
-          "notes": "核对对应产品、精确型号的非促销标准价格；订阅仅保存独立按量参考价。"
+          "evidence": "evidence/xai/2026-11-25-refresh.md",
+          "notes": "Global 标准短上下文价按精确型号核对。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。"
       },
@@ -592,13 +600,14 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:24:10.228538+00:00",
+            "checked_at": "2026-11-25T10:26:28.038412+00:00",
             "source_ids": [
               "r1111-45",
-              "r1111-reasoning"
+              "r1111-reasoning",
+              "r1125-xai-chat-md"
             ],
-            "evidence": "evidence/xai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/xai/2026-11-25-refresh.md",
+            "notes": "当前文字推理与 legacy Chat 官方指南；gRPC 参数仍未知。"
           },
           "notes": "本轮型号页将xhigh列为supported，但思考指南明确仅4.6及以后有独立xhigh，4.5收到xhigh按high处理。保留low/medium/high作为已确认独立档位；gRPC控制与该文档冲突保持partial。"
         },
@@ -607,12 +616,12 @@
           "reported_value": "500,000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:24:10.187290+00:00",
+            "checked_at": "2026-11-25T10:26:27.910400+00:00",
             "source_ids": [
               "r1111-45"
             ],
-            "evidence": "evidence/xai/2026-11-11-refresh.md",
-            "notes": "本字段已按当前官方资料独立复核；限制与缺项仍按 coverage/status 和本轮证据记载。"
+            "evidence": "evidence/xai/2026-11-25-refresh.md",
+            "notes": "型号页官方整数窗口；价格的 200k 阶梯须分开。"
           },
           "notes": "本型号官方整数总窗口；价阶200k不是窗口。"
         }

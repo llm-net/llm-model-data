@@ -524,6 +524,24 @@
       "url": "https://docs.x.ai/developers/migration/imagine-image-quality-nov-2",
       "purpose": "pricing",
       "notes": "核对旧图像型号退役后的 low 价格、默认 auto 在生成和编辑的不同质量档；不据重定向新增订阅型号。"
+    },
+    {
+      "id": "r1125-xai-release",
+      "url": "https://docs.x.ai/developers/release-notes.md",
+      "purpose": "models",
+      "notes": "2026-11-25 官方页面；核对范围见本轮证据。"
+    },
+    {
+      "id": "r1125-xai-chat-md",
+      "url": "https://docs.x.ai/developers/model-capabilities/legacy/chat-completions.md",
+      "purpose": "models",
+      "notes": "2026-11-25 官方页面；核对范围见本轮证据。"
+    },
+    {
+      "id": "r1125-build-settings-md",
+      "url": "https://docs.x.ai/build/settings/reference.md",
+      "purpose": "models",
+      "notes": "2026-11-25 官方页面；核对范围见本轮证据。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

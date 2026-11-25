@@ -206,6 +206,54 @@
       "url": "https://aistudio.google.com/docs/thinking?generate-content=true",
       "purpose": "models",
       "notes": "2026-11-11 官方资料复核；产品范围、条件与未知项见本轮 evidence。"
+    },
+    {
+      "id": "r1125-genie",
+      "url": "https://aistudio.google.com/docs/models/genie-4",
+      "purpose": "models",
+      "notes": "实时世界生成型号与媒体接入说明。"
+    },
+    {
+      "id": "r1125-long-decode",
+      "url": "https://aistudio.google.com/docs/long-decode",
+      "purpose": "models",
+      "notes": "区分默认同步生成输出与后台/续接长输出。"
+    },
+    {
+      "id": "r1125-neon",
+      "url": "https://aistudio.google.com/docs/models/gemini-4-neon",
+      "purpose": "models",
+      "notes": "型号卡、输入输出模态、常规与扩展窗口。"
+    },
+    {
+      "id": "r1125-neon-interactions",
+      "url": "https://aistudio.google.com/docs/whats-new-gemini-4-neon",
+      "purpose": "models",
+      "notes": "新型号 Interactions 调用示例及思考限制。"
+    },
+    {
+      "id": "r1125-neon-generate",
+      "url": "https://aistudio.google.com/docs/whats-new-gemini-4-neon?generate-content=true",
+      "purpose": "models",
+      "notes": "本型号 GenerateContent REST 调用与实际 thinkingLevel 请求参数。"
+    },
+    {
+      "id": "r1125-hydrogen",
+      "url": "https://aistudio.google.com/docs/models/gemini-4-hydrogen",
+      "purpose": "models",
+      "notes": "型号卡、输入输出模态、常规与扩展窗口。"
+    },
+    {
+      "id": "r1125-hydrogen-interactions",
+      "url": "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen",
+      "purpose": "models",
+      "notes": "新型号 Interactions 调用示例及思考限制。"
+    },
+    {
+      "id": "r1125-hydrogen-generate",
+      "url": "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen?generate-content=true",
+      "purpose": "models",
+      "notes": "本型号 GenerateContent REST 调用与实际 thinkingLevel 请求参数。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

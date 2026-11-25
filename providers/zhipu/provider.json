@@ -98,6 +98,12 @@
       "url": "https://docs.bigmodel.cn/api-reference/%E6%A8%A1%E5%9E%8B-api/%E5%AF%B9%E8%AF%9D%E8%A1%A5%E5%85%A8.md",
       "purpose": "models",
       "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "r1125-glm54",
+      "url": "https://docs.bigmodel.cn/cn/guide/models/glm-5.4",
+      "purpose": "models",
+      "notes": "GLM-5.4 型号卡：Coding Plan 开放，公开按量 API 待安全评估。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

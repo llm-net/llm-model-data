@@ -56,6 +56,48 @@
       "url": "https://cloud.tencent.com/document/product/1823/131208",
       "purpose": "models",
       "notes": "2026-10-24 核对来源；具体型号、产品与缺口见本轮证据。"
+    },
+    {
+      "id": "current-tokenhub-product",
+      "url": "https://cloud.tencent.com/product/tokenhub",
+      "purpose": "pricing",
+      "notes": "TokenHub 产品页的广州标准在线价格。"
+    },
+    {
+      "id": "current-hy4-preview-eos",
+      "url": "https://cloud.tencent.com/announce/detail/2559",
+      "purpose": "models",
+      "notes": "Hy4 preview 下线范围、时间和迁移条件。"
+    },
+    {
+      "id": "current-tokenhub-updates",
+      "url": "https://cloud.tencent.com/document/product/1823/130675",
+      "purpose": "models",
+      "notes": "TokenHub 各月模型上线公告。"
+    },
+    {
+      "id": "current-deepseek-0731-eos",
+      "url": "https://cloud.tencent.com/announce/detail/2496",
+      "purpose": "models",
+      "notes": "非原厂直供的 0731 精确 ID 的停止时间和自动切换条件。"
+    },
+    {
+      "id": "current-deepseek-direct-eos",
+      "url": "https://cloud.tencent.com/announce/detail/2568",
+      "purpose": "models",
+      "notes": "独立原厂直供模型的未来停止时间和精确请求名。"
+    },
+    {
+      "id": "current-tokenhub-tier-units",
+      "url": "https://cloud.tencent.com/announce/detail/2590",
+      "purpose": "pricing",
+      "notes": "计价阶梯 K 值自 11 月 24 日按 1000 token。"
+    },
+    {
+      "id": "current-kimi-products",
+      "url": "https://cloud.tencent.com/document/product/1823/132232",
+      "purpose": "models",
+      "notes": "TokenHub Kimi 精确型号调用、上下文、思考和缓存。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

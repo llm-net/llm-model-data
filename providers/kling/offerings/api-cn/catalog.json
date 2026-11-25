@@ -71,28 +71,28 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:25.897873+00:00",
+              "checked_at": "2026-11-25T10:30:52Z",
               "source_ids": [
                 "audit-prices-md",
-                "audit-20261029-4-0-text-to-video"
+                "media-io-updates"
               ],
-              "evidence": "evidence/kling/2026-11-11-refresh.md",
-              "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+              "evidence": "evidence/kling/2026-11-25-refresh.md",
+              "notes": "已核对官方公开文档。"
             },
-            "notes": "有输入视频时采用另一计价基准：输入时长不大于输出时长按输出时长×2，否则按输入加输出时长；输入包括视频角色主体。该档不与本无输入视频基准叠加。官方仅给上线日期，未给价目生效时刻，effective_from 保持 null。",
+            "notes": "有输入视频时采用另一计价基准：输入时长不大于输出时长按输出时长×2，否则按输入加输出时长；输入包括视频角色主体。该档不与本无输入视频基准叠加。官方仅给上线日期，未给价目生效时刻，effective_from 保持 null。 标准基准仍为 720p 无输入视频；4K 无输入视频为 3.5 元/秒，1080p/4K HDR 分别另加 0.3/0.5 元/输出秒。",
             "time_basis": "unknown",
             "charge_on": "unknown"
           }
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:25.897873+00:00",
+          "checked_at": "2026-11-25T10:30:52Z",
           "source_ids": [
             "audit-prices-md",
-            "audit-20261029-4-0-text-to-video"
+            "media-io-updates"
           ],
-          "evidence": "evidence/kling/2026-11-11-refresh.md",
-          "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          "evidence": "evidence/kling/2026-11-25-refresh.md",
+          "notes": "已核对官方公开文档。"
         },
         "notes": "有输入视频时采用另一计价基准：输入时长不大于输出时长按输出时长×2，否则按输入加输出时长；输入包括视频角色主体。该档不与本无输入视频基准叠加。官方仅给上线日期，未给价目生效时刻，effective_from 保持 null。"
       },
@@ -188,7 +188,8 @@
                   "type": "enum",
                   "values": [
                     "720p",
-                    "1080p"
+                    "1080p",
+                    "4k"
                   ],
                   "min": null,
                   "max": null,
@@ -204,7 +205,9 @@
                     "21:9",
                     "16:9",
                     "9:16",
-                    "1:1"
+                    "1:1",
+                    "4:3",
+                    "3:4"
                   ],
                   "min": null,
                   "max": null,
@@ -285,6 +288,20 @@
                   "default": false,
                   "required": false,
                   "notes": "同时生成含水印结果；不支持自定义水印。"
+                },
+                {
+                  "field": "settings.dynamic_range",
+                  "type": "enum",
+                  "values": [
+                    "sdr",
+                    "hdr"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "sdr",
+                  "required": false,
+                  "notes": "仅 settings.resolution 为 1080p 或 4k 时可选 hdr；仅在提示词中写 HDR 无效。"
                 }
               ],
               "notes": "创建返回 data.id；GET /tasks 查询或回调返回任务产物。没有 settings.audio 或 multi_shot 参数，声音与镜头意图通过提示词表达。"
@@ -456,7 +473,8 @@
                   "type": "enum",
                   "values": [
                     "720p",
-                    "1080p"
+                    "1080p",
+                    "4k"
                   ],
                   "min": null,
                   "max": null,
@@ -537,6 +555,20 @@
                   "default": false,
                   "required": false,
                   "notes": "同时生成含水印结果；不支持自定义水印。"
+                },
+                {
+                  "field": "settings.dynamic_range",
+                  "type": "enum",
+                  "values": [
+                    "sdr",
+                    "hdr"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "sdr",
+                  "required": false,
+                  "notes": "仅 settings.resolution 为 1080p 或 4k 时可选 hdr；仅在提示词中写 HDR 无效。"
                 }
               ],
               "notes": "创建返回 data.id；GET /tasks 查询或回调返回任务产物。没有 settings.audio 或 multi_shot 参数，声音与镜头意图通过提示词表达。"
@@ -833,7 +865,8 @@
                   "type": "enum",
                   "values": [
                     "720p",
-                    "1080p"
+                    "1080p",
+                    "4k"
                   ],
                   "min": null,
                   "max": null,
@@ -850,6 +883,8 @@
                     "16:9",
                     "9:16",
                     "1:1",
+                    "4:3",
+                    "3:4",
                     "adaptive"
                   ],
                   "min": null,
@@ -953,6 +988,20 @@
                   "default": null,
                   "required": false,
                   "notes": "音色管理返回的 ID，支持官方或已创建音色；至多 3 个音色，同项 id 必填。官方静态完整取值未公开，不编造枚举。"
+                },
+                {
+                  "field": "settings.dynamic_range",
+                  "type": "enum",
+                  "values": [
+                    "sdr",
+                    "hdr"
+                  ],
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "default": "sdr",
+                  "required": false,
+                  "notes": "仅 settings.resolution 为 1080p 或 4k 时可选 hdr；仅在提示词中写 HDR 无效。"
                 }
               ],
               "notes": "创建返回 data.id；GET /tasks 查询或回调返回任务产物。没有 settings.audio 或 multi_shot 参数，声音与镜头意图通过提示词表达。 全能参考同样支持 contents[type=middle_frame].url，中间帧与 refer_image 共用 reference_image 角色但当前结构每角色仅一项，因此中间帧的同等图片限制保留在本说明；并非不支持。"
@@ -960,19 +1009,17 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-29T01:56:53Z",
+            "checked_at": "2026-11-25T10:30:52Z",
             "source_ids": [
               "audit-20261029-4-0-text-to-video",
               "audit-20261029-4-0-image-to-video",
               "audit-20261029-4-0-video-omni",
-              "audit-20261029-4-0-elements",
-              "audit-20261029-4-0-voice-customization",
-              "media-io-callbacks"
+              "media-io-updates"
             ],
-            "evidence": "evidence/kling/2026-10-29-audit.md",
-            "notes": "逐操作核对输入、原样字段、枚举、缺省与输出；不继承 3.0 字段或预告中的 4K。"
+            "evidence": "evidence/kling/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
           },
-          "notes": "已覆盖三个生成接口。缺项：输出容器格式、单任务产物数量上限未明确；MB 字节换算、contents 中 prompt / 首帧是否必填未明确；素材索引 id 与混合数量限制用 notes 表达；Omni 中间帧未另建同角色输入，见操作说明。官方音色/主体需列表接口，静态完整取值未知。"
+          "notes": "已覆盖三个生成接口。缺项：输出容器格式、单任务产物数量上限未明确；MB 字节换算、contents 中 prompt / 首帧是否必填未明确；素材索引 id 与混合数量限制用 notes 表达；Omni 中间帧未另建同角色输入，见操作说明。官方音色/主体需列表接口，静态完整取值未知。 文生和全能参考新增 4:3、3:4。 三个生成操作均支持 4k；HDR 可用于 1080p 或 4k。"
         },
         "reasoning": {
           "support": "unknown",
@@ -4686,12 +4733,13 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:23:25.285755+00:00",
+              "checked_at": "2026-11-25T10:30:52Z",
               "source_ids": [
-                "audit-prices-md"
+                "audit-prices-md",
+                "media-io-updates"
               ],
-              "evidence": "evidence/kling/2026-11-11-refresh.md",
-              "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+              "evidence": "evidence/kling/2026-11-25-refresh.md",
+              "notes": "已核对官方公开文档。"
             },
             "notes": "有输入视频另为0.4元×总计费时长（输入<=输出取输出×2，否则输入+输出）；不与本无输入视频基准叠加。",
             "time_basis": "unknown",
@@ -4700,12 +4748,13 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:23:25.285755+00:00",
+          "checked_at": "2026-11-25T10:30:52Z",
           "source_ids": [
-            "audit-prices-md"
+            "audit-prices-md",
+            "media-io-updates"
           ],
-          "evidence": "evidence/kling/2026-11-11-refresh.md",
-          "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+          "evidence": "evidence/kling/2026-11-25-refresh.md",
+          "notes": "已核对官方公开文档。"
         },
         "notes": "有输入视频另为0.4元×总计费时长（输入<=输出取输出×2，否则输入+输出）；不与本无输入视频基准叠加。"
       },
@@ -4816,7 +4865,9 @@
                     "21:9",
                     "16:9",
                     "9:16",
-                    "1:1"
+                    "1:1",
+                    "4:3",
+                    "3:4"
                   ],
                   "min": null,
                   "max": null,
@@ -5320,6 +5371,8 @@
                     "16:9",
                     "9:16",
                     "1:1",
+                    "4:3",
+                    "3:4",
                     "adaptive"
                   ],
                   "min": null,
@@ -5423,16 +5476,17 @@
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:25:31.171209+00:00",
+            "checked_at": "2026-11-25T10:30:52Z",
             "source_ids": [
               "refresh-4-flash-t2v",
               "refresh-4-flash-i2v",
-              "refresh-4-flash-omni"
+              "refresh-4-flash-omni",
+              "media-io-updates"
             ],
-            "evidence": "evidence/kling/2026-11-11-refresh.md",
-            "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
+            "evidence": "evidence/kling/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
           },
-          "notes": "三个接口已核对，Flash仅首帧/无多关键帧/无音色参考；输出容器、URL精确有效期与某些组合条件未明，保持partial。"
+          "notes": "三个接口已核对，Flash仅首帧/无多关键帧/无音色参考；输出容器、URL精确有效期与某些组合条件未明，保持partial。 文生和全能参考新增 4:3、3:4。"
         },
         "reasoning": {
           "support": "unknown",
@@ -5466,6 +5520,188 @@
             "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
           },
           "notes": "接口是视频生成任务，提示词与视频时长限制不等于文本对话 token 窗口。"
+        }
+      }
+    },
+    {
+      "id": "kling-image-4-0",
+      "request_id": null,
+      "display_name": "Kling Image 4.0",
+      "modalities": [
+        "image"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:32:54Z",
+        "source_ids": [
+          "current-kling-image-map",
+          "media-io-updates",
+          "current-kling-image-create"
+        ],
+        "evidence": "evidence/kling/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "可灵图片 4.0 标准 2K 单图模式。",
+            "rates": [
+              {
+                "meter": "input_images",
+                "amount": "0.02",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "输入为参考图加主体数。"
+                }
+              },
+              {
+                "meter": "generated_images",
+                "amount": "0.4",
+                "per": 1,
+                "unit": "image",
+                "quantity": {
+                  "source": "unknown",
+                  "fields": [],
+                  "included_units": null,
+                  "minimum_units": null,
+                  "rounding": "unknown",
+                  "increment": null,
+                  "notes": "输出按产出图张数。"
+                }
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:32:54Z",
+              "source_ids": [
+                "current-kling-image-prices"
+              ],
+              "evidence": "evidence/kling/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "每个引用主体计作一张参考图；输出按实出张数。4K、8K 和长图价格为独立规格。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:32:54Z",
+          "source_ids": [
+            "current-kling-image-prices"
+          ],
+          "evidence": "evidence/kling/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
+        },
+        "notes": "每个引用主体计作一张参考图；输出按实出张数。4K、8K 和长图价格为独立规格。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/kling/2026-11-25-refresh.md",
+          "notes": "已有唯一按量现金基准。"
+        },
+        "notes": "已维护唯一按量现金基准。"
+      },
+      "notes": "该图片模型通过 /image-generation/kling-4.0 或 /long-image-generation/kling-4.0 路径选型，请求体无型号参数。能力地图短码与现有视频请求名同为 kling-4.0；目录的单产品请求名命名空间保留为空，精确路径存入证据。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": null,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [],
+        "interface_assessment": {
+          "coverage": "unknown",
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "current-kling-image-map",
+              "current-kling-image-create",
+              "current-kling-image-long"
+            ],
+            "evidence": "evidence/kling/2026-11-25-refresh.md",
+            "notes": "官方已明确图片路径式异步协议；当前协议注册表没有可灵图片协议。"
+          },
+          "notes": "官方已明确图片路径式异步协议；当前协议注册表没有可灵图片协议。"
+        },
+        "media_io": {
+          "status": "unknown",
+          "operations": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "current-kling-image-map",
+              "current-kling-image-create",
+              "current-kling-image-long"
+            ],
+            "evidence": "evidence/kling/2026-11-25-refresh.md",
+            "notes": "官方单图、组图和长图均已找到独立契约；当前没有可用于登记操作的可灵图片协议面，字段与限制记录在证据。"
+          },
+          "notes": "官方单图、组图和长图均已找到独立契约；当前没有可用于登记操作的可灵图片协议面，字段与限制记录在证据。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "current-kling-image-map",
+              "current-kling-image-create",
+              "current-kling-image-long"
+            ],
+            "evidence": "evidence/kling/2026-11-25-refresh.md",
+            "notes": "图片接口文档未披露思考参数、档位或预算。"
+          },
+          "notes": "图片接口文档未披露思考参数、档位或预算。"
+        },
+        "context_assessment": {
+          "status": "not_applicable",
+          "reported_value": null,
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:32:54Z",
+            "source_ids": [
+              "current-kling-image-map",
+              "current-kling-image-create",
+              "current-kling-image-long"
+            ],
+            "evidence": "evidence/kling/2026-11-25-refresh.md",
+            "notes": "图片生成任务不适用文本对话窗口，提示词字符上限属于请求约束。"
+          },
+          "notes": "图片生成任务不适用文本对话窗口，提示词字符上限属于请求约束。"
         }
       }
     }

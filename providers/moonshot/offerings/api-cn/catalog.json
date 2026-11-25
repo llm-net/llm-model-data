@@ -27,11 +27,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:05:01.300149Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-models-md"
+          "catalog",
+          "pricing"
         ],
-        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "evidence": "evidence/moonshot/2026-11-25-refresh.md",
         "notes": "官方当前模型表仍列本型号。K3 系列与 Kimi Code 产品分开。"
       },
       "usage_prices": {
@@ -76,12 +77,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:05:01.300149Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-pricing-html",
                 "audit-context-cache"
               ],
-              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "evidence": "evidence/moonshot/2026-11-25-refresh.md",
               "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。",
@@ -91,12 +92,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:05:01.300149Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-pricing-html",
             "audit-context-cache"
           ],
-          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "evidence": "evidence/moonshot/2026-11-25-refresh.md",
           "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。"
@@ -234,11 +235,11 @@
           "reported_value": "1,048,576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "audit-pricing-html"
+              "pricing"
             ],
-            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "evidence": "evidence/moonshot/2026-11-25-refresh.md",
             "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "官方定价页明确按系列给出整数上下文窗口，不能用输出上限替代窗口。"
@@ -257,12 +258,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:24.166773+00:00",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-pricing-md",
-          "catalog"
+          "catalog",
+          "pricing"
         ],
-        "evidence": "evidence/moonshot/2026-11-11-refresh.md",
+        "evidence": "evidence/moonshot/2026-11-25-refresh.md",
         "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
       },
       "usage_prices": {
@@ -301,11 +302,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:05:01.300149Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-pricing-html"
               ],
-              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "evidence": "evidence/moonshot/2026-11-25-refresh.md",
               "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。",
@@ -315,11 +316,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:05:01.300149Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-pricing-html"
           ],
-          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "evidence": "evidence/moonshot/2026-11-25-refresh.md",
           "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。"
@@ -409,11 +410,11 @@
           "reported_value": "262,144",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "audit-pricing-html"
+              "pricing"
             ],
-            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "evidence": "evidence/moonshot/2026-11-25-refresh.md",
             "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "官方定价页明确按系列给出整数上下文窗口，不能用输出上限替代窗口。"
@@ -432,12 +433,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:24.166773+00:00",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-pricing-md",
-          "catalog"
+          "catalog",
+          "pricing"
         ],
-        "evidence": "evidence/moonshot/2026-11-11-refresh.md",
+        "evidence": "evidence/moonshot/2026-11-25-refresh.md",
         "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
       },
       "usage_prices": {
@@ -476,11 +477,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:05:01.300149Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-pricing-html"
               ],
-              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "evidence": "evidence/moonshot/2026-11-25-refresh.md",
               "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。",
@@ -490,11 +491,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:05:01.300149Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-pricing-html"
           ],
-          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "evidence": "evidence/moonshot/2026-11-25-refresh.md",
           "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。"
@@ -583,11 +584,11 @@
           "reported_value": "262,144",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "audit-pricing-html"
+              "pricing"
             ],
-            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "evidence": "evidence/moonshot/2026-11-25-refresh.md",
             "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "官方定价页明确按系列给出整数上下文窗口，不能用输出上限替代窗口。"
@@ -606,12 +607,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:23:24.166773+00:00",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-pricing-md",
-          "catalog"
+          "catalog",
+          "pricing"
         ],
-        "evidence": "evidence/moonshot/2026-11-11-refresh.md",
+        "evidence": "evidence/moonshot/2026-11-25-refresh.md",
         "notes": "本轮独立核对官方公开资料；未用真实 Key 推理或扣费。"
       },
       "usage_prices": {
@@ -650,11 +651,11 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:05:01.300149Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-pricing-html"
               ],
-              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "evidence": "evidence/moonshot/2026-11-25-refresh.md",
               "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。",
@@ -664,11 +665,11 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:05:01.300149Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-pricing-html"
           ],
-          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "evidence": "evidence/moonshot/2026-11-25-refresh.md",
           "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。"
@@ -759,11 +760,11 @@
           "reported_value": "262,144",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "audit-pricing-html"
+              "pricing"
             ],
-            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "evidence": "evidence/moonshot/2026-11-25-refresh.md",
             "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "官方定价页明确按系列给出整数上下文窗口，不能用输出上限替代窗口。"
@@ -782,11 +783,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:05:01.300149Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-models-md"
+          "catalog",
+          "pricing"
         ],
-        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "evidence": "evidence/moonshot/2026-11-25-refresh.md",
         "notes": "官方当前模型表仍列本型号。K3 系列与 Kimi Code 产品分开。"
       },
       "usage_prices": {
@@ -831,12 +833,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:05:01.300149Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-pricing-html",
                 "audit-context-cache"
               ],
-              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "evidence": "evidence/moonshot/2026-11-25-refresh.md",
               "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。",
@@ -846,12 +848,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:05:01.300149Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-pricing-html",
             "audit-context-cache"
           ],
-          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "evidence": "evidence/moonshot/2026-11-25-refresh.md",
           "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。"
@@ -989,11 +991,11 @@
           "reported_value": "1,048,576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "audit-pricing-html"
+              "pricing"
             ],
-            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "evidence": "evidence/moonshot/2026-11-25-refresh.md",
             "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "官方定价页明确按系列给出整数上下文窗口，不能用输出上限替代窗口。"
@@ -1012,11 +1014,12 @@
       "plan_ids": [],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-10-23T22:05:01.300149Z",
+        "checked_at": "2026-11-25T10:29:34Z",
         "source_ids": [
-          "audit-models-md"
+          "catalog",
+          "pricing"
         ],
-        "evidence": "evidence/moonshot/2026-10-24-audit.md",
+        "evidence": "evidence/moonshot/2026-11-25-refresh.md",
         "notes": "官方当前模型表仍列本型号。K3 系列与 Kimi Code 产品分开。"
       },
       "usage_prices": {
@@ -1061,12 +1064,12 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:05:01.300149Z",
+              "checked_at": "2026-11-25T10:29:34Z",
               "source_ids": [
                 "audit-pricing-html",
                 "audit-context-cache"
               ],
-              "evidence": "evidence/moonshot/2026-10-24-audit.md",
+              "evidence": "evidence/moonshot/2026-11-25-refresh.md",
               "notes": "逐项核对官方文档，未用真实 Key 调用。"
             },
             "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。",
@@ -1076,12 +1079,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:05:01.300149Z",
+          "checked_at": "2026-11-25T10:29:34Z",
           "source_ids": [
             "audit-pricing-html",
             "audit-context-cache"
           ],
-          "evidence": "evidence/moonshot/2026-10-24-audit.md",
+          "evidence": "evidence/moonshot/2026-11-25-refresh.md",
           "notes": "逐项核对官方文档，未用真实 Key 调用。"
         },
         "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。"
@@ -1219,11 +1222,11 @@
           "reported_value": "1,048,576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-10-23T22:05:01.300149Z",
+            "checked_at": "2026-11-25T10:29:34Z",
             "source_ids": [
-              "audit-pricing-html"
+              "pricing"
             ],
-            "evidence": "evidence/moonshot/2026-10-24-audit.md",
+            "evidence": "evidence/moonshot/2026-11-25-refresh.md",
             "notes": "逐项核对官方文档，未用真实 Key 调用。"
           },
           "notes": "官方定价页明确按系列给出整数上下文窗口，不能用输出上限替代窗口。"

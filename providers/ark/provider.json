@@ -368,6 +368,42 @@
       "url": "https://www.volcengine.com/docs/6561/1257544",
       "purpose": "models",
       "notes": "豆包语音音色列表：「豆包语音合成模型2.0」音色与外语音色的 voice_type 及展示名。媒体输入输出（capabilities.media_io）专项来源；UTC 取得时间、页面小节与逐型号结论见 evidence/ark/2026-09-28-media-io.md。"
+    },
+    {
+      "id": "current-model-release",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/model-release-announcement.md",
+      "purpose": "models",
+      "notes": "按量新型号与 Seed Evolving 同名更新公告。"
+    },
+    {
+      "id": "current-agent-release",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-model-release.md",
+      "purpose": "models",
+      "notes": "Agent Plan 个人版独立型号上线公告。"
+    },
+    {
+      "id": "current-agent-visual",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-visual-models.md",
+      "purpose": "models",
+      "notes": "Agent Plan 视觉能力、请求路径和独立型号参数。"
+    },
+    {
+      "id": "current-video-create",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/create-video-generation-task-api.md",
+      "purpose": "models",
+      "notes": "按量视频任务参数与型号限制。"
+    },
+    {
+      "id": "current-seedream-5-5",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/seedream-5-5.md",
+      "purpose": "models",
+      "notes": "Seedream 5.5 独立能力和调用教程。"
+    },
+    {
+      "id": "current-glm54-maker-prices",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "purpose": "pricing",
+      "notes": "方舟无按量同型号价格时核对智谱国内当前价格。"
     }
   ],
   "notes": "官方入口与本次核对来源；逐模型、价格、套餐的确认结论见 verification 和 evidence。"

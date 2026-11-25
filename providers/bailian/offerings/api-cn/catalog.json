@@ -6228,7 +6228,7 @@
               },
               {
                 "meter": "input_cached_tokens",
-                "amount": "0.2",
+                "amount": "0.04",
                 "per": 1000000,
                 "unit": "token"
               },
@@ -6246,16 +6246,16 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:14:21.233768Z",
+              "checked_at": "2026-11-25T10:38:08Z",
               "source_ids": [
                 "pricing",
-                "audit-current-context-cache",
-                "audit-current-deepseek-v4-1-flash"
+                "current-qwen-cache",
+                "current-deepseek-cache-cut"
               ],
-              "evidence": "evidence/bailian/2026-10-24-audit.md",
-              "notes": "本轮核对官方当前正文；未用真实Key实调。"
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "现行现金价表给输入与输出；缓存文档给两型号在忙闲各档输入价的固定 2%。"
             },
-            "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。",
+            "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。 缓存命中价格为相同计费档输入价的 2%。公告计划 2026-11-11 00:00（北京时间），实际生效时刻未独立确认。",
             "time_basis": "unknown",
             "charge_on": "unknown",
             "time_pricing": {
@@ -6276,7 +6276,7 @@
                     },
                     {
                       "meter": "input_cached_tokens",
-                      "amount": "0.2",
+                      "amount": "0.04",
                       "per": 1000000,
                       "unit": "token"
                     },
@@ -6300,7 +6300,7 @@
                     },
                     {
                       "meter": "input_cached_tokens",
-                      "amount": "0.1",
+                      "amount": "0.02",
                       "per": 1000000,
                       "unit": "token"
                     },
@@ -6318,14 +6318,14 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:14:21.233768Z",
+          "checked_at": "2026-11-25T10:38:08Z",
           "source_ids": [
             "pricing",
-            "audit-current-context-cache",
-            "audit-current-deepseek-v4-1-flash"
+            "current-qwen-cache",
+            "current-deepseek-cache-cut"
           ],
-          "evidence": "evidence/bailian/2026-10-24-audit.md",
-          "notes": "本轮核对官方当前正文；未用真实Key实调。"
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "现行现金价表给输入与输出；缓存文档给两型号在忙闲各档输入价的固定 2%。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -6466,7 +6466,7 @@
               },
               {
                 "meter": "input_cached_tokens",
-                "amount": "0.2",
+                "amount": "0.04",
                 "per": 1000000,
                 "unit": "token"
               },
@@ -6484,15 +6484,16 @@
             "reference_origin": null,
             "verification": {
               "status": "verified",
-              "checked_at": "2026-10-23T22:14:21.233768Z",
+              "checked_at": "2026-11-25T10:38:08Z",
               "source_ids": [
                 "pricing",
-                "audit-current-context-cache"
+                "current-qwen-cache",
+                "current-deepseek-cache-cut"
               ],
-              "evidence": "evidence/bailian/2026-10-24-audit.md",
-              "notes": "本轮核对官方当前正文；未用真实Key实调。"
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "现行现金价表给输入与输出；缓存文档给两型号在忙闲各档输入价的固定 2%。"
             },
-            "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。",
+            "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。 缓存命中价格为相同计费档输入价的 2%。公告计划 2026-11-11 00:00（北京时间），实际生效时刻未独立确认。",
             "time_basis": "unknown",
             "charge_on": "unknown",
             "time_pricing": {
@@ -6513,7 +6514,7 @@
                     },
                     {
                       "meter": "input_cached_tokens",
-                      "amount": "0.2",
+                      "amount": "0.04",
                       "per": 1000000,
                       "unit": "token"
                     },
@@ -6537,7 +6538,7 @@
                     },
                     {
                       "meter": "input_cached_tokens",
-                      "amount": "0.1",
+                      "amount": "0.02",
                       "per": 1000000,
                       "unit": "token"
                     },
@@ -6555,13 +6556,14 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-10-23T22:14:21.233768Z",
+          "checked_at": "2026-11-25T10:38:08Z",
           "source_ids": [
             "pricing",
-            "audit-current-context-cache"
+            "current-qwen-cache",
+            "current-deepseek-cache-cut"
           ],
-          "evidence": "evidence/bailian/2026-10-24-audit.md",
-          "notes": "本轮核对官方当前正文；未用真实Key实调。"
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "现行现金价表给输入与输出；缓存文档给两型号在忙闲各档输入价的固定 2%。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。"
       },
@@ -7448,6 +7450,716 @@
             "notes": "本轮核对官方当前正文；未用真实Key实调。"
           },
           "notes": "本产品精确模型卡上下文整数字段；不使用输入上限或计价阶梯。"
+        }
+      }
+    },
+    {
+      "id": "qwen4-max",
+      "request_id": "qwen4-max",
+      "display_name": "Qwen4-Max",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:30:52Z",
+        "source_ids": [
+          "current-qwen4-max"
+        ],
+        "evidence": "evidence/bailian/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "华北2（北京）标准在线价，显式缓存采用默认 5 分钟创建档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "12.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:30:52Z",
+              "source_ids": [
+                "pricing",
+                "current-qwen4-max",
+                "current-qwen4-cache",
+                "current-qwen4-cache-price"
+              ],
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "普通输入、命中、创建用量互斥；命中价适用显式及隐式缓存。1 小时创建 20 元/百万 token 为替代档位；新用户试用优惠独立。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:30:52Z",
+          "source_ids": [
+            "pricing",
+            "current-qwen4-max",
+            "current-qwen4-cache",
+            "current-qwen4-cache-price"
+          ],
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
+        },
+        "notes": "普通输入、命中、创建用量互斥；命中价适用显式及隐式缓存。1 小时创建 20 元/百万 token 为替代档位；新用户试用优惠独立。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "华北2（北京）中国内地正式版。图像与视频仅为输入模态，输出为文本。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 262144,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": true,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "bailian_text"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:52Z",
+            "source_ids": [
+              "current-qwen4-max"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
+          },
+          "notes": "型号页逐面列出 Chat Completions、Responses、Messages 与 DashScope。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "toggle",
+                  "parameter": "enable_thinking",
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": true,
+                  "notes": "采用本产品官方开关与默认值。"
+                },
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "minimal 对应 low、medium 对应 high、max 对应 xhigh。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": "thinking_budget",
+                  "values": [],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "两参数省略时预算 131072，验参的完整上下界未确认。"
+                }
+              ],
+              "notes": "仅记录当前产品文档明确的请求参数；其余控制待核。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "minimal 对应 low、medium 对应 high、max 对应 xhigh。 官方显式缓存示例以 none 关闭思考。"
+                }
+              ],
+              "notes": "仅记录当前产品文档明确的请求参数；其余控制待核。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "medium 对应 high、max 对应 xhigh。"
+                }
+              ],
+              "notes": "仅记录当前产品文档明确的请求参数；其余控制待核。"
+            },
+            {
+              "interface": "bailian_text",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "parameters.reasoning_effort",
+                  "values": [
+                    "low",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "high",
+                  "notes": "minimal 对应 low、medium 对应 high、max 对应 xhigh。"
+                }
+              ],
+              "notes": "仅记录当前产品文档明确的请求参数；其余控制待核。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:52Z",
+            "source_ids": [
+              "current-qwen4-max",
+              "current-qwen4-cache"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "默认档 high；Chat 与 Responses 的关闭已独立确认，Messages/原生关闭写法与预算的完整边界继续待核。"
+          },
+          "notes": "默认档 high；Chat 与 Responses 的关闭已独立确认，Messages/原生关闭写法与预算的完整边界继续待核。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:30:52Z",
+            "source_ids": [
+              "current-qwen4-max"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "型号页明确上下文 1,000,000；非思考最大输入/输出 991808/131072，思考最大输入/输出 983616/262144。官方分别列出各上限，不相加。"
+          },
+          "notes": "型号页明确上下文 1,000,000；非思考最大输入/输出 991808/131072，思考最大输入/输出 983616/262144。官方分别列出各上限，不相加。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k3-1-pro",
+      "request_id": "kimi-k3.1-pro",
+      "display_name": "Kimi K3.1 Pro",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:39:32Z",
+        "source_ids": [
+          "current-bailian-launches",
+          "current-kimi-k31",
+          "pricing"
+        ],
+        "evidence": "evidence/bailian/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "华北2（北京）标准在线单价，采用公开缓存命中费率。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "13",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "68",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:39:32Z",
+              "source_ids": [
+                "pricing",
+                "current-kimi-k31",
+                "current-bailian-launches"
+              ],
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "同表的 Prime 和标准版分别保存；显式缓存写入未选为本条估算基准。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:39:32Z",
+          "source_ids": [
+            "pricing",
+            "current-kimi-k31",
+            "current-bailian-launches"
+          ],
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
+        },
+        "notes": "同表的 Prime 和标准版分别保存；显式缓存写入未选为本条估算基准。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "北京百炼部署的独立请求和标价。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": true,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "bailian_text"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:39:32Z",
+            "source_ids": [
+              "current-kimi-k31",
+              "current-kimi-api"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "已核对官方公开文档。"
+          },
+          "notes": "百炼该精确部署型号卡逐面列出 Chat、Responses、Messages 和 DashScope。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "百炼部署本型号独立档位。"
+                },
+                {
+                  "kind": "toggle",
+                  "parameter": "enable_thinking",
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": true,
+                  "notes": "默认开启；该产品说明允许关闭。"
+                }
+              ],
+              "notes": "本协议支持关闭；官方不支持 thinking_budget。"
+            },
+            {
+              "interface": "openai_responses",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "reasoning.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "百炼部署本型号独立档位。"
+                }
+              ],
+              "notes": "未发现逐协议的完整思考关闭参数与默认行为。"
+            },
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "output_config.effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "百炼部署本型号独立档位。"
+                }
+              ],
+              "notes": "未发现逐协议的完整思考关闭参数与默认行为。"
+            },
+            {
+              "interface": "bailian_text",
+              "surface": "api_request",
+              "can_disable": true,
+              "default_behavior": "enabled",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": "parameters.reasoning_effort",
+                  "values": [
+                    "low",
+                    "medium",
+                    "high",
+                    "max"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": "max",
+                  "notes": "百炼部署本型号独立档位。"
+                },
+                {
+                  "kind": "toggle",
+                  "parameter": "parameters.enable_thinking",
+                  "values": [
+                    true,
+                    false
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": true,
+                  "notes": "默认开启；该产品说明允许关闭。"
+                }
+              ],
+              "notes": "本协议支持关闭；官方不支持 thinking_budget。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:39:32Z",
+            "source_ids": [
+              "current-kimi-k31",
+              "current-kimi-api"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "四个协议支持 low/medium/high/max，默认 max；Chat 与 DashScope 关闭参数确认，另两面尚未独立确认。"
+          },
+          "notes": "四个协议支持 low/medium/high/max，默认 max；Chat 与 DashScope 关闭参数确认，另两面尚未独立确认。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "100 万 token（型号卡）、1M（推荐表）",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:39:32Z",
+            "source_ids": [
+              "current-kimi-k31",
+              "catalog"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "百炼型号卡以“100 万 token”表述，推荐表标 1M；尚未取得直接的整数规格与最大输出。"
+          },
+          "notes": "百炼型号卡以“100 万 token”表述，推荐表标 1M；尚未取得直接的整数规格与最大输出。"
+        }
+      }
+    },
+    {
+      "id": "kimi-k3-1-pro-prime",
+      "request_id": "kimi-k3.1-pro-prime",
+      "display_name": "Kimi K3.1 Pro Prime",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:39:32Z",
+        "source_ids": [
+          "current-bailian-launches",
+          "current-kimi-k31",
+          "pricing"
+        ],
+        "evidence": "evidence/bailian/2026-11-25-refresh.md",
+        "notes": "已核对官方公开文档。"
+      },
+      "usage_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "public_list",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "华北2（北京）标准在线单价，采用公开缓存命中费率。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "26",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "1.3",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "136",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": null,
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:39:32Z",
+              "source_ids": [
+                "pricing",
+                "current-kimi-k31",
+                "current-bailian-launches"
+              ],
+              "evidence": "evidence/bailian/2026-11-25-refresh.md",
+              "notes": "核对官方明确标价及适用条件。"
+            },
+            "notes": "同表的 Prime 和标准版分别保存；显式缓存写入未选为本条估算基准。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:39:32Z",
+          "source_ids": [
+            "pricing",
+            "current-kimi-k31",
+            "current-bailian-launches"
+          ],
+          "evidence": "evidence/bailian/2026-11-25-refresh.md",
+          "notes": "核对官方明确标价及适用条件。"
+        },
+        "notes": "同表的 Prime 和标准版分别保存；显式缓存写入未选为本条估算基准。"
+      },
+      "reference_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/bailian/2026-09-16-audit.md",
+          "notes": "已有唯一用量估算基准，不另设第二套价格。"
+        },
+        "notes": "已有唯一用量估算基准，不另设第二套价格。"
+      },
+      "notes": "北京百炼部署的独立请求和标价。 官方上架公告声明 Prime 能力、限制与同平台标准版相同。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": null,
+        "max_output_tokens": null,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": true,
+        "interfaces": [],
+        "interface_assessment": {
+          "coverage": "unknown",
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "current-kimi-k31",
+              "current-kimi-api",
+              "current-bailian-launches"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "Prime 上架公告确认与同平台标准版同能力；公开接入文档尚未逐接口单列 Prime。"
+          },
+          "notes": "Prime 上架公告确认与同平台标准版同能力；公开接入文档尚未逐接口单列 Prime。"
+        },
+        "reasoning": {
+          "support": "unknown",
+          "coverage": "unknown",
+          "profiles": [],
+          "verification": {
+            "status": "needs_review",
+            "checked_at": null,
+            "source_ids": [
+              "current-kimi-k31",
+              "current-kimi-api",
+              "current-bailian-launches"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "Prime 型号价表确认默认开启且支持非思考；精确协议开关和档位未独立证实。"
+          },
+          "notes": "Prime 型号价表确认默认开启且支持非思考；精确协议开关和档位未独立证实。"
+        },
+        "context_assessment": {
+          "status": "partial",
+          "reported_value": "100 万 token（型号卡）、1M（推荐表）",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:39:32Z",
+            "source_ids": [
+              "current-kimi-k31",
+              "catalog",
+              "current-bailian-launches"
+            ],
+            "evidence": "evidence/bailian/2026-11-25-refresh.md",
+            "notes": "百炼型号卡以“100 万 token”表述，推荐表标 1M；尚未取得直接的整数规格与最大输出。"
+          },
+          "notes": "百炼型号卡以“100 万 token”表述，推荐表标 1M；尚未取得直接的整数规格与最大输出。"
         }
       }
     }

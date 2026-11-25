@@ -68,14 +68,14 @@
       "overage": "pay_as_you_go",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.103609+00:00",
+        "checked_at": "2026-11-25T10:26:17.574538+00:00",
         "source_ids": [
           "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对 Go 10、Go Plus 40 USD/账户/月及新 Go Teams 20 USD/成员/月。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "Go 与 Go Plus 为 $10、$40 每月；Go Teams 每成员 $20/月，最少两席（$40/月），各成员用量分开；服务账号不含在 Go Teams。"
       },
-      "notes": "Go/Go Plus 为单成员工作空间；Go Teams 为多成员工作空间按成员每月20美元，每人限额独立，月中加入仍收20美元并获得完整月额度，服务账号不包括在内。单模型限额及滚动窗口见官方表，不换算模型参考价。"
+      "notes": "Go 与 Go Plus 为 $10、$40 每月；Go Teams 每成员 $20/月，最少两席（$40/月），各成员用量分开；服务账号不含在 Go Teams。"
     },
     {
       "id": "go-plus",
@@ -131,14 +131,14 @@
       "overage": "pay_as_you_go",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.103609+00:00",
+        "checked_at": "2026-11-25T10:26:17.574538+00:00",
         "source_ids": [
           "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对 Go 10、Go Plus 40 USD/账户/月及新 Go Teams 20 USD/成员/月。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "Go 与 Go Plus 为 $10、$40 每月；Go Teams 每成员 $20/月，最少两席（$40/月），各成员用量分开；服务账号不含在 Go Teams。"
       },
-      "notes": "Go/Go Plus 为单成员工作空间；Go Teams 为多成员工作空间按成员每月20美元，每人限额独立，月中加入仍收20美元并获得完整月额度，服务账号不包括在内。单模型限额及滚动窗口见官方表，不换算模型参考价。"
+      "notes": "Go 与 Go Plus 为 $10、$40 每月；Go Teams 每成员 $20/月，最少两席（$40/月），各成员用量分开；服务账号不含在 Go Teams。"
     },
     {
       "id": "go-teams",
@@ -194,14 +194,14 @@
       "overage": "pay_as_you_go",
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.103609+00:00",
+        "checked_at": "2026-11-25T10:26:17.574538+00:00",
         "source_ids": [
           "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对 Go 10、Go Plus 40 USD/账户/月及新 Go Teams 20 USD/成员/月。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "Go 与 Go Plus 为 $10、$40 每月；Go Teams 每成员 $20/月，最少两席（$40/月），各成员用量分开；服务账号不含在 Go Teams。"
       },
-      "notes": "Go/Go Plus 为单成员工作空间；Go Teams 为多成员工作空间按成员每月20美元，每人限额独立，月中加入仍收20美元并获得完整月额度，服务账号不包括在内。单模型限额及滚动窗口见官方表，不换算模型参考价。"
+      "notes": "Go 与 Go Plus 为 $10、$40 每月；Go Teams 每成员 $20/月，最少两席（$40/月），各成员用量分开；服务账号不含在 Go Teams。"
     }
   ],
   "models": [
@@ -221,13 +221,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -293,13 +293,14 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:56.075716+00:00",
+              "checked_at": "2026-11-25T10:40:55+00:00",
               "source_ids": [
-                "ref-kimi-pricing",
+                "r1125-kimi-origin",
+                "ref-kimi-pricing-md",
                 "ref-kimi-cache"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -308,17 +309,18 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:56.075716+00:00",
+          "checked_at": "2026-11-25T10:40:55+00:00",
           "source_ids": [
-            "ref-kimi-pricing",
+            "r1125-kimi-origin",
+            "ref-kimi-pricing-md",
             "ref-kimi-cache"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID kimi-k3；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。 Go 本轮清单仍列该型号；原厂生命周期与此产品独立。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -326,7 +328,7 @@
           "video"
         ],
         "context_window_tokens": 1048576,
-        "max_output_tokens": 131072,
+        "max_output_tokens": 1048576,
         "tool_calling": true,
         "structured_output": true,
         "streaming": null,
@@ -340,16 +342,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。 Go 本轮清单仍列该型号；原厂生命周期与此产品独立。"
         },
         "reasoning": {
           "support": "supported",
@@ -370,39 +373,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -422,13 +423,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -511,7 +512,7 @@
         },
         "notes": "K2 系列不支持单列 Cache Write；本轮原有输入、缓存、输出数字均未变。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID kimi-k2.7-code；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -533,16 +534,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -554,36 +556,34 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "262144",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -764,13 +764,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -830,12 +830,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.278721+00:00",
+              "checked_at": "2026-11-25T10:26:17.664705+00:00",
               "source_ids": [
                 "audit-20261024-ref-zhipu"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -844,16 +844,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.278721+00:00",
+          "checked_at": "2026-11-25T10:26:17.664705+00:00",
           "source_ids": [
             "audit-20261024-ref-zhipu"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID glm-5.3；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -873,16 +873,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -905,39 +906,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -957,13 +956,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1023,12 +1022,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.278721+00:00",
+              "checked_at": "2026-11-25T10:26:17.664705+00:00",
               "source_ids": [
                 "audit-20261024-ref-zhipu"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -1037,16 +1036,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.278721+00:00",
+          "checked_at": "2026-11-25T10:26:17.664705+00:00",
           "source_ids": [
             "audit-20261024-ref-zhipu"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID glm-5.3-flash；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -1068,16 +1067,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -1100,39 +1100,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -1143,7 +1141,7 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [
         "go",
@@ -1151,14 +1149,14 @@
         "go-teams"
       ],
       "verification": {
-        "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "status": "needs_review",
+        "checked_at": null,
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1218,12 +1216,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.278721+00:00",
+              "checked_at": "2026-11-25T10:26:17.664705+00:00",
               "source_ids": [
                 "audit-20261024-ref-zhipu"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -1232,16 +1230,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.278721+00:00",
+          "checked_at": "2026-11-25T10:26:17.664705+00:00",
           "source_ids": [
             "audit-20261024-ref-zhipu"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID glm-5.2；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -1258,7 +1256,7 @@
           "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "complete",
+          "coverage": "partial",
           "verification": {
             "status": "verified",
             "checked_at": "2026-11-11T11:22:56.773122+00:00",
@@ -1270,7 +1268,7 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
         },
         "reasoning": {
           "support": "supported",
@@ -1310,7 +1308,7 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。 当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
         },
         "context_assessment": {
           "status": "known",
@@ -1324,7 +1322,7 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。 当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
         }
       }
     },
@@ -1408,12 +1406,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.278721+00:00",
+              "checked_at": "2026-11-25T10:26:17.664705+00:00",
               "source_ids": [
                 "audit-20261024-ref-zhipu"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -1422,12 +1420,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.278721+00:00",
+          "checked_at": "2026-11-25T10:26:17.664705+00:00",
           "source_ids": [
             "audit-20261024-ref-zhipu"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "金额为人民币/百万 tokens；缓存存储当前为限时免费，不写成永久零价或并入缓存命中；其他规格与附加服务未展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
@@ -1505,13 +1503,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1571,12 +1569,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.634743+00:00",
+              "checked_at": "2026-11-25T10:26:16.858418+00:00",
               "source_ids": [
                 "ref-deepseek-pricing"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "本轮原厂脚注明确中国法定节假日全天谷价；现有 time_pricing 只表达普通周循环、不能表达节假日历，因此节假日不保证精确。这里是原厂估价，不证明 Go 实际路由与扣费。",
             "time_basis": "unknown",
@@ -1649,16 +1647,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.634743+00:00",
+          "checked_at": "2026-11-25T10:26:16.858418+00:00",
           "source_ids": [
             "ref-deepseek-pricing"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "本轮原厂脚注明确中国法定节假日全天谷价；现有 time_pricing 只表达普通周循环、不能表达节假日历，因此节假日不保证精确。这里是原厂估价，不证明 Go 实际路由与扣费。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID deepseek-v4.1-flash；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -1679,16 +1677,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -1711,39 +1710,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -1763,13 +1760,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -1829,12 +1826,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.634743+00:00",
+              "checked_at": "2026-11-25T10:26:16.858418+00:00",
               "source_ids": [
                 "ref-deepseek-pricing"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "本轮原厂脚注明确中国法定节假日全天谷价；现有 time_pricing 只表达普通周循环、不能表达节假日历，因此节假日不保证精确。这里是原厂估价，不证明 Go 实际路由与扣费。",
             "time_basis": "unknown",
@@ -1907,16 +1904,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.634743+00:00",
+          "checked_at": "2026-11-25T10:26:16.858418+00:00",
           "source_ids": [
             "ref-deepseek-pricing"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "本轮原厂脚注明确中国法定节假日全天谷价；现有 time_pricing 只表达普通周循环、不能表达节假日历，因此节假日不保证精确。这里是原厂估价，不证明 Go 实际路由与扣费。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID deepseek-v4-pro；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -1936,16 +1933,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -1967,39 +1965,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -2083,12 +2079,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.634743+00:00",
+              "checked_at": "2026-11-25T10:26:16.858418+00:00",
               "source_ids": [
                 "ref-deepseek-pricing"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "本轮原厂脚注明确中国法定节假日全天谷价；现有 time_pricing 只表达普通周循环、不能表达节假日历，因此节假日不保证精确。这里是原厂估价，不证明 Go 实际路由与扣费。",
             "time_basis": "unknown",
@@ -2161,12 +2157,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.634743+00:00",
+          "checked_at": "2026-11-25T10:26:16.858418+00:00",
           "source_ids": [
             "ref-deepseek-pricing"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "本轮原厂脚注明确中国法定节假日全天谷价；现有 time_pricing 只表达普通周循环、不能表达节假日历，因此节假日不保证精确。这里是原厂估价，不证明 Go 实际路由与扣费。"
       },
@@ -2308,12 +2304,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.634743+00:00",
+              "checked_at": "2026-11-25T10:26:16.858418+00:00",
               "source_ids": [
                 "ref-deepseek-pricing"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "本轮原厂脚注明确中国法定节假日全天谷价；现有 time_pricing 只表达普通周循环、不能表达节假日历，因此节假日不保证精确。这里是原厂估价，不证明 Go 实际路由与扣费。",
             "time_basis": "unknown",
@@ -2386,12 +2382,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.634743+00:00",
+          "checked_at": "2026-11-25T10:26:16.858418+00:00",
           "source_ids": [
             "ref-deepseek-pricing"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "本轮原厂脚注明确中国法定节假日全天谷价；现有 time_pricing 只表达普通周循环、不能表达节假日历，因此节假日不保证精确。这里是原厂估价，不证明 Go 实际路由与扣费。"
       },
@@ -2472,13 +2468,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2561,7 +2557,7 @@
         },
         "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID qwen3.8-max；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -2583,16 +2579,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -2615,7 +2612,7 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 },
                 {
                   "kind": "budget_tokens",
@@ -2624,39 +2621,37 @@
                   "minimum": null,
                   "maximum": 262144,
                   "default": null,
-                  "notes": "官方本产品元数据明确的预算上限；实际请求参数、最小值和默认尚未公布。"
+                  "notes": "本产品元数据公布的预算边界；单位 token。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -2676,13 +2671,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -2765,7 +2760,7 @@
         },
         "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID qwen3.8-flash；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -2787,16 +2782,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -2819,39 +2815,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -3026,13 +3020,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3115,7 +3109,7 @@
         },
         "notes": "缓存命中token与普通输入互斥；prompt_tokens含缓存时先扣命中。显式缓存有另一套创建/命中费率，未混入本隐式缓存基准；不代表全部账单。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID qwen3.7-plus；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -3137,16 +3131,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -3165,39 +3160,37 @@
                   "minimum": null,
                   "maximum": 262144,
                   "default": null,
-                  "notes": "官方本产品元数据明确的预算上限；实际请求参数、最小值和默认尚未公布。"
+                  "notes": "本产品元数据公布的预算边界；单位 token。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -3366,13 +3359,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3432,12 +3425,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.858533+00:00",
+              "checked_at": "2026-11-25T10:26:16.865009+00:00",
               "source_ids": [
-                "ref-minimax-pricing"
+                "r1125-minimax-paygo"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -3446,16 +3439,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.858533+00:00",
+          "checked_at": "2026-11-25T10:26:16.865009+00:00",
           "source_ids": [
-            "ref-minimax-pricing"
+            "r1125-minimax-paygo"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID minimax-m3；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -3477,16 +3470,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -3498,36 +3492,34 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -3572,12 +3564,13 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [
-            "ref-minimax-pricing"
+            "r1125-minimax-retirement",
+            "r1125-minimax-paygo"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "本轮未取得该精确原厂型号的现行标准公开价；历史价格保留 Git，不从 Go 用量额度表或其他型号补价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "MiniMax 国内 API 自 2026-11-18 正式停止 M2.5 / M2.7 系列；现行原厂价未公开。Go 当期精确清单也未列该型号，保留历史条目。"
         },
-        "notes": "本轮未取得该精确原厂型号的现行标准公开价；历史价格保留 Git，不从 Go 用量额度表或其他型号补价。"
+        "notes": "MiniMax 国内 API 自 2026-11-18 正式停止 M2.5 / M2.7 系列；现行原厂价未公开。Go 当期精确清单也未列该型号，保留历史条目。"
       },
       "notes": "本轮 Go Endpoints 与匿名模型接口均缺此历史 ID，保留记录且 availability=unknown；不从同族新名称猜别名或退役。",
       "capabilities": {
@@ -3677,12 +3670,13 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [
-            "ref-minimax-pricing"
+            "r1125-minimax-retirement",
+            "r1125-minimax-paygo"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "MiniMax 当前原厂价表已无 M2.5 精确标准价；不拿百炼同名转售价或 Go 用量额度换算价补原厂参考。Go 型号接口仍列出，未据此删除模型。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "MiniMax 国内 API 自 2026-11-18 正式停止 M2.5 / M2.7 系列；现行原厂价未公开。Go 当期精确清单也未列该型号，保留历史条目。"
         },
-        "notes": "MiniMax 当前原厂价表已无 M2.5 精确标准价；不拿百炼同名转售价或 Go 用量额度换算价补原厂参考。Go 型号接口仍列出，未据此删除模型。"
+        "notes": "MiniMax 国内 API 自 2026-11-18 正式停止 M2.5 / M2.7 系列；现行原厂价未公开。Go 当期精确清单也未列该型号，保留历史条目。"
       },
       "notes": "本轮 Go Endpoints 与匿名模型接口均缺此历史 ID，保留记录且 availability=unknown；不从同族新名称猜别名或退役。",
       "capabilities": {
@@ -3758,13 +3752,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3818,12 +3812,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.055718+00:00",
+              "checked_at": "2026-11-25T10:26:17.196718+00:00",
               "source_ids": [
                 "ref-mimo-pricing"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "小米 MiMo 国内普通 API 实时标准价；缓存写入限免不记永久零价，不取 Batch 或 Ultraspeed 价格。",
             "time_basis": "unknown",
@@ -3832,16 +3826,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.055718+00:00",
+          "checked_at": "2026-11-25T10:26:17.196718+00:00",
           "source_ids": [
             "ref-mimo-pricing"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "小米 MiMo 国内普通 API 实时标准价；缓存写入限免不记永久零价，不取 Batch 或 Ultraspeed 价格。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID mimo-v2.6-pro；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -3864,16 +3858,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -3885,36 +3880,34 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -3934,13 +3927,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -3994,12 +3987,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.055718+00:00",
+              "checked_at": "2026-11-25T10:26:17.196718+00:00",
               "source_ids": [
                 "ref-mimo-pricing"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "小米 MiMo 国内普通 API 实时标准价；缓存写入限免不记永久零价，不取 Batch 或 Ultraspeed 价格。",
             "time_basis": "unknown",
@@ -4008,16 +4001,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.055718+00:00",
+          "checked_at": "2026-11-25T10:26:17.196718+00:00",
           "source_ids": [
             "ref-mimo-pricing"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "小米 MiMo 国内普通 API 实时标准价；缓存写入限免不记永久零价，不取 Batch 或 Ultraspeed 价格。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID mimo-v2.6-flash；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -4040,16 +4033,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -4061,36 +4055,34 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -4142,7 +4134,7 @@
           "evidence": "evidence/opencode/2026-11-11-refresh.md",
           "notes": "小米官网确认原厂 API 于北京时间 2026-10-21 10:00 下线，现价表无该精确型号标准价；Go 文档和型号接口仍列出，保留 Go 身份但参考价 unknown，不能把原厂下线当作 Go 下线。"
         },
-        "notes": "小米官网确认原厂 API 于北京时间 2026-10-21 10:00 下线，现价表无该精确型号标准价；Go 文档和型号接口仍列出，保留 Go 身份但参考价 unknown，不能把原厂下线当作 Go 下线。"
+        "notes": "小米官网确认原厂 API 于北京时间 2026-10-21 10:00 下线，现价表无该精确型号标准价；Go 当期匿名清单未列该请求名，保留历史条目，参考价仍为 unknown。"
       },
       "notes": "当前 Go Endpoints 仍列精确 ID，但匿名模型接口本次未列，故本轮可用性记 unknown；没有退役或删除结论。",
       "capabilities": {
@@ -4254,7 +4246,7 @@
           "evidence": "evidence/opencode/2026-11-11-refresh.md",
           "notes": "小米官网确认原厂 API 于北京时间 2026-10-21 10:00 下线，现价表无该精确型号标准价；Go 文档和型号接口仍列出，保留 Go 身份但参考价 unknown，不能把原厂下线当作 Go 下线。"
         },
-        "notes": "小米官网确认原厂 API 于北京时间 2026-10-21 10:00 下线，现价表无该精确型号标准价；Go 文档和型号接口仍列出，保留 Go 身份但参考价 unknown，不能把原厂下线当作 Go 下线。"
+        "notes": "小米官网确认原厂 API 于北京时间 2026-10-21 10:00 下线，现价表无该精确型号标准价；Go 当期匿名清单未列该请求名，保留历史条目，参考价仍为 unknown。"
       },
       "notes": "当前 Go Endpoints 仍列精确 ID，但匿名模型接口本次未列，故本轮可用性记 unknown；没有退役或删除结论。",
       "capabilities": {
@@ -4325,7 +4317,7 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [
         "go",
@@ -4333,14 +4325,14 @@
         "go-teams"
       ],
       "verification": {
-        "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "status": "needs_review",
+        "checked_at": null,
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4368,7 +4360,7 @@
         },
         "notes": "原厂现页只公布限时折扣 2 / 0.04 / 8 CNY 每百万 token，未取得非促销标准价；按本仓标准基准规则不把限时优惠或 Go 限时免费填成标准参考价。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID longcat-2.0；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -4385,7 +4377,7 @@
           "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "complete",
+          "coverage": "partial",
           "verification": {
             "status": "verified",
             "checked_at": "2026-11-11T11:22:56.773122+00:00",
@@ -4397,7 +4389,7 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
         },
         "reasoning": {
           "support": "supported",
@@ -4424,7 +4416,7 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。 当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
         },
         "context_assessment": {
           "status": "known",
@@ -4438,7 +4430,7 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。 当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
         }
       }
     },
@@ -4458,13 +4450,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4524,12 +4516,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.958982+00:00",
+              "checked_at": "2026-11-25T10:26:17.088962+00:00",
               "source_ids": [
-                "ref-tokenhub-pricing"
+                "audit-20261024-ref-hunyuan"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -4538,22 +4530,22 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.958982+00:00",
+          "checked_at": "2026-11-25T10:26:17.088962+00:00",
           "source_ids": [
-            "ref-tokenhub-pricing"
+            "audit-20261024-ref-hunyuan"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID hy4-preview；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text"
         ],
-        "context_window_tokens": 1024000,
-        "max_output_tokens": 64000,
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 65536,
         "tool_calling": true,
         "structured_output": null,
         "streaming": null,
@@ -4567,16 +4559,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -4598,39 +4591,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
-          "reported_value": "1024000",
+          "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -4650,13 +4641,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4716,12 +4707,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.958982+00:00",
+              "checked_at": "2026-11-25T10:26:17.088962+00:00",
               "source_ids": [
-                "ref-tokenhub-pricing"
+                "audit-20261024-ref-hunyuan"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -4730,16 +4721,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.958982+00:00",
+          "checked_at": "2026-11-25T10:26:17.088962+00:00",
           "source_ids": [
-            "ref-tokenhub-pricing"
+            "audit-20261024-ref-hunyuan"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "仅一组估算基准，其他规格、折扣及附加服务不展开。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID hy3；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -4759,16 +4750,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -4791,39 +4783,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "256000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -4843,13 +4833,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -4909,12 +4899,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.317433+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
                 "audit-20261024-ref-openai"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "原厂 Standard 短上下文基准，选 30 分钟缓存写入；12 小时写入为 USD 0.50 / 百万 token，不与本档并加。输入超过 272K 的长上下文价不在本基准。",
             "time_basis": "unknown",
@@ -4923,21 +4913,20 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.317433+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
             "audit-20261024-ref-openai"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "原厂 Standard 短上下文基准，选 30 分钟缓存写入；12 小时写入为 USD 0.50 / 百万 token，不与本档并加。输入超过 272K 的长上下文价不在本基准。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID gpt-5.6-luna；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
-          "image",
-          "file"
+          "image"
         ],
         "context_window_tokens": 1050000,
         "max_output_tokens": 128000,
@@ -4954,16 +4943,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -4989,39 +4979,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1050000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -5041,13 +5029,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -5107,12 +5095,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.312269+00:00",
+              "checked_at": "2026-11-25T10:26:17.754531+00:00",
               "source_ids": [
                 "audit-20261024-ref-xai"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -5121,21 +5109,20 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.312269+00:00",
+          "checked_at": "2026-11-25T10:26:17.754531+00:00",
           "source_ids": [
             "audit-20261024-ref-xai"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID grok-4.7；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
-          "image",
-          "file"
+          "image"
         ],
         "context_window_tokens": 500000,
         "max_output_tokens": 500000,
@@ -5152,16 +5139,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -5185,39 +5173,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "500000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -5301,12 +5287,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.312269+00:00",
+              "checked_at": "2026-11-25T10:26:17.754531+00:00",
               "source_ids": [
                 "audit-20261024-ref-xai"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -5315,12 +5301,12 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.312269+00:00",
+          "checked_at": "2026-11-25T10:26:17.754531+00:00",
           "source_ids": [
             "audit-20261024-ref-xai"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "长上下文输入/缓存/输出分别为 4 / 1 / 12 USD/百万 tokens；不另建并列规则。美国区域端点溢价和其他服务档不属于此基准。 2026-10-24复查：标准<200k提示档价格不变；US地区1.1倍与Priority2倍不并列。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
@@ -5398,13 +5384,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -5458,12 +5444,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.089322+00:00",
+              "checked_at": "2026-11-25T10:26:17.367014+00:00",
               "source_ids": [
                 "ref-meta-pricing"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "Meta 官网 Muse Spark Contributor 精确档；以数据用于训练许可换取折扣，非普通 Standard 档，无长上下文加价。",
             "time_basis": "unknown",
@@ -5472,22 +5458,21 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.089322+00:00",
+          "checked_at": "2026-11-25T10:26:17.367014+00:00",
           "source_ids": [
             "ref-meta-pricing"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "Meta 官网 Muse Spark Contributor 精确档；以数据用于训练许可换取折扣，非普通 Standard 档，无长上下文加价。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID muse-spark-1.3-contributor；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
           "image",
           "video",
-          "file",
           "audio"
         ],
         "context_window_tokens": 1048576,
@@ -5505,16 +5490,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -5539,39 +5525,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -5591,13 +5575,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -5651,12 +5635,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.089322+00:00",
+              "checked_at": "2026-11-25T10:26:17.367014+00:00",
               "source_ids": [
                 "ref-meta-pricing"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "Meta 官网 Muse Spark Contributor 精确档；以数据用于训练许可换取折扣，非普通 Standard 档，无长上下文加价。",
             "time_basis": "unknown",
@@ -5665,22 +5649,21 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.089322+00:00",
+          "checked_at": "2026-11-25T10:26:17.367014+00:00",
           "source_ids": [
             "ref-meta-pricing"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "Meta 官网 Muse Spark Contributor 精确档；以数据用于训练许可换取折扣，非普通 Standard 档，无长上下文加价。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID muse-spark-1.2-contributor；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
           "image",
           "video",
-          "file",
           "audio"
         ],
         "context_window_tokens": 1048576,
@@ -5698,16 +5681,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -5732,39 +5716,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -5784,13 +5766,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -5856,12 +5838,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.317433+00:00",
+              "checked_at": "2026-11-25T10:26:14.241171+00:00",
               "source_ids": [
                 "audit-20261024-ref-openai"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -5870,21 +5852,20 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.317433+00:00",
+          "checked_at": "2026-11-25T10:26:14.241171+00:00",
           "source_ids": [
             "audit-20261024-ref-openai"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "选择 Standard、输入不超过272,000 token、30分钟缓存写入。12小时写入为输入价2.5倍，长上下文、Fast、Ultrafast、Batch、Flex及地区附加价不并列。缓存读取、未命中输入与写入分量须按官方usage避免重复计量。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID gpt-6-luna；原生入口 https://opencode.ai/inference/go/openai/v1/responses。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
-          "image",
-          "file"
+          "image"
         ],
         "context_window_tokens": 1050000,
         "max_output_tokens": 128000,
@@ -5901,16 +5882,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/responses；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/responses。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -5936,39 +5918,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1050000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -5988,13 +5968,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -6060,12 +6040,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:55.377395+00:00",
+              "checked_at": "2026-11-25T10:26:14.985641+00:00",
               "source_ids": [
                 "audit-20261024-ref-anthropic"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "标准在线，选择5分钟缓存写入。Haiku5.5只取提示不超过100,000 token档，超出时全部token另价；1小时缓存写入与额外服务不并列。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -6074,21 +6054,20 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:55.377395+00:00",
+          "checked_at": "2026-11-25T10:26:14.985641+00:00",
           "source_ids": [
             "audit-20261024-ref-anthropic"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "标准在线，选择5分钟缓存写入。Haiku5.5只取提示不超过100,000 token档，超出时全部token另价；1小时缓存写入与额外服务不并列。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID claude-haiku-5-5；原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
-          "image",
-          "file"
+          "image"
         ],
         "context_window_tokens": 1000000,
         "max_output_tokens": 128000,
@@ -6105,16 +6084,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/anthropic/v1/messages；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -6139,39 +6119,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -6346,13 +6324,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -6418,13 +6396,14 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:56.075716+00:00",
+              "checked_at": "2026-11-25T10:40:55+00:00",
               "source_ids": [
-                "ref-kimi-pricing",
+                "r1125-kimi-origin",
+                "ref-kimi-pricing-md",
                 "ref-kimi-cache"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -6433,17 +6412,18 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:56.075716+00:00",
+          "checked_at": "2026-11-25T10:40:55+00:00",
           "source_ids": [
-            "ref-kimi-pricing",
+            "r1125-kimi-origin",
+            "ref-kimi-pricing-md",
             "ref-kimi-cache"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "采用默认 5m TTL。Chat/Responses 的输入总量包含互斥的未缓存、缓存读取与缓存写入三部分，input_uncached_tokens 必须扣除已读与已写缓存；Messages 的 input_tokens 已排除两者。不得把缓存写入再次算作普通输入。1h TTL 价格不在本组基准内。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID kimi-k3.1-pro；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -6451,7 +6431,7 @@
           "video"
         ],
         "context_window_tokens": 1048576,
-        "max_output_tokens": 131072,
+        "max_output_tokens": 1048576,
         "tool_calling": true,
         "structured_output": true,
         "streaming": null,
@@ -6465,16 +6445,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -6497,39 +6478,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": "max",
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -6549,13 +6528,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -6615,12 +6594,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.858533+00:00",
+              "checked_at": "2026-11-25T10:26:16.865009+00:00",
               "source_ids": [
-                "ref-minimax-pricing"
+                "r1125-minimax-paygo"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "不套用 M3 的长上下文阶梯或 priority 服务层价格。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。",
             "time_basis": "unknown",
@@ -6629,16 +6608,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.858533+00:00",
+          "checked_at": "2026-11-25T10:26:16.865009+00:00",
           "source_ids": [
-            "ref-minimax-pricing"
+            "r1125-minimax-paygo"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "不套用 M3 的长上下文阶梯或 priority 服务层价格。 此处只作 OpenCode Go 的原厂按量等价消耗参考，不表示 Go 实际收费或调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID minimax-m3.1-flash；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -6660,16 +6639,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -6694,39 +6674,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -6852,13 +6830,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -6912,13 +6890,13 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:56.429386+00:00",
+              "checked_at": "2026-11-25T10:26:23.158735+00:00",
               "source_ids": [
                 "ref-step-pricing",
                 "ref-step-announcement"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "阶跃星辰国内标准按量价，采用 2026-10-14 00:30 北京时间后新用户缓存价；此前已调用用户缓存价 0.35 不并列。",
             "time_basis": "unknown",
@@ -6927,17 +6905,17 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:56.429386+00:00",
+          "checked_at": "2026-11-25T10:26:23.158735+00:00",
           "source_ids": [
             "ref-step-pricing",
             "ref-step-announcement"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "阶跃星辰国内标准按量价，采用 2026-10-14 00:30 北京时间后新用户缓存价；此前已调用用户缓存价 0.35 不并列。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID step-5-preview；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -6959,16 +6937,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -6991,39 +6970,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1000000",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -7043,13 +7020,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -7070,15 +7047,16 @@
           "status": "needs_review",
           "checked_at": null,
           "source_ids": [
-            "go-docs-current",
-            "go-console-models"
+            "go-models-current",
+            "r1125-beam-origin-model",
+            "r1125-beam-origin-platform"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "Go 只公布 Beam 限时免费，未明确开发方精确型号及原厂标准按量价；不能把套餐内限免作为原厂零价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "OpenCode Go 当前 canonical_id 明确映射 Reflection 的 Beam-1.0-501B-A23B。Reflection 模型页和开放平台未找到该精确型号公开标准现金价。"
         },
-        "notes": "Go 只公布 Beam 限时免费，未明确开发方精确型号及原厂标准按量价；不能把套餐内限免作为原厂零价。"
+        "notes": "OpenCode Go 当前 canonical_id 明确映射 Reflection 的 Beam-1.0-501B-A23B。Reflection 模型页和开放平台未找到该精确型号公开标准现金价。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID beam-free；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -7098,16 +7076,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -7132,39 +7111,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -7396,13 +7373,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -7431,7 +7408,7 @@
         },
         "notes": "Go 公开资料只确认 Iceman 限时免费且允许请求内容用于模型改进；开发方身份和原厂标准按量价未知，不将套餐内限免作为原厂零价。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID iceman-contributor-free；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text"
@@ -7451,16 +7428,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -7472,36 +7450,34 @@
               "can_disable": null,
               "default_behavior": "unknown",
               "controls": [],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "262144",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -7521,13 +7497,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -7555,14 +7531,13 @@
         },
         "notes": "原厂 Gemini 4 Argon Standard 当前仅有截至 2026-11-30 的推出优惠，12 月 1 日常规价尚未生效；按目录标准价规则保持 unknown。裸请求 ID 与 Contributor ID 独立，不混淆授权条件。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID gemini-4-argon；原生入口 https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon:generateContent。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
           "image",
           "video",
-          "audio",
-          "file"
+          "audio"
         ],
         "context_window_tokens": 1048576,
         "max_output_tokens": 65536,
@@ -7576,19 +7551,20 @@
           "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "complete",
+          "coverage": "partial",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon:generateContent；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon。兼容入口的协议转换不证明参数一致。 模型元数据另列 Google Interactions；现有接口词汇未收录该入口。"
         },
         "reasoning": {
           "support": "supported",
@@ -7611,39 +7587,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -7663,13 +7637,13 @@
       ],
       "verification": {
         "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -7729,12 +7703,12 @@
             },
             "verification": {
               "status": "verified",
-              "checked_at": "2026-11-11T11:22:54.958982+00:00",
+              "checked_at": "2026-11-25T10:26:17.088962+00:00",
               "source_ids": [
-                "ref-tokenhub-pricing"
+                "audit-20261024-ref-hunyuan"
               ],
-              "evidence": "evidence/opencode/2026-11-11-refresh.md",
-              "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
             },
             "notes": "开发方国内标准目录价：输入6、缓存命中0.3、输出18 CNY/百万 token；原厂至北京时间2026-12-31 23:59:59限时五折不写入标准基准。仅为Go参考，不证明Go调用路由。",
             "time_basis": "unknown",
@@ -7743,16 +7717,16 @@
         ],
         "verification": {
           "status": "verified",
-          "checked_at": "2026-11-11T11:22:54.958982+00:00",
+          "checked_at": "2026-11-25T10:26:17.088962+00:00",
           "source_ids": [
-            "ref-tokenhub-pricing"
+            "audit-20261024-ref-hunyuan"
           ],
-          "evidence": "evidence/opencode/2026-11-11-refresh.md",
-          "notes": "独立读取开发方精确型号的现行标准按量价；原币种完整保存，不使用 Go 用量额度换算价或 Zen 余额价。"
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "对应开发方现行现金价复核；使用单一原币种标准档，订阅用量独立。"
         },
         "notes": "开发方国内标准目录价：输入6、缓存命中0.3、输出18 CNY/百万 token；原厂至北京时间2026-12-31 23:59:59限时五折不写入标准基准。仅为Go参考，不证明Go调用路由。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID hy4；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。",
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -7773,16 +7747,17 @@
           "coverage": "complete",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
             "source_ids": [
+              "go-models-current",
               "go-docs-current",
               "go-harnesses",
               "go-inference"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。"
         },
         "reasoning": {
           "support": "supported",
@@ -7804,39 +7779,37 @@
                   "minimum": null,
                   "maximum": null,
                   "default": null,
-                  "notes": "官方模型元数据 capabilities.reasoning.effort；本产品未公布该原生请求中的参数名，不能从 SDK 或原厂猜字段。"
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
                 }
               ],
-              "notes": "官方本产品元数据确认支持思考；toggle/effort 元数据不能单独证明具体关闭参数或跨协议转换行为。"
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
             }
           ],
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:56.773122+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current",
-              "go-docs-current",
-              "go-harnesses",
-              "go-inference"
+              "go-docs-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
         },
         "context_assessment": {
           "status": "known",
           "reported_value": "1048576",
           "verification": {
             "status": "verified",
-            "checked_at": "2026-11-11T11:22:55.153896+00:00",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
             "source_ids": [
               "go-models-current"
             ],
-            "evidence": "evidence/opencode/2026-11-11-refresh.md",
-            "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     },
@@ -7847,7 +7820,7 @@
       "modalities": [
         "text"
       ],
-      "availability": "active",
+      "availability": "unknown",
       "alias_of": null,
       "plan_ids": [
         "go",
@@ -7855,14 +7828,14 @@
         "go-teams"
       ],
       "verification": {
-        "status": "verified",
-        "checked_at": "2026-11-11T11:22:55.153896+00:00",
+        "status": "needs_review",
+        "checked_at": null,
         "source_ids": [
-          "go-docs-current",
-          "go-models-current"
+          "go-models-current",
+          "go-docs-current"
         ],
-        "evidence": "evidence/opencode/2026-11-11-refresh.md",
-        "notes": "逐项核对本产品 Endpoints 与匿名模型元数据；MiMo-V2.5 两款仅在 Endpoints，元数据接口本次未列，冲突单列。"
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
       },
       "usage_prices": {
         "status": "not_applicable",
@@ -7890,7 +7863,7 @@
         },
         "notes": "原厂 LongCat-2.5 当前只公布限时优惠 2/0.04/8 CNY 每百万 token，未取得非临时标准价；Go 限免不作为原厂零价。"
       },
-      "notes": "当前 Go Endpoints 与模型元数据确认精确请求 ID longcat-2.5-free；原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。其他三面由 Console 转换；客户端 opencode-go/ 前缀不属于请求 ID。 Go 当前正式裸 ID；旧 longcat-2.5-preview-free 未作别名合并。中国托管，需在工作空间隐私设置允许 Global；Go 限免不作为原厂零价。",
+      "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。",
       "capabilities": {
         "input_modalities": [
           "text",
@@ -7908,7 +7881,7 @@
           "gemini_generate_content"
         ],
         "interface_assessment": {
-          "coverage": "complete",
+          "coverage": "partial",
           "verification": {
             "status": "verified",
             "checked_at": "2026-11-11T11:22:56.773122+00:00",
@@ -7920,7 +7893,7 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "本产品逐型号 Endpoints 与 Harnesses 四面兼容声明独立核对。"
           },
-          "notes": "本型号原生入口为 https://opencode.ai/inference/go/openai/v1/chat/completions；Chat、Responses、Messages、GenerateContent 均可经 Console 使用，非原生面经过协议转换，未证明参数逐项等价。"
+          "notes": "当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
         },
         "reasoning": {
           "support": "supported",
@@ -7947,7 +7920,7 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "Go 官方模型接口逐 ID 明确 supported=true；仅保存它公布的档位/预算，参数名留 null。"
           },
-          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。"
+          "notes": "已确认本产品支持思考；原生请求参数名、完整关闭行为、未公布的默认和其他兼容面的映射未知。没有从原厂或 models.dev 布尔字段推定接口。 当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
         },
         "context_assessment": {
           "status": "known",
@@ -7961,7 +7934,662 @@
             "evidence": "evidence/opencode/2026-11-11-refresh.md",
             "notes": "Go 本产品官方匿名目录 limit.context 整数 token；与输出 limit.output 分开。"
           },
-          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。"
+          "notes": "本产品官方模型元数据窗口；不从原厂、其他产品或价格映射继承。 当前 Go 匿名模型清单及文档未列该请求 ID；保留历史窗口、费率和协议，暂无正式退役公告。"
+        }
+      }
+    },
+    {
+      "id": "hy4-flash-free",
+      "request_id": "hy4-flash-free",
+      "display_name": "Hy4 flash Free",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go",
+        "go-plus",
+        "go-teams"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
+        "source_ids": [
+          "go-models-current",
+          "go-docs-current"
+        ],
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/go-current.json",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "广州 TokenHub 标准在线刊例价。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.02",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "2",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://cloud.tencent.com/document/product/1823/130055",
+              "subject": "hy4-flash",
+              "reason": "用户指定开发方官方中国大陆按量价；Go 限免请求名由官方 canonical_id 对应腾讯 hy4-flash。",
+              "catalog_model": {
+                "provider_id": "hunyuan",
+                "offering_id": "api-cn",
+                "model_id": "hy4-flash",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:26:17.088962+00:00",
+              "source_ids": [
+                "audit-20261024-ref-hunyuan"
+              ],
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "TokenHub 广州在线标准刊例；限时半价截至北京时间 11 月 30 日 12:00。Go 的限免不作原厂免费依据。"
+            },
+            "notes": "TokenHub 广州在线标准刊例；限时半价截至北京时间 11 月 30 日 12:00。Go 的限免不作原厂免费依据。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:26:17.088962+00:00",
+          "source_ids": [
+            "audit-20261024-ref-hunyuan"
+          ],
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "TokenHub 广州在线标准刊例；限时半价截至北京时间 11 月 30 日 12:00。Go 的限免不作原厂免费依据。"
+        },
+        "notes": "TokenHub 广州在线标准刊例；限时半价截至北京时间 11 月 30 日 12:00。Go 的限免不作原厂免费依据。"
+      },
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。 Go 独立请求名带 free，原厂请求名为 hy4-flash。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "tool_calling": true,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
+            "source_ids": [
+              "go-models-current",
+              "go-docs-current",
+              "go-harnesses",
+              "go-inference"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
+          },
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。 Go 独立请求名带 free，原厂请求名为 hy4-flash。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "none",
+                    "high"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
+                }
+              ],
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
+            "source_ids": [
+              "go-models-current",
+              "go-docs-current"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
+          },
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1048576",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
+            "source_ids": [
+              "go-models-current"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
+          },
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
+        }
+      }
+    },
+    {
+      "id": "qwen4-max",
+      "request_id": "qwen4-max",
+      "display_name": "Qwen4 Max",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go",
+        "go-plus",
+        "go-teams"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
+        "source_ids": [
+          "go-models-current",
+          "go-docs-current"
+        ],
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/go-current.json",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "published",
+        "rules": [
+          {
+            "id": "baseline",
+            "basis": "reference",
+            "currency": "CNY",
+            "tax": "unknown",
+            "selection": "华北2（北京）标准在线价，显式缓存采用默认 5 分钟创建档。",
+            "rates": [
+              {
+                "meter": "input_uncached_tokens",
+                "amount": "10",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "input_cached_tokens",
+                "amount": "0.5",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "output_tokens",
+                "amount": "30",
+                "per": 1000000,
+                "unit": "token"
+              },
+              {
+                "meter": "cache_write_5m_tokens",
+                "amount": "12.5",
+                "per": 1000000,
+                "unit": "token"
+              }
+            ],
+            "effective_from": null,
+            "effective_until": null,
+            "billing_period": null,
+            "charge_unit": null,
+            "reference_origin": {
+              "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+              "subject": "qwen4-max",
+              "reason": "按用户指定，本产品采用模型开发方官方中国大陆按量价；仅作独立参考。",
+              "catalog_model": {
+                "provider_id": "bailian",
+                "offering_id": "api-cn",
+                "model_id": "qwen4-max",
+                "selection": "exact"
+              }
+            },
+            "verification": {
+              "status": "verified",
+              "checked_at": "2026-11-25T10:40:55+00:00",
+              "source_ids": [
+                "r1125-qwen4-cache-exact",
+                "r1125-qwen-pricing-main",
+                "r1125-qwen4-cache"
+              ],
+              "evidence": "evidence/opencode/2026-11-25-refresh.md",
+              "notes": "官方计费说明明确普通输入、读、输出和默认 5 分钟写入，保持与本仓公开 API 同一组费率。"
+            },
+            "notes": "百炼华北2（北京）标准在线确认输入 10、命中 0.5、输出 30、默认 5 分钟创建 12.5 CNY/百万 token；1 小时 20 CNY 为互斥替代档。",
+            "time_basis": "unknown",
+            "charge_on": "unknown"
+          }
+        ],
+        "verification": {
+          "status": "verified",
+          "checked_at": "2026-11-25T10:40:55+00:00",
+          "source_ids": [
+            "r1125-qwen4-cache-exact",
+            "r1125-qwen-pricing-main",
+            "r1125-qwen4-cache"
+          ],
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "官方计费说明明确普通输入、读、输出和默认 5 分钟写入，保持与本仓公开 API 同一组费率。"
+        },
+        "notes": "百炼华北2（北京）标准在线确认输入 10、命中 0.5、输出 30、默认 5 分钟创建 12.5 CNY/百万 token；1 小时 20 CNY 为互斥替代档。"
+      },
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 262144,
+        "tool_calling": true,
+        "structured_output": true,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
+            "source_ids": [
+              "go-models-current",
+              "go-docs-current",
+              "go-harnesses",
+              "go-inference"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
+          },
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/anthropic/v1/messages。兼容入口的协议转换不证明参数一致。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "anthropic_messages",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [
+                {
+                  "kind": "effort",
+                  "parameter": null,
+                  "values": [
+                    "low",
+                    "high",
+                    "xhigh"
+                  ],
+                  "minimum": null,
+                  "maximum": null,
+                  "default": null,
+                  "notes": "官方本产品元数据档位；具体请求键未公布。"
+                },
+                {
+                  "kind": "budget_tokens",
+                  "parameter": null,
+                  "values": [],
+                  "minimum": null,
+                  "maximum": 262144,
+                  "default": null,
+                  "notes": "本产品元数据公布的预算边界；单位 token。"
+                }
+              ],
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
+            "source_ids": [
+              "go-models-current",
+              "go-docs-current"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
+          },
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
+            "source_ids": [
+              "go-models-current"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
+          },
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
+        }
+      }
+    },
+    {
+      "id": "longcat-2-5",
+      "request_id": "longcat-2.5",
+      "display_name": "LongCat-2.5",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go",
+        "go-plus",
+        "go-teams"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
+        "source_ids": [
+          "go-models-current",
+          "go-docs-current"
+        ],
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "ref-longcat-2-5-pricing"
+          ],
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "美团 LongCat 官方人民币价只明示初上线限时折扣，标准公开价格未知。"
+        },
+        "notes": "美团 LongCat 官方人民币价只明示初上线限时折扣，标准公开价格未知。"
+      },
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。 OpenCode 标明由中国节点托管，工作区地区设置需启用 Global。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 262144,
+        "tool_calling": true,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
+            "source_ids": [
+              "go-models-current",
+              "go-docs-current",
+              "go-harnesses",
+              "go-inference"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
+          },
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。 OpenCode 标明由中国节点托管，工作区地区设置需启用 Global。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
+            "source_ids": [
+              "go-models-current",
+              "go-docs-current"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
+          },
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
+            "source_ids": [
+              "go-models-current"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
+          },
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
+        }
+      }
+    },
+    {
+      "id": "hungerg-free",
+      "request_id": "hungerg-free",
+      "display_name": "HungerG Free",
+      "modalities": [
+        "text"
+      ],
+      "availability": "active",
+      "alias_of": null,
+      "plan_ids": [
+        "go",
+        "go-plus",
+        "go-teams"
+      ],
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-11-25T10:26:20.552337+00:00",
+        "source_ids": [
+          "go-models-current",
+          "go-docs-current"
+        ],
+        "evidence": "evidence/opencode/2026-11-25-refresh.md",
+        "notes": "官方 Go 匿名模型目录精确请求 ID 与本产品文档。"
+      },
+      "usage_prices": {
+        "status": "not_applicable",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [],
+          "evidence": "evidence/opencode/2026-09-23-go.md",
+          "notes": "订阅仅保存按量参考价，不调查实际扣费。"
+        },
+        "notes": "订阅仅保存按量参考价，不调查实际扣费；Go 文档的用量上限换算价不作为参考价。"
+      },
+      "reference_prices": {
+        "status": "unknown",
+        "rules": [],
+        "verification": {
+          "status": "needs_review",
+          "checked_at": null,
+          "source_ids": [
+            "go-models-current",
+            "go-docs-current"
+          ],
+          "evidence": "evidence/opencode/2026-11-25-refresh.md",
+          "notes": "平台明确称限时 Free，模型元数据未公开开发方；未能定位精确原厂价。"
+        },
+        "notes": "平台明确称限时 Free，模型元数据未公开开发方；未能定位精确原厂价。"
+      },
+      "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。 产品页说明限时免费；未公开开发方。",
+      "capabilities": {
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "context_window_tokens": 1000000,
+        "max_output_tokens": 65536,
+        "tool_calling": true,
+        "structured_output": null,
+        "streaming": null,
+        "interfaces": [
+          "openai_chat",
+          "openai_responses",
+          "anthropic_messages",
+          "gemini_generate_content"
+        ],
+        "interface_assessment": {
+          "coverage": "complete",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:23.204056+00:00",
+            "source_ids": [
+              "go-models-current",
+              "go-docs-current",
+              "go-harnesses",
+              "go-inference"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "精确 ID 的原生面，与 Go 兼容转换层独立核对。"
+          },
+          "notes": "Go 匿名目录确认当前请求 ID，原生入口 https://opencode.ai/inference/go/openai/v1/chat/completions。兼容入口的协议转换不证明参数一致。 产品页说明限时免费；未公开开发方。"
+        },
+        "reasoning": {
+          "support": "supported",
+          "coverage": "partial",
+          "profiles": [
+            {
+              "interface": "openai_chat",
+              "surface": "api_request",
+              "can_disable": null,
+              "default_behavior": "unknown",
+              "controls": [],
+              "notes": "官方模型元数据确认原生支持；元数据 toggle 或 none 字面量未独立证明裸请求的关闭字段及行为。"
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
+            "source_ids": [
+              "go-models-current",
+              "go-docs-current"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "官方 Go 匿名目录精确型号 capabilities.reasoning。"
+          },
+          "notes": "原生请求字段、未公布的默认与关闭行为，以及转换面的档位映射仍待确认。"
+        },
+        "context_assessment": {
+          "status": "known",
+          "reported_value": "1000000",
+          "verification": {
+            "status": "verified",
+            "checked_at": "2026-11-25T10:26:20.552337+00:00",
+            "source_ids": [
+              "go-models-current"
+            ],
+            "evidence": "evidence/opencode/2026-11-25-refresh.md",
+            "notes": "Go 匿名精确 ID 的 limit.context 整数。"
+          },
+          "notes": "总窗口、独立最大输入和最大输出按单独字段理解；其他部署规格不继承。"
         }
       }
     }
